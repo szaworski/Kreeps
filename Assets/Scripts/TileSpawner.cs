@@ -41,8 +41,6 @@ public class TileSpawner : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            CheckTileOverlap();
-
             //shiftAmtYpos += 1;
             shiftAmtXpos += 1;
 
@@ -57,6 +55,7 @@ public class TileSpawner : MonoBehaviour
 
             //Destroy the temporary reference object
             Destroy(referenceStartTile);
+            CheckTileOverlap();
         }
     }
 
