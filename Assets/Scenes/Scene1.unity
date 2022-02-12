@@ -253,3 +253,15 @@ MonoBehaviour:
   curYpos: 0
   shiftAmtXpos: 0
   shiftAmtYpos: 0
+  checkTopOverlap: 0
+  checkBottomOverlap: 0
+  checkLeftOverlap: 0
+  checkRightOverlap: 0
+  tileName: 
+  tiles:
+  - Tile1
+  - Tile2
+  - Tile3
+  - Tile4
+  - Tile5
+  - Tile6
