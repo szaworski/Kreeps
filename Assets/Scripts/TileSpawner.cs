@@ -15,6 +15,10 @@ public class TileSpawner : TileTypes
     public bool checkBottomOverlap;
     public bool checkLeftOverlap;
     public bool checkRightOverlap;
+    public bool checkOuterTopOverlap;
+    public bool checkOuterBottomOverlap;
+    public bool checkOuterLeftOverlap;
+    public bool checkOuterRightOverlap;
     public bool checkCenterOverlap;
     public bool checkTopRightOverlap;
     public bool checkTopLeftOverlap;
@@ -25,6 +29,7 @@ public class TileSpawner : TileTypes
     public string tileName;
     public string newTileName;
     public string spawnDirection;
+    public string lastAngleTileUsed;
 
     public string[] curTiles;
     public bool[] validTiles;
@@ -230,6 +235,26 @@ public class TileSpawner : TileTypes
         int index = rand.Next(validTilesList.Count);
         //Debug.Log("The randomly Chosen tile is: " + validTilesList[index]);
         newTileName = validTilesList[index];
+
+        if(newTileName == curTiles[2])
+        {
+            lastAngleTileUsed = "Tile3";
+        }
+
+        else if (newTileName == curTiles[3])
+        {
+            lastAngleTileUsed = "Tile4";
+        }
+
+        else if (newTileName == curTiles[4])
+        {
+            lastAngleTileUsed = "Tile5";
+        }
+
+        else if (newTileName == curTiles[5])
+        {
+            lastAngleTileUsed = "Tile6";
+        }
     }
 
     public void GetListOfValidTiles()
@@ -394,14 +419,30 @@ public class TileSpawner : TileTypes
             validTiles[0] = true;
         }
 
-        if (!checkRightOverlap)
+        if (!checkLeftOverlap && !checkRightOverlap && checkTopOverlap)
         {
-            validTiles[2] = true;
+            if (lastAngleTileUsed == "Tile5")
+            {
+                validTiles[2] = true;
+            }
+
+            if (lastAngleTileUsed == "Tile6")
+            {
+                validTiles[3] = true;
+            }
         }
 
-        if (!checkLeftOverlap)
+        else
         {
-            validTiles[3] = true;
+            if (!checkRightOverlap)
+            {
+                validTiles[2] = true;
+            }
+
+            if (!checkLeftOverlap)
+            {
+                validTiles[3] = true;
+            }
         }
     }
 
@@ -412,14 +453,30 @@ public class TileSpawner : TileTypes
             validTiles[0] = true;
         }
 
-        if (!checkRightOverlap)
+        if (!checkLeftOverlap && !checkRightOverlap && checkBottomOverlap)
         {
-            validTiles[5] = true;
+            if (lastAngleTileUsed == "Tile3")
+            {
+                validTiles[4] = true;
+            }
+
+            if (lastAngleTileUsed == "Tile4")
+            {
+                validTiles[5] = true;
+            }
         }
 
-        if (!checkLeftOverlap)
+        else
         {
-            validTiles[4] = true;
+            if (!checkRightOverlap)
+            {
+                validTiles[5] = true;
+            }
+
+            if (!checkLeftOverlap)
+            {
+                validTiles[4] = true;
+            }
         }
     }
 
@@ -430,9 +487,17 @@ public class TileSpawner : TileTypes
             validTiles[1] = true;
         }
 
-        if (!checkTopOverlap && !checkBottomOverlap)
+        if (!checkTopOverlap && !checkBottomOverlap && checkRightOverlap)
         {
+            if (lastAngleTileUsed == "Tile6")
+            {
+                validTiles[3] = true;
+            }
 
+            if (lastAngleTileUsed == "Tile3")
+            {
+                validTiles[4] = true;
+            }
         }
 
         else
@@ -455,14 +520,31 @@ public class TileSpawner : TileTypes
         {
             validTiles[1] = true;
         }
-        if (!checkTopOverlap)
+
+        if (!checkTopOverlap && !checkBottomOverlap && checkLeftOverlap)
         {
-            validTiles[5] = true;
+            if (lastAngleTileUsed == "Tile4")
+            {
+                validTiles[5] = true;
+            }
+
+            if (lastAngleTileUsed == "Tile5")
+            {
+                validTiles[2] = true;
+            }
         }
 
-        if (!checkBottomOverlap)
+        else
         {
-            validTiles[2] = true;
+            if (!checkTopOverlap)
+            {
+                validTiles[5] = true;
+            }
+
+            if (!checkBottomOverlap)
+            {
+                validTiles[2] = true;
+            }
         }
     }
 
@@ -472,16 +554,32 @@ public class TileSpawner : TileTypes
         checkTopOverlap = Physics2D.OverlapBox(top, new Vector3(0.9f, 0.25f, 0), 0f, LayerMask.GetMask("GroundTile"));
         //Debug.Log("checkTopOverlap = " + checkTopOverlap);
 
+        Vector3 outerTop = transform.position + new Vector3(0, 1.65f, 0);
+        checkOuterTopOverlap = Physics2D.OverlapBox(outerTop, new Vector3(0.9f, 0.25f, 0), 0f, LayerMask.GetMask("GroundTile"));
+        //Debug.Log("checkTopOverlap = " + checkTopOverlap);
+
         Vector3 bottom = transform.position - new Vector3(0, 0.65f, 0);
         checkBottomOverlap = Physics2D.OverlapBox(bottom, new Vector3(0.9f, 0.25f, 0), 0f, LayerMask.GetMask("GroundTile"));
+        //Debug.Log("checkBottomOverlap = " + checkBottomOverlap);
+
+        Vector3 outerBottom = transform.position - new Vector3(0, 1.65f, 0);
+        checkOuterBottomOverlap = Physics2D.OverlapBox(outerBottom, new Vector3(0.9f, 0.25f, 0), 0f, LayerMask.GetMask("GroundTile"));
         //Debug.Log("checkBottomOverlap = " + checkBottomOverlap);
 
         Vector3 left = transform.position - new Vector3(0.65f, 0, 0);
         checkLeftOverlap = Physics2D.OverlapBox(left, new Vector3(0.25f, 0.9f, 0), 0f, LayerMask.GetMask("GroundTile"));
         //Debug.Log("checkLeftOverlap = " + checkLeftOverlap);
 
+        Vector3 outerLeft = transform.position - new Vector3(1.65f, 0, 0);
+        checkOuterLeftOverlap = Physics2D.OverlapBox(outerLeft, new Vector3(0.25f, 0.9f, 0), 0f, LayerMask.GetMask("GroundTile"));
+        //Debug.Log("checkLeftOverlap = " + checkLeftOverlap);
+
         Vector3 right = transform.position + new Vector3(0.65f, 0, 0);
         checkRightOverlap = Physics2D.OverlapBox(right, new Vector3(0.25f, 0.9f, 0), 0f, LayerMask.GetMask("GroundTile"));
+        //Debug.Log("checkRightOverlap = " + checkRightOverlap);
+
+        Vector3 outerRight = transform.position + new Vector3(1.65f, 0, 0);
+        checkOuterRightOverlap = Physics2D.OverlapBox(outerRight, new Vector3(0.25f, 0.9f, 0), 0f, LayerMask.GetMask("GroundTile"));
         //Debug.Log("checkRightOverlap = " + checkRightOverlap);
 
 
@@ -512,22 +610,38 @@ public class TileSpawner : TileTypes
         Vector3 top = transform.position + new Vector3(0, 0.65f, 0);
         Gizmos.DrawWireCube(top, new Vector3(0.9f, 0.25f, 0));
 
+        Gizmos.color = Color.red;
+        Vector3 outerTop = transform.position + new Vector3(0, 1.65f, 0);
+        Gizmos.DrawWireCube(outerTop, new Vector3(0.9f, 0.25f, 0));
+
         Gizmos.color = Color.blue;
         Vector3 bottom = transform.position - new Vector3(0, 0.65f, 0);
         Gizmos.DrawWireCube(bottom, new Vector3(0.9f, 0.25f, 0));
+
+        Gizmos.color = Color.blue;
+        Vector3 outerBottom = transform.position - new Vector3(0, 1.65f, 0);
+        Gizmos.DrawWireCube(outerBottom, new Vector3(0.9f, 0.25f, 0));
 
         Gizmos.color = Color.yellow;
         Vector3 left = transform.position - new Vector3(0.65f, 0, 0);
         Gizmos.DrawWireCube(left, new Vector3(0.25f, 0.9f, 0));
 
+        Gizmos.color = Color.yellow;
+        Vector3 outerLeft = transform.position - new Vector3(1.65f, 0, 0);
+        Gizmos.DrawWireCube(outerLeft, new Vector3(0.25f, 0.9f, 0));
+
         Gizmos.color = Color.green;
         Vector3 right = transform.position + new Vector3(0.65f, 0, 0);
         Gizmos.DrawWireCube(right, new Vector3(0.25f, 0.9f, 0));
 
+        Gizmos.color = Color.green;
+        Vector3 outerRight = transform.position + new Vector3(1.65f, 0, 0);
+        Gizmos.DrawWireCube(outerRight, new Vector3(0.25f, 0.9f, 0));
+
+
         Gizmos.color = Color.white;
         Vector3 center = transform.position + new Vector3(0, 0, 0);
         Gizmos.DrawWireCube(center, new Vector3(0.25f, 0.25f, 0));
-
 
         Gizmos.color = Color.white;
         Vector3 topRight = transform.position + new Vector3(0.65f, 0.65f, 0);

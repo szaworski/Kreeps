@@ -316,6 +316,10 @@ MonoBehaviour:
   checkBottomOverlap: 0
   checkLeftOverlap: 0
   checkRightOverlap: 0
+  checkOuterTopOverlap: 0
+  checkOuterBottomOverlap: 0
+  checkOuterLeftOverlap: 0
+  checkOuterRightOverlap: 0
   checkCenterOverlap: 0
   checkTopRightOverlap: 0
   checkTopLeftOverlap: 0
@@ -325,6 +329,7 @@ MonoBehaviour:
   tileName: 
   newTileName: 
   spawnDirection: 
+  lastAngleTileUsed: 
   curTiles:
   - 
   - 
