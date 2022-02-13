@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -149,6 +150,26 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c88f5cead0c0b2a4eb05b5900433f8d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 64
+  m_RefResolutionX: 640
+  m_RefResolutionY: 320
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 0
+  m_CropFrameY: 0
+  m_StretchFill: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -206,6 +227,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &552896695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 552896696}
+  m_Layer: 0
+  m_Name: TileHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &552896696
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552896695}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1721774162
 GameObject:
   m_ObjectHideFlags: 0
@@ -249,19 +300,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a84d8c94eb8540740b55665c1db39b2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curXpos: 0
-  curYpos: 0
-  shiftAmtXpos: 0
-  shiftAmtYpos: 0
-  checkTopOverlap: 0
-  checkBottomOverlap: 0
-  checkLeftOverlap: 0
-  checkRightOverlap: 0
-  tileName: 
-  tiles:
+  basicTiles:
   - Tile1
   - Tile2
   - Tile3
   - Tile4
   - Tile5
   - Tile6
+  shiftAmtXpos: 0
+  shiftAmtYpos: 0
+  shiftSpawnerXpos: 0
+  shiftSpawnerYpos: 0
+  numOfTimesPlaced: 0
+  checkTopOverlap: 0
+  checkOuterTopOverlap: 0
+  checkOuterTop2Overlap: 0
+  checkBottomOverlap: 0
+  checkOuterBottomOverlap: 0
+  checkOuterBottom2Overlap: 0
+  checkLeftOverlap: 0
+  checkOuterLeftOverlap: 0
+  checkOuterLeft2Overlap: 0
+  checkRightOverlap: 0
+  checkOuterRightOverlap: 0
+  checkOuterRight2Overlap: 0
+  checkTopRightOverlap: 0
+  checkTopLeftOverlap: 0
+  checkBottomLeftOverlap: 0
+  checkBottomRightOverlap: 0
+  prependTileName: 
+  tileName: 
+  newTileName: 
+  curTiles:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  validTiles: 

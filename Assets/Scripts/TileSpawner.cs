@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class TileSpawner : TileTypes
 {
-    public int curXpos = 0;
-    public int curYpos = 0;
     public int shiftAmtXpos;
     public int shiftAmtYpos;
+    public int shiftSpawnerXpos;
+    public int shiftSpawnerYpos;
     public int numOfTimesPlaced;
 
     public bool checkTopOverlap;
@@ -54,11 +54,17 @@ public class TileSpawner : TileTypes
         //Fetch the starting tile
         //GameObject referenceStartTile = (GameObject)Instantiate(Resources.Load("BasicTiles/Tile3"));
         GameObject referenceStartTile = (GameObject)Instantiate(Resources.Load("StartingTile"));
+        GameObject TileHolder = GameObject.Find("TileHolder");
 
         //Place the starting tile
-        GameObject tile = (GameObject)Instantiate(referenceStartTile, transform);
+        GameObject tile = (GameObject)Instantiate(referenceStartTile, TileHolder.transform);
+        tile.transform.SetParent(TileHolder.transform);
+        tile.transform.position = new Vector2(0, 0);
 
-        tile.transform.position = new Vector2(curXpos, curYpos);
+        //Move to the new spawn location
+        tileName = "StartingTile";
+        Invoke("MoveToSpawnPos", 2f);
+
         //Destroy the temporary reference object
         Destroy(referenceStartTile);
     }
@@ -69,9 +75,7 @@ public class TileSpawner : TileTypes
         {
             if (numOfTimesPlaced < 1)
             {
-                tileName = "StartingTile";
                 shiftAmtYpos += 1;
-                //shiftAmtXpos += 1;
             }
 
             else
@@ -79,23 +83,34 @@ public class TileSpawner : TileTypes
                 GetNewTile();
                 tileName = newTileName;
                 prependTileName = "BasicTiles/";
-                Debug.Log("Tile Pathway: " + prependTileName + tileName);
+                //Debug.Log("Tile Pathway: " + prependTileName + tileName);
             }
 
             //Find the tile in the resources folder
             //GameObject referenceStartTile = (GameObject)Instantiate(Resources.Load("BasicTiles/Tile3"));
             GameObject referenceStartTile = (GameObject)Instantiate(Resources.Load(prependTileName + tileName));
+            GameObject TileHolder = GameObject.Find("TileHolder");
 
             //Place the new tile
-            GameObject tile = (GameObject)Instantiate(referenceStartTile, transform);
-            tile.transform.position = new Vector2(curXpos + shiftAmtXpos, curYpos + shiftAmtYpos);
+            GameObject tile = (GameObject)Instantiate(referenceStartTile, TileHolder.transform);
+            tile.transform.SetParent(TileHolder.transform);
+            tile.transform.position = new Vector2(0 + shiftAmtXpos, 0 + shiftAmtYpos);
 
             //Destroy the temporary reference object
             Destroy(referenceStartTile);
 
             //increment numOfTimesPlaced
             numOfTimesPlaced++;
+
+            Invoke("MoveToSpawnPos", 2f);
         }
+    }
+
+
+    public void MoveToSpawnPos()
+    {
+        SetNewSpawnPosition();
+        transform.position = new Vector2(0 + shiftSpawnerXpos, 0 + shiftSpawnerYpos);
     }
 
     public void GetNewTile()
@@ -117,8 +132,96 @@ public class TileSpawner : TileTypes
     {
         var rand = new System.Random();
         int index = rand.Next(validTilesList.Count);
-        Debug.Log("The randomly Chosen tile is: " + validTilesList[index]);
+        //Debug.Log("The randomly Chosen tile is: " + validTilesList[index]);
         newTileName = validTilesList[index];
+    }
+
+    public void SetNewSpawnPosition()
+    {
+        Debug.Log("Current tile name: " + tileName);
+
+        if (tileName == "StartingTile")
+        {
+            shiftSpawnerYpos += 1;
+        }
+
+        else if (tileName == curTiles[0])
+        {
+            if (!checkTopOverlap)
+            {
+                shiftSpawnerYpos += 1;
+            }
+
+            else if (!checkBottomOverlap)
+            {
+                shiftSpawnerYpos += -1;
+            }
+        }
+
+        else if (tileName == curTiles[1])
+        {
+            if (!checkRightOverlap)
+            {
+                shiftSpawnerXpos += 1;
+            }
+
+            else if (!checkLeftOverlap)
+            {
+                shiftSpawnerXpos += -1;
+            }
+        }
+
+        else if (tileName == curTiles[2])
+        {
+            if (!checkRightOverlap)
+            {
+                shiftSpawnerXpos += 1;
+            }
+
+            else if (!checkBottomOverlap)
+            {
+                shiftSpawnerYpos += -1;
+            }
+        }
+
+        else if (tileName == curTiles[3])
+        {
+            if (!checkLeftOverlap)
+            {
+                shiftSpawnerXpos += -1;
+            }
+
+            else if (!checkBottomOverlap)
+            {
+                shiftSpawnerYpos += -1;
+            }
+        }
+
+        else if (tileName == curTiles[4])
+        {
+            if (!checkLeftOverlap)
+            {
+                shiftSpawnerXpos += -1;
+            }
+
+            else if (!checkTopOverlap)
+            {
+                shiftSpawnerYpos += 1;
+            }
+        }
+
+        else if (tileName == curTiles[5])
+        {
+            if (!checkRightOverlap)
+            {
+                shiftSpawnerXpos += 1;
+            }
+
+            else if (!checkTopOverlap)
+            {
+                shiftSpawnerYpos += 1;
+            }
+        }
     }
 
     public void SetNewTilePosition()
@@ -214,12 +317,12 @@ public class TileSpawner : TileTypes
         validTilesList = new List<string>();
         curTiles = basicTiles;
 
-        Debug.Log("Tile 1 bool: " + validTiles[0]);
-        Debug.Log("Tile 2 bool: " + validTiles[1]);
-        Debug.Log("Tile 3 bool: " + validTiles[2]);
-        Debug.Log("Tile 4 bool: " + validTiles[3]);
-        Debug.Log("Tile 5 bool: " + validTiles[4]);
-        Debug.Log("Tile 6 bool: " + validTiles[5]);
+        //Debug.Log("Tile 1 bool: " + validTiles[0]);
+        //Debug.Log("Tile 2 bool: " + validTiles[1]);
+        //Debug.Log("Tile 3 bool: " + validTiles[2]);
+        //Debug.Log("Tile 4 bool: " + validTiles[3]);
+        //Debug.Log("Tile 5 bool: " + validTiles[4]);
+        //Debug.Log("Tile 6 bool: " + validTiles[5]);
 
 
         if (validTiles[0])
@@ -351,17 +454,17 @@ public class TileSpawner : TileTypes
 
     public void CheckTopOverlaps()
     {
-        if (!checkOuterTopOverlap)
+        if (!checkOuterTopOverlap && !checkOuterTop2Overlap)
         {
             validTiles[0] = true;
         }
 
-        if (!checkTopRightOverlap && !checkOuterRight2Overlap)
+        if (!checkTopRightOverlap)
         {
             validTiles[2] = true;
         }
 
-        if (!checkTopLeftOverlap && !checkOuterLeft2Overlap)
+        if (!checkTopLeftOverlap)
         {
             validTiles[3] = true;
         }
@@ -369,17 +472,17 @@ public class TileSpawner : TileTypes
 
     public void CheckBottomOverlaps()
     {
-        if (!checkOuterBottomOverlap)
+        if (!checkOuterBottomOverlap && !checkOuterBottom2Overlap)
         {
             validTiles[0] = true;
         }
 
-        if (!checkBottomRightOverlap && !checkOuterRight2Overlap)
+        if (!checkBottomRightOverlap)
         {
             validTiles[5] = true;
         }
 
-        if (!checkTopLeftOverlap && !checkOuterLeft2Overlap)
+        if (!checkBottomLeftOverlap)
         {
             validTiles[4] = true;
         }
@@ -387,17 +490,17 @@ public class TileSpawner : TileTypes
 
     public void CheckRightOverlaps()
     {
-        if (!checkOuterRightOverlap)
+        if (!checkOuterRightOverlap && !checkOuterRight2Overlap)
         {
             validTiles[1] = true;
         }
 
-        if (!checkTopRightOverlap && !checkOuterTop2Overlap)
+        if (!checkTopRightOverlap)
         {
             validTiles[4] = true;
         }
 
-        if (!checkBottomRightOverlap && !checkOuterBottom2Overlap)
+        if (!checkBottomRightOverlap)
         {
             validTiles[3] = true;
         }
@@ -405,17 +508,17 @@ public class TileSpawner : TileTypes
 
     public void CheckLeftOverlaps()
     {
-        if (!checkOuterLeftOverlap)
+        if (!checkOuterLeftOverlap && !checkOuterLeft2Overlap)
         {
             validTiles[1] = true;
         }
 
-        if (!checkTopLeftOverlap && !checkOuterTop2Overlap)
+        if (!checkTopLeftOverlap)
         {
             validTiles[5] = true;
         }
 
-        if (!checkBottomLeftOverlap && !checkOuterBottom2Overlap)
+        if (!checkBottomLeftOverlap)
         {
             validTiles[2] = true;
         }
@@ -427,12 +530,12 @@ public class TileSpawner : TileTypes
         checkTopOverlap = Physics2D.OverlapBox(top, new Vector3(0.9f, 0.25f, 0), 0f, LayerMask.GetMask("GroundTile"));
         //Debug.Log("checkTopOverlap = " + checkTopOverlap);
 
-        Vector3 outerTop = transform.position + new Vector3(0 + shiftAmtXpos, 1.5f + shiftAmtYpos, 0);
+        Vector3 outerTop = transform.position + new Vector3(0 + shiftAmtXpos, 1.65f + shiftAmtYpos, 0);
         checkOuterTopOverlap = Physics2D.OverlapBox(outerTop, new Vector3(0.9f, 0.25f, 0), 0f, LayerMask.GetMask("GroundTile"));
         //Debug.Log("checkTopOverlap = " + checkTopOverlap);
 
-        Vector3 outerTop2 = transform.position + new Vector3(0 + shiftAmtXpos, 2.6f + shiftAmtYpos, 0);
-        checkOuterTop2Overlap = Physics2D.OverlapBox(outerTop2, new Vector3(4f, 1f, 0), 0f, LayerMask.GetMask("GroundTile"));
+        Vector3 outerTop2 = transform.position + new Vector3(0 + shiftAmtXpos, 4f + shiftAmtYpos, 0);
+        checkOuterTop2Overlap = Physics2D.OverlapBox(outerTop2, new Vector3(0.9f, 3f, 0), 0f, LayerMask.GetMask("GroundTile"));
  
 
 
@@ -440,12 +543,12 @@ public class TileSpawner : TileTypes
         checkBottomOverlap = Physics2D.OverlapBox(bottom, new Vector3(0.9f, 0.25f, 0), 0f, LayerMask.GetMask("GroundTile"));
         //Debug.Log("checkBottomOverlap = " + checkBottomOverlap);
 
-        Vector3 outerBottom = transform.position - new Vector3(0 - shiftAmtXpos, 1.5f - shiftAmtYpos, 0);
+        Vector3 outerBottom = transform.position - new Vector3(0 - shiftAmtXpos, 1.65f - shiftAmtYpos, 0);
         checkOuterBottomOverlap = Physics2D.OverlapBox(outerBottom, new Vector3(0.9f, 0.25f, 0), 0f, LayerMask.GetMask("GroundTile"));
         //Debug.Log("checkBottomOverlap = " + checkBottomOverlap);
 
-        Vector3 outerBottom2 = transform.position - new Vector3(0 - shiftAmtXpos, 2.6f - shiftAmtYpos, 0);
-        checkOuterBottom2Overlap = Physics2D.OverlapBox(outerBottom2, new Vector3(4f, 1f, 0), 0f, LayerMask.GetMask("GroundTile"));
+        Vector3 outerBottom2 = transform.position - new Vector3(0 - shiftAmtXpos, 4f - shiftAmtYpos, 0);
+        checkOuterBottom2Overlap = Physics2D.OverlapBox(outerBottom2, new Vector3(0.9f, 3f, 0), 0f, LayerMask.GetMask("GroundTile"));
 
 
 
@@ -453,12 +556,12 @@ public class TileSpawner : TileTypes
         checkLeftOverlap = Physics2D.OverlapBox(left, new Vector3(0.25f, 0.9f, 0), 0f, LayerMask.GetMask("GroundTile"));
         //Debug.Log("checkLeftOverlap = " + checkLeftOverlap);
 
-        Vector3 outerLeft = transform.position - new Vector3(1.5f - shiftAmtXpos, 0 - shiftAmtYpos, 0);
+        Vector3 outerLeft = transform.position - new Vector3(1.65f - shiftAmtXpos, 0 - shiftAmtYpos, 0);
         checkOuterLeftOverlap = Physics2D.OverlapBox(outerLeft, new Vector3(0.25f, 0.9f, 0), 0f, LayerMask.GetMask("GroundTile"));
         //Debug.Log("checkLeftOverlap = " + checkLeftOverlap);
 
-        Vector3 outerLeft2 = transform.position - new Vector3(2.6f - shiftAmtXpos, 0 - shiftAmtYpos, 0);
-        checkOuterLeft2Overlap = Physics2D.OverlapBox(outerLeft2, new Vector3(1f, 4f, 0), 0f, LayerMask.GetMask("GroundTile"));
+        Vector3 outerLeft2 = transform.position - new Vector3(4f - shiftAmtXpos, 0 - shiftAmtYpos, 0);
+        checkOuterLeft2Overlap = Physics2D.OverlapBox(outerLeft2, new Vector3(3f, 0.9f, 0), 0f, LayerMask.GetMask("GroundTile"));
 
 
 
@@ -466,12 +569,12 @@ public class TileSpawner : TileTypes
         checkRightOverlap = Physics2D.OverlapBox(right, new Vector3(0.25f, 0.9f, 0), 0f, LayerMask.GetMask("GroundTile"));
         //Debug.Log("checkRightOverlap = " + checkRightOverlap);
 
-        Vector3 outerRight = transform.position + new Vector3(1.5f + shiftAmtXpos, 0 + shiftAmtYpos, 0);
+        Vector3 outerRight = transform.position + new Vector3(1.65f + shiftAmtXpos, 0 + shiftAmtYpos, 0);
         checkOuterRightOverlap = Physics2D.OverlapBox(outerRight, new Vector3(0.25f, 0.9f, 0), 0f, LayerMask.GetMask("GroundTile"));
         //Debug.Log("checkRightOverlap = " + checkRightOverlap);
 
-        Vector3 outerRight2 = transform.position + new Vector3(2.6f + shiftAmtXpos, 0 + shiftAmtYpos, 0);
-        checkOuterRight2Overlap = Physics2D.OverlapBox(outerRight2, new Vector3(1f, 4f, 0), 0f, LayerMask.GetMask("GroundTile"));
+        Vector3 outerRight2 = transform.position + new Vector3(4f + shiftAmtXpos, 0 + shiftAmtYpos, 0);
+        checkOuterRight2Overlap = Physics2D.OverlapBox(outerRight2, new Vector3(3f, 0.9f, 0), 0f, LayerMask.GetMask("GroundTile"));
 
 
 
@@ -499,12 +602,12 @@ public class TileSpawner : TileTypes
         Gizmos.DrawWireCube(top, new Vector3(0.9f, 0.25f, 0));
 
         Gizmos.color = Color.red;
-        Vector3 outerTop = transform.position + new Vector3(0 + shiftAmtXpos, 1.5f + shiftAmtYpos, 0);
+        Vector3 outerTop = transform.position + new Vector3(0 + shiftAmtXpos, 1.65f + shiftAmtYpos, 0);
         Gizmos.DrawWireCube(outerTop, new Vector3(0.9f, 0.25f, 0));
 
         Gizmos.color = Color.red;
-        Vector3 outerTop2 = transform.position + new Vector3(0 + shiftAmtXpos, 2.6f + shiftAmtYpos, 0);
-        Gizmos.DrawWireCube(outerTop2, new Vector3(4f, 1f, 0));
+        Vector3 outerTop2 = transform.position + new Vector3(0 + shiftAmtXpos, 4f + shiftAmtYpos, 0);
+        Gizmos.DrawWireCube(outerTop2, new Vector3(0.9f, 3f, 0));
 
 
 
@@ -513,12 +616,12 @@ public class TileSpawner : TileTypes
         Gizmos.DrawWireCube(bottom, new Vector3(0.9f, 0.25f, 0));
 
         Gizmos.color = Color.blue;
-        Vector3 outerBottom = transform.position - new Vector3(0 - shiftAmtXpos, 1.5f - shiftAmtYpos, 0);
+        Vector3 outerBottom = transform.position - new Vector3(0 - shiftAmtXpos, 1.65f - shiftAmtYpos, 0);
         Gizmos.DrawWireCube(outerBottom, new Vector3(0.9f, 0.25f, 0));
 
         Gizmos.color = Color.blue;
-        Vector3 outerBottom2 = transform.position - new Vector3(0 - shiftAmtXpos, 2.6f - shiftAmtYpos, 0);
-        Gizmos.DrawWireCube(outerBottom2, new Vector3(4f, 1f, 0));
+        Vector3 outerBottom2 = transform.position - new Vector3(0 - shiftAmtXpos, 4f - shiftAmtYpos, 0);
+        Gizmos.DrawWireCube(outerBottom2, new Vector3(0.9f, 3f, 0));
 
 
 
@@ -527,12 +630,12 @@ public class TileSpawner : TileTypes
         Gizmos.DrawWireCube(left, new Vector3(0.25f, 0.9f, 0));
 
         Gizmos.color = Color.yellow;
-        Vector3 outerLeft = transform.position - new Vector3(1.5f - shiftAmtXpos, 0 - shiftAmtYpos, 0);
+        Vector3 outerLeft = transform.position - new Vector3(1.65f - shiftAmtXpos, 0 - shiftAmtYpos, 0);
         Gizmos.DrawWireCube(outerLeft, new Vector3(0.25f, 0.9f, 0));
 
         Gizmos.color = Color.yellow;
-        Vector3 outerLeft2 = transform.position - new Vector3(2.6f - shiftAmtXpos, 0 - shiftAmtYpos, 0);
-        Gizmos.DrawWireCube(outerLeft2, new Vector3(1f, 4f, 0));
+        Vector3 outerLeft2 = transform.position - new Vector3(4f - shiftAmtXpos, 0 - shiftAmtYpos, 0);
+        Gizmos.DrawWireCube(outerLeft2, new Vector3(3f, 0.9f, 0));
 
 
 
@@ -541,12 +644,12 @@ public class TileSpawner : TileTypes
         Gizmos.DrawWireCube(right, new Vector3(0.25f, 0.9f, 0));
 
         Gizmos.color = Color.green;
-        Vector3 outerRight = transform.position + new Vector3(1.5f + shiftAmtXpos, 0 + shiftAmtYpos, 0);
+        Vector3 outerRight = transform.position + new Vector3(1.65f + shiftAmtXpos, 0 + shiftAmtYpos, 0);
         Gizmos.DrawWireCube(outerRight, new Vector3(0.25f, 0.9f, 0));
 
         Gizmos.color = Color.green;
-        Vector3 outerRight2 = transform.position + new Vector3(2.6f + shiftAmtXpos, 0 + shiftAmtYpos, 0);
-        Gizmos.DrawWireCube(outerRight2, new Vector3(1f, 4f, 0));
+        Vector3 outerRight2 = transform.position + new Vector3(4f + shiftAmtXpos, 0 + shiftAmtYpos, 0);
+        Gizmos.DrawWireCube(outerRight2, new Vector3(3f, 0.9f, 0));
 
 
 
