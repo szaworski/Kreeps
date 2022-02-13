@@ -313,17 +313,10 @@ MonoBehaviour:
   shiftSpawnerYpos: 0
   numOfTimesPlaced: 0
   checkTopOverlap: 0
-  checkOuterTopOverlap: 0
-  checkOuterTop2Overlap: 0
   checkBottomOverlap: 0
-  checkOuterBottomOverlap: 0
-  checkOuterBottom2Overlap: 0
   checkLeftOverlap: 0
-  checkOuterLeftOverlap: 0
-  checkOuterLeft2Overlap: 0
   checkRightOverlap: 0
-  checkOuterRightOverlap: 0
-  checkOuterRight2Overlap: 0
+  checkCenterOverlap: 0
   checkTopRightOverlap: 0
   checkTopLeftOverlap: 0
   checkBottomLeftOverlap: 0
@@ -331,6 +324,7 @@ MonoBehaviour:
   prependTileName: 
   tileName: 
   newTileName: 
+  spawnDirection: 
   curTiles:
   - 
   - 
