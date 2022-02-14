@@ -312,6 +312,10 @@ MonoBehaviour:
   shiftSpawnerXpos: 0
   shiftSpawnerYpos: 0
   numOfTimesPlaced: 0
+  numOfUpRayHits: 0
+  numOfDownRayHits: 0
+  numOfLeftRayHits: 0
+  numOfRightRayHits: 0
   checkTopOverlap: 0
   checkBottomOverlap: 0
   checkLeftOverlap: 0
