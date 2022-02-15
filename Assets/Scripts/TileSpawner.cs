@@ -40,7 +40,7 @@ public class TileSpawner : TileTypes
     public bool[] validTiles;
     List<string> validTilesList;
 
-    void Start()
+    void Awake()
     {
         PlaceStartingTile();
         numOfTimesPlaced = 0;
@@ -54,10 +54,10 @@ public class TileSpawner : TileTypes
         SpawnNewTile();
 
         //Visualizing raycasts
-        Debug.DrawRay(transform.position, Vector3.right * 15, Color.green);
-        Debug.DrawRay(transform.position, Vector3.left * 15, Color.yellow);
-        Debug.DrawRay(transform.position, Vector3.up * 15, Color.red);
-        Debug.DrawRay(transform.position, Vector3.down * 15, Color.blue);
+        Debug.DrawRay(transform.position, Vector3.right * 25, Color.green);
+        Debug.DrawRay(transform.position, Vector3.left * 25, Color.yellow);
+        Debug.DrawRay(transform.position, Vector3.up * 25, Color.red);
+        Debug.DrawRay(transform.position, Vector3.down * 25, Color.blue);
     }
 
     public void PlaceStartingTile()
@@ -85,6 +85,8 @@ public class TileSpawner : TileTypes
     {
         if (Input.GetMouseButtonDown(0))
         {
+            //for (int i = 0; i < 10; i++)
+            //{
             GetNewTile();
             tileName = newTileName;
             prependTileName = "BasicTiles/";
@@ -113,6 +115,7 @@ public class TileSpawner : TileTypes
             //Use raycasts to detect distances from other tiles (Trying to detect dead end. In progress)
             CheckTilesWithRayCasts();
         }
+     //}
     }
 
     public void GetNewTile()
@@ -436,8 +439,8 @@ public class TileSpawner : TileTypes
 
         if (spawnDirection == "up" || spawnDirection == "down")
         {
-            RaycastHit2D hitLeft = Physics2D.Raycast(transform.position, Vector3.left, 15);
-            RaycastHit2D hitRight = Physics2D.Raycast(transform.position, Vector3.right, 15);
+            RaycastHit2D hitLeft = Physics2D.Raycast(transform.position, Vector3.left, 25f);
+            RaycastHit2D hitRight = Physics2D.Raycast(transform.position, Vector3.right, 25f);
 
             if (hitLeft)
             {
@@ -445,8 +448,8 @@ public class TileSpawner : TileTypes
                 {
                     numOfLeftRayHits++;
                     Debug.Log("Found object with leftward cast - distance: " + hitLeft.distance);
-                    RaycastHit2D hitLeftUp = Physics2D.Raycast(hitLeft.point * 0.9f, Vector3.up, 10);
-                    RaycastHit2D hitLeftDown = Physics2D.Raycast(hitLeft.point * 0.9f, Vector3.down, 10);
+                    RaycastHit2D hitLeftUp = Physics2D.Raycast(hitLeft.point * 0.9f, Vector3.up, 12.5f);
+                    RaycastHit2D hitLeftDown = Physics2D.Raycast(hitLeft.point * 0.9f, Vector3.down, 12.5f);
 
                     if (hitLeftUp)
                     {
@@ -478,8 +481,8 @@ public class TileSpawner : TileTypes
                 {
                     numOfRightRayHits++;
                     Debug.Log("Found object with rightward cast - distance: " + hitRight.distance);
-                    RaycastHit2D hitRightUp = Physics2D.Raycast(hitRight.point * 0.9f, Vector3.up, 10);
-                    RaycastHit2D hitRightDown = Physics2D.Raycast(hitRight.point * 0.9f, Vector3.down, 10);
+                    RaycastHit2D hitRightUp = Physics2D.Raycast(hitRight.point * 0.9f, Vector3.up, 12.5f);
+                    RaycastHit2D hitRightDown = Physics2D.Raycast(hitRight.point * 0.9f, Vector3.down, 12.5f);
 
                     if (hitRightUp)
                     {
@@ -508,8 +511,8 @@ public class TileSpawner : TileTypes
 
         else if (spawnDirection == "left" || spawnDirection == "right")
         {
-            RaycastHit2D hitUp = Physics2D.Raycast(transform.position, Vector3.up, 15);
-            RaycastHit2D hitDown = Physics2D.Raycast(transform.position, Vector3.down, 15);
+            RaycastHit2D hitUp = Physics2D.Raycast(transform.position, Vector3.up, 25f);
+            RaycastHit2D hitDown = Physics2D.Raycast(transform.position, Vector3.down, 25f);
 
             if (hitUp)
             {
@@ -517,8 +520,8 @@ public class TileSpawner : TileTypes
                 {
                     numOfUpRayHits++;
                     Debug.Log("Found object with upward cast - distance: " + hitUp.distance);
-                    RaycastHit2D hitUpRight = Physics2D.Raycast(hitUp.point * 0.9f, Vector3.right, 10);
-                    RaycastHit2D hitUpLeft = Physics2D.Raycast(hitUp.point * 0.9f, Vector3.left, 10);
+                    RaycastHit2D hitUpRight = Physics2D.Raycast(hitUp.point * 0.9f, Vector3.right, 12.5f);
+                    RaycastHit2D hitUpLeft = Physics2D.Raycast(hitUp.point * 0.9f, Vector3.left, 12.5f);
 
                     if (hitUpRight)
                     {
@@ -550,8 +553,8 @@ public class TileSpawner : TileTypes
                 {
                     numOfDownRayHits++;
                     Debug.Log("Found object with downward cast - distance: " + hitDown.distance);
-                    RaycastHit2D hitDownRight = Physics2D.Raycast(hitDown.point * 0.9f, Vector3.right, 10);
-                    RaycastHit2D hitDownLeft = Physics2D.Raycast(hitDown.point * 0.9f, Vector3.left, 10);
+                    RaycastHit2D hitDownRight = Physics2D.Raycast(hitDown.point * 0.9f, Vector3.right, 12.5f);
+                    RaycastHit2D hitDownLeft = Physics2D.Raycast(hitDown.point * 0.9f, Vector3.left, 12.5f);
 
                     if (hitDownRight)
                     {
@@ -581,17 +584,17 @@ public class TileSpawner : TileTypes
 
     public void CheckTopOverlaps()
     {
-        if (!checkTopOverlap || !checkOuterTopOverlap)
+        if (!checkTopOverlap && !checkOuterTopOverlap)
         {
             validTiles[0] = true;
         }
 
-        if (numOfLeftRayHits > numOfRightRayHits)
+        if (!checkRightOverlap && numOfLeftRayHits > numOfRightRayHits)
         {
             validTiles[2] = true;
         }
 
-        else if (numOfRightRayHits > numOfLeftRayHits)
+        else if (!checkLeftOverlap && numOfRightRayHits > numOfLeftRayHits)
         {
             validTiles[3] = true;
         }
@@ -629,17 +632,17 @@ public class TileSpawner : TileTypes
 
     public void CheckBottomOverlaps()
     {
-        if (!checkBottomOverlap || !checkOuterBottomOverlap)
+        if (!checkBottomOverlap && !checkOuterBottomOverlap)
         {
             validTiles[0] = true;
         }
 
-        if (numOfRightRayHits > numOfLeftRayHits)
+        if (!checkLeftOverlap && numOfRightRayHits > numOfLeftRayHits)
         {
             validTiles[4] = true;
         }
 
-        else if (numOfLeftRayHits > numOfRightRayHits)
+        else if (!checkRightOverlap && numOfLeftRayHits > numOfRightRayHits)
         {
             validTiles[5] = true;
         }
@@ -677,17 +680,17 @@ public class TileSpawner : TileTypes
 
     public void CheckRightOverlaps()
     {
-        if (!checkRightOverlap || !checkOuterRightOverlap)
+        if (!checkRightOverlap && !checkOuterRightOverlap)
         {
             validTiles[1] = true;
         }
 
-        if (numOfUpRayHits > numOfDownRayHits)
+        if (!checkBottomOverlap && numOfUpRayHits > numOfDownRayHits)
         {
             validTiles[3] = true;
         }
 
-        else if (numOfDownRayHits > numOfUpRayHits)
+        else if (!checkTopOverlap && numOfDownRayHits > numOfUpRayHits)
         {
             validTiles[4] = true;
         }
@@ -725,17 +728,17 @@ public class TileSpawner : TileTypes
 
     public void CheckLeftOverlaps()
     {
-        if (!checkLeftOverlap || !checkOuterLeftOverlap)
+        if (!checkLeftOverlap && !checkOuterLeftOverlap)
         {
             validTiles[1] = true;
         }
 
-        if (numOfDownRayHits > numOfUpRayHits)
+        if (!checkTopOverlap && numOfDownRayHits > numOfUpRayHits)
         {
             validTiles[5] = true;
         }
 
-        else if (numOfUpRayHits > numOfDownRayHits)
+        else if (!checkBottomOverlap && numOfUpRayHits > numOfDownRayHits)
         {
             validTiles[2] = true;
         }
