@@ -54,10 +54,10 @@ public class TileSpawner : TileTypes
         SpawnNewTile();
 
         //Visualizing raycasts
-        Debug.DrawRay(transform.position, Vector3.right * 5, Color.green);
-        Debug.DrawRay(transform.position, Vector3.left * 5, Color.yellow);
-        Debug.DrawRay(transform.position, Vector3.up * 5, Color.red);
-        Debug.DrawRay(transform.position, Vector3.down * 5, Color.blue);
+        Debug.DrawRay(transform.position, Vector3.right * 15, Color.green);
+        Debug.DrawRay(transform.position, Vector3.left * 15, Color.yellow);
+        Debug.DrawRay(transform.position, Vector3.up * 15, Color.red);
+        Debug.DrawRay(transform.position, Vector3.down * 15, Color.blue);
     }
 
     public void PlaceStartingTile()
@@ -436,8 +436,8 @@ public class TileSpawner : TileTypes
 
         if (spawnDirection == "up" || spawnDirection == "down")
         {
-            RaycastHit2D hitLeft = Physics2D.Raycast(transform.position, Vector3.left, 5.0f);
-            RaycastHit2D hitRight = Physics2D.Raycast(transform.position, Vector3.right, 5.0f);
+            RaycastHit2D hitLeft = Physics2D.Raycast(transform.position, Vector3.left, 15);
+            RaycastHit2D hitRight = Physics2D.Raycast(transform.position, Vector3.right, 15);
 
             if (hitLeft)
             {
@@ -445,8 +445,8 @@ public class TileSpawner : TileTypes
                 {
                     numOfLeftRayHits++;
                     Debug.Log("Found object with leftward cast - distance: " + hitLeft.distance);
-                    RaycastHit2D hitLeftUp = Physics2D.Raycast(hitLeft.point * 0.9f, Vector3.up, 5.0f);
-                    RaycastHit2D hitLeftDown = Physics2D.Raycast(hitLeft.point * 0.9f, Vector3.down, 5.0f);
+                    RaycastHit2D hitLeftUp = Physics2D.Raycast(hitLeft.point * 0.9f, Vector3.up, 10);
+                    RaycastHit2D hitLeftDown = Physics2D.Raycast(hitLeft.point * 0.9f, Vector3.down, 10);
 
                     if (hitLeftUp)
                     {
@@ -478,8 +478,8 @@ public class TileSpawner : TileTypes
                 {
                     numOfRightRayHits++;
                     Debug.Log("Found object with rightward cast - distance: " + hitRight.distance);
-                    RaycastHit2D hitRightUp = Physics2D.Raycast(hitRight.point * 0.9f, Vector3.up, 5.0f);
-                    RaycastHit2D hitRightDown = Physics2D.Raycast(hitRight.point * 0.9f, Vector3.down, 5.0f);
+                    RaycastHit2D hitRightUp = Physics2D.Raycast(hitRight.point * 0.9f, Vector3.up, 10);
+                    RaycastHit2D hitRightDown = Physics2D.Raycast(hitRight.point * 0.9f, Vector3.down, 10);
 
                     if (hitRightUp)
                     {
@@ -508,8 +508,8 @@ public class TileSpawner : TileTypes
 
         else if (spawnDirection == "left" || spawnDirection == "right")
         {
-            RaycastHit2D hitUp = Physics2D.Raycast(transform.position, Vector3.up, 5.0f);
-            RaycastHit2D hitDown = Physics2D.Raycast(transform.position, Vector3.down, 5.0f);
+            RaycastHit2D hitUp = Physics2D.Raycast(transform.position, Vector3.up, 15);
+            RaycastHit2D hitDown = Physics2D.Raycast(transform.position, Vector3.down, 15);
 
             if (hitUp)
             {
@@ -517,8 +517,8 @@ public class TileSpawner : TileTypes
                 {
                     numOfUpRayHits++;
                     Debug.Log("Found object with upward cast - distance: " + hitUp.distance);
-                    RaycastHit2D hitUpRight = Physics2D.Raycast(hitUp.point * 0.9f, Vector3.right, 5.0f);
-                    RaycastHit2D hitUpLeft = Physics2D.Raycast(hitUp.point * 0.9f, Vector3.left, 5.0f);
+                    RaycastHit2D hitUpRight = Physics2D.Raycast(hitUp.point * 0.9f, Vector3.right, 10);
+                    RaycastHit2D hitUpLeft = Physics2D.Raycast(hitUp.point * 0.9f, Vector3.left, 10);
 
                     if (hitUpRight)
                     {
@@ -550,8 +550,8 @@ public class TileSpawner : TileTypes
                 {
                     numOfDownRayHits++;
                     Debug.Log("Found object with downward cast - distance: " + hitDown.distance);
-                    RaycastHit2D hitDownRight = Physics2D.Raycast(hitDown.point * 0.9f, Vector3.right, 5.0f);
-                    RaycastHit2D hitDownLeft = Physics2D.Raycast(hitDown.point * 0.9f, Vector3.left, 5.0f);
+                    RaycastHit2D hitDownRight = Physics2D.Raycast(hitDown.point * 0.9f, Vector3.right, 10);
+                    RaycastHit2D hitDownLeft = Physics2D.Raycast(hitDown.point * 0.9f, Vector3.left, 10);
 
                     if (hitDownRight)
                     {
@@ -677,7 +677,7 @@ public class TileSpawner : TileTypes
 
     public void CheckRightOverlaps()
     {
-        if (!checkRightOverlap)
+        if (!checkRightOverlap || !checkOuterRightOverlap)
         {
             validTiles[1] = true;
         }
@@ -725,7 +725,7 @@ public class TileSpawner : TileTypes
 
     public void CheckLeftOverlaps()
     {
-        if (!checkLeftOverlap)
+        if (!checkLeftOverlap || !checkOuterLeftOverlap)
         {
             validTiles[1] = true;
         }
