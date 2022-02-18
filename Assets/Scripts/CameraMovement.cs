@@ -5,9 +5,15 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     private Camera camera;
+    private float panSpeed = 6f;
+    private float scrollSpeed = 2.5f;
+    private Vector2 panLimit;
+    private Vector3 pos;
 
     void Start()
     {
+        pos = transform.position;
+        panLimit = new Vector2(250, 250);
         camera = Camera.main;
     }
 
@@ -17,25 +23,45 @@ public class CameraMovement : MonoBehaviour
         CameraScrolling();
     }
 
-
     public void WasdCameraMovement()
     {
-        float xAxis = Input.GetAxis("Horizontal");
-        float yAxis = Input.GetAxis("Vertical");
-        Vector3 applyMovement = new Vector3(xAxis, yAxis, 0);
-        transform.position += applyMovement;
+        //Move camera Up
+        if (Input.GetKey("w"))
+        {
+            pos.y += panSpeed * Time.deltaTime;
+        }
+        //Move camera Down
+        if (Input.GetKey("s"))
+        {
+            pos.y -= panSpeed * Time.deltaTime;
+        }
+        //Move camera Left
+        if (Input.GetKey("a"))
+        {
+            pos.x -= panSpeed * Time.deltaTime;
+        }
+        //Move camera Right
+        if (Input.GetKey("d"))
+        {
+            pos.x += panSpeed * Time.deltaTime;
+        }
+        //Keep the camera confined to the panLimit space
+        pos.x = Mathf.Clamp(pos.x, -panLimit.x, panLimit.x);
+        pos.y = Mathf.Clamp(pos.y, -panLimit.y, panLimit.y);
+        //Move the camera position
+        transform.position = pos;
     }
 
     public void CameraScrolling()
     {
-        float scrollSpeed = 10f;
+        float scroll = Input.GetAxis("Mouse ScrollWheel");
 
-        if (Input.GetAxisRaw("Mouse ScrollWheel") > 0 || Input.GetAxisRaw("Mouse ScrollWheel") < 0)
+        if (scroll > 0 || scroll < 0)
         {
             if (camera.orthographic)
             {
+                camera.orthographicSize = Mathf.Clamp(camera.orthographicSize, 1f, 7f);
                 camera.orthographicSize -= Input.GetAxis("Mouse ScrollWheel") * scrollSpeed;
-                camera.orthographicSize = Mathf.Clamp(camera.orthographicSize, 1f, 6f);
             }
         }
     }
