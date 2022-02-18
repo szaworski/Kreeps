@@ -5,7 +5,7 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     private Camera camera;
-    private float panSpeed = 6f;
+    private float panSpeed = 7f;
     private float scrollSpeed = 2.5f;
     private Vector2 panLimit;
     private Vector3 pos;
@@ -60,7 +60,7 @@ public class CameraMovement : MonoBehaviour
         {
             if (camera.orthographic)
             {
-                camera.orthographicSize = Mathf.Clamp(camera.orthographicSize, 1f, 7f);
+                camera.orthographicSize = Mathf.Clamp(camera.orthographicSize, 1f, 9f);
                 camera.orthographicSize -= Input.GetAxis("Mouse ScrollWheel") * scrollSpeed;
             }
         }

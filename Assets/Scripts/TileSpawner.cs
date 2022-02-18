@@ -34,7 +34,6 @@ public class TileSpawner : TileTypes
     public string tileName;
     public string newTileName;
     public string spawnDirection;
-    public string lastAngleTileUsed;
 
     public string[] curTiles;
     public bool[] validTiles;
@@ -46,7 +45,6 @@ public class TileSpawner : TileTypes
         numOfTimesPlaced = 0;
         curTiles = new string[6];
         validTiles = new bool[6];
-        lastAngleTileUsed = null;
     }
 
     void Update()
@@ -252,26 +250,6 @@ public class TileSpawner : TileTypes
         int index = rand.Next(validTilesList.Count);
         //Debug.Log("The randomly Chosen tile is: " + validTilesList[index]);
         newTileName = validTilesList[index];
-
-        if (newTileName == curTiles[2])
-        {
-            lastAngleTileUsed = "Tile3";
-        }
-
-        else if (newTileName == curTiles[3])
-        {
-            lastAngleTileUsed = "Tile4";
-        }
-
-        else if (newTileName == curTiles[4])
-        {
-            lastAngleTileUsed = "Tile5";
-        }
-
-        else if (newTileName == curTiles[5])
-        {
-            lastAngleTileUsed = "Tile6";
-        }
     }
 
     public void GetListOfValidTiles()
@@ -285,7 +263,6 @@ public class TileSpawner : TileTypes
         //Debug.Log("Tile 4 bool: " + validTiles[3]);
         //Debug.Log("Tile 5 bool: " + validTiles[4]);
         //Debug.Log("Tile 6 bool: " + validTiles[5]);
-
 
         if (validTiles[0])
         {
@@ -613,21 +590,6 @@ public class TileSpawner : TileTypes
                 validTiles[3] = true;
             }
         }
-
-        /*
-        if (!checkLeftOverlap && !checkRightOverlap && checkTopOverlap) //&& checkTopOverlap && lastAngleTileUsed != null
-        {
-            if (lastAngleTileUsed == "Tile5")
-            {
-                validTiles[2] = true;
-            }
-
-            if (lastAngleTileUsed == "Tile6")
-            {
-                validTiles[3] = true;
-            }          
-        }
-        */
     }
 
     public void CheckBottomOverlaps()
@@ -661,21 +623,6 @@ public class TileSpawner : TileTypes
                 validTiles[4] = true;
             }
         }
-
-        /*
-        if (!checkLeftOverlap && !checkRightOverlap && checkBottomOverlap) //&& checkBottomOverlap && lastAngleTileUsed != null
-        {
-            if (lastAngleTileUsed == "Tile3")
-            {
-                validTiles[4] = true;
-            }
-
-            if (lastAngleTileUsed == "Tile4")
-            {
-                validTiles[5] = true;
-            }
-        }
-        */
     }
 
     public void CheckRightOverlaps()
@@ -709,21 +656,6 @@ public class TileSpawner : TileTypes
                 validTiles[3] = true;
             }
         }
-
-        /*
-        if (!checkTopOverlap && !checkBottomOverlap && checkRightOverlap) //&& checkRightOverlap && lastAngleTileUsed != null
-        {
-            if (lastAngleTileUsed == "Tile6")
-            {
-                validTiles[3] = true;
-            }
-
-            if (lastAngleTileUsed == "Tile3")
-            {
-                validTiles[4] = true;
-            }
-        }
-        */
     }
 
     public void CheckLeftOverlaps()
@@ -757,19 +689,6 @@ public class TileSpawner : TileTypes
                 validTiles[2] = true;
             }
         }
-        /*
-        if (!checkTopOverlap && !checkBottomOverlap && checkLeftOverlap)  //&& checkLeftOverlap && lastAngleTileUsed != null
-        {
-            if (lastAngleTileUsed == "Tile4")
-            {
-                validTiles[5] = true;
-            }
-
-            if (lastAngleTileUsed == "Tile5")
-            {
-                validTiles[2] = true;
-            }
-           */
     }
 
     public void CheckTileOverlap()
