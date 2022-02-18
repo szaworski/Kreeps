@@ -64,7 +64,7 @@ public class TileSpawner : TileTypes
 
         //Fetch the starting tile
         //GameObject referenceStartTile = (GameObject)Instantiate(Resources.Load("BasicTiles/Tile3"));
-        GameObject referenceStartTile = (GameObject)Instantiate(Resources.Load("StartingTile"));
+        GameObject referenceStartTile = (GameObject)Instantiate(Resources.Load("Tiles/StartingTile"));
         GameObject TileHolder = GameObject.Find("TileHolder");
 
         //Place the starting tile
@@ -83,11 +83,9 @@ public class TileSpawner : TileTypes
     {
         if (Input.GetMouseButtonDown(0))
         {
-            //for (int i = 0; i < 10; i++)
-            //{
             GetNewTile();
             tileName = newTileName;
-            prependTileName = "ForrestTiles/";
+            PrependTilenamePath();
             //Debug.Log("Tile Pathway: " + prependTileName + tileName);
 
             //Find the tile in the resources folder
@@ -113,7 +111,6 @@ public class TileSpawner : TileTypes
             //Use raycasts to detect distances from other tiles (Trying to detect dead end. In progress)
             CheckTilesWithRayCasts();
         }
-     //}
     }
 
     public void GetNewTile()
@@ -126,8 +123,17 @@ public class TileSpawner : TileTypes
 
     public void PrependTilenamePath()
     {
+        if (tileName.Contains("Forrest"))
+        {
+            prependTileName = "Tiles/ForrestTiles/";
+        }
 
+        /*
+        else if ()
+        {
 
+        }
+        */
     }
 
     public void MoveSpawnPos()
@@ -248,7 +254,7 @@ public class TileSpawner : TileTypes
     {
         var rand = new System.Random();
         int index = rand.Next(validTilesList.Count);
-        //Debug.Log("The randomly Chosen tile is: " + validTilesList[index]);
+        Debug.Log("The randomly Chosen tile is: " + validTilesList[index]);
         newTileName = validTilesList[index];
     }
 
@@ -257,12 +263,12 @@ public class TileSpawner : TileTypes
         validTilesList = new List<string>();
         curTiles = forrestTiles;
 
-        //Debug.Log("Tile 1 bool: " + validTiles[0]);
-        //Debug.Log("Tile 2 bool: " + validTiles[1]);
-        //Debug.Log("Tile 3 bool: " + validTiles[2]);
-        //Debug.Log("Tile 4 bool: " + validTiles[3]);
-        //Debug.Log("Tile 5 bool: " + validTiles[4]);
-        //Debug.Log("Tile 6 bool: " + validTiles[5]);
+        Debug.Log("Tile 1 bool: " + validTiles[0]);
+        Debug.Log("Tile 2 bool: " + validTiles[1]);
+        Debug.Log("Tile 3 bool: " + validTiles[2]);
+        Debug.Log("Tile 4 bool: " + validTiles[3]);
+        Debug.Log("Tile 5 bool: " + validTiles[4]);
+        Debug.Log("Tile 6 bool: " + validTiles[5]);
 
         if (validTiles[0])
         {
