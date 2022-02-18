@@ -89,7 +89,7 @@ public class TileSpawner : TileTypes
             //{
             GetNewTile();
             tileName = newTileName;
-            prependTileName = "BasicTiles/";
+            prependTileName = "ForrestTiles/";
             //Debug.Log("Tile Pathway: " + prependTileName + tileName);
 
             //Find the tile in the resources folder
@@ -277,7 +277,7 @@ public class TileSpawner : TileTypes
     public void GetListOfValidTiles()
     {
         validTilesList = new List<string>();
-        curTiles = basicTiles;
+        curTiles = forrestTiles;
 
         //Debug.Log("Tile 1 bool: " + validTiles[0]);
         //Debug.Log("Tile 2 bool: " + validTiles[1]);
