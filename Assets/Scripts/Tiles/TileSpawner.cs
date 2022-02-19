@@ -52,10 +52,10 @@ public class TileSpawner : TileTypes
         SpawnNewTile();
 
         //Visualizing raycasts
-        Debug.DrawRay(transform.position, Vector3.right * 25, Color.green);
-        Debug.DrawRay(transform.position, Vector3.left * 25, Color.yellow);
-        Debug.DrawRay(transform.position, Vector3.up * 25, Color.red);
-        Debug.DrawRay(transform.position, Vector3.down * 25, Color.blue);
+        //Debug.DrawRay(transform.position, Vector3.right * 25, Color.green);
+        //Debug.DrawRay(transform.position, Vector3.left * 25, Color.yellow);
+        //Debug.DrawRay(transform.position, Vector3.up * 25, Color.red);
+        //Debug.DrawRay(transform.position, Vector3.down * 25, Color.blue);
     }
 
     public void PlaceStartingTile()
@@ -768,6 +768,8 @@ public class TileSpawner : TileTypes
 
     public void OnDrawGizmos()
     {
+        // Commenting out gizmos for now. Turn these back on to see boxes used for tile detection
+        /*
         Gizmos.color = Color.red;
         Vector3 top = transform.position + new Vector3(0, 0.65f, 0);
         Gizmos.DrawWireCube(top, new Vector3(0.9f, 0.25f, 0));
@@ -820,5 +822,6 @@ public class TileSpawner : TileTypes
         Gizmos.color = Color.white;
         Vector3 bottomRight = transform.position + new Vector3(0.65f, -0.65f, 0);
         Gizmos.DrawWireCube(bottomRight, new Vector3(0.25f, 0.25f, 0));
+        */
     }
 }

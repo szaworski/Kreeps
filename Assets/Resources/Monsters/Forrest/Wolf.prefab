@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5960530083426716277}
   - component: {fileID: 2128375267166688240}
   - component: {fileID: 749717250971826327}
+  - component: {fileID: -6739542867013121178}
   - component: {fileID: 6515737402300966651}
   m_Layer: 0
   m_Name: Wolf
@@ -110,6 +111,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1789751, y: 0.08731902}
   m_EdgeRadius: 0
+--- !u!95 &-6739542867013121178
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6262272174153023960}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 305681732990e864187230f89cf6195e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &6515737402300966651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,8 +145,9 @@ MonoBehaviour:
   health: 10
   armor: 0
   type: wolf
-  moveSpeed: 0.2
+  moveSpeed: 0.3
   waypointNum: 0
   currentWaypoint: 0
+  isFacingLeft: 0
   waypoints: []
   currWaypoint: {fileID: 0}

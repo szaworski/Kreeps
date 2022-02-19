@@ -11,6 +11,7 @@ public class MonsterManager : MonoBehaviour
 
     public void SpawnMonster()
     {
+        //Using right mouse click for testing. Eventually this function will be called by a button press
         if (Input.GetMouseButtonDown(1))
         {
             //Spawn the monster object

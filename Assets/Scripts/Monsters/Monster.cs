@@ -10,11 +10,14 @@ public class Monster : MonoBehaviour
     public float moveSpeed;
     public int waypointNum;
     public int currentWaypoint;
+    public bool isFacingLeft;
     public GameObject[] waypoints;
     public GameObject currWaypoint;
 
+
     void Awake()
     {
+        isFacingLeft = true;
         waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
         currentWaypoint = TileSpawner.numOfTimesPlaced;
 
@@ -33,6 +36,20 @@ public class Monster : MonoBehaviour
     {
         if (waypointNum == currentWaypoint)
         {
+            //Flip the sprite if facing left and moving right
+            if (isFacingLeft && transform.position.x < waypoints[currentWaypoint].transform.position.x)
+            {
+                transform.localRotation = Quaternion.Euler(0, 180, 0);
+                isFacingLeft = false;
+            }
+
+            //Flip the sprite if facing right and moving left
+            if (!isFacingLeft && transform.position.x > waypoints[currentWaypoint].transform.position.x)
+            {
+                transform.localRotation = Quaternion.Euler(0, 0, 0);
+                isFacingLeft = true;
+            }
+
             //Move the monsters position to the next waypoint node
             transform.position = Vector3.MoveTowards(transform.position, waypoints[currentWaypoint].transform.position, moveSpeed * Time.deltaTime);
         }
