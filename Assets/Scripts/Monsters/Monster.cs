@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Monster : MonoBehaviour
 {
+    [Header("Monster attributes")]
     public int health;
     public int armor;
     public string type;
     public float moveSpeed;
+
+    [Header("Waypoint vars")]
+    public bool isFacingLeft;
     public int waypointNum;
     public int currentWaypoint;
-    public bool isFacingLeft;
     public GameObject[] waypoints;
     public GameObject currWaypoint;
 
@@ -69,5 +72,10 @@ public class Monster : MonoBehaviour
 
             // Todo: Subtract a point of health from the main base
         }
+    }
+
+    public void UpdateHealth()
+    {
+        //Update the monsters health when they take damage. Todo
     }
 }

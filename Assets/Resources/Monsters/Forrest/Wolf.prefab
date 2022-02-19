@@ -144,7 +144,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   armor: 0
-  type: wolf
+  name: wolf
+  type: 
   moveSpeed: 0.3
   waypointNum: 0
   currentWaypoint: 0

@@ -30,10 +30,10 @@ public class TileSpawner : TileTypes
     public bool checkBottomLeftOverlap;
     public bool checkBottomRightOverlap;
 
-    public string prependTileName;
-    public string tileName;
-    public string newTileName;
-    public string spawnDirection;
+    public static string prependTileName;
+    public static string tileName;
+    public static string newTileName;
+    public static string spawnDirection;
 
     public string[] curTiles;
     public bool[] validTiles;
