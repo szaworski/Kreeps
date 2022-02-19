@@ -9,7 +9,7 @@ public class TileSpawner : TileTypes
     public int shiftAmtYpos;
     public int shiftSpawnerXpos;
     public int shiftSpawnerYpos;
-    public int numOfTimesPlaced;
+    public static int numOfTimesPlaced;
 
     public int numOfUpRayHits;
     public int numOfDownRayHits;
@@ -41,8 +41,8 @@ public class TileSpawner : TileTypes
 
     void Awake()
     {
-        PlaceStartingTile();
         numOfTimesPlaced = 0;
+        PlaceStartingTile();
         curTiles = new string[6];
         validTiles = new bool[6];
     }
@@ -72,6 +72,14 @@ public class TileSpawner : TileTypes
         tile.transform.SetParent(TileHolder.transform);
         tile.transform.position = new Vector2(0, 0);
 
+        //increment numOfTimesPlaced
+        numOfTimesPlaced++;
+
+        //Place a waypoint node on the center of the tile
+        GameObject waypoint = (GameObject)Instantiate(Resources.Load("Tiles/WaypointNode"), TileHolder.transform);
+        waypoint.transform.SetParent(tile.transform);
+        waypoint.transform.position = new Vector2(tile.transform.position.x, tile.transform.position.y);
+
         //Destroy the temporary reference object
         Destroy(referenceStartTile);
 
@@ -98,11 +106,16 @@ public class TileSpawner : TileTypes
             tile.transform.SetParent(TileHolder.transform);
             tile.transform.position = new Vector2(shiftAmtXpos, shiftAmtYpos);
 
-            //Destroy the temporary reference object
-            Destroy(referenceStartTile);
-
             //increment numOfTimesPlaced
             numOfTimesPlaced++;
+
+            //Place a waypoint node on the center of the tile
+            GameObject waypoint = (GameObject)Instantiate(Resources.Load("Tiles/WaypointNode"), TileHolder.transform);
+            waypoint.transform.SetParent(tile.transform);
+            waypoint.transform.position = new Vector2(tile.transform.position.x, tile.transform.position.y);
+
+            //Destroy the temporary reference objects
+            Destroy(referenceStartTile);
 
             //Move the Spawn position
             FindNewSpawnDirection();
