@@ -12,52 +12,45 @@ public class Monster : MonoBehaviour
     public int currentWaypoint;
     public GameObject[] waypoints;
     public GameObject currWaypoint;
-    public bool isSpawned;
 
-    private void Awake()
+    void Awake()
     {
+        waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
+        currentWaypoint = TileSpawner.numOfTimesPlaced;
 
+        foreach (GameObject waypoint in waypoints)
+        {
+            waypointNum = waypoint.GetComponent<WaypointManager>().waypointNum;
+        }
     }
 
     void Update()
     {
-        SpawnMonster();
         FollowWaypoints();
-    }
-
-    public void SpawnMonster()
-    {
-        if (Input.GetMouseButtonDown(1))
-        {
-            waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
-            currentWaypoint = TileSpawner.numOfTimesPlaced;
-
-            foreach (GameObject waypoint in waypoints)
-            {
-                waypointNum = waypoint.GetComponent<WaypointManager>().waypointNum;
-            }
-
-            //Spawn the monster object
-            GameObject wolf = (GameObject)Instantiate(Resources.Load("Monsters/Forrest/Wolf"));
-            wolf.transform.position = GameObject.Find("TileManager").transform.position;
-            isSpawned = true;
-        }
     }
 
     public void FollowWaypoints()
     {
-        if (isSpawned)
+        if (waypointNum == currentWaypoint)
         {
-            if (waypointNum == currentWaypoint)
-            {
-                //Move the monsters position to the next waypoint node
-                transform.position = Vector3.Lerp(transform.position, waypoints[currentWaypoint - 1].transform.position, 2 * Time.deltaTime);
+            //Move the monsters position to the next waypoint node
+            transform.position = Vector3.MoveTowards(transform.position, waypoints[currentWaypoint].transform.position, moveSpeed * Time.deltaTime);
+        }
 
-                if (transform.position == waypoints[currentWaypoint -1].transform.position)
-                {
-                    currentWaypoint--;
-                }
-            }
+        if (transform.position == waypoints[currentWaypoint].transform.position && waypointNum > 0)
+        {
+            //When the monster reaches the position of the current waypoint,
+            //we decrement currentWaypoint and waypoint by 1 to trigger the above if statement again until there are no more waypoints.
+            currentWaypoint--;
+            waypointNum--;
+        }
+
+        if (transform.position == GameObject.Find("MainBaseWaypoint").transform.position)
+        {
+            //Destroy the game object once the monster reaches the main base
+            Destroy(this.gameObject);
+
+            // Todo: Subtract a point of health from the main base
         }
     }
 }
