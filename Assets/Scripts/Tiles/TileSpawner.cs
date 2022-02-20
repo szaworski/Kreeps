@@ -267,7 +267,7 @@ public class TileSpawner : TileTypes
     {
         var rand = new System.Random();
         int index = rand.Next(validTilesList.Count);
-        Debug.Log("The randomly Chosen tile is: " + validTilesList[index]);
+        //Debug.Log("The randomly Chosen tile is: " + validTilesList[index]);
         newTileName = validTilesList[index];
     }
 
@@ -276,12 +276,12 @@ public class TileSpawner : TileTypes
         validTilesList = new List<string>();
         curTiles = forrestTiles;
 
-        Debug.Log("Tile 1 bool: " + validTiles[0]);
-        Debug.Log("Tile 2 bool: " + validTiles[1]);
-        Debug.Log("Tile 3 bool: " + validTiles[2]);
-        Debug.Log("Tile 4 bool: " + validTiles[3]);
-        Debug.Log("Tile 5 bool: " + validTiles[4]);
-        Debug.Log("Tile 6 bool: " + validTiles[5]);
+        //Debug.Log("Tile 1 bool: " + validTiles[0]);
+        //Debug.Log("Tile 2 bool: " + validTiles[1]);
+        //Debug.Log("Tile 3 bool: " + validTiles[2]);
+        //Debug.Log("Tile 4 bool: " + validTiles[3]);
+        //Debug.Log("Tile 5 bool: " + validTiles[4]);
+        //Debug.Log("Tile 6 bool: " + validTiles[5]);
 
         if (validTiles[0])
         {
@@ -443,7 +443,7 @@ public class TileSpawner : TileTypes
                 if (hitLeft.collider.isTrigger)
                 {
                     numOfLeftRayHits++;
-                    Debug.Log("Found object with leftward cast - distance: " + hitLeft.distance);
+                    //Debug.Log("Found object with leftward cast - distance: " + hitLeft.distance);
                     RaycastHit2D hitLeftUp = Physics2D.Raycast(hitLeft.point * 0.9f, Vector3.up, 12.5f);
                     RaycastHit2D hitLeftDown = Physics2D.Raycast(hitLeft.point * 0.9f, Vector3.down, 12.5f);
 
@@ -452,7 +452,7 @@ public class TileSpawner : TileTypes
                         if (hitLeftUp.collider.isTrigger)
                         {
                             numOfLeftRayHits++;
-                            Debug.Log("Found object with leftward/Up cast - distance: " + hitLeftUp.distance);
+                            //Debug.Log("Found object with leftward/Up cast - distance: " + hitLeftUp.distance);
                         }
                     }
 
@@ -461,14 +461,14 @@ public class TileSpawner : TileTypes
                         if (hitLeftDown.collider.isTrigger)
                         {
                             numOfLeftRayHits++;
-                            Debug.Log("Found object with leftward/Down cast - distance: " + hitLeftDown.distance);
+                            //Debug.Log("Found object with leftward/Down cast - distance: " + hitLeftDown.distance);
                         }
                     }
                 }
             }
             else
             {
-                Debug.Log("Nothing found with leftward raycast");
+                //Debug.Log("Nothing found with leftward raycast");
             }
 
             if (hitRight)
@@ -476,7 +476,7 @@ public class TileSpawner : TileTypes
                 if (hitRight.collider.isTrigger)
                 {
                     numOfRightRayHits++;
-                    Debug.Log("Found object with rightward cast - distance: " + hitRight.distance);
+                    //Debug.Log("Found object with rightward cast - distance: " + hitRight.distance);
                     RaycastHit2D hitRightUp = Physics2D.Raycast(hitRight.point * 0.9f, Vector3.up, 12.5f);
                     RaycastHit2D hitRightDown = Physics2D.Raycast(hitRight.point * 0.9f, Vector3.down, 12.5f);
 
@@ -485,7 +485,7 @@ public class TileSpawner : TileTypes
                         if (hitRightUp.collider.isTrigger)
                         {
                             numOfRightRayHits++;
-                            Debug.Log("Found object with rightward/Up cast - distance: " + hitRightUp.distance);
+                            //Debug.Log("Found object with rightward/Up cast - distance: " + hitRightUp.distance);
                         }
                     }
 
@@ -494,13 +494,13 @@ public class TileSpawner : TileTypes
                         if (hitRightDown.collider.isTrigger)
                         {
                             numOfRightRayHits++;
-                            Debug.Log("Found object with rightward/Down cast - distance: " + hitRightDown.distance);
+                            //Debug.Log("Found object with rightward/Down cast - distance: " + hitRightDown.distance);
                         }
                     }
                 }
                 else
                 {
-                    Debug.Log("Nothing found with rightward raycast");
+                    //Debug.Log("Nothing found with rightward raycast");
                 }
             }
         }
@@ -515,7 +515,7 @@ public class TileSpawner : TileTypes
                 if (hitUp.collider.isTrigger)
                 {
                     numOfUpRayHits++;
-                    Debug.Log("Found object with upward cast - distance: " + hitUp.distance);
+                    //Debug.Log("Found object with upward cast - distance: " + hitUp.distance);
                     RaycastHit2D hitUpRight = Physics2D.Raycast(hitUp.point * 0.9f, Vector3.right, 12.5f);
                     RaycastHit2D hitUpLeft = Physics2D.Raycast(hitUp.point * 0.9f, Vector3.left, 12.5f);
 
@@ -524,7 +524,7 @@ public class TileSpawner : TileTypes
                         if (hitUpRight.collider.isTrigger)
                         {
                             numOfUpRayHits++;
-                            Debug.Log("Found object with upward/Right cast - distance: " + hitUpRight.distance);
+                            //Debug.Log("Found object with upward/Right cast - distance: " + hitUpRight.distance);
                         }
                     }
 
@@ -533,14 +533,14 @@ public class TileSpawner : TileTypes
                         if (hitUpLeft.collider.isTrigger)
                         {
                             numOfUpRayHits++;
-                            Debug.Log("Found object with upward/Left cast - distance: " + hitUpLeft.distance);
+                            //Debug.Log("Found object with upward/Left cast - distance: " + hitUpLeft.distance);
                         }
                     }
                 }
             }
             else
             {
-                Debug.Log("Nothing found with upward raycast");
+                //Debug.Log("Nothing found with upward raycast");
             }
 
             if (hitDown)
@@ -548,7 +548,7 @@ public class TileSpawner : TileTypes
                 if (hitDown.collider.isTrigger)
                 {
                     numOfDownRayHits++;
-                    Debug.Log("Found object with downward cast - distance: " + hitDown.distance);
+                    //Debug.Log("Found object with downward cast - distance: " + hitDown.distance);
                     RaycastHit2D hitDownRight = Physics2D.Raycast(hitDown.point * 0.9f, Vector3.right, 12.5f);
                     RaycastHit2D hitDownLeft = Physics2D.Raycast(hitDown.point * 0.9f, Vector3.left, 12.5f);
 
@@ -557,7 +557,7 @@ public class TileSpawner : TileTypes
                         if (hitDownRight.collider.isTrigger)
                         {
                             numOfDownRayHits++;
-                            Debug.Log("Found object with downward/Right cast - distance: " + hitDownRight.distance);
+                            //Debug.Log("Found object with downward/Right cast - distance: " + hitDownRight.distance);
                         }
                     }
 
@@ -566,14 +566,14 @@ public class TileSpawner : TileTypes
                         if (hitDownLeft.collider.isTrigger)
                         {
                             numOfDownRayHits++;
-                            Debug.Log("Found object with downward/Left cast - distance: " + hitDownLeft.distance);
+                            //Debug.Log("Found object with downward/Left cast - distance: " + hitDownLeft.distance);
                         }
                     }
                 }
             }
             else
             {
-                Debug.Log("Nothing found with downward raycast");
+                //Debug.Log("Nothing found with downward raycast");
             }
         }
     }
@@ -597,7 +597,7 @@ public class TileSpawner : TileTypes
 
         else
         {
-            Debug.Log("Neither raycast num was greater");
+            //Debug.Log("Neither raycast num was greater");
 
             if (!checkRightOverlap)
             {
@@ -630,7 +630,7 @@ public class TileSpawner : TileTypes
 
         else
         {
-            Debug.Log("Neither raycast num was greater");
+            //Debug.Log("Neither raycast num was greater");
 
             if (!checkRightOverlap)
             {
@@ -663,7 +663,7 @@ public class TileSpawner : TileTypes
 
         else
         {
-            Debug.Log("Neither raycast num was greater");
+            //Debug.Log("Neither raycast num was greater");
 
             if (!checkTopOverlap)
             {
@@ -696,7 +696,7 @@ public class TileSpawner : TileTypes
 
         else
         {
-            Debug.Log("Neither raycast num was greater");
+            //Debug.Log("Neither raycast num was greater");
 
             if (!checkTopOverlap)
             {
