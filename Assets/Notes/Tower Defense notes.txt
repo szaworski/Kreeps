@@ -1,0 +1,64 @@
+
+
+Tower damage types:
+
+Neutral tower (Grey): Medium damage, medium rate of fire, low range. No status effects.
+
+Fire tower (Red):  Medium damage, medium rate of fire, medium range. Burn damage over time for a few seconds.
+Bonus against: Beast  
+Weak against: Machine
+
+Ice tower (Blue): Medium damage, medium rate of fire, medium range. Slows.
+Bonus against: Humanoid 
+Weak against: Undead
+
+Lightning tower (Yellow): High damage, low rate of fire, low range. Crit chance.
+Bonus against: Machine
+Weak against: Beast
+
+Holy tower (White): Low damage, medium rate of fire, medium range. Removes positive buffs from target.
+Bonus against: Undead
+Weak against: Humanoid 
+
+Swift tower (Green): Low damage, high rate of fire, medium range. Quickest rate of fire
+Bonus against: Vermin
+Weak against: Fiend
+
+Cosmic tower (Purple): Medium damage, low rate of fire, high range. AOE damage.
+Bonus against: Fiend
+Weak against: Vermin
+
+
+
+Monster types (With Characteristics) :
+
+Beast: High HP with medium movement speed. No armor.
+
+Undead: Medium HP and move speed. Has abilites like self HP regen, or chance to respawn on death. No armor. 
+
+Humanoid: Well rounded. Medium HP and move speed with slight armor. 
+
+Machine: Tanky units. Medium to high HP and armor, with low to medium move speeds
+
+Vermin: Quick units. High move speed with low HP. No armor
+
+Fiend:
+
+Transcendent: Has no weakness (No bonus damage from a specific type, or any resistances) and vary between high HP, high armor, or high movespeed. 
+
+
+How does armor work?: Armor reduces incoming attack damage by 1 for each 1 armor the unit has. 
+
+
+Starter tiles: (Thinking 5 per tier)
+
+Forrest Tile:
+Monsters: Wolf, Goblin, Robber, Owl
+
+
+
+
+
+
+
+
