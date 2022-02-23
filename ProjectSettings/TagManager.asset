@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Waypoint
   - TowerGrid
-  - NeutralProjectile
+  - Projectile
   layers:
   - Default
   - TransparentFX

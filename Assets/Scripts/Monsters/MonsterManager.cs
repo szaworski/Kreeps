@@ -45,15 +45,6 @@ public class MonsterManager : MonoBehaviour
             GameObject monsterObj = (GameObject)Instantiate(Resources.Load(prependMonsterName + monster));
             monsterObj.transform.position = GameObject.Find("TileManager").transform.position;
         }
-
-        /*
-        if (Input.GetMouseButtonDown(1))
-        {
-            //Spawn the monster object
-            GameObject wolf = (GameObject)Instantiate(Resources.Load("Monsters/Forrest/Wolf"));
-            wolf.transform.position = GameObject.Find("TileManager").transform.position;
-        }
-        */
     }
 
     public void AddToMonsterList()

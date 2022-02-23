@@ -33,6 +33,7 @@ public class Monster : MonoBehaviour
     void Update()
     {
         FollowWaypoints();
+        UpdateHealth();
     }
 
     public void FollowWaypoints()
@@ -80,6 +81,20 @@ public class Monster : MonoBehaviour
         if (health <= 0)
         {
             Destroy(this.gameObject);
+        }
+    }
+
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Projectile")
+        {
+            int incomingDamage = other.gameObject.GetComponent<Projectile>().damageValue;
+            Debug.Log("Amount of incoming damage: " + incomingDamage);
+            health -= incomingDamage;
+
+            //Destroy the projectile game object after damage is received
+            Destroy(other.gameObject);
         }
     }
 }
