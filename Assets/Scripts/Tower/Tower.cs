@@ -10,7 +10,7 @@ public class Tower : MonoBehaviour
     public float attackSpeed;
     public float attackRange;
     public string type;
-    public bool monsterInRadius;
+    public bool monsterIsInRadius;
 
     void Update()
     {
@@ -25,11 +25,13 @@ public class Tower : MonoBehaviour
         //Check if any monsters are found in the radius
         if (monstersInRadius.Length >= 1)
         {
+            monsterIsInRadius = true;
+
             //Check the distance between the tower and the first monster
             float closestTargetSoFar = Vector2.Distance(this.gameObject.transform.position, monstersInRadius[0].gameObject.transform.position);
             GameObject closestTarget = monstersInRadius[0].gameObject;
 
-            //Loop through each element of the array
+            //Loop through for each object found in the radius
             for (int i = 0; i < monstersInRadius.Length; i++)
             {
                 //Check the distance of each objects found in the radius
@@ -46,6 +48,11 @@ public class Tower : MonoBehaviour
 
             //Spawn and send the projectile at the closest target (In progress)
 
+        }
+
+        else
+        {
+            monsterIsInRadius = false;
         }
     }
 
