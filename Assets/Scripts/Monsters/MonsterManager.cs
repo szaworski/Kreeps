@@ -26,6 +26,7 @@ public class MonsterManager : MonoBehaviour
     public void SpawnMonsters(float amtOfTime)
     {
         //Using right mouse click for testing. Eventually this function will be called after a button press or event
+        //Turned off for now to test tower placement
         if (Input.GetMouseButtonDown(1))
         {
             //Need to call the GenerateMonsters method with a Coroutine to delay each iteration of the foreach loop
