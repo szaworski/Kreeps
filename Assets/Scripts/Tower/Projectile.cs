@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [Header("Projectile attributes")]
-    public static int damage;
-    public static int attackSpeed;
-    public static int lvl;
-
+    public GameObject target;
      void Awake()
     {
-       
+        target = transform.parent.GetComponent<Tower>().currentTarget;
+        Debug.Log("currentTarget target position: " + target.transform.position);
     }
 
-    public static string type;
     void Update()
     {
-        
+       transform.position = Vector3.MoveTowards(this.transform.position, target.transform.position, 3 * Time.deltaTime);
+
+        //Destory the projectile on collition with the target. Still need to send damage values to the monster (In progress)
+        if (transform.position == target.transform.position)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

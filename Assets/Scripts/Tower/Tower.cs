@@ -5,6 +5,8 @@ using UnityEngine;
 public class Tower : MonoBehaviour
 {
     [Header("Tower attributes")]
+    [HideInInspector] public float attackCd;
+    [HideInInspector] public GameObject currentTarget;
     public int damage;
     public int lvl;
     public float attackSpeed;
@@ -45,9 +47,8 @@ public class Tower : MonoBehaviour
                     closestTargetSoFar = currentDistance;
                 }
             }
-
-            //Spawn and send the projectile at the closest target (In progress)
-
+            //Spawn the projectile to send at the target
+            CreateProjectile(closestTarget);
         }
 
         else
@@ -56,10 +57,15 @@ public class Tower : MonoBehaviour
         }
     }
 
-    public void CreateAndShootProjectile()
+    public void CreateProjectile(GameObject target)
     {
-
-
+        if (Time.time > attackCd)
+        {
+            currentTarget = target;
+            GameObject projectile = (GameObject)Instantiate(Resources.Load("Towers/Projectiles/TowerProjectile1"), this.transform);
+            projectile.transform.position = this.transform.position;
+            attackCd = attackSpeed + Time.time;
+        }
     }
 
     public void OnDrawGizmos()

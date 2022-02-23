@@ -97,7 +97,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   lvl: 1
-  attackSpeed: 0
+  attackCd: 0
+  attackSpeed: 1
   attackRange: 1
+  projectileSpeed: 1
   type: Neutral
-  monsterInRadius: 0
+  monsterIsInRadius: 0
+  currentTarget: {fileID: 0}

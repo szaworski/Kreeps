@@ -30,21 +30,14 @@ public class TowerGrid : MonoBehaviour
             //Spawning a tower on mouse click if one is not present to test for now
             if (!hasTower)
             {
-                //GameObject referenceStartTile = (GameObject)Instantiate(Resources.Load("BasicTiles/Tile3"));
-                GameObject towerReference = (GameObject)Instantiate(Resources.Load("Towers/NeutralTower"));
+                //Get the tower GameObject
                 GameObject towerContainer = GameObject.Find("Towers");
+                GameObject tower = (GameObject)Instantiate(Resources.Load("Towers/NeutralTower"), towerContainer.transform);
 
-                //Place the new tile
-                GameObject tower = (GameObject)Instantiate(towerReference, towerContainer.transform);
+                //Place the tower
                 tower.transform.position = this.transform.position;
-
                 placedTower = tower;
                 hasTower = true;
-
-                //For some reason an extra tower was being spawned at (0,0) (I think becuase I have colliders on top of eachother)
-                //Not sure how to stop it from spawning in the first place. Destorying the extra clone here for now
-                GameObject extraTower = GameObject.Find("NeutralTower(Clone)");
-                Destroy(extraTower);
             }
         }
 
