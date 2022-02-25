@@ -89,7 +89,7 @@ public class TileSpawner : TileTypes
 
     public void SpawnNewTile()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             GetNewTile();
             tileName = newTileName;

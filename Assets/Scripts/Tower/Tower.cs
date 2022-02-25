@@ -7,12 +7,12 @@ public class Tower : MonoBehaviour
     [Header("Tower attributes")]
     [HideInInspector] public float attackCd;
     [HideInInspector] public GameObject currentTarget;
+    [SerializeField] private bool monsterIsInRadius;
     public int damage;
-    public int lvl;
+    public int towerLvl;
     public float attackSpeed;
     public float attackRange;
-    public string type;
-    public bool monsterIsInRadius;
+    public string damageType;
 
     void Update()
     {
@@ -36,7 +36,7 @@ public class Tower : MonoBehaviour
             //Loop through for each object found in the radius
             for (int i = 0; i < monstersInRadius.Length; i++)
             {
-                //Check the distance of each objects found in the radius
+                //Check the distance of each object found in the radius
                 float currentDistance = Vector2.Distance(this.gameObject.transform.position, monstersInRadius[i].gameObject.transform.position);
 
                 //Check the distance of new objects found in the monster array to see if they're closer than the previously closest one found
@@ -59,7 +59,7 @@ public class Tower : MonoBehaviour
 
     public void CreateProjectile(GameObject target)
     {
-        if (Time.time > attackCd)
+        if (Time.time > attackCd && target != null)
         {
             currentTarget = target;
             GameObject projectile = (GameObject)Instantiate(Resources.Load("Towers/Projectiles/TowerProjectile1"), this.transform);
@@ -72,6 +72,6 @@ public class Tower : MonoBehaviour
     {
         // Draw a cirlce at the towers position
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, 1);
+        Gizmos.DrawWireSphere(transform.position, 0.75f);
     }
 }

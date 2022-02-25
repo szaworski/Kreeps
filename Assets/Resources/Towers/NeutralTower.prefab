@@ -72,7 +72,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: 75d988f9e0cd91741bf4b96af849640b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cffb6c5c66d969f44bd61a3709499d66, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -95,12 +95,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cd6594ffd7308a498d2153431f4e713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
-  lvl: 1
   attackCd: 0
-  attackSpeed: 1
-  attackRange: 1
-  projectileSpeed: 1
-  type: Neutral
-  monsterIsInRadius: 0
   currentTarget: {fileID: 0}
+  monsterIsInRadius: 0
+  damage: 5
+  towerLvl: 0
+  attackSpeed: 1
+  attackRange: 0.75
+  damageType: 

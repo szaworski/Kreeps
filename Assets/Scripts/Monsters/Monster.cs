@@ -77,7 +77,7 @@ public class Monster : MonoBehaviour
 
     public void UpdateHealth()
     {
-        //Update the monsters health when they take damage. Todo
+        //Update health when damage is taken
         if (health <= 0)
         {
             Destroy(this.gameObject);

@@ -18,8 +18,13 @@ public class Projectile : MonoBehaviour
     {
         if (target != null)
         {
-            transform.position = Vector3.MoveTowards(this.transform.position, target.transform.position, 3 * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(this.transform.position, target.transform.position, 4 * Time.deltaTime);
             //The projectile is destroyed after the damage value is received by the monster (See Monster.cs OnTriggerEnter2D function)
+        }
+
+        else
+        {
+            Destroy(this.gameObject);
         }
     }
 }
