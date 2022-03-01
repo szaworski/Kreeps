@@ -49,7 +49,8 @@ public class TileSpawner : TileTypes
 
     void Update()
     {
-        SpawnNewTile();
+        GetAndShowTileCards();
+        //SpawnNewTile();
 
         //Visualizing raycasts
         //Debug.DrawRay(transform.position, Vector3.right * 25, Color.green);
@@ -260,6 +261,86 @@ public class TileSpawner : TileTypes
             {
                 spawnDirection = "up";
             }
+        }
+    }
+
+    public void GetAndShowTileCards()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            var rand = new System.Random();
+            int index;
+            string[] currentCardList = null;
+            string selectedCard = null;
+            string card1 = null;
+            string card2 = null;
+            string card3 = null;
+
+            //Get the correct Tile card array based on the number of waves finished
+            if (numOfTimesPlaced < 20)
+            {
+                currentCardList = tier1TileCards;
+            }
+
+            //Create a list of 3 unique random cards from the current card list array
+            for (int i = 0; i < 3; i++)
+            {
+                //Fetch a random element from the card list
+                index = rand.Next(currentCardList.Length);
+                selectedCard = currentCardList[index];
+
+                //Need to find a good way to make sure they're unique. First I need to create prefabs for the tier 1 list in order to continue
+
+                //Set each selected card to its correlating slot
+                switch (i)
+                {
+                    case 0:
+                        card1 = selectedCard;
+                        Debug.Log("Card 1: " + card1);
+                        break;
+                    case 1:
+                        card2 = selectedCard;
+                        Debug.Log("Card 2: " + card2);
+                        break;
+                    case 2:
+                        card3 = selectedCard;
+                        Debug.Log("Card 3: " + card3);
+                        break;
+                }
+
+                /*
+                //Make sure we don't repeat any of the same cards
+                if (selectedCard != card1 && selectedCard != card1)
+                {
+                    //Set each selected card to its correlating slot
+                    switch (i)
+                    {
+                        case 0:
+                            card1 = selectedCard;
+                            break;
+                        case 1:
+                            card2 = selectedCard;
+                            break;
+                        case 2:
+                            card3 = selectedCard;
+                            break;
+                    }
+                }
+                */
+            }
+
+            //Instantiate the Tile Cards
+            GameObject cardSlot1 = GameObject.Find("TileCardSlot1");
+            GameObject cardSlot2 = GameObject.Find("TileCardSlot2");
+            GameObject cardSlot3 = GameObject.Find("TileCardSlot3");
+
+            GameObject card1Obj = (GameObject)Instantiate(Resources.Load("UI/Cards/" + card1), cardSlot1.transform);
+            GameObject card2Obj = (GameObject)Instantiate(Resources.Load("UI/Cards/" + card2), cardSlot2.transform);
+            GameObject card3Obj = (GameObject)Instantiate(Resources.Load("UI/Cards/" + card3), cardSlot3.transform);
+
+            card1Obj.transform.position = cardSlot1.transform.position;
+            card2Obj.transform.position = cardSlot2.transform.position;
+            card3Obj.transform.position = cardSlot3.transform.position;
         }
     }
 

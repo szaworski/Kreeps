@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TileTypes : MonoBehaviour
+public class TileTypes : TileCards
 {
     //These arrays need to be set to NonSerizlized or else the contents won't update when edited
 
