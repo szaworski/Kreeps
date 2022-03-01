@@ -6,7 +6,7 @@ public class TileCards : MonoBehaviour
 {
     public string cardType;
 
-    [System.NonSerialized] public string[] tier1TileCards = new string[] { "Forrest" }; //, "Graveyard", "", "", "" 
+    [System.NonSerialized] public List<string> tier1TileCards = new List<string> { "Forrest", "Graveyard", "Test1", "Test2", "Test3" }; 
 
     void Update()
     {

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class TileSpawner : TileTypes
@@ -266,30 +267,31 @@ public class TileSpawner : TileTypes
 
     public void GetAndShowTileCards()
     {
+        //Using a keypress for testing
         if (Input.GetKeyDown(KeyCode.Space))
         {
             var rand = new System.Random();
-            int index;
-            string[] currentCardList = null;
-            string selectedCard = null;
+            List<string> currentCardList = null;
             string card1 = null;
             string card2 = null;
             string card3 = null;
 
-            //Get the correct Tile card array based on the number of waves finished
+            //Get the correct Tile card array based on the number of waves finished. (Copy the list from TileCards.cs)
             if (numOfTimesPlaced < 20)
             {
-                currentCardList = tier1TileCards;
+                currentCardList = tier1TileCards.ToList();
+                Debug.Log("Card List: " + currentCardList[0] + " " + currentCardList[1] + " " + currentCardList[2] + " " + currentCardList[3] + " " + currentCardList[4]);
             }
 
             //Create a list of 3 unique random cards from the current card list array
             for (int i = 0; i < 3; i++)
             {
                 //Fetch a random element from the card list
-                index = rand.Next(currentCardList.Length);
-                selectedCard = currentCardList[index];
+                int index = rand.Next(currentCardList.Count);
+                string selectedCard = currentCardList[index];
 
-                //Need to find a good way to make sure they're unique. First I need to create prefabs for the tier 1 list in order to continue
+                //Remove the selected card from the list so we dont repeat any cards
+                currentCardList.RemoveAt(index);
 
                 //Set each selected card to its correlating slot
                 switch (i)
@@ -307,29 +309,10 @@ public class TileSpawner : TileTypes
                         Debug.Log("Card 3: " + card3);
                         break;
                 }
-
-                /*
-                //Make sure we don't repeat any of the same cards
-                if (selectedCard != card1 && selectedCard != card1)
-                {
-                    //Set each selected card to its correlating slot
-                    switch (i)
-                    {
-                        case 0:
-                            card1 = selectedCard;
-                            break;
-                        case 1:
-                            card2 = selectedCard;
-                            break;
-                        case 2:
-                            card3 = selectedCard;
-                            break;
-                    }
-                }
-                */
             }
 
-            //Instantiate the Tile Cards
+            //Instantiate the Tile Cards (Need to create more prefabs for cards before testing)
+            /*
             GameObject cardSlot1 = GameObject.Find("TileCardSlot1");
             GameObject cardSlot2 = GameObject.Find("TileCardSlot2");
             GameObject cardSlot3 = GameObject.Find("TileCardSlot3");
@@ -341,6 +324,7 @@ public class TileSpawner : TileTypes
             card1Obj.transform.position = cardSlot1.transform.position;
             card2Obj.transform.position = cardSlot2.transform.position;
             card3Obj.transform.position = cardSlot3.transform.position;
+            */
         }
     }
 
