@@ -30,15 +30,22 @@ public class TileSpawner : TileTypes
     public bool checkTopLeftOverlap;
     public bool checkBottomLeftOverlap;
     public bool checkBottomRightOverlap;
+    public static bool triggerTileCardDestruction;
 
     public static string prependTileName;
     public static string tileName;
     public static string newTileName;
     public static string spawnDirection;
+    public static string tileCardSelected;
+    public static string monsterCardSelected;
 
     public string[] curTiles;
     public bool[] validTiles;
     List<string> validTilesList;
+
+    public GameObject tileCard1;
+    public GameObject tileCard2;
+    public GameObject tileCard3;
 
     void Awake()
     {
@@ -51,7 +58,7 @@ public class TileSpawner : TileTypes
     void Update()
     {
         GetAndShowTileCards();
-        //SpawnNewTile();
+        SpawnNewTile();
 
         //Visualizing raycasts
         //Debug.DrawRay(transform.position, Vector3.right * 25, Color.green);
@@ -91,15 +98,13 @@ public class TileSpawner : TileTypes
 
     public void SpawnNewTile()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.T))
         {
             GetNewTile();
             tileName = newTileName;
-            PrependTilenamePath();
-            //Debug.Log("Tile Pathway: " + prependTileName + tileName);
+            Debug.Log("Tile Pathway: " + prependTileName + tileName);
 
             //Find the tile in the resources folder
-            //GameObject referenceStartTile = (GameObject)Instantiate(Resources.Load("BasicTiles/Tile3"));
             GameObject referenceStartTile = (GameObject)Instantiate(Resources.Load(prependTileName + tileName));
             GameObject TileHolder = GameObject.Find("TileHolder");
 
@@ -134,21 +139,6 @@ public class TileSpawner : TileTypes
         CheckForValidTiles();
         GetListOfValidTiles();
         ChooseRandTileFromList();
-    }
-
-    public void PrependTilenamePath()
-    {
-        if (tileName.Contains("Forrest"))
-        {
-            prependTileName = "Tiles/ForrestTiles/";
-        }
-
-        /*
-        else if ()
-        {
-
-        }
-        */
     }
 
     public void MoveSpawnPos()
@@ -267,13 +257,6 @@ public class TileSpawner : TileTypes
 
     public void GetAndShowTileCards()
     {
-        bool tileCardsSpawned;
-
-        //Fetch card slot game objects
-        GameObject cardSlot1 = GameObject.Find("TileCardSlot1");
-        GameObject cardSlot2 = GameObject.Find("TileCardSlot2");
-        GameObject cardSlot3 = GameObject.Find("TileCardSlot3");
-
         //Using a keypress for testing
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -319,18 +302,30 @@ public class TileSpawner : TileTypes
             }
 
             //Instantiate the Tile Cards
-            GameObject card1Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + card1), cardSlot1.transform);
-            GameObject card2Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + card2), cardSlot2.transform);
-            GameObject card3Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + card3), cardSlot3.transform);
+            GameObject cardSlot1 = GameObject.Find("TileCardSlot1");
+            GameObject cardSlot2 = GameObject.Find("TileCardSlot2");
+            GameObject cardSlot3 = GameObject.Find("TileCardSlot3");
 
-            card1Obj.transform.position = cardSlot1.transform.position;
-            card2Obj.transform.position = cardSlot2.transform.position;
-            card3Obj.transform.position = cardSlot3.transform.position;
+            tileCard1 = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + card1), cardSlot1.transform);
+            tileCard2 = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + card2), cardSlot2.transform);
+            tileCard3 = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + card3), cardSlot3.transform);
 
-            tileCardsSpawned = true;
+            tileCard1.transform.position = cardSlot1.transform.position;
+            tileCard2.transform.position = cardSlot2.transform.position;
+            tileCard3.transform.position = cardSlot3.transform.position;
 
-            //Need to destroy these objects after one is selected. todo
         }
+
+        //Destory all tile card game objects after a selection is made. See Card.cs
+        if (triggerTileCardDestruction)
+        {
+            Destroy(tileCard1.gameObject);
+            Destroy(tileCard2.gameObject);
+            Destroy(tileCard3.gameObject);
+            //Reset this bool for next card selection later
+            triggerTileCardDestruction = false;
+        }
+
     }
 
     public void ChooseRandTileFromList()
@@ -344,8 +339,37 @@ public class TileSpawner : TileTypes
     public void GetListOfValidTiles()
     {
         validTilesList = new List<string>();
-        curTiles = forrestTiles;
 
+        //Check for which tile card was selected and set the "curTiles" array accordingly 
+        switch (tileCardSelected)
+        {
+            case "Forrest":
+                curTiles = forrestTiles;
+                prependTileName = "Tiles/ForrestTiles/";
+                break;
+
+            case "Graveyard":
+                curTiles = graveyardTiles;
+                prependTileName = "Tiles/GraveyardTiles/";
+                break;
+
+            case "River":
+                curTiles = riverTiles;
+                prependTileName = "Tiles/RiverTiles/";
+                break;
+
+            case "Mountain":
+                curTiles = mountainTiles;
+                prependTileName = "Tiles/MountainTiles/";
+                break;
+
+            case "Swamp":
+                curTiles = swampTiles;
+                prependTileName = "Tiles/SwampTiles/";
+                break;
+        }
+        
+        //curTiles = forrestTiles;
         //Debug.Log("Tile 1 bool: " + validTiles[0]);
         //Debug.Log("Tile 2 bool: " + validTiles[1]);
         //Debug.Log("Tile 3 bool: " + validTiles[2]);

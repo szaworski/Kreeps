@@ -120,7 +120,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6130404801214499856}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8769928161790327252}
+        m_TargetAssemblyTypeName: Card, Assembly-CSharp
+        m_MethodName: SetSelectedCardType
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8769928161790327252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,6 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3c50722ec083041bcf2aec73db18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardName: River
 --- !u!1 &6130404801542767314
 GameObject:
   m_ObjectHideFlags: 0
