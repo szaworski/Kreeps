@@ -267,6 +267,13 @@ public class TileSpawner : TileTypes
 
     public void GetAndShowTileCards()
     {
+        bool tileCardsSpawned;
+
+        //Fetch card slot game objects
+        GameObject cardSlot1 = GameObject.Find("TileCardSlot1");
+        GameObject cardSlot2 = GameObject.Find("TileCardSlot2");
+        GameObject cardSlot3 = GameObject.Find("TileCardSlot3");
+
         //Using a keypress for testing
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -311,20 +318,18 @@ public class TileSpawner : TileTypes
                 }
             }
 
-            //Instantiate the Tile Cards (Need to create more prefabs for cards before testing)
-            /*
-            GameObject cardSlot1 = GameObject.Find("TileCardSlot1");
-            GameObject cardSlot2 = GameObject.Find("TileCardSlot2");
-            GameObject cardSlot3 = GameObject.Find("TileCardSlot3");
-
-            GameObject card1Obj = (GameObject)Instantiate(Resources.Load("UI/Cards/" + card1), cardSlot1.transform);
-            GameObject card2Obj = (GameObject)Instantiate(Resources.Load("UI/Cards/" + card2), cardSlot2.transform);
-            GameObject card3Obj = (GameObject)Instantiate(Resources.Load("UI/Cards/" + card3), cardSlot3.transform);
+            //Instantiate the Tile Cards
+            GameObject card1Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + card1), cardSlot1.transform);
+            GameObject card2Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + card2), cardSlot2.transform);
+            GameObject card3Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + card3), cardSlot3.transform);
 
             card1Obj.transform.position = cardSlot1.transform.position;
             card2Obj.transform.position = cardSlot2.transform.position;
             card3Obj.transform.position = cardSlot3.transform.position;
-            */
+
+            tileCardsSpawned = true;
+
+            //Need to destroy these objects after one is selected. todo
         }
     }
 

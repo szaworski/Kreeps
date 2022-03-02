@@ -18,36 +18,49 @@ public class TowerGrid : MonoBehaviour
         sprite.enabled = false;
     }
 
-    void OnMouseOver()
+    void Update()
     {
-        //Reveal the grid sprite on mouse over
-        sprite.enabled = true;
-        //Debug.Log("Is hovering");
-
-        if (Input.GetMouseButtonDown(0))
+        //Check if the mouse is over any UI elements to disable other functionality underneath
+        if (Card.IsHoveringOverUiCard)
         {
-            //Will eventually give a menu of tower choices, and check against a gold value to see if the tower can be placed or not
-            //Spawning a tower on mouse click if one is not present to test for now
-            if (!hasTower)
-            {
-                //Get the tower GameObject
-                GameObject towerContainer = GameObject.Find("Towers");
-                GameObject tower = (GameObject)Instantiate(Resources.Load("Towers/NeutralTower"), towerContainer.transform);
-
-                //Place the tower
-                tower.transform.position = this.transform.position;
-                placedTower = tower;
-                hasTower = true;
-            }
+            sprite.enabled = false;
         }
+    }
 
-        if (Input.GetMouseButtonDown(1))
+        void OnMouseOver()
+    {
+        //Check to make sure we aren't hovering over a UI element first
+        if (!Card.IsHoveringOverUiCard)
         {
-            //Destroy the tower on right click (Sell the tower)
-            if (hasTower)
+            //Reveal the grid sprite on mouse over
+            sprite.enabled = true;
+            //Debug.Log("Is hovering");
+
+            if (Input.GetMouseButtonDown(0))
             {
-                Destroy(placedTower);
-                hasTower = false;
+                //Will eventually give a menu of tower choices, and check against a gold value to see if the tower can be placed or not
+                //Spawning a tower on mouse click if one is not present to test for now
+                if (!hasTower)
+                {
+                    //Get the tower GameObject
+                    GameObject towerContainer = GameObject.Find("Towers");
+                    GameObject tower = (GameObject)Instantiate(Resources.Load("Towers/NeutralTower"), towerContainer.transform);
+
+                    //Place the tower
+                    tower.transform.position = this.transform.position;
+                    placedTower = tower;
+                    hasTower = true;
+                }
+            }
+
+            if (Input.GetMouseButtonDown(1))
+            {
+                //Destroy the tower on right click (Sell the tower)
+                if (hasTower)
+                {
+                    Destroy(placedTower);
+                    hasTower = false;
+                }
             }
         }
     }
