@@ -21,8 +21,7 @@ public class Tower : MonoBehaviour
 
     public void CheckTowerRadius()
     {
-        Vector2 towerPos = transform.position;
-        Collider2D[] monstersInRadius = Physics2D.OverlapCircleAll(towerPos, attackRange, LayerMask.GetMask("Monster"));
+        Collider2D[] monstersInRadius = Physics2D.OverlapCircleAll(this.transform.position, attackRange, LayerMask.GetMask("Monster"));
 
         //Check if any monsters are found in the radius
         if (monstersInRadius.Length >= 1)
@@ -59,7 +58,7 @@ public class Tower : MonoBehaviour
 
     public void CreateProjectile(GameObject target)
     {
-        if (Time.time > attackCd && target != null)
+        if (Time.time > attackCd && target != null && monsterIsInRadius)
         {
             currentTarget = target;
             GameObject projectile = (GameObject)Instantiate(Resources.Load("Towers/Projectiles/TowerProjectile1"), this.transform);
