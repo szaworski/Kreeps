@@ -42,7 +42,7 @@ public class MonsterManager : MonoBehaviour
 
             //Spawn the monster object
             Debug.Log("Monster Path: " + prependMonsterName + monster);
-            GameObject monsterObj = (GameObject)Instantiate(Resources.Load(prependMonsterName + monster));
+            GameObject monsterObj = (GameObject)Instantiate(Resources.Load(prependMonsterName + monster), GameObject.Find("TileManager").transform);
             monsterObj.transform.position = GameObject.Find("TileManager").transform.position;
         }
     }
@@ -58,14 +58,16 @@ public class MonsterManager : MonoBehaviour
             //Setting the case value here for testing purposes. This value will eventually be set based on the players choice
             selectedMonster = "Wolf";
 
+            //Replace this switch statement with "GetSelectedMonster()". todo
+            //GetSelectedMonster();
             switch (selectedMonster)
             {
                 case "Wolf":
                     monsterList.Add("Wolf");
                     break;
 
-                case "Zombie":
-                    monsterList.Add("Zombie");
+                case "Wolf2":
+                    monsterList.Add("Wolf2");
                     break;
 
                 case "Goblin":
@@ -86,9 +88,49 @@ public class MonsterManager : MonoBehaviour
             prependMonsterName = "Monsters/Forrest/";
         }
 
-        if (TileSpawner.tileName.Contains("Forrest"))
+        switch (TileSpawner.tileCardSelected)
         {
-            prependMonsterName = "Monsters/Forrest/";
+            case "Forrest":
+                prependMonsterName = "Monsters/Forrest/";
+                break;
+
+            case "Graveyard":
+                prependMonsterName = "Monsters/Graveyard/";
+                break;
+
+            case "River":
+                prependMonsterName = "Monsters/River/";
+                break;
+
+            case "Mountain":
+                prependMonsterName = "Monsters/Mountain/";
+                break;
+
+            case "Swamp":
+                prependMonsterName = "Monsters/Swamp/";
+                break;
+        }
+    }
+
+    public void GetSelectedMonster()
+    {
+        switch (TileSpawner.monsterCardSelected)
+        {
+            case "Wolf":
+                monsterList.Add("Wolf");
+                break;
+
+            case "Goblin":
+                monsterList.Add("Goblin");
+                break;
+
+            case "Robber":
+                monsterList.Add("Robber");
+                break;
+
+            case "Owl":
+                monsterList.Add("Owl");
+                break;
         }
     }
 }

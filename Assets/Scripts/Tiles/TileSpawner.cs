@@ -325,7 +325,6 @@ public class TileSpawner : TileTypes
             //Reset this bool for next card selection later
             triggerTileCardDestruction = false;
         }
-
     }
 
     public void ChooseRandTileFromList()

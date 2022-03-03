@@ -28,26 +28,31 @@ public class Card : MonoBehaviour
         {
             case "Forrest":
                 TileSpawner.tileCardSelected = "Forrest";
+                IsHoveringOverUiCard = false;
                 TileSpawner.triggerTileCardDestruction = true;
                 break;
 
             case "Graveyard":
                 TileSpawner.tileCardSelected = "Graveyard";
+                IsHoveringOverUiCard = false;
                 TileSpawner.triggerTileCardDestruction = true;
                 break;
 
             case "River":
                 TileSpawner.tileCardSelected = "River";
+                IsHoveringOverUiCard = false;
                 TileSpawner.triggerTileCardDestruction = true;
                 break;
 
             case "Mountain":
                 TileSpawner.tileCardSelected = "Mountain";
+                IsHoveringOverUiCard = false;
                 TileSpawner.triggerTileCardDestruction = true;
                 break;
 
             case "Swamp":
                 TileSpawner.tileCardSelected = "Swamp";
+                IsHoveringOverUiCard = false;
                 TileSpawner.triggerTileCardDestruction = true;
                 break;
         }

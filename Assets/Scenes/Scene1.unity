@@ -759,6 +759,9 @@ MonoBehaviour:
   - 
   - 
   validTiles: 
+  tileCard1: {fileID: 0}
+  tileCard2: {fileID: 0}
+  tileCard3: {fileID: 0}
 --- !u!1 &1759222910
 GameObject:
   m_ObjectHideFlags: 0
