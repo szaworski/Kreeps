@@ -24,37 +24,15 @@ public class Card : MonoBehaviour
 
     public void SetSelectedCardType()
     {
-        switch (cardName)
-        {
-            case "Forrest":
-                TileSpawner.tileCardSelected = "Forrest";
-                IsHoveringOverUiCard = false;
-                TileSpawner.triggerTileCardDestruction = true;
-                break;
+        TileSpawner.tileCardSelected = cardName;
+        IsHoveringOverUiCard = false;
+        TileSpawner.triggerTileCardDestruction = true;
+    }
 
-            case "Graveyard":
-                TileSpawner.tileCardSelected = "Graveyard";
-                IsHoveringOverUiCard = false;
-                TileSpawner.triggerTileCardDestruction = true;
-                break;
-
-            case "River":
-                TileSpawner.tileCardSelected = "River";
-                IsHoveringOverUiCard = false;
-                TileSpawner.triggerTileCardDestruction = true;
-                break;
-
-            case "Mountain":
-                TileSpawner.tileCardSelected = "Mountain";
-                IsHoveringOverUiCard = false;
-                TileSpawner.triggerTileCardDestruction = true;
-                break;
-
-            case "Swamp":
-                TileSpawner.tileCardSelected = "Swamp";
-                IsHoveringOverUiCard = false;
-                TileSpawner.triggerTileCardDestruction = true;
-                break;
-        }
+    public void SetSelectedMonsterCard()
+    {
+        TileSpawner.monsterCardSelected = cardName;
+        IsHoveringOverUiCard = false;
+        TileSpawner.triggerTileCardDestruction = true;
     }
 }

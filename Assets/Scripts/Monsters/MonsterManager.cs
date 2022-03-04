@@ -62,18 +62,11 @@ public class MonsterManager : MonoBehaviour
             //Setting the case value here for testing purposes. This value will eventually be set based on the players choice
             selectedMonster = "Goblin";
 
-            //Replace this switch statement with "GetSelectedMonster()". todo
-            //GetSelectedMonster();
-            switch (selectedMonster)
-            {
-                case "Wolf":
-                    monsterList.Add("Wolf");
-                    break;
+            //Once we get monster cards working we'll set selectedMonster = TileSpawner.monsterCardSelected instead
+            // selectedMonster = TileSpawner.monsterCardSelected
 
-                case "Goblin":
-                    monsterList.Add("Goblin");
-                    break;
-            }
+            //Add the selected monster to the list
+            monsterList.Add(selectedMonster);
 
             monsterCount++;
             Debug.Log("Monster Count: " + monsterCount);
@@ -108,28 +101,6 @@ public class MonsterManager : MonoBehaviour
 
             case "Swamp":
                 prependMonsterName = "Monsters/Swamp/";
-                break;
-        }
-    }
-
-    public void GetSelectedMonster()
-    {
-        switch (TileSpawner.monsterCardSelected)
-        {
-            case "Wolf":
-                monsterList.Add("Wolf");
-                break;
-
-            case "Goblin":
-                monsterList.Add("Goblin");
-                break;
-
-            case "Robber":
-                monsterList.Add("Robber");
-                break;
-
-            case "Owl":
-                monsterList.Add("Owl");
                 break;
         }
     }

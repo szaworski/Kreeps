@@ -59,7 +59,7 @@ public class TileSpawner : TileTypes
     void Update()
     {
         GetAndShowTileCards();
-        SpawnNewTile();
+        // SpawnNewTile(); is now called in GetAndShowTileCards() after a selection is made
 
         //Visualizing raycasts
         //Debug.DrawRay(transform.position, Vector3.right * 25, Color.green);
@@ -99,39 +99,37 @@ public class TileSpawner : TileTypes
 
     public void SpawnNewTile()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            GetNewTile();
-            tileName = newTileName;
-            Debug.Log("Tile Pathway: " + prependTileName + tileName);
+        //Is now called in GetAndShowTileCards() after a selection is made
+        GetNewTile();
+        tileName = newTileName;
+        Debug.Log("Tile Pathway: " + prependTileName + tileName);
 
-            //Find the tile in the resources folder
-            GameObject referenceStartTile = (GameObject)Instantiate(Resources.Load(prependTileName + tileName));
-            GameObject TileHolder = GameObject.Find("TileHolder");
+        //Find the tile in the resources folder
+        GameObject referenceStartTile = (GameObject)Instantiate(Resources.Load(prependTileName + tileName));
+        GameObject TileHolder = GameObject.Find("TileHolder");
 
-            //Place the new tile
-            GameObject tile = (GameObject)Instantiate(referenceStartTile, TileHolder.transform);
-            tile.transform.SetParent(TileHolder.transform);
-            tile.transform.position = new Vector2(shiftAmtXpos, shiftAmtYpos);
+        //Place the new tile
+        GameObject tile = (GameObject)Instantiate(referenceStartTile, TileHolder.transform);
+        tile.transform.SetParent(TileHolder.transform);
+        tile.transform.position = new Vector2(shiftAmtXpos, shiftAmtYpos);
 
-            //increment numOfTimesPlaced
-            numOfTimesPlaced++;
+        //increment numOfTimesPlaced
+        numOfTimesPlaced++;
 
-            //Place a waypoint node on the center of the tile
-            GameObject waypoint = (GameObject)Instantiate(Resources.Load("Tiles/WaypointNode"), TileHolder.transform);
-            waypoint.transform.SetParent(tile.transform);
-            waypoint.transform.position = new Vector2(tile.transform.position.x, tile.transform.position.y);
+        //Place a waypoint node on the center of the tile
+        GameObject waypoint = (GameObject)Instantiate(Resources.Load("Tiles/WaypointNode"), TileHolder.transform);
+        waypoint.transform.SetParent(tile.transform);
+        waypoint.transform.position = new Vector2(tile.transform.position.x, tile.transform.position.y);
 
-            //Destroy the temporary reference objects
-            Destroy(referenceStartTile);
+        //Destroy the temporary reference objects
+        Destroy(referenceStartTile);
 
-            //Move the Spawn position
-            FindNewSpawnDirection();
-            //Debug.Log("Spawn direction: " + spawnDirection);
-            MoveSpawnPos();
-            //Use raycasts to detect distances from other tiles (Trying to detect dead end. In progress)
-            CheckTilesWithRayCasts();
-        }
+        //Move the Spawn position
+        FindNewSpawnDirection();
+        //Debug.Log("Spawn direction: " + spawnDirection);
+        MoveSpawnPos();
+        //Use raycasts to detect distances from other tiles (Trying to detect dead end. In progress)
+        CheckTilesWithRayCasts();
     }
 
     public void GetNewTile()
@@ -324,6 +322,8 @@ public class TileSpawner : TileTypes
             Destroy(card1Obj.gameObject);
             Destroy(card2Obj.gameObject);
             Destroy(card3Obj.gameObject);
+            //Spawn the new tile
+            SpawnNewTile();
             //Reset this bool for next card selection later
             triggerTileCardDestruction = false;
 
