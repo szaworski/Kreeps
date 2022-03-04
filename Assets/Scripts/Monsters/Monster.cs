@@ -86,7 +86,6 @@ public class Monster : MonoBehaviour
         //Update health when damage is taken
         if (health <= 0)
         {
-            // Debug.Log("Total distance traveled: " + distanceTraveled);
             Destroy(this.gameObject);
         }
     }

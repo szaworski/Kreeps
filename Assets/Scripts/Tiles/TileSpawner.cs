@@ -31,6 +31,7 @@ public class TileSpawner : TileTypes
     public bool checkBottomLeftOverlap;
     public bool checkBottomRightOverlap;
     public static bool triggerTileCardDestruction;
+    public static bool triggerMonsterCardDestruction;
 
     public static string prependTileName;
     public static string tileName;
@@ -43,9 +44,9 @@ public class TileSpawner : TileTypes
     public bool[] validTiles;
     List<string> validTilesList;
 
-    public GameObject tileCard1;
-    public GameObject tileCard2;
-    public GameObject tileCard3;
+    public GameObject card1Obj;
+    public GameObject card2Obj;
+    public GameObject card3Obj;
 
     void Awake()
     {
@@ -257,9 +258,11 @@ public class TileSpawner : TileTypes
 
     public void GetAndShowTileCards()
     {
-        //Using a keypress for testing
-        if (Input.GetKeyDown(KeyCode.Space))
+        //Check if all monsters have been spawned for the wave and that all monsters are dead, then prompt for card selection
+        if (MonsterManager.AllMonstersAreSpawned && GameObject.Find("TileManager").transform.childCount == 0) //Input.GetKeyDown(KeyCode.Space)
         {
+            MonsterManager.AllMonstersAreSpawned = false;
+
             var rand = new System.Random();
             List<string> currentCardList = null;
             string card1 = null;
@@ -270,7 +273,7 @@ public class TileSpawner : TileTypes
             if (numOfTimesPlaced < 20)
             {
                 currentCardList = tier1TileCards.ToList();
-                Debug.Log("Card List: " + currentCardList[0] + " " + currentCardList[1] + " " + currentCardList[2] + " " + currentCardList[3] + " " + currentCardList[4]);
+                //Debug.Log("Card List: " + currentCardList[0] + " " + currentCardList[1] + " " + currentCardList[2] + " " + currentCardList[3] + " " + currentCardList[4]);
             }
 
             //Create a list of 3 unique random cards from the current card list array
@@ -306,24 +309,99 @@ public class TileSpawner : TileTypes
             GameObject cardSlot2 = GameObject.Find("TileCardSlot2");
             GameObject cardSlot3 = GameObject.Find("TileCardSlot3");
 
-            tileCard1 = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + card1), cardSlot1.transform);
-            tileCard2 = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + card2), cardSlot2.transform);
-            tileCard3 = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + card3), cardSlot3.transform);
+            card1Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + card1), cardSlot1.transform);
+            card2Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + card2), cardSlot2.transform);
+            card3Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + card3), cardSlot3.transform);
 
-            tileCard1.transform.position = cardSlot1.transform.position;
-            tileCard2.transform.position = cardSlot2.transform.position;
-            tileCard3.transform.position = cardSlot3.transform.position;
-
+            card1Obj.transform.position = cardSlot1.transform.position;
+            card2Obj.transform.position = cardSlot2.transform.position;
+            card3Obj.transform.position = cardSlot3.transform.position;
         }
 
         //Destory all tile card game objects after a selection is made. See Card.cs
         if (triggerTileCardDestruction)
         {
-            Destroy(tileCard1.gameObject);
-            Destroy(tileCard2.gameObject);
-            Destroy(tileCard3.gameObject);
+            Destroy(card1Obj.gameObject);
+            Destroy(card2Obj.gameObject);
+            Destroy(card3Obj.gameObject);
             //Reset this bool for next card selection later
             triggerTileCardDestruction = false;
+
+            //Call GetAndShowMonsterCards(); once a tile card selection is made. todo
+        }
+    }
+
+    public void GetAndShowMonsterCards()
+    {
+        var rand = new System.Random();
+        List<string> currentCardList = null;
+        string card1 = null;
+        string card2 = null;
+
+        switch (tileCardSelected)
+        {
+            case "Forrest":
+                // currentCardList = forrestMonsterCards.ToList();
+                break;
+
+            case "Graveyard":
+                // currentCardList = graveyardMonsterCards.ToList();
+                break;
+
+            case "River":
+                // currentCardList = riverMonsterCards.ToList();
+                break;
+
+            case "Mountain":
+                // currentCardList = mountainMonsterCards.ToList();
+                break;
+
+            case "Swamp":
+                // currentCardList = swampMonsterCards.ToList();
+                break;
+        }
+
+        //Create a list of 2 unique random cards from the current card list array
+        for (int i = 0; i < 2; i++)
+        {
+            //Fetch a random element from the card list
+            int index = rand.Next(currentCardList.Count);
+            string selectedCard = currentCardList[index];
+
+            //Remove the selected card from the list so we dont repeat any cards
+            currentCardList.RemoveAt(index);
+
+            //Set each selected card to its correlating slot
+            switch (i)
+            {
+                case 0:
+                    card1 = selectedCard;
+                    Debug.Log("Monster Card 1: " + card1);
+                    break;
+                case 1:
+                    card2 = selectedCard;
+                    Debug.Log("Monster Card 2: " + card2);
+                    break;
+            }
+        }
+
+        //Instantiate the Monster Cards
+        GameObject cardSlot4 = GameObject.Find("TileCardSlot4");
+        GameObject cardSlot5 = GameObject.Find("TileCardSlot5");
+
+        card1Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + card1), cardSlot4.transform);
+        card2Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + card2), cardSlot5.transform);
+
+        card1Obj.transform.position = cardSlot4.transform.position;
+        card2Obj.transform.position = cardSlot5.transform.position;
+
+        //Destory all tile card game objects after a selection is made. See Card.cs
+        if (triggerMonsterCardDestruction)
+        {
+            Destroy(card1Obj.gameObject);
+            Destroy(card2Obj.gameObject);
+            //Reset this bool for next card selection later
+            triggerMonsterCardDestruction = false;
         }
     }
 
@@ -367,7 +445,7 @@ public class TileSpawner : TileTypes
                 prependTileName = "Tiles/SwampTiles/";
                 break;
         }
-        
+
         //curTiles = forrestTiles;
         //Debug.Log("Tile 1 bool: " + validTiles[0]);
         //Debug.Log("Tile 2 bool: " + validTiles[1]);
