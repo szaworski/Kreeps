@@ -17,9 +17,13 @@ public class Monster : MonoBehaviour
     public GameObject[] waypoints;
     public GameObject currWaypoint;
 
+    [Header("Values used for targeting")]
+    public Vector3 lastPos;
+    public float distanceTraveled;
 
     void Awake()
     {
+        lastPos = transform.position;
         isFacingLeft = true;
         waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
         currentWaypoint = TileSpawner.numOfTimesPlaced;
@@ -32,8 +36,10 @@ public class Monster : MonoBehaviour
 
     void Update()
     {
+        GetDistanceTraveled();
         FollowWaypoints();
         UpdateHealth();
+        //Debug.Log("Total distance traveled: " + distanceTraveled);
     }
 
     public void FollowWaypoints()
@@ -80,16 +86,24 @@ public class Monster : MonoBehaviour
         //Update health when damage is taken
         if (health <= 0)
         {
+            // Debug.Log("Total distance traveled: " + distanceTraveled);
             Destroy(this.gameObject);
         }
     }
 
+    public void GetDistanceTraveled()
+    {
+        float distance = Vector3.Distance(lastPos, transform.position);
+        distanceTraveled += distance;
+        lastPos= transform.position;
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Projectile")
         {
-            int incomingDamage = other.gameObject.GetComponent<Projectile>().damageValue;
+            GameObject projectileObj = other.gameObject;
+            int incomingDamage = projectileObj.GetComponent<Projectile>().damageValue;
             Debug.Log("Amount of incoming damage: " + incomingDamage);
             health -= incomingDamage;
 

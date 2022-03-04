@@ -10,6 +10,7 @@ public class Tower : MonoBehaviour
     [SerializeField] private bool monsterIsInRadius;
     public int damage;
     public int towerLvl;
+    public float projectileSpeed;
     public float attackSpeed;
     public float attackRange;
     public string damageType;
@@ -28,26 +29,27 @@ public class Tower : MonoBehaviour
         {
             monsterIsInRadius = true;
 
-            //Check the distance between the tower and the first monster
-            float closestTargetSoFar = Vector2.Distance(this.gameObject.transform.position, monstersInRadius[0].gameObject.transform.position);
-            GameObject closestTarget = monstersInRadius[0].gameObject;
+            //Get the distance that the first mosnter has traveled
+            float farthestTraveledSoFar = monstersInRadius[0].gameObject.GetComponent<Monster>().distanceTraveled;
+            //Set the first monster as the current target
+            GameObject currentTarget = monstersInRadius[0].gameObject;
 
             //Loop through for each object found in the radius
             for (int i = 0; i < monstersInRadius.Length; i++)
             {
-                //Check the distance of each object found in the radius
-                float currentDistance = Vector2.Distance(this.gameObject.transform.position, monstersInRadius[i].gameObject.transform.position);
+                //Check the distance that each monster in the radius has traveled
+                float travelDistance = monstersInRadius[i].gameObject.GetComponent<Monster>().distanceTraveled;
 
-                //Check the distance of new objects found in the monster array to see if they're closer than the previously closest one found
-                if (currentDistance < closestTargetSoFar)
+                //Check the distance that each monster has traveled so that we can target the object with the most distance
+                if (travelDistance > farthestTraveledSoFar)
                 {
-                    //Set the new closest object if one is found
-                    closestTarget = monstersInRadius[i].gameObject;
-                    closestTargetSoFar = currentDistance;
+                    //Set the new target if one object gains more distance than the current target
+                    currentTarget = monstersInRadius[i].gameObject;
+                    farthestTraveledSoFar = travelDistance;
                 }
             }
             //Spawn the projectile to send at the target
-            CreateProjectile(closestTarget);
+            CreateProjectile(currentTarget);
         }
 
         else

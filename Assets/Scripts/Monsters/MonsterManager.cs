@@ -9,6 +9,7 @@ public class MonsterManager : MonoBehaviour
     public static string selectedMonster;
     public static string prependMonsterName;
     public static int monsterCount;
+    public static bool AllMonstersAreSpawned;
     List<string> monsterList;
 
     void Awake()
@@ -45,6 +46,9 @@ public class MonsterManager : MonoBehaviour
             GameObject monsterObj = (GameObject)Instantiate(Resources.Load(prependMonsterName + monster), GameObject.Find("TileManager").transform);
             monsterObj.transform.position = GameObject.Find("TileManager").transform.position;
         }
+
+        AllMonstersAreSpawned = true;
+        //Debug.Log("Were all monsters spawned?: " + AllMonstersAreSpawned);
     }
 
     public void AddToMonsterList()
@@ -56,7 +60,7 @@ public class MonsterManager : MonoBehaviour
             PrependMonsterPath();
 
             //Setting the case value here for testing purposes. This value will eventually be set based on the players choice
-            selectedMonster = "Wolf";
+            selectedMonster = "Goblin";
 
             //Replace this switch statement with "GetSelectedMonster()". todo
             //GetSelectedMonster();
@@ -64,10 +68,6 @@ public class MonsterManager : MonoBehaviour
             {
                 case "Wolf":
                     monsterList.Add("Wolf");
-                    break;
-
-                case "Wolf2":
-                    monsterList.Add("Wolf2");
                     break;
 
                 case "Goblin":
