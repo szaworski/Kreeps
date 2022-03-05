@@ -54,16 +54,20 @@ public class MonsterManager : MonoBehaviour
     public void AddToMonsterList()
     {
         //After each tile is placed/Monster is selected, add the new monster to the list
-        if (monsterCount < TileSpawner.numOfTimesPlaced)
+        if (monsterCount < TileSpawner.numOfTimesPlaced && TileSpawner.triggerMonsterCardDestruction || monsterCount < TileSpawner.numOfTimesPlaced && TileSpawner.numOfTimesPlaced <= 1)
         {
             //Prepend the proper file path for the monster
             PrependMonsterPath();
 
-            //Setting the case value here for testing purposes. This value will eventually be set based on the players choice
-            selectedMonster = "Goblin";
+            if (TileSpawner.numOfTimesPlaced <= 1)
+            {
+                selectedMonster = "Wolf";
+            }
 
-            //Once we get monster cards working we'll set selectedMonster = TileSpawner.monsterCardSelected instead
-            // selectedMonster = TileSpawner.monsterCardSelected
+            else
+            {
+                selectedMonster = TileSpawner.monsterCardSelected;
+            }
 
             //Add the selected monster to the list
             monsterList.Add(selectedMonster);

@@ -33,6 +33,7 @@ public class Card : MonoBehaviour
     {
         TileSpawner.monsterCardSelected = cardName;
         IsHoveringOverUiCard = false;
-        TileSpawner.triggerTileCardDestruction = true;
+        TileSpawner.triggerMonsterCardDestruction = true;
+        Debug.Log("Monster Card selected: " + cardName);
     }
 }

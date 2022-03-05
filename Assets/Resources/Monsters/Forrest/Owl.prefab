@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -6739542867013121178}
   - component: {fileID: 6515737402300966651}
   m_Layer: 10
-  m_Name: Wolf
+  m_Name: Owl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 2922024872070147177, guid: d3a81603ee4d8c94199f4b91b07fa796, type: 3}
+  m_Sprite: {fileID: 7135671573300506022, guid: a12e6e85df19af449ae82ebe7fc6b56d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -102,7 +102,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.21875, y: 0.21875}
+    oldSize: {x: 0.265625, y: 0.21875}
     newSize: {x: 0.21875, y: 0.21875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -121,7 +121,7 @@ Animator:
   m_GameObject: {fileID: 6262272174153023960}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 305681732990e864187230f89cf6195e, type: 2}
+  m_Controller: {fileID: 9100000, guid: b86a1f193b941284b97950f5f3dd52a9, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -142,10 +142,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f7facd0389ee7469e24536357977b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 12
+  health: 10
   armor: 0
   type: 
-  moveSpeed: 0.5
+  moveSpeed: 0.6
   isFacingLeft: 0
   waypointNum: 0
   currentWaypoint: 0

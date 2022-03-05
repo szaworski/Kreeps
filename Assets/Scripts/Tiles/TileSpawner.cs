@@ -59,6 +59,7 @@ public class TileSpawner : TileTypes
     void Update()
     {
         GetAndShowTileCards();
+        DestroyMonsterCards();
         // SpawnNewTile(); is now called in GetAndShowTileCards() after a selection is made
 
         //Visualizing raycasts
@@ -326,8 +327,8 @@ public class TileSpawner : TileTypes
             SpawnNewTile();
             //Reset this bool for next card selection later
             triggerTileCardDestruction = false;
-
-            //Call GetAndShowMonsterCards(); once a tile card selection is made. todo
+            //Call GetAndShowMonsterCards() to spawn the Monster card options
+            GetAndShowMonsterCards();
         }
     }
 
@@ -341,7 +342,7 @@ public class TileSpawner : TileTypes
         switch (tileCardSelected)
         {
             case "Forrest":
-                // currentCardList = forrestMonsterCards.ToList();
+                currentCardList = forrestMonsterCards.ToList();
                 break;
 
             case "Graveyard":
@@ -389,19 +390,23 @@ public class TileSpawner : TileTypes
         GameObject cardSlot4 = GameObject.Find("TileCardSlot4");
         GameObject cardSlot5 = GameObject.Find("TileCardSlot5");
 
-        card1Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + card1), cardSlot4.transform);
-        card2Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + card2), cardSlot5.transform);
+        card1Obj = (GameObject)Instantiate(Resources.Load("UI/MonsterCards/" + card1), cardSlot4.transform);
+        card2Obj = (GameObject)Instantiate(Resources.Load("UI/MonsterCards/" + card2), cardSlot5.transform);
 
         card1Obj.transform.position = cardSlot4.transform.position;
         card2Obj.transform.position = cardSlot5.transform.position;
+    }
 
-        //Destory all tile card game objects after a selection is made. See Card.cs
+    public void DestroyMonsterCards()
+    {
+        //Destory all monster card game objects after a selection is made. See Card.cs
         if (triggerMonsterCardDestruction)
         {
             Destroy(card1Obj.gameObject);
             Destroy(card2Obj.gameObject);
             //Reset this bool for next card selection later
             triggerMonsterCardDestruction = false;
+            Debug.Log("Monster Cards Destoryed");
         }
     }
 

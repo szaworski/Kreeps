@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -6739542867013121178}
   - component: {fileID: 6515737402300966651}
   m_Layer: 10
-  m_Name: Wolf
+  m_Name: Bandit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 2922024872070147177, guid: d3a81603ee4d8c94199f4b91b07fa796, type: 3}
+  m_Sprite: {fileID: 1532433470693167745, guid: 6728a6a17eb70e34883a9611c8126f66, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121,7 +121,7 @@ Animator:
   m_GameObject: {fileID: 6262272174153023960}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 305681732990e864187230f89cf6195e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8f65346161c17d64db38301bd239b8fe, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -142,10 +142,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f7facd0389ee7469e24536357977b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 12
+  health: 22
   armor: 0
   type: 
-  moveSpeed: 0.5
+  moveSpeed: 0.2
   isFacingLeft: 0
   waypointNum: 0
   currentWaypoint: 0
