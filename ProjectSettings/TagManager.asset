@@ -7,6 +7,7 @@ TagManager:
   - Waypoint
   - TowerGrid
   - Projectile
+  - ForrestTile
   layers:
   - Default
   - TransparentFX

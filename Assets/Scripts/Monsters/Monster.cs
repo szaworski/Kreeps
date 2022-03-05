@@ -21,6 +21,9 @@ public class Monster : MonoBehaviour
     public Vector3 lastPos;
     public float distanceTraveled;
 
+    [Header("Values used for tile specific attributes")]
+    public bool checkForrestOverlap;
+
     void Awake()
     {
         lastPos = transform.position;
@@ -94,7 +97,7 @@ public class Monster : MonoBehaviour
     {
         float distance = Vector3.Distance(lastPos, transform.position);
         distanceTraveled += distance;
-        lastPos= transform.position;
+        lastPos = transform.position;
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -103,11 +106,27 @@ public class Monster : MonoBehaviour
         {
             GameObject projectileObj = other.gameObject;
             int incomingDamage = projectileObj.GetComponent<Projectile>().damageValue;
-            Debug.Log("Amount of incoming damage: " + incomingDamage);
+            //Debug.Log("Amount of incoming damage: " + incomingDamage);
             health -= incomingDamage;
-
             //Destroy the projectile game object after damage is received
             Destroy(other.gameObject);
+        }
+
+
+        //Check if the monster enter a forrest tile and was not already in one
+        if (other.gameObject.tag == "ForrestTile" && !checkForrestOverlap)
+        {
+            moveSpeed += 0.2f;
+            checkForrestOverlap = true;
+            Debug.Log("Increased move speed");
+        }
+
+        //Check if the monster enters a different kind of map tile (This means the monster is exiting the current tile type)
+        if (other.gameObject.tag != "ForrestTile" && !other.gameObject.tag.Contains("Projectile") && checkForrestOverlap)
+        {
+            moveSpeed -= 0.2f;
+            checkForrestOverlap = false;
+            Debug.Log("Decreased move speed");
         }
     }
 }
