@@ -17,12 +17,16 @@ public class Monster : MonoBehaviour
     public GameObject[] waypoints;
     public GameObject currWaypoint;
 
-    [Header("Values used for targeting")]
+    [Header("Vars used for targeting")]
     public Vector3 lastPos;
     public float distanceTraveled;
 
-    [Header("Values used for tile specific attributes")]
+    [Header("Vars used for tile specific attributes")]
     public bool checkForrestOverlap;
+    public bool checkGraveyardOverlap;
+    public bool checkMountainOverlap;
+    public bool checkRiverOverlap;
+    public bool checkSwampOverlap;
 
     void Awake()
     {
@@ -116,17 +120,27 @@ public class Monster : MonoBehaviour
         //Check if the monster enter a forrest tile and was not already in one
         if (other.gameObject.tag == "ForrestTile" && !checkForrestOverlap)
         {
-            moveSpeed += 0.2f;
-            checkForrestOverlap = true;
-            Debug.Log("Increased move speed");
+            EnterForrestTile();
         }
 
-        //Check if the monster enters a different kind of map tile (This means the monster is exiting the current tile type)
+        //Check if the monster enters a different kind of map tile (This means the monster is exiting the current tile type. Also ignore "Projectile" objects)
         if (other.gameObject.tag != "ForrestTile" && !other.gameObject.tag.Contains("Projectile") && checkForrestOverlap)
         {
-            moveSpeed -= 0.2f;
-            checkForrestOverlap = false;
-            Debug.Log("Decreased move speed");
+            ExitForrestTile();
         }
+    }
+
+    public void EnterForrestTile()
+    {
+        moveSpeed += 0.2f;
+        checkForrestOverlap = true;
+        //Debug.Log("Increased move speed");
+    }
+
+    public void ExitForrestTile()
+    {
+        moveSpeed -= 0.2f;
+        checkForrestOverlap = false;
+        //Debug.Log("Decreased move speed");
     }
 }
