@@ -245,15 +245,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lvl 1: 0 - 5 forrests
+  m_text: 'Lvl 1: 0 - 4 forrests
 
 
 
-    Lvl 2: 6 - 11 forrests
+
+    Lvl 2: 5 - 10 forrests
 
 
 
-    Lvl 3: 12+
+
+    Lvl 3: 11+
     forrests
 
 

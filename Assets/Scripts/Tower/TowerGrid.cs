@@ -40,7 +40,7 @@ public class TowerGrid : MonoBehaviour
             {
                 //Will eventually give a menu of tower choices, and check against a gold value to see if the tower can be placed or not
                 //Spawning a tower on mouse click if one is not present to test for now
-                if (!hasTower)
+                if (!hasTower && PlayerHud.gold >= 150)
                 {
                     //Get the tower GameObject
                     GameObject towerContainer = GameObject.Find("Towers");
@@ -50,6 +50,9 @@ public class TowerGrid : MonoBehaviour
                     tower.transform.position = this.transform.position;
                     placedTower = tower;
                     hasTower = true;
+
+                    //Subtract gold from the player
+                    PlayerHud.newGoldValue = PlayerHud.gold - 150;
                 }
             }
 

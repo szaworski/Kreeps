@@ -245,24 +245,24 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Monsters gain bonus move speed on forrests
+  m_text: 'Monsters gain bonus move speed in forrests
 
 
-    Lvl 1: 0 - 5 forrests
+    Lvl 1: 0 - 4 forrests
 
-    10%
-    speed bonus
-
-
-    Lvl 2: 6 - 11 forrests
-
-    20% speed bonus
+    +
+    0.1 speed bonus
 
 
-    Lvl 3: 12+
-    forrests
+    Lvl 2: 5 - 10 forrests
 
-    30% speed bonus
+    + 0.3 speed bonus
+
+
+    Lvl
+    3: 11+ forrests
+
+    + 0.5 speed bonus
 
 '
   m_isRightToLeft: 0

@@ -268,14 +268,14 @@ public class TileSpawner : TileTypes
             string card2 = null;
             string card3 = null;
 
-            //Get the correct Tile card array based on the number of waves finished. (Copy the list from TileCards.cs)
+            //Get the correct Tile card list based on the number of waves finished. (Copy the list from TileCards.cs)
             if (numOfTimesPlaced < 20)
             {
                 currentCardList = tier1TileCards.ToList();
                 //Debug.Log("Card List: " + currentCardList[0] + " " + currentCardList[1] + " " + currentCardList[2] + " " + currentCardList[3] + " " + currentCardList[4]);
             }
 
-            //Create a list of 3 unique random cards from the current card list array
+            //Create a list of 3 unique random cards from the current card list
             for (int i = 0; i < 3; i++)
             {
                 //Fetch a random element from the card list
@@ -362,7 +362,7 @@ public class TileSpawner : TileTypes
                 break;
         }
 
-        //Create a list of 2 unique random cards from the current card list array
+        //Create a list of 2 unique random cards from the current card list
         for (int i = 0; i < 2; i++)
         {
             //Fetch a random element from the card list

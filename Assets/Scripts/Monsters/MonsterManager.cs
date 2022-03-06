@@ -21,7 +21,7 @@ public class MonsterManager : MonoBehaviour
     void Update()
     {
         AddToMonsterList();
-        SpawnMonsters(0.9f);
+        SpawnMonsters(0.8f);
     }
 
     public void SpawnMonsters(float amtOfTime)
