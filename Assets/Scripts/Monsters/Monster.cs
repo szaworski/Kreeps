@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Monster : MonoBehaviour
@@ -9,6 +10,9 @@ public class Monster : MonoBehaviour
     public int armor;
     public string type;
     public float moveSpeed;
+    public TMP_Text healthText;
+    public TMP_Text maxHealthText;
+    public GameObject HealthContainer;
 
     [Header("Waypoint vars")]
     public bool isFacingLeft;
@@ -35,6 +39,10 @@ public class Monster : MonoBehaviour
         waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
         currentWaypoint = TileSpawner.numOfTimesPlaced;
 
+        //Set the health values to be shown
+        healthText.SetText(health.ToString());
+        maxHealthText.SetText(health.ToString());
+
         foreach (GameObject waypoint in waypoints)
         {
             waypointNum = waypoint.GetComponent<WaypointManager>().waypointNum;
@@ -45,7 +53,7 @@ public class Monster : MonoBehaviour
     {
         GetDistanceTraveled();
         FollowWaypoints();
-        UpdateHealth();
+        destroyMonster();
         //Debug.Log("Total distance traveled: " + distanceTraveled);
     }
 
@@ -57,6 +65,8 @@ public class Monster : MonoBehaviour
             if (isFacingLeft && transform.position.x < waypoints[currentWaypoint].transform.position.x)
             {
                 transform.localRotation = Quaternion.Euler(0, 180, 0);
+                //Stop the health text from rotating
+                HealthContainer.transform.rotation = Quaternion.Euler(0, 0, 0);
                 isFacingLeft = false;
             }
 
@@ -64,6 +74,8 @@ public class Monster : MonoBehaviour
             if (!isFacingLeft && transform.position.x > waypoints[currentWaypoint].transform.position.x)
             {
                 transform.localRotation = Quaternion.Euler(0, 0, 0);
+                //Stop the health text from rotating
+                HealthContainer.transform.rotation = Quaternion.Euler(0, 0, 0);
                 isFacingLeft = true;
             }
 
@@ -88,7 +100,7 @@ public class Monster : MonoBehaviour
         }
     }
 
-    public void UpdateHealth()
+    public void destroyMonster()
     {
         //Update health when damage is taken
         if (health <= 0)
@@ -111,7 +123,9 @@ public class Monster : MonoBehaviour
             GameObject projectileObj = other.gameObject;
             int incomingDamage = projectileObj.GetComponent<Projectile>().damageValue;
             //Debug.Log("Amount of incoming damage: " + incomingDamage);
+            //Subtract the amount of damage taken from the health variable
             health -= incomingDamage;
+            healthText.SetText(health.ToString());
             //Destroy the projectile game object after damage is received
             Destroy(other.gameObject);
         }

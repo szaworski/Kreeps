@@ -19,6 +19,7 @@ public class PlayerHud : MonoBehaviour
         gold = 300;
         newGoldValue = gold;
         goldAmtUiText.SetText(gold.ToString());
+
         //"selectedTowerType" is set to neutral by deafult
         selectedTowerType = "neutral";
     }
