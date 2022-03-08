@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8377205253269899496, guid: 98817a81d3017ca46a49f823d92f608a, type: 3}
+  m_Sprite: {fileID: -1265480315915715154, guid: 98817a81d3017ca46a49f823d92f608a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -245,21 +245,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Lvl 1: 0 - 4 forrests
-
-
-
-
-    Lvl 2: 5 - 10 forrests
-
-
-
-
-    Lvl 3: 11+
-    forrests
-
-
-'
+  m_text: "Type: Humanoid \nBounty: 5 gold\n\nLvl 1 \nHp: 25 Spd: 0.2 Ar: 0\n\nLvl
+    2\nHp: 0 Spd: 0 Ar: 0\n\nLvl 3\nHp: 0 Spd: 0 Ar: 0\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -286,8 +273,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 0.75
-  m_fontSizeBase: 0.75
+  m_fontSize: 0.8
+  m_fontSizeBase: 0.8
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -322,7 +309,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.22754747, y: -0.01831372, z: -0.07897353, w: 0.06643951}
+  m_margin: {x: 0.12600861, y: -0.031239329, z: -0.11693344, w: 0.058464676}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

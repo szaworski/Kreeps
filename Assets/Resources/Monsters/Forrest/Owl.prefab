@@ -76,7 +76,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 4
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &2040553587281962461
 MonoBehaviour:
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_renderer: {fileID: 6485930498866465346}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 1
+  _SortingOrder: 4
 --- !u!1 &4919360455123389165
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,7 +245,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 4
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &346445757991752093
 MonoBehaviour:
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_renderer: {fileID: 3862399678918777079}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 1
+  _SortingOrder: 4
 --- !u!1 &5580167391688881138
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,7 +516,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   armor: 0
-  type: 
+  goldBounty: 5
+  type: Beast
   moveSpeed: 0.6
   healthText: {fileID: 2040553587281962461}
   maxHealthText: {fileID: 346445757991752093}
@@ -609,7 +610,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 4
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &8727569863083988932
 MonoBehaviour:
@@ -703,4 +704,4 @@ MonoBehaviour:
   m_renderer: {fileID: 5487985705901897213}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 1
+  _SortingOrder: 4

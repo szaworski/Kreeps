@@ -8,6 +8,7 @@ public class Monster : MonoBehaviour
     [Header("Monster attributes")]
     public int health;
     public int armor;
+    public int goldBounty;
     public string type;
     public float moveSpeed;
     public TMP_Text healthText;
@@ -105,6 +106,8 @@ public class Monster : MonoBehaviour
         //Update health when damage is taken
         if (health <= 0)
         {
+            //Give gold to the player = to the "goldBounty" value
+            PlayerHud.newGoldValue = PlayerHud.gold + goldBounty;
             Destroy(this.gameObject);
         }
     }
