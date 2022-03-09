@@ -357,6 +357,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be6e63409cd47345b6578be934fa9ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventSystem: {fileID: 980651945}
+  lastSelected: {fileID: 0}
+  cardName: Swift
 --- !u!4 &195914112 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2475134989899632812, guid: de66faca07a11c1499b30777957115c4, type: 3}
@@ -495,6 +498,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be6e63409cd47345b6578be934fa9ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventSystem: {fileID: 980651945}
+  lastSelected: {fileID: 0}
+  cardName: Holy
 --- !u!1 &321815292
 GameObject:
   m_ObjectHideFlags: 0
@@ -628,6 +634,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be6e63409cd47345b6578be934fa9ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventSystem: {fileID: 980651945}
+  lastSelected: {fileID: 0}
+  cardName: Ice
 --- !u!1 &358970778
 GameObject:
   m_ObjectHideFlags: 0
@@ -1186,6 +1195,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be6e63409cd47345b6578be934fa9ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventSystem: {fileID: 980651945}
+  lastSelected: {fileID: 0}
+  cardName: Fire
 --- !u!1 &676058609
 GameObject:
   m_ObjectHideFlags: 0
@@ -1825,6 +1837,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be6e63409cd47345b6578be934fa9ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventSystem: {fileID: 980651945}
+  lastSelected: {fileID: 0}
+  cardName: Cosmic
 --- !u!1 &1436547891
 GameObject:
   m_ObjectHideFlags: 0
@@ -2171,6 +2186,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be6e63409cd47345b6578be934fa9ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventSystem: {fileID: 980651945}
+  lastSelected: {fileID: 0}
+  cardName: Neutral
 --- !u!1 &1601715814
 GameObject:
   m_ObjectHideFlags: 0
@@ -2304,6 +2322,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be6e63409cd47345b6578be934fa9ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  eventSystem: {fileID: 980651945}
+  lastSelected: {fileID: 0}
+  cardName: Lightning
 --- !u!1 &1617507725
 GameObject:
   m_ObjectHideFlags: 0

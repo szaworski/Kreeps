@@ -27,7 +27,7 @@ public class TowerGrid : MonoBehaviour
         }
     }
 
-        void OnMouseOver()
+    void OnMouseOver()
     {
         //Check to make sure we aren't hovering over a UI element first
         if (!Card.IsHoveringOverUiCard)
