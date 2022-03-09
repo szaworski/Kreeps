@@ -8,20 +8,40 @@ public class TowerCard : MonoBehaviour
     public EventSystem eventSystem;
     public GameObject lastSelected = null;
     public string cardName;
+    public bool mouseExit;
+    public RectTransform cardPos;
+    public RectTransform pos1;
+    public RectTransform pos2;
 
     void Update()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            // Slide the card up
-        }
+        ReturnToStartPos();
+        KeepCardSelected();
+    }
 
-        else
+    void OnMouseOver()
+    {
+        // Slide the card up
+        cardPos.transform.position = Vector3.MoveTowards(cardPos.transform.position, pos2.transform.position, 5 * Time.deltaTime);
+
+    }
+    void OnMouseExit()
+    {
+        mouseExit = true;
+    }
+
+    public void ReturnToStartPos()
+    {
+        if (mouseExit)
         {
             // Slide the card back down
-        }
+            cardPos.transform.position = Vector3.MoveTowards(cardPos.transform.position, pos1.transform.position, 5 * Time.deltaTime);
 
-        KeepCardSelected();
+            if (cardPos.transform.position == pos1.transform.position)
+            {
+                mouseExit = false;
+            }
+        }
     }
 
     public void KeepCardSelected()
