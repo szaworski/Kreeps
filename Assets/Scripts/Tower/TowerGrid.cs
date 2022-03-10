@@ -21,7 +21,7 @@ public class TowerGrid : MonoBehaviour
     void Update()
     {
         //Check if the mouse is over any UI elements to disable other functionality underneath
-        if (Card.IsHoveringOverUiCard)
+        if (Card.IsHoveringOverUiCard || TowerCard.IsHoveringOverTowerCard)
         {
             sprite.enabled = false;
         }
@@ -30,7 +30,7 @@ public class TowerGrid : MonoBehaviour
     void OnMouseOver()
     {
         //Check to make sure we aren't hovering over a UI element first
-        if (!Card.IsHoveringOverUiCard)
+        if (!Card.IsHoveringOverUiCard && !TowerCard.IsHoveringOverTowerCard)
         {
             //Reveal the grid sprite on mouse over
             sprite.enabled = true;

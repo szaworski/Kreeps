@@ -26,17 +26,6 @@ public class PlayerHud : MonoBehaviour
 
     void Update()
     {
-        //Check if the mouse is over any UI elements to disable other functionality underneath
-        if (EventSystem.current.IsPointerOverGameObject())
-        {
-            IsHoveringOverHudElement = true;
-        }
-
-        else
-        {
-            IsHoveringOverHudElement = false;
-        }
-
         if (newGoldValue > gold || newGoldValue < gold)
         {
             ChangeGoldAmt();

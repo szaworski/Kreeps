@@ -3,44 +3,54 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class TowerCard : MonoBehaviour
+public class TowerCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public EventSystem eventSystem;
     public GameObject lastSelected = null;
     public string cardName;
-    public bool mouseExit;
+    public bool mouseHover;
+    public static bool IsHoveringOverTowerCard;
     public RectTransform cardPos;
     public RectTransform pos1;
     public RectTransform pos2;
 
     void Update()
     {
-        ReturnToStartPos();
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            IsHoveringOverTowerCard = true;
+        }
+
+        else
+        {
+            IsHoveringOverTowerCard = false;
+        }
+
+        MoveCard();
         KeepCardSelected();
     }
 
-    void OnMouseOver()
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        // Slide the card up
-        cardPos.transform.position = Vector3.MoveTowards(cardPos.transform.position, pos2.transform.position, 5 * Time.deltaTime);
-
-    }
-    void OnMouseExit()
-    {
-        mouseExit = true;
+        mouseHover = true;
     }
 
-    public void ReturnToStartPos()
+    public void OnPointerExit(PointerEventData eventData)
     {
-        if (mouseExit)
+        mouseHover = false;
+    }
+
+    public void MoveCard()
+    {
+        //Move the card up
+        if (mouseHover)
         {
-            // Slide the card back down
-            cardPos.transform.position = Vector3.MoveTowards(cardPos.transform.position, pos1.transform.position, 5 * Time.deltaTime);
-
-            if (cardPos.transform.position == pos1.transform.position)
-            {
-                mouseExit = false;
-            }
+            cardPos.transform.position = Vector3.MoveTowards(cardPos.transform.position, pos2.transform.position, 10 * Time.deltaTime);
+        }
+        //Move the card down
+        else
+        {
+            cardPos.transform.position = Vector3.MoveTowards(cardPos.transform.position, pos1.transform.position, 10 * Time.deltaTime);
         }
     }
 
