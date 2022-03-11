@@ -10,7 +10,7 @@ public class TowerGrid : MonoBehaviour
 
     [Header("Grid position vars")]
     public bool hasTower;
-    public string towerTypeSelected;
+    public static string towerTypeSelected;
 
     void Awake()
     {

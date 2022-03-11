@@ -29,7 +29,8 @@ public class TowerCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
         MoveCard();
         SlideActions();
-        KeepCardSelected();
+        KeepCardHighlighted();
+        SetSelectedTowerType();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -69,8 +70,15 @@ public class TowerCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
             expanded = false;
         }
     }
+    public void SetSelectedTowerType()
+    {
+        if (mouseHover && Input.GetMouseButtonDown(0))
+        {
+            TowerGrid.towerTypeSelected = cardName;
+        }
+    }
 
-    public void KeepCardSelected()
+    public void KeepCardHighlighted()
     {
         // Keeps the current selected card highlighted when we click away
         if (eventSystem != null)
