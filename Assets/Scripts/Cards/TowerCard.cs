@@ -9,6 +9,7 @@ public class TowerCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     public GameObject lastSelected = null;
     public string cardName;
     public bool mouseHover;
+    public bool expanded;
     public static bool IsHoveringOverTowerCard;
     public RectTransform cardPos;
     public RectTransform pos1;
@@ -27,6 +28,7 @@ public class TowerCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         }
 
         MoveCard();
+        SlideActions();
         KeepCardSelected();
     }
 
@@ -43,14 +45,28 @@ public class TowerCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     public void MoveCard()
     {
         //Move the card up
-        if (mouseHover)
+        if (expanded)
         {
             cardPos.transform.position = Vector3.MoveTowards(cardPos.transform.position, pos2.transform.position, 10 * Time.deltaTime);
         }
+
         //Move the card down
-        else
+        else if (!expanded)
         {
             cardPos.transform.position = Vector3.MoveTowards(cardPos.transform.position, pos1.transform.position, 10 * Time.deltaTime);
+        }
+    }
+
+    public void SlideActions()
+    {
+        if (mouseHover && !expanded && Input.GetMouseButtonDown(1))
+        {
+            expanded = true;
+        }
+
+        else if (mouseHover && expanded && Input.GetMouseButtonDown(1) || !mouseHover)
+        {
+            expanded = false;
         }
     }
 
