@@ -10,18 +10,21 @@ public class TowerGrid : MonoBehaviour
 
     [Header("Grid position vars")]
     public bool hasTower;
+    public static int goldCost;
     public static string towerTypeSelected;
 
     void Awake()
     {
         sprite = this.gameObject.GetComponent<SpriteRenderer>();
         sprite.enabled = false;
+        //Set the default selected tower type
+        towerTypeSelected = "Neutral";
     }
 
     void Update()
     {
         //Check if the mouse is over any UI elements to disable other functionality underneath
-        if (Card.IsHoveringOverUiCard || TowerCard.IsHoveringOverTowerCard)
+        if (Card.IsHoveringOverUiCard)
         {
             sprite.enabled = false;
         }
@@ -30,7 +33,7 @@ public class TowerGrid : MonoBehaviour
     void OnMouseOver()
     {
         //Check to make sure we aren't hovering over a UI element first
-        if (!Card.IsHoveringOverUiCard && !TowerCard.IsHoveringOverTowerCard)
+        if (!Card.IsHoveringOverUiCard)
         {
             //Reveal the grid sprite on mouse over
             sprite.enabled = true;
@@ -40,11 +43,11 @@ public class TowerGrid : MonoBehaviour
             {
                 //Will eventually give a menu of tower choices, and check against a gold value to see if the tower can be placed or not
                 //Spawning a tower on mouse click if one is not present to test for now
-                if (!hasTower && PlayerHud.gold >= 150)
+                if (!hasTower && PlayerHud.gold >= goldCost)
                 {
                     //Get the tower GameObject
                     GameObject towerContainer = GameObject.Find("Towers");
-                    GameObject tower = (GameObject)Instantiate(Resources.Load("Towers/NeutralTower"), towerContainer.transform);
+                    GameObject tower = (GameObject)Instantiate(Resources.Load("Towers/" + towerTypeSelected + "Tower"), towerContainer.transform);
 
                     //Place the tower
                     tower.transform.position = this.transform.position;
@@ -52,7 +55,7 @@ public class TowerGrid : MonoBehaviour
                     hasTower = true;
 
                     //Subtract gold from the player
-                    PlayerHud.newGoldValue = PlayerHud.gold - 150;
+                    PlayerHud.newGoldValue = PlayerHud.gold - goldCost;
                 }
             }
 

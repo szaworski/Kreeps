@@ -14,6 +14,12 @@ public class Tower : MonoBehaviour
     public float attackSpeed;
     public float attackRange;
     public string damageType;
+    public LineRenderer attackRadius;
+
+    void Start()
+    {
+        DrawAttackRadius();
+    }
 
     void Update()
     {
@@ -74,5 +80,21 @@ public class Tower : MonoBehaviour
         // Draw a cirlce at the towers position
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, 0.75f);
+    }
+
+    void DrawAttackRadius()
+    {
+        attackRadius.widthMultiplier = 0.01f;
+        attackRadius.positionCount = 40;
+
+        float deltaTheta = (2f * Mathf.PI) / 40;
+        float theta = 0f;
+
+        for (int i = 0; i < attackRadius.positionCount; i++)
+        {
+            Vector3 pos = new Vector3(attackRange * Mathf.Cos(theta), attackRange * Mathf.Sin(theta), 0f);
+            attackRadius.SetPosition(i, transform.position + pos);
+            theta += deltaTheta;
+        }
     }
 }

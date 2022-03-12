@@ -10,21 +10,26 @@ public class TowerCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     public string cardName;
     public bool mouseHover;
     public bool expanded;
-    public static bool IsHoveringOverTowerCard;
     public RectTransform cardPos;
     public RectTransform pos1;
     public RectTransform pos2;
+
+    void Start ()
+    {
+        //Set the initial gold cost value
+        SetGoldCost();
+    }
 
     void Update()
     {
         if (EventSystem.current.IsPointerOverGameObject())
         {
-            IsHoveringOverTowerCard = true;
+            Card.IsHoveringOverUiCard = true;
         }
 
         else
         {
-            IsHoveringOverTowerCard = false;
+            Card.IsHoveringOverUiCard = false;
         }
 
         MoveCard();
@@ -75,6 +80,7 @@ public class TowerCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         if (mouseHover && Input.GetMouseButtonDown(0))
         {
             TowerGrid.towerTypeSelected = cardName;
+            SetGoldCost();
         }
     }
 
@@ -92,6 +98,40 @@ public class TowerCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
             {
                 eventSystem.SetSelectedGameObject(lastSelected);
             }
+        }
+    }
+
+    public void SetGoldCost()
+    {
+        switch (TowerGrid.towerTypeSelected)
+        {
+            case "Neutral":
+                TowerGrid.goldCost = 10;
+                break;
+
+            case "Fire":
+                TowerGrid.goldCost = 200;
+                break;
+
+            case "Ice":
+                TowerGrid.goldCost = 200;
+                break;
+
+            case "Thunder":
+                TowerGrid.goldCost = 250;
+                break;
+
+            case "Holy":
+                TowerGrid.goldCost = 250;
+                break;
+
+            case "Swift":
+                TowerGrid.goldCost = 300;
+                break;
+
+            case "Cosmic":
+                TowerGrid.goldCost = 300;
+                break;
         }
     }
 }
