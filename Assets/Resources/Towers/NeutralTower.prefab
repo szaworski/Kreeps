@@ -105,6 +105,7 @@ MonoBehaviour:
   attackSpeed: 1
   attackRange: 0.75
   damageType: 
+  attackRadiusObj: {fileID: 7761677875425391100}
   attackRadius: {fileID: 3165370115641405093}
 --- !u!1 &7761677875425391100
 GameObject:

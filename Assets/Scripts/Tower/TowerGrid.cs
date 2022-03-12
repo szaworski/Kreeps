@@ -7,6 +7,7 @@ public class TowerGrid : MonoBehaviour
     //For whatever reason after changing the collider from a BoxCollider2D to a normal box collider, now it behaves how I want it to.
     public SpriteRenderer sprite;
     public GameObject placedTower;
+    public GameObject towerAttackRadius;
 
     [Header("Grid position vars")]
     public bool hasTower;
@@ -53,17 +54,22 @@ public class TowerGrid : MonoBehaviour
                     tower.transform.position = this.transform.position;
                     placedTower = tower;
                     hasTower = true;
+                    //Get the attack radius game object attached to the tower
+                    towerAttackRadius = placedTower.transform.GetChild(0).gameObject;
 
                     //Subtract gold from the player
                     PlayerHud.newGoldValue = PlayerHud.gold - goldCost;
                 }
             }
 
-            if (Input.GetMouseButtonDown(1))
+            if (hasTower)
             {
-                //Destroy the tower on right click (Sell the tower)
-                if (hasTower)
+                //Show the towers attack radius
+                towerAttackRadius.SetActive(true);
+
+                if (Input.GetMouseButtonDown(1))
                 {
+                    //Destroy the tower on right click (Sell the tower)
                     Destroy(placedTower);
                     hasTower = false;
                 }
@@ -73,8 +79,14 @@ public class TowerGrid : MonoBehaviour
 
     void OnMouseExit()
     {
-        //Hide the grid sprite when on mouse exit 
+        //Hide the grid sprite on mouse exit 
         sprite.enabled = false;
+
+        if (hasTower)
+        {
+            //Hide the attack radius sprite on mouse exit 
+            towerAttackRadius.SetActive(false);
+        }
         //Debug.Log("Not hovering");
     }
 }
