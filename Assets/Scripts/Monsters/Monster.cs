@@ -125,7 +125,85 @@ public class Monster : MonoBehaviour
         {
             GameObject projectileObj = other.gameObject;
             int incomingDamage = projectileObj.GetComponent<Projectile>().damageValue;
+            string damageType = projectileObj.GetComponent<Projectile>().damageType;
             //Debug.Log("Amount of incoming damage: " + incomingDamage);
+
+            // Check the monster type against damage type and modify damage values
+            switch (damageType)
+            {
+                case "Fire":
+                    if (type == "Beast")
+                    {
+                        incomingDamage = incomingDamage * 2;
+                    }
+
+                    else if (type == "Brute")
+                    {
+                        incomingDamage = incomingDamage / 2;
+                    }
+                    break;
+
+                case "Ice":
+                    if (type == "Humanoid ")
+                    {
+                        incomingDamage = incomingDamage * 2;
+                    }
+
+                    else if (type == "Undead")
+                    {
+                        incomingDamage = incomingDamage / 2;
+                    }
+                    break;
+
+                case "Thunder":
+                    if (type == "Brute ")
+                    {
+                        incomingDamage = incomingDamage * 2;
+                    }
+
+                    else if (type == "Beast")
+                    {
+                        incomingDamage = incomingDamage / 2;
+                    }
+                    break;
+
+                case "Holy":
+                    if (type == "Undead ")
+                    {
+                        incomingDamage = incomingDamage * 2;
+                    }
+
+                    else if (type == "Humanoid")
+                    {
+                        incomingDamage = incomingDamage / 2;
+                    }
+                    break;
+
+                case "Swift":
+                    if (type == "Vermin ")
+                    {
+                        incomingDamage = incomingDamage * 2;
+                    }
+
+                    else if (type == "Trickster")
+                    {
+                        incomingDamage = incomingDamage / 2;
+                    }
+                    break;
+
+                case "Cosmic":
+                    if (type == "Trickster ")
+                    {
+                        incomingDamage = incomingDamage * 2;
+                    }
+
+                    else if (type == "Vermin")
+                    {
+                        incomingDamage = incomingDamage / 2;
+                    }
+                    break;
+            }
+
             //Subtract the amount of damage taken from the health variable
             health -= incomingDamage;
             healthText.SetText(health.ToString());

@@ -101,10 +101,10 @@ MonoBehaviour:
   currentTarget2: {fileID: 0}
   monsterIsInRadius: 0
   damage: 1
-  towerLvl: 0
+  towerLvl: 1
   projectileSpeed: 0
   attackSpeed: 0.2
-  attackRange: 0.9
+  attackRange: 0.8
   damageType: Fire
   attackRadiusObj: {fileID: 6406288573694793857}
   attackRadius: {fileID: 5600399217375393932}

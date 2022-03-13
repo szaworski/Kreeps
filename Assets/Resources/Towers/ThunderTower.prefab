@@ -97,10 +97,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCd: 0
   currentTarget: {fileID: 0}
+  currentTarget2: {fileID: 0}
   monsterIsInRadius: 0
   damage: 5
   towerLvl: 0
   projectileSpeed: 4
   attackSpeed: 1
   attackRange: 0.75
-  damageType: 
+  damageType: Thunder
+  attackRadiusObj: {fileID: 0}
+  attackRadius: {fileID: 0}

@@ -98,13 +98,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackCd: 0
   currentTarget: {fileID: 0}
+  currentTarget2: {fileID: 0}
   monsterIsInRadius: 0
-  damage: 5
-  towerLvl: 0
+  damage: 4
+  towerLvl: 1
   projectileSpeed: 4
   attackSpeed: 1
-  attackRange: 0.8
-  damageType: 
+  attackRange: 1
+  damageType: Neutral
   attackRadiusObj: {fileID: 7761677875425391100}
   attackRadius: {fileID: 3165370115641405093}
 --- !u!1 &7761677875425391100
