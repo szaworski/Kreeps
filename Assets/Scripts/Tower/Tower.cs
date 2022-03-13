@@ -7,6 +7,7 @@ public class Tower : MonoBehaviour
     [Header("Tower attributes")]
     [HideInInspector] public float attackCd;
     [HideInInspector] public GameObject currentTarget;
+    [HideInInspector] public GameObject currentTarget2;
     [SerializeField] private bool monsterIsInRadius;
     public int damage;
     public int towerLvl;
@@ -31,8 +32,8 @@ public class Tower : MonoBehaviour
     {
         Collider2D[] monstersInRadius = Physics2D.OverlapCircleAll(this.transform.position, attackRange, LayerMask.GetMask("Monster"));
 
-        //Check if any monsters are found in the radius
-        if (monstersInRadius.Length >= 1)
+        //Check if any monsters are found in the radius (Use this for towers that shoot projectiles)
+        if (monstersInRadius.Length >= 1 && projectileSpeed >= 1)
         {
             monsterIsInRadius = true;
 
@@ -59,6 +60,13 @@ public class Tower : MonoBehaviour
             CreateProjectile(currentTarget);
         }
 
+        //Check if any monsters are found in the radius (Use this for towers that deal AOE damage in an area)
+        else if (monstersInRadius.Length >= 1 && projectileSpeed == 0)
+        {
+            monsterIsInRadius = true;
+            CreateAoeDamageRadius();
+        }
+
         else
         {
             monsterIsInRadius = false;
@@ -72,6 +80,16 @@ public class Tower : MonoBehaviour
             currentTarget = target;
             GameObject projectile = (GameObject)Instantiate(Resources.Load("Towers/Projectiles/TowerProjectile1"), this.transform);
             projectile.transform.position = this.transform.position;
+            attackCd = attackSpeed + Time.time;
+        }
+    }
+
+    public void CreateAoeDamageRadius()
+    {
+        if (Time.time > attackCd && monsterIsInRadius)
+        {
+            GameObject aoeRadius = (GameObject)Instantiate(Resources.Load("Towers/Projectiles/AoeFire"), this.transform);
+            aoeRadius.transform.position = this.transform.position;
             attackCd = attackSpeed + Time.time;
         }
     }

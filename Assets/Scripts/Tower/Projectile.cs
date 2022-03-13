@@ -20,15 +20,35 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
-        if (target != null)
+        MoveProjectile();
+    }
+
+    public void MoveProjectile()
+    {
+        if (projectileSpeed >= 1)
         {
-            transform.position = Vector3.MoveTowards(this.transform.position, target.transform.position, projectileSpeed * Time.deltaTime);
-            //The projectile is destroyed after the damage value is received by the monster (See Monster.cs OnTriggerEnter2D function)
+            if (target != null)
+            {
+                transform.position = Vector3.MoveTowards(this.transform.position, target.transform.position, projectileSpeed * Time.deltaTime);
+            }
+
+            else
+            {
+                //The projectile is destroyed after the damage value is received by the monster (See Monster.cs OnTriggerEnter2D function)
+                destroyProjectile();
+            }
         }
 
-        else
+        else if (projectileSpeed == 0)
         {
-            Destroy(this.gameObject);
+            //The projectile is destroyed after the damage value is received by the monster (See Monster.cs OnTriggerEnter2D function)
+            //Need to use invoke to give time for the damage to be dealt
+            Invoke("destroyProjectile", 0.1f);
         }
+    }
+
+    public void destroyProjectile()
+    {
+        Destroy(this.gameObject);
     }
 }
