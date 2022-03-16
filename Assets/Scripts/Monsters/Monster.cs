@@ -59,6 +59,7 @@ public class Monster : MonoBehaviour
         GetDistanceTraveled();
         FollowWaypoints();
         destroyMonster();
+        ResetEffectAnims();
         //Debug.Log("Total distance traveled: " + distanceTraveled);
     }
 
@@ -216,12 +217,6 @@ public class Monster : MonoBehaviour
             healthText.SetText(health.ToString());
             //Destroy the projectile game object after damage is received
             Destroy(other.gameObject);
-
-            if (Time.time > fireAnimCd)
-            {
-                fireAnim.SetActive(false);
-                fireAnimCd = 0.2f + Time.time;
-            }
         }
 
 
@@ -249,5 +244,14 @@ public class Monster : MonoBehaviour
         moveSpeed -= 0.1f;
         checkForrestOverlap = false;
         //Debug.Log("Decreased move speed");
+    }
+
+    void ResetEffectAnims()
+    {
+        if (Time.time > fireAnimCd)
+        {
+            fireAnim.SetActive(false);
+            fireAnimCd = 0.4f + Time.time;
+        }
     }
 }
