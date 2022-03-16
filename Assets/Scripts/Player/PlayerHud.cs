@@ -9,7 +9,6 @@ public class PlayerHud : MonoBehaviour
     public static int gold;
     public static int newGoldValue;
     public static int costOfCurrentSelection;
-    public static string selectedTowerType;
     public static bool IsHoveringOverHudElement;
     public TMP_Text goldAmtUiText;
 
@@ -21,7 +20,7 @@ public class PlayerHud : MonoBehaviour
         goldAmtUiText.SetText(gold.ToString());
 
         //"selectedTowerType" is set to neutral by deafult
-        selectedTowerType = "neutral";
+        TowerGrid.towerTypeSelected = "Neutral";
     }
 
     void Update()

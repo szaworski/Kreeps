@@ -251,7 +251,7 @@ public class Monster : MonoBehaviour
         if (Time.time > fireAnimCd)
         {
             fireAnim.SetActive(false);
-            fireAnimCd = 0.4f + Time.time;
+            fireAnimCd = 0.5f + Time.time;
         }
     }
 }

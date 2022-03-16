@@ -19,7 +19,7 @@ public class TowerGrid : MonoBehaviour
         sprite = this.gameObject.GetComponent<SpriteRenderer>();
         sprite.enabled = false;
         //Set the default selected tower type
-        towerTypeSelected = "Neutral";
+        //towerTypeSelected = "Neutral";
     }
 
     void Update()
@@ -54,7 +54,7 @@ public class TowerGrid : MonoBehaviour
                     tower.transform.position = this.transform.position;
                     placedTower = tower;
                     hasTower = true;
-                    //Get the attack radius game object attached to the tower
+                    //Get the attack radius GameObject attached to the tower
                     towerAttackRadius = placedTower.transform.GetChild(0).gameObject;
 
                     //Subtract gold from the player

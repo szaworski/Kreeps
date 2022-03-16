@@ -515,7 +515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f7facd0389ee7469e24536357977b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 12
   armor: 0
   goldBounty: 5
   type: Beast
@@ -536,6 +536,7 @@ MonoBehaviour:
   checkRiverOverlap: 0
   checkSwampOverlap: 0
   fireAnim: {fileID: 8053690327806021368}
+  fireAnimCd: 0
 --- !u!1 &6959035619013095681
 GameObject:
   m_ObjectHideFlags: 0
