@@ -33,6 +33,10 @@ public class Monster : MonoBehaviour
     public bool checkRiverOverlap;
     public bool checkSwampOverlap;
 
+    [Header("Animation vars")]
+    public GameObject fireAnim;
+    public float fireAnimCd;
+
     void Awake()
     {
         lastPos = transform.position;
@@ -132,6 +136,9 @@ public class Monster : MonoBehaviour
             switch (damageType)
             {
                 case "Fire":
+
+                    fireAnim.SetActive(true);
+
                     if (type == "Beast")
                     {
                         incomingDamage = incomingDamage * 2;
@@ -209,6 +216,12 @@ public class Monster : MonoBehaviour
             healthText.SetText(health.ToString());
             //Destroy the projectile game object after damage is received
             Destroy(other.gameObject);
+
+            if (Time.time > fireAnimCd)
+            {
+                fireAnim.SetActive(false);
+                fireAnimCd = 0.2f + Time.time;
+            }
         }
 
 
@@ -224,7 +237,6 @@ public class Monster : MonoBehaviour
             ExitForrestTile();
         }
     }
-
     public void EnterForrestTile()
     {
         moveSpeed += 0.1f;
