@@ -100,11 +100,11 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   currentTarget2: {fileID: 0}
   monsterIsInRadius: 0
-  damage: 5
+  damage: 1
   towerLvl: 1
   projectileSpeed: 0
   attackSpeed: 0.4
-  attackRange: 0.75
+  attackRange: 0.6
   damageType: Ice
   attackRadiusObj: {fileID: 914214599846846503}
   attackRadius: {fileID: 1235488988543047019}

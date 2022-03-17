@@ -141,6 +141,7 @@ public class Monster : MonoBehaviour
                 case "Fire":
 
                     fireAnim.SetActive(true);
+                    fireAnimCd = 0.5f + Time.time;
 
                     if (type == "Beast")
                     {
@@ -260,7 +261,7 @@ public class Monster : MonoBehaviour
         if (Time.time > fireAnimCd && fireAnim.activeSelf)
         {
             fireAnim.SetActive(false);
-            fireAnimCd = 0.65f + Time.time;
+            fireAnimCd = 0.5f + Time.time;
         }
     }
 }
