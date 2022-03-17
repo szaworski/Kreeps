@@ -6,7 +6,7 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     [Header("Monster attributes")]
-    public int health;
+    public float health;
     public int armor;
     public int goldBounty;
     public string type;
@@ -33,9 +33,11 @@ public class Monster : MonoBehaviour
     public bool checkRiverOverlap;
     public bool checkSwampOverlap;
 
-    [Header("Animation vars")]
+    [Header("Damage Effect vars")]
     public GameObject fireAnim;
     public float fireAnimCd;
+
+    public bool IceSlowStatus;
 
     void Awake()
     {
@@ -129,7 +131,7 @@ public class Monster : MonoBehaviour
         if (other.gameObject.tag == "Projectile")
         {
             GameObject projectileObj = other.gameObject;
-            int incomingDamage = projectileObj.GetComponent<Projectile>().damageValue;
+            float incomingDamage = projectileObj.GetComponent<Projectile>().damageValue;
             string damageType = projectileObj.GetComponent<Projectile>().damageType;
             //Debug.Log("Amount of incoming damage: " + incomingDamage);
 
@@ -152,6 +154,13 @@ public class Monster : MonoBehaviour
                     break;
 
                 case "Ice":
+
+                    if (!IceSlowStatus)
+                    {
+                        IceSlowStatus = true;
+                        moveSpeed -= 0.1f;
+                    }
+
                     if (type == "Humanoid ")
                     {
                         incomingDamage = incomingDamage * 2;
@@ -248,10 +257,10 @@ public class Monster : MonoBehaviour
 
     void ResetEffectAnims()
     {
-        if (Time.time > fireAnimCd)
+        if (Time.time > fireAnimCd && fireAnim.activeSelf)
         {
             fireAnim.SetActive(false);
-            fireAnimCd = 0.5f + Time.time;
+            fireAnimCd = 0.65f + Time.time;
         }
     }
 }

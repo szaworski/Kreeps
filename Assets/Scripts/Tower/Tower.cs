@@ -9,7 +9,7 @@ public class Tower : MonoBehaviour
     [HideInInspector] public GameObject currentTarget;
     [HideInInspector] public GameObject currentTarget2;
     [SerializeField] private bool monsterIsInRadius;
-    public int damage;
+    public float damage;
     public int towerLvl;
     public float projectileSpeed;
     public float attackSpeed;

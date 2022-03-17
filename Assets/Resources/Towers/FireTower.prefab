@@ -103,7 +103,7 @@ MonoBehaviour:
   damage: 1
   towerLvl: 1
   projectileSpeed: 0
-  attackSpeed: 0.2
+  attackSpeed: 0.4
   attackRange: 0.8
   damageType: Fire
   attackRadiusObj: {fileID: 6406288573694793857}
