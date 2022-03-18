@@ -245,8 +245,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Type: Humanoid \nBounty: 5 gold\n\nLvl 1 \nHp: 25 Spd: 0.2 Ar: 0\n\nLvl
-    2\nHp: 0 Spd: 0 Ar: 0\n\nLvl 3\nHp: 0 Spd: 0 Ar: 0\n"
+  m_text: "Type: Brute\nBounty: 5 gold\n\nLvl 1 \nHp: 25 Spd: 0.2 Ar: 0\n\nLvl 2\nHp:
+    0 Spd: 0 Ar: 0\n\nLvl 3\nHp: 0 Spd: 0 Ar: 0\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
