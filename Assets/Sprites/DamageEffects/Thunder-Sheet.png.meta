@@ -23,6 +23,9 @@ TextureImporter:
   - first:
       213: -9098101864209872650
     second: Thunder-Sheet_6
+  - first:
+      213: 2360922162885235638
+    second: Thunder-Sheet_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -53,7 +56,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -264,6 +267,27 @@ TextureImporter:
       bones: []
       spriteID: 6f8837dee8c0db180800000000000000
       internalID: -9098101864209872650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thunder-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b31f1dc23ea3c020800000000000000
+      internalID: 2360922162885235638
       vertices: []
       indices: 
       edges: []

@@ -37,7 +37,12 @@ public class Monster : MonoBehaviour
     public GameObject fireAnim;
     public float fireAnimCd;
 
+    public GameObject IceAnim;
+    public float IceAnimCd;
     public bool IceSlowStatus;
+
+    public GameObject ThunderAnim;
+    Animator thunderAnimator;
 
     void Awake()
     {
@@ -49,6 +54,9 @@ public class Monster : MonoBehaviour
         //Set the health values to be shown
         healthText.SetText(health.ToString());
         maxHealthText.SetText(health.ToString());
+
+        //Set damage effect animator objects
+        thunderAnimator = ThunderAnim.GetComponent<Animator>();
 
         foreach (GameObject waypoint in waypoints)
         {
@@ -174,6 +182,9 @@ public class Monster : MonoBehaviour
                     break;
 
                 case "Thunder":
+
+                    thunderAnimator.SetTrigger("triggerThunderAnim");
+
                     if (type == "Brute ")
                     {
                         incomingDamage = incomingDamage * 2;
@@ -222,11 +233,19 @@ public class Monster : MonoBehaviour
                     break;
             }
 
-            //Subtract the amount of damage taken from the health variable
-            health -= incomingDamage;
-            healthText.SetText(health.ToString());
-            //Destroy the projectile game object after damage is received
-            Destroy(other.gameObject);
+            //Subtract the amount of damage taken from the health variable (Delay this for certain animations)
+            if (damageType == "Thunder")
+            {
+                StartCoroutine(SubtractHealth(incomingDamage, other, 0.45f));
+            }
+
+            else
+            {
+                health -= incomingDamage;
+                healthText.SetText(health.ToString());
+                //Destroy the projectile game object after damage is received
+                Destroy(other.gameObject);
+            }
         }
 
 
@@ -263,5 +282,15 @@ public class Monster : MonoBehaviour
             fireAnim.SetActive(false);
             fireAnimCd = 0.5f + Time.time;
         }
+    }
+
+    IEnumerator SubtractHealth(float incomingDamage, Collider2D projectileObj, float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+
+        health -= incomingDamage;
+        healthText.SetText(health.ToString());
+        //Destroy the projectile game object after damage is received
+        Destroy(projectileObj.gameObject);
     }
 }
