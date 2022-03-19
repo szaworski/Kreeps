@@ -41,9 +41,6 @@ public class Monster : MonoBehaviour
     public float IceAnimCd;
     public bool IceSlowStatus;
 
-    public GameObject ThunderAnim;
-    Animator thunderAnimator;
-
     void Awake()
     {
         lastPos = transform.position;
@@ -55,9 +52,6 @@ public class Monster : MonoBehaviour
         healthText.SetText(health.ToString());
         maxHealthText.SetText(health.ToString());
 
-        //Set damage effect animator objects
-        thunderAnimator = ThunderAnim.GetComponent<Animator>();
-
         foreach (GameObject waypoint in waypoints)
         {
             waypointNum = waypoint.GetComponent<WaypointManager>().waypointNum;
@@ -68,8 +62,8 @@ public class Monster : MonoBehaviour
     {
         GetDistanceTraveled();
         FollowWaypoints();
-        destroyMonster();
         ResetEffectAnims();
+        destroyMonster();
         //Debug.Log("Total distance traveled: " + distanceTraveled);
     }
 
@@ -183,9 +177,7 @@ public class Monster : MonoBehaviour
 
                 case "Thunder":
 
-                    thunderAnimator.SetTrigger("triggerThunderAnim");
-
-                    if (type == "Brute ")
+                    if (type == "Brute")
                     {
                         incomingDamage = incomingDamage * 2;
                     }
@@ -236,15 +228,26 @@ public class Monster : MonoBehaviour
             //Subtract the amount of damage taken from the health variable (Delay this for certain animations)
             if (damageType == "Thunder")
             {
-                StartCoroutine(SubtractHealth(incomingDamage, other, 0.45f));
+                if (this.gameObject != null)
+                {
+                    //Spawn in the animation object
+                    GameObject thunderAnimObj = (GameObject)Instantiate(Resources.Load("Animations/Thunder"), gameObject.transform);
+                    thunderAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.1f, gameObject.transform.position.z);
+
+                    //Subtract health after the animation plays
+                    StartCoroutine(SubtractHealth(incomingDamage, other, 0.45f));
+                }
             }
 
             else
             {
-                health -= incomingDamage;
-                healthText.SetText(health.ToString());
-                //Destroy the projectile game object after damage is received
-                Destroy(other.gameObject);
+                if (this.gameObject != null)
+                {
+                    health -= incomingDamage;
+                    healthText.SetText(health.ToString());
+                    //Destroy the projectile game object after damage is received
+                    Destroy(other.gameObject);
+                }
             }
         }
 
@@ -288,9 +291,12 @@ public class Monster : MonoBehaviour
     {
         yield return new WaitForSeconds(delayTime);
 
-        health -= incomingDamage;
-        healthText.SetText(health.ToString());
-        //Destroy the projectile game object after damage is received
-        Destroy(projectileObj.gameObject);
+        if (this.gameObject != null)
+        {
+            health -= incomingDamage;
+            healthText.SetText(health.ToString());
+            //Destroy the projectile game object after damage is received
+            Destroy(projectileObj.gameObject);
+        }
     }
 }
