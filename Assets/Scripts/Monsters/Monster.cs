@@ -37,9 +37,10 @@ public class Monster : MonoBehaviour
     public GameObject fireAnim;
     public float fireAnimCd;
 
-    public GameObject IceAnim;
-    public float IceAnimCd;
-    public bool IceSlowStatus;
+    public GameObject iceAnim;
+    public float iceAnimCd;
+    public bool iceSlowStatus;
+    public float iceSlowAmt;
 
     void Awake()
     {
@@ -158,10 +159,13 @@ public class Monster : MonoBehaviour
 
                 case "Ice":
 
-                    if (!IceSlowStatus)
+                    iceAnim.SetActive(true);
+                    iceAnimCd = 0.45f + Time.time;
+
+                    if (!iceSlowStatus)
                     {
-                        IceSlowStatus = true;
-                        moveSpeed -= 0.1f;
+                        iceSlowStatus = true;
+                        moveSpeed -= iceSlowAmt;
                     }
 
                     if (type == "Humanoid ")
@@ -241,13 +245,10 @@ public class Monster : MonoBehaviour
 
             else
             {
-                if (this.gameObject != null)
-                {
-                    health -= incomingDamage;
-                    healthText.SetText(health.ToString());
-                    //Destroy the projectile game object after damage is received
-                    Destroy(other.gameObject);
-                }
+                health -= incomingDamage;
+                healthText.SetText(health.ToString());
+                //Destroy the projectile game object after damage is received
+                Destroy(other.gameObject);
             }
         }
 
@@ -284,6 +285,14 @@ public class Monster : MonoBehaviour
         {
             fireAnim.SetActive(false);
             fireAnimCd = 0.5f + Time.time;
+        }
+
+        if (Time.time > iceAnimCd && iceAnim.activeSelf)
+        {
+            iceAnim.SetActive(false);
+            iceAnimCd = 0.45f + Time.time;
+            iceSlowStatus = false;
+            moveSpeed += iceSlowAmt;
         }
     }
 

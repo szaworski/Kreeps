@@ -16,7 +16,7 @@ PlayerSettings:
   productName: Cabin
   defaultCursor: {fileID: 2800000, guid: 39d45aba93038984d9b2b74eaba5e260, type: 3}
   cursorHotspot: {x: 0, y: 0}
-  m_SplashScreenBackgroundColor: {r: 0.047169805, g: 0.047169805, b: 0.047169805, a: 1}
+  m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1

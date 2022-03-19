@@ -380,7 +380,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.05, y: 0.05}
+  m_Size: {x: 0.02, y: 0.02}
   m_EdgeRadius: 0
 --- !u!95 &-6739542867013121178
 Animator:
@@ -435,9 +435,10 @@ MonoBehaviour:
   checkSwampOverlap: 0
   fireAnim: {fileID: 4018134280809965106}
   fireAnimCd: 0
-  IceAnim: {fileID: 39142809000539710}
-  IceAnimCd: 0
-  IceSlowStatus: 0
+  iceAnim: {fileID: 39142809000539710}
+  iceAnimCd: 0
+  iceSlowStatus: 0
+  iceSlowAmt: 0.1
 --- !u!1 &7480134897859211182
 GameObject:
   m_ObjectHideFlags: 0

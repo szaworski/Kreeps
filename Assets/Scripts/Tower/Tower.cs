@@ -98,7 +98,7 @@ public class Tower : MonoBehaviour
     {
         // Draw a cirlce at the towers position
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, 0.75f);
+        Gizmos.DrawWireSphere(transform.position, 0.6f);
     }
 
     void DrawAttackRadius()

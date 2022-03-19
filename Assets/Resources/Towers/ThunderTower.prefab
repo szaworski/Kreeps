@@ -102,8 +102,8 @@ MonoBehaviour:
   monsterIsInRadius: 0
   damage: 10
   towerLvl: 1
-  projectileSpeed: 10
-  attackSpeed: 2
+  projectileSpeed: 1
+  attackSpeed: 2.5
   attackRange: 1.5
   damageType: Thunder
   attackRadiusObj: {fileID: 8670445306333781603}
