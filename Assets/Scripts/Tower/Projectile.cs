@@ -6,15 +6,23 @@ public class Projectile : MonoBehaviour
 {
     public float damageValue;
     public float projectileSpeed;
+    public float attackRange;
     public string damageType;
     public GameObject target;
+    public CircleCollider2D AoeRadius;
 
     void Awake()
     {
         damageValue = transform.parent.GetComponent<Tower>().damage;
         projectileSpeed = transform.parent.GetComponent<Tower>().projectileSpeed;
         damageType = transform.parent.GetComponent<Tower>().damageType;
+        attackRange = transform.parent.GetComponent<Tower>().attackRange;
         target = transform.parent.GetComponent<Tower>().currentTarget;
+
+        if (projectileSpeed == 0)
+        {
+            AoeRadius.radius = attackRange;
+        }
         //Debug.Log("currentTarget target position: " + target.transform.position);
     }
 
