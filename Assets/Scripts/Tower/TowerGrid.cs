@@ -6,6 +6,8 @@ public class TowerGrid : MonoBehaviour
 {
     //For whatever reason after changing the collider from a BoxCollider2D to a normal box collider, now it behaves how I want it to.
     public SpriteRenderer sprite;
+    public SpriteRenderer towerGhostSprite;
+    public Sprite [] ghostSpriteArray;
     public GameObject placedTower;
     public GameObject towerAttackRadius;
 
@@ -18,8 +20,7 @@ public class TowerGrid : MonoBehaviour
     {
         sprite = this.gameObject.GetComponent<SpriteRenderer>();
         sprite.enabled = false;
-        //Set the default selected tower type
-        //towerTypeSelected = "Neutral";
+        towerGhostSprite.enabled = false;
     }
 
     void Update()
@@ -37,7 +38,9 @@ public class TowerGrid : MonoBehaviour
         if (!Card.IsHoveringOverUiCard)
         {
             //Reveal the grid sprite on mouse over
+            SetSelectedTowerGhost();
             sprite.enabled = true;
+            towerGhostSprite.enabled = true;
             //Debug.Log("Is hovering");
 
             if (Input.GetMouseButtonDown(0))
@@ -77,10 +80,45 @@ public class TowerGrid : MonoBehaviour
         }
     }
 
+    void SetSelectedTowerGhost()
+    {
+        switch (towerTypeSelected)
+        {
+            case "Neutral":
+                towerGhostSprite.sprite = ghostSpriteArray[0];
+                break;
+
+            case "Fire":
+                towerGhostSprite.sprite = ghostSpriteArray[1];
+                break;
+
+            case "Ice":
+                towerGhostSprite.sprite = ghostSpriteArray[2];
+                break;
+
+            case "Thunder":
+                towerGhostSprite.sprite = ghostSpriteArray[3];
+                break;
+
+            case "Holy":
+                towerGhostSprite.sprite = ghostSpriteArray[4];
+                break;
+
+            case "Swift":
+                towerGhostSprite.sprite = ghostSpriteArray[5];
+                break;
+
+            case "Cosmic":
+                towerGhostSprite.sprite = ghostSpriteArray[6];
+                break;
+        }
+    }
+
     void OnMouseExit()
     {
         //Hide the grid sprite on mouse exit 
         sprite.enabled = false;
+        towerGhostSprite.enabled = false;
 
         if (hasTower)
         {
