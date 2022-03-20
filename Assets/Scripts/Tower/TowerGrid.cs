@@ -142,6 +142,7 @@ public class TowerGrid : MonoBehaviour
         {
             //Hide the attack radius sprite on mouse exit 
             towerAttackRadius.SetActive(false);
+            towerStats.SetActive(false);
         }
         //Debug.Log("Not hovering");
     }
