@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Tower : MonoBehaviour
@@ -15,12 +16,20 @@ public class Tower : MonoBehaviour
     public float attackSpeed;
     public float attackRange;
     public string damageType;
-    public GameObject attackRadiusObj;
     public LineRenderer attackRadius;
+
+    public TMP_Text dmgText;
+    public TMP_Text rofText;
+    public TMP_Text rngText;
 
     void Start()
     {
         DrawAttackRadius();
+
+        //Set stats text
+        dmgText.SetText(damage.ToString());
+        rofText.SetText(attackSpeed.ToString());
+        rngText.SetText(attackRange.ToString());
     }
 
     void Update()

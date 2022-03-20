@@ -10,6 +10,7 @@ public class TowerGrid : MonoBehaviour
     public Sprite [] ghostSpriteArray;
     public GameObject placedTower;
     public GameObject towerAttackRadius;
+    public GameObject towerStats;
 
     [Header("Grid position vars")]
     public bool hasTower;
@@ -45,6 +46,9 @@ public class TowerGrid : MonoBehaviour
 
             if (Input.GetMouseButtonDown(0))
             {
+                //Hide or show the tower stats on left mouse down
+                HideShowTowerStats();
+
                 //Will eventually give a menu of tower choices, and check against a gold value to see if the tower can be placed or not
                 //Spawning a tower on mouse click if one is not present to test for now
                 if (!hasTower && PlayerHud.gold >= goldCost)
@@ -59,6 +63,7 @@ public class TowerGrid : MonoBehaviour
                     hasTower = true;
                     //Get the attack radius GameObject attached to the tower
                     towerAttackRadius = placedTower.transform.GetChild(0).gameObject;
+                    towerStats = placedTower.transform.GetChild(1).gameObject;
 
                     //Subtract gold from the player
                     PlayerHud.newGoldValue = PlayerHud.gold - goldCost;
@@ -111,6 +116,19 @@ public class TowerGrid : MonoBehaviour
             case "Cosmic":
                 towerGhostSprite.sprite = ghostSpriteArray[6];
                 break;
+        }
+    }
+
+    void HideShowTowerStats()
+    {
+        if (hasTower && !towerStats.activeSelf)
+        {
+            towerStats.SetActive(true);
+        }
+
+        else if (hasTower && towerStats.activeSelf)
+        {
+            towerStats.SetActive(false);
         }
     }
 
