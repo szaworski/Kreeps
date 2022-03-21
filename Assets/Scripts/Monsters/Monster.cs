@@ -34,6 +34,7 @@ public class Monster : MonoBehaviour
     public bool checkSwampOverlap;
 
     [Header("Damage Effect vars")]
+    public bool isTakingDamage;
     public GameObject fireAnim;
     public float fireAnimCd;
 
@@ -64,7 +65,17 @@ public class Monster : MonoBehaviour
         GetDistanceTraveled();
         FollowWaypoints();
         ResetEffectAnims();
-        destroyMonster();
+
+        if (isTakingDamage)
+        {
+            StartCoroutine(ShakeHpContainer(0.1f));
+        }
+
+        if (health <= 0)
+        {
+            StartCoroutine(DestroyMonster(0.1f));
+        }
+
         //Debug.Log("Total distance traveled: " + distanceTraveled);
     }
 
@@ -108,17 +119,6 @@ public class Monster : MonoBehaviour
             Destroy(this.gameObject);
 
             // Todo: Subtract a point of health from the main base
-        }
-    }
-
-    public void destroyMonster()
-    {
-        //Update health when damage is taken
-        if (health <= 0)
-        {
-            //Give gold to the player = to the "goldBounty" value
-            PlayerHud.newGoldValue = PlayerHud.gold + goldBounty;
-            Destroy(this.gameObject);
         }
     }
 
@@ -245,6 +245,7 @@ public class Monster : MonoBehaviour
 
             else
             {
+                isTakingDamage = true;
                 health -= incomingDamage;
                 healthText.SetText(health.ToString());
                 //Destroy the projectile game object after damage is received
@@ -296,16 +297,36 @@ public class Monster : MonoBehaviour
         }
     }
 
+    IEnumerator DestroyMonster(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+        //After a delay, give gold to the player = to the "goldBounty" value
+        PlayerHud.newGoldValue = PlayerHud.gold + goldBounty;
+        Destroy(this.gameObject);
+    }
+
     IEnumerator SubtractHealth(float incomingDamage, Collider2D projectileObj, float delayTime)
     {
         yield return new WaitForSeconds(delayTime);
 
         if (this.gameObject != null)
         {
+            isTakingDamage = true;
             health -= incomingDamage;
             healthText.SetText(health.ToString());
             //Destroy the projectile game object after damage is received
             Destroy(projectileObj.gameObject);
         }
+    }
+
+    IEnumerator ShakeHpContainer(float resetTimer)
+    {
+        //Shake the HP container
+        HealthContainer.transform.position = new Vector3(gameObject.transform.position.x + Mathf.Sin(Time.time * 75) * 0.025f, HealthContainer.transform.position.y, HealthContainer.transform.position.z);
+
+        //Stop the shake after a delay, and reset the position
+        yield return new WaitForSeconds(resetTimer);
+        HealthContainer.transform.position = new Vector3(gameObject.transform.position.x, HealthContainer.transform.position.y, HealthContainer.transform.position.z);
+        isTakingDamage = false;
     }
 }
