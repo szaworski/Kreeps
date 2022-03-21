@@ -77,12 +77,25 @@ public class TowerGrid : MonoBehaviour
 
                 if (Input.GetMouseButtonDown(1))
                 {
-                    //Destroy the tower on right click (Sell the tower)
-                    Destroy(placedTower);
-                    hasTower = false;
+                   DestroyTower();
                 }
             }
         }
+    }
+
+    void OnMouseExit()
+    {
+        //Hide the grid sprite on mouse exit 
+        sprite.enabled = false;
+        towerGhostSprite.enabled = false;
+
+        if (hasTower)
+        {
+            //Hide the attack radius sprite on mouse exit 
+            towerAttackRadius.SetActive(false);
+            towerStats.SetActive(false);
+        }
+        //Debug.Log("Not hovering");
     }
 
     void SetSelectedTowerGhost()
@@ -132,18 +145,13 @@ public class TowerGrid : MonoBehaviour
         }
     }
 
-    void OnMouseExit()
+    void DestroyTower()
     {
-        //Hide the grid sprite on mouse exit 
-        sprite.enabled = false;
-        towerGhostSprite.enabled = false;
+        //Destroy the tower on right click (Sell the tower)
+        Destroy(placedTower);
+        hasTower = false;
 
-        if (hasTower)
-        {
-            //Hide the attack radius sprite on mouse exit 
-            towerAttackRadius.SetActive(false);
-            towerStats.SetActive(false);
-        }
-        //Debug.Log("Not hovering");
+        //Give gold to the player = to half of the original cost of the tower
+        //PlayerHud.newGoldValue = PlayerHud.gold + goldCost;
     }
 }
