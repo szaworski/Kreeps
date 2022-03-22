@@ -628,7 +628,7 @@ MonoBehaviour:
   m_renderer: {fileID: 185483779}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 6
+  _SortingOrder: 7
 --- !u!23 &185483779
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -668,7 +668,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!4 &195914112 stripped
 Transform:
@@ -1053,7 +1053,7 @@ MonoBehaviour:
   m_renderer: {fileID: 316620478}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 6
+  _SortingOrder: 7
 --- !u!23 &316620478
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1093,7 +1093,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &351516586
 GameObject:
@@ -1674,7 +1674,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &447809095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1886,7 +1886,7 @@ MonoBehaviour:
   m_renderer: {fileID: 461741353}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 6
+  _SortingOrder: 7
 --- !u!23 &461741353
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1926,7 +1926,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &497381870
 GameObject:
@@ -2305,7 +2305,7 @@ MonoBehaviour:
   m_renderer: {fileID: 562160274}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 6
+  _SortingOrder: 7
 --- !u!23 &562160274
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2345,7 +2345,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &600109408
 GameObject:
@@ -2379,7 +2379,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -450, y: 0}
+  m_AnchoredPosition: {x: -400, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &654805580
@@ -2928,7 +2928,7 @@ MonoBehaviour:
   m_renderer: {fileID: 922169883}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 6
+  _SortingOrder: 7
 --- !u!23 &922169883
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2968,7 +2968,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &977229926
 GameObject:
@@ -3267,7 +3267,7 @@ MonoBehaviour:
   m_renderer: {fileID: 1060949881}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 6
+  _SortingOrder: 7
 --- !u!23 &1060949881
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3307,7 +3307,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1092507956
 GameObject:
@@ -3437,7 +3437,7 @@ MonoBehaviour:
   m_renderer: {fileID: 1092507959}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 6
+  _SortingOrder: 7
 --- !u!23 &1092507959
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3477,7 +3477,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1118438542
 GameObject:
@@ -3511,7 +3511,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 450, y: 0}
+  m_AnchoredPosition: {x: 400, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1172605230
@@ -4920,7 +4920,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_TargetDisplay: 0
 --- !u!224 &1741423457
 RectTransform:

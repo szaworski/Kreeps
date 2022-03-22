@@ -98,8 +98,27 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Type: Beast\nBounty: 5 gold\n\nLvl 1 \nHp: 10 Spd: 0.6 Ar: 0\n\nLvl 2\nHp:
-    0 Spd: 0 Ar: 0\n\nLvl 3\nHp: 0 Spd: 0 Ar: 0\n"
+  m_text: 'Type: Beast
+
+    Bounty: 5 gold
+
+
+
+
+    Lvl 1:
+
+    Hp: 10 Spd: 0.6 Ar:
+    0
+
+    Lvl 2:
+
+    Hp: 0 Spd: 0 Ar: 0
+
+    Lvl 3:
+
+    Hp: 0 Spd: 0 Ar: 0
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -162,7 +181,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.12600861, y: -0.031239329, z: -0.11693344, w: 0.058464676}
+  m_margin: {x: 0.145, y: -0.027595304, z: -0.11693316, w: 0.0730412}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
