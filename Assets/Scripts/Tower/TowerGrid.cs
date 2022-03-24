@@ -7,10 +7,11 @@ public class TowerGrid : MonoBehaviour
     //For whatever reason after changing the collider from a BoxCollider2D to a normal box collider, now it behaves how I want it to.
     public SpriteRenderer sprite;
     public SpriteRenderer towerGhostSprite;
-    public Sprite [] ghostSpriteArray;
+    public Sprite[] ghostSpriteArray;
     public GameObject placedTower;
     public GameObject towerAttackRadius;
     public GameObject towerStats;
+    public Tower towerScript;
 
     [Header("Grid position vars")]
     public bool hasTower;
@@ -64,6 +65,7 @@ public class TowerGrid : MonoBehaviour
                     //Get the attack radius GameObject attached to the tower
                     towerAttackRadius = placedTower.transform.GetChild(0).gameObject;
                     towerStats = placedTower.transform.GetChild(1).gameObject;
+                    towerScript = placedTower.GetComponent<Tower>();
 
                     //Subtract gold from the player
                     PlayerHud.newGoldValue = PlayerHud.gold - goldCost;
@@ -77,7 +79,13 @@ public class TowerGrid : MonoBehaviour
 
                 if (Input.GetMouseButtonDown(1))
                 {
-                   DestroyTower();
+                    //Testing that we are able to retrieve values from this towers script  
+                    if (towerScript.damageType == "Neutral")
+                    {
+                        Debug.Log("Deleted Neutral Tower");
+                    }
+
+                    DestroyTower();
                 }
             }
         }
