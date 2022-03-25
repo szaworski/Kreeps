@@ -107,6 +107,7 @@ MonoBehaviour:
   attackSpeed: 1
   attackRange: 1
   damageType: Neutral
+  towerName: Neutral Lvl 1
   attackRadius: {fileID: 3165370115641405093}
   dmgText: {fileID: 3194327353769431121}
   rofText: {fileID: 3206024790138092053}

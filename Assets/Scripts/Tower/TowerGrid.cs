@@ -18,6 +18,16 @@ public class TowerGrid : MonoBehaviour
     public static int goldCost;
     public static string towerTypeSelected;
 
+    [Header("Tower Upgrade vars")]
+    public static string upgradeCardSelected;
+    public static bool triggerUpgradeCardDestruction;
+    public GameObject upgradeCard1Obj;
+    public GameObject upgradeCard2Obj;
+    public GameObject upgradeCard3Obj;
+    public string card1;
+    public string card2;
+    public string card3;
+
     void Awake()
     {
         sprite = this.gameObject.GetComponent<SpriteRenderer>();
@@ -80,7 +90,7 @@ public class TowerGrid : MonoBehaviour
                 if (Input.GetMouseButtonDown(1))
                 {
                     //Testing that we are able to retrieve values from this towers script  
-                    if (towerScript.damageType == "Neutral")
+                    if (towerScript.towerName == "Neutral 1")
                     {
                         Debug.Log("Deleted Neutral Tower");
                     }
@@ -150,6 +160,35 @@ public class TowerGrid : MonoBehaviour
         else if (hasTower && towerStats.activeSelf)
         {
             towerStats.SetActive(false);
+        }
+    }
+
+    void SpawnTowerUpgradeCards()
+    {
+        //Instantiate the Upgrade Cards
+        GameObject cardSlot1 = GameObject.Find("UpgradeSlot1");
+        GameObject cardSlot2 = GameObject.Find("UpgradeSlot2");
+        GameObject cardSlot3 = GameObject.Find("UpgradeSlot3");
+
+        upgradeCard1Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/" + card1), cardSlot1.transform);
+        upgradeCard2Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/" + card1), cardSlot2.transform);
+        upgradeCard3Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/" + card1), cardSlot3.transform);
+
+        upgradeCard1Obj.transform.position = cardSlot1.transform.position;
+        upgradeCard2Obj.transform.position = cardSlot2.transform.position;
+        upgradeCard3Obj.transform.position = cardSlot3.transform.position;
+    }
+
+    void DestroyTowerUpgradeCards()
+    {
+        //Destory all card game objects after a selection is made. See Card.cs
+        if (triggerUpgradeCardDestruction)
+        {
+            Destroy(upgradeCard1Obj.gameObject);
+            Destroy(upgradeCard2Obj.gameObject);
+            Destroy(upgradeCard3Obj.gameObject);
+            //Reset this bool for next card selection
+            triggerUpgradeCardDestruction = false;
         }
     }
 

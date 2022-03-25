@@ -34,6 +34,14 @@ public class Card : MonoBehaviour
         TileSpawner.monsterCardSelected = cardName;
         IsHoveringOverUiCard = false;
         TileSpawner.triggerMonsterCardDestruction = true;
-        Debug.Log("Monster Card selected: " + cardName);
+        //Debug.Log("Monster Card selected: " + cardName);
+    }
+
+    public void SetSelectedUpgradeCard()
+    {
+        TowerGrid.upgradeCardSelected = cardName;
+        IsHoveringOverUiCard = false;
+        TowerGrid.triggerUpgradeCardDestruction = true;
+        Debug.Log("Upgrade Card selected: " + cardName);
     }
 }
