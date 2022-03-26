@@ -19,9 +19,16 @@ public class Tower : MonoBehaviour
     public string towerName;
     public LineRenderer attackRadius;
 
+    [Header("Tower Stats")]
     public TMP_Text dmgText;
     public TMP_Text rofText;
     public TMP_Text rngText;
+
+    [Header("Tower Upgrades")]
+    public bool hasUpgrades;
+    public string upgrade1;
+    public string upgrade2;
+    public string upgrade3;
 
     void Start()
     {
