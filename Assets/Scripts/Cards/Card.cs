@@ -7,6 +7,8 @@ public class Card : MonoBehaviour
 {
     public static bool IsHoveringOverUiCard;
     public string cardName;
+    public int upgradeCost;
+    public string upgradeType;
 
     void Update()
     {
@@ -39,9 +41,14 @@ public class Card : MonoBehaviour
 
     public void SetSelectedUpgradeCard()
     {
-        TowerGrid.upgradeCardSelected = cardName;
-        IsHoveringOverUiCard = false;
-        TowerGrid.triggerUpgradeCardDestruction = true;
-        Debug.Log("Upgrade Card selected: " + cardName);
+        if(PlayerHud.gold >= upgradeCost)
+        {
+            TowerGrid.upgradeCardSelected = cardName;
+            TowerGrid.upgradeTypeSelected = upgradeType;
+            TowerGrid.upgradeGoldCost = upgradeCost;
+            IsHoveringOverUiCard = false;
+            TowerGrid.triggerUpgradeCardDestruction = true;
+            Debug.Log("Upgrade Card selected: " + cardName);
+        }
     }
 }

@@ -16,10 +16,13 @@ public class TowerGrid : MonoBehaviour
     [Header("Grid position vars")]
     public bool hasTower;
     public static int goldCost;
+    public static int upgradeGoldCost;
     public static string towerTypeSelected;
 
     [Header("Tower Upgrade vars")]
+    public static Vector3 upgradePosition;
     public static string upgradeCardSelected;
+    public static string upgradeTypeSelected;
     public static bool upgradeCardsArePresent;
     public static bool triggerUpgradeCardDestruction;
     public static GameObject upgradeCard1Obj;
@@ -43,6 +46,8 @@ public class TowerGrid : MonoBehaviour
         {
             sprite.enabled = false;
         }
+
+        UpgradeTower();
     }
 
     void OnMouseOver()
@@ -102,8 +107,6 @@ public class TowerGrid : MonoBehaviour
                         DestroyTowerUpgradeCards();
                         upgradeCardsArePresent = false;
                     }
-
-                    //DestroyTower();
                 }
             }
         }
@@ -173,6 +176,8 @@ public class TowerGrid : MonoBehaviour
 
     void SpawnTowerUpgradeCards()
     {
+        upgradePosition = placedTower.transform.position;
+
         card1 = towerScript.upgrade1;
         card2 = towerScript.upgrade2;
         card3 = towerScript.upgrade3;
@@ -191,7 +196,7 @@ public class TowerGrid : MonoBehaviour
         upgradeCard3Obj.transform.position = cardSlot3.transform.position;
     }
 
-    void DestroyTowerUpgradeCardsOnSelect()
+    void UpgradeTower()
     {
         //Destory all card game objects after a selection is made. See Card.cs
         if (triggerUpgradeCardDestruction)
@@ -200,7 +205,32 @@ public class TowerGrid : MonoBehaviour
             //Reset bools for next upgrade card selection
             triggerUpgradeCardDestruction = false;
             upgradeCardsArePresent = false;
+
+            GetSelectedUpgrade();
         }
+    }
+
+    void GetSelectedUpgrade()
+    {
+        Debug.Log("Old Tower position: " + upgradePosition);
+        DestroyTower();
+
+        //Get the tower GameObject
+        GameObject towerContainer = GameObject.Find("Towers");
+        //Debug.Log("Towers/Upgrades/" + upgradeTypeSelected + "/" + upgradeCardSelected + "Tower");
+        GameObject tower = (GameObject)Instantiate(Resources.Load("Towers/Upgrades/" + upgradeTypeSelected + "/" + upgradeCardSelected + "Tower"), towerContainer.transform);
+
+        //Place the tower
+        tower.transform.position = upgradePosition;
+        placedTower = tower;
+        hasTower = true;
+        //Get the attack radius GameObject attached to the tower
+        towerAttackRadius = placedTower.transform.GetChild(0).gameObject;
+        towerStats = placedTower.transform.GetChild(1).gameObject;
+        towerScript = placedTower.GetComponent<Tower>();
+
+        //Subtract gold from the player
+        PlayerHud.newGoldValue = PlayerHud.gold - upgradeGoldCost;
     }
 
     void DestroyTowerUpgradeCards()
