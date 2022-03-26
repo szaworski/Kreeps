@@ -418,5 +418,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: NeutralLvl2
-  upgradeCost: 50
+  upgradeCost: 10
   upgradeType: Neutral

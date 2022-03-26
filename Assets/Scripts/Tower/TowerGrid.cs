@@ -20,6 +20,8 @@ public class TowerGrid : MonoBehaviour
     public static string towerTypeSelected;
 
     [Header("Tower Upgrade vars")]
+    public static GameObject oldTowerObj;
+    public static GameObject gridObj;
     public static Vector3 upgradePosition;
     public static string upgradeCardSelected;
     public static string upgradeTypeSelected;
@@ -66,8 +68,7 @@ public class TowerGrid : MonoBehaviour
                 //Hide or show the tower stats on left mouse down
                 HideShowTowerStats();
 
-                //Will eventually give a menu of tower choices, and check against a gold value to see if the tower can be placed or not
-                //Spawning a tower on mouse click if one is not present to test for now
+                //Spawn a tower on mouse click if one is not present
                 if (!hasTower && PlayerHud.gold >= goldCost)
                 {
                     //Get the tower GameObject
@@ -78,6 +79,7 @@ public class TowerGrid : MonoBehaviour
                     tower.transform.position = this.transform.position;
                     placedTower = tower;
                     hasTower = true;
+
                     //Get the attack radius GameObject attached to the tower
                     towerAttackRadius = placedTower.transform.GetChild(0).gameObject;
                     towerStats = placedTower.transform.GetChild(1).gameObject;
@@ -108,6 +110,12 @@ public class TowerGrid : MonoBehaviour
                         upgradeCardsArePresent = false;
                     }
                 }
+
+                if (Input.GetKeyDown(KeyCode.Delete))
+                {
+                    DestroyTower(placedTower);
+                    hasTower = false;
+                }
             }
         }
     }
@@ -124,7 +132,6 @@ public class TowerGrid : MonoBehaviour
             towerAttackRadius.SetActive(false);
             towerStats.SetActive(false);
         }
-        //Debug.Log("Not hovering");
     }
 
     void SetSelectedTowerGhost()
@@ -177,6 +184,10 @@ public class TowerGrid : MonoBehaviour
     void SpawnTowerUpgradeCards()
     {
         upgradePosition = placedTower.transform.position;
+        oldTowerObj = placedTower;
+        gridObj = this.gameObject;
+        //Debug.Log("Old Tower position: " + upgradePosition);
+        //Debug.Log("Upgrade grid object: " + gridObj);
 
         card1 = towerScript.upgrade1;
         card2 = towerScript.upgrade2;
@@ -201,33 +212,31 @@ public class TowerGrid : MonoBehaviour
         //Destory all card game objects after a selection is made. See Card.cs
         if (triggerUpgradeCardDestruction)
         {
+            SetSelectedUpgrade();
             DestroyTowerUpgradeCards();
+            DestroyTower(oldTowerObj);
             //Reset bools for next upgrade card selection
             triggerUpgradeCardDestruction = false;
             upgradeCardsArePresent = false;
-
-            GetSelectedUpgrade();
         }
     }
 
-    void GetSelectedUpgrade()
+    void SetSelectedUpgrade()
     {
-        Debug.Log("Old Tower position: " + upgradePosition);
-        DestroyTower();
-
         //Get the tower GameObject
         GameObject towerContainer = GameObject.Find("Towers");
-        //Debug.Log("Towers/Upgrades/" + upgradeTypeSelected + "/" + upgradeCardSelected + "Tower");
         GameObject tower = (GameObject)Instantiate(Resources.Load("Towers/Upgrades/" + upgradeTypeSelected + "/" + upgradeCardSelected + "Tower"), towerContainer.transform);
 
         //Place the tower
+        TowerGrid gridScript = gridObj.GetComponent<TowerGrid>();
         tower.transform.position = upgradePosition;
-        placedTower = tower;
-        hasTower = true;
+        gridScript.placedTower = tower;
+        gridScript.hasTower = true;
+
         //Get the attack radius GameObject attached to the tower
-        towerAttackRadius = placedTower.transform.GetChild(0).gameObject;
-        towerStats = placedTower.transform.GetChild(1).gameObject;
-        towerScript = placedTower.GetComponent<Tower>();
+        gridScript.towerAttackRadius = gridScript.placedTower.transform.GetChild(0).gameObject;
+        gridScript.towerStats = gridScript.placedTower.transform.GetChild(1).gameObject;
+        gridScript.towerScript = gridScript.placedTower.GetComponent<Tower>();
 
         //Subtract gold from the player
         PlayerHud.newGoldValue = PlayerHud.gold - upgradeGoldCost;
@@ -241,11 +250,10 @@ public class TowerGrid : MonoBehaviour
         Destroy(upgradeCard3Obj.gameObject);
     }
 
-    void DestroyTower()
+    void DestroyTower(GameObject towerObj)
     {
-        //Destroy the tower on right click (Sell the tower)
-        Destroy(placedTower);
-        hasTower = false;
+        //Destroy the tower
+        Destroy(towerObj);
 
         //Give gold to the player = to half of the original cost of the tower
         //PlayerHud.newGoldValue = PlayerHud.gold + goldCost;
