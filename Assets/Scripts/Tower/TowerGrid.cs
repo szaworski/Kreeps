@@ -27,9 +27,13 @@ public class TowerGrid : MonoBehaviour
     public static string upgradeTypeSelected;
     public static bool upgradeCardsArePresent;
     public static bool triggerUpgradeCardDestruction;
+    public static bool triggerTowerDemolish;
+    public static bool triggerTowerUpgrade;
     public static GameObject upgradeCard1Obj;
     public static GameObject upgradeCard2Obj;
     public static GameObject upgradeCard3Obj;
+    public static GameObject upgradeCard4Obj;
+    public static GameObject upgradeCard5Obj;
     public string card1;
     public string card2;
     public string card3;
@@ -183,8 +187,11 @@ public class TowerGrid : MonoBehaviour
 
     void SpawnTowerUpgradeCards()
     {
+        //Get the towers position
         upgradePosition = placedTower.transform.position;
+        //Get the current tower object
         oldTowerObj = placedTower;
+        //Get the grid position object containing the tower
         gridObj = this.gameObject;
         //Debug.Log("Old Tower position: " + upgradePosition);
         //Debug.Log("Upgrade grid object: " + gridObj);
@@ -197,25 +204,49 @@ public class TowerGrid : MonoBehaviour
         GameObject cardSlot1 = GameObject.Find("UpgradeSlot1");
         GameObject cardSlot2 = GameObject.Find("UpgradeSlot2");
         GameObject cardSlot3 = GameObject.Find("UpgradeSlot3");
+        GameObject cardSlot4 = GameObject.Find("CloseButton");
+        //GameObject cardSlot5 = GameObject.Find("DemolishButton");
 
         upgradeCard1Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/" + card1), cardSlot1.transform);
         upgradeCard2Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/" + card2), cardSlot2.transform);
         upgradeCard3Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/" + card3), cardSlot3.transform);
+        upgradeCard4Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/Close"), cardSlot4.transform);
+        //upgradeCard5Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/Demolish"), cardSlot5.transform);
 
         upgradeCard1Obj.transform.position = cardSlot1.transform.position;
         upgradeCard2Obj.transform.position = cardSlot2.transform.position;
         upgradeCard3Obj.transform.position = cardSlot3.transform.position;
+        upgradeCard4Obj.transform.position = cardSlot4.transform.position;
+        //upgradeCard5Obj.transform.position = cardSlot5.transform.position;
     }
 
     void UpgradeTower()
     {
         //Destory all card game objects after a selection is made. See Card.cs
-        if (triggerUpgradeCardDestruction)
+        if (triggerTowerUpgrade)
         {
             SetSelectedUpgrade();
             DestroyTowerUpgradeCards();
             DestroyTower(oldTowerObj);
             //Reset bools for next upgrade card selection
+            triggerTowerUpgrade = false;
+            upgradeCardsArePresent = false;
+        }
+
+        if (triggerTowerDemolish)
+        {
+            TowerGrid gridScript = gridObj.GetComponent<TowerGrid>();
+            gridScript.hasTower = false;
+
+            DestroyTowerUpgradeCards();
+            DestroyTower(oldTowerObj);
+            triggerTowerDemolish = false;
+            upgradeCardsArePresent = false;
+        }
+
+        if (triggerUpgradeCardDestruction)
+        {
+            DestroyTowerUpgradeCards();
             triggerUpgradeCardDestruction = false;
             upgradeCardsArePresent = false;
         }
@@ -248,6 +279,8 @@ public class TowerGrid : MonoBehaviour
         Destroy(upgradeCard1Obj.gameObject);
         Destroy(upgradeCard2Obj.gameObject);
         Destroy(upgradeCard3Obj.gameObject);
+        Destroy(upgradeCard4Obj.gameObject);
+        //Destroy(upgradeCard5Obj.gameObject);
     }
 
     void DestroyTower(GameObject towerObj)

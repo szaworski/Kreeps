@@ -41,14 +41,26 @@ public class Card : MonoBehaviour
 
     public void SetSelectedUpgradeCard()
     {
-        if(PlayerHud.gold >= upgradeCost)
+        if (PlayerHud.gold >= upgradeCost)
         {
             TowerGrid.upgradeCardSelected = cardName;
             TowerGrid.upgradeTypeSelected = upgradeType;
             TowerGrid.upgradeGoldCost = upgradeCost;
             IsHoveringOverUiCard = false;
-            TowerGrid.triggerUpgradeCardDestruction = true;
-            Debug.Log("Upgrade Card selected: " + cardName);
+            TowerGrid.triggerTowerUpgrade = true;
+            //Debug.Log("Upgrade Card selected: " + cardName);
         }
     }
+
+    public void DemolishTower()
+    {
+        TowerGrid.triggerTowerDemolish = true;
+    }
+
+    public void CloseUpgrades()
+    {
+        TowerGrid.triggerUpgradeCardDestruction = true;
+    }
+
+
 }
