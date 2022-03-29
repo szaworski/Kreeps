@@ -268,14 +268,14 @@ public class Monster : MonoBehaviour
     }
     public void EnterForrestTile()
     {
-        moveSpeed += 0.1f;
+        moveSpeed += 0.2f;
         checkForrestOverlap = true;
         //Debug.Log("Increased move speed");
     }
 
     public void ExitForrestTile()
     {
-        moveSpeed -= 0.1f;
+        moveSpeed -= 0.2f;
         checkForrestOverlap = false;
         //Debug.Log("Decreased move speed");
     }
