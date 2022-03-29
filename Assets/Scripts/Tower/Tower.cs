@@ -11,12 +11,10 @@ public class Tower : MonoBehaviour
     [HideInInspector] public GameObject currentTarget2;
     [SerializeField] private bool monsterIsInRadius;
     public float damage;
-    public int towerLvl;
     public float projectileSpeed;
     public float attackSpeed;
     public float attackRange;
     public string damageType;
-    public string towerName;
     public LineRenderer attackRadius;
 
     [Header("Tower Stats")]
@@ -111,13 +109,6 @@ public class Tower : MonoBehaviour
         }
     }
 
-    public void OnDrawGizmos()
-    {
-        // Draw a cirlce at the towers position
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, 0.6f);
-    }
-
     void DrawAttackRadius()
     {
         attackRadius.widthMultiplier = 0.01f;
@@ -132,5 +123,12 @@ public class Tower : MonoBehaviour
             attackRadius.SetPosition(i, transform.position + pos);
             theta += deltaTheta;
         }
+    }
+
+    public void OnDrawGizmos()
+    {
+        // Draw a cirlce at the towers position
+        //Gizmos.color = Color.yellow;
+        //Gizmos.DrawWireSphere(transform.position, 0.6f);
     }
 }

@@ -115,7 +115,7 @@ public class TowerGrid : MonoBehaviour
                     }
                 }
 
-                if (Input.GetKeyDown(KeyCode.Delete))
+                if (Input.GetKeyDown(KeyCode.Delete) && !upgradeCardsArePresent)
                 {
                     DestroyTower(placedTower);
                     hasTower = false;

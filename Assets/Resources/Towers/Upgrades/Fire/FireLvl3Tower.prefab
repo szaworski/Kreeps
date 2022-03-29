@@ -1080,7 +1080,7 @@ GameObject:
   - component: {fileID: 6876413721389775996}
   - component: {fileID: 2634648901071726794}
   m_Layer: 0
-  m_Name: NeutralLvl3Tower
+  m_Name: FireLvl3Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1142,7 +1142,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 176761735313787647, guid: 37c3048810b793341a21117c05421ea4, type: 3}
+  m_Sprite: {fileID: 7072138724925152277, guid: 37c3048810b793341a21117c05421ea4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1172,9 +1172,9 @@ MonoBehaviour:
   damage: 10
   projectileSpeed: 4
   attackSpeed: 1
-  attackRange: 1.2
-  damageType: Neutral
-  towerName: Neutral Lvl 3
+  attackRange: 1
+  damageType: Fire
+  towerName: FireLvl3
   attackRadius: {fileID: 9061148783392565081}
   dmgText: {fileID: 2092858697675982781}
   rofText: {fileID: 161989428891118025}
