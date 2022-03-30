@@ -30,6 +30,8 @@ public class MonsterManager : MonoBehaviour
         //Turned off for now to test tower placement
         if (Input.GetKeyDown(KeyCode.Return))
         {
+            PlayerHud.showStartWaveInstructions = false;
+
             //Need to call the GenerateMonsters method with a Coroutine to delay each iteration of the foreach loop
             StartCoroutine(GenerateMonsters(amtOfTime));
         }

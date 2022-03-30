@@ -406,6 +406,7 @@ public class TileSpawner : TileTypes
             Destroy(card2Obj.gameObject);
             //Reset this bool for next card selection later
             triggerMonsterCardDestruction = false;
+            PlayerHud.showStartWaveInstructions = true;
             Debug.Log("Monster Cards Destoryed");
         }
     }

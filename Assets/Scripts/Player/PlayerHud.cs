@@ -7,10 +7,14 @@ using UnityEngine.EventSystems;
 public class PlayerHud : MonoBehaviour
 {
     public static int gold;
+    public static int curWaveNum;
     public static int newGoldValue;
     public static int costOfCurrentSelection;
     public static bool IsHoveringOverHudElement;
+    public static bool showStartWaveInstructions;
     public TMP_Text goldAmtUiText;
+    public TMP_Text waveNumUiText;
+    public TMP_Text waveStartUiText;
 
     void Awake()
     {
@@ -18,6 +22,7 @@ public class PlayerHud : MonoBehaviour
         gold = 300;
         newGoldValue = gold;
         goldAmtUiText.SetText(gold.ToString());
+        showStartWaveInstructions = true;
 
         //"selectedTowerType" is set to neutral by deafult
         TowerGrid.towerTypeSelected = "Neutral";
@@ -29,11 +34,41 @@ public class PlayerHud : MonoBehaviour
         {
             ChangeGoldAmt();
         }
+
+        if (curWaveNum < MonsterManager.monsterCount)
+        {
+            ChangeWaveNum();
+        }
+
+        HideShowStartWaveInstructions();
     }
 
     public void ChangeGoldAmt()
     {
         gold = newGoldValue;
         goldAmtUiText.SetText(gold.ToString());
+    }
+
+    public void ChangeWaveNum()
+    {
+        //Update the wave number to be = to "monsterCount". (This count will match the wave number, so we can use this instead of a new variable)
+        curWaveNum = MonsterManager.monsterCount;
+        waveNumUiText.SetText(curWaveNum.ToString());
+    }
+
+    public void HideShowStartWaveInstructions()
+    {
+        //This gets set to true in "DestroyMonsterCards()" (See TileSpawner.cs)
+        if (showStartWaveInstructions && !waveStartUiText.enabled)
+        {
+            waveStartUiText.enabled = true;
+        }
+
+        //This gets set to false in "SpawnMonsters()" (See MonsterManager.cs)
+        else if (!showStartWaveInstructions && waveStartUiText.enabled)
+        {
+            //Hide the start wave text
+            waveStartUiText.enabled = false;
+        }
     }
 }
