@@ -32,7 +32,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1807176915317650427}
-  - {fileID: 6307402541684393306}
+  - {fileID: 3536286835640221123}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -149,7 +149,7 @@ MonoBehaviour:
   cardName: Wolf
   upgradeCost: 0
   upgradeType: 
---- !u!1 &7743717822176865930
+--- !u!1 &7402375620175900289
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -157,9 +157,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6307402541684393306}
-  - component: {fileID: 4821601031988306110}
-  - component: {fileID: 3198887691904401387}
+  - component: {fileID: 3536286835640221123}
+  - component: {fileID: 2601650847301874957}
+  - component: {fileID: 9074110598142351960}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -167,13 +167,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &6307402541684393306
+--- !u!224 &3536286835640221123
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7743717822176865930}
+  m_GameObject: {fileID: 7402375620175900289}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -186,21 +186,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &4821601031988306110
+--- !u!222 &2601650847301874957
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7743717822176865930}
+  m_GameObject: {fileID: 7402375620175900289}
   m_CullTransparentMesh: 0
---- !u!114 &3198887691904401387
+--- !u!114 &9074110598142351960
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7743717822176865930}
+  m_GameObject: {fileID: 7402375620175900289}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -215,7 +215,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Type: Beast \n\nBounty: 5 gold\n\nBase stats:\n\nHealth: 12\nSpeed: 0.5\nArmor:
-    0\n\n"
+    0"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -278,7 +278,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -5.008545, y: 43.55072, z: -3.4523926, w: -201.44711}
+  m_margin: {x: 10.801025, y: 43.55072, z: 6.7596436, w: -169.4672}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
