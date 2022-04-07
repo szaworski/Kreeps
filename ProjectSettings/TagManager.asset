@@ -8,6 +8,10 @@ TagManager:
   - TowerGrid
   - Projectile
   - ForrestTile
+  - GraveyardTile
+  - MountainTile
+  - RiverTile
+  - SwampTile
   layers:
   - Default
   - TransparentFX
