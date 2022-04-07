@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -3359154092495927981}
   m_Layer: 8
   m_Name: SwampTile1
-  m_TagString: Untagged
+  m_TagString: SwampTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

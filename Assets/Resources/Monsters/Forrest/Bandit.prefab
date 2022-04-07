@@ -618,11 +618,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f7facd0389ee7469e24536357977b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 25
+  health: 20
   armor: 0
   goldBounty: 5
-  type: Brute
-  moveSpeed: 0.2
+  type: Humanoid
+  moveSpeed: 0.4
   healthText: {fileID: 335420977380897697}
   maxHealthText: {fileID: 3912978387266503176}
   HealthContainer: {fileID: 8966530287512269574}
@@ -638,6 +638,7 @@ MonoBehaviour:
   checkMountainOverlap: 0
   checkRiverOverlap: 0
   checkSwampOverlap: 0
+  isTakingDamage: 0
   fireAnim: {fileID: 2974292822856610880}
   fireAnimCd: 0
   iceAnim: {fileID: 8545544126010953141}

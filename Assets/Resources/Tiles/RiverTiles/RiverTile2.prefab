@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -4231843760234572513}
   m_Layer: 8
   m_Name: RiverTile2
-  m_TagString: Untagged
+  m_TagString: RiverTile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

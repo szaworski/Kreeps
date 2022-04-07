@@ -346,19 +346,19 @@ public class TileSpawner : TileTypes
                 break;
 
             case "Graveyard":
-                // currentCardList = graveyardMonsterCards.ToList();
+                currentCardList = graveyardMonsterCards.ToList();
                 break;
 
             case "River":
-                // currentCardList = riverMonsterCards.ToList();
+                currentCardList = riverMonsterCards.ToList();
                 break;
 
             case "Mountain":
-                // currentCardList = mountainMonsterCards.ToList();
+                currentCardList = mountainMonsterCards.ToList();
                 break;
 
             case "Swamp":
-                // currentCardList = swampMonsterCards.ToList();
+                currentCardList = swampMonsterCards.ToList();
                 break;
         }
 
