@@ -724,7 +724,7 @@ MonoBehaviour:
   armor: 0
   goldBounty: 5
   type: Pest
-  moveSpeed: 0.45
+  moveSpeed: 0.6
   healthText: {fileID: 2240702306701519988}
   maxHealthText: {fileID: 7794477886941289041}
   HealthContainer: {fileID: 7549338442133584252}

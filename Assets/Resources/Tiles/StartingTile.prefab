@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3989471163935537527}
   m_Layer: 8
   m_Name: StartingTile
-  m_TagString: ForrestTile
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
