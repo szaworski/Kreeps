@@ -720,6 +720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f7facd0389ee7469e24536357977b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 0
   health: 18
   armor: 0
   goldBounty: 5
@@ -740,6 +741,10 @@ MonoBehaviour:
   checkMountainOverlap: 0
   checkRiverOverlap: 0
   checkSwampOverlap: 0
+  bonusHealth: 0
+  bonusSpeed: 0
+  bonusArmor: 0
+  bonusHpRegen: 0
   isTakingDamage: 0
   fireAnim: {fileID: 3707910557430313961}
   fireAnimCd: 0

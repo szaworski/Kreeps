@@ -48,6 +48,11 @@ public class TileSpawner : TileTypes
     public GameObject card2Obj;
     public GameObject card3Obj;
 
+    //Tile Type counter values
+    public static int numOfGraveyards;
+    public static int numOfRivers;
+    public static int numOfMountains;
+
     void Awake()
     {
         numOfTimesPlaced = 0;
@@ -427,16 +432,19 @@ public class TileSpawner : TileTypes
             case "Graveyard":
                 curTiles = graveyardTiles;
                 prependTileName = "Tiles/GraveyardTiles/";
+                numOfGraveyards += 1;
                 break;
 
             case "River":
                 curTiles = riverTiles;
                 prependTileName = "Tiles/RiverTiles/";
+                numOfRivers += 1;
                 break;
 
             case "Mountain":
                 curTiles = mountainTiles;
                 prependTileName = "Tiles/MountainTiles/";
+                numOfMountains += 1;
                 break;
 
             case "Swamp":

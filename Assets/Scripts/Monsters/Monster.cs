@@ -6,11 +6,14 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     [Header("Monster attributes")]
+    public float maxHealth;
     public float health;
-    public int armor;
+    public float armor;
     public int goldBounty;
     public string type;
     public float moveSpeed;
+    public float hpRegen;
+    public float hpRegenCd;
     public TMP_Text healthText;
     public TMP_Text maxHealthText;
     public GameObject HealthContainer;
@@ -50,6 +53,9 @@ public class Monster : MonoBehaviour
         waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
         currentWaypoint = TileSpawner.numOfTimesPlaced;
 
+        //Apply any bonus values to the monster
+        ApplySpawnBonuses();
+
         //Set the health values to be shown
         healthText.SetText(health.ToString());
         maxHealthText.SetText(health.ToString());
@@ -65,6 +71,7 @@ public class Monster : MonoBehaviour
         GetDistanceTraveled();
         FollowWaypoints();
         ResetEffectAnims();
+        ApplyHpRegen();
 
         if (isTakingDamage)
         {
@@ -148,12 +155,12 @@ public class Monster : MonoBehaviour
 
                     if (type == "Beast")
                     {
-                        incomingDamage = incomingDamage * 2;
+                        incomingDamage = (incomingDamage * 2) - armor;
                     }
 
                     else if (type == "Brute")
                     {
-                        incomingDamage = incomingDamage / 2;
+                        incomingDamage = (incomingDamage / 2) - armor;
                     }
                     break;
 
@@ -170,12 +177,12 @@ public class Monster : MonoBehaviour
 
                     if (type == "Humanoid ")
                     {
-                        incomingDamage = incomingDamage * 2;
+                        incomingDamage = (incomingDamage * 2) - armor;
                     }
 
                     else if (type == "Undead")
                     {
-                        incomingDamage = incomingDamage / 2;
+                        incomingDamage = (incomingDamage / 2) - armor;
                     }
                     break;
 
@@ -183,48 +190,48 @@ public class Monster : MonoBehaviour
 
                     if (type == "Brute")
                     {
-                        incomingDamage = incomingDamage * 2;
+                        incomingDamage = (incomingDamage * 2) - armor;
                     }
 
                     else if (type == "Beast")
                     {
-                        incomingDamage = incomingDamage / 2;
+                        incomingDamage = (incomingDamage / 2) - armor;
                     }
                     break;
 
                 case "Holy":
                     if (type == "Undead ")
                     {
-                        incomingDamage = incomingDamage * 2;
+                        incomingDamage = (incomingDamage * 2) - armor;
                     }
 
                     else if (type == "Humanoid")
                     {
-                        incomingDamage = incomingDamage / 2;
+                        incomingDamage = (incomingDamage / 2) - armor;
                     }
                     break;
 
                 case "Swift":
-                    if (type == "Vermin ")
+                    if (type == "Pest")
                     {
-                        incomingDamage = incomingDamage * 2;
+                        incomingDamage = (incomingDamage * 2) - armor;
                     }
 
-                    else if (type == "Trickster")
+                    else if (type == "Demon")
                     {
-                        incomingDamage = incomingDamage / 2;
+                        incomingDamage = (incomingDamage / 2) - armor;
                     }
                     break;
 
                 case "Cosmic":
-                    if (type == "Trickster ")
+                    if (type == "Demon")
                     {
-                        incomingDamage = incomingDamage * 2;
+                        incomingDamage = (incomingDamage * 2) - armor;
                     }
 
-                    else if (type == "Vermin")
+                    else if (type == "Pest")
                     {
-                        incomingDamage = incomingDamage / 2;
+                        incomingDamage = (incomingDamage / 2) - armor;
                     }
                     break;
             }
@@ -245,9 +252,12 @@ public class Monster : MonoBehaviour
 
             else
             {
-                isTakingDamage = true;
-                health -= incomingDamage;
-                healthText.SetText(health.ToString());
+                if (incomingDamage > 0)
+                {
+                    isTakingDamage = true;
+                    health -= incomingDamage;
+                    healthText.SetText(health.ToString());
+                }
                 //Destroy the projectile game object after damage is received
                 Destroy(other.gameObject);
             }
@@ -288,6 +298,37 @@ public class Monster : MonoBehaviour
         }
     }
 
+    void ApplyHpRegen()
+    {
+        if (Time.time > hpRegenCd && hpRegen > 0)
+        {
+            if (health + hpRegen < maxHealth)
+            {
+                hpRegenCd = 1f + Time.time;
+                health += hpRegen;
+                healthText.SetText(health.ToString());
+            }
+
+            else if (health + hpRegen > maxHealth)
+            {
+                hpRegenCd = 1f + Time.time;
+                health = maxHealth;
+                healthText.SetText(health.ToString());
+            }
+        }
+    }
+
+    void ApplySpawnBonuses()
+    {
+        //Apply any Tier 1 bonuses
+        health += 3 * TileSpawner.numOfRivers;
+        armor += 0.5f * TileSpawner.numOfMountains;
+        hpRegen += 1 * TileSpawner.numOfGraveyards;
+
+        //Set the maxHealth value
+        maxHealth = health;
+    }
+
     IEnumerator DestroyMonster(float delayTime)
     {
         yield return new WaitForSeconds(delayTime);
@@ -302,9 +343,12 @@ public class Monster : MonoBehaviour
 
         if (this.gameObject != null)
         {
-            isTakingDamage = true;
-            health -= incomingDamage;
-            healthText.SetText(health.ToString());
+            if (incomingDamage > 0)
+            {
+                isTakingDamage = true;
+                health -= incomingDamage;
+                healthText.SetText(health.ToString());
+            }
             //Destroy the projectile game object after damage is received
             Destroy(projectileObj.gameObject);
         }
