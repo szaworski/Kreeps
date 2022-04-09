@@ -26,9 +26,7 @@ public class MonsterManager : MonoBehaviour
 
     public void SpawnMonsters(float amtOfTime)
     {
-        //Using enter for testing. Eventually this function will be called after a button press or event
-        //Turned off for now to test tower placement
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return) && PlayerHud.showStartWaveInstructions && GameObject.Find("TileManager").transform.childCount == 0)
         {
             PlayerHud.showStartWaveInstructions = false;
 
@@ -44,8 +42,8 @@ public class MonsterManager : MonoBehaviour
             yield return new WaitForSeconds(amtOfTime);
 
             //Spawn the monster object
-            Debug.Log("Monster Path: " + prependMonsterName + monster);
-            GameObject monsterObj = (GameObject)Instantiate(Resources.Load(prependMonsterName + monster), GameObject.Find("TileManager").transform);
+            Debug.Log("Monster Path: " + monster);
+            GameObject monsterObj = (GameObject)Instantiate(Resources.Load(monster), GameObject.Find("TileManager").transform);
             monsterObj.transform.position = GameObject.Find("TileManager").transform.position;
         }
 
@@ -72,7 +70,7 @@ public class MonsterManager : MonoBehaviour
             }
 
             //Add the selected monster to the list
-            monsterList.Add(selectedMonster);
+            monsterList.Add(prependMonsterName + selectedMonster);
 
             monsterCount++;
             Debug.Log("Monster Count: " + monsterCount);

@@ -103,7 +103,7 @@ MonoBehaviour:
   monsterIsInRadius: 0
   damage: 10
   projectileSpeed: 1
-  attackSpeed: 2.5
+  attackSpeed: 3
   attackRange: 1.5
   damageType: Thunder
   attackRadius: {fileID: 2545281141715856633}

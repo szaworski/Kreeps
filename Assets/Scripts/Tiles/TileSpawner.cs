@@ -61,12 +61,6 @@ public class TileSpawner : TileTypes
         GetAndShowTileCards();
         DestroyMonsterCards();
         // SpawnNewTile(); is now called in GetAndShowTileCards() after a selection is made
-
-        //Visualizing raycasts
-        //Debug.DrawRay(transform.position, Vector3.right * 25, Color.green);
-        //Debug.DrawRay(transform.position, Vector3.left * 25, Color.yellow);
-        //Debug.DrawRay(transform.position, Vector3.up * 25, Color.red);
-        //Debug.DrawRay(transform.position, Vector3.down * 25, Color.blue);
     }
 
     public void PlaceStartingTile()
@@ -74,7 +68,6 @@ public class TileSpawner : TileTypes
         tileName = "StartingTile";
 
         //Fetch the starting tile
-        //GameObject referenceStartTile = (GameObject)Instantiate(Resources.Load("BasicTiles/Tile3"));
         GameObject referenceStartTile = (GameObject)Instantiate(Resources.Load("Tiles/StartingTile"));
         GameObject TileHolder = GameObject.Find("TileHolder");
 
@@ -390,8 +383,8 @@ public class TileSpawner : TileTypes
         GameObject cardSlot4 = GameObject.Find("TileCardSlot4");
         GameObject cardSlot5 = GameObject.Find("TileCardSlot5");
 
-        card1Obj = (GameObject)Instantiate(Resources.Load("UI/MonsterCards/" + card1), cardSlot4.transform);
-        card2Obj = (GameObject)Instantiate(Resources.Load("UI/MonsterCards/" + card2), cardSlot5.transform);
+        card1Obj = (GameObject)Instantiate(Resources.Load("UI/MonsterCards/" + tileCardSelected + "/" + card1), cardSlot4.transform);
+        card2Obj = (GameObject)Instantiate(Resources.Load("UI/MonsterCards/" + tileCardSelected + "/" + card2), cardSlot5.transform);
 
         card1Obj.transform.position = cardSlot4.transform.position;
         card2Obj.transform.position = cardSlot5.transform.position;
@@ -415,7 +408,7 @@ public class TileSpawner : TileTypes
     {
         var rand = new System.Random();
         int index = rand.Next(validTilesList.Count);
-        //Debug.Log("The randomly Chosen tile is: " + validTilesList[index]);
+        Debug.Log("The randomly Chosen tile is: " + validTilesList[index]);
         newTileName = validTilesList[index];
     }
 
