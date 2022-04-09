@@ -155,12 +155,12 @@ public class Monster : MonoBehaviour
 
                     if (type == "Beast")
                     {
-                        incomingDamage = (incomingDamage * 2) - armor;
+                        incomingDamage = (incomingDamage * 2);
                     }
 
                     else if (type == "Brute")
                     {
-                        incomingDamage = (incomingDamage / 2) - armor;
+                        incomingDamage = (incomingDamage / 2);
                     }
                     break;
 
@@ -177,12 +177,12 @@ public class Monster : MonoBehaviour
 
                     if (type == "Humanoid ")
                     {
-                        incomingDamage = (incomingDamage * 2) - armor;
+                        incomingDamage = (incomingDamage * 2);
                     }
 
                     else if (type == "Undead")
                     {
-                        incomingDamage = (incomingDamage / 2) - armor;
+                        incomingDamage = (incomingDamage / 2);
                     }
                     break;
 
@@ -190,51 +190,54 @@ public class Monster : MonoBehaviour
 
                     if (type == "Brute")
                     {
-                        incomingDamage = (incomingDamage * 2) - armor;
+                        incomingDamage = (incomingDamage * 2);
                     }
 
                     else if (type == "Beast")
                     {
-                        incomingDamage = (incomingDamage / 2) - armor;
+                        incomingDamage = (incomingDamage / 2);
                     }
                     break;
 
                 case "Holy":
                     if (type == "Undead ")
                     {
-                        incomingDamage = (incomingDamage * 2) - armor;
+                        incomingDamage = (incomingDamage * 2);
                     }
 
                     else if (type == "Humanoid")
                     {
-                        incomingDamage = (incomingDamage / 2) - armor;
+                        incomingDamage = (incomingDamage / 2);
                     }
                     break;
 
                 case "Swift":
                     if (type == "Pest")
                     {
-                        incomingDamage = (incomingDamage * 2) - armor;
+                        incomingDamage = (incomingDamage * 2);
                     }
 
                     else if (type == "Demon")
                     {
-                        incomingDamage = (incomingDamage / 2) - armor;
+                        incomingDamage = (incomingDamage / 2);
                     }
                     break;
 
                 case "Cosmic":
                     if (type == "Demon")
                     {
-                        incomingDamage = (incomingDamage * 2) - armor;
+                        incomingDamage = (incomingDamage * 2);
                     }
 
                     else if (type == "Pest")
                     {
-                        incomingDamage = (incomingDamage / 2) - armor;
+                        incomingDamage = (incomingDamage / 2);
                     }
                     break;
             }
+
+            //Adjust incomingDamage base on the armor value
+            incomingDamage -= armor;
 
             //Subtract the amount of damage taken from the health variable (Delay this for certain animations)
             if (damageType == "Thunder")
@@ -267,7 +270,7 @@ public class Monster : MonoBehaviour
         //Check if the monster enter a forrest tile and was not already in one
         if (other.gameObject.tag == "ForrestTile" && !checkForrestOverlap)
         {
-            moveSpeed += 0.2f;
+            moveSpeed += 0.25f;
             checkForrestOverlap = true;
             //Debug.Log("Increased move speed");
         }
@@ -275,8 +278,24 @@ public class Monster : MonoBehaviour
         //Check if the monster enters a different kind of map tile (This means the monster is exiting the current tile type. Also ignore "Projectile" objects)
         if (other.gameObject.tag != "ForrestTile" && !other.gameObject.tag.Contains("Projectile") && checkForrestOverlap)
         {
-            moveSpeed -= 0.2f;
+            moveSpeed -= 0.25f;
             checkForrestOverlap = false;
+            //Debug.Log("Decreased move speed");
+        }
+
+        //Check if the monster enter a graveyard tile and was not already in one
+        if (other.gameObject.tag == "SwampTile" && !checkSwampOverlap)
+        {
+            moveSpeed -= 0.15f;
+            checkSwampOverlap = true;
+            //Debug.Log("Increased move speed");
+        }
+
+        //Check if the monster enters a different kind of map tile (This means the monster is exiting the current tile type. Also ignore "Projectile" objects)
+        if (other.gameObject.tag != "SwampTile" && !other.gameObject.tag.Contains("Projectile") && checkSwampOverlap)
+        {
+            moveSpeed += 0.15f;
+            checkSwampOverlap = false;
             //Debug.Log("Decreased move speed");
         }
     }
@@ -323,7 +342,7 @@ public class Monster : MonoBehaviour
         //Apply any Tier 1 bonuses
         health += 3 * TileSpawner.numOfRivers;
         armor += 0.5f * TileSpawner.numOfMountains;
-        hpRegen += 1 * TileSpawner.numOfGraveyards;
+        hpRegen += 0.5f * TileSpawner.numOfGraveyards;
 
         //Set the maxHealth value
         maxHealth = health;
