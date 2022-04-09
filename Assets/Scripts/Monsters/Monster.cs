@@ -270,7 +270,7 @@ public class Monster : MonoBehaviour
         //Check if the monster enter a forrest tile and was not already in one
         if (other.gameObject.tag == "ForrestTile" && !checkForrestOverlap)
         {
-            moveSpeed += 0.25f;
+            moveSpeed += 0.2f;
             checkForrestOverlap = true;
             //Debug.Log("Increased move speed");
         }
@@ -278,7 +278,7 @@ public class Monster : MonoBehaviour
         //Check if the monster enters a different kind of map tile (This means the monster is exiting the current tile type. Also ignore "Projectile" objects)
         if (other.gameObject.tag != "ForrestTile" && !other.gameObject.tag.Contains("Projectile") && checkForrestOverlap)
         {
-            moveSpeed -= 0.25f;
+            moveSpeed -= 0.2f;
             checkForrestOverlap = false;
             //Debug.Log("Decreased move speed");
         }
