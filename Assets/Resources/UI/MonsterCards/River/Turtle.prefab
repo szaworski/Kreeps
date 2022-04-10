@@ -216,18 +216,19 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Type: Brute
 
-
     Bounty: 5 gold
 
 
     Base stats:
 
-    Health: 12
+    Health: 18
 
-    Speed:
+    Armor:
     0.5
 
-    Armor: 0'
+    Speed: 0.35
+
+    Hp regen: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

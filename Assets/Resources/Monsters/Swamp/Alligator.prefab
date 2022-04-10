@@ -721,11 +721,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 18
-  armor: 0
+  health: 26
+  armor: 0.5
   goldBounty: 5
   type: Brute
-  moveSpeed: 0.6
+  moveSpeed: 0.4
+  hpRegen: 0
+  hpRegenCd: 0
   healthText: {fileID: 2240702306701519988}
   maxHealthText: {fileID: 7794477886941289041}
   HealthContainer: {fileID: 7549338442133584252}
@@ -741,10 +743,6 @@ MonoBehaviour:
   checkMountainOverlap: 0
   checkRiverOverlap: 0
   checkSwampOverlap: 0
-  bonusHealth: 0
-  bonusSpeed: 0
-  bonusArmor: 0
-  bonusHpRegen: 0
   isTakingDamage: 0
   fireAnim: {fileID: 3707910557430313961}
   fireAnimCd: 0
