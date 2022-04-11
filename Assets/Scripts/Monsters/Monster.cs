@@ -259,8 +259,8 @@ public class Monster : MonoBehaviour
                 if (this.gameObject != null)
                 {
                     //Spawn in the animation object
-                    GameObject thunderAnimObj = (GameObject)Instantiate(Resources.Load("Animations/Holy"), gameObject.transform);
-                    thunderAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 0f, gameObject.transform.position.z);
+                    GameObject holyAnimObj = (GameObject)Instantiate(Resources.Load("Animations/Holy"), gameObject.transform);
+                    holyAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
 
                     //Subtract health after the animation plays
                     StartCoroutine(SubtractHealth(incomingDamage, other, 0));
@@ -280,24 +280,6 @@ public class Monster : MonoBehaviour
                 Destroy(other.gameObject);
             }
         }
-
-        /*
-        //Check if the monster enter a forrest tile and was not already in one
-        if (other.gameObject.tag == "ForrestTile" && !checkForrestOverlap)
-        {
-            moveSpeed += 0.2f;
-            checkForrestOverlap = true;
-            //Debug.Log("Increased move speed");
-        }
-
-        //Check if the monster enters a different kind of map tile (This means the monster is exiting the current tile type. Also ignore "Projectile" objects)
-        if (other.gameObject.tag != "ForrestTile" && !other.gameObject.tag.Contains("Projectile") && checkForrestOverlap)
-        {
-            moveSpeed -= 0.2f;
-            checkForrestOverlap = false;
-            //Debug.Log("Decreased move speed");
-        }
-        */
     }
 
     void ResetEffectAnims()
@@ -337,14 +319,6 @@ public class Monster : MonoBehaviour
         }
     }
 
-    void CheckForEvasionChance()
-    {
-        if (Time.time > hpRegenCd && hpRegen > 0)
-        {
-            
-        }
-    }
-
     void ApplySpawnBonuses()
     {
         //Apply any Tier 1 bonuses
@@ -378,6 +352,13 @@ public class Monster : MonoBehaviour
                 isTakingDamage = true;
                 health -= incomingDamage;
                 healthText.SetText(health.ToString());
+            }
+
+            else
+            {
+                //Play "Miss" animation
+                GameObject missAnimObj = (GameObject)Instantiate(Resources.Load("Animations/Miss"), gameObject.transform);
+                missAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
             }
             //Destroy the projectile game object after damage is received
             Destroy(projectileObj.gameObject);
