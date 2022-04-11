@@ -273,15 +273,18 @@ MonoBehaviour:
   currentTarget2: {fileID: 0}
   monsterIsInRadius: 0
   damage: 5
-  towerLvl: 1
-  projectileSpeed: 4
-  attackSpeed: 1
-  attackRange: 0.75
+  projectileSpeed: 1
+  attackSpeed: 1.5
+  attackRange: 1
   damageType: Holy
   attackRadius: {fileID: 3026728734037502744}
   dmgText: {fileID: 2976948771311045448}
   rofText: {fileID: 4882091462177116423}
   rngText: {fileID: 2391745448186867571}
+  hasUpgrades: 0
+  upgrade1: 
+  upgrade2: 
+  upgrade3: 
 --- !u!1 &1382226168074260001
 GameObject:
   m_ObjectHideFlags: 0

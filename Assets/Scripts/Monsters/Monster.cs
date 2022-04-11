@@ -253,6 +253,19 @@ public class Monster : MonoBehaviour
                 }
             }
 
+            else if (damageType == "Holy")
+            {
+                if (this.gameObject != null)
+                {
+                    //Spawn in the animation object
+                    GameObject thunderAnimObj = (GameObject)Instantiate(Resources.Load("Animations/Holy"), gameObject.transform);
+                    thunderAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y - 0f, gameObject.transform.position.z);
+
+                    //Subtract health after the animation plays
+                    StartCoroutine(SubtractHealth(incomingDamage, other, 0));
+                }
+            }
+
             else
             {
                 if (incomingDamage > 0)

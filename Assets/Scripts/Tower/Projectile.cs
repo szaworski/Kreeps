@@ -37,7 +37,7 @@ public class Projectile : MonoBehaviour
         {
             if (target != null)
             {
-                if (damageType == "Thunder")
+                if (damageType == "Thunder" || damageType == "Holy")
                 {
                     //Teleport the projectile on top of the target
                     transform.position = target.transform.position;
