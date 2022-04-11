@@ -269,15 +269,7 @@ public class Monster : MonoBehaviour
 
             else
             {
-                //Make sure damage is greater than 0, and evasion does not occur
-                if (incomingDamage > 0 && Random.value > evasionChance)
-                {
-                    isTakingDamage = true;
-                    health -= incomingDamage;
-                    healthText.SetText(health.ToString());
-                }
-                //Destroy the projectile game object after damage is received
-                Destroy(other.gameObject);
+                StartCoroutine(SubtractHealth(incomingDamage, other, 0));
             }
         }
     }
@@ -359,6 +351,7 @@ public class Monster : MonoBehaviour
                 //Play "Miss" animation
                 GameObject missAnimObj = (GameObject)Instantiate(Resources.Load("Animations/Miss"), gameObject.transform);
                 missAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+                missAnimObj.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
             //Destroy the projectile game object after damage is received
             Destroy(projectileObj.gameObject);
