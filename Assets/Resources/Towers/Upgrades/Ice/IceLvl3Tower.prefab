@@ -98,7 +98,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nBonus:\nNone\nPenalty: \nNone\nDmg:  \nRof: \nRng: \n\n\n\n\n"
+  m_text: "Single target\n\nBonus:\nx2 to Humanoids\nPenalty: \nx0.5 to Undead\nDmg: 
+    \nRof: \nRng: \n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -107,7 +108,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292730333
+    rgba: 4286085240
   m_fontColor: {r: 0.47058824, g: 0.47058824, b: 0.47058824, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -521,7 +522,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292730333
+    rgba: 4286085240
   m_fontColor: {r: 0.47058824, g: 0.47058824, b: 0.47058824, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -692,7 +693,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292730333
+    rgba: 4286085240
   m_fontColor: {r: 0.47058824, g: 0.47058824, b: 0.47058824, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -864,7 +865,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4286085240
   m_fontColor: {r: 0.47058824, g: 0.47058824, b: 0.47058824, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1033,7 +1034,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292730333
+    rgba: 4286085240
   m_fontColor: {r: 0.47058824, g: 0.47058824, b: 0.47058824, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -1171,7 +1172,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 8264128197636733733, guid: c3743848c5c893b409c35a1e5a1b9bda, type: 3}
+  m_Sprite: {fileID: 8645967633156209623, guid: c3743848c5c893b409c35a1e5a1b9bda, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -49,9 +49,11 @@ public class TileSpawner : TileTypes
     public GameObject card3Obj;
 
     //Tile Type counter values
+    public static int numOfForrests;
     public static int numOfGraveyards;
     public static int numOfRivers;
     public static int numOfMountains;
+    public static int numOfSwamps;
 
     void Awake()
     {
@@ -427,6 +429,7 @@ public class TileSpawner : TileTypes
             case "Forrest":
                 curTiles = forrestTiles;
                 prependTileName = "Tiles/ForrestTiles/";
+                numOfForrests += 1;
                 break;
 
             case "Graveyard":
@@ -450,6 +453,7 @@ public class TileSpawner : TileTypes
             case "Swamp":
                 curTiles = swampTiles;
                 prependTileName = "Tiles/SwampTiles/";
+                numOfSwamps += 1;
                 break;
         }
 

@@ -14,6 +14,7 @@ public class Monster : MonoBehaviour
     public float moveSpeed;
     public float hpRegen;
     public float hpRegenCd;
+    public float evasionChance;
     public TMP_Text healthText;
     public TMP_Text maxHealthText;
     public GameObject HealthContainer;
@@ -175,7 +176,7 @@ public class Monster : MonoBehaviour
                         moveSpeed -= iceSlowAmt;
                     }
 
-                    if (type == "Humanoid ")
+                    if (type == "Humanoid")
                     {
                         incomingDamage = (incomingDamage * 2);
                     }
@@ -200,7 +201,7 @@ public class Monster : MonoBehaviour
                     break;
 
                 case "Holy":
-                    if (type == "Undead ")
+                    if (type == "Undead")
                     {
                         incomingDamage = (incomingDamage * 2);
                     }
@@ -268,7 +269,8 @@ public class Monster : MonoBehaviour
 
             else
             {
-                if (incomingDamage > 0)
+                //Make sure damage is greater than 0, and evasion does not occur
+                if (incomingDamage > 0 && Random.value > evasionChance)
                 {
                     isTakingDamage = true;
                     health -= incomingDamage;
@@ -279,7 +281,7 @@ public class Monster : MonoBehaviour
             }
         }
 
-
+        /*
         //Check if the monster enter a forrest tile and was not already in one
         if (other.gameObject.tag == "ForrestTile" && !checkForrestOverlap)
         {
@@ -295,22 +297,7 @@ public class Monster : MonoBehaviour
             checkForrestOverlap = false;
             //Debug.Log("Decreased move speed");
         }
-
-        //Check if the monster enter a graveyard tile and was not already in one
-        if (other.gameObject.tag == "SwampTile" && !checkSwampOverlap)
-        {
-            moveSpeed -= 0.15f;
-            checkSwampOverlap = true;
-            //Debug.Log("Increased move speed");
-        }
-
-        //Check if the monster enters a different kind of map tile (This means the monster is exiting the current tile type. Also ignore "Projectile" objects)
-        if (other.gameObject.tag != "SwampTile" && !other.gameObject.tag.Contains("Projectile") && checkSwampOverlap)
-        {
-            moveSpeed += 0.15f;
-            checkSwampOverlap = false;
-            //Debug.Log("Decreased move speed");
-        }
+        */
     }
 
     void ResetEffectAnims()
@@ -341,7 +328,7 @@ public class Monster : MonoBehaviour
                 healthText.SetText(health.ToString());
             }
 
-            else if (health + hpRegen > maxHealth)
+            else if (health + hpRegen >= maxHealth)
             {
                 hpRegenCd = 1f + Time.time;
                 health = maxHealth;
@@ -350,12 +337,22 @@ public class Monster : MonoBehaviour
         }
     }
 
+    void CheckForEvasionChance()
+    {
+        if (Time.time > hpRegenCd && hpRegen > 0)
+        {
+            
+        }
+    }
+
     void ApplySpawnBonuses()
     {
         //Apply any Tier 1 bonuses
         health += 3 * TileSpawner.numOfRivers;
         armor += 0.5f * TileSpawner.numOfMountains;
+        moveSpeed += 0.1f * TileSpawner.numOfForrests;
         hpRegen += 0.5f * TileSpawner.numOfGraveyards;
+        evasionChance += 0.03f * TileSpawner.numOfSwamps;
 
         //Set the maxHealth value
         maxHealth = health;
@@ -375,7 +372,8 @@ public class Monster : MonoBehaviour
 
         if (this.gameObject != null)
         {
-            if (incomingDamage > 0)
+            //Make sure damage is greater than 0, and evasion does not occur
+            if (incomingDamage > 0 && Random.value > evasionChance)
             {
                 isTakingDamage = true;
                 health -= incomingDamage;
