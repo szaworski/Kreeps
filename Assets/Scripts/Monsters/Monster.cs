@@ -344,10 +344,10 @@ public class Monster : MonoBehaviour
                 isTakingDamage = true;
                 health -= incomingDamage;
                 healthText.SetText(health.ToString());
-                StartCoroutine(SpawnDamagePopup(incomingDamage, 0.6f));
+                StartCoroutine(SpawnDamagePopup(incomingDamage, 0.25f));
             }
 
-            else
+            else if (Random.value <= evasionChance)
             {
                 //Play "Miss" animation
                 GameObject missAnimObj = (GameObject)Instantiate(Resources.Load("Animations/Miss"), gameObject.transform);
@@ -359,17 +359,16 @@ public class Monster : MonoBehaviour
         }
     }
 
-    IEnumerator SpawnDamagePopup(float damageVal, float destroyDelayTime)
+    IEnumerator SpawnDamagePopup(float damageVal, float delayTime)
     {
         //Spawn the damage popup
         GameObject damagePopupObj = (GameObject)Instantiate(Resources.Load("Animations/DamagePopup"), gameObject.transform);
-        damagePopupObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.275f, gameObject.transform.position.z);
+        damagePopupObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.25f, gameObject.transform.position.z);
         damagePopupObj.transform.rotation = Quaternion.Euler(0, 0, 0);
         damagePopupObj.GetComponent<TextMeshPro>().text = damageVal.ToString();
-        //Move the object upwards
-        //damagePopupObj.transform.position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 2f, 0), Time.deltaTime * 50);
 
-        yield return new WaitForSeconds(destroyDelayTime);
+        //Destroy the damage popup after a short delay
+        yield return new WaitForSeconds(delayTime);
         Destroy(damagePopupObj.gameObject);
     }
 
