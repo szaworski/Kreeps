@@ -17,6 +17,7 @@ public class Monster : MonoBehaviour
     public float evasionChance;
     public TMP_Text healthText;
     public TMP_Text maxHealthText;
+    public TMP_Text armorText;
     public GameObject HealthContainer;
 
     [Header("Waypoint vars")]
@@ -60,6 +61,7 @@ public class Monster : MonoBehaviour
         //Set the health values to be shown
         healthText.SetText(health.ToString());
         maxHealthText.SetText(health.ToString());
+        armorText.SetText(armor.ToString());
 
         foreach (GameObject waypoint in waypoints)
         {
@@ -362,7 +364,7 @@ public class Monster : MonoBehaviour
     IEnumerator SpawnDamagePopup(float damageVal, float delayTime)
     {
         //Spawn the damage popup
-        GameObject damagePopupObj = (GameObject)Instantiate(Resources.Load("Animations/DamagePopup"), gameObject.transform);
+        GameObject damagePopupObj = (GameObject)Instantiate(Resources.Load("MonsterAttributes/DamagePopup"), gameObject.transform);
         damagePopupObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.25f, gameObject.transform.position.z);
         damagePopupObj.transform.rotation = Quaternion.Euler(0, 0, 0);
         damagePopupObj.GetComponent<TextMeshPro>().text = damageVal.ToString();
