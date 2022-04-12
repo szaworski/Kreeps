@@ -344,6 +344,7 @@ public class Monster : MonoBehaviour
                 isTakingDamage = true;
                 health -= incomingDamage;
                 healthText.SetText(health.ToString());
+                StartCoroutine(SpawnDamagePopup(incomingDamage, 0.6f));
             }
 
             else
@@ -356,6 +357,20 @@ public class Monster : MonoBehaviour
             //Destroy the projectile game object after damage is received
             Destroy(projectileObj.gameObject);
         }
+    }
+
+    IEnumerator SpawnDamagePopup(float damageVal, float destroyDelayTime)
+    {
+        //Spawn the damage popup
+        GameObject damagePopupObj = (GameObject)Instantiate(Resources.Load("Animations/DamagePopup"), gameObject.transform);
+        damagePopupObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.275f, gameObject.transform.position.z);
+        damagePopupObj.transform.rotation = Quaternion.Euler(0, 0, 0);
+        damagePopupObj.GetComponent<TextMeshPro>().text = damageVal.ToString();
+        //Move the object upwards
+        //damagePopupObj.transform.position = Vector3.MoveTowards(gameObject.transform.position, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 2f, 0), Time.deltaTime * 50);
+
+        yield return new WaitForSeconds(destroyDelayTime);
+        Destroy(damagePopupObj.gameObject);
     }
 
     IEnumerator ShakeHpContainer(float resetTimer)
