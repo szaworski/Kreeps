@@ -5,14 +5,14 @@ using UnityEngine.EventSystems;
 
 public class TowerCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public EventSystem eventSystem;
-    public GameObject lastSelected = null;
-    public string cardName;
-    public bool mouseHover;
-    public bool expanded;
-    public RectTransform cardPos;
-    public RectTransform pos1;
-    public RectTransform pos2;
+    [SerializeField] private EventSystem eventSystem;
+    [SerializeField] private GameObject lastSelected = null;
+    [SerializeField] private string cardName;
+    [SerializeField] private bool mouseHover;
+    [SerializeField] private bool expanded;
+    [SerializeField] private RectTransform cardPos;
+    [SerializeField] private RectTransform pos1;
+    [SerializeField] private RectTransform pos2;
 
     void Start ()
     {

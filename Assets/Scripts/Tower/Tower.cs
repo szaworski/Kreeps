@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour
 {
-    [Header("Tower attributes")]
-    [HideInInspector] public float attackCd;
     [HideInInspector] public GameObject currentTarget;
-    [HideInInspector] public GameObject currentTarget2;
-    [SerializeField] private bool monsterIsInRadius;
+    private bool monsterIsInRadius;
+    private float attackCd;
+
+    [Header("Tower attributes")]
     public float damage;
     public float projectileSpeed;
     public float attackSpeed;

@@ -6,9 +6,9 @@ using UnityEngine.EventSystems;
 public class Card : MonoBehaviour
 {
     public static bool IsHoveringOverUiCard;
-    public string cardName;
-    public int upgradeCost;
-    public string upgradeType;
+    [SerializeField] private string cardName;
+    [SerializeField] private int upgradeCost;
+    [SerializeField] private string upgradeType;
 
     void Update()
     {

@@ -4,17 +4,16 @@ using UnityEngine;
 
 public class TowerGrid : MonoBehaviour
 {
-    //For whatever reason after changing the collider from a BoxCollider2D to a normal box collider, now it behaves how I want it to.
-    public SpriteRenderer sprite;
-    public SpriteRenderer towerGhostSprite;
-    public Sprite[] ghostSpriteArray;
-    public GameObject placedTower;
-    public GameObject towerAttackRadius;
-    public GameObject towerStats;
-    public Tower towerScript;
+    [SerializeField] private SpriteRenderer sprite;
+    [SerializeField] private SpriteRenderer towerGhostSprite;
+    [SerializeField] private Sprite[] ghostSpriteArray;
+    [SerializeField] private GameObject placedTower;
+    [SerializeField] private GameObject towerAttackRadius;
+    [SerializeField] private GameObject towerStats;
+    [SerializeField] private Tower towerScript;
 
     [Header("Grid position vars")]
-    public bool hasTower;
+    private bool hasTower;
     public static int goldCost;
     public static int upgradeGoldCost;
     public static string towerTypeSelected;
@@ -34,9 +33,10 @@ public class TowerGrid : MonoBehaviour
     public static GameObject upgradeCard3Obj;
     public static GameObject upgradeCard4Obj;
     public static GameObject upgradeCard5Obj;
-    public string card1;
-    public string card2;
-    public string card3;
+
+    [SerializeField] private string card1;
+    [SerializeField] private string card2;
+    [SerializeField] private string card3;
 
     void Awake()
     {

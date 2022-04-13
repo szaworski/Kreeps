@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DamageEffectAnims : MonoBehaviour
 {
-    public float timeToDelay;
-    public bool isBeingDestroyed;
+    [SerializeField] private float timeToDelay;
+    [SerializeField] private bool isBeingDestroyed;
 
     void Start()
     {

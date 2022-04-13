@@ -12,9 +12,10 @@ public class PlayerHud : MonoBehaviour
     public static int costOfCurrentSelection;
     public static bool IsHoveringOverHudElement;
     public static bool showStartWaveInstructions;
-    public TMP_Text goldAmtUiText;
-    public TMP_Text waveNumUiText;
-    public TMP_Text waveStartUiText;
+
+    [SerializeField] private TMP_Text goldAmtUiText;
+    [SerializeField] private TMP_Text waveNumUiText;
+    [SerializeField] private TMP_Text waveStartUiText;
 
     void Awake()
     {

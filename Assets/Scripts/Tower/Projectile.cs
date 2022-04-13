@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    public CircleCollider2D AoeRadius;
     public float damageValue;
     public float projectileSpeed;
     public float attackRange;
     public string damageType;
     public GameObject target;
-    public CircleCollider2D AoeRadius;
 
     void Awake()
     {
