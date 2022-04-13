@@ -252,7 +252,7 @@ public class Monster : MonoBehaviour
                     thunderAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.1f, gameObject.transform.position.z);
 
                     //Subtract health after the animation plays
-                    StartCoroutine(SubtractHealth(incomingDamage, other, 0.45f));
+                    StartCoroutine(SubtractHealth(incomingDamage, other, damageType, 0.45f));
                 }
             }
 
@@ -265,13 +265,13 @@ public class Monster : MonoBehaviour
                     holyAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
 
                     //Subtract health after the animation plays
-                    StartCoroutine(SubtractHealth(incomingDamage, other, 0));
+                    StartCoroutine(SubtractHealth(incomingDamage, other, damageType, 0));
                 }
             }
 
             else
             {
-                StartCoroutine(SubtractHealth(incomingDamage, other, 0));
+                StartCoroutine(SubtractHealth(incomingDamage, other, damageType, 0));
             }
         }
     }
@@ -334,7 +334,7 @@ public class Monster : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    IEnumerator SubtractHealth(float incomingDamage, Collider2D projectileObj, float delayTime)
+    IEnumerator SubtractHealth(float incomingDamage, Collider2D projectileObj, string damageType, float delayTime)
     {
         yield return new WaitForSeconds(delayTime);
 
@@ -346,7 +346,7 @@ public class Monster : MonoBehaviour
                 isTakingDamage = true;
                 health -= incomingDamage;
                 healthText.SetText(health.ToString());
-                StartCoroutine(SpawnDamagePopup(incomingDamage, 0.25f));
+                StartCoroutine(SpawnDamagePopup(incomingDamage, damageType, 0.25f));
             }
 
             else if (Random.value <= evasionChance)
@@ -361,16 +361,16 @@ public class Monster : MonoBehaviour
         }
     }
 
-    IEnumerator SpawnDamagePopup(float damageVal, float delayTime)
+    IEnumerator SpawnDamagePopup(float damageVal, string damageType, float delayTime)
     {
         //Spawn the damage popup
-        GameObject damagePopupObj = (GameObject)Instantiate(Resources.Load("MonsterAttributes/DamagePopup"), gameObject.transform);
+        GameObject damagePopupObj = (GameObject)Instantiate(Resources.Load("MonsterAttributes/"+ damageType + "DamagePopup"), gameObject.transform);
         damagePopupObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.25f, gameObject.transform.position.z);
         damagePopupObj.transform.rotation = Quaternion.Euler(0, 0, 0);
         damagePopupObj.GetComponent<TextMeshPro>().text = damageVal.ToString();
 
-        //Destroy the damage popup after a short delay
-        yield return new WaitForSeconds(delayTime);
+       //Destroy the damage popup after a short delay
+       yield return new WaitForSeconds(delayTime);
         Destroy(damagePopupObj.gameObject);
     }
 
