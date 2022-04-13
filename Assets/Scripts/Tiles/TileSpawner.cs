@@ -6,30 +6,31 @@ using UnityEngine;
 
 public class TileSpawner : TileTypes
 {
-    public int shiftAmtXpos;
-    public int shiftAmtYpos;
-    public int shiftSpawnerXpos;
-    public int shiftSpawnerYpos;
-    public static int numOfTimesPlaced;
+    private int shiftAmtXpos;
+    private int shiftAmtYpos;
+    private int numOfUpRayHits;
+    private int numOfDownRayHits;
+    private int numOfLeftRayHits;
+    private int numOfRightRayHits;
 
-    public int numOfUpRayHits;
-    public int numOfDownRayHits;
-    public int numOfLeftRayHits;
-    public int numOfRightRayHits;
+    private bool checkTopOverlap;
+    private bool checkBottomOverlap;
+    private bool checkLeftOverlap;
+    private bool checkRightOverlap;
+    private bool checkOuterTopOverlap;
+    private bool checkOuterBottomOverlap;
+    private bool checkOuterLeftOverlap;
+    private bool checkOuterRightOverlap;
 
-    public bool checkTopOverlap;
-    public bool checkBottomOverlap;
-    public bool checkLeftOverlap;
-    public bool checkRightOverlap;
-    public bool checkOuterTopOverlap;
-    public bool checkOuterBottomOverlap;
-    public bool checkOuterLeftOverlap;
-    public bool checkOuterRightOverlap;
-    public bool checkCenterOverlap;
-    public bool checkTopRightOverlap;
-    public bool checkTopLeftOverlap;
-    public bool checkBottomLeftOverlap;
-    public bool checkBottomRightOverlap;
+    private string[] curTiles;
+    private bool[] validTiles;
+    List<string> validTilesList;
+
+    private GameObject card1Obj;
+    private GameObject card2Obj;
+    private GameObject card3Obj;
+
+    //Static vars used for tracking certain values
     public static bool triggerTileCardDestruction;
     public static bool triggerMonsterCardDestruction;
 
@@ -40,15 +41,7 @@ public class TileSpawner : TileTypes
     public static string tileCardSelected;
     public static string monsterCardSelected;
 
-    public string[] curTiles;
-    public bool[] validTiles;
-    List<string> validTilesList;
-
-    public GameObject card1Obj;
-    public GameObject card2Obj;
-    public GameObject card3Obj;
-
-    //Tile Type counter values
+    public static int numOfTimesPlaced;
     public static int numOfForrests;
     public static int numOfGraveyards;
     public static int numOfRivers;
@@ -58,16 +51,15 @@ public class TileSpawner : TileTypes
     void Awake()
     {
         numOfTimesPlaced = 0;
-        PlaceStartingTile();
         curTiles = new string[6];
         validTiles = new bool[6];
+        PlaceStartingTile();
     }
 
     void Update()
     {
         GetAndShowTileCards();
         DestroyMonsterCards();
-        // SpawnNewTile(); is now called in GetAndShowTileCards() after a selection is made
     }
 
     public void PlaceStartingTile()
@@ -505,7 +497,6 @@ public class TileSpawner : TileTypes
         validTiles[3] = false;
         validTiles[4] = false;
         validTiles[5] = false;
-
         //Debug.Log("Current tile name: " + tileName);
 
         if (tileName == "StartingTile")
@@ -925,27 +916,6 @@ public class TileSpawner : TileTypes
         Vector3 outerRight = transform.position + new Vector3(1.65f, 0, 0);
         checkOuterRightOverlap = Physics2D.OverlapBox(outerRight, new Vector3(0.25f, 0.9f, 0), 0f, LayerMask.GetMask("GroundTile"));
         //Debug.Log("checkRightOverlap = " + checkRightOverlap);
-
-
-        Vector3 center = transform.position + new Vector3(0, 0, 0);
-        checkCenterOverlap = Physics2D.OverlapBox(center, new Vector3(0.25f, 0.25f, 0), 0f, LayerMask.GetMask("GroundTile"));
-        //Debug.Log("checkTopRightOverlap = " + checkTopRightOverlap);
-
-        Vector3 topRight = transform.position + new Vector3(1.35f, 1.35f, 0);
-        checkTopRightOverlap = Physics2D.OverlapBox(topRight, new Vector3(0.25f, 0.25f, 0), 0f, LayerMask.GetMask("GroundTile"));
-        //Debug.Log("checkTopRightOverlap = " + checkTopRightOverlap);
-
-        Vector3 topLeft = transform.position + new Vector3(-1.35f, 1.35f, 0);
-        checkTopLeftOverlap = Physics2D.OverlapBox(topLeft, new Vector3(0.25f, 0.25f, 0), 0f, LayerMask.GetMask("GroundTile"));
-        //Debug.Log("checkTopLeftOverlap = " + checkTopLeftOverlap);
-
-        Vector3 bottomLeft = transform.position + new Vector3(-1.35f, -1.35f, 0);
-        checkBottomLeftOverlap = Physics2D.OverlapBox(bottomLeft, new Vector3(0.25f, 0.25f, 0), 0f, LayerMask.GetMask("GroundTile"));
-        //Debug.Log("checkBottomLeftOverlap = " + checkBottomLeftOverlap);
-
-        Vector3 bottomRight = transform.position + new Vector3(1.35f, -1.35f, 0);
-        checkBottomRightOverlap = Physics2D.OverlapBox(bottomRight, new Vector3(0.25f, 0.25f, 0), 0f, LayerMask.GetMask("GroundTile"));
-        //Debug.Log("checkBottomRightOverlap = " + checkBottomRightOverlap);
     }
 
     public void OnDrawGizmos()
@@ -983,27 +953,6 @@ public class TileSpawner : TileTypes
         Gizmos.color = Color.green;
         Vector3 outerRight = transform.position + new Vector3(1.65f, 0, 0);
         Gizmos.DrawWireCube(outerRight, new Vector3(0.25f, 0.9f, 0));
-
-
-        Gizmos.color = Color.white;
-        Vector3 center = transform.position + new Vector3(0, 0, 0);
-        Gizmos.DrawWireCube(center, new Vector3(0.25f, 0.25f, 0));
-
-        Gizmos.color = Color.white;
-        Vector3 topRight = transform.position + new Vector3(0.65f, 0.65f, 0);
-        Gizmos.DrawWireCube(topRight, new Vector3(0.25f, 0.25f, 0));
-
-        Gizmos.color = Color.white;
-        Vector3 topLeft = transform.position + new Vector3(-0.65f, 0.65f, 0);
-        Gizmos.DrawWireCube(topLeft, new Vector3(0.25f, 0.25f, 0));
-
-        Gizmos.color = Color.white;
-        Vector3 bottomLeft = transform.position + new Vector3(-0.65f, -0.65f, 0);
-        Gizmos.DrawWireCube(bottomLeft, new Vector3(0.25f, 0.25f, 0));
-
-        Gizmos.color = Color.white;
-        Vector3 bottomRight = transform.position + new Vector3(0.65f, -0.65f, 0);
-        Gizmos.DrawWireCube(bottomRight, new Vector3(0.25f, 0.25f, 0));
         */
     }
 }
