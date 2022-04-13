@@ -10,5 +10,4 @@ public class TileTypes : CardsLists
     [System.NonSerialized] public string[] riverTiles = new string[] { "RiverTile1", "RiverTile2", "RiverTile3", "RiverTile4", "RiverTile5", "RiverTile6" };
     [System.NonSerialized] public string[] mountainTiles = new string[] { "MountainTile1", "MountainTile2", "MountainTile3", "MountainTile4", "MountainTile5", "MountainTile6" };
     [System.NonSerialized] public string[] swampTiles = new string[] { "SwampTile1", "SwampTile2", "SwampTile3", "SwampTile4", "SwampTile5", "SwampTile6" };
-
 }

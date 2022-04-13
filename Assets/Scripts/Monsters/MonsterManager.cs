@@ -6,8 +6,7 @@ using UnityEngine;
 
 public class MonsterManager : MonoBehaviour
 {
-    public static string selectedMonster;
-    public static string prependMonsterName;
+    private string prependMonsterName;
     public static int monsterCount;
     public static bool AllMonstersAreSpawned;
     List<string> monsterList;
@@ -21,7 +20,7 @@ public class MonsterManager : MonoBehaviour
     void Update()
     {
         AddToMonsterList();
-        SpawnMonsters(0.8f);
+        SpawnMonsters(0.7f);
     }
 
     public void SpawnMonsters(float amtOfTime)
@@ -29,7 +28,6 @@ public class MonsterManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return) && PlayerHud.showStartWaveInstructions && GameObject.Find("TileManager").transform.childCount == 0)
         {
             PlayerHud.showStartWaveInstructions = false;
-
             //Need to call the GenerateMonsters method with a Coroutine to delay each iteration of the foreach loop
             StartCoroutine(GenerateMonsters(amtOfTime));
         }
@@ -61,16 +59,11 @@ public class MonsterManager : MonoBehaviour
 
             if (TileSpawner.numOfTimesPlaced <= 1)
             {
-                selectedMonster = "Wolf";
-            }
-
-            else
-            {
-                selectedMonster = TileSpawner.monsterCardSelected;
+                TileSpawner.monsterCardSelected = "Wolf";
             }
 
             //Add the selected monster to the list
-            monsterList.Add(prependMonsterName + selectedMonster);
+            monsterList.Add(prependMonsterName + TileSpawner.monsterCardSelected);
 
             monsterCount++;
             Debug.Log("Monster Count: " + monsterCount);

@@ -6,47 +6,39 @@ using UnityEngine;
 public class Monster : MonoBehaviour
 {
     [Header("Monster attributes")]
-    public float maxHealth;
-    public float health;
-    public float armor;
-    public int goldBounty;
-    public string type;
-    public float moveSpeed;
-    public float hpRegen;
-    public float hpRegenCd;
-    public float evasionChance;
-    public TMP_Text healthText;
-    public TMP_Text maxHealthText;
-    public TMP_Text armorText;
-    public GameObject HealthContainer;
-
-    [Header("Waypoint vars")]
-    public bool isFacingLeft;
-    public int waypointNum;
-    public int currentWaypoint;
-    public GameObject[] waypoints;
-    public GameObject currWaypoint;
+    [SerializeField] private float maxHealth;
+    [SerializeField] private float health;
+    [SerializeField] private float armor;
+    [SerializeField] private int goldBounty;
+    [SerializeField] private string type;
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private float hpRegen;
+    [SerializeField] private float evasionChance;
+    [SerializeField] private TMP_Text healthText;
+    [SerializeField] private TMP_Text maxHealthText;
+    [SerializeField] private TMP_Text armorText;
+    [SerializeField] private GameObject HealthContainer;
+    private float hpRegenCd;
 
     [Header("Vars used for targeting")]
-    public Vector3 lastPos;
+    private Vector3 lastPos;
     public float distanceTraveled;
 
-    [Header("Vars used for tile specific attributes")]
-    public bool checkForrestOverlap;
-    public bool checkGraveyardOverlap;
-    public bool checkMountainOverlap;
-    public bool checkRiverOverlap;
-    public bool checkSwampOverlap;
-
     [Header("Damage Effect vars")]
-    public bool isTakingDamage;
-    public GameObject fireAnim;
-    public float fireAnimCd;
+    [SerializeField] private bool isTakingDamage;
+    [SerializeField] private GameObject fireAnim;
+    [SerializeField] private float fireAnimCd;
 
-    public GameObject iceAnim;
-    public float iceAnimCd;
-    public bool iceSlowStatus;
-    public float iceSlowAmt;
+    [SerializeField] private GameObject iceAnim;
+    [SerializeField] private float iceAnimCd;
+    [SerializeField] private bool iceSlowStatus;
+    [SerializeField] private float iceSlowAmt;
+
+    //Waypoint vars
+    private bool isFacingLeft;
+    private int waypointNum;
+    private int currentWaypoint;
+    private GameObject[] waypoints;
 
     void Awake()
     {
@@ -54,10 +46,8 @@ public class Monster : MonoBehaviour
         isFacingLeft = true;
         waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
         currentWaypoint = TileSpawner.numOfTimesPlaced;
-
         //Apply any bonus values to the monster
         ApplySpawnBonuses();
-
         //Set the health values to be shown
         healthText.SetText(health.ToString());
         maxHealthText.SetText(health.ToString());
@@ -85,7 +75,6 @@ public class Monster : MonoBehaviour
         {
             StartCoroutine(DestroyMonster(0.1f));
         }
-
         //Debug.Log("Total distance traveled: " + distanceTraveled);
     }
 
@@ -250,7 +239,6 @@ public class Monster : MonoBehaviour
                     //Spawn in the animation object
                     GameObject thunderAnimObj = (GameObject)Instantiate(Resources.Load("Animations/Thunder"), gameObject.transform);
                     thunderAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.1f, gameObject.transform.position.z);
-
                     //Subtract health after the animation plays
                     StartCoroutine(SubtractHealth(incomingDamage, other, damageType, 0.45f));
                 }
@@ -263,7 +251,6 @@ public class Monster : MonoBehaviour
                     //Spawn in the animation object
                     GameObject holyAnimObj = (GameObject)Instantiate(Resources.Load("Animations/Holy"), gameObject.transform);
                     holyAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
-
                     //Subtract health after the animation plays
                     StartCoroutine(SubtractHealth(incomingDamage, other, damageType, 0));
                 }
