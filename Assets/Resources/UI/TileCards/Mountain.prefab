@@ -350,7 +350,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Monsters gain +0.5 armor for each Mountain tile placed
+  m_text: 'Monsters gain +1 armor for each Mountain tile placed
 
 
     Armor reduces

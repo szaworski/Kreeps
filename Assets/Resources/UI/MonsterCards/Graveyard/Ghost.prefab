@@ -216,17 +216,17 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Type: Undead
 
-    Bounty: 5 gold
+    Bounty: 10 gold
 
 
     Base stats:
 
-    Health: 18
+    Health: 36
 
     Armor:
     0
 
-    Speed: 0.4
+    Speed: 40
 
     Hp regen: 0'
   m_isRightToLeft: 0

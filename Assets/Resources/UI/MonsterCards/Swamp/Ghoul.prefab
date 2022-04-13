@@ -216,19 +216,19 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Type: Undead
 
-    Bounty: 5 gold
+    Bounty: 10 gold
 
 
     Base stats:
 
-    Health: 18
+    Health: 36
 
     Armor:
     0
 
-    Speed: 0.55
+    Speed: 55
 
-    Hp regen: 1'
+    Hp regen: 2'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

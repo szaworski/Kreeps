@@ -216,17 +216,17 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Type: Pest
 
-    Bounty: 5 gold
+    Bounty: 10 gold
 
 
     Base stats:
 
-    Health: 16
+    Health: 32
 
     Armor:
     0
 
-    Speed: 0.75
+    Speed: 75
 
     Hp regen: 0'
   m_isRightToLeft: 0

@@ -978,9 +978,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 18
+  health: 36
   armor: 0
-  goldBounty: 5
+  goldBounty: 10
   type: Undead
   moveSpeed: 0.4
   hpRegen: 0

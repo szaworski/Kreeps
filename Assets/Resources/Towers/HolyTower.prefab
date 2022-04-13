@@ -272,10 +272,10 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   currentTarget2: {fileID: 0}
   monsterIsInRadius: 0
-  damage: 5
+  damage: 10
   projectileSpeed: 1
-  attackSpeed: 1.5
-  attackRange: 1
+  attackSpeed: 1.2
+  attackRange: 1.2
   damageType: Holy
   attackRadius: {fileID: 3026728734037502744}
   dmgText: {fileID: 2976948771311045448}

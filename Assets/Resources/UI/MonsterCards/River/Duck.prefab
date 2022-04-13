@@ -214,8 +214,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Type: Beast \nBounty: 5 gold\n\nBase stats:\nHealth: 22\nArmor: 0\nSpeed:
-    0.55\nHp regen: 0"
+  m_text: "Type: Beast \nBounty: 10 gold\n\nBase stats:\nHealth: 44\nArmor: 0\nSpeed:
+    55\nHp regen: 0"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

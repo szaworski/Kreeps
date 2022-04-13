@@ -350,8 +350,23 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Type: Brute\nBounty: 5 gold\n\nBase stats:\nHealth: 22\nArmor: 0\nSpeed:
-    0.3 \nHp regen: 0\n"
+  m_text: 'Type: Brute
+
+    Bounty: 10 gold
+
+
+    Base stats:
+
+    Health: 44
+
+    Armor:
+    0
+
+    Speed: 30
+
+    Hp regen: 0
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

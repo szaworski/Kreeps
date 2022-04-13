@@ -557,7 +557,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nBonus:\nNone\nPenalty: \nNone\nCost: 100g\nDmg: 4 \nRof:
+  m_text: "Single target\n\nBonus:\nNone\nPenalty: \nNone\nCost: 100g\nDmg: 8 \nRof:
     1.5\nRng: 1"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -2086,8 +2086,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nBonus:\nx2 to \nPenalty: \nx0.5 to \nCost: 250g\nDmg:
-    \nRof: \nRng: \n"
+  m_text: "Single target\n\nBonus:\nx2 to Undead\nPenalty: \nx0.5 to Humanoids\nCost:
+    200g\nDmg: 10\nRof: 1.2\nRng: 1.2\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -2506,7 +2506,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "AOE in radius\n\nBonus:\nx2 to Beasts\nPenalty: \nx0.5 to Brutes\nCost:
-    200g\nDmg: 1 \nRof: 0.6\nRng: 0.8"
+    150g\nDmg: 3 \nRof: 0.5\nRng: 0.8"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -3163,8 +3163,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "AOE in radius+Slow\n\nBonus:\nx2 to Humanoids\nPenalty: \nx0.5 to Undead\nCost:
-    200g\nDmg: 1 \nRof: 0.6\nRng: 0.6\n"
+  m_text: "AOE in radius +Slow\n\nBonus:\nx2 to Humanoids\nPenalty: \nx0.5 to Undead\nCost:
+    150g\nDmg: 3 \nRof: 0.5\nRng: 0.6\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -3673,7 +3673,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Single target\n\nBonus:\nx2 to Brutes\nPenalty: \nx0.5 to Beasts\nCost:
-    250g\nDmg: 10 \nRof: 3\nRng: 1.5"
+    200g\nDmg: 15\nRof: 2.5\nRng: 1.5"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

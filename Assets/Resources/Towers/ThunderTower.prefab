@@ -101,10 +101,10 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   currentTarget2: {fileID: 0}
   monsterIsInRadius: 0
-  damage: 8
+  damage: 15
   projectileSpeed: 1
-  attackSpeed: 3
-  attackRange: 1.2
+  attackSpeed: 2.5
+  attackRange: 1.5
   damageType: Thunder
   attackRadius: {fileID: 2545281141715856633}
   dmgText: {fileID: 8426411017673696809}

@@ -721,9 +721,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 16
+  health: 32
   armor: 0
-  goldBounty: 5
+  goldBounty: 10
   type: Pest
   moveSpeed: 0.75
   hpRegen: 0

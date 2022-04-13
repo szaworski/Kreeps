@@ -188,9 +188,9 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   currentTarget2: {fileID: 0}
   monsterIsInRadius: 0
-  damage: 1
+  damage: 3
   projectileSpeed: 0
-  attackSpeed: 0.6
+  attackSpeed: 0.5
   attackRange: 0.8
   damageType: Fire
   attackRadius: {fileID: 5600399217375393932}
