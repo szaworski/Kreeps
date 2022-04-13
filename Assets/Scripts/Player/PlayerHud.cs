@@ -19,7 +19,7 @@ public class PlayerHud : MonoBehaviour
     void Awake()
     {
         //When changing the gold value, add or subtract from the "gold" variable, and then set "goldAmtUiText" to the new value
-        gold = 350;
+        gold = 300;
         newGoldValue = gold;
         goldAmtUiText.SetText(gold.ToString());
         showStartWaveInstructions = true;

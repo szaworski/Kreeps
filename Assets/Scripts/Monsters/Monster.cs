@@ -340,8 +340,13 @@ public class Monster : MonoBehaviour
 
         if (this.gameObject != null)
         {
+            if (incomingDamage <= 0)
+            {
+                StartCoroutine(SpawnDamagePopup(incomingDamage, damageType, 0.25f));
+            }
+
             //Make sure damage is greater than 0, and evasion does not occur
-            if (incomingDamage > 0 && Random.value > evasionChance)
+            else if (incomingDamage > 0 && Random.value > evasionChance)
             {
                 isTakingDamage = true;
                 health -= incomingDamage;
@@ -364,13 +369,22 @@ public class Monster : MonoBehaviour
     IEnumerator SpawnDamagePopup(float damageVal, string damageType, float delayTime)
     {
         //Spawn the damage popup
-        GameObject damagePopupObj = (GameObject)Instantiate(Resources.Load("MonsterAttributes/"+ damageType + "DamagePopup"), gameObject.transform);
+        GameObject damagePopupObj = (GameObject)Instantiate(Resources.Load("MonsterAttributes/" + damageType + "DamagePopup"), gameObject.transform);
         damagePopupObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.25f, gameObject.transform.position.z);
         damagePopupObj.transform.rotation = Quaternion.Euler(0, 0, 0);
-        damagePopupObj.GetComponent<TextMeshPro>().text = damageVal.ToString();
 
-       //Destroy the damage popup after a short delay
-       yield return new WaitForSeconds(delayTime);
+        if (damageVal <= 0)
+        {
+            damagePopupObj.GetComponent<TextMeshPro>().text = "0";
+        }
+
+        else
+        {
+            damagePopupObj.GetComponent<TextMeshPro>().text = damageVal.ToString();
+        }
+
+        //Destroy the damage popup after a short delay
+        yield return new WaitForSeconds(delayTime);
         Destroy(damagePopupObj.gameObject);
     }
 
