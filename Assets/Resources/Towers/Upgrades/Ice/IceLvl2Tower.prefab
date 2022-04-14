@@ -267,14 +267,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cd6594ffd7308a498d2153431f4e713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCd: 0
   currentTarget: {fileID: 0}
-  currentTarget2: {fileID: 0}
-  monsterIsInRadius: 0
-  damage: 2
+  damage: 5
   projectileSpeed: 0
   attackSpeed: 0.4
-  attackRange: 0.8
+  attackRange: 0.6
   damageType: Ice
   attackRadius: {fileID: 247469621238869209}
   dmgText: {fileID: 348484556340875821}

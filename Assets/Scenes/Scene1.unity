@@ -557,7 +557,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nBonus:\nNone\nPenalty: \nNone\nCost: 100g\nDmg: 8 \nRof:
+  m_text: "Single target\n\nBonus:\nNone\nPenalty: \nNone\nCost: 75g\nDmg: 8 \nRof:
     1.5\nRng: 1"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -1252,8 +1252,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nBonus:\nx2 to \nPenalty: \nx0.5 to \nCost: 300g\nDmg:
-    \nRof: \nRng: "
+  m_text: "Single target\n\nBonus:\nx2 to Pests\nPenalty: \nx0.5 to Demons\nCost:
+    300g\nDmg: \nRof: \nRng: "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -2087,7 +2087,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Single target\n\nBonus:\nx2 to Undead\nPenalty: \nx0.5 to Humanoids\nCost:
-    200g\nDmg: 10\nRof: 1.2\nRng: 1.2\n"
+    175g\nDmg: 10\nRof: 1.2\nRng: 1.2\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -2506,7 +2506,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "AOE in radius\n\nBonus:\nx2 to Beasts\nPenalty: \nx0.5 to Brutes\nCost:
-    150g\nDmg: 3 \nRof: 0.5\nRng: 0.8"
+    125g\nDmg: 3 \nRof: 0.5\nRng: 0.8"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -3164,7 +3164,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "AOE in radius +Slow\n\nBonus:\nx2 to Humanoids\nPenalty: \nx0.5 to Undead\nCost:
-    150g\nDmg: 3 \nRof: 0.5\nRng: 0.6\n"
+    125g\nDmg: 3 \nRof: 0.5\nRng: 0.6\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -3502,8 +3502,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nBonus:\nx2 to \nPenalty: \nx0.5 to \nCost: 300g\nDmg:
-    \nRof: \nRng: "
+  m_text: "AOE in radius\n\nBonus:\nx2 to Demons\nPenalty: \nx0.5 to Pests\nCost:
+    400g\nDmg: \nRof: \nRng: "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -3673,7 +3673,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Single target\n\nBonus:\nx2 to Brutes\nPenalty: \nx0.5 to Beasts\nCost:
-    200g\nDmg: 15\nRof: 2.5\nRng: 1.5"
+    175g\nDmg: 18\nRof: 2.5\nRng: 1.5"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -4984,38 +4984,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a84d8c94eb8540740b55665c1db39b2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shiftAmtXpos: 0
-  shiftAmtYpos: 0
-  shiftSpawnerXpos: 0
-  shiftSpawnerYpos: 0
-  numOfUpRayHits: 0
-  numOfDownRayHits: 0
-  numOfLeftRayHits: 0
-  numOfRightRayHits: 0
-  checkTopOverlap: 0
-  checkBottomOverlap: 1
-  checkLeftOverlap: 0
-  checkRightOverlap: 0
-  checkOuterTopOverlap: 0
-  checkOuterBottomOverlap: 0
-  checkOuterLeftOverlap: 0
-  checkOuterRightOverlap: 0
-  checkCenterOverlap: 1
-  checkTopRightOverlap: 0
-  checkTopLeftOverlap: 0
-  checkBottomLeftOverlap: 0
-  checkBottomRightOverlap: 0
-  curTiles:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  validTiles: 
-  card1Obj: {fileID: 0}
-  card2Obj: {fileID: 0}
-  card3Obj: {fileID: 0}
 --- !u!212 &1721774165
 SpriteRenderer:
   m_ObjectHideFlags: 0
