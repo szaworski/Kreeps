@@ -117,7 +117,8 @@ public class Monster : MonoBehaviour
             //Destroy the game object once the monster reaches the main base
             Destroy(this.gameObject);
 
-            // Todo: Subtract a point of health from the main base
+            //Subtract a point of health from the main base
+            SubtractPlayerHealth();
         }
     }
 
@@ -311,6 +312,11 @@ public class Monster : MonoBehaviour
 
         //Set the maxHealth value
         maxHealth = health;
+    }
+
+    void SubtractPlayerHealth()
+    {
+        TileSpawner.playerHealth -= 1;
     }
 
     IEnumerator DestroyMonster(float delayTime)

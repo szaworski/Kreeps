@@ -33,6 +33,7 @@ public class TileSpawner : TileTypes
     //Static vars used for tracking certain values
     public static bool triggerTileCardDestruction;
     public static bool triggerMonsterCardDestruction;
+    public static bool gameOver;
 
     public static string prependTileName;
     public static string tileName;
@@ -41,6 +42,7 @@ public class TileSpawner : TileTypes
     public static string tileCardSelected;
     public static string monsterCardSelected;
 
+    public static int playerHealth;
     public static int numOfTimesPlaced;
     public static int numOfForrests;
     public static int numOfGraveyards;
@@ -50,6 +52,7 @@ public class TileSpawner : TileTypes
 
     void Awake()
     {
+        playerHealth = 10;
         numOfTimesPlaced = 0;
         curTiles = new string[6];
         validTiles = new bool[6];
@@ -414,37 +417,33 @@ public class TileSpawner : TileTypes
     public void GetListOfValidTiles()
     {
         validTilesList = new List<string>();
+        prependTileName = "Tiles/" + tileCardSelected + "Tiles/";
 
         //Check for which tile card was selected and set the "curTiles" array accordingly 
         switch (tileCardSelected)
         {
             case "Forrest":
                 curTiles = forrestTiles;
-                prependTileName = "Tiles/ForrestTiles/";
                 numOfForrests += 1;
                 break;
 
             case "Graveyard":
                 curTiles = graveyardTiles;
-                prependTileName = "Tiles/GraveyardTiles/";
                 numOfGraveyards += 1;
                 break;
 
             case "River":
                 curTiles = riverTiles;
-                prependTileName = "Tiles/RiverTiles/";
                 numOfRivers += 1;
                 break;
 
             case "Mountain":
                 curTiles = mountainTiles;
-                prependTileName = "Tiles/MountainTiles/";
                 numOfMountains += 1;
                 break;
 
             case "Swamp":
                 curTiles = swampTiles;
-                prependTileName = "Tiles/SwampTiles/";
                 numOfSwamps += 1;
                 break;
         }

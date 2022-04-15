@@ -979,29 +979,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 0
   health: 34
-  armor: 0.5
+  armor: 1
   goldBounty: 10
   type: Brute
   moveSpeed: 0.35
   hpRegen: 0
-  hpRegenCd: 0
   evasionChance: 0
   healthText: {fileID: 2240702306701519988}
   maxHealthText: {fileID: 7794477886941289041}
   armorText: {fileID: 1436332679641147673}
   HealthContainer: {fileID: 7549338442133584252}
-  isFacingLeft: 0
-  waypointNum: 0
-  currentWaypoint: 0
-  waypoints: []
-  currWaypoint: {fileID: 0}
-  lastPos: {x: 0, y: 0, z: 0}
   distanceTraveled: 0
-  checkForrestOverlap: 0
-  checkGraveyardOverlap: 0
-  checkMountainOverlap: 0
-  checkRiverOverlap: 0
-  checkSwampOverlap: 0
   isTakingDamage: 0
   fireAnim: {fileID: 3707910557430313961}
   fireAnimCd: 0

@@ -97,12 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cd6594ffd7308a498d2153431f4e713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCd: 0
   currentTarget: {fileID: 0}
-  currentTarget2: {fileID: 0}
-  monsterIsInRadius: 0
   damage: 5
-  towerLvl: 1
   projectileSpeed: 4
   attackSpeed: 1
   attackRange: 0.75
@@ -111,6 +107,10 @@ MonoBehaviour:
   dmgText: {fileID: 8832864533814242379}
   rofText: {fileID: 4611877609324028263}
   rngText: {fileID: 8402819585033084010}
+  hasUpgrades: 0
+  upgrade1: 
+  upgrade2: 
+  upgrade3: 
 --- !u!1 &1149000075130714264
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292730333
+    rgba: 4286085240
   m_fontColor: {r: 0.47058824, g: 0.47058824, b: 0.47058824, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4286085240
   m_fontColor: {r: 0.47058824, g: 0.47058824, b: 0.47058824, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -648,7 +648,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292730333
+    rgba: 4286085240
   m_fontColor: {r: 0.47058824, g: 0.47058824, b: 0.47058824, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -808,7 +808,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nBonus:\nNone\nPenalty: \nNone\nDmg:  \nRof: \nRng: \n\n\n\n\n"
+  m_text: "AOE in radius\n\nBonus:\nx2 to Demons\nPenalty: \nx0.5 to Pests\nDmg: 
+    \nRof: \nRng: \n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -817,7 +818,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292730333
+    rgba: 4286085240
   m_fontColor: {r: 0.47058824, g: 0.47058824, b: 0.47058824, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -988,7 +989,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4292730333
+    rgba: 4286085240
   m_fontColor: {r: 0.47058824, g: 0.47058824, b: 0.47058824, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
