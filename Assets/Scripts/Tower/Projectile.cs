@@ -42,6 +42,7 @@ public class Projectile : MonoBehaviour
                     //Teleport the projectile on top of the target
                     transform.position = target.transform.position;
                 }
+
                 else
                 {
                     transform.position = Vector3.MoveTowards(this.transform.position, target.transform.position, projectileSpeed * Time.deltaTime);

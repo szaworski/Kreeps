@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 828625423111454346}
   - component: {fileID: 8996551886923038629}
   m_Layer: 0
-  m_Name: Neutral
+  m_Name: Swift
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 5641461026663716134, guid: 7b10bbed081d70b48a81f8406b479a47, type: 3}
+  m_Sprite: {fileID: 3882540730762053761, guid: 7b10bbed081d70b48a81f8406b479a47, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

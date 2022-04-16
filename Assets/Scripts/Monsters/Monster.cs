@@ -136,30 +136,32 @@ public class Monster : MonoBehaviour
         if (other.gameObject.tag == "Projectile")
         {
             GameObject projectileObj = other.gameObject;
+            GameObject monsterTarget = projectileObj.GetComponent<Projectile>().target;
             float incomingDamage = projectileObj.GetComponent<Projectile>().damageValue;
+            float projectileSpeed = projectileObj.GetComponent<Projectile>().projectileSpeed;
             string damageType = projectileObj.GetComponent<Projectile>().damageType;
             //Debug.Log("Amount of incoming damage: " + incomingDamage);
 
             // Check the monster type against damage type and modify damage values
             switch (damageType)
             {
-                case "Fire":
+                case var _ when damageType.Contains("Fire"):
 
                     fireAnim.SetActive(true);
                     fireAnimCd = 0.5f + Time.time;
 
                     if (type == "Beast")
                     {
-                        incomingDamage = (incomingDamage * 2);
+                        incomingDamage *= 2;
                     }
 
                     else if (type == "Brute")
                     {
-                        incomingDamage = (incomingDamage / 2);
+                        incomingDamage /= 2;
                     }
                     break;
 
-                case "Ice":
+                case var _ when damageType.Contains("Ice"):
 
                     iceAnim.SetActive(true);
                     iceAnimCd = 0.45f + Time.time;
@@ -172,61 +174,64 @@ public class Monster : MonoBehaviour
 
                     if (type == "Humanoid")
                     {
-                        incomingDamage = (incomingDamage * 2);
+                        incomingDamage *= 2;
                     }
 
                     else if (type == "Undead")
                     {
-                        incomingDamage = (incomingDamage / 2);
+                        incomingDamage /= 2;
                     }
                     break;
 
-                case "Thunder":
+                case var _ when damageType.Contains("Thunder"):
 
                     if (type == "Brute")
                     {
-                        incomingDamage = (incomingDamage * 2);
+                        incomingDamage *= 2;
                     }
 
                     else if (type == "Beast")
                     {
-                        incomingDamage = (incomingDamage / 2);
+                        incomingDamage /= 2;
                     }
                     break;
 
-                case "Holy":
+                case var _ when damageType.Contains("Holy"):
+
                     if (type == "Undead")
                     {
-                        incomingDamage = (incomingDamage * 2);
+                        incomingDamage *= 2;
                     }
 
                     else if (type == "Humanoid")
                     {
-                        incomingDamage = (incomingDamage / 2);
+                        incomingDamage /= 2;
                     }
                     break;
 
-                case "Swift":
+                case var _ when damageType.Contains("Swift"):
+
                     if (type == "Pest")
                     {
-                        incomingDamage = (incomingDamage * 2);
+                        incomingDamage *= 2;
                     }
 
                     else if (type == "Demon")
                     {
-                        incomingDamage = (incomingDamage / 2);
+                        incomingDamage /= 2;
                     }
                     break;
 
-                case "Cosmic":
+                case var _ when damageType.Contains("Cosmic"):
+
                     if (type == "Demon")
                     {
-                        incomingDamage = (incomingDamage * 2);
+                        incomingDamage *= 2;
                     }
 
                     else if (type == "Pest")
                     {
-                        incomingDamage = (incomingDamage / 2);
+                        incomingDamage /= 2;
                     }
                     break;
             }
@@ -234,32 +239,33 @@ public class Monster : MonoBehaviour
             //Adjust incomingDamage base on the armor value
             incomingDamage -= armor;
 
-            //Subtract the amount of damage taken from the health variable (Delay this for certain animations)
-            if (damageType == "Thunder")
+            //Subtract the amount of damage taken from the health variable (First, check for teleporting projectiles with unique animations)
+            if (this.gameObject != null && projectileSpeed == 1)
             {
-                if (this.gameObject != null)
+                float yShiftAmt = 0;
+                float delayAmt = 0;
+
+                if (damageType == ("Thunder"))
                 {
-                    //Spawn in the animation object
-                    GameObject thunderAnimObj = (GameObject)Instantiate(Resources.Load("Animations/Thunder"), gameObject.transform);
-                    thunderAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.1f, gameObject.transform.position.z);
-                    //Subtract health after the animation plays
-                    StartCoroutine(SubtractHealth(incomingDamage, other, damageType, 0.45f));
+                    yShiftAmt = 0.1f;
+                    delayAmt = 0.45f;
                 }
+
+                //Spawn in the animation object
+                GameObject thunderAnimObj = (GameObject)Instantiate(Resources.Load("Animations/" + damageType), gameObject.transform);
+                thunderAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + yShiftAmt, gameObject.transform.position.z);
+                //Subtract health after the animation plays
+                StartCoroutine(SubtractHealth(incomingDamage, other, damageType, delayAmt));
             }
 
-            else if (damageType == "Holy")
+            //For certain types of projectiles, make sure this monster object is the target of the projectile (Check for moving projectiles)
+            else if (damageType.Contains("Neutral") && this.gameObject == monsterTarget || damageType == "Swift" && this.gameObject == monsterTarget)
             {
-                if (this.gameObject != null)
-                {
-                    //Spawn in the animation object
-                    GameObject holyAnimObj = (GameObject)Instantiate(Resources.Load("Animations/Holy"), gameObject.transform);
-                    holyAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
-                    //Subtract health after the animation plays
-                    StartCoroutine(SubtractHealth(incomingDamage, other, damageType, 0));
-                }
+                StartCoroutine(SubtractHealth(incomingDamage, other, damageType, 0));
             }
 
-            else
+            //For towers without moving projectiles, we don't check for a target (Finally, check for AOE projectiles)
+            else if (!damageType.Contains("Neutral") || !damageType.Contains("Swift"))
             {
                 StartCoroutine(SubtractHealth(incomingDamage, other, damageType, 0));
             }
