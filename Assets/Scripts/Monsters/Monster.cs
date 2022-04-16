@@ -19,6 +19,7 @@ public class Monster : MonoBehaviour
     [SerializeField] private TMP_Text armorText;
     [SerializeField] private GameObject HealthContainer;
     private float hpRegenCd;
+    private int damage;
 
     [Header("Vars used for targeting")]
     private Vector3 lastPos;
@@ -42,6 +43,7 @@ public class Monster : MonoBehaviour
 
     void Awake()
     {
+        damage = 1;
         lastPos = transform.position;
         isFacingLeft = true;
         waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
@@ -316,7 +318,7 @@ public class Monster : MonoBehaviour
 
     void SubtractPlayerHealth()
     {
-        TileSpawner.playerHealth -= 1;
+        PlayerHealth.newPlayerHealthValue -= damage;
     }
 
     IEnumerator DestroyMonster(float delayTime)

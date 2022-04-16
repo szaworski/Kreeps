@@ -33,7 +33,6 @@ public class TileSpawner : TileTypes
     //Static vars used for tracking certain values
     public static bool triggerTileCardDestruction;
     public static bool triggerMonsterCardDestruction;
-    public static bool gameOver;
 
     public static string prependTileName;
     public static string tileName;
@@ -42,7 +41,6 @@ public class TileSpawner : TileTypes
     public static string tileCardSelected;
     public static string monsterCardSelected;
 
-    public static int playerHealth;
     public static int numOfTimesPlaced;
     public static int numOfForrests;
     public static int numOfGraveyards;
@@ -52,7 +50,6 @@ public class TileSpawner : TileTypes
 
     void Awake()
     {
-        playerHealth = 10;
         numOfTimesPlaced = 0;
         curTiles = new string[6];
         validTiles = new bool[6];

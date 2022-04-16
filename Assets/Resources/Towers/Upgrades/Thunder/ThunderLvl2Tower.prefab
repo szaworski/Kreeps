@@ -973,7 +973,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -6149955979111350123, guid: 9c16bbf81b141d24a8ed851d7f6593fe, type: 3}
+  m_Sprite: {fileID: -2819829875173112941, guid: 37c3048810b793341a21117c05421ea4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -996,10 +996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cd6594ffd7308a498d2153431f4e713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCd: 0
   currentTarget: {fileID: 0}
-  currentTarget2: {fileID: 0}
-  monsterIsInRadius: 0
   damage: 15
   projectileSpeed: 1
   attackSpeed: 1.5
