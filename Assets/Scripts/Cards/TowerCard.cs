@@ -130,7 +130,7 @@ public class TowerCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
                 break;
 
             case "Cosmic":
-                TowerGrid.goldCost = 400;
+                TowerGrid.goldCost = 300; //400
                 break;
         }
     }

@@ -687,7 +687,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.02}
+  m_Size: {x: 0.05, y: 0.05}
   m_EdgeRadius: 0
 --- !u!95 &-6739542867013121178
 Animator:
@@ -727,24 +727,12 @@ MonoBehaviour:
   type: Pest
   moveSpeed: 0.75
   hpRegen: 0
-  hpRegenCd: 0
   evasionChance: 0
   healthText: {fileID: 2240702306701519988}
   maxHealthText: {fileID: 7794477886941289041}
   armorText: {fileID: 8492891916054865753}
   HealthContainer: {fileID: 7549338442133584252}
-  isFacingLeft: 0
-  waypointNum: 0
-  currentWaypoint: 0
-  waypoints: []
-  currWaypoint: {fileID: 0}
-  lastPos: {x: 0, y: 0, z: 0}
   distanceTraveled: 0
-  checkForrestOverlap: 0
-  checkGraveyardOverlap: 0
-  checkMountainOverlap: 0
-  checkRiverOverlap: 0
-  checkSwampOverlap: 0
   isTakingDamage: 0
   fireAnim: {fileID: 3707910557430313961}
   fireAnimCd: 0

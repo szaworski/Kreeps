@@ -719,7 +719,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.02}
+  m_Size: {x: 0.05, y: 0.05}
   m_EdgeRadius: 0
 --- !u!95 &-6739542867013121178
 Animator:
@@ -759,24 +759,12 @@ MonoBehaviour:
   type: Beast
   moveSpeed: 0.55
   hpRegen: 0
-  hpRegenCd: 0
   evasionChance: 0
   healthText: {fileID: 2040553587281962461}
   maxHealthText: {fileID: 346445757991752093}
   armorText: {fileID: 1520880387214077003}
   HealthContainer: {fileID: 5580167391688881138}
-  isFacingLeft: 0
-  waypointNum: 0
-  currentWaypoint: 0
-  waypoints: []
-  currWaypoint: {fileID: 0}
-  lastPos: {x: 0, y: 0, z: 0}
   distanceTraveled: 0
-  checkForrestOverlap: 0
-  checkGraveyardOverlap: 0
-  checkMountainOverlap: 0
-  checkRiverOverlap: 0
-  checkSwampOverlap: 0
   isTakingDamage: 0
   fireAnim: {fileID: 1218386612223250400}
   fireAnimCd: 0
