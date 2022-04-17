@@ -98,10 +98,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
-  damage: 5
-  projectileSpeed: 4
+  damage: 15
+  projectileSpeed: 0
   attackSpeed: 1
-  attackRange: 0.75
+  attackRange: 1.2
   damageType: Cosmic
   attackRadius: {fileID: 1646425863292311773}
   dmgText: {fileID: 8832864533814242379}

@@ -252,8 +252,8 @@ public class Monster : MonoBehaviour
                 }
 
                 //Spawn in the animation object
-                GameObject thunderAnimObj = (GameObject)Instantiate(Resources.Load("Animations/" + damageType), gameObject.transform);
-                thunderAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + yShiftAmt, gameObject.transform.position.z);
+                GameObject damageAnimObj = (GameObject)Instantiate(Resources.Load("Animations/" + damageType), gameObject.transform);
+                damageAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + yShiftAmt, gameObject.transform.position.z);
                 //Subtract health after the animation plays
                 StartCoroutine(SubtractHealth(incomingDamage, other, damageType, delayAmt));
             }
@@ -267,7 +267,18 @@ public class Monster : MonoBehaviour
             //For towers without moving projectiles, we don't check for a target (Finally, check for AOE projectiles)
             else if (!damageType.Contains("Neutral") || !damageType.Contains("Swift"))
             {
-                StartCoroutine(SubtractHealth(incomingDamage, other, damageType, 0));
+                if (damageType.Contains("Cosmic"))
+                {
+                    GameObject damageAnimObj = (GameObject)Instantiate(Resources.Load("Animations/" + damageType), gameObject.transform);
+                    damageAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+                    //Subtract health after the animation plays
+                    StartCoroutine(SubtractHealth(incomingDamage, other, damageType, 0.5f));
+                }
+
+                else
+                {
+                    StartCoroutine(SubtractHealth(incomingDamage, other, damageType, 0));
+                }
             }
         }
     }
@@ -362,15 +373,46 @@ public class Monster : MonoBehaviour
                 missAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
                 missAnimObj.transform.rotation = Quaternion.Euler(0, 0, 0);
             }
+
             //Destroy the projectile game object after damage is received
-            Destroy(projectileObj.gameObject);
+            if (projectileObj != null)
+            {
+                Destroy(projectileObj.gameObject);
+            }
         }
     }
 
     IEnumerator SpawnDamagePopup(float damageVal, string damageType, float delayTime)
     {
+        string convertedDamageType = "";
+        //Get the specifc damage type
+        switch (damageType)
+        {
+            case var _ when damageType.Contains("Neutral"):
+                convertedDamageType = "Neutral";
+                break;
+            case var _ when damageType.Contains("Fire"):
+                convertedDamageType = "Fire";
+                break;
+            case var _ when damageType.Contains("Ice"):
+                convertedDamageType = "Ice";
+                break;
+            case var _ when damageType.Contains("Thunder"):
+                convertedDamageType = "Thunder";
+                break;
+            case var _ when damageType.Contains("Holy"):
+                convertedDamageType = "Holy";
+                break;
+            case var _ when damageType.Contains("Swift"):
+                convertedDamageType = "Swift";
+                break;
+            case var _ when damageType.Contains("Cosmic"):
+                convertedDamageType = "Cosmic";
+                break;
+        }
+
         //Spawn the damage popup
-        GameObject damagePopupObj = (GameObject)Instantiate(Resources.Load("MonsterAttributes/" + damageType + "DamagePopup"), gameObject.transform);
+        GameObject damagePopupObj = (GameObject)Instantiate(Resources.Load("MonsterAttributes/" + convertedDamageType + "DamagePopup"), gameObject.transform);
         damagePopupObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.25f, gameObject.transform.position.z);
         damagePopupObj.transform.rotation = Quaternion.Euler(0, 0, 0);
 
