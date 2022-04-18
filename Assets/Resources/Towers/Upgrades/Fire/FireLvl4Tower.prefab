@@ -438,10 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cd6594ffd7308a498d2153431f4e713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCd: 0
   currentTarget: {fileID: 0}
-  currentTarget2: {fileID: 0}
-  monsterIsInRadius: 0
   damage: 30
   projectileSpeed: 0
   attackSpeed: 2
@@ -553,7 +550,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Neutral
+  m_text: 'Fire Tornado
 
 
 '

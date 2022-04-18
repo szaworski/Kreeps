@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: NeutralLvl3
-  upgradeCost: 20
+  upgradeCost: 200
   upgradeType: Neutral
 --- !u!1 &354252274503662542
 GameObject:

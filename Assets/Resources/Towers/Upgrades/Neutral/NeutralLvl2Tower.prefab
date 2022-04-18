@@ -98,11 +98,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
-  damage: 12
+  damage: 14
   projectileSpeed: 4
   attackSpeed: 0.8
-  attackRange: 1.4
-  damageType: NeutralLvl2
+  attackRange: 1
+  damageType: Neutral
   attackRadius: {fileID: 4442308903161421057}
   dmgText: {fileID: 4188172820497376245}
   rofText: {fileID: 4194524431198603697}

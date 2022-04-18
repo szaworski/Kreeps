@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Neutral Lvl 4
+  m_text: 'Fire Tornado
 
 '
   m_isRightToLeft: 0
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: FireLvl4
-  upgradeCost: 30
+  upgradeCost: 600
   upgradeType: Fire
 --- !u!1 &1459147331767133334
 GameObject:
@@ -350,8 +350,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nBonus:\nNone\nPenalty: \nNone\nCost: 100g\nDmg: 4 \nRof:
-    1\nRng: 1\n"
+  m_text: 'Aoe in radius
+
+
+    Cost: 600g
+
+    Dmg: 40
+
+    Rof: 1
+
+    Rng: 1
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

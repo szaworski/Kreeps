@@ -252,7 +252,7 @@ public class Monster : MonoBehaviour
             }
 
             //For certain types of projectiles, make sure this monster object is the target of the projectile (Check for moving projectiles)
-            else if (this.gameObject == monsterTarget && projectileSpeed > 1)
+            else if (this.gameObject != null && this.gameObject == monsterTarget && projectileSpeed > 1)
             {
                 StartCoroutine(SubtractHealth(incomingDamage, other, damageType, 0));
             }

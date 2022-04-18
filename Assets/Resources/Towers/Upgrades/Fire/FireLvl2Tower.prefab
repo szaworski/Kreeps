@@ -98,9 +98,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
-  damage: 5
+  damage: 6
   projectileSpeed: 0
-  attackSpeed: 0.4
+  attackSpeed: 0.5
   attackRange: 0.8
   damageType: Fire
   attackRadius: {fileID: 4442308903161421057}
@@ -635,7 +635,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Neutral
+  m_text: 'Fire Lvl 2
 
 
 '

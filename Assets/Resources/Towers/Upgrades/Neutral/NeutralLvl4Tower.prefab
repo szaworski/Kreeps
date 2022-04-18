@@ -442,7 +442,7 @@ MonoBehaviour:
   projectileSpeed: 4
   attackSpeed: 1
   attackRange: 2
-  damageType: NeutralLvl4
+  damageType: Neutral
   attackRadius: {fileID: 1578552572651102220}
   dmgText: {fileID: 8541382908700484809}
   rofText: {fileID: 7345570114678003461}
