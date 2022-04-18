@@ -437,17 +437,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cd6594ffd7308a498d2153431f4e713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCd: 0
   currentTarget: {fileID: 0}
-  currentTarget2: {fileID: 0}
-  monsterIsInRadius: 0
   damage: 15
-  towerLvl: 1
   projectileSpeed: 4
   attackSpeed: 1
   attackRange: 2
-  damageType: Neutral
-  towerName: Neutral Lvl 4
+  damageType: NeutralLvl4
   attackRadius: {fileID: 1578552572651102220}
   dmgText: {fileID: 8541382908700484809}
   rofText: {fileID: 7345570114678003461}

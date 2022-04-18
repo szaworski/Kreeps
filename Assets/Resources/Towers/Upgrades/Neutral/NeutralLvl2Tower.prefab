@@ -102,7 +102,7 @@ MonoBehaviour:
   projectileSpeed: 4
   attackSpeed: 0.8
   attackRange: 1.4
-  damageType: Neutral
+  damageType: NeutralLvl2
   attackRadius: {fileID: 4442308903161421057}
   dmgText: {fileID: 4188172820497376245}
   rofText: {fileID: 4194524431198603697}
@@ -634,7 +634,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Neutral
+  m_text: 'Neutral Lvl 2
 
 
 '

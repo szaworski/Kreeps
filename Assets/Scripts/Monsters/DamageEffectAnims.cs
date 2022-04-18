@@ -19,7 +19,11 @@ public class DamageEffectAnims : MonoBehaviour
     IEnumerator DestroyAnimObject(float delayTime)
     {
         yield return new WaitForSeconds(delayTime);
-        Debug.Log("Destroy Anim Object");
-        Destroy(this.gameObject);
+
+        if (this != null)
+        {
+            Debug.Log("Destroy Anim Object");
+            Destroy(this.gameObject);
+        }
     }
 }

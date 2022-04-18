@@ -350,7 +350,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Type: Brute
+  m_text: 'Type: Humanoid
 
     Bounty: 10 gold
 
@@ -360,7 +360,7 @@ MonoBehaviour:
     Health: 44
 
     Armor:
-    1
+    0
 
     Speed: 30
 

@@ -92,8 +92,20 @@ public class Tower : MonoBehaviour
     {
         if (Time.time > attackCd && target != null && monsterIsInRadius)
         {
+            string prependProjectileName = "";
+
+            if (projectileSpeed > 1)
+            {
+                prependProjectileName = "Towers/Projectiles/";
+            }
+
+            else
+            {
+                prependProjectileName = "Towers/Projectiles/WithAnim/";
+            }
+
             currentTarget = target;
-            GameObject projectile = (GameObject)Instantiate(Resources.Load("Towers/Projectiles/" + damageType), this.transform);
+            GameObject projectile = (GameObject)Instantiate(Resources.Load(prependProjectileName + damageType), this.transform);
             projectile.transform.position = this.transform.position;
             attackCd = attackSpeed + Time.time;
         }
@@ -103,7 +115,7 @@ public class Tower : MonoBehaviour
     {
         if (Time.time > attackCd && monsterIsInRadius)
         {
-            GameObject aoeRadius = (GameObject)Instantiate(Resources.Load("Towers/Projectiles/" + damageType), this.transform);
+            GameObject aoeRadius = (GameObject)Instantiate(Resources.Load("Towers/Projectiles/Aoe/" + damageType), this.transform);
             aoeRadius.transform.position = this.transform.position;
             attackCd = attackSpeed + Time.time;
         }

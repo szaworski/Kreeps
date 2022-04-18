@@ -27,11 +27,7 @@ public class Monster : MonoBehaviour
 
     [Header("Damage Effect vars")]
     [SerializeField] private bool isTakingDamage;
-    [SerializeField] private GameObject fireAnim;
-    [SerializeField] private float fireAnimCd;
-
-    [SerializeField] private GameObject iceAnim;
-    [SerializeField] private float iceAnimCd;
+    [SerializeField] private float iceSlowCd;
     [SerializeField] private bool iceSlowStatus;
     [SerializeField] private float iceSlowAmt;
 
@@ -147,9 +143,6 @@ public class Monster : MonoBehaviour
             {
                 case var _ when damageType.Contains("Fire"):
 
-                    fireAnim.SetActive(true);
-                    fireAnimCd = 0.5f + Time.time;
-
                     if (type == "Beast")
                     {
                         incomingDamage *= 2;
@@ -163,8 +156,7 @@ public class Monster : MonoBehaviour
 
                 case var _ when damageType.Contains("Ice"):
 
-                    iceAnim.SetActive(true);
-                    iceAnimCd = 0.45f + Time.time;
+                    iceSlowCd = 0.45f + Time.time;
 
                     if (!iceSlowStatus)
                     {
@@ -254,28 +246,30 @@ public class Monster : MonoBehaviour
                 //Spawn in the animation object
                 GameObject damageAnimObj = (GameObject)Instantiate(Resources.Load("Animations/" + damageType), gameObject.transform);
                 damageAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + yShiftAmt, gameObject.transform.position.z);
+                damageAnimObj.transform.rotation = Quaternion.Euler(0, 0, 0);
                 //Subtract health after the animation plays
                 StartCoroutine(SubtractHealth(incomingDamage, other, damageType, delayAmt));
             }
 
             //For certain types of projectiles, make sure this monster object is the target of the projectile (Check for moving projectiles)
-            else if (damageType.Contains("Neutral") && this.gameObject == monsterTarget || damageType == "Swift" && this.gameObject == monsterTarget)
+            else if (this.gameObject == monsterTarget && projectileSpeed > 1)
             {
                 StartCoroutine(SubtractHealth(incomingDamage, other, damageType, 0));
             }
 
             //For towers without moving projectiles, we don't check for a target (Finally, check for AOE projectiles)
-            else if (!damageType.Contains("Neutral") || !damageType.Contains("Swift"))
+            else if (projectileSpeed == 0)
             {
+                GameObject damageAnimObj = (GameObject)Instantiate(Resources.Load("Animations/" + damageType), gameObject.transform);
+                damageAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+                damageAnimObj.transform.rotation = Quaternion.Euler(0, 0, 0);
+                //Subtract health after the animation plays
                 if (damageType.Contains("Cosmic"))
                 {
-                    GameObject damageAnimObj = (GameObject)Instantiate(Resources.Load("Animations/" + damageType), gameObject.transform);
-                    damageAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
-                    //Subtract health after the animation plays
                     StartCoroutine(SubtractHealth(incomingDamage, other, damageType, 0.5f));
                 }
 
-                else
+                else 
                 {
                     StartCoroutine(SubtractHealth(incomingDamage, other, damageType, 0));
                 }
@@ -285,18 +279,10 @@ public class Monster : MonoBehaviour
 
     void ResetEffectAnims()
     {
-        if (Time.time > fireAnimCd && fireAnim.activeSelf)
+        if (Time.time > iceSlowCd && iceSlowStatus)
         {
-            fireAnim.SetActive(false);
-            fireAnimCd = 0.5f + Time.time;
-        }
-
-        if (Time.time > iceAnimCd && iceAnim.activeSelf)
-        {
-            iceAnim.SetActive(false);
-            iceAnimCd = 0.45f + Time.time;
-            iceSlowStatus = false;
-            moveSpeed += iceSlowAmt;
+           iceSlowStatus = false;
+           moveSpeed += iceSlowAmt;
         }
     }
 
