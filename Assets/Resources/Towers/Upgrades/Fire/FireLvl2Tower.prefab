@@ -209,8 +209,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "AOE in radius\n\nBonus:\nx2 to Beasts\nPenalty: \nx0.5 to Brutes\nDmg: 
-    \nRof: \nRng:  \n\n\n\n\n"
+  m_text: "AOE in radius\n\nDmg:  \nRof: \nRng:  \n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -529,7 +528,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.19210342, y: 1.233172, z: 0.2659781, w: -0.4297436}
+  m_margin: {x: -0.18499249, y: 0.68041885, z: 0.2659781, w: -0.18869239}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -872,7 +871,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.3455862, y: 1.3884317, z: 0.41434073, w: -0.6034132}
+  m_margin: {x: -0.33806434, y: 0.9961575, z: 0.41434073, w: -0.1997379}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1043,7 +1042,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.35154772, y: 1.2906989, z: 0.41434073, w: -0.50098395}
+  m_margin: {x: -0.34859282, y: 0.86128956, z: 0.41434073, w: -0.13107526}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
