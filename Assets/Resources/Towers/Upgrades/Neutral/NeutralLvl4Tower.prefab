@@ -185,7 +185,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Neutral
+  m_text: 'Big shot
 
 
 '
@@ -868,10 +868,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
-  damage: 15
+  damage: 30
   projectileSpeed: 4
-  attackSpeed: 1
-  attackRange: 2
+  attackSpeed: 0.8
+  attackRange: 1
   damageType: Neutral
   attackRadius: {fileID: 1578552572651102220}
   dmgText: {fileID: 5517276859458695052}

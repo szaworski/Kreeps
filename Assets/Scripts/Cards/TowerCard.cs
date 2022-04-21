@@ -110,11 +110,11 @@ public class TowerCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
                 break;
 
             case "Fire":
-                TowerGrid.goldCost = 150;
+                TowerGrid.goldCost = 175;
                 break;
 
             case "Ice":
-                TowerGrid.goldCost = 150;
+                TowerGrid.goldCost = 175;
                 break;
 
             case "Thunder":

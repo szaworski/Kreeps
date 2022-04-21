@@ -607,11 +607,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
-  damage: 30
+  damage: 40
   projectileSpeed: 0
-  attackSpeed: 2
-  attackRange: 2
-  damageType: Fire
+  attackSpeed: 1
+  attackRange: 1
+  damageType: FireCyclone
   attackRadius: {fileID: 1578552572651102220}
   dmgText: {fileID: 2515680835621240517}
   rofText: {fileID: 5144216320947818048}
@@ -718,7 +718,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fire Tornado
+  m_text: 'Fire Cyclone
 
 
 '
