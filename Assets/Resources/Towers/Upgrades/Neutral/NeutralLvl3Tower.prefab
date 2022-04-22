@@ -998,9 +998,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   damage: 15
-  projectileSpeed: 4
-  attackSpeed: 1
-  attackRange: 1.5
+  projectileSpeed: 5
+  attackSpeed: 1.2
+  attackRange: 1.8
   damageType: Neutral
   attackRadius: {fileID: 9061148783392565081}
   dmgText: {fileID: 4428744910856714454}

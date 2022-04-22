@@ -205,19 +205,19 @@ public class TowerGrid : MonoBehaviour
         GameObject cardSlot2 = GameObject.Find("UpgradeSlot2");
         GameObject cardSlot3 = GameObject.Find("UpgradeSlot3");
         GameObject cardSlot4 = GameObject.Find("CloseButton");
-        //GameObject cardSlot5 = GameObject.Find("DemolishButton");
+        GameObject cardSlot5 = GameObject.Find("UpgradeSign");
 
         upgradeCard1Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/" + card1), cardSlot1.transform);
         upgradeCard2Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/" + card2), cardSlot2.transform);
         upgradeCard3Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/" + card3), cardSlot3.transform);
         upgradeCard4Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/Close"), cardSlot4.transform);
-        //upgradeCard5Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/Demolish"), cardSlot5.transform);
+        upgradeCard5Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/Upgrade"), cardSlot5.transform);
 
         upgradeCard1Obj.transform.position = cardSlot1.transform.position;
         upgradeCard2Obj.transform.position = cardSlot2.transform.position;
         upgradeCard3Obj.transform.position = cardSlot3.transform.position;
         upgradeCard4Obj.transform.position = cardSlot4.transform.position;
-        //upgradeCard5Obj.transform.position = cardSlot5.transform.position;
+        upgradeCard5Obj.transform.position = cardSlot5.transform.position;
     }
 
     void UpgradeTower()
@@ -280,7 +280,7 @@ public class TowerGrid : MonoBehaviour
         Destroy(upgradeCard2Obj.gameObject);
         Destroy(upgradeCard3Obj.gameObject);
         Destroy(upgradeCard4Obj.gameObject);
-        //Destroy(upgradeCard5Obj.gameObject);
+        Destroy(upgradeCard5Obj.gameObject);
     }
 
     void DestroyTower(GameObject towerObj)
