@@ -338,13 +338,15 @@ public class Monster : MonoBehaviour
 
         if (this.gameObject != null)
         {
+            float randomFloat = Random.value;
+
             if (incomingDamage <= 0)
             {
                 StartCoroutine(SpawnDamagePopup(incomingDamage, damageType, 0.25f));
             }
 
             //Make sure damage is greater than 0, and evasion does not occur
-            else if (incomingDamage > 0 && Random.value > evasionChance)
+            else if (incomingDamage > 0 && randomFloat > evasionChance)
             {
                 isTakingDamage = true;
                 health -= incomingDamage;
@@ -352,7 +354,7 @@ public class Monster : MonoBehaviour
                 StartCoroutine(SpawnDamagePopup(incomingDamage, damageType, 0.25f));
             }
 
-            else if (Random.value <= evasionChance)
+            else if (randomFloat <= evasionChance)
             {
                 //Play "Miss" animation
                 GameObject missAnimObj = (GameObject)Instantiate(Resources.Load("Animations/Miss"), gameObject.transform);
@@ -363,6 +365,7 @@ public class Monster : MonoBehaviour
             //Destroy the projectile game object after damage is received
             if (projectileObj != null)
             {
+                yield return new WaitForSeconds(0.02f);
                 Destroy(projectileObj.gameObject);
             }
         }
