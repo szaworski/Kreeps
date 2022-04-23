@@ -269,7 +269,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fireball
+  m_text: 'Fire Spitter
 
 
 '
@@ -996,8 +996,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   damage: 15
-  projectileSpeed: 4
-  attackSpeed: 0.8
+  projectileSpeed: 5
+  attackSpeed: 0.5
   attackRange: 1.5
   damageType: Fire
   attackRadius: {fileID: 9061148783392565081}

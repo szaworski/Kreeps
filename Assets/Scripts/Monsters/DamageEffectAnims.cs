@@ -22,7 +22,7 @@ public class DamageEffectAnims : MonoBehaviour
 
         if (this != null)
         {
-            Debug.Log("Destroy Anim Object");
+            //Debug.Log("Destroy Anim Object");
             Destroy(this.gameObject);
         }
     }

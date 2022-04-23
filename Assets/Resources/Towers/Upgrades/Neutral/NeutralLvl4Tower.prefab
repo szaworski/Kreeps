@@ -871,7 +871,7 @@ MonoBehaviour:
   damage: 30
   projectileSpeed: 4
   attackSpeed: 0.8
-  attackRange: 1
+  attackRange: 1.2
   damageType: Neutral2
   attackRadius: {fileID: 1578552572651102220}
   dmgText: {fileID: 5517276859458695052}

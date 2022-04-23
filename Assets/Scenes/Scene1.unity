@@ -3481,8 +3481,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "AOE in radius +Slow\n\nBonus:\nx2 to Humanoids\nPenalty: \nx0.5 to Undead\nCost:
-    175g\nDmg: 3 \nRof: 0.5\nRng: 0.6\n"
+  m_text: "AOE in radius\n-15 move speed\nBonus:\nx2 to Humanoids\nPenalty: \nx0.5
+    to Undead\nCost: 175g\nDmg: 3 \nRof: 0.5\nRng: 0.7\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -3990,8 +3990,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nBonus:\nx2 to Brutes\nPenalty: \nx0.5 to Beasts\nCost:
-    200g\nDmg: 18\nRof: 2\nRng: 1.5"
+  m_text: "Single target\nIgnores armor\nBonus:\nx2 to Brutes\nPenalty: \nx0.5 to
+    Beasts\nCost: 200g\nDmg: 18\nRof: 2\nRng: 1.5"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -4534,8 +4534,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 300
-  m_fontSizeBase: 300
+  m_fontSize: 250
+  m_fontSizeBase: 250
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4577,7 +4577,7 @@ MonoBehaviour:
   m_renderer: {fileID: 1452183925}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 2
+  _SortingOrder: 4
 --- !u!23 &1452183925
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4617,7 +4617,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1452479629
 GameObject:

@@ -39,6 +39,7 @@ public class Monster : MonoBehaviour
 
     void Awake()
     {
+        iceSlowAmt = 0.12f;
         damage = 1;
         lastPos = transform.position;
         isFacingLeft = true;
@@ -135,6 +136,7 @@ public class Monster : MonoBehaviour
             GameObject monsterTarget = projectileObj.GetComponent<Projectile>().target;
             float incomingDamage = projectileObj.GetComponent<Projectile>().damageValue;
             float projectileSpeed = projectileObj.GetComponent<Projectile>().projectileSpeed;
+            float slowAmt = projectileObj.GetComponent<Projectile>().slowAmt;
             string damageType = projectileObj.GetComponent<Projectile>().damageType;
             //Debug.Log("Amount of incoming damage: " + incomingDamage);
 
@@ -158,9 +160,17 @@ public class Monster : MonoBehaviour
 
                     iceSlowCd = 0.45f + Time.time;
 
-                    if (!iceSlowStatus)
+                    if (!iceSlowStatus || iceSlowStatus && slowAmt > iceSlowAmt)
                     {
+                        // if a hit is detected with a greater slowAmt, adjust iceSlowAmt accordingly without stacking the values
+                        if (iceSlowStatus && slowAmt > iceSlowAmt)
+                        {
+                            //Add back the current slow amount so we don't stack the slow values
+                            moveSpeed += iceSlowAmt;
+                        }
+
                         iceSlowStatus = true;
+                        iceSlowAmt = slowAmt;
                         moveSpeed -= iceSlowAmt;
                     }
 

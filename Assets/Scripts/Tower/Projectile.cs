@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
     public float damageValue;
     public float projectileSpeed;
     public float attackRange;
+    public float slowAmt;
     public string damageType;
     public GameObject target;
 
@@ -18,6 +19,7 @@ public class Projectile : MonoBehaviour
         damageType = transform.parent.GetComponent<Tower>().damageType;
         attackRange = transform.parent.GetComponent<Tower>().attackRange;
         target = transform.parent.GetComponent<Tower>().currentTarget;
+        slowAmt = transform.parent.GetComponent<Tower>().slowAmt;
 
         if (projectileSpeed == 0)
         {

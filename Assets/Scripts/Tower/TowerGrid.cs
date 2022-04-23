@@ -64,7 +64,11 @@ public class TowerGrid : MonoBehaviour
             //Reveal the grid sprite on mouse over
             SetSelectedTowerGhost();
             sprite.enabled = true;
-            towerGhostSprite.enabled = true;
+
+            if (!hasTower)
+            {
+                towerGhostSprite.enabled = true;
+            }
             //Debug.Log("Is hovering");
 
             if (Input.GetMouseButtonDown(0))

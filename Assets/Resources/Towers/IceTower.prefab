@@ -101,8 +101,9 @@ MonoBehaviour:
   damage: 3
   projectileSpeed: 0
   attackSpeed: 0.5
-  attackRange: 0.6
+  attackRange: 0.7
   damageType: Ice
+  slowAmt: 0.15
   attackRadius: {fileID: 1235488988543047019}
   dmgText: {fileID: 7848213171178620956}
   rofText: {fileID: 9201515136424673279}
@@ -1108,7 +1109,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "AOE in radius+Slow\n\nDmg:  \nRof: \nRng: \n\n\n\n\n"
+  m_text: "AOE in radius\n-12 move speed\nDmg:  \nRof: \nRng: \n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Neutral Lvl 2
+  m_text: 'Ice Lvl 2
 
 '
   m_isRightToLeft: 0
@@ -201,7 +201,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nCost: 100g\nDmg: 4 \nRof: 1\nRng: 1\n"
+  m_text: 'AOE in radius
+
+    -20 move speed
+
+    Cost: 125g
+
+    Dmg: 5
+
+    Rof:
+    0.5
+
+    Rng: 0.8
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -417,5 +430,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: IceLvl2
-  upgradeCost: 10
+  upgradeCost: 125
   upgradeType: Ice

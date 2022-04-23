@@ -15,6 +15,7 @@ public class Tower : MonoBehaviour
     public float attackSpeed;
     public float attackRange;
     public string damageType;
+    public float slowAmt;
     public LineRenderer attackRadius;
 
     [Header("Tower Stats")]
