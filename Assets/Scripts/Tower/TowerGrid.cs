@@ -211,15 +211,26 @@ public class TowerGrid : MonoBehaviour
         GameObject cardSlot4 = GameObject.Find("CloseButton");
         GameObject cardSlot5 = GameObject.Find("UpgradeSign");
 
-        upgradeCard1Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/" + card1), cardSlot1.transform);
-        upgradeCard2Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/" + card2), cardSlot2.transform);
-        upgradeCard3Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/" + card3), cardSlot3.transform);
+        if (!string.IsNullOrEmpty(card1))
+        {
+            upgradeCard1Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/" + card1), cardSlot1.transform);
+            upgradeCard1Obj.transform.position = cardSlot1.transform.position;
+        }
+
+        if (!string.IsNullOrEmpty(card2))
+        {
+            upgradeCard2Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/" + card2), cardSlot2.transform);
+            upgradeCard2Obj.transform.position = cardSlot2.transform.position;
+        }
+
+        if (!string.IsNullOrEmpty(card3))
+        {
+            upgradeCard3Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/" + card3), cardSlot3.transform);
+            upgradeCard3Obj.transform.position = cardSlot3.transform.position;
+        }
+
         upgradeCard4Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/Close"), cardSlot4.transform);
         upgradeCard5Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/Upgrade"), cardSlot5.transform);
-
-        upgradeCard1Obj.transform.position = cardSlot1.transform.position;
-        upgradeCard2Obj.transform.position = cardSlot2.transform.position;
-        upgradeCard3Obj.transform.position = cardSlot3.transform.position;
         upgradeCard4Obj.transform.position = cardSlot4.transform.position;
         upgradeCard5Obj.transform.position = cardSlot5.transform.position;
     }
@@ -280,11 +291,30 @@ public class TowerGrid : MonoBehaviour
     void DestroyTowerUpgradeCards()
     {
         //Destory all upgrade card game objects
-        Destroy(upgradeCard1Obj.gameObject);
-        Destroy(upgradeCard2Obj.gameObject);
-        Destroy(upgradeCard3Obj.gameObject);
-        Destroy(upgradeCard4Obj.gameObject);
-        Destroy(upgradeCard5Obj.gameObject);
+        if (upgradeCard1Obj != null)
+        {
+            Destroy(upgradeCard1Obj.gameObject);
+        }
+
+        if (upgradeCard2Obj != null)
+        {
+            Destroy(upgradeCard2Obj.gameObject);
+        }
+
+        if (upgradeCard3Obj != null)
+        {
+            Destroy(upgradeCard3Obj.gameObject);
+        }
+
+        if (upgradeCard4Obj != null)
+        {
+            Destroy(upgradeCard4Obj.gameObject);
+        }
+
+        if (upgradeCard5Obj != null)
+        {
+            Destroy(upgradeCard5Obj.gameObject);
+        }
     }
 
     void DestroyTower(GameObject towerObj)
