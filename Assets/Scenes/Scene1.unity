@@ -3991,7 +3991,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Single target\nIgnores armor\nBonus:\nx2 to Brutes\nPenalty: \nx0.5 to
-    Beasts\nCost: 200g\nDmg: 18\nRof: 2\nRng: 1.5"
+    Beasts\nCost: 200g\nDmg: 20\nRof: 1.5\nRng: 1.2"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

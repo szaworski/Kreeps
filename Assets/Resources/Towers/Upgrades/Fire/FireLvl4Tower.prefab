@@ -612,6 +612,7 @@ MonoBehaviour:
   attackSpeed: 1
   attackRange: 1
   damageType: FireCyclone
+  slowAmt: 0
   attackRadius: {fileID: 1578552572651102220}
   dmgText: {fileID: 2515680835621240517}
   rofText: {fileID: 5144216320947818048}

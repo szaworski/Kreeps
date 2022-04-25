@@ -158,7 +158,7 @@ public class Monster : MonoBehaviour
 
                 case var _ when damageType.Contains("Ice"):
 
-                    iceSlowCd = 0.45f + Time.time;
+                    iceSlowCd = 0.8f + Time.time;
 
                     if (!iceSlowStatus || iceSlowStatus && slowAmt > iceSlowAmt)
                     {
@@ -238,8 +238,11 @@ public class Monster : MonoBehaviour
                     break;
             }
 
-            //Adjust incomingDamage base on the armor value
-            incomingDamage -= armor;
+            //Adjust incomingDamage base on the armor value (if damage type isn't "Thunder")
+            if (!damageType.Contains("Thunder"))
+            {
+                incomingDamage -= armor;
+            }
 
             //Subtract the amount of damage taken from the health variable (First, check for teleporting projectiles with unique animations)
             if (this.gameObject != null && projectileSpeed == 1)
@@ -375,8 +378,12 @@ public class Monster : MonoBehaviour
             //Destroy the projectile game object after damage is received
             if (projectileObj != null)
             {
+                //Adding a slight pause to make sure damage is received from the projectile
                 yield return new WaitForSeconds(0.02f);
-                Destroy(projectileObj.gameObject);
+                if (projectileObj != null)
+                {
+                    Destroy(projectileObj.gameObject);
+                }
             }
         }
     }

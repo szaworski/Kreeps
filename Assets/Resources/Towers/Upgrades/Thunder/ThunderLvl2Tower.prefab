@@ -657,11 +657,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
-  damage: 15
+  damage: 30
   projectileSpeed: 1
-  attackSpeed: 1.5
-  attackRange: 1.5
+  attackSpeed: 1
+  attackRange: 1.2
   damageType: Thunder
+  slowAmt: 0
   attackRadius: {fileID: 7682126142615179629}
   dmgText: {fileID: 32125820461917916}
   rofText: {fileID: 5264135728999996327}
