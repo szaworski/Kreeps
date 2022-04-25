@@ -103,12 +103,13 @@ MonoBehaviour:
   attackSpeed: 0.6
   attackRange: 0.8
   damageType: Fire
+  slowAmt: 0
   attackRadius: {fileID: 4442308903161421057}
   dmgText: {fileID: 4188172820497376245}
   rofText: {fileID: 4194524431198603697}
   rngText: {fileID: 6768233807400395666}
-  hasUpgrades: 0
-  upgrade1: 
+  hasUpgrades: 1
+  upgrade1: FireLvl3
   upgrade2: 
   upgrade3: 
 --- !u!1 &3770156485981201109

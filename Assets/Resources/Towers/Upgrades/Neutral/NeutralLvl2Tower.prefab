@@ -446,12 +446,13 @@ MonoBehaviour:
   attackSpeed: 0.8
   attackRange: 1
   damageType: Neutral
+  slowAmt: 0
   attackRadius: {fileID: 4442308903161421057}
   dmgText: {fileID: 4865429423094584210}
   rofText: {fileID: 6593074053114585699}
   rngText: {fileID: 5686595717503225283}
-  hasUpgrades: 0
-  upgrade1: 
+  hasUpgrades: 1
+  upgrade1: NeutralLvl3
   upgrade2: 
   upgrade3: 
 --- !u!1 &2542068935992608241

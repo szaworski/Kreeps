@@ -782,7 +782,7 @@ GameObject:
   - component: {fileID: 9194427617009696275}
   - component: {fileID: 9169968376610460433}
   m_Layer: 0
-  m_Name: NeutralLvl4Tower
+  m_Name: NeutralLvl7Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -868,11 +868,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
-  damage: 30
+  damage: 45
   projectileSpeed: 4
   attackSpeed: 0.8
   attackRange: 1.2
   damageType: Neutral2
+  slowAmt: 0
   attackRadius: {fileID: 1578552572651102220}
   dmgText: {fileID: 5517276859458695052}
   rofText: {fileID: 2566554737714285448}

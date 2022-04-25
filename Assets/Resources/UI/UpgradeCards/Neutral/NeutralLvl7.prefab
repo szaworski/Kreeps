@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 1237511376665001429}
   - component: {fileID: 1237511376665001434}
   m_Layer: 5
-  m_Name: NeutralLvl4
+  m_Name: NeutralLvl7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -353,13 +353,13 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Cost: 300g
+    Cost: 450g
 
-    Dmg: 30
+    Dmg: 45
 
     Rof: 0.8
 
-    Rng: 1
+    Rng: 1.2
 
 '
   m_isRightToLeft: 0

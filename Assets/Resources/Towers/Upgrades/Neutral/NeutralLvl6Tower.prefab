@@ -440,7 +440,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sniper
+  m_text: 'Sniper Lvl 3
 
 
 '
@@ -911,7 +911,7 @@ GameObject:
   - component: {fileID: 6876413721389775996}
   - component: {fileID: 2634648901071726794}
   m_Layer: 0
-  m_Name: NeutralLvl4Tower
+  m_Name: NeutralLvl6Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -973,7 +973,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 176761735313787647, guid: 37c3048810b793341a21117c05421ea4, type: 3}
+  m_Sprite: {fileID: 7509806563800174370, guid: 9e3e18392cdb20b47844f9cb9cbd5276, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -997,19 +997,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
-  damage: 15
+  damage: 25
   projectileSpeed: 5
   attackSpeed: 1
-  attackRange: 1.5
+  attackRange: 2.5
   damageType: Neutral
   slowAmt: 0
   attackRadius: {fileID: 9061148783392565081}
   dmgText: {fileID: 4428744910856714454}
   rofText: {fileID: 5340117216942817866}
   rngText: {fileID: 3088186038656177992}
-  hasUpgrades: 1
-  upgrade1: NeutralLvl5
-  upgrade2: NeutralLvl6
+  hasUpgrades: 0
+  upgrade1: 
+  upgrade2: 
   upgrade3: 
 --- !u!1 &9034211373570560232
 GameObject:
