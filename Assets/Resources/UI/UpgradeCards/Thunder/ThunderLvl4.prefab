@@ -428,5 +428,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: ThunderLvl4
-  upgradeCost: 20
+  upgradeCost: 250
   upgradeType: Thunder

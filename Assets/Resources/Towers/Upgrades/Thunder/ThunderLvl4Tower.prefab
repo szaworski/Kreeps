@@ -740,7 +740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   damage: 30
-  projectileSpeed: 5
+  projectileSpeed: 4
   attackSpeed: 0.75
   attackRange: 1.2
   damageType: Thunder
