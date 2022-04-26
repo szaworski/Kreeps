@@ -65,12 +65,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Single target
+  m_text: 'AOE in radius
 
 
-    Cost: 250g
+    Cost: 300g
 
-    Dmg: 30
+    Dmg: 25
 
     Rof: 0.75
 
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Thunder Shard
+  m_text: 'Thunder Shard Lvl 2
 
 '
   m_isRightToLeft: 0
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 3775823031329609170}
   - component: {fileID: 3775823031329609171}
   m_Layer: 5
-  m_Name: ThunderLvl4
+  m_Name: ThunderLvl5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -427,6 +427,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3c50722ec083041bcf2aec73db18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: ThunderLvl4
+  cardName: ThunderLvl5
   upgradeCost: 20
   upgradeType: Thunder

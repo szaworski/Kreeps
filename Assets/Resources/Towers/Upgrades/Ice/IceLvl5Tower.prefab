@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 2596648366095124002}
   - component: {fileID: 2596648366095124003}
   m_Layer: 0
-  m_Name: IceLvl4Tower
+  m_Name: IceLvl5Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,7 +161,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -3547611411735567960, guid: 37c3048810b793341a21117c05421ea4, type: 3}
+  m_Sprite: {fileID: 4870094911688026297, guid: 7e0c2ab2930874644bf69d49321ae4c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -185,9 +185,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
-  damage: 16
+  damage: 22
   projectileSpeed: 5
-  attackSpeed: 0.7
+  attackSpeed: 0.5
   attackRange: 1
   damageType: Ice
   slowAmt: 0.25
@@ -195,9 +195,9 @@ MonoBehaviour:
   dmgText: {fileID: 7767539792955209241}
   rofText: {fileID: 1961889488805630682}
   rngText: {fileID: 6987887416147473856}
-  hasUpgrades: 1
-  upgrade1: IceLvl5
-  upgrade2: IceLvl6
+  hasUpgrades: 0
+  upgrade1: 
+  upgrade2: 
   upgrade3: 
 --- !u!1 &3343915087418681846
 GameObject:

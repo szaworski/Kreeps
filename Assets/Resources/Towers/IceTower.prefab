@@ -110,8 +110,8 @@ MonoBehaviour:
   rngText: {fileID: 7090720813040869485}
   hasUpgrades: 1
   upgrade1: IceLvl2
-  upgrade2: IceLvl3
-  upgrade3: IceLvl4
+  upgrade2: IceLvl4
+  upgrade3: IceLvl7
 --- !u!1 &914214599846846503
 GameObject:
   m_ObjectHideFlags: 0

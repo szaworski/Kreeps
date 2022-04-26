@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: ThunderLvl2
-  upgradeCost: 10
+  upgradeCost: 200
   upgradeType: Thunder
 --- !u!1 &3908303888487891676
 GameObject:
@@ -350,7 +350,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nCost: 100g\nDmg: 4 \nRof: 1\nRng: 1\n"
+  m_text: 'Single target
+
+
+    Cost: 200g
+
+    Dmg: 30
+
+    Rof: 1.2
+
+    Rng: 1.2
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

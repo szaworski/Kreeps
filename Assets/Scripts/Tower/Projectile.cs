@@ -35,20 +35,26 @@ public class Projectile : MonoBehaviour
 
     public void MoveProjectile()
     {
-        if (projectileSpeed >= 1)
+        if (projectileSpeed == 1)
         {
             if (target != null)
             {
-                if (damageType == "Thunder" || damageType == "Holy")
-                {
-                    //Teleport the projectile on top of the target
-                    transform.position = target.transform.position;
-                }
+                //Teleport the projectile on top of the target
+                transform.position = target.transform.position;
+            }
 
-                else
-                {
-                    transform.position = Vector3.MoveTowards(this.transform.position, target.transform.position, projectileSpeed * Time.deltaTime);
-                }
+            else
+            {
+                //If the target is not null, The projectile is destroyed after the damage value is received by the monster (See Monster.cs OnTriggerEnter2D function)
+                destroyProjectile();
+            }
+        }
+
+        else if (projectileSpeed > 1)
+        {
+            if (target != null)
+            {
+                transform.position = Vector3.MoveTowards(this.transform.position, target.transform.position, projectileSpeed * Time.deltaTime);
             }
 
             else

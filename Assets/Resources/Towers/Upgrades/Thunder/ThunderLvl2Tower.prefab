@@ -659,7 +659,7 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   damage: 30
   projectileSpeed: 1
-  attackSpeed: 1
+  attackSpeed: 1.2
   attackRange: 1.2
   damageType: Thunder
   slowAmt: 0
@@ -667,8 +667,8 @@ MonoBehaviour:
   dmgText: {fileID: 32125820461917916}
   rofText: {fileID: 5264135728999996327}
   rngText: {fileID: 1375189216990976421}
-  hasUpgrades: 0
-  upgrade1: 
+  hasUpgrades: 1
+  upgrade1: ThunderLvl3
   upgrade2: 
   upgrade3: 
 --- !u!1 &5020288076517215496
