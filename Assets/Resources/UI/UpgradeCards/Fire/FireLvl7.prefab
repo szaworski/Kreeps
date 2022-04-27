@@ -282,7 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3c50722ec083041bcf2aec73db18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: FireLvl4
+  cardName: FireLvl7
   upgradeCost: 700
   upgradeType: Fire
 --- !u!1 &1459147331767133334

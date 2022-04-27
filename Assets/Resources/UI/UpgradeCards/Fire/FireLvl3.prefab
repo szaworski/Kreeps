@@ -201,7 +201,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "AOE in radius\n\nCost: 250g\nDmg: 15 \nRof: 0.6\nRng: 1\n"
+  m_text: 'AOE in radius
+
+
+    Cost: 250g
+
+    Dmg: 14
+
+    Rof: 0.6
+
+    Rng: 1
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

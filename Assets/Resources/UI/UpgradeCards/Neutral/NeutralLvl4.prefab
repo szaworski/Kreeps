@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: NeutralLvl4
-  upgradeCost: 150
+  upgradeCost: 250
   upgradeType: Neutral
 --- !u!1 &354252274503662542
 GameObject:
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nCost: 150g\nDmg: 15 \nRof: 1\nRng: 1.5\n"
+  m_text: "Single target\n\nCost: 250g\nDmg: 15 \nRof: 1\nRng: 1.5\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

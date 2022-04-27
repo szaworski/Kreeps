@@ -146,8 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3c50722ec083041bcf2aec73db18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: IceLvl3
-  upgradeCost: 200
+  cardName: IceLvl6
+  upgradeCost: 350
   upgradeType: Ice
 --- !u!1 &8196507382453859790
 GameObject:
@@ -354,7 +354,7 @@ MonoBehaviour:
 
     -30 move speed
 
-    Cost: 300g
+    Cost: 350g
 
     Dmg: 25
 

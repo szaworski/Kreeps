@@ -68,7 +68,7 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Cost: 200g
+    Cost: 300g
 
     Dmg: 25
 
@@ -291,8 +291,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3c50722ec083041bcf2aec73db18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: FireLvl3
-  upgradeCost: 200
+  cardName: FireLvl5
+  upgradeCost: 300
   upgradeType: Fire
 --- !u!1 &2359300889729520904
 GameObject:

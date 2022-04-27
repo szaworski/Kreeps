@@ -140,6 +140,10 @@ public class Monster : MonoBehaviour
             string damageType = projectileObj.GetComponent<Projectile>().damageType;
             //Debug.Log("Amount of incoming damage: " + incomingDamage);
 
+            //Vars used to shift the position/delay different animations
+            float yShiftAmt = 0;
+            float delayAmt = 0;
+
             // Check the monster type against damage type and modify damage values
             switch (damageType)
             {
@@ -187,6 +191,9 @@ public class Monster : MonoBehaviour
 
                 case var _ when damageType.Contains("Thunder"):
 
+                    yShiftAmt = 0.1f;
+                    delayAmt = 0.45f;
+
                     if (type == "Brute")
                     {
                         incomingDamage *= 2;
@@ -226,6 +233,8 @@ public class Monster : MonoBehaviour
 
                 case var _ when damageType.Contains("Cosmic"):
 
+                    delayAmt = 0.5f;
+
                     if (type == "Demon")
                     {
                         incomingDamage *= 2;
@@ -247,15 +256,6 @@ public class Monster : MonoBehaviour
             //Subtract the amount of damage taken from the health variable (First, check for teleporting projectiles with unique animations)
             if (this.gameObject != null && projectileSpeed == 1)
             {
-                float yShiftAmt = 0;
-                float delayAmt = 0;
-
-                if (damageType == ("Thunder"))
-                {
-                    yShiftAmt = 0.1f;
-                    delayAmt = 0.45f;
-                }
-
                 //Spawn in the animation object
                 GameObject damageAnimObj = (GameObject)Instantiate(Resources.Load("Animations/" + damageType), gameObject.transform);
                 damageAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + yShiftAmt, gameObject.transform.position.z);
@@ -274,18 +274,10 @@ public class Monster : MonoBehaviour
             else if (projectileSpeed == 0)
             {
                 GameObject damageAnimObj = (GameObject)Instantiate(Resources.Load("Animations/" + damageType), gameObject.transform);
-                damageAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, gameObject.transform.position.z);
+                damageAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + yShiftAmt, gameObject.transform.position.z);
                 damageAnimObj.transform.rotation = Quaternion.Euler(0, 0, 0);
                 //Subtract health after the animation plays
-                if (damageType.Contains("Cosmic"))
-                {
-                    StartCoroutine(SubtractHealth(incomingDamage, other, damageType, 0.5f));
-                }
-
-                else 
-                {
-                    StartCoroutine(SubtractHealth(incomingDamage, other, damageType, 0));
-                }
+                StartCoroutine(SubtractHealth(incomingDamage, other, damageType, delayAmt));
             }
         }
     }

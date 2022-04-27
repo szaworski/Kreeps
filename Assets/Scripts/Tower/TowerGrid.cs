@@ -283,6 +283,7 @@ public class TowerGrid : MonoBehaviour
         gridScript.towerAttackRadius = gridScript.placedTower.transform.GetChild(0).gameObject;
         gridScript.towerStats = gridScript.placedTower.transform.GetChild(1).gameObject;
         gridScript.towerScript = gridScript.placedTower.GetComponent<Tower>();
+        gridScript.towerAttackRadius.SetActive(false);
 
         //Subtract gold from the player
         PlayerHud.newGoldValue = PlayerHud.gold - upgradeGoldCost;

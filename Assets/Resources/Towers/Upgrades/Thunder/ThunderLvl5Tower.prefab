@@ -269,7 +269,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Thunder
+  m_text: 'Thunder Shard Lvl 2
 
 
 '
@@ -741,7 +741,7 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   damage: 25
   projectileSpeed: 0
-  attackSpeed: 0.75
+  attackSpeed: 1
   attackRange: 1.2
   damageType: Thunder
   slowAmt: 0
@@ -1109,7 +1109,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nDmg:  \nRof: \nRng:  \n\n\n\n\n"
+  m_text: "AOE in radius\n\nDmg:  \nRof: \nRng:  \n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

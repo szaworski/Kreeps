@@ -267,17 +267,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
-  damage: 20
+  damage: 30
   projectileSpeed: 1
-  attackSpeed: 1.2
-  attackRange: 1.4
+  attackSpeed: 1
+  attackRange: 1
   damageType: Holy
+  slowAmt: 0
   attackRadius: {fileID: 1578552572651102220}
   dmgText: {fileID: 8629557580060145379}
   rofText: {fileID: 7295875005560674649}
   rngText: {fileID: 4579922936626955854}
-  hasUpgrades: 0
-  upgrade1: 
+  hasUpgrades: 1
+  upgrade1: HolyLvl3
   upgrade2: 
   upgrade3: 
 --- !u!1 &4828954491520293275
