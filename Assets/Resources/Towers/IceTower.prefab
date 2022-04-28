@@ -101,7 +101,7 @@ MonoBehaviour:
   damage: 3
   projectileSpeed: 0
   attackSpeed: 0.5
-  attackRange: 0.7
+  attackRange: 0.6
   damageType: Ice
   slowAmt: 0.15
   attackRadius: {fileID: 1235488988543047019}

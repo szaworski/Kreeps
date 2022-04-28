@@ -357,7 +357,7 @@ MonoBehaviour:
   damage: 3
   projectileSpeed: 0
   attackSpeed: 0.6
-  attackRange: 0.8
+  attackRange: 0.7
   damageType: Fire
   slowAmt: 0
   attackRadius: {fileID: 5600399217375393932}
