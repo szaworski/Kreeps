@@ -98,10 +98,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
-  damage: 12
+  damage: 22
   projectileSpeed: 4
-  attackSpeed: 0.8
-  attackRange: 1.4
+  attackSpeed: 0.25
+  attackRange: 1
   damageType: Swift
   slowAmt: 0
   attackRadius: {fileID: 4442308903161421057}
@@ -639,7 +639,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Swift Gunner
+  m_text: 'Swift Gunner Lvl 3
 
 
 '

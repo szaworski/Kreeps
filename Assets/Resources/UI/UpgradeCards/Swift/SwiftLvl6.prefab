@@ -65,7 +65,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nCost: 100g\nDmg: 4 \nRof: 1\nRng: 1\n"
+  m_text: 'Single target
+
+
+    Cost: 500g
+
+    Dmg: 22
+
+    Rof: 0.25
+
+    Rng: 1
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -416,6 +427,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3c50722ec083041bcf2aec73db18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: SwiftLvl3
-  upgradeCost: 20
+  cardName: SwiftLvl6
+  upgradeCost: 500
   upgradeType: Swift
