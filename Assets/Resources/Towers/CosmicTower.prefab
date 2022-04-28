@@ -103,14 +103,15 @@ MonoBehaviour:
   attackSpeed: 1
   attackRange: 1.2
   damageType: Cosmic
+  slowAmt: 0
   attackRadius: {fileID: 1646425863292311773}
   dmgText: {fileID: 4594210923490224057}
   rofText: {fileID: 650160560870400198}
   rngText: {fileID: 1510105646553636885}
   hasUpgrades: 1
   upgrade1: CosmicLvl2
-  upgrade2: CosmicLvl3
-  upgrade3: CosmicLvl4
+  upgrade2: CosmicLvl4
+  upgrade3: CosmicLvl7
 --- !u!1 &2130112998122023468
 GameObject:
   m_ObjectHideFlags: 0
