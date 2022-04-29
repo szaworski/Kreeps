@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Neutral Lvl 4
+  m_text: 'Observatory
 
 '
   m_isRightToLeft: 0
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nCost: 100g\nDmg: 4 \nRof: 1\nRng: 1\n"
+  m_text: "Single target\n\nCost: 1200g\nDmg: 4 \nRof: 1\nRng: 1\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 7337955309945777291}
   - component: {fileID: 7337955309945777284}
   m_Layer: 5
-  m_Name: CosmicLvl4
+  m_Name: CosmicLvl7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

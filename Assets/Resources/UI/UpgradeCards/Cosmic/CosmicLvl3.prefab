@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cosmic Lvl 2
+  m_text: 'Cosmic Lvl 3
 
 '
   m_isRightToLeft: 0
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "AOE in radius\n\nCost: 400g\nDmg: 4 \nRof: 1\nRng: 1\n"
+  m_text: "AOE in radius\n\nCost: 500g\nDmg: 4 \nRof: 1\nRng: 1\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 3665502777091187127}
   - component: {fileID: 3665502777091187126}
   m_Layer: 5
-  m_Name: CosmicLvl2
+  m_Name: CosmicLvl3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -417,5 +417,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: CosmicLvl2
-  upgradeCost: 400
+  upgradeCost: 500
   upgradeType: Cosmic

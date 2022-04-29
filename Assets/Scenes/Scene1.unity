@@ -3821,7 +3821,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "AOE in radius\n\nBonus:\nx2 to Demons\nPenalty: \nx0.5 to Pests\nCost:
-    400g\nDmg: \nRof: \nRng: "
+    400g\nDmg: 10\nRof: 1\nRng: 1.2"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

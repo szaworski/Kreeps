@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 1927634959647619066}
   - component: {fileID: 1927634959647619067}
   m_Layer: 0
-  m_Name: CosmicLvl3Tower
+  m_Name: CosmicLvl7Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -416,7 +416,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: -18355224965869930, guid: 37c3048810b793341a21117c05421ea4, type: 3}
+  m_Sprite: {fileID: -7684290255642872399, guid: 37c3048810b793341a21117c05421ea4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -445,6 +445,7 @@ MonoBehaviour:
   attackSpeed: 0.4
   attackRange: 0.8
   damageType: Cosmic
+  slowAmt: 0
   attackRadius: {fileID: 4442308903161421057}
   dmgText: {fileID: 6435394657040544024}
   rofText: {fileID: 605396907636735891}
@@ -976,7 +977,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cosmic
+  m_text: 'Observatory
 
 
 '

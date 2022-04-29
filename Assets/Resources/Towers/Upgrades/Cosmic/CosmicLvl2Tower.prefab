@@ -103,6 +103,7 @@ MonoBehaviour:
   attackSpeed: 0.4
   attackRange: 0.8
   damageType: Cosmic
+  slowAmt: 0
   attackRadius: {fileID: 4442308903161421057}
   dmgText: {fileID: 1250372915089682052}
   rofText: {fileID: 7278847179281915673}
