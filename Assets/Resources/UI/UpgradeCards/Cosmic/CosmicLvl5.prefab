@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nCost: 600g\nDmg: 4 \nRof: 1\nRng: 1\n"
+  m_text: "Single target\n\nCost: 600g\nDmg: 60 \nRof: 0.8\nRng: 2\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -339,7 +339,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2953481667369830759, guid: 9845e4253184e584ab22083d7c6e97e0, type: 3}
+  m_Sprite: {fileID: -6320773612276845443, guid: e599a35dec1cd3a4eabc3612e19f83f0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

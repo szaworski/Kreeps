@@ -98,18 +98,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
-  damage: 5
+  damage: 20
   projectileSpeed: 0
-  attackSpeed: 0.4
-  attackRange: 0.8
+  attackSpeed: 0.8
+  attackRange: 1.2
   damageType: Cosmic
   slowAmt: 0
   attackRadius: {fileID: 4442308903161421057}
   dmgText: {fileID: 1250372915089682052}
   rofText: {fileID: 7278847179281915673}
   rngText: {fileID: 5452296816090669614}
-  hasUpgrades: 0
-  upgrade1: 
+  hasUpgrades: 1
+  upgrade1: CosmicLvl3
   upgrade2: 
   upgrade3: 
 --- !u!1 &2043697909592408587

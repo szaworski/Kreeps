@@ -201,7 +201,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nCost: 1200g\nDmg: 4 \nRof: 1\nRng: 1\n"
+  m_text: 'Single target
+
+
+    Cost: 1200g
+
+    Dmg: 180
+
+    Rof: 2
+
+    Rng: 4
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -417,5 +428,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: CosmicLvl4
-  upgradeCost: 30
+  upgradeCost: 1200
   upgradeType: Cosmic

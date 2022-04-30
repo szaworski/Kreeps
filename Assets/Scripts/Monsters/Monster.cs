@@ -191,8 +191,17 @@ public class Monster : MonoBehaviour
 
                 case var _ when damageType.Contains("Thunder"):
 
-                    yShiftAmt = 0.1f;
-                    delayAmt = 0.45f;
+                    if (damageType.Contains("Thunder2"))
+                    {
+                        yShiftAmt = 0.2f;
+                        delayAmt = 0.45f;
+                    }
+
+                    else
+                    {
+                        yShiftAmt = 0.1f;
+                        delayAmt = 0.45f;
+                    }
 
                     if (type == "Brute")
                     {
