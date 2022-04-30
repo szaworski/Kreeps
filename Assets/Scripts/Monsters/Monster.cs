@@ -247,11 +247,7 @@ public class Monster : MonoBehaviour
                     break;
             }
 
-            //Adjust incomingDamage base on the armor value (if damage type isn't "Thunder")
-            if (!damageType.Contains("Thunder"))
-            {
-                incomingDamage -= armor;
-            }
+            incomingDamage -= armor;
 
             //Subtract the amount of damage taken from the health variable (First, check for teleporting projectiles with unique animations)
             if (this.gameObject != null && projectileSpeed == 1)
@@ -286,8 +282,8 @@ public class Monster : MonoBehaviour
     {
         if (Time.time > iceSlowCd && iceSlowStatus)
         {
-           iceSlowStatus = false;
-           moveSpeed += iceSlowAmt;
+            iceSlowStatus = false;
+            moveSpeed += iceSlowAmt;
         }
     }
 
