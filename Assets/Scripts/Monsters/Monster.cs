@@ -362,6 +362,7 @@ public class Monster : MonoBehaviour
                 health -= incomingDamage;
                 healthText.SetText(health.ToString());
                 StartCoroutine(SpawnDamagePopup(incomingDamage, damageType, 0.25f));
+                FindObjectOfType<AudioManager>().PlaySound(damageType);
             }
 
             else if (randomFloat <= evasionChance)
