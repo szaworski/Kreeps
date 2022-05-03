@@ -19,6 +19,7 @@ public class AudioManager : MonoBehaviour
             snd.source.clip = snd.clip;
             snd.source.volume = snd.volume;
             snd.source.pitch = snd.pitch;
+            snd.source.spatialBlend = 1;
         }
     }
 

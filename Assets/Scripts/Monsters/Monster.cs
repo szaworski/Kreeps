@@ -194,13 +194,13 @@ public class Monster : MonoBehaviour
                     if (damageType.Contains("Thunder2"))
                     {
                         yShiftAmt = 0.2f;
-                        delayAmt = 0.45f;
+                        delayAmt = 0.25f;
                     }
 
                     else
                     {
                         yShiftAmt = 0.1f;
-                        delayAmt = 0.45f;
+                        delayAmt = 0.25f;
                     }
 
                     if (type == "Brute")
@@ -340,6 +340,7 @@ public class Monster : MonoBehaviour
         //After a delay, give gold to the player = to the "goldBounty" value
         PlayerHud.newGoldValue = PlayerHud.gold + goldBounty;
         Destroy(this.gameObject);
+        FindObjectOfType<AudioManager>().PlaySound("Death");
     }
 
     IEnumerator SubtractHealth(float incomingDamage, Collider2D projectileObj, string damageType, float delayTime)
