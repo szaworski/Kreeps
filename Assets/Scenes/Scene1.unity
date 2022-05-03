@@ -693,7 +693,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nBonus:\nNone\nPenalty: \nNone\nCost: 100g\nDmg: 5 \nRof:
+  m_text: "Single target\n\nBonus:\nNone\nPenalty: \nNone\nCost: 75g\nDmg: 5 \nRof:
     0.65\nRng: 1"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -3653,8 +3653,18 @@ MonoBehaviour:
     volume: 0.5
     pitch: 1
     source: {fileID: 0}
-  - name: Death
+  - name: Death1
     clip: {fileID: 8300000, guid: b082246bd3a132b4eaebe33e28b275e8, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Death2
+    clip: {fileID: 8300000, guid: 718707048e687c041b53ea46e6099f87, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Death3
+    clip: {fileID: 8300000, guid: 9dde488f17e1a6442812fcfe1e5af3b8, type: 3}
     volume: 0.5
     pitch: 1
     source: {fileID: 0}

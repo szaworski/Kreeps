@@ -340,7 +340,22 @@ public class Monster : MonoBehaviour
         //After a delay, give gold to the player = to the "goldBounty" value
         PlayerHud.newGoldValue = PlayerHud.gold + goldBounty;
         Destroy(this.gameObject);
-        FindObjectOfType<AudioManager>().PlaySound("Death");
+
+        //Get a random death sound to play
+        var rand = new System.Random();
+        int deathSoundIndex = rand.Next(3); 
+        switch (deathSoundIndex)
+        {
+            case 0:
+                FindObjectOfType<AudioManager>().PlaySound("Death1");
+                break;
+            case 1:
+                FindObjectOfType<AudioManager>().PlaySound("Death2");
+                break;
+            case 2:
+                FindObjectOfType<AudioManager>().PlaySound("Death3");
+                break;
+        }
     }
 
     IEnumerator SubtractHealth(float incomingDamage, Collider2D projectileObj, string damageType, float delayTime)
