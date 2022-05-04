@@ -3668,6 +3668,11 @@ MonoBehaviour:
     volume: 0.5
     pitch: 1
     source: {fileID: 0}
+  - name: Ice
+    clip: {fileID: 8300000, guid: eaf380a3fdbf2b249af08133d8f70d52, type: 3}
+    volume: 0.5
+    pitch: 1.5
+    source: {fileID: 0}
 --- !u!1 &977229926
 GameObject:
   m_ObjectHideFlags: 0

@@ -444,7 +444,7 @@ MonoBehaviour:
   damage: 28
   projectileSpeed: 4
   attackSpeed: 0.65
-  attackRange: 1
+  attackRange: 1.2
   damageType: Neutral
   slowAmt: 0
   attackRadius: {fileID: 4442308903161421057}

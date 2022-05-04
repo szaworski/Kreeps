@@ -210,7 +210,7 @@ MonoBehaviour:
 
     Rof: 0.65
 
-    Rng: 1
+    Rng: 1.2
 
 '
   m_isRightToLeft: 0

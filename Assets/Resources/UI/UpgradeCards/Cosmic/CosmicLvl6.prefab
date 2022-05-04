@@ -68,7 +68,7 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Cost: 700g
+    Cost: 600g
 
     Dmg: 100
 
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cosmic Missile
+  m_text: 'Cosmic Missile Lvl 3
 
 '
   m_isRightToLeft: 0
@@ -428,5 +428,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: CosmicLvl3
-  upgradeCost: 700
+  upgradeCost: 600
   upgradeType: Cosmic
