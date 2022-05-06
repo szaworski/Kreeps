@@ -269,7 +269,7 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   damage: 35
   projectileSpeed: 1
-  attackSpeed: 0.75
+  attackSpeed: 0.55
   attackRange: 1
   damageType: Holy
   slowAmt: 0

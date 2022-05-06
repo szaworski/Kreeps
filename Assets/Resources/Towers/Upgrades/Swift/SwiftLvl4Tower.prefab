@@ -101,7 +101,7 @@ MonoBehaviour:
   damage: 14
   projectileSpeed: 4
   attackSpeed: 0.4
-  attackRange: 1
+  attackRange: 1.4
   damageType: Swift
   slowAmt: 0
   attackRadius: {fileID: 4442308903161421057}
