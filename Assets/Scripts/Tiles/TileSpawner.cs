@@ -40,13 +40,22 @@ public class TileSpawner : TileTypes
     public static string spawnDirection;
     public static string tileCardSelected;
     public static string monsterCardSelected;
-
     public static int numOfTimesPlaced;
+
+    //Tier 1 Tiles
     public static int numOfForrests;
     public static int numOfGraveyards;
     public static int numOfRivers;
     public static int numOfMountains;
     public static int numOfSwamps;
+
+    //Tier 2 Tiles
+    public static int numOfDeserts;
+    public static int numOfThickets;
+    public static int numOfTundras;
+    public static int numOfCaverns;
+    public static int numOfSettlements;
+    public static int numOfSeashores;
 
     void Awake()
     {
@@ -261,10 +270,15 @@ public class TileSpawner : TileTypes
             string card3 = null;
 
             //Get the correct Tile card list based on the number of waves finished. (Copy the list from TileCards.cs)
-            if (numOfTimesPlaced < 20)
+            if (numOfTimesPlaced < 15)
             {
                 currentCardList = tier1TileCards.ToList();
                 //Debug.Log("Card List: " + currentCardList[0] + " " + currentCardList[1] + " " + currentCardList[2] + " " + currentCardList[3] + " " + currentCardList[4]);
+            }
+
+            else if (numOfTimesPlaced >= 15 && numOfTimesPlaced < 30)
+            {
+                currentCardList = tier2TileCards.ToList();
             }
 
             //Create a list of 3 unique random cards from the current card list
@@ -333,6 +347,7 @@ public class TileSpawner : TileTypes
 
         switch (tileCardSelected)
         {
+            //Tier 1
             case "Forrest":
                 currentCardList = forrestMonsterCards.ToList();
                 break;
@@ -352,6 +367,33 @@ public class TileSpawner : TileTypes
             case "Swamp":
                 currentCardList = swampMonsterCards.ToList();
                 break;
+
+            //Tier 2
+            case "Desert":
+                currentCardList = desertMonsterCards.ToList();
+                break;
+
+            case "Thicket":
+                currentCardList = thicketMonsterCards.ToList();
+                break;
+
+            case "Tundra":
+                currentCardList = tundraMonsterCards.ToList();
+                break;
+
+            case "Cavern":
+                currentCardList = cavernMonsterCards.ToList();
+                break;
+
+            case "Settlement":
+                currentCardList = settlementMonsterCards.ToList();
+                break;
+
+            case "Seashore":
+                currentCardList = seashoreMonsterCards.ToList();
+                break;
+
+                //Tier 3
         }
 
         //Create a list of 2 unique random cards from the current card list
@@ -419,6 +461,7 @@ public class TileSpawner : TileTypes
         //Check for which tile card was selected and set the "curTiles" array accordingly 
         switch (tileCardSelected)
         {
+            //Tier 1
             case "Forrest":
                 curTiles = forrestTiles;
                 numOfForrests += 1;
@@ -443,57 +486,57 @@ public class TileSpawner : TileTypes
                 curTiles = swampTiles;
                 numOfSwamps += 1;
                 break;
+
+            //Tier 2
+            case "Desert":
+                curTiles = desertTiles;
+                numOfDeserts += 1;
+                break;
+
+            case "Thicket":
+                curTiles = thicketTiles;
+                numOfThickets += 1;
+                break;
+
+            case "Tundra":
+                curTiles = tundraTiles;
+                numOfTundras += 1;
+                break;
+
+            case "Cavern":
+                curTiles = cavernTiles;
+                numOfCaverns += 1;
+                break;
+
+            case "Settlement":
+                curTiles = settlementTiles;
+                numOfSettlements += 1;
+                break;
+
+            case "Seashore":
+                curTiles = seashoreTiles;
+                numOfSeashores += 1;
+                break;
+
+                //Tier 3
         }
 
-        //curTiles = forrestTiles;
-        //Debug.Log("Tile 1 bool: " + validTiles[0]);
-        //Debug.Log("Tile 2 bool: " + validTiles[1]);
-        //Debug.Log("Tile 3 bool: " + validTiles[2]);
-        //Debug.Log("Tile 4 bool: " + validTiles[3]);
-        //Debug.Log("Tile 5 bool: " + validTiles[4]);
-        //Debug.Log("Tile 6 bool: " + validTiles[5]);
-
-        if (validTiles[0])
+        for (int i = 0; i < 6; i++)
         {
-            validTilesList.Add(curTiles[0]);
-        }
-
-        if (validTiles[1])
-        {
-            validTilesList.Add(curTiles[1]);
-        }
-
-        if (validTiles[2])
-        {
-            validTilesList.Add(curTiles[2]);
-        }
-
-        if (validTiles[3])
-        {
-            validTilesList.Add(curTiles[3]);
-        }
-
-        if (validTiles[4])
-        {
-            validTilesList.Add(curTiles[4]);
-        }
-
-        if (validTiles[5])
-        {
-            validTilesList.Add(curTiles[5]);
+            if (validTiles[i])
+            {
+                validTilesList.Add(curTiles[i]);
+            }
         }
     }
 
     public void CheckForValidTiles()
     {
         //Reset all values to false
-        validTiles[0] = false;
-        validTiles[1] = false;
-        validTiles[2] = false;
-        validTiles[3] = false;
-        validTiles[4] = false;
-        validTiles[5] = false;
-        //Debug.Log("Current tile name: " + tileName);
+        for (int i = 0; i < 6; i++)
+        {
+            validTiles[i] = false;
+        }
 
         if (tileName == "StartingTile")
         {

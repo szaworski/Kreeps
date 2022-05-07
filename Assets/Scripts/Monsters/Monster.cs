@@ -319,11 +319,13 @@ public class Monster : MonoBehaviour
     void ApplySpawnBonuses()
     {
         //Apply any Tier 1 bonuses
-        health += 6 * TileSpawner.numOfRivers;
+        health += 5 * TileSpawner.numOfRivers;
         armor += 1 * TileSpawner.numOfMountains;
         moveSpeed += 0.05f * TileSpawner.numOfForrests;
         hpRegen += 1 * TileSpawner.numOfGraveyards;
         evasionChance += 0.03f * TileSpawner.numOfSwamps;
+
+        //Apply any Tier 2 bonuses
 
         //Set the maxHealth value
         maxHealth = health;
