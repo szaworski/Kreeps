@@ -347,13 +347,13 @@ public class Monster : MonoBehaviour
         switch (deathSoundIndex)
         {
             case 0:
-                FindObjectOfType<AudioManager>().PlaySound("Death1");
+                GameObject.Find("MonsterSounds").GetComponent<AudioManager>().PlaySound("Death1");
                 break;
             case 1:
-                FindObjectOfType<AudioManager>().PlaySound("Death2");
+                GameObject.Find("MonsterSounds").GetComponent<AudioManager>().PlaySound("Death2");
                 break;
             case 2:
-                FindObjectOfType<AudioManager>().PlaySound("Death3");
+                GameObject.Find("MonsterSounds").GetComponent<AudioManager>().PlaySound("Death3");
                 break;
         }
     }
@@ -378,7 +378,7 @@ public class Monster : MonoBehaviour
                 health -= incomingDamage;
                 healthText.SetText(health.ToString());
                 StartCoroutine(SpawnDamagePopup(incomingDamage, damageType, 0.25f));
-                FindObjectOfType<AudioManager>().PlaySound(damageType);
+                GameObject.Find("DamageSounds").GetComponent<AudioManager>().PlaySound(damageType);
             }
 
             else if (randomFloat <= evasionChance)

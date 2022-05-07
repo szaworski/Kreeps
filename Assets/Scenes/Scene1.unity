@@ -811,6 +811,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2475134989899632812, guid: de66faca07a11c1499b30777957115c4, type: 3}
   m_PrefabInstance: {fileID: 2475134990094367020}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &206708601
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 206708603}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &206708603
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206708601}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1480971272}
+  - {fileID: 307566665}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &211970822
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,6 +1221,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 300454185}
   m_CullTransparentMesh: 0
+--- !u!1 &307566664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 307566665}
+  - component: {fileID: 307566666}
+  m_Layer: 0
+  m_Name: MonsterSounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &307566665
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307566664}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 206708603}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &307566666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307566664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0715f3b535577649a88a9467c856c94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Death1
+    clip: {fileID: 8300000, guid: b082246bd3a132b4eaebe33e28b275e8, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Death2
+    clip: {fileID: 8300000, guid: 718707048e687c041b53ea46e6099f87, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Death3
+    clip: {fileID: 8300000, guid: 9dde488f17e1a6442812fcfe1e5af3b8, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
 --- !u!1 &308587902
 GameObject:
   m_ObjectHideFlags: 0
@@ -3594,95 +3685,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 7
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &937499760
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 937499761}
-  - component: {fileID: 937499762}
-  m_Layer: 0
-  m_Name: AudioManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &937499761
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937499760}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &937499762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937499760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0715f3b535577649a88a9467c856c94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sounds:
-  - name: Neutral
-    clip: {fileID: 8300000, guid: 2ac66b2a5bbcb364cb53a08aa5a5bc9c, type: 3}
-    volume: 0.5
-    pitch: 0.75
-    source: {fileID: 0}
-  - name: Fire
-    clip: {fileID: 8300000, guid: af346247cf8516b49a50bf93d7e19bc5, type: 3}
-    volume: 0.5
-    pitch: 1
-    source: {fileID: 0}
-  - name: Thunder
-    clip: {fileID: 8300000, guid: 5e2ef8f28af610f48b1be8cba29463ca, type: 3}
-    volume: 0.5
-    pitch: 1
-    source: {fileID: 0}
-  - name: Death1
-    clip: {fileID: 8300000, guid: b082246bd3a132b4eaebe33e28b275e8, type: 3}
-    volume: 0.5
-    pitch: 1
-    source: {fileID: 0}
-  - name: Death2
-    clip: {fileID: 8300000, guid: 718707048e687c041b53ea46e6099f87, type: 3}
-    volume: 0.5
-    pitch: 1
-    source: {fileID: 0}
-  - name: Death3
-    clip: {fileID: 8300000, guid: 9dde488f17e1a6442812fcfe1e5af3b8, type: 3}
-    volume: 0.5
-    pitch: 1
-    source: {fileID: 0}
-  - name: Ice
-    clip: {fileID: 8300000, guid: eaf380a3fdbf2b249af08133d8f70d52, type: 3}
-    volume: 0.5
-    pitch: 1.5
-    source: {fileID: 0}
-  - name: Holy
-    clip: {fileID: 8300000, guid: 68d10c1b6e8c1a84a840461d37f95e63, type: 3}
-    volume: 0.5
-    pitch: 1.5
-    source: {fileID: 0}
-  - name: Swift
-    clip: {fileID: 8300000, guid: 3923dd9a04a6eec478bf7688fd9b3df5, type: 3}
-    volume: 0.5
-    pitch: 0.6
-    source: {fileID: 0}
 --- !u!1 &977229926
 GameObject:
   m_ObjectHideFlags: 0
@@ -4850,6 +4852,80 @@ MonoBehaviour:
   cardPos: {fileID: 1452479630}
   pos1: {fileID: 1176173924}
   pos2: {fileID: 875374868}
+--- !u!1 &1480971271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1480971272}
+  - component: {fileID: 1480971273}
+  m_Layer: 0
+  m_Name: DamageSounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1480971272
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480971271}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 206708603}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1480971273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480971271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0715f3b535577649a88a9467c856c94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Neutral
+    clip: {fileID: 8300000, guid: 2ac66b2a5bbcb364cb53a08aa5a5bc9c, type: 3}
+    volume: 0.5
+    pitch: 0.75
+    source: {fileID: 0}
+  - name: Fire
+    clip: {fileID: 8300000, guid: af346247cf8516b49a50bf93d7e19bc5, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Ice
+    clip: {fileID: 8300000, guid: eaf380a3fdbf2b249af08133d8f70d52, type: 3}
+    volume: 0.5
+    pitch: 1.5
+    source: {fileID: 0}
+  - name: Thunder
+    clip: {fileID: 8300000, guid: 5e2ef8f28af610f48b1be8cba29463ca, type: 3}
+    volume: 0.5
+    pitch: 1
+    source: {fileID: 0}
+  - name: Holy
+    clip: {fileID: 8300000, guid: 68d10c1b6e8c1a84a840461d37f95e63, type: 3}
+    volume: 0.5
+    pitch: 1.5
+    source: {fileID: 0}
+  - name: Swift
+    clip: {fileID: 8300000, guid: 3923dd9a04a6eec478bf7688fd9b3df5, type: 3}
+    volume: 0.5
+    pitch: 0.6
+    source: {fileID: 0}
 --- !u!1 &1529332574
 GameObject:
   m_ObjectHideFlags: 0
