@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Neutral Lvl 3
+  m_text: 'Normal Lvl 3
 
 '
   m_isRightToLeft: 0

@@ -1,19 +1,21 @@
 
 
-Tower damage types:
+Possible game names: Kreeps
 
-Neutral tower (Grey): Medium damage, medium rate of fire, low range. No status effects.
+Tower types:
 
-Fire tower (Red):  Medium damage, medium rate of fire, medium range. Burn damage over time for a few seconds.
+Normal tower (Grey): Medium damage, medium rate of fire, low range. No status effects.
+
+Fire tower (Red):  Medium damage, medium rate of fire, medium range. AOE fire damage in tower radius.
 Bonus against: Beast  
-Weak against: Machine
+Weak against: Brute
 
-Ice tower (Blue): Medium damage, medium rate of fire, medium range. Slows.
+Ice tower (Blue): Medium damage, medium rate of fire, medium range. AOE Ice damage in tower radius. Slows.
 Bonus against: Humanoid 
 Weak against: Undead
 
-Lightning tower (Yellow): High damage, low rate of fire, low range. Crit chance.
-Bonus against: Machine
+Thunder tower (Yellow): High damage, low rate of fire, low range. Crit chance.
+Bonus against: Brute
 Weak against: Beast
 
 Holy tower (White): Low damage, medium rate of fire, medium range. Removes positive buffs from target.
@@ -21,39 +23,96 @@ Bonus against: Undead
 Weak against: Humanoid 
 
 Swift tower (Green): Low damage, high rate of fire, medium range. Quickest rate of fire
-Bonus against: Vermin
-Weak against: Fiend
+Bonus against: Pest
+Weak against: Demon
 
-Cosmic tower (Purple): Medium damage, low rate of fire, high range. AOE damage.
-Bonus against: Fiend
-Weak against: Vermin
+Cosmic tower (Purple): High damage, low rate of fire, high range.
+Bonus against: Demon
+Weak against: Pest
 
 
 
 Monster types (With Characteristics) :
 
-Beast: High HP with medium movement speed. No armor.
+Beast: High HP with medium movement speed.
 
-Undead: Medium HP and move speed. Has abilites like self HP regen, or chance to respawn on death. No armor. 
+Undead: Medium - low HP and move speed. HP regen, or chance to respawn on death (Maybe certain ones will spawn another monster on death?).
 
 Humanoid: Well rounded. Medium HP and move speed with slight armor. 
 
-Machine: Tanky units. Medium to high HP and armor, with low to medium move speeds
+Brute: Tanky units. Medium to high HP and armor, with low to medium move speed.
 
-Vermin: Quick units. High move speed with low HP. No armor
+Pest: Quick units. High move speed with low HP.
 
-Fiend:
+Demon: Medium HP and move speed. (Chance to dodge attacks?)
 
 Transcendent: Has no weakness (No bonus damage from a specific type, or any resistances) and vary between high HP, high armor, or high movespeed. 
 
 
-How does armor work?: Armor reduces incoming attack damage by 1 for each 1 armor the unit has. 
+How does armorwork?: Armor reduces incoming attack damage by 1 for each 1 armor the unit has. 
 
 
-Starter tiles: (Thinking 5 per tier)
+Tier 1 tiles:
 
-Forrest Tile:
-Monsters: Wolf, Goblin, Robber, Owl
+Forrest: Adds +5 move speed to all monsters for each Forrest tile placed
+Monsters: Wolf (Beast), Goblin (Humanoid), Bandit (Humanoid), Owl (Pest)
+
+Graveyard: Adds +1 HP regen per second to all monsters for each Graveyard tile placed
+Monsters: Zombie (Undead), Skeleton (Undead), Ghost (Undead), Bat (Pest)
+
+Mountain: Adds +1 armor to all monsters for each Mountain tiles
+Monsters: Golem (Brute), Goat (Beast), Ranger (Humanoid), Bear (Brute)
+
+River: Adds +6 to max health of all monsters for each River tile placed
+Monsters: Bluegill (Beast), Turtle (Brute), Duck (Beast), Monk (Humanoid) 
+
+Swamp: Adds +3% to evade attacks to all monsters for each Swamp tile placed
+Monsters: Spider (Pest), Alligator (Brute), Bullfrog(Pest), Ghoul (Undead)
+
+Beast: 4
+Undead: 4
+Humanoid: 4
+Brute: 4
+Pest: 4
+Demon: 0
+
+
+Tier 2 tiles:
+
+Desert: 
+Monsters: Mummy (Undead), Scorpion (Pest), Rattlesnake (Pest), Camel (Brute)
+
+Thicket: 
+Monsters: Minotaur(Brute), Panther (Beast), Giant Spider(Pest), Wild boar (Beast)
+
+Tundra: 
+Monsters: Polar bear (Brute), Arctic Wolf (Beast), Penguin (Pest), Lich (Undead)
+
+Cavern: 
+Monsters: Troll (Brute), Miner (Humanoid), Skeleton warrior (Undead), Wraith (Undead)
+
+Settlement: 
+Monsters: Knight (Humanoid), Sheep (Beast), Farmer (Humanoid), Rat (Pest)
+
+Seashore:
+Monsters: Crab (Brute), Fisherman (Humanoid), Starfish (Beast), Drowned crewmate (Undead)
+
+
+Humanoid: 4 
+Beast: 4
+Undead: 5
+Brute: 5
+Pest: 5
+Demon: 0
+
+
+
+Tier 3 tiles:
+
+
+
+
+
 
 
 
