@@ -371,6 +371,7 @@ public class Monster : MonoBehaviour
             if (incomingDamage <= 0)
             {
                 StartCoroutine(SpawnDamagePopup(incomingDamage, damageType, 0.25f));
+                GameObject.Find("DamageSounds").GetComponent<AudioManager>().PlaySound(damageType);
             }
 
             //Make sure damage is greater than 0, and evasion does not occur

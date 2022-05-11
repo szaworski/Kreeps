@@ -52,6 +52,22 @@ Transcendent: Has no weakness (No bonus damage from a specific type, or any resi
 How does armorwork?: Armor reduces incoming attack damage by 1 for each 1 armor the unit has. 
 
 
+
+Negative effect ideas: 
+
+1. Decrease gold bounty of monsters
+
+2. Increase kreep damage to player
+
+3. Frenzy: Increase movespeed by small amount per second after spawning
+
+4. Decrease damage of specific tower types
+
+5.
+
+
+
+
 Tier 1 tiles:
 
 Forrest: Adds +5 move speed to all monsters for each Forrest tile placed
@@ -63,7 +79,7 @@ Monsters: Zombie (Undead), Skeleton (Undead), Ghost (Undead), Bat (Pest)
 Mountain: Adds +1 armor to all monsters for each Mountain tiles
 Monsters: Golem (Brute), Goat (Beast), Ranger (Humanoid), Bear (Brute)
 
-River: Adds +6 to max health of all monsters for each River tile placed
+River: Adds +5 to max health of all monsters for each River tile placed
 Monsters: Bluegill (Beast), Turtle (Brute), Duck (Beast), Monk (Humanoid) 
 
 Swamp: Adds +3% to evade attacks to all monsters for each Swamp tile placed
@@ -79,27 +95,27 @@ Demon: 0
 
 Tier 2 tiles:
 
-Desert: 
+Desert: Adds +1 armor, +5 move speed, and +1 HP regen per Desert tile
 Monsters: Mummy (Undead), Scorpion (Pest), Rattlesnake (Pest), Camel (Brute)
 
-Thicket: 
+Thicket: Adds +3% evasion and +10 max health per Thicket tile
 Monsters: Minotaur(Brute), Panther (Beast), Giant Spider(Pest), Wild boar (Beast)
 
-Tundra: 
+Tundra: Adds +1 armor and +10 max health per Tundra tile
 Monsters: Polar bear (Brute), Arctic Wolf (Beast), Penguin (Pest), Lich (Undead)
 
-Cavern: 
-Monsters: Troll (Brute), Miner (Humanoid), Skeleton warrior (Undead), Wraith (Undead)
+Cavern: Adds +2 armor and +2 Hp regen per Cavern tile
+Monsters: Ogre (Brute), Miner (Humanoid), Skeleton Warrior (Undead), Wraith (Undead)
 
-Settlement: 
+Settlement: Adds +10 move speed and +5 max health per Settlement tile
 Monsters: Knight (Humanoid), Sheep (Beast), Farmer (Humanoid), Rat (Pest)
 
-Seashore:
-Monsters: Crab (Brute), Fisherman (Humanoid), Starfish (Beast), Drowned crewmate (Undead)
+Seashore: Adds +3% evasion and +5 move speed per Seashore tile
+Monsters: Crab (Brute), Fisherman (Humanoid), Sea Serpent(Beast), Drifter (Undead)
 
 
 Humanoid: 4 
-Beast: 4
+Beast: 5
 Undead: 5
 Brute: 5
 Pest: 5

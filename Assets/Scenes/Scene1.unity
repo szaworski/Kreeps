@@ -4919,7 +4919,7 @@ MonoBehaviour:
   - name: Holy
     clip: {fileID: 8300000, guid: 68d10c1b6e8c1a84a840461d37f95e63, type: 3}
     volume: 0.5
-    pitch: 1.5
+    pitch: 1.2
     source: {fileID: 0}
   - name: Swift
     clip: {fileID: 8300000, guid: 3923dd9a04a6eec478bf7688fd9b3df5, type: 3}
