@@ -259,7 +259,7 @@ public class Monster : MonoBehaviour
             incomingDamage -= armor;
 
             //Subtract the amount of damage taken from the health variable (First, check for teleporting projectiles with unique animations)
-            if (this.gameObject != null && projectileSpeed == 1)
+            if (this.gameObject != null && this.gameObject == monsterTarget && projectileSpeed == 1)
             {
                 //Spawn in the animation object
                 GameObject damageAnimObj = (GameObject)Instantiate(Resources.Load("Animations/" + damageType), gameObject.transform);
