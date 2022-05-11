@@ -40,6 +40,7 @@ public class TileSpawner : TileTypes
     public static string spawnDirection;
     public static string tileCardSelected;
     public static string monsterCardSelected;
+    public static string currTier;
     public static int numOfTimesPlaced;
 
     //Tier 1 Tiles
@@ -59,6 +60,7 @@ public class TileSpawner : TileTypes
 
     void Awake()
     {
+        currTier = "Tier1";
         numOfTimesPlaced = 0;
         curTiles = new string[6];
         validTiles = new bool[6];
@@ -276,8 +278,9 @@ public class TileSpawner : TileTypes
                 //Debug.Log("Card List: " + currentCardList[0] + " " + currentCardList[1] + " " + currentCardList[2] + " " + currentCardList[3] + " " + currentCardList[4]);
             }
 
-            else if (numOfTimesPlaced >= 15 && numOfTimesPlaced < 30)
+            else if (numOfTimesPlaced >= 15 && numOfTimesPlaced < 25)
             {
+                currTier = "Tier2";
                 currentCardList = tier2TileCards.ToList();
             }
 
@@ -314,9 +317,9 @@ public class TileSpawner : TileTypes
             GameObject cardSlot2 = GameObject.Find("TileCardSlot2");
             GameObject cardSlot3 = GameObject.Find("TileCardSlot3");
 
-            card1Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + card1), cardSlot1.transform);
-            card2Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + card2), cardSlot2.transform);
-            card3Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + card3), cardSlot3.transform);
+            card1Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + currTier + "/" + card1), cardSlot1.transform);
+            card2Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + currTier + "/" + card2), cardSlot2.transform);
+            card3Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + currTier + "/"+ card3), cardSlot3.transform);
 
             card1Obj.transform.position = cardSlot1.transform.position;
             card2Obj.transform.position = cardSlot2.transform.position;
@@ -424,8 +427,8 @@ public class TileSpawner : TileTypes
         GameObject cardSlot4 = GameObject.Find("TileCardSlot4");
         GameObject cardSlot5 = GameObject.Find("TileCardSlot5");
 
-        card1Obj = (GameObject)Instantiate(Resources.Load("UI/MonsterCards/" + tileCardSelected + "/" + card1), cardSlot4.transform);
-        card2Obj = (GameObject)Instantiate(Resources.Load("UI/MonsterCards/" + tileCardSelected + "/" + card2), cardSlot5.transform);
+        card1Obj = (GameObject)Instantiate(Resources.Load("UI/MonsterCards/" + currTier + "/" + tileCardSelected + "/" + card1), cardSlot4.transform);
+        card2Obj = (GameObject)Instantiate(Resources.Load("UI/MonsterCards/" + currTier + "/" + tileCardSelected + "/" + card2), cardSlot5.transform);
 
         card1Obj.transform.position = cardSlot4.transform.position;
         card2Obj.transform.position = cardSlot5.transform.position;
@@ -456,7 +459,7 @@ public class TileSpawner : TileTypes
     public void GetListOfValidTiles()
     {
         validTilesList = new List<string>();
-        prependTileName = "Tiles/" + tileCardSelected + "Tiles/";
+        prependTileName = "Tiles/" + currTier + "/" + tileCardSelected + "Tiles/";
 
         //Check for which tile card was selected and set the "curTiles" array accordingly 
         switch (tileCardSelected)

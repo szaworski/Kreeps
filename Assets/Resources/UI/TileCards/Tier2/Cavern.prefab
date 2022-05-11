@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6130404801214499859}
   - component: {fileID: 3346913848105228779}
   m_Layer: 5
-  m_Name: Swamp
+  m_Name: Cavern
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 2809277084861378174, guid: 6bdd6b4d361af7c458cc18d9e3967502, type: 3}
+  m_Sprite: {fileID: 8897939491969262803, guid: 1a16fcf251a09034b89236025dc5639a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -214,7 +214,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Kreeps gain +3% evasion for each Swamp tile placed
+  m_text: 'Kreeps gain:
+
+    +2 armor
+
+    +2 hp regen
+
+    for each Cavern placed'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -348,7 +354,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Swamp
+  m_text: 'Cavern
 
 '
   m_isRightToLeft: 0

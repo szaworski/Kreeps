@@ -326,6 +326,26 @@ public class Monster : MonoBehaviour
         evasionChance += 0.03f * TileSpawner.numOfSwamps;
 
         //Apply any Tier 2 bonuses
+        health += 5 * TileSpawner.numOfSettlements;
+        health += 10 * TileSpawner.numOfThickets;
+        health += 10 * TileSpawner.numOfTundras;
+
+        armor += 1 * TileSpawner.numOfDeserts;
+        armor += 1 * TileSpawner.numOfTundras;
+        armor += 2 * TileSpawner.numOfCaverns;
+
+        moveSpeed += 0.05f * TileSpawner.numOfDeserts;
+        moveSpeed += 0.05f * TileSpawner.numOfSeashores;
+        moveSpeed += 0.10f * TileSpawner.numOfSettlements;
+
+        hpRegen += 1 * TileSpawner.numOfDeserts;
+        hpRegen += 1 * TileSpawner.numOfSeashores;
+        hpRegen += 2 * TileSpawner.numOfCaverns;
+
+        evasionChance += 0.03f * TileSpawner.numOfSeashores;
+        evasionChance += 0.03f * TileSpawner.numOfThickets;
+
+        //Apply any Tier 3 bonuses
 
         //Set the maxHealth value
         maxHealth = health;

@@ -75,30 +75,12 @@ public class MonsterManager : MonoBehaviour
     {
         if (TileSpawner.tileName.Contains("Starting"))
         {
-            prependMonsterName = "Monsters/Forrest/";
+            prependMonsterName = "Monsters/Tier1/Forrest/";
         }
 
-        switch (TileSpawner.tileCardSelected)
+        else
         {
-            case "Forrest":
-                prependMonsterName = "Monsters/Forrest/";
-                break;
-
-            case "Graveyard":
-                prependMonsterName = "Monsters/Graveyard/";
-                break;
-
-            case "River":
-                prependMonsterName = "Monsters/River/";
-                break;
-
-            case "Mountain":
-                prependMonsterName = "Monsters/Mountain/";
-                break;
-
-            case "Swamp":
-                prependMonsterName = "Monsters/Swamp/";
-                break;
+            prependMonsterName = "Monsters/" + TileSpawner.currTier + "/" + TileSpawner.tileCardSelected + "/";
         }
     }
 }
