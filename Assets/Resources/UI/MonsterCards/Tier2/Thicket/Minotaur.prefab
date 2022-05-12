@@ -221,12 +221,12 @@ MonoBehaviour:
 
     Base stats:
 
-    Health: 32
+    Health: 120
 
     Armor:
-    0
+    1
 
-    Speed: 75
+    Speed: 30
 
     Hp regen: 0'
   m_isRightToLeft: 0
