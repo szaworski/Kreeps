@@ -272,13 +272,13 @@ public class TileSpawner : TileTypes
             string card3 = null;
 
             //Get the correct Tile card list based on the number of waves finished. (Copy the list from TileCards.cs)
-            if (numOfTimesPlaced < 15)
+            if (numOfTimesPlaced < 10)
             {
                 currentCardList = tier1TileCards.ToList();
                 //Debug.Log("Card List: " + currentCardList[0] + " " + currentCardList[1] + " " + currentCardList[2] + " " + currentCardList[3] + " " + currentCardList[4]);
             }
 
-            else if (numOfTimesPlaced >= 15 && numOfTimesPlaced < 25)
+            else if (numOfTimesPlaced >= 10 && numOfTimesPlaced < 25)
             {
                 currTier = "Tier2";
                 currentCardList = tier2TileCards.ToList();

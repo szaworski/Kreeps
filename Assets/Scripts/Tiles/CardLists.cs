@@ -17,9 +17,9 @@ public class CardsLists : MonoBehaviour
 
     //Tier 2 Monsters
     [System.NonSerialized] public List<string> desertMonsterCards = new List<string> { "Mummy", "Scorpion", "Rattlesnake", "Camel" };
-    [System.NonSerialized] public List<string> thicketMonsterCards = new List<string> { "Orc", "Minotaur", "Panther", "Giant spider" };
-    [System.NonSerialized] public List<string> tundraMonsterCards = new List<string> { "Polar bear", "Arctic wolf", "Penguin", "Lich" };
-    [System.NonSerialized] public List<string> cavernMonsterCards = new List<string> { "Troll", "Miner", "", "" };
-    [System.NonSerialized] public List<string> settlementMonsterCards = new List<string> { "Knight", "Sheep", "Farmer", "" };
-    [System.NonSerialized] public List<string> seashoreMonsterCards = new List<string> { "Crab", "", "", "" };
+    [System.NonSerialized] public List<string> thicketMonsterCards = new List<string> { "Wild Boar", "Minotaur", "Panther", "Giant Spider" };
+    [System.NonSerialized] public List<string> tundraMonsterCards = new List<string> { "Polar Bear", "Arctic Wolf", "Penguin", "Lich" };
+    [System.NonSerialized] public List<string> cavernMonsterCards = new List<string> { "Ogre", "Miner", "Wraith", "Skeleton Warrior" };
+    [System.NonSerialized] public List<string> settlementMonsterCards = new List<string> { "Knight", "Sheep", "Farmer", "Rat" };
+    [System.NonSerialized] public List<string> seashoreMonsterCards = new List<string> { "Crab", "Drifter", "Fisherman", "Sea Serpent" };
 }

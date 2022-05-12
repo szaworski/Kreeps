@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: -6739542867013121178}
   - component: {fileID: 6515737402300966651}
   m_Layer: 10
-  m_Name: Sheep
+  m_Name: Polar Bear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -415,7 +415,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 4733488685646796432, guid: 829d90ed38387434296e9366cbd71063, type: 3}
+  m_Sprite: {fileID: 4170888050848619017, guid: 7cbe718e87b93484ea86c57e78b25f26, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -462,7 +462,7 @@ Animator:
   m_GameObject: {fileID: 6262272174153023960}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c8aaa49bdd24fb04281c13724a48c5da, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -484,11 +484,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 100
-  armor: 0
+  health: 95
+  armor: 1
   goldBounty: 15
-  type: Beast
-  moveSpeed: 0.38
+  type: Brute
+  moveSpeed: 0.4
   hpRegen: 0
   evasionChance: 0
   healthText: {fileID: 2240702306701519988}
