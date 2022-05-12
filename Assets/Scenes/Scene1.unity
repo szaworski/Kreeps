@@ -693,7 +693,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nBonus:\nNone\nPenalty: \nNone\nCost: 75g\nDmg: 5 \nRof:
+  m_text: "Single target\n\nBonus:\nNone\nPenalty: \nNone\nCost: 75g\nDmg: 7\nRof:
     0.65\nRng: 1"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -1614,7 +1614,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Single target\n\nBonus:\nx2 to Pests\nPenalty: \nx0.5 to Demons\nCost:
-    300g\nDmg: 6\nRof: 0.5\nRng: 1.2"
+    300g\nDmg: 8\nRof: 0.5\nRng: 1.2"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -2448,7 +2448,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Single target\n\nBonus:\nx2 to Undead\nPenalty: \nx0.5 to Humanoids\nCost:
-    200g\nDmg: 14\nRof: 0.8\nRng: 0.8\n"
+    200g\nDmg: 18\nRof: 0.8\nRng: 1\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -2868,7 +2868,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "AOE in radius\n\nBonus:\nx2 to Beasts\nPenalty: \nx0.5 to Brutes\nCost:
-    150g\nDmg: 3 \nRof: 0.6\nRng: 0.7"
+    150g\nDmg: 4 \nRof: 0.6\nRng: 0.7"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -4082,7 +4082,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Single target\n\nBonus:\nx2 to Brutes\nPenalty: \nx0.5 to Beasts\nCost:
-    200g\nDmg: 20\nRof: 1.5\nRng: 1.2"
+    200g\nDmg: 24\nRof: 1.5\nRng: 1.2"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

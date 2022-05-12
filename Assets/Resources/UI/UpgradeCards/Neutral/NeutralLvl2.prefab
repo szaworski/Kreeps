@@ -201,7 +201,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nCost: 100g\nDmg: 12 \nRof: 0.65\nRng: 1\n"
+  m_text: 'Single target
+
+
+    Cost: 100g
+
+    Dmg: 15
+
+    Rof: 0.65
+
+    Rng: 1
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

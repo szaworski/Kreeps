@@ -995,10 +995,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
-  damage: 32
+  damage: 35
   projectileSpeed: 4
   attackSpeed: 0.6
-  attackRange: 1
+  attackRange: 1.2
   damageType: Fire
   slowAmt: 0
   attackRadius: {fileID: 9061148783392565081}
