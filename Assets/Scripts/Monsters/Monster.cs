@@ -64,6 +64,7 @@ public class Monster : MonoBehaviour
         FollowWaypoints();
         ResetEffectAnims();
         ApplyHpRegen();
+        LimitMoveSpeedReduction();
 
         if (isTakingDamage)
         {
@@ -292,7 +293,24 @@ public class Monster : MonoBehaviour
         if (Time.time > iceSlowCd && iceSlowStatus)
         {
             iceSlowStatus = false;
-            moveSpeed += iceSlowAmt;
+
+            if (moveSpeed == 0.1f)
+            {
+                moveSpeed += iceSlowAmt - 0.1f;
+            }
+
+            else
+            {
+                moveSpeed += iceSlowAmt;
+            }
+        }
+    }
+
+    void LimitMoveSpeedReduction()
+    {
+        if (iceSlowStatus && moveSpeed <= 0.1f)
+        {
+            moveSpeed = 0.1f;
         }
     }
 
@@ -365,7 +383,7 @@ public class Monster : MonoBehaviour
 
         //Get a random death sound to play
         var rand = new System.Random();
-        int deathSoundIndex = rand.Next(3); 
+        int deathSoundIndex = rand.Next(3);
         switch (deathSoundIndex)
         {
             case 0:

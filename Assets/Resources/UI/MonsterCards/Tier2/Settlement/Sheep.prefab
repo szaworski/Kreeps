@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6130404801214499859}
   - component: {fileID: -185125906687809208}
   m_Layer: 5
-  m_Name: Wraith
+  m_Name: Sheep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4867968859756567152, guid: a67ca317269ed424dafe0342928e7b5e, type: 3}
+  m_Sprite: {fileID: 9210075361523944953, guid: bd895fe2282b4bf41904993f1486be5b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3c50722ec083041bcf2aec73db18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: Wraith
+  cardName: Sheep
   upgradeCost: 0
   upgradeType: 
 --- !u!1 &7402375620175900289
@@ -214,21 +214,21 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Type: Undead
+  m_text: 'Type: Beast
 
     Bounty: 15 gold
 
 
     Base stats:
 
-    Health: 60
+    Health: 32
 
     Armor:
     0
 
-    Speed: 60
+    Speed: 75
 
-    Hp regen: 2'
+    Hp regen: 0'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -362,9 +362,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Wraith
-
-'
+  m_text: Sheep
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
