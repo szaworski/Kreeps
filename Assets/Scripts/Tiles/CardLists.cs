@@ -9,8 +9,8 @@ public class CardsLists : MonoBehaviour
     //[System.NonSerialized] public List<string> tier3TileCards = new List<string> { "Forrest", "Graveyard", "Mountain", "River", "Swamp" };
 
     //Tier 1 Monsters
-    [System.NonSerialized] public List<string> forrestMonsterCards = new List<string> { "Wolf", "Goblin", "Bandit", "Owl" };
-    [System.NonSerialized] public List<string> graveyardMonsterCards = new List<string> { "Zombie", "Skeleton", "Ghost", "Bat" };
+    [System.NonSerialized] public List<string> forrestMonsterCards = new List<string> { "Wolf", "Goblin", "Skeleton", "Owl" };
+    [System.NonSerialized] public List<string> graveyardMonsterCards = new List<string> { "Zombie", "Bandit", "Ghost", "Bat" };
     [System.NonSerialized] public List<string> riverMonsterCards = new List<string> { "Bluegill", "Turtle", "Duck", "Monk" };
     [System.NonSerialized] public List<string> mountainMonsterCards = new List<string> { "Golem", "Goat", "Ranger", "Bear" };
     [System.NonSerialized] public List<string> swampMonsterCards = new List<string> { "Spider", "Alligator", "Bullfrog", "Ghoul" };

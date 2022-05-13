@@ -516,11 +516,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 24
+  health: 28
   armor: 0
   goldBounty: 10
   type: Pest
-  moveSpeed: 0.55
+  moveSpeed: 0.65
   hpRegen: 0
   evasionChance: 0
   healthText: {fileID: 2040553587281962461}
