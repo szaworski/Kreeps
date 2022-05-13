@@ -116,6 +116,7 @@ public class Monster : MonoBehaviour
         {
             //Destroy the game object once the monster reaches the main base
             Destroy(this.gameObject);
+            GameObject.Find("MonsterSounds").GetComponent<AudioManager>().PlaySound("PlayerDamage");
 
             //Subtract a point of health from the main base
             SubtractPlayerHealth();
@@ -339,7 +340,7 @@ public class Monster : MonoBehaviour
         //Apply any Tier 1 bonuses
         health += 5 * TileSpawner.numOfRivers;
         armor += 1 * TileSpawner.numOfMountains;
-        moveSpeed += 0.05f * TileSpawner.numOfForrests;
+        moveSpeed += 0.03f * TileSpawner.numOfForrests;
         hpRegen += 1 * TileSpawner.numOfGraveyards;
         evasionChance += 0.03f * TileSpawner.numOfSwamps;
 
@@ -352,9 +353,9 @@ public class Monster : MonoBehaviour
         armor += 1 * TileSpawner.numOfTundras;
         armor += 2 * TileSpawner.numOfCaverns;
 
-        moveSpeed += 0.05f * TileSpawner.numOfDeserts;
-        moveSpeed += 0.05f * TileSpawner.numOfSeashores;
-        moveSpeed += 0.10f * TileSpawner.numOfSettlements;
+        moveSpeed += 0.03f * TileSpawner.numOfDeserts;
+        moveSpeed += 0.03f * TileSpawner.numOfSeashores;
+        moveSpeed += 0.07f * TileSpawner.numOfSettlements;
 
         hpRegen += 1 * TileSpawner.numOfDeserts;
         hpRegen += 1 * TileSpawner.numOfSeashores;

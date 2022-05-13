@@ -1280,6 +1280,11 @@ MonoBehaviour:
     volume: 0.5
     pitch: 1
     source: {fileID: 0}
+  - name: PlayerDamage
+    clip: {fileID: 8300000, guid: 2ac66b2a5bbcb364cb53a08aa5a5bc9c, type: 3}
+    volume: 0.5
+    pitch: 0.2
+    source: {fileID: 0}
 --- !u!1 &308587902
 GameObject:
   m_ObjectHideFlags: 0
@@ -2448,7 +2453,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Single target\n\nBonus:\nx2 to Undead\nPenalty: \nx0.5 to Humanoids\nCost:
-    200g\nDmg: 18\nRof: 0.8\nRng: 1\n"
+    200g\nDmg: 18\nRof: 1.2\nRng: 0.8\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -4082,7 +4087,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Single target\n\nBonus:\nx2 to Brutes\nPenalty: \nx0.5 to Beasts\nCost:
-    200g\nDmg: 24\nRof: 1.5\nRng: 1.2"
+    200g\nDmg: 24\nRof: 1.5\nRng: 1"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
