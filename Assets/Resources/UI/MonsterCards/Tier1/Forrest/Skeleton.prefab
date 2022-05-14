@@ -226,7 +226,7 @@ MonoBehaviour:
     Armor:
     0
 
-    Speed: 45
+    Speed: 40
 
     Hp regen: 1'
   m_isRightToLeft: 0

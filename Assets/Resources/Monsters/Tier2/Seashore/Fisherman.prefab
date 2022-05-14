@@ -488,7 +488,7 @@ MonoBehaviour:
   armor: 0
   goldBounty: 15
   type: Humanoid
-  moveSpeed: 0.55
+  moveSpeed: 0.44
   hpRegen: 0
   evasionChance: 0
   healthText: {fileID: 2240702306701519988}
