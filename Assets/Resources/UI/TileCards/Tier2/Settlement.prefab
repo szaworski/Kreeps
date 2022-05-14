@@ -216,9 +216,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +5 max health
+    +8 max health
 
-    +7 move speed
+    +10 move speed
 
     for each Settlement
     placed'

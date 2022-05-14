@@ -741,7 +741,7 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   damage: 50
   projectileSpeed: 4
-  attackSpeed: 0.6
+  attackSpeed: 0.9
   attackRange: 1.5
   damageType: Thunder
   slowAmt: 0

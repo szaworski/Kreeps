@@ -216,9 +216,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +1 armor
+    +2 armor
 
-    +10 max health
+    +15 max health
 
     for each Tundra placed'
   m_isRightToLeft: 0

@@ -338,31 +338,32 @@ public class Monster : MonoBehaviour
     void ApplySpawnBonuses()
     {
         //Apply any Tier 1 bonuses
-        health += 5 * TileSpawner.numOfRivers;
-        armor += 1 * TileSpawner.numOfMountains;
-        moveSpeed += 0.03f * TileSpawner.numOfForrests;
+        health += 8 * TileSpawner.numOfRivers;
+        armor += 2 * TileSpawner.numOfMountains;
+        moveSpeed += 0.05f * TileSpawner.numOfForrests;
         hpRegen += 2 * TileSpawner.numOfGraveyards;
         evasionChance += 0.03f * TileSpawner.numOfSwamps;
 
         //Apply any Tier 2 bonuses
-        health += 5 * TileSpawner.numOfSettlements;
-        health += 10 * TileSpawner.numOfThickets;
-        health += 10 * TileSpawner.numOfTundras;
+        health += 8 * TileSpawner.numOfSettlements;
+        health += 15 * TileSpawner.numOfThickets;
+        health += 15 * TileSpawner.numOfTundras;
 
         armor += 1 * TileSpawner.numOfDeserts;
-        armor += 1 * TileSpawner.numOfTundras;
+        armor += 2 * TileSpawner.numOfTundras;
         armor += 2 * TileSpawner.numOfCaverns;
 
-        moveSpeed += 0.03f * TileSpawner.numOfDeserts;
-        moveSpeed += 0.03f * TileSpawner.numOfSeashores;
-        moveSpeed += 0.07f * TileSpawner.numOfSettlements;
+        moveSpeed += 0.02f * TileSpawner.numOfCaverns;
+        moveSpeed += 0.05f * TileSpawner.numOfDeserts;
+        moveSpeed += 0.05f * TileSpawner.numOfSeashores;
+        moveSpeed += 0.10f * TileSpawner.numOfSettlements;
 
-        hpRegen += 2 * TileSpawner.numOfDeserts;
+        hpRegen += 3 * TileSpawner.numOfDeserts;
         hpRegen += 2 * TileSpawner.numOfSeashores;
-        hpRegen += 3 * TileSpawner.numOfCaverns;
+        hpRegen += 2 * TileSpawner.numOfCaverns;
 
         evasionChance += 0.03f * TileSpawner.numOfSeashores;
-        evasionChance += 0.03f * TileSpawner.numOfThickets;
+        evasionChance += 0.04f * TileSpawner.numOfThickets;
 
         //Apply any Tier 3 bonuses
 
