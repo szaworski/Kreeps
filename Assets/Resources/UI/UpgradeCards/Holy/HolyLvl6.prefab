@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: HolyLvl6
-  upgradeCost: 300
+  upgradeCost: 250
   upgradeType: Holy
 --- !u!1 &7386134516583892986
 GameObject:
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Cost: 300g
+    Cost: 250g
 
     Dmg: 50
 

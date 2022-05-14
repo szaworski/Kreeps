@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: NeutralLvl5
-  upgradeCost: 175
+  upgradeCost: 150
   upgradeType: Neutral
 --- !u!1 &354252274503662542
 GameObject:
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Cost: 175g
+    Cost: 150g
 
     Dmg: 25
 

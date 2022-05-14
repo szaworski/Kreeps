@@ -68,7 +68,7 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Cost: 600g
+    Cost: 500g
 
     Dmg: 100
 
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: ThunderLvl7
-  upgradeCost: 600
+  upgradeCost: 500
   upgradeType: Thunder
 --- !u!1 &1109068775768762606
 GameObject:

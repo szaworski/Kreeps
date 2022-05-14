@@ -205,7 +205,7 @@ MonoBehaviour:
 
     -25 move speed
 
-    Cost: 200g
+    Cost: 175g
 
     Dmg: 13
 
@@ -430,5 +430,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: IceLvl3
-  upgradeCost: 200
+  upgradeCost: 175
   upgradeType: Ice

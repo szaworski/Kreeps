@@ -269,7 +269,7 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   damage: 28
   projectileSpeed: 4
-  attackSpeed: 0.3
+  attackSpeed: 0.45
   attackRange: 1.2
   damageType: Swift
   slowAmt: 0

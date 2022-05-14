@@ -68,7 +68,7 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Cost: 250g
+    Cost: 225g
 
     Dmg: 18
 
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: FireLvl6
-  upgradeCost: 250
+  upgradeCost: 225
   upgradeType: Fire
 --- !u!1 &2359300889729520904
 GameObject:

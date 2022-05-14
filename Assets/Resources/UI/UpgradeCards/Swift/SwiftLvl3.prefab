@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: SwiftLvl3
-  upgradeCost: 300
+  upgradeCost: 200
   upgradeType: Swift
 --- !u!1 &4263802425999131333
 GameObject:
@@ -353,11 +353,11 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Cost: 300g
+    Cost: 200g
 
     Dmg: 28
 
-    Rof: 0.3
+    Rof: 0.45
 
     Rng: 1.2
 

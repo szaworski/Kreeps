@@ -204,7 +204,7 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Cost: 100g
+    Cost: 85g
 
     Dmg: 15
 
@@ -428,5 +428,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: NeutralLvl2
-  upgradeCost: 100
+  upgradeCost: 85
   upgradeType: Neutral
