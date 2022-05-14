@@ -204,11 +204,11 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Cost: 1200g
+    Cost: 1000g
 
     Dmg: 180
 
-    Rof: 2
+    Rof: 3
 
     Rng: 4
 
@@ -427,6 +427,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3c50722ec083041bcf2aec73db18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: CosmicLvl4
-  upgradeCost: 1200
+  cardName: CosmicLvl7
+  upgradeCost: 1000
   upgradeType: Cosmic

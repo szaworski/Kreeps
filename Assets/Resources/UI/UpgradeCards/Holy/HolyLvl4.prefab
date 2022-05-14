@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: HolyLvl4
-  upgradeCost: 250
+  upgradeCost: 200
   upgradeType: Holy
 --- !u!1 &7386134516583892986
 GameObject:
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nCost: 250g\nDmg: 40 \nRof: 1.5\nRng: 1.5\n"
+  m_text: "Single target\n\nCost: 200g\nDmg: 40 \nRof: 2.5\nRng: 1.5\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

@@ -338,32 +338,34 @@ public class Monster : MonoBehaviour
     void ApplySpawnBonuses()
     {
         //Apply any Tier 1 bonuses
-        health += 8 * TileSpawner.numOfRivers;
-        armor += 2 * TileSpawner.numOfMountains;
-        moveSpeed += 0.05f * TileSpawner.numOfForrests;
+        health += 7 * TileSpawner.numOfRivers;
+        health += 3 * TileSpawner.numOfMountains;
+        armor += 1 * TileSpawner.numOfMountains;
+        moveSpeed += 0.04f * TileSpawner.numOfForrests;
         hpRegen += 2 * TileSpawner.numOfGraveyards;
         evasionChance += 0.03f * TileSpawner.numOfSwamps;
 
         //Apply any Tier 2 bonuses
-        health += 8 * TileSpawner.numOfSettlements;
-        health += 15 * TileSpawner.numOfThickets;
-        health += 15 * TileSpawner.numOfTundras;
+        health += 7 * TileSpawner.numOfSettlements;
+        health += 7 * TileSpawner.numOfTundras;
+        health += 10 * TileSpawner.numOfThickets;
 
         armor += 1 * TileSpawner.numOfDeserts;
-        armor += 2 * TileSpawner.numOfTundras;
+        armor += 1 * TileSpawner.numOfTundras;
         armor += 2 * TileSpawner.numOfCaverns;
 
-        moveSpeed += 0.02f * TileSpawner.numOfCaverns;
-        moveSpeed += 0.05f * TileSpawner.numOfDeserts;
-        moveSpeed += 0.05f * TileSpawner.numOfSeashores;
-        moveSpeed += 0.10f * TileSpawner.numOfSettlements;
+        moveSpeed += 0.01f * TileSpawner.numOfTundras;
+        moveSpeed += 0.01f * TileSpawner.numOfCaverns;
+        moveSpeed += 0.02f * TileSpawner.numOfSeashores;
+        moveSpeed += 0.02f * TileSpawner.numOfDeserts;
+        moveSpeed += 0.05f * TileSpawner.numOfSettlements;
 
-        hpRegen += 3 * TileSpawner.numOfDeserts;
+        hpRegen += 2 * TileSpawner.numOfDeserts;
         hpRegen += 2 * TileSpawner.numOfSeashores;
-        hpRegen += 2 * TileSpawner.numOfCaverns;
+        hpRegen += 1 * TileSpawner.numOfCaverns;
 
         evasionChance += 0.03f * TileSpawner.numOfSeashores;
-        evasionChance += 0.04f * TileSpawner.numOfThickets;
+        evasionChance += 0.03f * TileSpawner.numOfThickets;
 
         //Apply any Tier 3 bonuses
 

@@ -185,9 +185,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
-  damage: 30
+  damage: 18
   projectileSpeed: 4
-  attackSpeed: 0.6
+  attackSpeed: 0.5
   attackRange: 1.2
   damageType: Ice
   slowAmt: 0.3

@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: IceLvl6
-  upgradeCost: 300
+  upgradeCost: 250
   upgradeType: Ice
 --- !u!1 &8196507382453859790
 GameObject:
@@ -354,12 +354,12 @@ MonoBehaviour:
 
     -30 move speed
 
-    Cost: 300g
+    Cost: 250g
 
-    Dmg: 30
+    Dmg: 18
 
     Rof:
-    0.6
+    0.5
 
     Rng: 1.2
 

@@ -204,13 +204,13 @@ MonoBehaviour:
   m_text: 'AOE in radius
 
 
-    Cost: 250g
+    Cost: 200g
 
-    Dmg: 16
+    Dmg: 15
 
     Rof: 0.6
 
-    Rng: 0.9
+    Rng: 0.7
 
 '
   m_isRightToLeft: 0
@@ -428,5 +428,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: FireLvl3
-  upgradeCost: 250
+  upgradeCost: 200
   upgradeType: Fire

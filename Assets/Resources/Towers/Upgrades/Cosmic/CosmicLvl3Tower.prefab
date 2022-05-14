@@ -98,9 +98,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
-  damage: 40
+  damage: 45
   projectileSpeed: 0
-  attackSpeed: 0.7
+  attackSpeed: 0.8
   attackRange: 1.2
   damageType: Cosmic
   slowAmt: 0

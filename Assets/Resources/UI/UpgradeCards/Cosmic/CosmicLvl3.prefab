@@ -204,11 +204,11 @@ MonoBehaviour:
   m_text: 'AOE in radius
 
 
-    Cost: 500g
+    Cost: 400g
 
-    Dmg: 40
+    Dmg: 45
 
-    Rof: 0.7
+    Rof: 0.8
 
     Rng: 1.2
 
@@ -427,6 +427,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3c50722ec083041bcf2aec73db18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: CosmicLvl2
-  upgradeCost: 500
+  cardName: CosmicLvl3
+  upgradeCost: 400
   upgradeType: Cosmic
