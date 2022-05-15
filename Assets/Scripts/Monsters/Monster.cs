@@ -153,12 +153,7 @@ public class Monster : MonoBehaviour
 
                     if (type == "Beast")
                     {
-                        incomingDamage *= 2;
-                    }
-
-                    else if (type == "Brute")
-                    {
-                        incomingDamage /= 2;
+                        incomingDamage *= 1.5f;
                     }
                     break;
 
@@ -182,12 +177,7 @@ public class Monster : MonoBehaviour
 
                     if (type == "Humanoid")
                     {
-                        incomingDamage *= 2;
-                    }
-
-                    else if (type == "Undead")
-                    {
-                        incomingDamage /= 2;
+                        incomingDamage *= 1.5f;
                     }
                     break;
 
@@ -207,12 +197,7 @@ public class Monster : MonoBehaviour
 
                     if (type == "Brute")
                     {
-                        incomingDamage *= 2;
-                    }
-
-                    else if (type == "Beast")
-                    {
-                        incomingDamage /= 2;
+                        incomingDamage *= 1.5f;
                     }
                     break;
 
@@ -220,12 +205,7 @@ public class Monster : MonoBehaviour
 
                     if (type == "Undead")
                     {
-                        incomingDamage *= 2;
-                    }
-
-                    else if (type == "Humanoid")
-                    {
-                        incomingDamage /= 2;
+                        incomingDamage *= 1.5f;
                     }
                     break;
 
@@ -233,12 +213,7 @@ public class Monster : MonoBehaviour
 
                     if (type == "Pest")
                     {
-                        incomingDamage *= 2;
-                    }
-
-                    else if (type == "Demon")
-                    {
-                        incomingDamage /= 2;
+                        incomingDamage *= 1.5f;
                     }
                     break;
 
@@ -248,12 +223,7 @@ public class Monster : MonoBehaviour
 
                     if (type == "Demon")
                     {
-                        incomingDamage *= 2;
-                    }
-
-                    else if (type == "Pest")
-                    {
-                        incomingDamage /= 2;
+                        incomingDamage *= 1.5f;
                     }
                     break;
             }

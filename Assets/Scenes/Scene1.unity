@@ -693,8 +693,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nBonus:\nNone\nPenalty: \nNone\nCost: 75g\nDmg: 7\nRof:
-    0.65\nRng: 1"
+  m_text: 'Single target
+
+
+    Bonus:
+
+    None
+
+
+    Cost: 75g
+
+    Dmg: 7
+
+    Rof:
+    0.65
+
+    Rng: 1'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -1618,8 +1632,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nBonus:\nx2 to Pests\nPenalty: \nx0.5 to Demons\nCost:
-    250g\nDmg: 7\nRof: 0.5\nRng: 1"
+  m_text: 'Single target
+
+
+    Bonus:
+
+    x1.5 to Pests
+
+
+    Cost: 250g
+
+    Dmg:
+    7
+
+    Rof: 0.5
+
+    Rng: 1'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -2452,8 +2480,24 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nBonus:\nx2 to Undead\nPenalty: \nx0.5 to Humanoids\nCost:
-    150g\nDmg: 16\nRof: 1.2\nRng: 0.8\n"
+  m_text: 'Single target
+
+
+    Bonus:
+
+    x1.5 to Undead
+
+
+    Cost: 150g
+
+    Dmg:
+    16
+
+    Rof: 1.2
+
+    Rng: 0.8
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -2872,8 +2916,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "AOE in radius\n\nBonus:\nx2 to Beasts\nPenalty: \nx0.5 to Brutes\nCost:
-    125g\nDmg: 4 \nRof: 0.6\nRng: 0.7"
+  m_text: "AOE in radius\n\nBonus:\nx1.5 to Beasts\n\nCost: 125g\nDmg: 4 \nRof: 0.6\nRng:
+    0.7"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -3577,8 +3621,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "AOE in radius\n-15 move speed\nBonus:\nx2 to Humanoids\nPenalty: \nx0.5
-    to Undead\nCost: 125g\nDmg: 3 \nRof: 0.6\nRng: 0.6\n"
+  m_text: "AOE in radius\n-15 move speed\n\nBonus:\nx1.5 to Humanoids\n\nCost: 125g\nDmg:
+    3 \nRof: 0.6\nRng: 0.6\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -3916,8 +3960,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "AOE in radius\n\nBonus:\nx2 to Demons\nPenalty: \nx0.5 to Pests\nCost:
-    350g\nDmg: 10\nRof: 0.8\nRng: 1.2"
+  m_text: 'AOE in radius
+
+
+    Bonus:
+
+    x1.5 to Demons
+
+
+    Cost: 350g
+
+    Dmg:
+    10
+
+    Rof: 0.8
+
+    Rng: 1.2'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -4086,8 +4144,22 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nBonus:\nx2 to Brutes\nPenalty: \nx0.5 to Beasts\nCost:
-    150g\nDmg: 20\nRof: 1.75\nRng: 1"
+  m_text: 'Single target
+
+
+    Bonus:
+
+    x1.5 to Brutes
+
+
+    Cost: 150g
+
+    Dmg:
+    20
+
+    Rof: 1.75
+
+    Rng: 1'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

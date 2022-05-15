@@ -59,7 +59,21 @@ public class MonsterManager : MonoBehaviour
 
             if (TileSpawner.numOfTimesPlaced <= 1)
             {
-                TileSpawner.monsterCardSelected = "Wolf";
+                //Get a random starting monster from the 3 provided
+                var rand = new System.Random();
+                int startingMonsterIndex = rand.Next(3);
+                switch (startingMonsterIndex)
+                {
+                    case 0:
+                        TileSpawner.monsterCardSelected = "Forrest/Wolf";
+                        break;
+                    case 1:
+                        TileSpawner.monsterCardSelected = "Mountain/Ranger";
+                        break;
+                    case 2:
+                        TileSpawner.monsterCardSelected = "Graveyard/Zombie";
+                        break;
+                }
             }
 
             //Add the selected monster to the list
@@ -75,7 +89,7 @@ public class MonsterManager : MonoBehaviour
     {
         if (TileSpawner.tileName.Contains("Starting"))
         {
-            prependMonsterName = "Monsters/Tier1/Forrest/";
+            prependMonsterName = "Monsters/Tier1/";
         }
 
         else
