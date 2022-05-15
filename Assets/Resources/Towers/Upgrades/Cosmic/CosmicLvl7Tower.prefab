@@ -444,7 +444,7 @@ MonoBehaviour:
   projectileSpeed: 1
   attackSpeed: 3
   attackRange: 4
-  damageType: Cosmic
+  damageType: Cosmic2
   slowAmt: 0
   attackRadius: {fileID: 4442308903161421057}
   dmgText: {fileID: 6435394657040544024}

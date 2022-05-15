@@ -4541,7 +4541,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 300
+  m_text: 200
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -5002,6 +5002,36 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 3923dd9a04a6eec478bf7688fd9b3df5, type: 3}
     volume: 0.5
     pitch: 0.6
+    source: {fileID: 0}
+  - name: FireCyclone
+    clip: {fileID: 8300000, guid: af346247cf8516b49a50bf93d7e19bc5, type: 3}
+    volume: 0.5
+    pitch: 0.65
+    source: {fileID: 0}
+  - name: IceSpire
+    clip: {fileID: 8300000, guid: eaf380a3fdbf2b249af08133d8f70d52, type: 3}
+    volume: 0.5
+    pitch: 1.7
+    source: {fileID: 0}
+  - name: Thunder2
+    clip: {fileID: 8300000, guid: 5e2ef8f28af610f48b1be8cba29463ca, type: 3}
+    volume: 0.5
+    pitch: 0.5
+    source: {fileID: 0}
+  - name: Cosmic
+    clip: {fileID: 8300000, guid: 278c0062f77cf6b48bbf558e97fedfbd, type: 3}
+    volume: 0.5
+    pitch: 0.8
+    source: {fileID: 0}
+  - name: Cosmic2
+    clip: {fileID: 8300000, guid: 278c0062f77cf6b48bbf558e97fedfbd, type: 3}
+    volume: 0.5
+    pitch: 0.5
+    source: {fileID: 0}
+  - name: Holy2
+    clip: {fileID: 8300000, guid: 68d10c1b6e8c1a84a840461d37f95e63, type: 3}
+    volume: 0.5
+    pitch: 1.8
     source: {fileID: 0}
 --- !u!1 &1529332574
 GameObject:

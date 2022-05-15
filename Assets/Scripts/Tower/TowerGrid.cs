@@ -119,10 +119,19 @@ public class TowerGrid : MonoBehaviour
                     }
                 }
 
-                if (Input.GetKeyDown(KeyCode.Delete) && !upgradeCardsArePresent)
+                if (Input.GetKeyDown(KeyCode.Delete))
                 {
                     DestroyTower(placedTower);
                     hasTower = false;
+
+                    //Give gold to the player (75 for every tower)
+                    PlayerHud.newGoldValue = PlayerHud.gold + 75;
+
+                    if (upgradeCardsArePresent)
+                    {
+                        DestroyTowerUpgradeCards();
+                        upgradeCardsArePresent = false;
+                    }
                 }
             }
         }
@@ -322,8 +331,5 @@ public class TowerGrid : MonoBehaviour
     {
         //Destroy the tower
         Destroy(towerObj);
-
-        //Give gold to the player = to half of the original cost of the tower
-        //PlayerHud.newGoldValue = PlayerHud.gold + goldCost;
     }
 }

@@ -612,8 +612,8 @@ MonoBehaviour:
   damage: 30
   projectileSpeed: 0
   attackSpeed: 1
-  attackRange: 1.5
-  damageType: Holy
+  attackRange: 1.1
+  damageType: Holy2
   slowAmt: 0
   attackRadius: {fileID: 1578552572651102220}
   dmgText: {fileID: 2416538264395989671}
