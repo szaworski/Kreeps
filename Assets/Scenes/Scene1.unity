@@ -1619,7 +1619,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Single target\n\nBonus:\nx2 to Pests\nPenalty: \nx0.5 to Demons\nCost:
-    200g\nDmg: 8\nRof: 0.5\nRng: 1.2"
+    250g\nDmg: 7\nRof: 0.5\nRng: 1"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
