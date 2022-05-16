@@ -68,13 +68,13 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Cost: 400g
+    Cost: 425g
 
-    Dmg: 84
+    Dmg: 90
 
     Rof: 0.6
 
-    Rng: 1
+    Rng: 1.2
 
 '
   m_isRightToLeft: 0
@@ -428,5 +428,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: CosmicLvl6
-  upgradeCost: 400
+  upgradeCost: 425
   upgradeType: Cosmic
