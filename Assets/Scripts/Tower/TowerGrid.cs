@@ -26,13 +26,14 @@ public class TowerGrid : MonoBehaviour
     public static string upgradeTypeSelected;
     public static bool upgradeCardsArePresent;
     public static bool triggerUpgradeCardDestruction;
-    public static bool triggerTowerDemolish;
     public static bool triggerTowerUpgrade;
+    public static bool triggerTowerSell;
     public static GameObject upgradeCard1Obj;
     public static GameObject upgradeCard2Obj;
     public static GameObject upgradeCard3Obj;
     public static GameObject upgradeCard4Obj;
     public static GameObject upgradeCard5Obj;
+    public static GameObject upgradeCard6Obj;
 
     [SerializeField] private string card1;
     [SerializeField] private string card2;
@@ -54,6 +55,7 @@ public class TowerGrid : MonoBehaviour
         }
 
         UpgradeTower();
+        SellTower();
     }
 
     void OnMouseOver()
@@ -124,8 +126,37 @@ public class TowerGrid : MonoBehaviour
                     DestroyTower(placedTower);
                     hasTower = false;
 
-                    //Give gold to the player (75 for every tower)
-                    PlayerHud.newGoldValue = PlayerHud.gold + 75;
+                    //Give gold to the player (Give back a set amount based on the tower type)
+                    switch (towerScript.damageType)
+                    {
+                        case var _ when towerScript.damageType.Contains("Neutral"):
+                            PlayerHud.newGoldValue = PlayerHud.gold + 50;
+                            break;
+
+                        case var _ when towerScript.damageType.Contains("Fire"):
+                            PlayerHud.newGoldValue = PlayerHud.gold + 100;
+                            break;
+
+                        case var _ when towerScript.damageType.Contains("Ice"):
+                            PlayerHud.newGoldValue = PlayerHud.gold + 100;
+                            break;
+
+                        case var _ when towerScript.damageType.Contains("Thunder"):
+                            PlayerHud.newGoldValue = PlayerHud.gold + 125;
+                            break;
+
+                        case var _ when towerScript.damageType.Contains("Holy"):
+                            PlayerHud.newGoldValue = PlayerHud.gold + 125;
+                            break;
+
+                        case var _ when towerScript.damageType.Contains("Swift"):
+                            PlayerHud.newGoldValue = PlayerHud.gold + 200;
+                            break;
+
+                        case var _ when towerScript.damageType.Contains("Cosmic"):
+                            PlayerHud.newGoldValue = PlayerHud.gold + 250;
+                            break;
+                    }
 
                     if (upgradeCardsArePresent)
                     {
@@ -219,6 +250,7 @@ public class TowerGrid : MonoBehaviour
         GameObject cardSlot3 = GameObject.Find("UpgradeSlot3");
         GameObject cardSlot4 = GameObject.Find("CloseButton");
         GameObject cardSlot5 = GameObject.Find("UpgradeSign");
+        GameObject cardSlot6 = GameObject.Find("SellButton");
 
         if (!string.IsNullOrEmpty(card1))
         {
@@ -240,8 +272,10 @@ public class TowerGrid : MonoBehaviour
 
         upgradeCard4Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/Close"), cardSlot4.transform);
         upgradeCard5Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/Upgrade"), cardSlot5.transform);
+        upgradeCard6Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/SellButton"), cardSlot6.transform);
         upgradeCard4Obj.transform.position = cardSlot4.transform.position;
         upgradeCard5Obj.transform.position = cardSlot5.transform.position;
+        upgradeCard6Obj.transform.position = cardSlot6.transform.position;
     }
 
     void UpgradeTower()
@@ -257,21 +291,58 @@ public class TowerGrid : MonoBehaviour
             upgradeCardsArePresent = false;
         }
 
-        if (triggerTowerDemolish)
+        if (triggerUpgradeCardDestruction)
+        {
+            DestroyTowerUpgradeCards();
+            //Reset bools for next upgrade card selection
+            triggerUpgradeCardDestruction = false;
+            upgradeCardsArePresent = false;
+        }
+    }
+
+    void SellTower()
+    {
+        if (triggerTowerSell)
         {
             TowerGrid gridScript = gridObj.GetComponent<TowerGrid>();
             gridScript.hasTower = false;
 
             DestroyTowerUpgradeCards();
             DestroyTower(oldTowerObj);
-            triggerTowerDemolish = false;
-            upgradeCardsArePresent = false;
-        }
 
-        if (triggerUpgradeCardDestruction)
-        {
-            DestroyTowerUpgradeCards();
-            triggerUpgradeCardDestruction = false;
+            //Give gold to the player (Give back a set amount based on the tower type)
+            switch (gridScript.towerScript.damageType)
+            {
+                case var _ when gridScript.towerScript.damageType.Contains("Neutral"):
+                    PlayerHud.newGoldValue = PlayerHud.gold + 50;
+                    break;
+
+                case var _ when gridScript.towerScript.damageType.Contains("Fire"):
+                    PlayerHud.newGoldValue = PlayerHud.gold + 100;
+                    break;
+
+                case var _ when gridScript.towerScript.damageType.Contains("Ice"):
+                    PlayerHud.newGoldValue = PlayerHud.gold + 100;
+                    break;
+
+                case var _ when gridScript.towerScript.damageType.Contains("Thunder"):
+                    PlayerHud.newGoldValue = PlayerHud.gold + 125;
+                    break;
+
+                case var _ when gridScript.towerScript.damageType.Contains("Holy"):
+                    PlayerHud.newGoldValue = PlayerHud.gold + 125;
+                    break;
+
+                case var _ when gridScript.towerScript.damageType.Contains("Swift"):
+                    PlayerHud.newGoldValue = PlayerHud.gold + 200;
+                    break;
+
+                case var _ when gridScript.towerScript.damageType.Contains("Cosmic"):
+                    PlayerHud.newGoldValue = PlayerHud.gold + 250;
+                    break;
+            }
+            //Reset bools for next upgrade card selection
+            triggerTowerSell = false;
             upgradeCardsArePresent = false;
         }
     }
@@ -325,9 +396,14 @@ public class TowerGrid : MonoBehaviour
         {
             Destroy(upgradeCard5Obj.gameObject);
         }
+
+        if (upgradeCard6Obj != null)
+        {
+            Destroy(upgradeCard6Obj.gameObject);
+        }
     }
 
-    void DestroyTower(GameObject towerObj)
+    public void DestroyTower(GameObject towerObj)
     {
         //Destroy the tower
         Destroy(towerObj);

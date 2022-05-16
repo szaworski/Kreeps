@@ -701,12 +701,14 @@ MonoBehaviour:
     None
 
 
-    Cost: 75g
+    Cost: 50g
+
+    Sell value:
+    50g
 
     Dmg: 7
 
-    Rof:
-    0.7
+    Rof: 0.7
 
     Rng: 1'
   m_isRightToLeft: 0
@@ -1642,8 +1644,10 @@ MonoBehaviour:
 
     Cost: 250g
 
-    Dmg:
-    7
+    Sell
+    value: 200g
+
+    Dmg: 7
 
     Rof: 0.55
 
@@ -2415,6 +2419,7 @@ RectTransform:
   - {fileID: 2126723454}
   - {fileID: 1529332575}
   - {fileID: 406187174}
+  - {fileID: 2006435228}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2490,8 +2495,10 @@ MonoBehaviour:
 
     Cost: 150g
 
-    Dmg:
-    16
+    Sell
+    value: 125g
+
+    Dmg: 16
 
     Rof: 1.2
 
@@ -2916,8 +2923,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "AOE in radius\n\nBonus:\nx1.5 to Beasts\n\nCost: 125g\nDmg: 4 \nRof: 0.6\nRng:
-    0.7"
+  m_text: "AOE in radius\n\nBonus:\nx1.5 to Beasts\n\nCost: 125g\nSell value: 100g\nDmg:
+    4 \nRof: 0.6\nRng: 0.7"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -3621,8 +3628,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "AOE in radius\n-15 move speed\n\nBonus:\nx1.5 to Humanoids\n\nCost: 125g\nDmg:
-    3 \nRof: 0.6\nRng: 0.6\n"
+  m_text: "AOE in radius\n-15 move speed\nBonus:\nx1.5 to Humanoids\n\nCost: 125g\nSell
+    value: 100g\nDmg: 3 \nRof: 0.6\nRng: 0.6\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -3970,8 +3977,10 @@ MonoBehaviour:
 
     Cost: 350g
 
-    Dmg:
-    10
+    Sell
+    value: 250g
+
+    Dmg: 10
 
     Rof: 0.8
 
@@ -4154,10 +4163,12 @@ MonoBehaviour:
 
     Cost: 150g
 
-    Dmg:
-    20
+    Sell
+    value: 125g
 
-    Rof: 1.75
+    Dmg: 20
+
+    Rof: 1.5
 
     Rng: 1'
   m_isRightToLeft: 0
@@ -6648,6 +6659,41 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2006435227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2006435228}
+  m_Layer: 5
+  m_Name: SellButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2006435228
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006435227}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 447809098}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 450, y: 300}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2013978840

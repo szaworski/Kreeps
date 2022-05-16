@@ -742,7 +742,7 @@ MonoBehaviour:
   damage: 26
   projectileSpeed: 0
   attackSpeed: 1
-  attackRange: 1
+  attackRange: 1.2
   damageType: Thunder
   slowAmt: 0
   attackRadius: {fileID: 7682126142615179629}

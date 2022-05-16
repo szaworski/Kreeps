@@ -52,15 +52,13 @@ public class Card : MonoBehaviour
         }
     }
 
-    public void DemolishTower()
+    public void SellTower()
     {
-        TowerGrid.triggerTowerDemolish = true;
+        TowerGrid.triggerTowerSell = true;
     }
 
     public void CloseUpgrades()
     {
         TowerGrid.triggerUpgradeCardDestruction = true;
     }
-
-
 }
