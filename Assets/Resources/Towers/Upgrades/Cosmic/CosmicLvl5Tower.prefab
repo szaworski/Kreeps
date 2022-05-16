@@ -440,10 +440,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
-  damage: 60
+  damage: 64
   projectileSpeed: 4
   attackSpeed: 0.8
-  attackRange: 2
+  attackRange: 1.8
   damageType: Cosmic
   slowAmt: 0
   attackRadius: {fileID: 4442308903161421057}

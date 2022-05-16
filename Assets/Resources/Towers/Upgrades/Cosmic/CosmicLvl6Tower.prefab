@@ -442,7 +442,7 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   damage: 100
   projectileSpeed: 4
-  attackSpeed: 0.7
+  attackSpeed: 0.6
   attackRange: 1
   damageType: Cosmic
   slowAmt: 0

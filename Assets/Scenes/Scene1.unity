@@ -1642,10 +1642,10 @@ MonoBehaviour:
     x1.5 to Pests
 
 
-    Cost: 250g
+    Cost: 225g
 
     Sell
-    value: 200g
+    value: 175g
 
     Dmg: 7
 
@@ -3975,7 +3975,7 @@ MonoBehaviour:
     x1.5 to Demons
 
 
-    Cost: 350g
+    Cost: 300g
 
     Sell
     value: 250g

@@ -150,7 +150,7 @@ public class TowerGrid : MonoBehaviour
                             break;
 
                         case var _ when towerScript.damageType.Contains("Swift"):
-                            PlayerHud.newGoldValue = PlayerHud.gold + 200;
+                            PlayerHud.newGoldValue = PlayerHud.gold + 175;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Cosmic"):
@@ -334,7 +334,7 @@ public class TowerGrid : MonoBehaviour
                     break;
 
                 case var _ when gridScript.towerScript.damageType.Contains("Swift"):
-                    PlayerHud.newGoldValue = PlayerHud.gold + 200;
+                    PlayerHud.newGoldValue = PlayerHud.gold + 175;
                     break;
 
                 case var _ when gridScript.towerScript.damageType.Contains("Cosmic"):
