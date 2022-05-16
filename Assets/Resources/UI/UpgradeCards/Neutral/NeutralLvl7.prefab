@@ -353,13 +353,13 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Cost: 325g
+    Cost: 250g
 
     Dmg: 50
 
     Rof: 0.7
 
-    Rng: 1.2
+    Rng: 1
 
 '
   m_isRightToLeft: 0

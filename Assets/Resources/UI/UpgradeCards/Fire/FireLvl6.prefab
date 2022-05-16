@@ -68,13 +68,13 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Cost: 225g
+    Cost: 200g
 
-    Dmg: 18
+    Dmg: 40
 
-    Rof: 0.6
+    Rof: 0.8
 
-    Rng: 1.2
+    Rng: 1.4
 
 '
   m_isRightToLeft: 0
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: FireLvl6
-  upgradeCost: 225
+  upgradeCost: 200
   upgradeType: Fire
 --- !u!1 &2359300889729520904
 GameObject:
