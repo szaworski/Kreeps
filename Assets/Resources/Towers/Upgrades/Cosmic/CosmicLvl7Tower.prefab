@@ -443,7 +443,7 @@ MonoBehaviour:
   damage: 180
   projectileSpeed: 1
   attackSpeed: 3
-  attackRange: 4
+  attackRange: 3
   damageType: Cosmic2
   slowAmt: 0
   attackRadius: {fileID: 4442308903161421057}

@@ -704,7 +704,7 @@ MonoBehaviour:
     Cost: 50g
 
     Sell value:
-    50g
+    45g
 
     Dmg: 7
 
@@ -3982,9 +3982,9 @@ MonoBehaviour:
 
     Dmg: 10
 
-    Rof: 0.8
+    Rof: 1
 
-    Rng: 1.2'
+    Rng: 1'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
