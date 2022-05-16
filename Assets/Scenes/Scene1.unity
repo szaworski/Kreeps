@@ -3628,7 +3628,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "AOE in radius\n-15 move speed\nBonus:\nx1.5 to Humanoids\n\nCost: 125g\nSell
+  m_text: "AOE in radius\n-5 move speed\nBonus:\nx1.5 to Humanoids\n\nCost: 125g\nSell
     value: 100g\nDmg: 3 \nRof: 0.6\nRng: 0.6\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
