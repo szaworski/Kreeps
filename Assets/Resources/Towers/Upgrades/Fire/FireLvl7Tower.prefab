@@ -609,7 +609,7 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   damage: 40
   projectileSpeed: 0
-  attackSpeed: 0.8
+  attackSpeed: 1
   attackRange: 0.8
   damageType: FireCyclone
   slowAmt: 0
