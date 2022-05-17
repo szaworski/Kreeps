@@ -216,14 +216,11 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +2 armor
+    +1 armor
 
-    +1 hp regen
+    +2 hp regen
 
-    +1 move speed
-
-    for
-    each Cavern placed'
+    for each Cavern placed'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

@@ -350,7 +350,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Kreeps gain:\n+1 armor \n+3 max health\nfor each Mountain placed\n\nIncoming
+  m_text: "Kreeps gain:\n+1 armor \n+2 max health\nfor each Mountain placed\n\nIncoming
     damage is reduced by the kreeps armor value"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}

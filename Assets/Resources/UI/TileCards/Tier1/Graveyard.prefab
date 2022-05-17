@@ -201,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Kreeps gain:\n+2 hp regen \nfor each Graveyard placed\n\n\nHp regen occurs
+  m_text: "Kreeps gain:\n+1 hp regen \nfor each Graveyard placed\n\n\nHp regen occurs
     once per second"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
