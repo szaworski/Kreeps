@@ -308,31 +308,34 @@ public class Monster : MonoBehaviour
     void ApplySpawnBonuses()
     {
         //Apply any Tier 1 bonuses
-        health += 5 * TileSpawner.numOfRivers;
+        health += 6 * TileSpawner.numOfRivers;
         health += 2 * TileSpawner.numOfMountains;
         armor += 1 * TileSpawner.numOfMountains;
-        moveSpeed += 0.03f * TileSpawner.numOfForrests;
-        hpRegen += 1 * TileSpawner.numOfGraveyards;
+        moveSpeed += 0.04f * TileSpawner.numOfForrests;
+        hpRegen += 2 * TileSpawner.numOfGraveyards;
         evasionChance += 0.02f * TileSpawner.numOfSwamps;
 
         //Apply any Tier 2 bonuses
-        health += 2 * TileSpawner.numOfDeserts;
-        health += 5 * TileSpawner.numOfSeashores;
-        health += 4 * TileSpawner.numOfSettlements;
-        health += 4 * TileSpawner.numOfThickets;
+        health += 10 * TileSpawner.numOfSeashores;
+        health += 7 * TileSpawner.numOfThickets;
+        health += 5 * TileSpawner.numOfSettlements;
+        health += 4 * TileSpawner.numOfDeserts;
+        health += 3 * TileSpawner.numOfTundras;
 
         armor += 1 * TileSpawner.numOfSeashores;
         armor += 1 * TileSpawner.numOfTundras;
-        armor += 1 * TileSpawner.numOfCaverns;
+        armor += 2 * TileSpawner.numOfCaverns;
 
-        moveSpeed += 0.01f * TileSpawner.numOfTundras;
-        moveSpeed += 0.02f * TileSpawner.numOfDeserts;
-        moveSpeed += 0.03f * TileSpawner.numOfSettlements;
+        moveSpeed += 0.02f * TileSpawner.numOfTundras;
+        moveSpeed += 0.03f * TileSpawner.numOfDeserts;
+        moveSpeed += 0.05f * TileSpawner.numOfSettlements;
 
+        hpRegen += 1 * TileSpawner.numOfThickets;
         hpRegen += 1 * TileSpawner.numOfTundras;
         hpRegen += 2 * TileSpawner.numOfCaverns;
 
-        evasionChance += 0.02f * TileSpawner.numOfDeserts;
+        evasionChance += 0.01f * TileSpawner.numOfCaverns;
+        evasionChance += 0.01f * TileSpawner.numOfDeserts;
         evasionChance += 0.03f * TileSpawner.numOfThickets;
 
         //Apply any Tier 3 bonuses

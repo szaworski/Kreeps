@@ -214,7 +214,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Kreeps gain:\n+2 move speed\n+2% evasion \n+2 max health\nfor each Desert
+  m_text: "Kreeps gain:\n+1% evasion \n+3 move speed\n+4 max health\nfor each Desert
     placed"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}

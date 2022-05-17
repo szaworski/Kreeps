@@ -214,13 +214,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Kreeps gain:
-
-    +1 armor
-
-    +2 hp regen
-
-    for each Cavern placed'
+  m_text: "Kreeps gain:\n+1% evasion \n+2 armor\n+2 hp regen\nfor each Cavern placed"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
