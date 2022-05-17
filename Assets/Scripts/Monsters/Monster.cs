@@ -186,13 +186,13 @@ public class Monster : MonoBehaviour
                     if (damageType.Contains("Thunder2"))
                     {
                         yShiftAmt = 0.2f;
-                        delayAmt = 0.25f;
+                        delayAmt = 0.1f;
                     }
 
                     else
                     {
                         yShiftAmt = 0.1f;
-                        delayAmt = 0.25f;
+                        delayAmt = 0.1f;
                     }
 
                     if (type == "Brute")
