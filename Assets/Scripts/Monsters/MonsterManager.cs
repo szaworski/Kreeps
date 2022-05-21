@@ -27,9 +27,13 @@ public class MonsterManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return) && PlayerHud.showStartWaveInstructions && GameObject.Find("TileManager").transform.childCount == 0)
         {
-            PlayerHud.showStartWaveInstructions = false;
-            //Need to call the GenerateMonsters method with a Coroutine to delay each iteration of the foreach loop
-            StartCoroutine(GenerateMonsters(amtOfTime));
+            //Make sure that the game isn't paused
+            if (!PauseMenuButtons.isPaused)
+            {
+                PlayerHud.showStartWaveInstructions = false;
+                //Need to call the GenerateMonsters method with a Coroutine to delay each iteration of the foreach loop
+                StartCoroutine(GenerateMonsters(amtOfTime));
+            }
         }
     }
 

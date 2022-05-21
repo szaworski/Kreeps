@@ -54,14 +54,22 @@ public class TowerGrid : MonoBehaviour
             sprite.enabled = false;
         }
 
-        UpgradeTower();
-        SellTower();
+        if (!PauseMenuButtons.isPaused)
+        {
+            UpgradeTower();
+            SellTower();
+        }
+
+        if (PauseMenuButtons.isPaused)
+        {
+            HideGridSprites();
+        }
     }
 
     void OnMouseOver()
     {
-        //Check to make sure we aren't hovering over a UI element first
-        if (!Card.IsHoveringOverUiCard)
+        //Check to make sure we aren't hovering over a UI element and that the game isn't paused 
+        if (!Card.IsHoveringOverUiCard && !PauseMenuButtons.isPaused)
         {
             //Reveal the grid sprite on mouse over
             SetSelectedTowerGhost();
@@ -121,7 +129,7 @@ public class TowerGrid : MonoBehaviour
                     }
                 }
 
-                if (Input.GetKeyDown(KeyCode.Delete))
+                if (Input.GetKeyDown(KeyCode.Delete) && !PauseMenuButtons.isPaused)
                 {
                     DestroyTower(placedTower);
                     hasTower = false;
@@ -169,6 +177,11 @@ public class TowerGrid : MonoBehaviour
     }
 
     void OnMouseExit()
+    {
+        HideGridSprites();
+    }
+
+    void HideGridSprites()
     {
         //Hide the grid sprite on mouse exit 
         sprite.enabled = false;

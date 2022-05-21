@@ -22,7 +22,7 @@ public class TowerCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     void Update()
     {
-        if (EventSystem.current.IsPointerOverGameObject())
+        if (EventSystem.current.IsPointerOverGameObject() && !PauseMenuButtons.isPaused)
         {
             Card.IsHoveringOverUiCard = true;
         }
@@ -65,19 +65,19 @@ public class TowerCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void SlideActions()
     {
-        if (mouseHover && !expanded && Input.GetMouseButtonDown(1))
+        if (mouseHover && !expanded && Input.GetMouseButtonDown(1) && !PauseMenuButtons.isPaused)
         {
             expanded = true;
         }
 
-        else if (mouseHover && expanded && Input.GetMouseButtonDown(1) || !mouseHover)
+        else if (mouseHover && expanded && Input.GetMouseButtonDown(1) && !PauseMenuButtons.isPaused || !mouseHover && !PauseMenuButtons.isPaused)
         {
             expanded = false;
         }
     }
     public void SetSelectedTowerType()
     {
-        if (mouseHover && Input.GetMouseButtonDown(0))
+        if (mouseHover && Input.GetMouseButtonDown(0) && !PauseMenuButtons.isPaused)
         {
             TowerGrid.towerTypeSelected = cardName;
             SetGoldCost();
@@ -89,7 +89,7 @@ public class TowerCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         // Keeps the current selected card highlighted when we click away
         if (eventSystem != null)
         {
-            if (eventSystem.currentSelectedGameObject != null)
+            if (eventSystem.currentSelectedGameObject != null && !PauseMenuButtons.isPaused)
             {
                 lastSelected = eventSystem.currentSelectedGameObject;
             }

@@ -13,7 +13,7 @@ public class Card : MonoBehaviour
     void Update()
     {
         //Check if the mouse is over any UI elements to disable other functionality underneath
-        if (EventSystem.current.IsPointerOverGameObject())
+        if (EventSystem.current.IsPointerOverGameObject() && !PauseMenuButtons.isPaused)
         {
             IsHoveringOverUiCard = true;
         }
@@ -26,22 +26,28 @@ public class Card : MonoBehaviour
 
     public void SetSelectedCardType()
     {
-        TileSpawner.tileCardSelected = cardName;
-        IsHoveringOverUiCard = false;
-        TileSpawner.triggerTileCardDestruction = true;
+        if (!PauseMenuButtons.isPaused)
+        {
+            TileSpawner.tileCardSelected = cardName;
+            IsHoveringOverUiCard = false;
+            TileSpawner.triggerTileCardDestruction = true;
+        }
     }
 
     public void SetSelectedMonsterCard()
     {
-        TileSpawner.monsterCardSelected = cardName;
-        IsHoveringOverUiCard = false;
-        TileSpawner.triggerMonsterCardDestruction = true;
-        //Debug.Log("Monster Card selected: " + cardName);
+        if (!PauseMenuButtons.isPaused)
+        {
+            TileSpawner.monsterCardSelected = cardName;
+            IsHoveringOverUiCard = false;
+            TileSpawner.triggerMonsterCardDestruction = true;
+            //Debug.Log("Monster Card selected: " + cardName);
+        }
     }
 
     public void SetSelectedUpgradeCard()
     {
-        if (PlayerHud.gold >= upgradeCost)
+        if (PlayerHud.gold >= upgradeCost && !PauseMenuButtons.isPaused)
         {
             TowerGrid.upgradeCardSelected = cardName;
             TowerGrid.upgradeTypeSelected = upgradeType;
@@ -54,11 +60,17 @@ public class Card : MonoBehaviour
 
     public void SellTower()
     {
-        TowerGrid.triggerTowerSell = true;
+        if (!PauseMenuButtons.isPaused)
+        {
+            TowerGrid.triggerTowerSell = true;
+        }
     }
 
     public void CloseUpgrades()
     {
-        TowerGrid.triggerUpgradeCardDestruction = true;
+        if (!PauseMenuButtons.isPaused)
+        {
+            TowerGrid.triggerUpgradeCardDestruction = true;
+        }
     }
 }
