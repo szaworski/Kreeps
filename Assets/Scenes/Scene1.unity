@@ -693,24 +693,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Single target
-
-
-    Bonus:
-
-    None
-
-
-    Cost: 50g
-
-    Sell value:
-    45g
-
-    Dmg: 7
-
-    Rof: 0.7
-
-    Rng: 1'
+  m_text: "Single target\nBonus: \nNone\nPenalty:\nNone\nCost: 50g\nSell value: 45g\nDmg:
+    7\nRof: 0.7\nRng: 1"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -1636,22 +1620,25 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-
     Bonus:
 
     x1.5 to Pests
 
+    Penalty:
+
+    x0.5 to
+    Demons
 
     Cost: 225g
 
-    Sell
-    value: 175g
+    Sell value: 175g
 
     Dmg: 9
 
     Rof: 0.5
 
-    Rng: 1'
+    Rng:
+    1'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -2487,22 +2474,25 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-
     Bonus:
 
     x1.5 to Undead
 
+    Penalty:
+
+    x0.5
+    to Humanoids
 
     Cost: 150g
 
-    Sell
-    value: 125g
+    Sell value: 125g
 
     Dmg: 16
 
     Rof: 1.2
 
-    Rng: 0.8
+    Rng:
+    0.8
 
 '
   m_isRightToLeft: 0
@@ -2923,8 +2913,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "AOE in radius\n\nBonus:\nx1.5 to Beasts\n\nCost: 125g\nSell value: 100g\nDmg:
-    4 \nRof: 0.75\nRng: 0.6"
+  m_text: "AOE in radius\nBonus:\nx1.5 to Beasts\nPenalty:\nx0.5 to Brutes\nCost:
+    125g\nSell value: 100g\nDmg: 4 \nRof: 0.75\nRng: 0.6"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -3628,8 +3618,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "AOE in radius\n-5 move speed\nBonus:\nx1.5 to Humanoids\n\nCost: 125g\nSell
-    value: 100g\nDmg: 3 \nRof: 0.75\nRng: 0.6\n"
+  m_text: "AOE in radius +Slow\nBonus:\nx1.5 to Humanoids\nPenalty:\nx0.5 to Undead\nCost:
+    125g\nSell value: 100g\nDmg: 3 \nRof: 0.75\nRng: 0.6\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -3969,22 +3959,25 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'AOE in radius
 
-
     Bonus:
 
     x1.5 to Demons
 
+    Penalty:
+
+    x0.5
+    to Pests
 
     Cost: 300g
 
-    Sell
-    value: 250g
+    Sell value: 250g
 
     Dmg: 10
 
     Rof: 0.8
 
-    Rng: 0.8'
+    Rng:
+    0.8'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -4155,22 +4148,25 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-
     Bonus:
 
     x1.5 to Brutes
 
+    Penalty:
+
+    x0.5
+    to Beasts
 
     Cost: 150g
 
-    Sell
-    value: 125g
+    Sell value: 125g
 
     Dmg: 20
 
     Rof: 1.5
 
-    Rng: 1'
+    Rng:
+    1'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -5014,7 +5010,7 @@ MonoBehaviour:
     volume: 0.5
     pitch: 0.6
     source: {fileID: 0}
-  - name: FireCyclone
+  - name: Fire2
     clip: {fileID: 8300000, guid: af346247cf8516b49a50bf93d7e19bc5, type: 3}
     volume: 0.5
     pitch: 0.65
