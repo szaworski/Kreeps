@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.990566, g: 0.990566, b: 0.990566, a: 1}
+  m_Color: {r: 0.47058824, g: 0.47058824, b: 0.47058824, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -199,10 +199,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a25aed25cc939418391541789eea92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGameButton: {fileID: 0}
-  optionsButton: {fileID: 0}
-  exitGameButton: {fileID: 0}
-  backButton: {fileID: 0}
   transition: {fileID: 688514114435962944}
   newGameButtonTriggered: 0
   optionsButtonTriggered: 0

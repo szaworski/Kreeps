@@ -31,6 +31,7 @@ public class Card : MonoBehaviour
             TileSpawner.tileCardSelected = cardName;
             IsHoveringOverUiCard = false;
             TileSpawner.triggerTileCardDestruction = true;
+            PlayerHud.triggerBonusStatsUpdate = true;
         }
     }
 
