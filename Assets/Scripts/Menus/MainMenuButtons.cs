@@ -4,10 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuButtons : LoadNewScene
 {
-    public GameObject newGameButton;
-    public GameObject optionsButton;
-    public GameObject exitGameButton;
-    public GameObject backButton;
     public Animator transition;
     public bool newGameButtonTriggered;
     public bool optionsButtonTriggered;

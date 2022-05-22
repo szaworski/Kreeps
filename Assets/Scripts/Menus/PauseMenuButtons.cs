@@ -6,11 +6,8 @@ public class PauseMenuButtons : LoadNewScene
 {
     public GameObject pauseMenuUI;
     public GameObject optionsMenuUI;
-    public GameObject resumeButton;
-    public GameObject optionsButton;
-    public GameObject mainMenuButton;
-    public GameObject exitGameButton;
-    public GameObject backButton;
+    public GameObject returnToMainMenuUI;
+    public GameObject exitGameMenuUI;
     public Animator transition;
     public static bool openedMenuFlag;
     public static bool isPaused;
@@ -63,6 +60,30 @@ public class PauseMenuButtons : LoadNewScene
         Time.timeScale = 1f;
     }
 
+    public void OpenReturnToMainMenuUi()
+    {
+        pauseMenuUI.SetActive(false);
+        returnToMainMenuUI.SetActive(true);
+    }
+
+    public void OpenExitGameMenuUi()
+    {
+        pauseMenuUI.SetActive(false);
+        exitGameMenuUI.SetActive(true);
+    }
+
+    public void ReturnToMainMenuCancel()
+    {
+        pauseMenuUI.SetActive(true);
+        returnToMainMenuUI.SetActive(false);
+    }
+
+    public void ExitGameMenuCancel()
+    {
+        pauseMenuUI.SetActive(true);
+        exitGameMenuUI.SetActive(false);
+    }
+
     public void ReturnToMainMenu()
     {
         isLoading = true;
@@ -83,7 +104,17 @@ public class PauseMenuButtons : LoadNewScene
 
     public void BackButton()
     {
-        if (optionsMenuUI.activeInHierarchy)
+        if (returnToMainMenuUI.activeInHierarchy)
+        {
+            ReturnToMainMenuCancel();
+        }
+
+        else if (exitGameMenuUI.activeInHierarchy)
+        {
+            ExitGameMenuCancel();
+        }
+
+        else if (optionsMenuUI.activeInHierarchy)
         {
             //optionsMenuUI.SetActive(false);
             pauseMenuUI.SetActive(true);
