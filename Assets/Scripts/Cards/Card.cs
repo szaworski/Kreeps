@@ -55,7 +55,13 @@ public class Card : MonoBehaviour
             TowerGrid.upgradeGoldCost = upgradeCost;
             IsHoveringOverUiCard = false;
             TowerGrid.triggerTowerUpgrade = true;
+            GameObject.Find("UiSounds").GetComponent<AudioManager>().PlaySound("PlaceTower");
             //Debug.Log("Upgrade Card selected: " + cardName);
+        }
+
+        else
+        {
+            GameObject.Find("UiSounds").GetComponent<AudioManager>().PlaySound("Error");
         }
     }
 

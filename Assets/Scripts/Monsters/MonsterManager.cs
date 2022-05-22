@@ -15,6 +15,7 @@ public class MonsterManager : MonoBehaviour
     {
         monsterCount = 0;
         monsterList = new List<string>();
+        AllMonstersAreSpawned = false;
     }
 
     void Update()

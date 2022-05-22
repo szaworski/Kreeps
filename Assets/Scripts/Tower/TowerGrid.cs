@@ -105,6 +105,12 @@ public class TowerGrid : MonoBehaviour
 
                     //Subtract gold from the player
                     PlayerHud.newGoldValue = PlayerHud.gold - goldCost;
+                    GameObject.Find("UiSounds").GetComponent<AudioManager>().PlaySound("PlaceTower");
+                }
+
+                else if (!hasTower && PlayerHud.gold < goldCost)
+                {
+                    GameObject.Find("UiSounds").GetComponent<AudioManager>().PlaySound("Error");
                 }
             }
 
@@ -133,6 +139,7 @@ public class TowerGrid : MonoBehaviour
                 {
                     DestroyTower(placedTower);
                     hasTower = false;
+                    GameObject.Find("UiSounds").GetComponent<AudioManager>().PlaySound("SellTower");
 
                     //Give gold to the player (Give back a set amount based on the tower type)
                     switch (towerScript.damageType)
@@ -322,6 +329,7 @@ public class TowerGrid : MonoBehaviour
 
             DestroyTowerUpgradeCards();
             DestroyTower(oldTowerObj);
+            GameObject.Find("UiSounds").GetComponent<AudioManager>().PlaySound("SellTower");
 
             //Give gold to the player (Give back a set amount based on the tower type)
             switch (gridScript.towerScript.damageType)

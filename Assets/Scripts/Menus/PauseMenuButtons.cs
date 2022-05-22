@@ -8,6 +8,7 @@ public class PauseMenuButtons : LoadNewScene
     public GameObject optionsMenuUI;
     public GameObject returnToMainMenuUI;
     public GameObject exitGameMenuUI;
+    public GameObject gameOverMenuUI;
     public Animator transition;
     public static bool openedMenuFlag;
     public static bool isPaused;
@@ -44,6 +45,11 @@ public class PauseMenuButtons : LoadNewScene
                 openedMenuFlag = true;
             }
         }
+
+        if (PlayerHealth.playerHealth <= 0)
+        {
+            OpenGameOverMenuUi();
+        }
     }
 
     public void Pause()
@@ -70,6 +76,18 @@ public class PauseMenuButtons : LoadNewScene
     {
         pauseMenuUI.SetActive(false);
         exitGameMenuUI.SetActive(true);
+    }
+
+    public void OpenGameOverMenuUi()
+    {
+        isPaused = true;
+        openedMenuFlag = true;
+
+        pauseMenuUI.SetActive(false);
+        returnToMainMenuUI.SetActive(false);
+        exitGameMenuUI.SetActive(false);
+        //optionsMenuUI.SetActive(false);
+        gameOverMenuUI.SetActive(true);
     }
 
     public void ReturnToMainMenuCancel()

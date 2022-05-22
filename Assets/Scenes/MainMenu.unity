@@ -1600,10 +1600,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a25aed25cc939418391541789eea92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newGameButton: {fileID: 241080159}
-  optionsButton: {fileID: 508654395}
-  exitGameButton: {fileID: 366461933}
-  backButton: {fileID: 0}
   transition: {fileID: 765579050}
   newGameButtonTriggered: 0
   optionsButtonTriggered: 0
