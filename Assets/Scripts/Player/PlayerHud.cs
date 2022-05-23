@@ -18,6 +18,8 @@ public class PlayerHud : MonoBehaviour
     public static bool IsHoveringOverHudElement;
     public static bool showStartWaveInstructions;
     public static bool triggerBonusStatsUpdate;
+    public static bool showBonusStats;
+    public GameObject bonusStats;
 
     [SerializeField] private TMP_Text goldAmtUiText;
     [SerializeField] private TMP_Text waveNumUiText;
@@ -35,6 +37,7 @@ public class PlayerHud : MonoBehaviour
         newGoldValue = gold;
         goldAmtUiText.SetText(gold.ToString());
         showStartWaveInstructions = true;
+        showBonusStats = true;
 
         //"selectedTowerType" is set to neutral by deafult
         TowerGrid.towerTypeSelected = "Neutral";
@@ -58,6 +61,7 @@ public class PlayerHud : MonoBehaviour
         }
 
         HideShowStartWaveInstructions();
+        HideShowBonusStats();
     }
 
     public void ChangeGoldAmt()
@@ -86,6 +90,21 @@ public class PlayerHud : MonoBehaviour
         {
             //Hide the start wave text
             waveStartUiText.enabled = false;
+        }
+    }
+
+    public void HideShowBonusStats()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab) && showBonusStats)
+        {
+            bonusStats.SetActive(false);
+            showBonusStats = false;
+        }
+
+        else if (Input.GetKeyDown(KeyCode.Tab) && !showBonusStats)
+        {
+            bonusStats.SetActive(true);
+            showBonusStats = true;
         }
     }
 

@@ -5,6 +5,7 @@ using UnityEngine;
 public class PauseMenuButtons : LoadNewScene
 {
     public GameObject pauseMenuUI;
+    public GameObject controlsMenuUI;
     public GameObject optionsMenuUI;
     public GameObject returnToMainMenuUI;
     public GameObject exitGameMenuUI;
@@ -72,6 +73,12 @@ public class PauseMenuButtons : LoadNewScene
         returnToMainMenuUI.SetActive(true);
     }
 
+    public void OpenControlsMainMenuUi()
+    {
+        pauseMenuUI.SetActive(false);
+        controlsMenuUI.SetActive(true);
+    }
+
     public void OpenExitGameMenuUi()
     {
         pauseMenuUI.SetActive(false);
@@ -94,6 +101,12 @@ public class PauseMenuButtons : LoadNewScene
     {
         pauseMenuUI.SetActive(true);
         returnToMainMenuUI.SetActive(false);
+    }
+
+    public void ControlsMenuBack()
+    {
+        pauseMenuUI.SetActive(true);
+        controlsMenuUI.SetActive(false);
     }
 
     public void ExitGameMenuCancel()
