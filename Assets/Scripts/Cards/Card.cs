@@ -13,7 +13,7 @@ public class Card : MonoBehaviour
     void Update()
     {
         //Check if the mouse is over any UI elements to disable other functionality underneath
-        if (EventSystem.current.IsPointerOverGameObject() && !PauseMenuButtons.isPaused)
+        if (EventSystem.current.IsPointerOverGameObject())
         {
             IsHoveringOverUiCard = true;
         }

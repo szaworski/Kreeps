@@ -145,6 +145,12 @@ public class PauseMenuButtons : LoadNewScene
             ExitGameMenuCancel();
         }
 
+        else if (controlsMenuUI.activeInHierarchy)
+        {
+            //optionsMenuUI.SetActive(false);
+            ControlsMenuBack();
+        }
+
         else if (optionsMenuUI.activeInHierarchy)
         {
             //optionsMenuUI.SetActive(false);

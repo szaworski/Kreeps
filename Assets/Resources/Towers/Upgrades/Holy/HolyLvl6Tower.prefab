@@ -185,9 +185,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
-  damage: 55
+  damage: 45
   projectileSpeed: 4
-  attackSpeed: 0.55
+  attackSpeed: 0.7
   attackRange: 1
   damageType: Holy
   slowAmt: 0

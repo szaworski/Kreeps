@@ -22,7 +22,7 @@ public class TowerCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     void Update()
     {
-        if (EventSystem.current.IsPointerOverGameObject() && !PauseMenuButtons.isPaused)
+        if (EventSystem.current.IsPointerOverGameObject())
         {
             Card.IsHoveringOverUiCard = true;
         }
