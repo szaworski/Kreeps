@@ -141,3 +141,4 @@ MonoBehaviour:
   slowAmt: 0
   damageType: 
   target: {fileID: 0}
+  rb: {fileID: -7440129572534784170}

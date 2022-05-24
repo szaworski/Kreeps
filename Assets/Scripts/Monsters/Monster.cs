@@ -346,9 +346,10 @@ public class Monster : MonoBehaviour
         //Apply any Tier 1 bonuses
         health += 6 * TileSpawner.numOfRivers;
         health += 2 * TileSpawner.numOfMountains;
+        health += 2 * TileSpawner.numOfGraveyards;
         armor += 1 * TileSpawner.numOfMountains;
         moveSpeed += 0.04f * TileSpawner.numOfForrests;
-        hpRegen += 2 * TileSpawner.numOfGraveyards;
+        hpRegen += 1 * TileSpawner.numOfGraveyards;
         evasionChance += 0.02f * TileSpawner.numOfSwamps;
 
         //Apply any Tier 2 bonuses

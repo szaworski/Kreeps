@@ -120,9 +120,10 @@ public class PlayerHud : MonoBehaviour
         //Apply any Tier 1 bonuses
         bonusMaxHealth += 6 * TileSpawner.numOfRivers;
         bonusMaxHealth += 2 * TileSpawner.numOfMountains;
+        bonusMaxHealth += 2 * TileSpawner.numOfGraveyards;
         bonusArmor += 1 * TileSpawner.numOfMountains;
         bonusMoveSpeed += 0.04f * TileSpawner.numOfForrests;
-        bonusHpRegen += 2 * TileSpawner.numOfGraveyards;
+        bonusHpRegen += 1 * TileSpawner.numOfGraveyards;
         bonusEvasion += 0.02f * TileSpawner.numOfSwamps;
 
         //Apply any Tier 2 bonuses

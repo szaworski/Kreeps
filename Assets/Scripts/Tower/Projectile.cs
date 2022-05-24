@@ -11,6 +11,7 @@ public class Projectile : MonoBehaviour
     public float slowAmt;
     public string damageType;
     public GameObject target;
+    public Rigidbody2D rb;
 
     void Awake()
     {
@@ -46,7 +47,7 @@ public class Projectile : MonoBehaviour
             else
             {
                 //If the target is not null, The projectile is destroyed after the damage value is received by the monster (See Monster.cs OnTriggerEnter2D function)
-                destroyProjectile();
+                DestroyProjectile();
             }
         }
 
@@ -60,7 +61,7 @@ public class Projectile : MonoBehaviour
             else
             {
                 //If the target is not null, The projectile is destroyed after the damage value is received by the monster (See Monster.cs OnTriggerEnter2D function)
-                destroyProjectile();
+                DestroyProjectile();    
             }
         }
 
@@ -72,7 +73,7 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    public void destroyProjectile()
+    public void DestroyProjectile()
     {
         Destroy(this.gameObject);
     }
