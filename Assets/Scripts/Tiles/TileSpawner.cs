@@ -65,6 +65,19 @@ public class TileSpawner : TileTypes
         curTiles = new string[6];
         validTiles = new bool[6];
         PlaceStartingTile();
+
+        numOfForrests = 0;
+        numOfGraveyards = 0;
+        numOfRivers = 0;
+        numOfMountains = 0;
+        numOfSwamps = 0;
+
+        numOfDeserts = 0;
+        numOfThickets = 0;
+        numOfTundras = 0;
+        numOfCaverns = 0;
+        numOfSettlements = 0;
+        numOfSeashores = 0;
     }
 
     void Update()
@@ -319,7 +332,7 @@ public class TileSpawner : TileTypes
 
             card1Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + currTier + "/" + card1), cardSlot1.transform);
             card2Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + currTier + "/" + card2), cardSlot2.transform);
-            card3Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + currTier + "/"+ card3), cardSlot3.transform);
+            card3Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + currTier + "/" + card3), cardSlot3.transform);
 
             card1Obj.transform.position = cardSlot1.transform.position;
             card2Obj.transform.position = cardSlot2.transform.position;
