@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using TMPro;
 
 public class TileSpawner : TileTypes
 {
@@ -29,6 +30,8 @@ public class TileSpawner : TileTypes
     private GameObject card1Obj;
     private GameObject card2Obj;
     private GameObject card3Obj;
+    [SerializeField] private TMP_Text locationSelectText;
+    [SerializeField] private TMP_Text monsterSelectText;
 
     //Static vars used for tracking certain values
     public static bool triggerTileCardDestruction;
@@ -337,6 +340,7 @@ public class TileSpawner : TileTypes
             card1Obj.transform.position = cardSlot1.transform.position;
             card2Obj.transform.position = cardSlot2.transform.position;
             card3Obj.transform.position = cardSlot3.transform.position;
+            locationSelectText.enabled = true;
         }
 
         //Destory all tile card game objects after a selection is made. See Card.cs
@@ -349,6 +353,7 @@ public class TileSpawner : TileTypes
             SpawnNewTile();
             //Reset this bool for next card selection later
             triggerTileCardDestruction = false;
+            locationSelectText.enabled = false;
             //Call GetAndShowMonsterCards() to spawn the Monster card options
             GetAndShowMonsterCards();
         }
@@ -445,6 +450,7 @@ public class TileSpawner : TileTypes
 
         card1Obj.transform.position = cardSlot4.transform.position;
         card2Obj.transform.position = cardSlot5.transform.position;
+        monsterSelectText.enabled = true;
     }
 
     public void DestroyMonsterCards()
@@ -456,6 +462,7 @@ public class TileSpawner : TileTypes
             Destroy(card2Obj.gameObject);
             //Reset this bool for next card selection later
             triggerMonsterCardDestruction = false;
+            monsterSelectText.enabled = false;
             PlayerHud.showStartWaveInstructions = true;
             Debug.Log("Monster Cards Destoryed");
         }

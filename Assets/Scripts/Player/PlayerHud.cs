@@ -155,7 +155,7 @@ public class PlayerHud : MonoBehaviour
         bonusMoveSpeedUiText.SetText(("+") + (bonusMoveSpeed * 100).ToString());
         bonusMaxHealthUiText.SetText(("+") + bonusMaxHealth.ToString());
         bonusHpRegenUiText.SetText(("+") + bonusHpRegen.ToString());
-        bonusEvasionUiText.SetText(("+") + (bonusEvasion * 100) + ("%").ToString());
+        bonusEvasionUiText.SetText(("+") + Mathf.Round(bonusEvasion * 100) + ("%").ToString());
         bonusArmorUiText.SetText(("+") + bonusArmor.ToString());
 
         triggerBonusStatsUpdate = false;
