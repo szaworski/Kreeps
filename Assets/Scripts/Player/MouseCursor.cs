@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class MouseCursor : MonoBehaviour
 {
-    public static string currentWeapon;
     [SerializeField] private Texture2D cursorImage;
     [SerializeField] private Texture2D[] weaponImages;
+    private string currentWeapon;
+    public string GetSetCurrentWeapon
+    {
+        get { return currentWeapon; }
+        set { currentWeapon = value; }
+    }
 
     void Awake()
     {

@@ -4,22 +4,20 @@ using UnityEngine;
 
 public class PauseMenuButtons : LoadNewScene
 {
-    public GameObject pauseMenuUI;
-    public GameObject controlsMenuUI;
-    public GameObject optionsMenuUI;
-    public GameObject returnToMainMenuUI;
-    public GameObject exitGameMenuUI;
-    public GameObject gameOverMenuUI;
-    public Animator transition;
-    public static bool openedMenuFlag;
+    [SerializeField] private GameObject pauseMenuUI;
+    [SerializeField] private GameObject controlsMenuUI;
+    [SerializeField] private GameObject optionsMenuUI;
+    [SerializeField] private GameObject returnToMainMenuUI;
+    [SerializeField] private GameObject exitGameMenuUI;
+    [SerializeField] private GameObject gameOverMenuUI;
+    [SerializeField] private Animator transition;
+    private bool isLoading;
     public static bool isPaused;
-    public static bool isLoading;
 
     void Awake()
     {
         isLoading = false;
         isPaused = false;
-        openedMenuFlag = false; //This is used to keep the camera in the correct position when returning to the menu
     }
 
     void Update()
@@ -43,7 +41,6 @@ public class PauseMenuButtons : LoadNewScene
             {
                 Pause();
                 isPaused = true;
-                openedMenuFlag = true;
             }
         }
 
@@ -88,7 +85,6 @@ public class PauseMenuButtons : LoadNewScene
     public void OpenGameOverMenuUi()
     {
         isPaused = true;
-        openedMenuFlag = true;
 
         pauseMenuUI.SetActive(false);
         returnToMainMenuUI.SetActive(false);

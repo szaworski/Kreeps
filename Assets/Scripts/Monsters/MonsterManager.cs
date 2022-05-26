@@ -92,7 +92,10 @@ public class MonsterManager : MonoBehaviour
 
     public void PrependMonsterPath()
     {
-        if (TileSpawner.tileName.Contains("Starting"))
+        GameObject tileManager = GameObject.Find("TileManager");
+        TileSpawner tileSpawnerScript = tileManager.GetComponent<TileSpawner>();
+
+        if (tileSpawnerScript.GetTileName.Contains("Starting"))
         {
             prependMonsterName = "Monsters/Tier1/";
         }

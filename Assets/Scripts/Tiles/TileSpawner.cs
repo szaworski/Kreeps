@@ -33,33 +33,84 @@ public class TileSpawner : TileTypes
     [SerializeField] private TMP_Text locationSelectText;
     [SerializeField] private TMP_Text monsterSelectText;
 
+    //Tier 1 Tiles
+    private int numOfForrests;
+    private int numOfGraveyards;
+    private int numOfRivers;
+    private int numOfMountains;
+    private int numOfSwamps;
+
+    public int GetNumOfForrests
+    {
+        get { return numOfForrests; }
+    }
+    public int GetNumOfGraveyards
+    {
+        get { return numOfGraveyards; }
+    }
+    public int GetNumOfRivers
+    {
+        get { return numOfRivers; }
+    }
+    public int GetNumOfMountains
+    {
+        get { return numOfMountains; }
+    }
+    public int GetNumOfSwamps
+    {
+        get { return numOfSwamps; }
+    }
+
+    //Tier 2 Tiles
+    private int numOfDeserts;
+    private int numOfThickets;
+    private int numOfTundras;
+    private int numOfCaverns;
+    private int numOfSettlements;
+    private int numOfSeashores;
+
+    public int GetNumOfDeserts
+    {
+        get { return numOfDeserts; }
+    }
+    public int GetNumOfThickets
+    {
+        get { return numOfThickets; }
+    }
+    public int GetNumOfTundras
+    {
+        get { return numOfTundras; }
+    }
+    public int GetNumOfCaverns
+    {
+        get { return numOfCaverns; }
+    }
+    public int GetNumOfSettlements
+    {
+        get { return numOfSettlements; }
+    }
+    public int GetNumOfSeashores
+    {
+        get { return numOfSeashores; }
+    }
+
+    private string tileName;
+    public string GetTileName
+    {
+        get { return tileName; }
+    }
+
+    private string newTileName;
+
     //Static vars used for tracking certain values
     public static bool triggerTileCardDestruction;
     public static bool triggerMonsterCardDestruction;
-
     public static string prependTileName;
-    public static string tileName;
-    public static string newTileName;
     public static string spawnDirection;
     public static string tileCardSelected;
     public static string monsterCardSelected;
     public static string currTier;
     public static int numOfTimesPlaced;
-
-    //Tier 1 Tiles
-    public static int numOfForrests;
-    public static int numOfGraveyards;
-    public static int numOfRivers;
-    public static int numOfMountains;
-    public static int numOfSwamps;
-
-    //Tier 2 Tiles
-    public static int numOfDeserts;
-    public static int numOfThickets;
-    public static int numOfTundras;
-    public static int numOfCaverns;
-    public static int numOfSettlements;
-    public static int numOfSeashores;
 
     void Awake()
     {

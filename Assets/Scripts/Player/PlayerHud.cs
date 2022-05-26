@@ -6,21 +6,6 @@ using UnityEngine.EventSystems;
 
 public class PlayerHud : MonoBehaviour
 {
-    public static int gold;
-    public static int curWaveNum;
-    public static int newGoldValue;
-    public static int costOfCurrentSelection;
-    public static float bonusMoveSpeed;
-    public static float bonusMaxHealth;
-    public static float bonusHpRegen;
-    public static float bonusEvasion;
-    public static float bonusArmor;
-    public static bool IsHoveringOverHudElement;
-    public static bool showStartWaveInstructions;
-    public static bool triggerBonusStatsUpdate;
-    public static bool showBonusStats;
-    public GameObject bonusStats;
-
     [SerializeField] private TMP_Text goldAmtUiText;
     [SerializeField] private TMP_Text waveNumUiText;
     [SerializeField] private TMP_Text waveStartUiText;
@@ -29,6 +14,20 @@ public class PlayerHud : MonoBehaviour
     [SerializeField] private TMP_Text bonusHpRegenUiText;
     [SerializeField] private TMP_Text bonusEvasionUiText;
     [SerializeField] private TMP_Text bonusArmorUiText;
+    [SerializeField] private int curWaveNum;
+    [SerializeField] private float bonusMoveSpeed;
+    [SerializeField] private float bonusMaxHealth;
+    [SerializeField] private float bonusHpRegen;
+    [SerializeField] private float bonusEvasion;
+    [SerializeField] private float bonusArmor;
+    [SerializeField] private bool showBonusStats;
+    [SerializeField] private GameObject bonusStats;
+
+    public static int gold;
+    public static int newGoldValue;
+    public static bool IsHoveringOverHudElement;
+    public static bool showStartWaveInstructions;
+    public static bool triggerBonusStatsUpdate;
 
     void Awake()
     {
@@ -110,6 +109,9 @@ public class PlayerHud : MonoBehaviour
 
     public void ChangeKreepBonusStats()
     {
+        GameObject tileManager = GameObject.Find("TileManager");
+        TileSpawner tileSpawnerScript = tileManager.GetComponent<TileSpawner>();
+
         //Reset values back to zero so they can be recalculated
         bonusMoveSpeed = 0;
         bonusMaxHealth = 0;
@@ -118,36 +120,36 @@ public class PlayerHud : MonoBehaviour
         bonusEvasion = 0;
 
         //Apply any Tier 1 bonuses
-        bonusMaxHealth += 6 * TileSpawner.numOfRivers;
-        bonusMaxHealth += 2 * TileSpawner.numOfMountains;
-        bonusMaxHealth += 2 * TileSpawner.numOfGraveyards;
-        bonusArmor += 1 * TileSpawner.numOfMountains;
-        bonusMoveSpeed += 0.04f * TileSpawner.numOfForrests;
-        bonusHpRegen += 1 * TileSpawner.numOfGraveyards;
-        bonusEvasion += 0.02f * TileSpawner.numOfSwamps;
+        bonusMaxHealth += 6 * tileSpawnerScript.GetNumOfRivers;
+        bonusMaxHealth += 2 * tileSpawnerScript.GetNumOfMountains;
+        bonusMaxHealth += 2 * tileSpawnerScript.GetNumOfGraveyards;
+        bonusArmor += 1 * tileSpawnerScript.GetNumOfMountains;
+        bonusMoveSpeed += 0.04f * tileSpawnerScript.GetNumOfForrests;
+        bonusHpRegen += 1 * tileSpawnerScript.GetNumOfGraveyards;
+        bonusEvasion += 0.02f * tileSpawnerScript.GetNumOfSwamps;
 
         //Apply any Tier 2 bonuses
-        bonusMaxHealth += 10 * TileSpawner.numOfSeashores;
-        bonusMaxHealth += 7 * TileSpawner.numOfThickets;
-        bonusMaxHealth += 5 * TileSpawner.numOfSettlements;
-        bonusMaxHealth += 4 * TileSpawner.numOfDeserts;
-        bonusMaxHealth += 3 * TileSpawner.numOfTundras;
+        bonusMaxHealth += 10 * tileSpawnerScript.GetNumOfSeashores;
+        bonusMaxHealth += 7 * tileSpawnerScript.GetNumOfThickets;
+        bonusMaxHealth += 5 * tileSpawnerScript.GetNumOfSettlements;
+        bonusMaxHealth += 4 * tileSpawnerScript.GetNumOfDeserts;
+        bonusMaxHealth += 3 * tileSpawnerScript.GetNumOfTundras;
 
-        bonusArmor += 1 * TileSpawner.numOfSeashores;
-        bonusArmor += 1 * TileSpawner.numOfTundras;
-        bonusArmor += 2 * TileSpawner.numOfCaverns;
+        bonusArmor += 1 * tileSpawnerScript.GetNumOfSeashores;
+        bonusArmor += 1 * tileSpawnerScript.GetNumOfTundras;
+        bonusArmor += 2 * tileSpawnerScript.GetNumOfCaverns;
 
-        bonusMoveSpeed += 0.02f * TileSpawner.numOfTundras;
-        bonusMoveSpeed += 0.03f * TileSpawner.numOfDeserts;
-        bonusMoveSpeed += 0.05f * TileSpawner.numOfSettlements;
+        bonusMoveSpeed += 0.02f * tileSpawnerScript.GetNumOfTundras;
+        bonusMoveSpeed += 0.03f * tileSpawnerScript.GetNumOfDeserts;
+        bonusMoveSpeed += 0.05f * tileSpawnerScript.GetNumOfSettlements;
 
-        bonusHpRegen += 1 * TileSpawner.numOfThickets;
-        bonusHpRegen += 1 * TileSpawner.numOfTundras;
-        bonusHpRegen += 2 * TileSpawner.numOfCaverns;
+        bonusHpRegen += 1 * tileSpawnerScript.GetNumOfThickets;
+        bonusHpRegen += 1 * tileSpawnerScript.GetNumOfTundras;
+        bonusHpRegen += 2 * tileSpawnerScript.GetNumOfCaverns;
 
-        bonusEvasion += 0.01f * TileSpawner.numOfCaverns;
-        bonusEvasion += 0.01f * TileSpawner.numOfDeserts;
-        bonusEvasion += 0.03f * TileSpawner.numOfThickets;
+        bonusEvasion += 0.01f * tileSpawnerScript.GetNumOfCaverns;
+        bonusEvasion += 0.01f * tileSpawnerScript.GetNumOfDeserts;
+        bonusEvasion += 0.03f * tileSpawnerScript.GetNumOfThickets;
 
         //Apply any Tier 3 bonuses
 
