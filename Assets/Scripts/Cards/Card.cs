@@ -5,10 +5,23 @@ using UnityEngine.EventSystems;
 
 public class Card : MonoBehaviour
 {
-    public static bool IsHoveringOverUiCard;
     [SerializeField] private string cardName;
     [SerializeField] private int upgradeCost;
     [SerializeField] private string upgradeType;
+    public static bool IsHoveringOverUiCard;
+
+    GameObject tileManager;
+    GameObject playerHud;
+    TileSpawner tileSpawnerScript;
+    PlayerHud playerHudScript;
+
+    void Awake()
+    {
+        tileManager = GameObject.Find("TileManager");
+        playerHud = GameObject.Find("PlayerHud");
+        tileSpawnerScript = tileManager.GetComponent<TileSpawner>();
+        playerHudScript = playerHud.GetComponent<PlayerHud>();
+    }
 
     void Update()
     {
@@ -28,10 +41,10 @@ public class Card : MonoBehaviour
     {
         if (!PauseMenuButtons.isPaused)
         {
-            TileSpawner.tileCardSelected = cardName;
+            tileSpawnerScript.GetSetTileCardSelected = cardName;
             IsHoveringOverUiCard = false;
-            TileSpawner.triggerTileCardDestruction = true;
-            PlayerHud.triggerBonusStatsUpdate = true;
+            tileSpawnerScript.GetSetTriggerTileCardDestruction = true;
+            playerHudScript.GetSetTriggerBonusStatsUpdate = true;
         }
     }
 
@@ -39,9 +52,9 @@ public class Card : MonoBehaviour
     {
         if (!PauseMenuButtons.isPaused)
         {
-            TileSpawner.monsterCardSelected = cardName;
+            tileSpawnerScript.GetSetMonsterCardSelected = cardName;
             IsHoveringOverUiCard = false;
-            TileSpawner.triggerMonsterCardDestruction = true;
+            tileSpawnerScript.GetSetTriggerMonsterCardDestruction = true;
             //Debug.Log("Monster Card selected: " + cardName);
         }
     }

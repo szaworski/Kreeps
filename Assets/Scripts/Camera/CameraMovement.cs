@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class CameraMovement : MonoBehaviour
 {
-    private Camera camera;
-    private float panSpeed = 5f;
-    private float scrollSpeed = 2.5f;
-    private Vector2 panLimit;
-    private Vector3 pos;
+    [SerializeField] private Camera camera;
+    [SerializeField] private float panSpeed = 5f;
+    [SerializeField] private float scrollSpeed = 2.5f;
+    [SerializeField] private Vector2 panLimit;
+    [SerializeField] private Vector3 pos;
 
     void Start()
     {

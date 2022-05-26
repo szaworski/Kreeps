@@ -14,6 +14,7 @@ public class PlayerHud : MonoBehaviour
     [SerializeField] private TMP_Text bonusHpRegenUiText;
     [SerializeField] private TMP_Text bonusEvasionUiText;
     [SerializeField] private TMP_Text bonusArmorUiText;
+    [SerializeField] private GameObject bonusStats;
     [SerializeField] private int curWaveNum;
     [SerializeField] private float bonusMoveSpeed;
     [SerializeField] private float bonusMaxHealth;
@@ -21,16 +22,33 @@ public class PlayerHud : MonoBehaviour
     [SerializeField] private float bonusEvasion;
     [SerializeField] private float bonusArmor;
     [SerializeField] private bool showBonusStats;
-    [SerializeField] private GameObject bonusStats;
+    [SerializeField] private bool showStartWaveInstructions;
+    [SerializeField] private bool triggerBonusStatsUpdate;
+    public bool GetSetShowStartWaveInstructions
+    {
+        get { return showStartWaveInstructions; }
+        set { showStartWaveInstructions = value; }
+    }
+    public bool GetSetTriggerBonusStatsUpdate
+    {
+        get { return triggerBonusStatsUpdate; }
+        set { triggerBonusStatsUpdate = value; }
+    }
 
     public static int gold;
     public static int newGoldValue;
-    public static bool IsHoveringOverHudElement;
-    public static bool showStartWaveInstructions;
-    public static bool triggerBonusStatsUpdate;
+
+    GameObject tileManager;
+    GameObject monsterManager;
+    TileSpawner tileSpawnerScript;
+    MonsterManager monsterManagerScript;
 
     void Awake()
     {
+        tileManager = GameObject.Find("TileManager");
+        tileSpawnerScript = tileManager.GetComponent<TileSpawner>();
+        monsterManager = GameObject.Find("MonsterManager");
+        monsterManagerScript = monsterManager.GetComponent<MonsterManager>();
         //When changing the gold value, add or subtract from the "gold" variable, and then set "goldAmtUiText" to the new value
         gold = 200;
         newGoldValue = gold;
@@ -49,7 +67,7 @@ public class PlayerHud : MonoBehaviour
             ChangeGoldAmt();
         }
 
-        if (curWaveNum < MonsterManager.monsterCount)
+        if (curWaveNum < monsterManagerScript.GetMonsterCount)
         {
             ChangeWaveNum();
         }
@@ -72,7 +90,7 @@ public class PlayerHud : MonoBehaviour
     public void ChangeWaveNum()
     {
         //Update the wave number to be = to "monsterCount". (This count will match the wave number, so we can use this instead of a new variable)
-        curWaveNum = MonsterManager.monsterCount;
+        curWaveNum = monsterManagerScript.GetMonsterCount;
         waveNumUiText.SetText(curWaveNum.ToString());
     }
 
@@ -109,9 +127,6 @@ public class PlayerHud : MonoBehaviour
 
     public void ChangeKreepBonusStats()
     {
-        GameObject tileManager = GameObject.Find("TileManager");
-        TileSpawner tileSpawnerScript = tileManager.GetComponent<TileSpawner>();
-
         //Reset values back to zero so they can be recalculated
         bonusMoveSpeed = 0;
         bonusMaxHealth = 0;

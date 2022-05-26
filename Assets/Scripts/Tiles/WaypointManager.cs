@@ -5,9 +5,14 @@ using UnityEngine;
 public class WaypointManager : MonoBehaviour
 {
     public int waypointNum;
+    GameObject tileManager;
+    TileSpawner tileSpawnerScript;
 
     void Awake()
     {
-        waypointNum = TileSpawner.numOfTimesPlaced;
+        tileManager = GameObject.Find("TileManager");
+        tileSpawnerScript = tileManager.GetComponent<TileSpawner>();
+
+        waypointNum = tileSpawnerScript.GetNumOfTimesPlaced;
     }
 }

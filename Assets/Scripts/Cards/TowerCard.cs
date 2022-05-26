@@ -7,12 +7,12 @@ public class TowerCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 {
     [SerializeField] private EventSystem eventSystem;
     [SerializeField] private GameObject lastSelected = null;
-    [SerializeField] private string cardName;
-    [SerializeField] private bool mouseHover;
-    [SerializeField] private bool expanded;
     [SerializeField] private RectTransform cardPos;
     [SerializeField] private RectTransform pos1;
     [SerializeField] private RectTransform pos2;
+    [SerializeField] private string cardName;
+    [SerializeField] private bool mouseHover;
+    [SerializeField] private bool expanded;
 
     void Start ()
     {

@@ -4,10 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuButtons : LoadNewScene
 {
-    public Animator transition;
-    public bool newGameButtonTriggered;
-    public bool optionsButtonTriggered;
-    public bool exitGameButtonTriggered;
+    [SerializeField] private Animator transition;
+    [SerializeField] private bool newGameButtonTriggered;
+    [SerializeField] private bool optionsButtonTriggered;
+    [SerializeField] private bool exitGameButtonTriggered;
 
     void Awake()
     {

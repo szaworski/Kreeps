@@ -7,12 +7,32 @@ using UnityEngine;
 public class MonsterManager : MonoBehaviour
 {
     private string prependMonsterName;
-    public static int monsterCount;
-    public static bool AllMonstersAreSpawned;
-    List<string> monsterList;
+    private int monsterCount;
+    private bool AllMonstersAreSpawned;
+    private List<string> monsterList;
+
+    public int GetMonsterCount
+    {
+        get { return monsterCount; }
+    }
+    public bool GetSetAllMonstersAreSpawned
+    {
+        get { return AllMonstersAreSpawned; }
+        set { AllMonstersAreSpawned = value; }
+    }
+
+    GameObject tileManager;
+    GameObject playerHud;
+    TileSpawner tileSpawnerScript;
+    PlayerHud playerHudScript;
 
     void Awake()
     {
+        tileManager = GameObject.Find("TileManager");
+        playerHud = GameObject.Find("PlayerHud");
+        tileSpawnerScript = tileManager.GetComponent<TileSpawner>();
+        playerHudScript = playerHud.GetComponent<PlayerHud>();
+
         monsterCount = 0;
         monsterList = new List<string>();
         AllMonstersAreSpawned = false;
@@ -26,12 +46,12 @@ public class MonsterManager : MonoBehaviour
 
     public void SpawnMonsters(float amtOfTime)
     {
-        if (Input.GetKeyDown(KeyCode.Return) && PlayerHud.showStartWaveInstructions && GameObject.Find("TileManager").transform.childCount == 0)
+        if (Input.GetKeyDown(KeyCode.Return) && playerHudScript.GetSetShowStartWaveInstructions && GameObject.Find("TileManager").transform.childCount == 0)
         {
             //Make sure that the game isn't paused
             if (!PauseMenuButtons.isPaused)
             {
-                PlayerHud.showStartWaveInstructions = false;
+                playerHudScript.GetSetShowStartWaveInstructions = false;
                 //Need to call the GenerateMonsters method with a Coroutine to delay each iteration of the foreach loop
                 StartCoroutine(GenerateMonsters(amtOfTime));
             }
@@ -57,12 +77,12 @@ public class MonsterManager : MonoBehaviour
     public void AddToMonsterList()
     {
         //After each tile is placed/Monster is selected, add the new monster to the list
-        if (monsterCount < TileSpawner.numOfTimesPlaced && TileSpawner.triggerMonsterCardDestruction || monsterCount < TileSpawner.numOfTimesPlaced && TileSpawner.numOfTimesPlaced <= 1)
+        if (monsterCount < tileSpawnerScript.GetNumOfTimesPlaced && tileSpawnerScript.GetSetTriggerMonsterCardDestruction || monsterCount < tileSpawnerScript.GetNumOfTimesPlaced && tileSpawnerScript.GetNumOfTimesPlaced <= 1)
         {
             //Prepend the proper file path for the monster
             PrependMonsterPath();
 
-            if (TileSpawner.numOfTimesPlaced <= 1)
+            if (tileSpawnerScript.GetNumOfTimesPlaced <= 1)
             {
                 //Get a random starting monster from the 3 provided
                 var rand = new System.Random();
@@ -70,19 +90,19 @@ public class MonsterManager : MonoBehaviour
                 switch (startingMonsterIndex)
                 {
                     case 0:
-                        TileSpawner.monsterCardSelected = "Forrest/Wolf";
+                        tileSpawnerScript.GetSetMonsterCardSelected = "Forrest/Wolf";
                         break;
                     case 1:
-                        TileSpawner.monsterCardSelected = "Mountain/Ranger";
+                        tileSpawnerScript.GetSetMonsterCardSelected = "Mountain/Ranger";
                         break;
                     case 2:
-                        TileSpawner.monsterCardSelected = "Graveyard/Zombie";
+                        tileSpawnerScript.GetSetMonsterCardSelected = "Graveyard/Zombie";
                         break;
                 }
             }
 
             //Add the selected monster to the list
-            monsterList.Add(prependMonsterName + TileSpawner.monsterCardSelected);
+            monsterList.Add(prependMonsterName + tileSpawnerScript.GetSetMonsterCardSelected);
 
             monsterCount++;
             Debug.Log("Monster Count: " + monsterCount);
@@ -92,9 +112,6 @@ public class MonsterManager : MonoBehaviour
 
     public void PrependMonsterPath()
     {
-        GameObject tileManager = GameObject.Find("TileManager");
-        TileSpawner tileSpawnerScript = tileManager.GetComponent<TileSpawner>();
-
         if (tileSpawnerScript.GetTileName.Contains("Starting"))
         {
             prependMonsterName = "Monsters/Tier1/";
@@ -102,7 +119,7 @@ public class MonsterManager : MonoBehaviour
 
         else
         {
-            prependMonsterName = "Monsters/" + TileSpawner.currTier + "/" + TileSpawner.tileCardSelected + "/";
+            prependMonsterName = "Monsters/" + tileSpawnerScript.GetCurrTier + "/" + tileSpawnerScript.GetSetTileCardSelected + "/";
         }
     }
 }

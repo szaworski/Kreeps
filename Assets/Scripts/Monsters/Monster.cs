@@ -37,13 +37,18 @@ public class Monster : MonoBehaviour
     private int currentWaypoint;
     private GameObject[] waypoints;
 
+    GameObject tileManager;
+    TileSpawner tileSpawnerScript;
+
     void Awake()
     {
+        tileManager = GameObject.Find("TileManager");
+        tileSpawnerScript = tileManager.GetComponent<TileSpawner>();
         damage = 1;
         lastPos = transform.position;
         isFacingLeft = true;
         waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
-        currentWaypoint = TileSpawner.numOfTimesPlaced;
+        currentWaypoint = tileSpawnerScript.GetNumOfTimesPlaced;
         //Apply any bonus values to the monster
         ApplySpawnBonuses();
         //Set the health values to be shown
@@ -342,9 +347,6 @@ public class Monster : MonoBehaviour
 
     void ApplySpawnBonuses()
     {
-        GameObject tileManager = GameObject.Find("TileManager");
-        TileSpawner tileSpawnerScript = tileManager.GetComponent<TileSpawner>();
-
         //Apply any Tier 1 bonuses
         health += 6 * tileSpawnerScript.GetNumOfRivers;
         health += 2 * tileSpawnerScript.GetNumOfMountains;

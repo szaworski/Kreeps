@@ -5,12 +5,11 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public static int playerHealth;
-    public static int newPlayerHealthValue;
-    public static bool gameOver;
     [SerializeField] private TMP_Text healthUiText;
     [SerializeField] private TMP_Text slashUiText;
     [SerializeField] private TMP_Text maxHealthUiText;
+    public static int playerHealth;
+    public static int newPlayerHealthValue;
 
     void Awake()
     {

@@ -11,6 +11,9 @@ public class TowerGrid : MonoBehaviour
     [SerializeField] private GameObject towerAttackRadius;
     [SerializeField] private GameObject towerStats;
     [SerializeField] private Tower towerScript;
+    [SerializeField] private string card1;
+    [SerializeField] private string card2;
+    [SerializeField] private string card3;
 
     [Header("Grid position vars")]
     private bool hasTower;
@@ -34,10 +37,6 @@ public class TowerGrid : MonoBehaviour
     public static GameObject upgradeCard4Obj;
     public static GameObject upgradeCard5Obj;
     public static GameObject upgradeCard6Obj;
-
-    [SerializeField] private string card1;
-    [SerializeField] private string card2;
-    [SerializeField] private string card3;
 
     void Awake()
     {

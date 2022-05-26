@@ -1501,6 +1501,7 @@ GameObject:
   - component: {fileID: 1045140262}
   - component: {fileID: 1045140261}
   - component: {fileID: 1045140265}
+  - component: {fileID: 1045140266}
   m_Layer: 5
   m_Name: Menu Canvas
   m_TagString: Untagged
@@ -1604,6 +1605,21 @@ MonoBehaviour:
   newGameButtonTriggered: 0
   optionsButtonTriggered: 0
   exitGameButtonTriggered: 0
+--- !u!114 &1045140266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1045140260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ccb4fc135acaef40b27bc03f46ebb4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorImage: {fileID: 2800000, guid: d6679c18a06bd524f8f4437ef4a8f875, type: 3}
+  weaponImages:
+  - {fileID: 2800000, guid: d6679c18a06bd524f8f4437ef4a8f875, type: 3}
 --- !u!1 &1138978752
 GameObject:
   m_ObjectHideFlags: 0

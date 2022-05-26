@@ -94,26 +94,63 @@ public class TileSpawner : TileTypes
         get { return numOfSeashores; }
     }
 
+    //Vars used across scripts
+    private bool triggerTileCardDestruction;
+    private bool triggerMonsterCardDestruction;
+    private string newTileName;
     private string tileName;
+    private string prependTileName;
+    private string spawnDirection;
+    private string tileCardSelected;
+    private string monsterCardSelected;
+    private string currTier;
+    private int numOfTimesPlaced;
+
+    public bool GetSetTriggerTileCardDestruction
+    {
+        get { return triggerTileCardDestruction; }
+        set { triggerTileCardDestruction = value; }
+    }
+    public bool GetSetTriggerMonsterCardDestruction
+    {
+        get { return triggerMonsterCardDestruction; }
+        set { triggerMonsterCardDestruction = value; }
+    }
     public string GetTileName
     {
         get { return tileName; }
     }
+    public string GetSetTileCardSelected
+    {
+        get { return tileCardSelected; }
+        set { tileCardSelected = value; }
+    }
+    public string GetSetMonsterCardSelected
+    {
+        get { return monsterCardSelected; }
+        set { monsterCardSelected = value; }
+    }
+    public string GetCurrTier
+    {
+        get { return currTier; }
+    }
+    public int GetNumOfTimesPlaced
+    {
+        get { return numOfTimesPlaced; }
+    }
 
-    private string newTileName;
-
-    //Static vars used for tracking certain values
-    public static bool triggerTileCardDestruction;
-    public static bool triggerMonsterCardDestruction;
-    public static string prependTileName;
-    public static string spawnDirection;
-    public static string tileCardSelected;
-    public static string monsterCardSelected;
-    public static string currTier;
-    public static int numOfTimesPlaced;
+    GameObject monsterManager;
+    GameObject playerHud;
+    MonsterManager monsterManagerScript;
+    PlayerHud playerHudScript;
 
     void Awake()
     {
+        monsterManager = GameObject.Find("MonsterManager");
+        playerHud = GameObject.Find("PlayerHud");
+        monsterManagerScript = monsterManager.GetComponent<MonsterManager>();
+        playerHudScript = playerHud.GetComponent<PlayerHud>();
+
         currTier = "Tier1";
         numOfTimesPlaced = 0;
         curTiles = new string[6];
@@ -328,9 +365,9 @@ public class TileSpawner : TileTypes
     public void GetAndShowTileCards()
     {
         //Check if all monsters have been spawned for the wave and that all monsters are dead, then prompt for card selection
-        if (MonsterManager.AllMonstersAreSpawned && GameObject.Find("TileManager").transform.childCount == 0 && PlayerHealth.playerHealth > 0) //Input.GetKeyDown(KeyCode.Space)
+        if (monsterManagerScript.GetSetAllMonstersAreSpawned && GameObject.Find("TileManager").transform.childCount == 0 && PlayerHealth.playerHealth > 0) //Input.GetKeyDown(KeyCode.Space)
         {
-            MonsterManager.AllMonstersAreSpawned = false;
+            monsterManagerScript.GetSetAllMonstersAreSpawned = false;
 
             var rand = new System.Random();
             List<string> currentCardList = null;
@@ -514,7 +551,7 @@ public class TileSpawner : TileTypes
             //Reset this bool for next card selection later
             triggerMonsterCardDestruction = false;
             monsterSelectText.enabled = false;
-            PlayerHud.showStartWaveInstructions = true;
+            playerHudScript.GetSetShowStartWaveInstructions = true;
             Debug.Log("Monster Cards Destoryed");
         }
     }

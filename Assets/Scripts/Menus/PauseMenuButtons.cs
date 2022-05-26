@@ -11,7 +11,7 @@ public class PauseMenuButtons : LoadNewScene
     [SerializeField] private GameObject exitGameMenuUI;
     [SerializeField] private GameObject gameOverMenuUI;
     [SerializeField] private Animator transition;
-    private bool isLoading;
+    [SerializeField] private bool isLoading;
     public static bool isPaused;
 
     void Awake()
