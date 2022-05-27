@@ -59,7 +59,7 @@ public class TowerGrid : MonoBehaviour
             SellTower();
         }
 
-        if (PauseMenuButtons.isPaused)
+        if (PauseMenuButtons.isPaused || MouseCursor.weaponIsSelected)
         {
             HideGridSprites();
         }
@@ -68,7 +68,7 @@ public class TowerGrid : MonoBehaviour
     void OnMouseOver()
     {
         //Check to make sure we aren't hovering over a UI element and that the game isn't paused 
-        if (!Card.IsHoveringOverUiCard && !PauseMenuButtons.isPaused)
+        if (!Card.IsHoveringOverUiCard && !PauseMenuButtons.isPaused && !MouseCursor.weaponIsSelected)
         {
             //Reveal the grid sprite on mouse over
             SetSelectedTowerGhost();
@@ -196,8 +196,8 @@ public class TowerGrid : MonoBehaviour
         if (hasTower)
         {
             //Hide the attack radius sprite on mouse exit 
-            towerAttackRadius.SetActive(false);
-            towerStats.SetActive(false);
+           // towerAttackRadius.SetActive(false);
+            //towerStats.SetActive(false);
         }
     }
 

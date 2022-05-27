@@ -703,12 +703,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventSystem: {fileID: 980651945}
   lastSelected: {fileID: 0}
-  cardName: Swift
-  mouseHover: 0
-  expanded: 0
   cardPos: {fileID: 137049303}
   pos1: {fileID: 2126907137}
   pos2: {fileID: 1365446485}
+  cardName: Swift
+  mouseHover: 0
+  expanded: 0
 --- !u!114 &137049306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2438,12 +2438,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventSystem: {fileID: 980651945}
   lastSelected: {fileID: 0}
-  cardName: Cosmic
-  mouseHover: 0
-  expanded: 0
   cardPos: {fileID: 308587903}
   pos1: {fileID: 393983076}
   pos2: {fileID: 1702311826}
+  cardName: Cosmic
+  mouseHover: 0
+  expanded: 0
 --- !u!114 &308587906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3306,12 +3306,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventSystem: {fileID: 980651945}
   lastSelected: {fileID: 0}
-  cardName: Thunder
-  mouseHover: 0
-  expanded: 0
   cardPos: {fileID: 351516587}
   pos1: {fileID: 218445442}
   pos2: {fileID: 654805581}
+  cardName: Thunder
+  mouseHover: 0
+  expanded: 0
 --- !u!114 &351516590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9415,12 +9415,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventSystem: {fileID: 980651945}
   lastSelected: {fileID: 0}
-  cardName: Neutral
-  mouseHover: 0
-  expanded: 0
   cardPos: {fileID: 1452479630}
   pos1: {fileID: 1176173924}
   pos2: {fileID: 875374868}
+  cardName: Neutral
+  mouseHover: 0
+  expanded: 0
 --- !u!1 &1464595885
 GameObject:
   m_ObjectHideFlags: 0
@@ -10537,12 +10537,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventSystem: {fileID: 980651945}
   lastSelected: {fileID: 0}
-  cardName: Fire
-  mouseHover: 0
-  expanded: 0
   cardPos: {fileID: 1575815083}
   pos1: {fileID: 1971191638}
   pos2: {fileID: 1172605231}
+  cardName: Fire
+  mouseHover: 0
+  expanded: 0
 --- !u!114 &1575815086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10813,12 +10813,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventSystem: {fileID: 980651945}
   lastSelected: {fileID: 0}
-  cardName: Holy
-  mouseHover: 0
-  expanded: 0
   cardPos: {fileID: 1613487704}
   pos1: {fileID: 278897978}
   pos2: {fileID: 695755032}
+  cardName: Holy
+  mouseHover: 0
+  expanded: 0
 --- !u!114 &1613487707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11092,12 +11092,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventSystem: {fileID: 980651945}
   lastSelected: {fileID: 0}
-  cardName: Ice
-  mouseHover: 0
-  expanded: 0
   cardPos: {fileID: 1627303453}
   pos1: {fileID: 1286342286}
   pos2: {fileID: 1748278428}
+  cardName: Ice
+  mouseHover: 0
+  expanded: 0
 --- !u!114 &1627303456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11558,6 +11558,7 @@ MonoBehaviour:
   exitGameMenuUI: {fileID: 119101040}
   gameOverMenuUI: {fileID: 1359236955}
   transition: {fileID: 1858014790}
+  isLoading: 0
 --- !u!114 &1720897680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12010,7 +12011,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a349ed30b185e44ba01f11970b33674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bonusStats: {fileID: 1874405996}
   goldAmtUiText: {fileID: 1448334292}
   waveNumUiText: {fileID: 2013978842}
   waveStartUiText: {fileID: 311715512}
@@ -12019,6 +12019,16 @@ MonoBehaviour:
   bonusHpRegenUiText: {fileID: 1553885031}
   bonusEvasionUiText: {fileID: 1550441086}
   bonusArmorUiText: {fileID: 2126491847}
+  bonusStats: {fileID: 1874405996}
+  curWaveNum: 0
+  bonusMoveSpeed: 0
+  bonusMaxHealth: 0
+  bonusHpRegen: 0
+  bonusEvasion: 0
+  bonusArmor: 0
+  showBonusStats: 0
+  showStartWaveInstructions: 0
+  triggerBonusStatsUpdate: 0
 --- !u!114 &1741423459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12033,7 +12043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cursorImage: {fileID: 2800000, guid: d6679c18a06bd524f8f4437ef4a8f875, type: 3}
   weaponImages:
-  - {fileID: 2800000, guid: 39d45aba93038984d9b2b74eaba5e260, type: 3}
+  - {fileID: 2800000, guid: 8f8cfa1b66d596b49ad8f58728852a1b, type: 3}
 --- !u!1 &1748278427
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,8 @@ public class MouseCursor : MonoBehaviour
 {
     [SerializeField] private Texture2D cursorImage;
     [SerializeField] private Texture2D[] weaponImages;
-    private string currentWeapon;
+    [SerializeField] private string currentWeapon;
+    public static bool weaponIsSelected;
     public string GetSetCurrentWeapon
     {
         get { return currentWeapon; }
@@ -28,11 +29,13 @@ public class MouseCursor : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
+            weaponIsSelected = false;
             Cursor.SetCursor(cursorImage, Vector2.zero, CursorMode.ForceSoftware);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
+            weaponIsSelected = true;
             Cursor.SetCursor(weaponImages[0], Vector2.zero, CursorMode.ForceSoftware);
         }
     }
