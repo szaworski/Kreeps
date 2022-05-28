@@ -16,9 +16,9 @@ public class MouseCursor : MonoBehaviour
 
     void Awake()
     {
+        weaponIsSelected = false;
         Cursor.SetCursor(cursorImage, Vector2.zero, CursorMode.ForceSoftware);
     }
-
 
     void Update()
     {

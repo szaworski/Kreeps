@@ -12,15 +12,29 @@ public class Projectile : MonoBehaviour
     public float attackRange;
     public float slowAmt;
     public string damageType;
+    public bool isWeapon;
 
     void Awake()
     {
-        damageValue = transform.parent.GetComponent<Tower>().damage;
-        projectileSpeed = transform.parent.GetComponent<Tower>().projectileSpeed;
-        damageType = transform.parent.GetComponent<Tower>().damageType;
-        attackRange = transform.parent.GetComponent<Tower>().attackRange;
-        target = transform.parent.GetComponent<Tower>().currentTarget;
-        slowAmt = transform.parent.GetComponent<Tower>().slowAmt;
+        if (isWeapon)
+        {
+            damageValue = transform.parent.GetComponent<Weapon>().damage;
+            projectileSpeed = transform.parent.GetComponent<Weapon>().projectileSpeed;
+            damageType = transform.parent.GetComponent<Weapon>().damageType;
+            attackRange = transform.parent.GetComponent<Weapon>().attackRange;
+            target = transform.parent.GetComponent<Weapon>().currentTarget;
+            slowAmt = transform.parent.GetComponent<Weapon>().slowAmt;
+        }
+
+        else
+        {
+            damageValue = transform.parent.GetComponent<Tower>().damage;
+            projectileSpeed = transform.parent.GetComponent<Tower>().projectileSpeed;
+            damageType = transform.parent.GetComponent<Tower>().damageType;
+            attackRange = transform.parent.GetComponent<Tower>().attackRange;
+            target = transform.parent.GetComponent<Tower>().currentTarget;
+            slowAmt = transform.parent.GetComponent<Tower>().slowAmt;
+        }
 
         if (projectileSpeed == 0)
         {
@@ -61,7 +75,7 @@ public class Projectile : MonoBehaviour
             else
             {
                 //If the target is not null, The projectile is destroyed after the damage value is received by the monster (See Monster.cs OnTriggerEnter2D function)
-                DestroyProjectile();    
+                DestroyProjectile();
             }
         }
 

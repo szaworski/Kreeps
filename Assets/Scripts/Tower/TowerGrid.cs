@@ -196,8 +196,8 @@ public class TowerGrid : MonoBehaviour
         if (hasTower)
         {
             //Hide the attack radius sprite on mouse exit 
-           // towerAttackRadius.SetActive(false);
-            //towerStats.SetActive(false);
+            towerAttackRadius.SetActive(false);
+            towerStats.SetActive(false);
         }
     }
 
