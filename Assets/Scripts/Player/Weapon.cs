@@ -144,11 +144,4 @@ public class Weapon : MonoBehaviour
             theta += deltaTheta;
         }
     }
-
-    public void OnDrawGizmos()
-    {
-        // Draw a cirlce at the towers position
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, 0.4f);
-    }
 }

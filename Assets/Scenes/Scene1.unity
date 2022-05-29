@@ -12206,10 +12206,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ccb4fc135acaef40b27bc03f46ebb4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponImageIndex: 0
+  currentWeapon: 
+  newWeapon: 
   cursorImage: {fileID: 2800000, guid: d6679c18a06bd524f8f4437ef4a8f875, type: 3}
   weaponImages:
+  - {fileID: 2800000, guid: 33f7d39587c9ef44cb0ca92eaa59c46c, type: 3}
   - {fileID: 2800000, guid: 8f8cfa1b66d596b49ad8f58728852a1b, type: 3}
-  currentWeapon: 
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1748278427
 GameObject:
   m_ObjectHideFlags: 0
@@ -13789,7 +13800,7 @@ GameObject:
   - component: {fileID: 1945070243}
   - component: {fileID: 1945070244}
   m_Layer: 0
-  m_Name: Dagger
+  m_Name: PlayerWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13827,11 +13838,11 @@ MonoBehaviour:
   mouseWorldPosition: {x: 0, y: 0, z: 0}
   currentTarget: {fileID: 0}
   camera: {fileID: 519420031}
-  damage: 5
+  damage: 0
   projectileSpeed: 0
-  attackSpeed: 1
-  attackRange: 0.15
-  damageType: Neutral
+  attackSpeed: 0
+  attackRange: 0
+  damageType: 
   slowAmt: 0
   attackRadius: {fileID: 141212901}
 --- !u!1 &1971191637

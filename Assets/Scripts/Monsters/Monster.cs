@@ -144,6 +144,8 @@ public class Monster : MonoBehaviour
             float projectileSpeed = projectileObj.GetComponent<Projectile>().projectileSpeed;
             float slowAmt = projectileObj.GetComponent<Projectile>().slowAmt;
             string damageType = projectileObj.GetComponent<Projectile>().damageType;
+            bool isWeapon = projectileObj.GetComponent<Projectile>().isWeapon;
+            string prependWeaponAnim = "";
             //Debug.Log("Amount of incoming damage: " + incomingDamage);
 
             //Vars used to shift the position/delay different animations
@@ -270,11 +272,16 @@ public class Monster : MonoBehaviour
 
             incomingDamage -= armor;
 
+            if (isWeapon)
+            {
+                 prependWeaponAnim = "Weapons/";
+            }
+
             //Subtract the amount of damage taken from the health variable (First, check for teleporting projectiles with unique animations)
             if (this.gameObject != null && this.gameObject == monsterTarget && projectileSpeed == 1)
             {
                 //Spawn in the animation object
-                GameObject damageAnimObj = (GameObject)Instantiate(Resources.Load("Animations/" + damageType), gameObject.transform);
+                GameObject damageAnimObj = (GameObject)Instantiate(Resources.Load("Animations/" + prependWeaponAnim + damageType), gameObject.transform);
                 damageAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + yShiftAmt, gameObject.transform.position.z);
                 damageAnimObj.transform.rotation = Quaternion.Euler(0, 0, 0);
                 //Subtract health after the animation plays
@@ -290,7 +297,7 @@ public class Monster : MonoBehaviour
             //For towers without moving projectiles, we don't check for a target (Finally, check for AOE projectiles)
             else if (projectileSpeed == 0)
             {
-                GameObject damageAnimObj = (GameObject)Instantiate(Resources.Load("Animations/" + damageType), gameObject.transform);
+                GameObject damageAnimObj = (GameObject)Instantiate(Resources.Load("Animations/" + prependWeaponAnim + damageType), gameObject.transform);
                 damageAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + yShiftAmt, gameObject.transform.position.z);
                 damageAnimObj.transform.rotation = Quaternion.Euler(0, 0, 0);
                 //Subtract health after the animation plays
