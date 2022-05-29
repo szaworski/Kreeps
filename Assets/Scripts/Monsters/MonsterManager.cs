@@ -90,7 +90,7 @@ public class MonsterManager : MonoBehaviour
                 switch (startingMonsterIndex)
                 {
                     case 0:
-                        tileSpawnerScript.GetSetMonsterCardSelected = "Forrest/Wolf";
+                        tileSpawnerScript.GetSetMonsterCardSelected = "Forest/Wolf";
                         break;
                     case 1:
                         tileSpawnerScript.GetSetMonsterCardSelected = "Mountain/Ranger";

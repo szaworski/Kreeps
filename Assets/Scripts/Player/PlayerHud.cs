@@ -139,7 +139,7 @@ public class PlayerHud : MonoBehaviour
         bonusMaxHealth += 2 * tileSpawnerScript.GetNumOfMountains;
         bonusMaxHealth += 2 * tileSpawnerScript.GetNumOfGraveyards;
         bonusArmor += 1 * tileSpawnerScript.GetNumOfMountains;
-        bonusMoveSpeed += 0.04f * tileSpawnerScript.GetNumOfForrests;
+        bonusMoveSpeed += 0.04f * tileSpawnerScript.GetNumOfForests;
         bonusHpRegen += 1 * tileSpawnerScript.GetNumOfGraveyards;
         bonusEvasion += 0.02f * tileSpawnerScript.GetNumOfSwamps;
 

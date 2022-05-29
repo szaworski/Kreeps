@@ -352,7 +352,7 @@ public class Monster : MonoBehaviour
         health += 2 * tileSpawnerScript.GetNumOfMountains;
         health += 2 * tileSpawnerScript.GetNumOfGraveyards;
         armor += 1 * tileSpawnerScript.GetNumOfMountains;
-        moveSpeed += 0.04f * tileSpawnerScript.GetNumOfForrests;
+        moveSpeed += 0.04f * tileSpawnerScript.GetNumOfForests;
         hpRegen += 1 * tileSpawnerScript.GetNumOfGraveyards;
         evasionChance += 0.02f * tileSpawnerScript.GetNumOfSwamps;
 

@@ -34,15 +34,15 @@ public class TileSpawner : TileTypes
     [SerializeField] private TMP_Text monsterSelectText;
 
     //Tier 1 Tiles
-    private int numOfForrests;
+    private int numOfForests;
     private int numOfGraveyards;
     private int numOfRivers;
     private int numOfMountains;
     private int numOfSwamps;
 
-    public int GetNumOfForrests
+    public int GetNumOfForests
     {
-        get { return numOfForrests; }
+        get { return numOfForests; }
     }
     public int GetNumOfGraveyards
     {
@@ -157,7 +157,7 @@ public class TileSpawner : TileTypes
         validTiles = new bool[6];
         PlaceStartingTile();
 
-        numOfForrests = 0;
+        numOfForests = 0;
         numOfGraveyards = 0;
         numOfRivers = 0;
         numOfMountains = 0;
@@ -457,8 +457,8 @@ public class TileSpawner : TileTypes
         switch (tileCardSelected)
         {
             //Tier 1
-            case "Forrest":
-                currentCardList = forrestMonsterCards.ToList();
+            case "Forest":
+                currentCardList = forestMonsterCards.ToList();
                 break;
 
             case "Graveyard":
@@ -573,9 +573,9 @@ public class TileSpawner : TileTypes
         switch (tileCardSelected)
         {
             //Tier 1
-            case "Forrest":
-                curTiles = forrestTiles;
-                numOfForrests += 1;
+            case "Forest":
+                curTiles = forestTiles;
+                numOfForests += 1;
                 break;
 
             case "Graveyard":

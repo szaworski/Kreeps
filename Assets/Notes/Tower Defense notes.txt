@@ -70,7 +70,7 @@ Negative effect ideas:
 
 Tier 1 tiles:
 
-Forrest: Adds +5 move speed to all monsters for each Forrest tile placed
+Forest: Adds +5 move speed to all monsters for each Forest tile placed
 Monsters: Wolf (Beast), Goblin (Humanoid), Bandit (Humanoid), Owl (Pest)
 
 Graveyard: Adds +1 HP regen per second to all monsters for each Graveyard tile placed
