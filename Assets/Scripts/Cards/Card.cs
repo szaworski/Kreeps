@@ -78,6 +78,20 @@ public class Card : MonoBehaviour
         }
     }
 
+    public void SetSelectedPowerupCard()
+    {
+        if (PlayerHud.gold >= upgradeCost && !PauseMenuButtons.isPaused)
+        {
+            tileSpawnerScript.GetSetSelectedBonusDmgType = upgradeType;
+            IsHoveringOverUiCard = false;
+        }
+
+        else
+        {
+            GameObject.Find("UiSounds").GetComponent<AudioManager>().PlaySound("Error");
+        }
+    }
+
     public void SellTower()
     {
         if (!PauseMenuButtons.isPaused)

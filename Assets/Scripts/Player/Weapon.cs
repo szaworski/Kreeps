@@ -22,8 +22,14 @@ public class Weapon : MonoBehaviour
     public float slowAmt;
     public LineRenderer attackRadius;
 
+    GameObject tileManager;
+    TileSpawner tileSpawnerScript;
+
     void Awake()
     {
+        tileManager = GameObject.Find("TileManager");
+        tileSpawnerScript = tileManager.GetComponent<TileSpawner>();
+
         weaponAttackRadius = this.transform.GetChild(0).gameObject;
     }
 
@@ -40,6 +46,10 @@ public class Weapon : MonoBehaviour
             CheckAttackRadius();
             weaponAttackRadius.SetActive(true);
 
+            if (GameObject.Find("TileManager").transform.childCount == 0)
+            {
+                weaponAttackRadius.SetActive(false);
+            }
         }
 
         else if (!MouseCursor.weaponIsSelected && weaponAttackRadius.activeInHierarchy)

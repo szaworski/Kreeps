@@ -28,8 +28,8 @@ public class MouseCursor : MonoBehaviour
     {
         playerWeapon = GameObject.Find("PlayerWeapon");
         weaponScript = playerWeapon.GetComponent<Weapon>();
-        weaponImageIndex = 0;
-        newWeapon = "ShortSword";
+        //weaponImageIndex = 0;
+        newWeapon = "Dagger";
 
         weaponIsSelected = false;
         Cursor.SetCursor(cursorImage, Vector2.zero, CursorMode.ForceSoftware);
@@ -37,19 +37,19 @@ public class MouseCursor : MonoBehaviour
 
     void Update()
     {
-        SwapMouseCursor();
         SetNewWeapon();
+        SwapMouseCursor();
     }
 
     public void SwapMouseCursor()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha1) || PauseMenuButtons.isPaused)
         {
             weaponIsSelected = false;
             Cursor.SetCursor(cursorImage, Vector2.zero, CursorMode.ForceSoftware);
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.Alpha2) && currentWeapon != "" && !PauseMenuButtons.isPaused)
         {
             weaponIsSelected = true;
             Cursor.SetCursor(weaponImages[weaponImageIndex], Vector2.zero, CursorMode.ForceSoftware);

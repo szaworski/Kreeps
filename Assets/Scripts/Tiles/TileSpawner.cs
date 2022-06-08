@@ -139,6 +139,22 @@ public class TileSpawner : TileTypes
         get { return numOfTimesPlaced; }
     }
 
+    //Power up vars
+    private string selectedBonusDmgType;
+    public static int bonusNormalDmg;
+    public static int bonusFireDmg;
+    public static int bonusIceDmg;
+    public static int bonusThunderDmg;
+    public static int bonusHolyDmg;
+    public static int bonusSwiftDmg;
+    public static int bonusCosmicDmg;
+
+    public string GetSetSelectedBonusDmgType
+    {
+        get { return selectedBonusDmgType; }
+        set { selectedBonusDmgType = value; }
+    }
+
     GameObject monsterManager;
     GameObject playerHud;
     MonsterManager monsterManagerScript;

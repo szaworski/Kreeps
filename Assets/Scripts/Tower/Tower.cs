@@ -10,6 +10,8 @@ public class Tower : MonoBehaviour
     private float attackCd;
 
     [Header("Tower attributes")]
+    private float startingDamage;
+    private float bonusDamage;
     public float damage;
     public float projectileSpeed;
     public float attackSpeed;
@@ -29,6 +31,18 @@ public class Tower : MonoBehaviour
     public string upgrade2;
     public string upgrade3;
 
+    GameObject tileManager;
+    TileSpawner tileSpawnerScript;
+
+    void Awake()
+    {
+        GetBonusDmg();
+        startingDamage = damage;
+        damage = startingDamage + bonusDamage;
+        tileManager = GameObject.Find("TileManager");
+        tileSpawnerScript = tileManager.GetComponent<TileSpawner>();
+    }
+
     void Start()
     {
         DrawAttackRadius();
@@ -41,6 +55,8 @@ public class Tower : MonoBehaviour
 
     void Update()
     {
+        GetBonusDmg();
+        AddBonusDmg();
         CheckTowerRadius();
     }
 
@@ -135,6 +151,70 @@ public class Tower : MonoBehaviour
             Vector3 pos = new Vector3(attackRange * Mathf.Cos(theta), attackRange * Mathf.Sin(theta), 0f);
             attackRadius.SetPosition(i, transform.position + pos);
             theta += deltaTheta;
+        }
+    }
+
+    public void GetBonusDmg()
+    {
+        switch (damageType)
+        {
+            case var _ when damageType.Contains("Neutral"):
+                if (bonusDamage < TileSpawner.bonusNormalDmg)
+                {
+                    bonusDamage = TileSpawner.bonusNormalDmg;
+                }
+                break;
+
+            case var _ when damageType.Contains("Fire"):
+                if (bonusDamage < TileSpawner.bonusFireDmg)
+                {
+                    bonusDamage = TileSpawner.bonusFireDmg;
+                }
+                break;
+
+            case var _ when damageType.Contains("Ice"):
+                if (bonusDamage < TileSpawner.bonusIceDmg)
+                {
+                    bonusDamage = TileSpawner.bonusIceDmg;
+                }
+                break;
+
+            case var _ when damageType.Contains("Thunder"):
+                if (bonusDamage < TileSpawner.bonusThunderDmg)
+                {
+                    bonusDamage = TileSpawner.bonusThunderDmg;
+                }
+                break;
+
+            case var _ when damageType.Contains("Holy"):
+                if (bonusDamage < TileSpawner.bonusHolyDmg)
+                {
+                    bonusDamage = TileSpawner.bonusHolyDmg;
+                }
+                break;
+
+            case var _ when damageType.Contains("Swift"):
+                if (bonusDamage < TileSpawner.bonusSwiftDmg)
+                {
+                    bonusDamage = TileSpawner.bonusSwiftDmg;
+                }
+                break;
+
+            case var _ when damageType.Contains("Cosmic"):
+                if (bonusDamage < TileSpawner.bonusCosmicDmg)
+                {
+                    bonusDamage = TileSpawner.bonusCosmicDmg;
+                }
+                break;
+        }
+    }
+
+    public void AddBonusDmg()
+    {
+        if (damage < startingDamage + bonusDamage)
+        {
+            damage = startingDamage + bonusDamage;
+            dmgText.SetText(damage.ToString());
         }
     }
 
