@@ -6,10 +6,20 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     [SerializeField] private GameObject weaponAttackRadius;
+    [SerializeField] private GameObject weaponCdSlider;
     [SerializeField] private Vector3 mouseScreenPosition;
     [SerializeField] private Vector3 mouseWorldPosition;
     private bool monsterIsInRadius;
     private float attackCd;
+    public bool GetMonsterIsInRadius
+    {
+        get { return monsterIsInRadius; }
+    }
+    public float GetAttackCd
+    {
+        get { return attackCd; }
+    }
+
     public GameObject currentTarget;
     public new Camera camera;
 
@@ -22,15 +32,10 @@ public class Weapon : MonoBehaviour
     public float slowAmt;
     public LineRenderer attackRadius;
 
-    GameObject tileManager;
-    TileSpawner tileSpawnerScript;
-
     void Awake()
     {
-        tileManager = GameObject.Find("TileManager");
-        tileSpawnerScript = tileManager.GetComponent<TileSpawner>();
-
         weaponAttackRadius = this.transform.GetChild(0).gameObject;
+        weaponCdSlider = this.transform.GetChild(1).gameObject;
     }
 
     void Update()
@@ -45,16 +50,19 @@ public class Weapon : MonoBehaviour
         {
             CheckAttackRadius();
             weaponAttackRadius.SetActive(true);
+            weaponCdSlider.SetActive(true);
 
             if (GameObject.Find("TileManager").transform.childCount == 0)
             {
                 weaponAttackRadius.SetActive(false);
+                weaponCdSlider.SetActive(false);
             }
         }
 
         else if (!MouseCursor.weaponIsSelected && weaponAttackRadius.activeInHierarchy)
         {
             weaponAttackRadius.SetActive(false);
+            weaponCdSlider.SetActive(false);
         }
     }
 
