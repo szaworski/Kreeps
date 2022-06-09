@@ -15,9 +15,10 @@ public class Weapon : MonoBehaviour
     {
         get { return monsterIsInRadius; }
     }
-    public float GetAttackCd
+    public float GetSetAttackCd
     {
         get { return attackCd; }
+        set { attackCd = value; }
     }
 
     public GameObject currentTarget;

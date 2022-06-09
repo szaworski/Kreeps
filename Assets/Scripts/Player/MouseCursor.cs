@@ -65,7 +65,7 @@ public class MouseCursor : MonoBehaviour
             switch (currentWeapon)
             {
                 case "Dagger":
-                    ChangeWeaponStats(5, 1, 0.8f, 0.1f, "Neutral", 0);
+                    ChangeWeaponStats(5, 1, 1f, 0.1f, "Neutral", 0);
                     weaponImageIndex = 0;
                     break;
 
