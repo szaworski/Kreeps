@@ -214,7 +214,7 @@ public class Monster : MonoBehaviour
                         delayAmt = 0.1f;
                     }
 
-                    else
+                    else if (!isWeapon)
                     {
                         yShiftAmt = 0.1f;
                         delayAmt = 0.1f;
@@ -257,7 +257,10 @@ public class Monster : MonoBehaviour
 
                 case var _ when damageType.Contains("Cosmic"):
 
-                    delayAmt = 0.5f;
+                    if (!isWeapon)
+                    {
+                        delayAmt = 0.5f;
+                    }
 
                     if (type == "Demon")
                     {

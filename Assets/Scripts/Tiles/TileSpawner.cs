@@ -97,6 +97,7 @@ public class TileSpawner : TileTypes
     //Vars used across scripts
     private bool triggerTileCardDestruction;
     private bool triggerMonsterCardDestruction;
+    private bool triggerShopCardDestruction;
     private string newTileName;
     private string tileName;
     private string prependTileName;
@@ -115,6 +116,11 @@ public class TileSpawner : TileTypes
     {
         get { return triggerMonsterCardDestruction; }
         set { triggerMonsterCardDestruction = value; }
+    }
+    public bool GetSetTriggerShopCardDestruction
+    {
+        get { return triggerShopCardDestruction; }
+        set { triggerShopCardDestruction = value; }
     }
     public string GetTileName
     {
@@ -140,7 +146,6 @@ public class TileSpawner : TileTypes
     }
 
     //Power up vars
-    private string selectedBonusDmgType;
     public static int bonusNormalDmg;
     public static int bonusFireDmg;
     public static int bonusIceDmg;
@@ -148,12 +153,6 @@ public class TileSpawner : TileTypes
     public static int bonusHolyDmg;
     public static int bonusSwiftDmg;
     public static int bonusCosmicDmg;
-
-    public string GetSetSelectedBonusDmgType
-    {
-        get { return selectedBonusDmgType; }
-        set { selectedBonusDmgType = value; }
-    }
 
     GameObject monsterManager;
     GameObject playerHud;
@@ -173,6 +172,7 @@ public class TileSpawner : TileTypes
         validTiles = new bool[6];
         PlaceStartingTile();
 
+        //Reset location nums
         numOfForests = 0;
         numOfGraveyards = 0;
         numOfRivers = 0;
@@ -185,6 +185,15 @@ public class TileSpawner : TileTypes
         numOfCaverns = 0;
         numOfSettlements = 0;
         numOfSeashores = 0;
+
+        //Reset Bonus stats
+        bonusNormalDmg = 0;
+        bonusFireDmg = 0;
+        bonusIceDmg = 0;
+        bonusThunderDmg = 0;
+        bonusHolyDmg = 0;
+        bonusSwiftDmg = 0;
+        bonusCosmicDmg = 0;
     }
 
     void Update()

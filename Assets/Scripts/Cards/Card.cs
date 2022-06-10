@@ -14,6 +14,7 @@ public class Card : MonoBehaviour
     GameObject playerHud;
     TileSpawner tileSpawnerScript;
     PlayerHud playerHudScript;
+    MouseCursor mouseCursorScript;
 
     void Awake()
     {
@@ -21,6 +22,7 @@ public class Card : MonoBehaviour
         playerHud = GameObject.Find("PlayerHud");
         tileSpawnerScript = tileManager.GetComponent<TileSpawner>();
         playerHudScript = playerHud.GetComponent<PlayerHud>();
+        mouseCursorScript = playerHud.GetComponent<MouseCursor>();
     }
 
     void Update()
@@ -78,12 +80,52 @@ public class Card : MonoBehaviour
         }
     }
 
-    public void SetSelectedPowerupCard()
+    public void SetSelectedShopCard()
     {
         if (PlayerHud.gold >= upgradeCost && !PauseMenuButtons.isPaused)
         {
-            tileSpawnerScript.GetSetSelectedBonusDmgType = upgradeType;
+            PlayerHud.newGoldValue = PlayerHud.gold - upgradeCost;
+            tileSpawnerScript.GetSetTriggerShopCardDestruction = true;
             IsHoveringOverUiCard = false;
+
+            if (upgradeType == "Bonus")
+            {
+                switch (cardName)
+                {
+                    case var _ when cardName.Contains("Neutral"):
+                        TileSpawner.bonusNormalDmg += 1;
+                        break;
+
+                    case var _ when cardName.Contains("Fire"):
+                        TileSpawner.bonusFireDmg += 1;
+                        break;
+
+                    case var _ when cardName.Contains("Ice"):
+                        TileSpawner.bonusIceDmg += 1;
+                        break;
+
+                    case var _ when cardName.Contains("Thunder"):
+                        TileSpawner.bonusThunderDmg += 2;
+                        break;
+
+                    case var _ when cardName.Contains("Holy"):
+                        TileSpawner.bonusHolyDmg += 2;
+                        break;
+
+                    case var _ when cardName.Contains("Swift"):
+                        TileSpawner.bonusSwiftDmg += 2;
+                        break;
+
+                    case var _ when cardName.Contains("Cosmic"):
+                        TileSpawner.bonusCosmicDmg += 3;
+                        break;
+                }
+            }
+
+            else if (upgradeType == "Weapon")
+            {
+                mouseCursorScript.GetSetNewWeapon = cardName;
+            }
         }
 
         else
