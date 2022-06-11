@@ -26,7 +26,7 @@ public class PlayerHud : MonoBehaviour
     [SerializeField] private bool triggerBonusStatsUpdate;
     [SerializeField] private GameObject weaponHudObj;
     [SerializeField] private Image weaponHudImage;
-    [SerializeField] private Sprite[] weaponHudImages;
+    [SerializeField] private Sprite[] weaponHudImagesList;
     public bool GetSetShowStartWaveInstructions
     {
         get { return showStartWaveInstructions; }
@@ -36,6 +36,15 @@ public class PlayerHud : MonoBehaviour
     {
         get { return triggerBonusStatsUpdate; }
         set { triggerBonusStatsUpdate = value; }
+    }
+    public Image GetSetweaponHudImage
+    {
+        get { return weaponHudImage; }
+        set { weaponHudImage = value; }
+    }
+    public Sprite[] GetWeaponHudImagesList
+    {
+        get { return weaponHudImagesList; }
     }
 
     public static int gold;
@@ -55,7 +64,7 @@ public class PlayerHud : MonoBehaviour
 
         //Assign the starting player weapon UI sprite
         weaponHudImage = weaponHudObj.GetComponent<Image>();
-        weaponHudImage.sprite = weaponHudImages[0];
+        weaponHudImage.sprite = weaponHudImagesList[0];
 
         //When changing the gold value, add or subtract from the "gold" variable, and then set "goldAmtUiText" to the new value
         gold = 200;

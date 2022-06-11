@@ -12792,7 +12792,7 @@ MonoBehaviour:
   triggerBonusStatsUpdate: 0
   weaponHudObj: {fileID: 1469014759}
   weaponHudImage: {fileID: 1469014763}
-  weaponHudImages:
+  weaponHudImagesList:
   - {fileID: -3568434940922774095, guid: 71ee88c6578e01340b5d0bfe0a8c4ca7, type: 3}
   - {fileID: -6191357566061464646, guid: 71ee88c6578e01340b5d0bfe0a8c4ca7, type: 3}
   - {fileID: 7936281995712390856, guid: 71ee88c6578e01340b5d0bfe0a8c4ca7, type: 3}
