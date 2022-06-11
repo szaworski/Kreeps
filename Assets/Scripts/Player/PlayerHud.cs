@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class PlayerHud : MonoBehaviour
 {
@@ -24,6 +24,9 @@ public class PlayerHud : MonoBehaviour
     [SerializeField] private bool showBonusStats;
     [SerializeField] private bool showStartWaveInstructions;
     [SerializeField] private bool triggerBonusStatsUpdate;
+    [SerializeField] private GameObject weaponHudObj;
+    [SerializeField] private Image weaponHudImage;
+    [SerializeField] private Sprite[] weaponHudImages;
     public bool GetSetShowStartWaveInstructions
     {
         get { return showStartWaveInstructions; }
@@ -49,12 +52,17 @@ public class PlayerHud : MonoBehaviour
         tileSpawnerScript = tileManager.GetComponent<TileSpawner>();
         monsterManager = GameObject.Find("MonsterManager");
         monsterManagerScript = monsterManager.GetComponent<MonsterManager>();
+
+        //Assign the starting player weapon UI sprite
+        weaponHudImage = weaponHudObj.GetComponent<Image>();
+        weaponHudImage.sprite = weaponHudImages[0];
+
         //When changing the gold value, add or subtract from the "gold" variable, and then set "goldAmtUiText" to the new value
         gold = 200;
         newGoldValue = gold;
         goldAmtUiText.SetText(gold.ToString());
         showStartWaveInstructions = true;
-        showBonusStats = true;
+        showBonusStats = false;
 
         //"selectedTowerType" is set to neutral by deafult
         TowerGrid.towerTypeSelected = "Neutral";

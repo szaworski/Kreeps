@@ -132,9 +132,20 @@ public class Weapon : MonoBehaviour
             }
 
             currentTarget = target;
-            GameObject projectile = (GameObject)Instantiate(Resources.Load(prependProjectileName + damageType), this.transform);
-            projectile.transform.position = this.transform.position;
-            attackCd = attackSpeed + Time.time;
+
+            if (projectileSpeed <= 1)
+            {
+                GameObject projectile = (GameObject)Instantiate(Resources.Load(prependProjectileName + damageType), this.transform);
+                projectile.transform.position = this.transform.position;
+                attackCd = attackSpeed + Time.time;
+            }
+
+            else if (projectileSpeed > 1)
+            {
+                GameObject projectile = (GameObject)Instantiate(Resources.Load(prependProjectileName + damageType), GameObject.Find("WeaponProjectiles").transform);
+                projectile.transform.position = this.transform.position;
+                attackCd = attackSpeed + Time.time;
+            }
         }
     }
 

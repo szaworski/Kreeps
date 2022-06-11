@@ -29,7 +29,7 @@ public class MouseCursor : MonoBehaviour
         playerWeapon = GameObject.Find("PlayerWeapon");
         weaponScript = playerWeapon.GetComponent<Weapon>();
         //weaponImageIndex = 0;
-        newWeapon = "Spear";
+        newWeapon = "";
 
         weaponIsSelected = false;
         Cursor.SetCursor(cursorImage, Vector2.zero, CursorMode.ForceSoftware);
@@ -65,7 +65,7 @@ public class MouseCursor : MonoBehaviour
             switch (currentWeapon)
             {
                 case "Dagger":
-                    ChangeWeaponStats(2, 1, 0.4f, 0.1f, "Neutral", 0);
+                    ChangeWeaponStats(4, 1, 0.5f, 0.1f, "Neutral", 0);
                     weaponImageIndex = 0;
                     break;
 
