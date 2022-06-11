@@ -30,8 +30,11 @@ public class TileSpawner : TileTypes
     private GameObject card1Obj;
     private GameObject card2Obj;
     private GameObject card3Obj;
+    private GameObject card4Obj;
+    private GameObject card5Obj;
     [SerializeField] private TMP_Text locationSelectText;
     [SerializeField] private TMP_Text monsterSelectText;
+    [SerializeField] private TMP_Text shopSelectText;
 
     //Tier 1 Tiles
     private int numOfForests;
@@ -200,6 +203,7 @@ public class TileSpawner : TileTypes
     {
         GetAndShowTileCards();
         DestroyMonsterCards();
+        DestroyShopCards();
     }
 
     public void PlaceStartingTile()
@@ -407,7 +411,7 @@ public class TileSpawner : TileTypes
                 //Debug.Log("Card List: " + currentCardList[0] + " " + currentCardList[1] + " " + currentCardList[2] + " " + currentCardList[3] + " " + currentCardList[4]);
             }
 
-            else if (numOfTimesPlaced >= 10 && numOfTimesPlaced < 25)
+            else if (numOfTimesPlaced >= 10 && numOfTimesPlaced < 20)
             {
                 currTier = "Tier2";
                 currentCardList = tier2TileCards.ToList();
@@ -576,8 +580,122 @@ public class TileSpawner : TileTypes
             //Reset this bool for next card selection later
             triggerMonsterCardDestruction = false;
             monsterSelectText.enabled = false;
-            playerHudScript.GetSetShowStartWaveInstructions = true;
             Debug.Log("Monster Cards Destoryed");
+
+            if (numOfTimesPlaced % 3 == 0)
+            {
+                GetAndShowShopCards();
+            }
+
+            else
+            {
+                playerHudScript.GetSetShowStartWaveInstructions = true;
+            }
+        }
+    }
+
+    public void GetAndShowShopCards()
+    {
+        var rand = new System.Random();
+        List<string> weaponCardList = null;
+        List<string> powerUpCardList = powerUpCards.ToList();
+        string card6 = null;
+        string card1 = null;
+        string card2 = null;
+        string card3 = null;
+        string card7 = "SkipCard";
+
+        if (numOfTimesPlaced <= 10)
+        {
+            weaponCardList = tier1WeaponCards.ToList();
+        }
+
+        else if (numOfTimesPlaced > 10 && numOfTimesPlaced <= 20)
+        {
+            weaponCardList = tier1WeaponCards.ToList();
+        }
+
+        //Create a list of 2 unique random weapon cards from the current weapon card list
+        for (int i = 0; i < 2; i++)
+        {
+            //Fetch a random element from the card list
+            int index = rand.Next(weaponCardList.Count);
+            string selectedCard = weaponCardList[index];
+
+            //Remove the selected card from the list so we dont repeat any cards
+            weaponCardList.RemoveAt(index);
+
+            //Set each selected card to its correlating slot
+            switch (i)
+            {
+                case 0:
+                    card6 = selectedCard;
+                    Debug.Log("Weapon Card 1: " + card6);
+                    break;
+                case 1:
+                    card1 = selectedCard;
+                    Debug.Log("Weapon Card 2: " + card1);
+                    break;
+            }
+        }
+
+        //Create a list of 2 unique random powerup cards from the powerup card list
+        for (int i = 0; i < 2; i++)
+        {
+            //Fetch a random element from the card list
+            int index = rand.Next(powerUpCardList.Count);
+            string selectedCard = powerUpCardList[index];
+
+            //Remove the selected card from the list so we dont repeat any cards
+            powerUpCardList.RemoveAt(index);
+
+            //Set each selected card to its correlating slot
+            switch (i)
+            {
+                case 0:
+                    card2 = selectedCard;
+                    Debug.Log("Weapon Card 1: " + card2);
+                    break;
+                case 1:
+                    card3 = selectedCard;
+                    Debug.Log("Weapon Card 2: " + card3);
+                    break;
+            }
+        }
+
+        //Instantiate the Monster Cards
+        GameObject cardSlot6 = GameObject.Find("TileCardSlot6");
+        GameObject cardSlot1 = GameObject.Find("TileCardSlot1");
+        GameObject cardSlot2 = GameObject.Find("TileCardSlot2");
+        GameObject cardSlot3 = GameObject.Find("TileCardSlot3");
+        GameObject cardSlot7 = GameObject.Find("TileCardSlot7");
+
+        card1Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + currTier + "/" + card6), cardSlot6.transform);
+        card2Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + currTier + "/" + card1), cardSlot1.transform);
+        card3Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card2), cardSlot2.transform);
+        card4Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card3), cardSlot3.transform);
+        card5Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card7), cardSlot7.transform);
+
+        card1Obj.transform.position = cardSlot6.transform.position;
+        card2Obj.transform.position = cardSlot1.transform.position;
+        card3Obj.transform.position = cardSlot2.transform.position;
+        card4Obj.transform.position = cardSlot3.transform.position;
+        card5Obj.transform.position = cardSlot7.transform.position;
+        shopSelectText.enabled = true;
+    }
+
+    public void DestroyShopCards()
+    {
+        //Destory all monster card game objects after a selection is made. See Card.cs
+        if (triggerShopCardDestruction)
+        {
+            Destroy(card1Obj.gameObject);
+            Destroy(card2Obj.gameObject);
+            //Reset this bool for next card selection later
+            triggerShopCardDestruction = false;
+            shopSelectText.enabled = false;
+            playerHudScript.GetSetShowStartWaveInstructions = true;
+            Debug.Log("Shop Cards Destoryed");
         }
     }
 

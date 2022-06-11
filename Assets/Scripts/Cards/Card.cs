@@ -134,6 +134,15 @@ public class Card : MonoBehaviour
         }
     }
 
+    public void SelectSkipCard()
+    {
+        if (!PauseMenuButtons.isPaused)
+        {
+            tileSpawnerScript.GetSetTriggerShopCardDestruction = true;
+            IsHoveringOverUiCard = false;
+        }
+    }
+
     public void SellTower()
     {
         if (!PauseMenuButtons.isPaused)
