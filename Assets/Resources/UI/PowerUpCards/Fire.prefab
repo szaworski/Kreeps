@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: Fire
-  upgradeCost: 75
+  upgradeCost: 50
   upgradeType: Bonus
 --- !u!1 &4979736243767342691
 GameObject:
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fire dmg +
+  m_text: 'Fire damage +
 
 '
   m_isRightToLeft: 0
@@ -350,10 +350,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cost: 75g
+  m_text: 'Fire type weapons and towers gain +1 damage
 
 
-    Fire type weapons and towers gain +1 damage'
+    Cost: 50g'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

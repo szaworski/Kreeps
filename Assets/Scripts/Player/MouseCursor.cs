@@ -74,7 +74,7 @@ public class MouseCursor : MonoBehaviour
                     break;
 
                 case "ShortSword":
-                    ChangeWeaponStats(8, 1, 1f, 0.15f, "Neutral", 0);
+                    ChangeWeaponStats(8, 1, 1f, 0.1f, "Neutral", 0);
                     weaponImageIndex = 1;
                     playerHudScript.GetSetweaponHudImage.sprite = playerHudScript.GetWeaponHudImagesList[2];
                     break;
@@ -86,22 +86,27 @@ public class MouseCursor : MonoBehaviour
                     break;
 
                 case "Spear":
-                    ChangeWeaponStats(15, 1, 1.25f, 0.15f, "Neutral", 0);
+                    ChangeWeaponStats(15, 1, 1.25f, 0.1f, "Neutral", 0);
                     weaponImageIndex = 3;
                     playerHudScript.GetSetweaponHudImage.sprite = playerHudScript.GetWeaponHudImagesList[4];
                     break;
 
                 case "HandAxe":
-                    ChangeWeaponStats(8, 1, 0.6f, 0.2f, "Neutral", 0);
+                    ChangeWeaponStats(8, 1, 0.6f, 0.1f, "Neutral", 0);
                     weaponImageIndex = 4;
                     playerHudScript.GetSetweaponHudImage.sprite = playerHudScript.GetWeaponHudImagesList[5];
                     break;
 
                 case "Mace":
-                    ChangeWeaponStats(12, 1, 1f, 0.15f, "Neutral", 0);
+                    ChangeWeaponStats(12, 1, 1f, 0.1f, "Neutral", 0);
                     weaponImageIndex = 5;
                     playerHudScript.GetSetweaponHudImage.sprite = playerHudScript.GetWeaponHudImagesList[6];
                     break;
+            }
+
+            if (weaponIsSelected)
+            {
+                Cursor.SetCursor(weaponImages[weaponImageIndex], Vector2.zero, CursorMode.ForceSoftware);
             }
         }
     }

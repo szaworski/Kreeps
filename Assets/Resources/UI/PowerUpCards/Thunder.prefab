@@ -65,10 +65,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cost: 100g
+  m_text: 'Thunder type weapons and towers gain +2 damage
 
 
-    Thunder type weapons and towers gain +2 damage'
+    Cost: 75g'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: Thunder
-  upgradeCost: 100
+  upgradeCost: 75
   upgradeType: Bonus
 --- !u!1 &4443217231390657293
 GameObject:
@@ -351,7 +351,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Thunder dmg +
+  m_text: 'Thunder damage +
 
 '
   m_isRightToLeft: 0

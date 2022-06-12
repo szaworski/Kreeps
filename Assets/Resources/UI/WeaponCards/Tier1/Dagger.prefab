@@ -68,13 +68,14 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Cost: 75g
+    Cost: 50g
 
-    Dmg: 3
+    Damage: 3
 
-    Rof: 0.5
+    Attack rate: 0.5
 
-    Rng: 0.1'
+    Range:
+    0.1'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -290,7 +291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: Dagger
-  upgradeCost: 75
+  upgradeCost: 50
   upgradeType: Weapon
 --- !u!1 &8807727790484004626
 GameObject:

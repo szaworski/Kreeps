@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: Holy
-  upgradeCost: 100
+  upgradeCost: 75
   upgradeType: Bonus
 --- !u!1 &6911761215297631096
 GameObject:
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Holy dmg +
+  m_text: 'Holy damage +
 
 '
   m_isRightToLeft: 0
@@ -350,10 +350,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cost: 100g
+  m_text: 'Holy type weapons and towers gain +2 damage
 
 
-    Holy type weapons and towers gain +2 damage'
+    Cost: 75g'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

@@ -275,7 +275,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.34859282, y: 0.86128956, z: 0.41434073, w: -0.13107526}
+  m_margin: {x: 0.115265906, y: 0.86128956, z: 0.41434073, w: -0.13107526}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -381,7 +381,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nDmg:  \nRof: \nRng: \n\n\n\n\n"
+  m_text: "Single target\n\nDamage:  \nRate of fire: \nRange: \n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -615,7 +615,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.33806434, y: 0.9961575, z: 0.41434073, w: -0.1997379}
+  m_margin: {x: -0.2001604, y: 0.9961575, z: 0.41434073, w: -0.1997379}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -784,7 +784,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.18499249, y: 0.68041885, z: 0.2659781, w: -0.18869239}
+  m_margin: {x: 0.008072987, y: 0.68041885, z: 0.2659781, w: -0.18869239}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

@@ -1416,8 +1416,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\nCost: 50g\nSell value: 45g\nDmg: 7\nRof: 0.7\nRng: 1\nBonus:
-    \nNone\nPenalty:\nNone"
+  m_text: "Single target\nCost: 50g\nSell value: 45g\nDamage: 7\nRate of fire: 0.7\nRange:
+    1\nBonus: \nNone\nPenalty:\nNone"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -3189,12 +3189,12 @@ MonoBehaviour:
 
     Sell value: 175g
 
-    Dmg: 9
+    Damage: 9
 
-    Rof:
-    0.5
+    Rate
+    of fire: 0.5
 
-    Rng: 1
+    Range: 1
 
     Bonus:
 
@@ -3202,7 +3202,8 @@ MonoBehaviour:
 
     Penalty:
 
-    x0.5 to Demons'
+    x0.5
+    to Demons'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -4738,12 +4739,12 @@ MonoBehaviour:
 
     Sell value: 125g
 
-    Dmg: 16
+    Damage: 16
 
-    Rof:
-    1.2
+    Rate
+    of fire: 1.2
 
-    Rng: 0.8
+    Range: 0.8
 
     Bonus:
 
@@ -4751,8 +4752,8 @@ MonoBehaviour:
 
     Penalty:
 
-    x0.5 to
-    Humanoids'
+    x0.5
+    to Humanoids'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -5550,8 +5551,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "AOE in radius\nCost: 125g\nSell value: 100g\nDmg: 4 \nRof: 0.75\nRng:
-    0.6\nBonus:\nx1.5 to Beasts\nPenalty:\nx0.5 to Brutes"
+  m_text: "AOE in radius\nCost: 125g\nSell value: 100g\nDamage: 4 \nRate of fire:
+    0.75\nRange: 0.6\nBonus:\nx1.5 to Beasts\nPenalty:\nx0.5 to Brutes"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -7274,8 +7275,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "AOE in radius +Slow\nCost: 125g\nSell value: 100g\nDmg: 3 \nRof: 0.75\nRng:
-    0.6\nBonus:\nx1.5 to Humanoids\nPenalty:\nx0.5 to Undead"
+  m_text: "AOE in radius +Slow\nCost: 125g\nSell value: 100g\nDamage: 3 \nRate of
+    fire: 0.75\nRange: 0.6\nBonus:\nx1.5 to Humanoids\nPenalty:\nx0.5 to Undead"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -7559,7 +7560,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 0.179}
+  m_AnchorMax: {x: 1, y: 0.1025}
   m_AnchoredPosition: {x: 0, y: -1}
   m_SizeDelta: {x: 0, y: 0.5}
   m_Pivot: {x: 0, y: 0}
@@ -7576,7 +7577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.09392524, a: 1}
+  m_Color: {r: 0.023139905, g: 0.5957548, b: 0.9811321, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7694,12 +7695,12 @@ MonoBehaviour:
 
     Sell value: 250g
 
-    Dmg: 10
+    Damage: 10
 
-    Rof:
-    0.8
+    Rate
+    of fire: 0.8
 
-    Rng: 0.8
+    Range: 0.8
 
     Bonus:
 
@@ -7707,8 +7708,8 @@ MonoBehaviour:
 
     Penalty:
 
-    x0.5 to
-    Pests'
+    x0.5
+    to Pests'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -7982,12 +7983,12 @@ MonoBehaviour:
 
     Sell value: 125g
 
-    Dmg: 20
+    Damage: 20
 
-    Rof:
-    1.5
+    Rate
+    of fire: 1.5
 
-    Rng: 1
+    Range: 1
 
     Bonus:
 
@@ -7995,7 +7996,8 @@ MonoBehaviour:
 
     Penalty:
 
-    x0.5 to Beasts'
+    x0.5
+    to Beasts'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -8996,8 +8998,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -895, y: 455}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -915, y: 450}
+  m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1268039418
 GameObject:
@@ -14487,7 +14489,7 @@ GameObject:
   - component: {fileID: 1874405999}
   - component: {fileID: 1874405998}
   m_Layer: 5
-  m_Name: BonusStats
+  m_Name: KreepBonusStats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14870,7 +14872,7 @@ RectTransform:
   m_GameObject: {fileID: 1972088173}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1.25, y: 2, z: 1}
   m_Children:
   - {fileID: 433835494}
   - {fileID: 1849842594}
@@ -14928,7 +14930,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 2
   m_WholeNumbers: 0
-  m_Value: 0.358
+  m_Value: 0.205
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
