@@ -599,11 +599,11 @@ public class TileSpawner : TileTypes
         var rand = new System.Random();
         List<string> weaponCardList = null;
         List<string> powerUpCardList = powerUpCards.ToList();
-        string card6 = null;
         string card1 = null;
         string card2 = null;
         string card3 = null;
-        string card7 = "SkipCard";
+        string card4 = null;
+        string card5 = "SkipCard";
 
         if (numOfTimesPlaced <= 10)
         {
@@ -629,12 +629,12 @@ public class TileSpawner : TileTypes
             switch (i)
             {
                 case 0:
-                    card6 = selectedCard;
-                    Debug.Log("Weapon Card 1: " + card6);
+                    card1 = selectedCard;
+                    Debug.Log("Weapon Card 1: " + card1);
                     break;
                 case 1:
-                    card1 = selectedCard;
-                    Debug.Log("Weapon Card 2: " + card1);
+                    card2 = selectedCard;
+                    Debug.Log("Weapon Card 2: " + card2);
                     break;
             }
         }
@@ -653,34 +653,34 @@ public class TileSpawner : TileTypes
             switch (i)
             {
                 case 0:
-                    card2 = selectedCard;
-                    Debug.Log("Weapon Card 1: " + card2);
+                    card3 = selectedCard;
+                    Debug.Log("Weapon Card 1: " + card3);
                     break;
                 case 1:
-                    card3 = selectedCard;
-                    Debug.Log("Weapon Card 2: " + card3);
+                    card4 = selectedCard;
+                    Debug.Log("Weapon Card 2: " + card4);
                     break;
             }
         }
 
-        //Instantiate the Monster Cards
-        GameObject cardSlot6 = GameObject.Find("TileCardSlot6");
-        GameObject cardSlot1 = GameObject.Find("TileCardSlot1");
-        GameObject cardSlot2 = GameObject.Find("TileCardSlot2");
-        GameObject cardSlot3 = GameObject.Find("TileCardSlot3");
-        GameObject cardSlot7 = GameObject.Find("TileCardSlot7");
+        //Instantiate the Shop Cards
+        GameObject cardSlot1 = GameObject.Find("ShopCardSlot1");
+        GameObject cardSlot2 = GameObject.Find("ShopCardSlot2");
+        GameObject cardSlot3 = GameObject.Find("ShopCardSlot3");
+        GameObject cardSlot4 = GameObject.Find("ShopCardSlot4");
+        GameObject cardSlot5 = GameObject.Find("ShopCardSlot5");
 
-        card1Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + currTier + "/" + card6), cardSlot6.transform);
-        card2Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + currTier + "/" + card1), cardSlot1.transform);
-        card3Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card2), cardSlot2.transform);
-        card4Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card3), cardSlot3.transform);
-        card5Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card7), cardSlot7.transform);
+        card1Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + currTier + "/" + card1), cardSlot1.transform);
+        card2Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + currTier + "/" + card2), cardSlot2.transform);
+        card3Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card3), cardSlot3.transform);
+        card4Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card4), cardSlot4.transform);
+        card5Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card5), cardSlot5.transform);
 
-        card1Obj.transform.position = cardSlot6.transform.position;
-        card2Obj.transform.position = cardSlot1.transform.position;
-        card3Obj.transform.position = cardSlot2.transform.position;
-        card4Obj.transform.position = cardSlot3.transform.position;
-        card5Obj.transform.position = cardSlot7.transform.position;
+        card1Obj.transform.position = cardSlot1.transform.position;
+        card2Obj.transform.position = cardSlot2.transform.position;
+        card3Obj.transform.position = cardSlot3.transform.position;
+        card4Obj.transform.position = cardSlot4.transform.position;
+        card5Obj.transform.position = cardSlot5.transform.position;
         shopSelectText.enabled = true;
     }
 
@@ -691,6 +691,9 @@ public class TileSpawner : TileTypes
         {
             Destroy(card1Obj.gameObject);
             Destroy(card2Obj.gameObject);
+            Destroy(card3Obj.gameObject);
+            Destroy(card4Obj.gameObject);
+            Destroy(card5Obj.gameObject);
             //Reset this bool for next card selection later
             triggerShopCardDestruction = false;
             shopSelectText.enabled = false;

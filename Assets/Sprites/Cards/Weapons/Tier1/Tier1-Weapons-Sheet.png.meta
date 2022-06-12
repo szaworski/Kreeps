@@ -1,31 +1,28 @@
 fileFormatVersion: 2
-guid: 71ee88c6578e01340b5d0bfe0a8c4ca7
+guid: f4495684542a0f24eb96b0933f1933ff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3568434940922774095
-    second: Items-Sheet_0
+      213: 4659033991121382623
+    second: Tier1-Weapons-Sheet_0
   - first:
-      213: -2485987127325757122
-    second: Items-Sheet_1
+      213: -3196307396631700266
+    second: Tier1-Weapons-Sheet_1
   - first:
-      213: -6191357566061464646
-    second: Items-Sheet_2
+      213: -2174502849528450683
+    second: Tier1-Weapons-Sheet_2
   - first:
-      213: 7936281995712390856
-    second: Items-Sheet_3
+      213: -3615794795648573326
+    second: Tier1-Weapons-Sheet_3
   - first:
-      213: 6851247294367407245
-    second: Items-Sheet_4
+      213: -4645353135040972808
+    second: Tier1-Weapons-Sheet_4
   - first:
-      213: 1565482014032105143
-    second: Items-Sheet_5
+      213: 748826687732569635
+    second: Tier1-Weapons-Sheet_5
   - first:
-      213: 5822437031258356659
-    second: Items-Sheet_6
-  - first:
-      213: -7590118588547249248
-    second: Items-Sheet_7
+      213: 4961504131559358157
+    second: Tier1-Weapons-Sheet_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -72,7 +69,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -125,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Items-Sheet_0
+      name: Tier1-Weapons-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 90
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +136,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bdb43ed35f5a7ec0800000000000000
-      internalID: -3568434940922774095
+      spriteID: fdca245fab638a040800000000000000
+      internalID: 4659033991121382623
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Items-Sheet_1
+      name: Tier1-Weapons-Sheet_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 90
         y: 0
-        width: 64
-        height: 64
+        width: 90
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +157,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e31fd8701efff7dd0800000000000000
-      internalID: -2485987127325757122
+      spriteID: 6dc50d68b5f64a3d0800000000000000
+      internalID: -3196307396631700266
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Items-Sheet_2
+      name: Tier1-Weapons-Sheet_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 180
         y: 0
-        width: 64
-        height: 64
+        width: 90
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +178,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab3ba7dc811e31aa0800000000000000
-      internalID: -6191357566061464646
+      spriteID: 58138caed2d92d1e0800000000000000
+      internalID: -2174502849528450683
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Items-Sheet_3
+      name: Tier1-Weapons-Sheet_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 270
         y: 0
-        width: 64
-        height: 64
+        width: 90
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +199,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c6e3c74d66532e60800000000000000
-      internalID: 7936281995712390856
+      spriteID: 27029a86acd12ddc0800000000000000
+      internalID: -3615794795648573326
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Items-Sheet_4
+      name: Tier1-Weapons-Sheet_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 360
         y: 0
-        width: 64
-        height: 64
+        width: 90
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +220,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8c10216d15841f50800000000000000
-      internalID: 6851247294367407245
+      spriteID: 8f7b2a19fe3688fb0800000000000000
+      internalID: -4645353135040972808
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Items-Sheet_5
+      name: Tier1-Weapons-Sheet_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 450
         y: 0
-        width: 64
-        height: 64
+        width: 90
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +241,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7be85a4f895b9b510800000000000000
-      internalID: 1565482014032105143
+      spriteID: 326d1a0b7ed546a00800000000000000
+      internalID: 748826687732569635
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Items-Sheet_6
+      name: Tier1-Weapons-Sheet_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 540
         y: 0
-        width: 64
-        height: 64
+        width: 90
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,29 +262,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bbfb3f91a37dc050800000000000000
-      internalID: 5822437031258356659
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Items-Sheet_7
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0ab4d8e9b5b7aa690800000000000000
-      internalID: -7590118588547249248
+      spriteID: dce7a3178bdcad440800000000000000
+      internalID: 4961504131559358157
       vertices: []
       indices: 
       edges: []

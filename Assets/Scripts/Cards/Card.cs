@@ -84,47 +84,57 @@ public class Card : MonoBehaviour
     {
         if (PlayerHud.gold >= upgradeCost && !PauseMenuButtons.isPaused)
         {
-            PlayerHud.newGoldValue = PlayerHud.gold - upgradeCost;
-            tileSpawnerScript.GetSetTriggerShopCardDestruction = true;
-            IsHoveringOverUiCard = false;
-
             if (upgradeType == "Bonus")
             {
+                PlayerHud.newGoldValue = PlayerHud.gold - upgradeCost;
+                IsHoveringOverUiCard = false;
+
                 switch (cardName)
                 {
                     case var _ when cardName.Contains("Neutral"):
                         TileSpawner.bonusNormalDmg += 1;
+                        tileSpawnerScript.GetSetTriggerShopCardDestruction = true;
                         break;
 
                     case var _ when cardName.Contains("Fire"):
                         TileSpawner.bonusFireDmg += 1;
+                        tileSpawnerScript.GetSetTriggerShopCardDestruction = true;
                         break;
 
                     case var _ when cardName.Contains("Ice"):
                         TileSpawner.bonusIceDmg += 1;
+                        tileSpawnerScript.GetSetTriggerShopCardDestruction = true;
                         break;
 
                     case var _ when cardName.Contains("Thunder"):
                         TileSpawner.bonusThunderDmg += 2;
+                        tileSpawnerScript.GetSetTriggerShopCardDestruction = true;
                         break;
 
                     case var _ when cardName.Contains("Holy"):
                         TileSpawner.bonusHolyDmg += 2;
+                        tileSpawnerScript.GetSetTriggerShopCardDestruction = true;
                         break;
 
                     case var _ when cardName.Contains("Swift"):
                         TileSpawner.bonusSwiftDmg += 2;
+                        tileSpawnerScript.GetSetTriggerShopCardDestruction = true;
                         break;
 
                     case var _ when cardName.Contains("Cosmic"):
                         TileSpawner.bonusCosmicDmg += 3;
+                        tileSpawnerScript.GetSetTriggerShopCardDestruction = true;
                         break;
                 }
             }
 
-            else if (upgradeType == "Weapon")
+            if (upgradeType == "Weapon")
             {
                 mouseCursorScript.GetSetNewWeapon = cardName;
+
+                PlayerHud.newGoldValue = PlayerHud.gold - upgradeCost;
+                tileSpawnerScript.GetSetTriggerShopCardDestruction = true;
+                IsHoveringOverUiCard = false;
             }
         }
 
@@ -134,7 +144,7 @@ public class Card : MonoBehaviour
         }
     }
 
-    public void SelectSkipCard()
+    public void SelectExitCard()
     {
         if (!PauseMenuButtons.isPaused)
         {
