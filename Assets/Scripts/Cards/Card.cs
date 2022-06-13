@@ -135,6 +135,7 @@ public class Card : MonoBehaviour
                 PlayerHud.newGoldValue = PlayerHud.gold - upgradeCost;
                 tileSpawnerScript.GetSetTriggerShopCardDestruction = true;
                 IsHoveringOverUiCard = false;
+                TileSpawner.equipmentLvl++;
             }
         }
 

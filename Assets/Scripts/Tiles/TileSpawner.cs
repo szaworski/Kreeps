@@ -156,6 +156,7 @@ public class TileSpawner : TileTypes
     public static int bonusHolyDmg;
     public static int bonusSwiftDmg;
     public static int bonusCosmicDmg;
+    public static int equipmentLvl;
 
     GameObject monsterManager;
     GameObject playerHud;
@@ -197,6 +198,7 @@ public class TileSpawner : TileTypes
         bonusHolyDmg = 0;
         bonusSwiftDmg = 0;
         bonusCosmicDmg = 0;
+        equipmentLvl = 1;
     }
 
     void Update()
@@ -670,8 +672,8 @@ public class TileSpawner : TileTypes
         GameObject cardSlot4 = GameObject.Find("ShopCardSlot4");
         GameObject cardSlot5 = GameObject.Find("ShopCardSlot5");
 
-        card1Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + currTier + "/" + card1), cardSlot1.transform);
-        card2Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + currTier + "/" + card2), cardSlot2.transform);
+        card1Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + "Tier" + equipmentLvl + "/" + card1), cardSlot1.transform);
+        card2Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + "Tier" + equipmentLvl + "/" + card2), cardSlot2.transform);
         card3Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card3), cardSlot3.transform);
         card4Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card4), cardSlot4.transform);
         card5Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card5), cardSlot5.transform);
