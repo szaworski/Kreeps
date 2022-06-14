@@ -9,6 +9,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] private GameObject weaponCdSlider;
     [SerializeField] private Vector3 mouseScreenPosition;
     [SerializeField] private Vector3 mouseWorldPosition;
+
     private bool monsterIsInRadius;
     private float attackCd;
     public bool GetMonsterIsInRadius
@@ -32,6 +33,7 @@ public class Weapon : MonoBehaviour
     public string damageType;
     public float slowAmt;
     public LineRenderer attackRadius;
+    public static bool useSlashAnim;
 
     void Awake()
     {

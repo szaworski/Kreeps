@@ -214,7 +214,7 @@ public class Monster : MonoBehaviour
                         delayAmt = 0.1f;
                     }
 
-                    else if (!isWeapon)
+                    else if (!isWeapon || isWeapon && !Weapon.useSlashAnim)
                     {
                         yShiftAmt = 0.1f;
                         delayAmt = 0.1f;
@@ -257,7 +257,7 @@ public class Monster : MonoBehaviour
 
                 case var _ when damageType.Contains("Cosmic"):
 
-                    if (!isWeapon)
+                    if (!isWeapon || isWeapon && !Weapon.useSlashAnim)
                     {
                         delayAmt = 0.5f;
                     }
@@ -275,7 +275,7 @@ public class Monster : MonoBehaviour
 
             incomingDamage -= armor;
 
-            if (isWeapon)
+            if (isWeapon && Weapon.useSlashAnim)
             {
                  prependWeaponAnim = "Weapons/";
             }

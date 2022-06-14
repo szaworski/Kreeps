@@ -68,37 +68,37 @@ public class MouseCursor : MonoBehaviour
             switch (currentWeapon)
             {
                 case "Dagger":
-                    ChangeWeaponStats(3, 1, 0.5f, 0.1f, "Neutral", 0);
+                    ChangeWeaponStats(3, 1, 0.5f, 0.1f, "Neutral", 0, true);
                     weaponImageIndex = 0;
                     playerHudScript.GetSetweaponHudImage.sprite = playerHudScript.GetWeaponHudImagesList[1];
                     break;
 
                 case "ShortSword":
-                    ChangeWeaponStats(8, 1, 1f, 0.1f, "Neutral", 0);
+                    ChangeWeaponStats(8, 1, 1f, 0.1f, "Neutral", 0, true);
                     weaponImageIndex = 1;
                     playerHudScript.GetSetweaponHudImage.sprite = playerHudScript.GetWeaponHudImagesList[2];
                     break;
 
                 case "LongSword":
-                    ChangeWeaponStats(10, 0, 2f, 0.2f, "Neutral", 0);
+                    ChangeWeaponStats(10, 0, 2f, 0.2f, "Neutral", 0, true);
                     weaponImageIndex = 2;
                     playerHudScript.GetSetweaponHudImage.sprite = playerHudScript.GetWeaponHudImagesList[3];
                     break;
 
                 case "Spear":
-                    ChangeWeaponStats(15, 1, 1.25f, 0.1f, "Neutral", 0);
+                    ChangeWeaponStats(15, 1, 1.25f, 0.1f, "Neutral", 0, true);
                     weaponImageIndex = 3;
                     playerHudScript.GetSetweaponHudImage.sprite = playerHudScript.GetWeaponHudImagesList[4];
                     break;
 
                 case "HandAxe":
-                    ChangeWeaponStats(8, 1, 0.6f, 0.1f, "Neutral", 0);
+                    ChangeWeaponStats(8, 1, 0.6f, 0.1f, "Neutral", 0, true);
                     weaponImageIndex = 4;
                     playerHudScript.GetSetweaponHudImage.sprite = playerHudScript.GetWeaponHudImagesList[5];
                     break;
 
                 case "Mace":
-                    ChangeWeaponStats(12, 1, 1f, 0.1f, "Neutral", 0);
+                    ChangeWeaponStats(12, 1, 1f, 0.1f, "Neutral", 0, true);
                     weaponImageIndex = 5;
                     playerHudScript.GetSetweaponHudImage.sprite = playerHudScript.GetWeaponHudImagesList[6];
                     break;
@@ -112,7 +112,7 @@ public class MouseCursor : MonoBehaviour
     }
 
 
-    public void ChangeWeaponStats(float damage, float projectileSpeed, float attackSpeed, float attackRange, string damageType, float slowAmt)
+    public void ChangeWeaponStats(float damage, float projectileSpeed, float attackSpeed, float attackRange, string damageType, float slowAmt, bool useSlashAnim)
     {
         weaponScript.damage = damage;
         weaponScript.projectileSpeed = projectileSpeed;
@@ -120,5 +120,6 @@ public class MouseCursor : MonoBehaviour
         weaponScript.attackRange = attackRange;
         weaponScript.damageType = damageType;
         weaponScript.slowAmt = slowAmt;
+        Weapon.useSlashAnim = useSlashAnim;
     }
 }
