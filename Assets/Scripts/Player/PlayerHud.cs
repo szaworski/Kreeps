@@ -152,36 +152,36 @@ public class PlayerHud : MonoBehaviour
         bonusEvasion = 0;
 
         //Apply any Tier 1 bonuses
-        bonusMaxHealth += 6 * tileSpawnerScript.GetNumOfRivers;
-        bonusMaxHealth += 2 * tileSpawnerScript.GetNumOfMountains;
-        bonusMaxHealth += 2 * tileSpawnerScript.GetNumOfGraveyards;
-        bonusArmor += 1 * tileSpawnerScript.GetNumOfMountains;
-        bonusMoveSpeed += 0.04f * tileSpawnerScript.GetNumOfForests;
-        bonusHpRegen += 1 * tileSpawnerScript.GetNumOfGraveyards;
-        bonusEvasion += 0.02f * tileSpawnerScript.GetNumOfSwamps;
+        bonusMaxHealth += 6 * tileSpawnerScript.numOfRivers;
+        bonusMaxHealth += 2 * tileSpawnerScript.numOfMountains;
+        bonusMaxHealth += 2 * tileSpawnerScript.numOfGraveyards;
+        bonusArmor += 1 * tileSpawnerScript.numOfMountains;
+        bonusMoveSpeed += 0.04f * tileSpawnerScript.numOfForests;
+        bonusHpRegen += 1 * tileSpawnerScript.numOfGraveyards;
+        bonusEvasion += 0.02f * tileSpawnerScript.numOfSwamps;
 
         //Apply any Tier 2 bonuses
-        bonusMaxHealth += 10 * tileSpawnerScript.GetNumOfSeashores;
-        bonusMaxHealth += 7 * tileSpawnerScript.GetNumOfThickets;
-        bonusMaxHealth += 5 * tileSpawnerScript.GetNumOfSettlements;
-        bonusMaxHealth += 4 * tileSpawnerScript.GetNumOfDeserts;
-        bonusMaxHealth += 3 * tileSpawnerScript.GetNumOfTundras;
+        bonusMaxHealth += 10 * tileSpawnerScript.numOfSeashores;
+        bonusMaxHealth += 7 * tileSpawnerScript.numOfThickets;
+        bonusMaxHealth += 5 * tileSpawnerScript.numOfSettlements;
+        bonusMaxHealth += 4 * tileSpawnerScript.numOfDeserts;
+        bonusMaxHealth += 3 * tileSpawnerScript.numOfTundras;
 
-        bonusArmor += 1 * tileSpawnerScript.GetNumOfSeashores;
-        bonusArmor += 1 * tileSpawnerScript.GetNumOfTundras;
-        bonusArmor += 2 * tileSpawnerScript.GetNumOfCaverns;
+        bonusArmor += 1 * tileSpawnerScript.numOfSeashores;
+        bonusArmor += 1 * tileSpawnerScript.numOfTundras;
+        bonusArmor += 2 * tileSpawnerScript.numOfCaverns;
 
-        bonusMoveSpeed += 0.02f * tileSpawnerScript.GetNumOfTundras;
-        bonusMoveSpeed += 0.03f * tileSpawnerScript.GetNumOfDeserts;
-        bonusMoveSpeed += 0.05f * tileSpawnerScript.GetNumOfSettlements;
+        bonusMoveSpeed += 0.02f * tileSpawnerScript.numOfTundras;
+        bonusMoveSpeed += 0.03f * tileSpawnerScript.numOfDeserts;
+        bonusMoveSpeed += 0.05f * tileSpawnerScript.numOfSettlements;
 
-        bonusHpRegen += 1 * tileSpawnerScript.GetNumOfThickets;
-        bonusHpRegen += 1 * tileSpawnerScript.GetNumOfTundras;
-        bonusHpRegen += 2 * tileSpawnerScript.GetNumOfCaverns;
+        bonusHpRegen += 1 * tileSpawnerScript.numOfThickets;
+        bonusHpRegen += 1 * tileSpawnerScript.numOfTundras;
+        bonusHpRegen += 2 * tileSpawnerScript.numOfCaverns;
 
-        bonusEvasion += 0.01f * tileSpawnerScript.GetNumOfCaverns;
-        bonusEvasion += 0.01f * tileSpawnerScript.GetNumOfDeserts;
-        bonusEvasion += 0.03f * tileSpawnerScript.GetNumOfThickets;
+        bonusEvasion += 0.01f * tileSpawnerScript.numOfCaverns;
+        bonusEvasion += 0.01f * tileSpawnerScript.numOfDeserts;
+        bonusEvasion += 0.03f * tileSpawnerScript.numOfThickets;
 
         //Apply any Tier 3 bonuses
 

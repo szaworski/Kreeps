@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: DefaultCompany
   productName: Kreeps
-  defaultCursor: {fileID: 2800000, guid: 39d45aba93038984d9b2b74eaba5e260, type: 3}
+  defaultCursor: {fileID: 2800000, guid: d6679c18a06bd524f8f4437ef4a8f875, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_ShowUnitySplashScreen: 1

@@ -43,9 +43,9 @@ public class Card : MonoBehaviour
     {
         if (!PauseMenuButtons.isPaused)
         {
-            tileSpawnerScript.GetSetTileCardSelected = cardName;
+            tileSpawnerScript.tileCardSelected = cardName;
             IsHoveringOverUiCard = false;
-            tileSpawnerScript.GetSetTriggerTileCardDestruction = true;
+            tileSpawnerScript.triggerTileCardDestruction = true;
             playerHudScript.GetSetTriggerBonusStatsUpdate = true;
         }
     }
@@ -54,9 +54,9 @@ public class Card : MonoBehaviour
     {
         if (!PauseMenuButtons.isPaused)
         {
-            tileSpawnerScript.GetSetMonsterCardSelected = cardName;
+            tileSpawnerScript.monsterCardSelected = cardName;
             IsHoveringOverUiCard = false;
-            tileSpawnerScript.GetSetTriggerMonsterCardDestruction = true;
+            tileSpawnerScript.triggerMonsterCardDestruction = true;
             //Debug.Log("Monster Card selected: " + cardName);
         }
     }
@@ -93,37 +93,37 @@ public class Card : MonoBehaviour
                 {
                     case var _ when cardName.Contains("Neutral"):
                         TileSpawner.bonusNormalDmg += 1;
-                        tileSpawnerScript.GetSetTriggerShopCardDestruction = true;
+                        tileSpawnerScript.triggerShopCardDestruction = true;
                         break;
 
                     case var _ when cardName.Contains("Fire"):
                         TileSpawner.bonusFireDmg += 1;
-                        tileSpawnerScript.GetSetTriggerShopCardDestruction = true;
+                        tileSpawnerScript.triggerShopCardDestruction = true;
                         break;
 
                     case var _ when cardName.Contains("Ice"):
                         TileSpawner.bonusIceDmg += 1;
-                        tileSpawnerScript.GetSetTriggerShopCardDestruction = true;
+                        tileSpawnerScript.triggerShopCardDestruction = true;
                         break;
 
                     case var _ when cardName.Contains("Thunder"):
                         TileSpawner.bonusThunderDmg += 2;
-                        tileSpawnerScript.GetSetTriggerShopCardDestruction = true;
+                        tileSpawnerScript.triggerShopCardDestruction = true;
                         break;
 
                     case var _ when cardName.Contains("Holy"):
                         TileSpawner.bonusHolyDmg += 2;
-                        tileSpawnerScript.GetSetTriggerShopCardDestruction = true;
+                        tileSpawnerScript.triggerShopCardDestruction = true;
                         break;
 
                     case var _ when cardName.Contains("Swift"):
                         TileSpawner.bonusSwiftDmg += 2;
-                        tileSpawnerScript.GetSetTriggerShopCardDestruction = true;
+                        tileSpawnerScript.triggerShopCardDestruction = true;
                         break;
 
                     case var _ when cardName.Contains("Cosmic"):
                         TileSpawner.bonusCosmicDmg += 3;
-                        tileSpawnerScript.GetSetTriggerShopCardDestruction = true;
+                        tileSpawnerScript.triggerShopCardDestruction = true;
                         break;
                 }
             }
@@ -133,7 +133,7 @@ public class Card : MonoBehaviour
                 mouseCursorScript.GetSetNewWeapon = cardName;
 
                 PlayerHud.newGoldValue = PlayerHud.gold - upgradeCost;
-                tileSpawnerScript.GetSetTriggerShopCardDestruction = true;
+                tileSpawnerScript.triggerShopCardDestruction = true;
                 IsHoveringOverUiCard = false;
                 TileSpawner.equipmentLvl++;
             }
@@ -149,7 +149,7 @@ public class Card : MonoBehaviour
     {
         if (!PauseMenuButtons.isPaused)
         {
-            tileSpawnerScript.GetSetTriggerShopCardDestruction = true;
+            tileSpawnerScript.triggerShopCardDestruction = true;
             IsHoveringOverUiCard = false;
         }
     }

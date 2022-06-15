@@ -77,12 +77,12 @@ public class MonsterManager : MonoBehaviour
     public void AddToMonsterList()
     {
         //After each tile is placed/Monster is selected, add the new monster to the list
-        if (monsterCount < tileSpawnerScript.GetNumOfTimesPlaced && tileSpawnerScript.GetSetTriggerMonsterCardDestruction || monsterCount < tileSpawnerScript.GetNumOfTimesPlaced && tileSpawnerScript.GetNumOfTimesPlaced <= 1)
+        if (monsterCount < tileSpawnerScript.numOfTimesPlaced && tileSpawnerScript.triggerMonsterCardDestruction || monsterCount < tileSpawnerScript.numOfTimesPlaced && tileSpawnerScript.numOfTimesPlaced <= 1)
         {
             //Prepend the proper file path for the monster
             PrependMonsterPath();
 
-            if (tileSpawnerScript.GetNumOfTimesPlaced <= 1)
+            if (tileSpawnerScript.numOfTimesPlaced <= 1)
             {
                 //Get a random starting monster from the 3 provided
                 var rand = new System.Random();
@@ -90,19 +90,19 @@ public class MonsterManager : MonoBehaviour
                 switch (startingMonsterIndex)
                 {
                     case 0:
-                        tileSpawnerScript.GetSetMonsterCardSelected = "Forest/Wolf";
+                        tileSpawnerScript.monsterCardSelected = "Forest/Wolf";
                         break;
                     case 1:
-                        tileSpawnerScript.GetSetMonsterCardSelected = "Mountain/Ranger";
+                        tileSpawnerScript.monsterCardSelected = "Mountain/Ranger";
                         break;
                     case 2:
-                        tileSpawnerScript.GetSetMonsterCardSelected = "Graveyard/Zombie";
+                        tileSpawnerScript.monsterCardSelected = "Graveyard/Zombie";
                         break;
                 }
             }
 
             //Add the selected monster to the list
-            monsterList.Add(prependMonsterName + tileSpawnerScript.GetSetMonsterCardSelected);
+            monsterList.Add(prependMonsterName + tileSpawnerScript.monsterCardSelected);
 
             monsterCount++;
             Debug.Log("Monster Count: " + monsterCount);
@@ -112,14 +112,14 @@ public class MonsterManager : MonoBehaviour
 
     public void PrependMonsterPath()
     {
-        if (tileSpawnerScript.GetTileName.Contains("Starting"))
+        if (tileSpawnerScript.tileName.Contains("Starting"))
         {
             prependMonsterName = "Monsters/Tier1/";
         }
 
         else
         {
-            prependMonsterName = "Monsters/" + tileSpawnerScript.GetCurrTier + "/" + tileSpawnerScript.GetSetTileCardSelected + "/";
+            prependMonsterName = "Monsters/" + tileSpawnerScript.currTier + "/" + tileSpawnerScript.tileCardSelected + "/";
         }
     }
 }

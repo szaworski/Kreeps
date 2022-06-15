@@ -13,7 +13,6 @@ public class TileSpawner : TileTypes
     private int numOfDownRayHits;
     private int numOfLeftRayHits;
     private int numOfRightRayHits;
-
     private bool checkTopOverlap;
     private bool checkBottomOverlap;
     private bool checkLeftOverlap;
@@ -22,11 +21,9 @@ public class TileSpawner : TileTypes
     private bool checkOuterBottomOverlap;
     private bool checkOuterLeftOverlap;
     private bool checkOuterRightOverlap;
-
     private string[] curTiles;
     private bool[] validTiles;
-    List<string> validTilesList;
-
+    private List<string> validTilesList;
     private GameObject card1Obj;
     private GameObject card2Obj;
     private GameObject card3Obj;
@@ -35,128 +32,6 @@ public class TileSpawner : TileTypes
     [SerializeField] private TMP_Text locationSelectText;
     [SerializeField] private TMP_Text monsterSelectText;
     [SerializeField] private TMP_Text shopSelectText;
-
-    //Tier 1 Tiles
-    private int numOfForests;
-    private int numOfGraveyards;
-    private int numOfRivers;
-    private int numOfMountains;
-    private int numOfSwamps;
-
-    public int GetNumOfForests
-    {
-        get { return numOfForests; }
-    }
-    public int GetNumOfGraveyards
-    {
-        get { return numOfGraveyards; }
-    }
-    public int GetNumOfRivers
-    {
-        get { return numOfRivers; }
-    }
-    public int GetNumOfMountains
-    {
-        get { return numOfMountains; }
-    }
-    public int GetNumOfSwamps
-    {
-        get { return numOfSwamps; }
-    }
-
-    //Tier 2 Tiles
-    private int numOfDeserts;
-    private int numOfThickets;
-    private int numOfTundras;
-    private int numOfCaverns;
-    private int numOfSettlements;
-    private int numOfSeashores;
-
-    public int GetNumOfDeserts
-    {
-        get { return numOfDeserts; }
-    }
-    public int GetNumOfThickets
-    {
-        get { return numOfThickets; }
-    }
-    public int GetNumOfTundras
-    {
-        get { return numOfTundras; }
-    }
-    public int GetNumOfCaverns
-    {
-        get { return numOfCaverns; }
-    }
-    public int GetNumOfSettlements
-    {
-        get { return numOfSettlements; }
-    }
-    public int GetNumOfSeashores
-    {
-        get { return numOfSeashores; }
-    }
-
-    //Vars used across scripts
-    private bool triggerTileCardDestruction;
-    private bool triggerMonsterCardDestruction;
-    private bool triggerShopCardDestruction;
-    private string newTileName;
-    private string tileName;
-    private string prependTileName;
-    private string spawnDirection;
-    private string tileCardSelected;
-    private string monsterCardSelected;
-    private string currTier;
-    private int numOfTimesPlaced;
-
-    public bool GetSetTriggerTileCardDestruction
-    {
-        get { return triggerTileCardDestruction; }
-        set { triggerTileCardDestruction = value; }
-    }
-    public bool GetSetTriggerMonsterCardDestruction
-    {
-        get { return triggerMonsterCardDestruction; }
-        set { triggerMonsterCardDestruction = value; }
-    }
-    public bool GetSetTriggerShopCardDestruction
-    {
-        get { return triggerShopCardDestruction; }
-        set { triggerShopCardDestruction = value; }
-    }
-    public string GetTileName
-    {
-        get { return tileName; }
-    }
-    public string GetSetTileCardSelected
-    {
-        get { return tileCardSelected; }
-        set { tileCardSelected = value; }
-    }
-    public string GetSetMonsterCardSelected
-    {
-        get { return monsterCardSelected; }
-        set { monsterCardSelected = value; }
-    }
-    public string GetCurrTier
-    {
-        get { return currTier; }
-    }
-    public int GetNumOfTimesPlaced
-    {
-        get { return numOfTimesPlaced; }
-    }
-
-    //Power up vars
-    public static int bonusNormalDmg;
-    public static int bonusFireDmg;
-    public static int bonusIceDmg;
-    public static int bonusThunderDmg;
-    public static int bonusHolyDmg;
-    public static int bonusSwiftDmg;
-    public static int bonusCosmicDmg;
-    public static int equipmentLvl;
 
     GameObject monsterManager;
     GameObject playerHud;
@@ -198,6 +73,7 @@ public class TileSpawner : TileTypes
         bonusHolyDmg = 0;
         bonusSwiftDmg = 0;
         bonusCosmicDmg = 0;
+
         equipmentLvl = 1;
     }
 
