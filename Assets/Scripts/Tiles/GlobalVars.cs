@@ -5,27 +5,27 @@ using UnityEngine;
 public class GlobalVars : MonoBehaviour
 {
     //Tier 1 Tiles counts
-    [HideInInspector] public static int numOfForests;
-    [HideInInspector] public static int numOfGraveyards;
-    [HideInInspector] public static int numOfRivers;
-    [HideInInspector] public static int numOfMountains;
-    [HideInInspector] public static int numOfSwamps;
+    public static int numOfForests;
+    public static int numOfGraveyards;
+    public static int numOfRivers;
+    public static int numOfMountains;
+    public static int numOfSwamps;
 
     //Tier 2 Tiles counts
-    [HideInInspector] public static int numOfDeserts;
-    [HideInInspector] public static int numOfThickets;
-    [HideInInspector] public static int numOfTundras;
-    [HideInInspector] public static int numOfCaverns;
-    [HideInInspector] public static int numOfSettlements;
-    [HideInInspector] public static int numOfSeashores;
+    public static int numOfDeserts;
+    public static int numOfThickets;
+    public static int numOfTundras;
+    public static int numOfCaverns;
+    public static int numOfSettlements;
+    public static int numOfSeashores;
 
     //Vars used for generating card choices
-    [HideInInspector] public static string tileName;
-    [HideInInspector] public static bool triggerTileCardDestruction;
-    [HideInInspector] public static bool triggerMonsterCardDestruction;
-    [HideInInspector] public static bool triggerShopCardDestruction;
-    [HideInInspector] public static string tileCardSelected;
-    [HideInInspector] public static string monsterCardSelected;
+    public static string tileName;
+    public static bool triggerTileCardDestruction;
+    public static bool triggerMonsterCardDestruction;
+    public static bool triggerShopCardDestruction;
+    public static string tileCardSelected;
+    public static string monsterCardSelected;
     public static string currTier;
     public static int numOfTimesPlaced;
 
@@ -39,7 +39,7 @@ public class GlobalVars : MonoBehaviour
     public static int bonusCosmicDmg;
     public static int equipmentLvl;
 
-    //Tower grid Global vars
+    //Tower grid vars
     public static int goldCost;
     public static int upgradeGoldCost;
     public static string towerTypeSelected;
@@ -59,7 +59,27 @@ public class GlobalVars : MonoBehaviour
     public static GameObject upgradeCard5Obj;
     public static GameObject upgradeCard6Obj;
 
-    //Monster Manager global vars
+    //Monster Manager vars
     public static int monsterCount;
     public static bool allMonstersAreSpawned;
+
+    //Card Vars
+    public static bool IsHoveringOverUiCard;
+
+    //Player HUD vars
+    public static int playerHealth;
+    public static int newPlayerHealthValue;
+    public static int gold;
+    public static int newGoldValue;
+    public static bool showStartWaveInstructions;
+    public static bool triggerBonusStatsUpdate;
+
+    //Player Weapons vars
+    public static string currentWeapon;
+    public static string newWeapon;
+    public static bool weaponIsSelected;
+    public static bool useSlashAnim;
+
+    //Pause Menu vars
+    public static bool isPaused;
 }

@@ -12,19 +12,18 @@ public class PauseMenuButtons : LoadNewScene
     [SerializeField] private GameObject gameOverMenuUI;
     [SerializeField] private Animator transition;
     [SerializeField] private bool isLoading;
-    public static bool isPaused;
 
     void Awake()
     {
         isLoading = false;
-        isPaused = false;
+        GlobalVars.isPaused = false;
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && Time.timeSinceLevelLoad > 1f)
         {
-            if (isPaused)
+            if (GlobalVars.isPaused)
             {
                 if (pauseMenuUI.activeInHierarchy)
                 {
@@ -37,14 +36,14 @@ public class PauseMenuButtons : LoadNewScene
                 }
             }
 
-            else if (!isPaused && !isLoading)
+            else if (!GlobalVars.isPaused && !isLoading)
             {
                 Pause();
-                isPaused = true;
+                GlobalVars.isPaused = true;
             }
         }
 
-        if (PlayerHealth.playerHealth <= 0)
+        if (GlobalVars.playerHealth <= 0)
         {
             OpenGameOverMenuUi();
         }
@@ -58,7 +57,7 @@ public class PauseMenuButtons : LoadNewScene
 
     public void Resume()
     {
-        isPaused = false;
+        GlobalVars.isPaused = false;
         pauseMenuUI.SetActive(false);
         //optionsMenuUI.SetActive(false);
         Time.timeScale = 1f;
@@ -84,7 +83,7 @@ public class PauseMenuButtons : LoadNewScene
 
     public void OpenGameOverMenuUi()
     {
-        isPaused = true;
+        GlobalVars.isPaused = true;
 
         pauseMenuUI.SetActive(false);
         returnToMainMenuUI.SetActive(false);

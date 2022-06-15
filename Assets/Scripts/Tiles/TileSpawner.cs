@@ -36,19 +36,8 @@ public class TileSpawner : TileTypes
     [SerializeField] private TMP_Text monsterSelectText;
     [SerializeField] private TMP_Text shopSelectText;
 
-
-    GameObject monsterManager;
-    GameObject playerHud;
-    MonsterManager monsterManagerScript;
-    PlayerHud playerHudScript;
-
     void Awake()
     {
-        monsterManager = GameObject.Find("MonsterManager");
-        playerHud = GameObject.Find("PlayerHud");
-        monsterManagerScript = monsterManager.GetComponent<MonsterManager>();
-        playerHudScript = playerHud.GetComponent<PlayerHud>();
-
         GlobalVars.currTier = "Tier1";
         GlobalVars.numOfTimesPlaced = 0;
         curTiles = new string[6];
@@ -276,7 +265,7 @@ public class TileSpawner : TileTypes
     public void GetAndShowTileCards()
     {
         //Check if all monsters have been spawned for the wave and that all monsters are dead, then prompt for card selection
-        if (GlobalVars.allMonstersAreSpawned && GameObject.Find("TileManager").transform.childCount == 0 && PlayerHealth.playerHealth > 0) //Input.GetKeyDown(KeyCode.Space)
+        if (GlobalVars.allMonstersAreSpawned && GameObject.Find("TileManager").transform.childCount == 0 && GlobalVars.playerHealth > 0) //Input.GetKeyDown(KeyCode.Space)
         {
             GlobalVars.allMonstersAreSpawned = false;
 
@@ -471,7 +460,7 @@ public class TileSpawner : TileTypes
 
             else
             {
-                playerHudScript.GetSetShowStartWaveInstructions = true;
+                GlobalVars.showStartWaveInstructions = true;
             }
         }
     }
@@ -588,7 +577,7 @@ public class TileSpawner : TileTypes
             //Reset this bool for next card selection later
             GlobalVars.triggerShopCardDestruction = false;
             shopSelectText.enabled = false;
-            playerHudScript.GetSetShowStartWaveInstructions = true;
+            GlobalVars.showStartWaveInstructions = true;
             Debug.Log("Shop Cards Destoryed");
         }
     }

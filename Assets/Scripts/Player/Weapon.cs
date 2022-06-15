@@ -9,7 +9,6 @@ public class Weapon : MonoBehaviour
     [SerializeField] private GameObject weaponCdSlider;
     [SerializeField] private Vector3 mouseScreenPosition;
     [SerializeField] private Vector3 mouseWorldPosition;
-
     private bool monsterIsInRadius;
     private float attackCd;
     public bool GetMonsterIsInRadius
@@ -35,7 +34,6 @@ public class Weapon : MonoBehaviour
     public string damageType;
     public float slowAmt;
     public LineRenderer attackRadius;
-    public static bool useSlashAnim;
 
     void Awake()
     {
@@ -53,7 +51,7 @@ public class Weapon : MonoBehaviour
         mouseWorldPosition = camera.ScreenToWorldPoint(new Vector3(mouseScreenPosition.x, mouseScreenPosition.y, camera.nearClipPlane));
         this.transform.position = mouseWorldPosition;
 
-        if (MouseCursor.weaponIsSelected)
+        if (GlobalVars.weaponIsSelected)
         {
             CheckAttackRadius();
             weaponAttackRadius.SetActive(true);
@@ -66,7 +64,7 @@ public class Weapon : MonoBehaviour
             }
         }
 
-        else if (!MouseCursor.weaponIsSelected && weaponAttackRadius.activeInHierarchy)
+        else if (!GlobalVars.weaponIsSelected && weaponAttackRadius.activeInHierarchy)
         {
             weaponAttackRadius.SetActive(false);
             weaponCdSlider.SetActive(false);

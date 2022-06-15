@@ -8,16 +8,13 @@ public class Card : MonoBehaviour
     [SerializeField] private string cardName;
     [SerializeField] private int upgradeCost;
     [SerializeField] private string upgradeType;
-    public static bool IsHoveringOverUiCard;
 
-    GameObject tileManager;
     GameObject playerHud;
     PlayerHud playerHudScript;
     MouseCursor mouseCursorScript;
 
     void Awake()
     {
-        tileManager = GameObject.Find("TileManager");
         playerHud = GameObject.Find("PlayerHud");
         playerHudScript = playerHud.GetComponent<PlayerHud>();
         mouseCursorScript = playerHud.GetComponent<MouseCursor>();
@@ -28,32 +25,32 @@ public class Card : MonoBehaviour
         //Check if the mouse is over any UI elements to disable other functionality underneath
         if (EventSystem.current.IsPointerOverGameObject())
         {
-            IsHoveringOverUiCard = true;
+            GlobalVars.IsHoveringOverUiCard = true;
         }
 
         else
         {
-            IsHoveringOverUiCard = false;
+            GlobalVars.IsHoveringOverUiCard = false;
         }
     }
 
     public void SetSelectedCardType()
     {
-        if (!PauseMenuButtons.isPaused)
+        if (!GlobalVars.isPaused)
         {
             GlobalVars.tileCardSelected = cardName;
-            IsHoveringOverUiCard = false;
+            GlobalVars.IsHoveringOverUiCard = false;
             GlobalVars.triggerTileCardDestruction = true;
-            playerHudScript.GetSetTriggerBonusStatsUpdate = true;
+            GlobalVars.triggerBonusStatsUpdate = true;
         }
     }
 
     public void SetSelectedMonsterCard()
     {
-        if (!PauseMenuButtons.isPaused)
+        if (!GlobalVars.isPaused)
         {
             GlobalVars.monsterCardSelected = cardName;
-            IsHoveringOverUiCard = false;
+            GlobalVars.IsHoveringOverUiCard = false;
             GlobalVars.triggerMonsterCardDestruction = true;
             //Debug.Log("Monster Card selected: " + cardName);
         }
@@ -61,12 +58,12 @@ public class Card : MonoBehaviour
 
     public void SetSelectedUpgradeCard()
     {
-        if (PlayerHud.gold >= upgradeCost && !PauseMenuButtons.isPaused)
+        if (GlobalVars.gold >= upgradeCost && !GlobalVars.isPaused)
         {
             GlobalVars.upgradeCardSelected = cardName;
             GlobalVars.upgradeTypeSelected = upgradeType;
             GlobalVars.upgradeGoldCost = upgradeCost;
-            IsHoveringOverUiCard = false;
+            GlobalVars.IsHoveringOverUiCard = false;
             GlobalVars.triggerTowerUpgrade = true;
             GameObject.Find("UiSounds").GetComponent<AudioManager>().PlaySound("PlaceTower");
             //Debug.Log("Upgrade Card selected: " + cardName);
@@ -80,12 +77,12 @@ public class Card : MonoBehaviour
 
     public void SetSelectedShopCard()
     {
-        if (PlayerHud.gold >= upgradeCost && !PauseMenuButtons.isPaused)
+        if (GlobalVars.gold >= upgradeCost && !GlobalVars.isPaused)
         {
             if (upgradeType == "Bonus")
             {
-                PlayerHud.newGoldValue = PlayerHud.gold - upgradeCost;
-                IsHoveringOverUiCard = false;
+                GlobalVars.newGoldValue = GlobalVars.gold - upgradeCost;
+                GlobalVars.IsHoveringOverUiCard = false;
 
                 switch (cardName)
                 {
@@ -128,11 +125,11 @@ public class Card : MonoBehaviour
 
             if (upgradeType == "Weapon")
             {
-                mouseCursorScript.GetSetNewWeapon = cardName;
+                GlobalVars.newWeapon = cardName;
 
-                PlayerHud.newGoldValue = PlayerHud.gold - upgradeCost;
+                GlobalVars.newGoldValue = GlobalVars.gold - upgradeCost;
                 GlobalVars.triggerShopCardDestruction = true;
-                IsHoveringOverUiCard = false;
+                GlobalVars.IsHoveringOverUiCard = false;
                 GlobalVars.equipmentLvl++;
             }
         }
@@ -145,16 +142,16 @@ public class Card : MonoBehaviour
 
     public void SelectExitCard()
     {
-        if (!PauseMenuButtons.isPaused)
+        if (!GlobalVars.isPaused)
         {
             GlobalVars.triggerShopCardDestruction = true;
-            IsHoveringOverUiCard = false;
+            GlobalVars.IsHoveringOverUiCard = false;
         }
     }
 
     public void SellTower()
     {
-        if (!PauseMenuButtons.isPaused)
+        if (!GlobalVars.isPaused)
         {
             GlobalVars.triggerTowerSell = true;
         }
@@ -162,7 +159,7 @@ public class Card : MonoBehaviour
 
     public void CloseUpgrades()
     {
-        if (!PauseMenuButtons.isPaused)
+        if (!GlobalVars.isPaused)
         {
             GlobalVars.triggerUpgradeCardDestruction = true;
         }

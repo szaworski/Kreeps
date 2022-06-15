@@ -5,21 +5,8 @@ using UnityEngine;
 public class MouseCursor : MonoBehaviour
 {
     [SerializeField] private int weaponImageIndex;
-    [SerializeField] private string currentWeapon;
-    [SerializeField] private string newWeapon;
     [SerializeField] private Texture2D cursorImage;
     [SerializeField] private Texture2D[] weaponImages;
-    public static bool weaponIsSelected;
-    public string GetSetCurrentWeapon
-    {
-        get { return currentWeapon; }
-        set { currentWeapon = value; }
-    }
-    public string GetSetNewWeapon
-    {
-        get { return newWeapon; }
-        set { newWeapon = value; }
-    }
 
     GameObject playerWeapon;
     GameObject playerHud;
@@ -32,9 +19,9 @@ public class MouseCursor : MonoBehaviour
         playerHud = GameObject.Find("PlayerHud");
         weaponScript = playerWeapon.GetComponent<Weapon>();
         playerHudScript = playerHud.GetComponent<PlayerHud>();
-        newWeapon = "";
+        GlobalVars.newWeapon = "";
 
-        weaponIsSelected = false;
+        GlobalVars.weaponIsSelected = false;
         Cursor.SetCursor(cursorImage, Vector2.zero, CursorMode.ForceSoftware);
     }
 
@@ -46,26 +33,26 @@ public class MouseCursor : MonoBehaviour
 
     public void SwapMouseCursor()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) || PauseMenuButtons.isPaused)
+        if (Input.GetKeyDown(KeyCode.Alpha1) || GlobalVars.isPaused)
         {
-            weaponIsSelected = false;
+            GlobalVars.weaponIsSelected = false;
             Cursor.SetCursor(cursorImage, Vector2.zero, CursorMode.ForceSoftware);
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2) && currentWeapon != "" && !PauseMenuButtons.isPaused)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && GlobalVars.currentWeapon != "" && !GlobalVars.isPaused)
         {
-            weaponIsSelected = true;
+            GlobalVars.weaponIsSelected = true;
             Cursor.SetCursor(weaponImages[weaponImageIndex], Vector2.zero, CursorMode.ForceSoftware);
         }
     }
 
     public void SetNewWeapon()
     {
-        if (currentWeapon != newWeapon)
+        if (GlobalVars.currentWeapon != GlobalVars.newWeapon)
         {
-            currentWeapon = newWeapon;
+            GlobalVars.currentWeapon = GlobalVars.newWeapon;
 
-            switch (currentWeapon)
+            switch (GlobalVars.currentWeapon)
             {
                 //Lvl 1 Weapons
                 case "Dagger":
@@ -107,7 +94,7 @@ public class MouseCursor : MonoBehaviour
                     //Lvl 2 Weapons
             }
 
-            if (weaponIsSelected)
+            if (GlobalVars.weaponIsSelected)
             {
                 Cursor.SetCursor(weaponImages[weaponImageIndex], Vector2.zero, CursorMode.ForceSoftware);
             }
@@ -124,6 +111,6 @@ public class MouseCursor : MonoBehaviour
         weaponScript.attackRange = attackRange;
         weaponScript.damageType = damageType;
         weaponScript.slowAmt = slowAmt;
-        Weapon.useSlashAnim = useSlashAnim;
+        GlobalVars.useSlashAnim = useSlashAnim;
     }
 }

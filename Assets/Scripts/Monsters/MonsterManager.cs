@@ -30,12 +30,12 @@ public class MonsterManager : MonoBehaviour
 
     public void SpawnMonsters(float amtOfTime)
     {
-        if (Input.GetKeyDown(KeyCode.Return) && playerHudScript.GetSetShowStartWaveInstructions && GameObject.Find("TileManager").transform.childCount == 0)
+        if (Input.GetKeyDown(KeyCode.Return) && GlobalVars.showStartWaveInstructions && GameObject.Find("TileManager").transform.childCount == 0)
         {
             //Make sure that the game isn't paused
-            if (!PauseMenuButtons.isPaused)
+            if (!GlobalVars.isPaused)
             {
-                playerHudScript.GetSetShowStartWaveInstructions = false;
+                GlobalVars.showStartWaveInstructions = false;
                 //Need to call the GenerateMonsters method with a Coroutine to delay each iteration of the foreach loop
                 StartCoroutine(GenerateMonsters(amtOfTime));
             }

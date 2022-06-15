@@ -13375,8 +13375,6 @@ MonoBehaviour:
   bonusEvasion: 0
   bonusArmor: 0
   showBonusStats: 0
-  showStartWaveInstructions: 0
-  triggerBonusStatsUpdate: 0
   weaponHudObj: {fileID: 1469014759}
   weaponHudImage: {fileID: 1469014763}
   weaponHudImagesList:
@@ -13387,9 +13385,6 @@ MonoBehaviour:
   - {fileID: -668982298346944236, guid: 2aa0cffbfb5ebcc479b926c37e15d231, type: 3}
   - {fileID: 7334295787501223682, guid: 2aa0cffbfb5ebcc479b926c37e15d231, type: 3}
   - {fileID: -3059353643132131913, guid: 2aa0cffbfb5ebcc479b926c37e15d231, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &1741423459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13413,10 +13408,6 @@ MonoBehaviour:
   - {fileID: 2800000, guid: af76dbc7094e5024fa475605fd55327b, type: 3}
   - {fileID: 2800000, guid: 8d3bbda97bd8f494eac78c4bed5cc48d, type: 3}
   - {fileID: 2800000, guid: 20155ee1e736e5a40b4b7e867910bb17, type: 3}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &1748278427
 GameObject:
   m_ObjectHideFlags: 0
@@ -14455,7 +14446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 372268515874915941, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 372268515874915942, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
       propertyPath: m_LocalPosition.x

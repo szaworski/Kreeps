@@ -22,21 +22,10 @@ public class PlayerHud : MonoBehaviour
     [SerializeField] private float bonusEvasion;
     [SerializeField] private float bonusArmor;
     [SerializeField] private bool showBonusStats;
-    [SerializeField] private bool showStartWaveInstructions;
-    [SerializeField] private bool triggerBonusStatsUpdate;
     [SerializeField] private GameObject weaponHudObj;
     [SerializeField] private Image weaponHudImage;
     [SerializeField] private Sprite[] weaponHudImagesList;
-    public bool GetSetShowStartWaveInstructions
-    {
-        get { return showStartWaveInstructions; }
-        set { showStartWaveInstructions = value; }
-    }
-    public bool GetSetTriggerBonusStatsUpdate
-    {
-        get { return triggerBonusStatsUpdate; }
-        set { triggerBonusStatsUpdate = value; }
-    }
+
     public Image GetSetweaponHudImage
     {
         get { return weaponHudImage; }
@@ -47,28 +36,17 @@ public class PlayerHud : MonoBehaviour
         get { return weaponHudImagesList; }
     }
 
-    public static int gold;
-    public static int newGoldValue;
-
-    GameObject tileManager;
-    GameObject monsterManager;
-    MonsterManager monsterManagerScript;
-
     void Awake()
     {
-        tileManager = GameObject.Find("TileManager");
-        monsterManager = GameObject.Find("MonsterManager");
-        monsterManagerScript = monsterManager.GetComponent<MonsterManager>();
-
         //Assign the starting player weapon UI sprite
         weaponHudImage = weaponHudObj.GetComponent<Image>();
         weaponHudImage.sprite = weaponHudImagesList[0];
 
         //When changing the gold value, add or subtract from the "gold" variable, and then set "goldAmtUiText" to the new value
-        gold = 200;
-        newGoldValue = gold;
-        goldAmtUiText.SetText(gold.ToString());
-        showStartWaveInstructions = true;
+        GlobalVars.gold = 200;
+        GlobalVars.newGoldValue = GlobalVars.gold;
+        goldAmtUiText.SetText(GlobalVars.gold.ToString());
+        GlobalVars.showStartWaveInstructions = true;
         showBonusStats = false;
 
         //"selectedTowerType" is set to neutral by deafult
@@ -77,7 +55,7 @@ public class PlayerHud : MonoBehaviour
 
     void Update()
     {
-        if (newGoldValue > gold || newGoldValue < gold)
+        if (GlobalVars.newGoldValue > GlobalVars.gold || GlobalVars.newGoldValue < GlobalVars.gold)
         {
             ChangeGoldAmt();
         }
@@ -87,7 +65,7 @@ public class PlayerHud : MonoBehaviour
             ChangeWaveNum();
         }
 
-        if (triggerBonusStatsUpdate)
+        if (GlobalVars.triggerBonusStatsUpdate)
         {
             ChangeKreepBonusStats();
         }
@@ -98,8 +76,8 @@ public class PlayerHud : MonoBehaviour
 
     public void ChangeGoldAmt()
     {
-        gold = newGoldValue;
-        goldAmtUiText.SetText(gold.ToString());
+        GlobalVars.gold = GlobalVars.newGoldValue;
+        goldAmtUiText.SetText(GlobalVars.gold.ToString());
     }
 
     public void ChangeWaveNum()
@@ -112,13 +90,13 @@ public class PlayerHud : MonoBehaviour
     public void HideShowStartWaveInstructions()
     {
         //This gets set to true in "DestroyMonsterCards()" (See GlobalVars.cs)
-        if (showStartWaveInstructions && !waveStartUiText.enabled)
+        if (GlobalVars.showStartWaveInstructions && !waveStartUiText.enabled)
         {
             waveStartUiText.enabled = true;
         }
 
         //This gets set to false in "SpawnMonsters()" (See MonsterManager.cs)
-        else if (!showStartWaveInstructions && waveStartUiText.enabled)
+        else if (!GlobalVars.showStartWaveInstructions && waveStartUiText.enabled)
         {
             //Hide the start wave text
             waveStartUiText.enabled = false;
@@ -190,6 +168,6 @@ public class PlayerHud : MonoBehaviour
         bonusEvasionUiText.SetText(("+") + Mathf.Round(bonusEvasion * 100) + ("%").ToString());
         bonusArmorUiText.SetText(("+") + bonusArmor.ToString());
 
-        triggerBonusStatsUpdate = false;
+        GlobalVars.triggerBonusStatsUpdate = false;
     }
 }

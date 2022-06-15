@@ -14,9 +14,7 @@ public class TowerGrid : MonoBehaviour
     [SerializeField] private string card1;
     [SerializeField] private string card2;
     [SerializeField] private string card3;
-
-    [Header("Grid position vars")]
-    private bool hasTower;
+    [SerializeField] private bool hasTower;
 
     void Awake()
     {
@@ -28,18 +26,18 @@ public class TowerGrid : MonoBehaviour
     void Update()
     {
         //Check if the mouse is over any UI elements to disable other functionality underneath
-        if (Card.IsHoveringOverUiCard)
+        if (GlobalVars.IsHoveringOverUiCard)
         {
             sprite.enabled = false;
         }
 
-        if (!PauseMenuButtons.isPaused)
+        if (!GlobalVars.isPaused)
         {
             UpgradeTower();
             SellTower();
         }
 
-        if (PauseMenuButtons.isPaused || MouseCursor.weaponIsSelected)
+        if (GlobalVars.isPaused || GlobalVars.weaponIsSelected)
         {
             HideGridSprites();
         }
@@ -48,7 +46,7 @@ public class TowerGrid : MonoBehaviour
     void OnMouseOver()
     {
         //Check to make sure we aren't hovering over a UI element and that the game isn't paused 
-        if (!Card.IsHoveringOverUiCard && !PauseMenuButtons.isPaused && !MouseCursor.weaponIsSelected)
+        if (!GlobalVars.IsHoveringOverUiCard && !GlobalVars.isPaused && !GlobalVars.weaponIsSelected)
         {
             //Reveal the grid sprite on mouse over
             SetSelectedTowerGhost();
@@ -66,7 +64,7 @@ public class TowerGrid : MonoBehaviour
                 HideShowTowerStats();
 
                 //Spawn a tower on mouse click if one is not present
-                if (!hasTower && PlayerHud.gold >= GlobalVars.goldCost)
+                if (!hasTower && GlobalVars.gold >= GlobalVars.goldCost)
                 {
                     //Get the tower GameObject
                     GameObject towerContainer = GameObject.Find("Towers");
@@ -83,11 +81,11 @@ public class TowerGrid : MonoBehaviour
                     towerScript = placedTower.GetComponent<Tower>();
 
                     //Subtract gold from the player
-                    PlayerHud.newGoldValue = PlayerHud.gold - GlobalVars.goldCost;
+                    GlobalVars.newGoldValue = GlobalVars.gold - GlobalVars.goldCost;
                     GameObject.Find("UiSounds").GetComponent<AudioManager>().PlaySound("PlaceTower");
                 }
 
-                else if (!hasTower && PlayerHud.gold < GlobalVars.goldCost)
+                else if (!hasTower && GlobalVars.gold < GlobalVars.goldCost)
                 {
                     GameObject.Find("UiSounds").GetComponent<AudioManager>().PlaySound("Error");
                 }
@@ -114,7 +112,7 @@ public class TowerGrid : MonoBehaviour
                     }
                 }
 
-                if (Input.GetKeyDown(KeyCode.Delete) && !PauseMenuButtons.isPaused)
+                if (Input.GetKeyDown(KeyCode.Delete) && !GlobalVars.isPaused)
                 {
                     DestroyTower(placedTower);
                     hasTower = false;
@@ -124,31 +122,31 @@ public class TowerGrid : MonoBehaviour
                     switch (towerScript.damageType)
                     {
                         case var _ when towerScript.damageType.Contains("Neutral"):
-                            PlayerHud.newGoldValue = PlayerHud.gold + 45;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 45;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Fire"):
-                            PlayerHud.newGoldValue = PlayerHud.gold + 100;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 100;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Ice"):
-                            PlayerHud.newGoldValue = PlayerHud.gold + 100;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 100;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Thunder"):
-                            PlayerHud.newGoldValue = PlayerHud.gold + 125;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 125;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Holy"):
-                            PlayerHud.newGoldValue = PlayerHud.gold + 125;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 125;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Swift"):
-                            PlayerHud.newGoldValue = PlayerHud.gold + 175;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 175;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Cosmic"):
-                            PlayerHud.newGoldValue = PlayerHud.gold + 250;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 250;
                             break;
                     }
 
@@ -314,31 +312,31 @@ public class TowerGrid : MonoBehaviour
             switch (gridScript.towerScript.damageType)
             {
                 case var _ when gridScript.towerScript.damageType.Contains("Neutral"):
-                    PlayerHud.newGoldValue = PlayerHud.gold + 45;
+                    GlobalVars.newGoldValue = GlobalVars.gold + 45;
                     break;
 
                 case var _ when gridScript.towerScript.damageType.Contains("Fire"):
-                    PlayerHud.newGoldValue = PlayerHud.gold + 100;
+                    GlobalVars.newGoldValue = GlobalVars.gold + 100;
                     break;
 
                 case var _ when gridScript.towerScript.damageType.Contains("Ice"):
-                    PlayerHud.newGoldValue = PlayerHud.gold + 100;
+                    GlobalVars.newGoldValue = GlobalVars.gold + 100;
                     break;
 
                 case var _ when gridScript.towerScript.damageType.Contains("Thunder"):
-                    PlayerHud.newGoldValue = PlayerHud.gold + 125;
+                    GlobalVars.newGoldValue = GlobalVars.gold + 125;
                     break;
 
                 case var _ when gridScript.towerScript.damageType.Contains("Holy"):
-                    PlayerHud.newGoldValue = PlayerHud.gold + 125;
+                    GlobalVars.newGoldValue = GlobalVars.gold + 125;
                     break;
 
                 case var _ when gridScript.towerScript.damageType.Contains("Swift"):
-                    PlayerHud.newGoldValue = PlayerHud.gold + 175;
+                    GlobalVars.newGoldValue = GlobalVars.gold + 175;
                     break;
 
                 case var _ when gridScript.towerScript.damageType.Contains("Cosmic"):
-                    PlayerHud.newGoldValue = PlayerHud.gold + 250;
+                    GlobalVars.newGoldValue = GlobalVars.gold + 250;
                     break;
             }
             //Reset bools for next upgrade card selection
@@ -366,7 +364,7 @@ public class TowerGrid : MonoBehaviour
         gridScript.towerAttackRadius.SetActive(false);
 
         //Subtract gold from the player
-        PlayerHud.newGoldValue = PlayerHud.gold - GlobalVars.upgradeGoldCost;
+        GlobalVars.newGoldValue = GlobalVars.gold - GlobalVars.upgradeGoldCost;
     }
 
     void DestroyTowerUpgradeCards()

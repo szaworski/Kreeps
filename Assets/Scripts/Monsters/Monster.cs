@@ -209,7 +209,7 @@ public class Monster : MonoBehaviour
                         delayAmt = 0.1f;
                     }
 
-                    else if (!isWeapon || isWeapon && !Weapon.useSlashAnim)
+                    else if (!isWeapon || isWeapon && !GlobalVars.useSlashAnim)
                     {
                         yShiftAmt = 0.1f;
                         delayAmt = 0.1f;
@@ -252,7 +252,7 @@ public class Monster : MonoBehaviour
 
                 case var _ when damageType.Contains("Cosmic"):
 
-                    if (!isWeapon || isWeapon && !Weapon.useSlashAnim)
+                    if (!isWeapon || isWeapon && !GlobalVars.useSlashAnim)
                     {
                         delayAmt = 0.5f;
                     }
@@ -270,7 +270,7 @@ public class Monster : MonoBehaviour
 
             incomingDamage -= armor;
 
-            if (isWeapon && Weapon.useSlashAnim)
+            if (isWeapon && GlobalVars.useSlashAnim)
             {
                  prependWeaponAnim = "Weapons/";
             }
@@ -392,14 +392,14 @@ public class Monster : MonoBehaviour
 
     void SubtractPlayerHealth()
     {
-        PlayerHealth.newPlayerHealthValue -= damage;
+        GlobalVars.newPlayerHealthValue -= damage;
     }
 
     IEnumerator DestroyMonster(float delayTime)
     {
         yield return new WaitForSeconds(delayTime);
         //After a delay, give gold to the player = to the "goldBounty" value
-        PlayerHud.newGoldValue = PlayerHud.gold + goldBounty;
+        GlobalVars.newGoldValue = GlobalVars.gold + goldBounty;
         Destroy(this.gameObject);
 
         //Get a random death sound to play
