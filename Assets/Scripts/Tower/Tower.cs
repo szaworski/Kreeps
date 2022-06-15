@@ -31,16 +31,11 @@ public class Tower : MonoBehaviour
     public string upgrade2;
     public string upgrade3;
 
-    GameObject tileManager;
-    TileSpawner tileSpawnerScript;
-
     void Awake()
     {
         GetBonusDmg();
         startingDamage = damage;
         damage = startingDamage + bonusDamage;
-        tileManager = GameObject.Find("TileManager");
-        tileSpawnerScript = tileManager.GetComponent<TileSpawner>();
     }
 
     void Start()
@@ -211,7 +206,7 @@ public class Tower : MonoBehaviour
 
     public void AddBonusDmg()
     {
-        if (damage < startingDamage + bonusDamage)
+        if (damage != startingDamage + bonusDamage)
         {
             damage = startingDamage + bonusDamage;
             dmgText.SetText(damage.ToString());

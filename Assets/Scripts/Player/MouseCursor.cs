@@ -67,6 +67,7 @@ public class MouseCursor : MonoBehaviour
 
             switch (currentWeapon)
             {
+                //Lvl 1 Weapons
                 case "Dagger":
                     ChangeWeaponStats(3, 1, 0.5f, 0.1f, "Neutral", 0, true);
                     weaponImageIndex = 0;
@@ -102,6 +103,8 @@ public class MouseCursor : MonoBehaviour
                     weaponImageIndex = 5;
                     playerHudScript.GetSetweaponHudImage.sprite = playerHudScript.GetWeaponHudImagesList[6];
                     break;
+
+                    //Lvl 2 Weapons
             }
 
             if (weaponIsSelected)
@@ -114,7 +117,8 @@ public class MouseCursor : MonoBehaviour
 
     public void ChangeWeaponStats(float damage, float projectileSpeed, float attackSpeed, float attackRange, string damageType, float slowAmt, bool useSlashAnim)
     {
-        weaponScript.damage = damage;
+        weaponScript.startingDamage = damage;
+        weaponScript.bonusDamage = 0;
         weaponScript.projectileSpeed = projectileSpeed;
         weaponScript.attackSpeed = attackSpeed;
         weaponScript.attackRange = attackRange;

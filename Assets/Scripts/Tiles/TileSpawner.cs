@@ -607,14 +607,23 @@ public class TileSpawner : TileTypes
         string card4 = null;
         string card5 = "SkipCard";
 
-        if (numOfTimesPlaced <= 10)
+        switch (equipmentLvl)
         {
-            weaponCardList = tier1WeaponCards.ToList();
-        }
-
-        else if (numOfTimesPlaced > 10 && numOfTimesPlaced <= 20)
-        {
-            weaponCardList = tier1WeaponCards.ToList();
+            case 1:
+                weaponCardList = tier1WeaponCards.ToList();
+                break;
+            case 2:
+                weaponCardList = tier1WeaponCards.ToList();
+                break;
+            case 3:
+                weaponCardList = tier1WeaponCards.ToList();
+                break;
+            case 4:
+                weaponCardList = tier1WeaponCards.ToList();
+                break;
+            case 5:
+                weaponCardList = tier1WeaponCards.ToList();
+                break;
         }
 
         //Create a list of 2 unique random weapon cards from the current weapon card list
