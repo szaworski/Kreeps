@@ -154,51 +154,51 @@ public class Tower : MonoBehaviour
         switch (damageType)
         {
             case var _ when damageType.Contains("Neutral"):
-                if (bonusDamage < TileSpawner.bonusNormalDmg)
+                if (bonusDamage < GlobalVars.bonusNormalDmg)
                 {
-                    bonusDamage = TileSpawner.bonusNormalDmg;
+                    bonusDamage = GlobalVars.bonusNormalDmg;
                 }
                 break;
 
             case var _ when damageType.Contains("Fire"):
-                if (bonusDamage < TileSpawner.bonusFireDmg)
+                if (bonusDamage < GlobalVars.bonusFireDmg)
                 {
-                    bonusDamage = TileSpawner.bonusFireDmg;
+                    bonusDamage = GlobalVars.bonusFireDmg;
                 }
                 break;
 
             case var _ when damageType.Contains("Ice"):
-                if (bonusDamage < TileSpawner.bonusIceDmg)
+                if (bonusDamage < GlobalVars.bonusIceDmg)
                 {
-                    bonusDamage = TileSpawner.bonusIceDmg;
+                    bonusDamage = GlobalVars.bonusIceDmg;
                 }
                 break;
 
             case var _ when damageType.Contains("Thunder"):
-                if (bonusDamage < TileSpawner.bonusThunderDmg)
+                if (bonusDamage < GlobalVars.bonusThunderDmg)
                 {
-                    bonusDamage = TileSpawner.bonusThunderDmg;
+                    bonusDamage = GlobalVars.bonusThunderDmg;
                 }
                 break;
 
             case var _ when damageType.Contains("Holy"):
-                if (bonusDamage < TileSpawner.bonusHolyDmg)
+                if (bonusDamage < GlobalVars.bonusHolyDmg)
                 {
-                    bonusDamage = TileSpawner.bonusHolyDmg;
+                    bonusDamage = GlobalVars.bonusHolyDmg;
                 }
                 break;
 
             case var _ when damageType.Contains("Swift"):
-                if (bonusDamage < TileSpawner.bonusSwiftDmg)
+                if (bonusDamage < GlobalVars.bonusSwiftDmg)
                 {
-                    bonusDamage = TileSpawner.bonusSwiftDmg;
+                    bonusDamage = GlobalVars.bonusSwiftDmg;
                 }
                 break;
 
             case var _ when damageType.Contains("Cosmic"):
-                if (bonusDamage < TileSpawner.bonusCosmicDmg)
+                if (bonusDamage < GlobalVars.bonusCosmicDmg)
                 {
-                    bonusDamage = TileSpawner.bonusCosmicDmg;
+                    bonusDamage = GlobalVars.bonusCosmicDmg;
                 }
                 break;
         }

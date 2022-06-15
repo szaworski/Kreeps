@@ -37,18 +37,13 @@ public class Monster : MonoBehaviour
     private int currentWaypoint;
     private GameObject[] waypoints;
 
-    GameObject tileManager;
-    TileSpawner tileSpawnerScript;
-
     void Awake()
     {
-        tileManager = GameObject.Find("TileManager");
-        tileSpawnerScript = tileManager.GetComponent<TileSpawner>();
         damage = 1;
         lastPos = transform.position;
         isFacingLeft = true;
         waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
-        currentWaypoint = tileSpawnerScript.numOfTimesPlaced;
+        currentWaypoint = GlobalVars.numOfTimesPlaced;
         //Apply any bonus values to the monster
         ApplySpawnBonuses();
         //Set the health values to be shown
@@ -358,36 +353,36 @@ public class Monster : MonoBehaviour
     void ApplySpawnBonuses()
     {
         //Apply any Tier 1 bonuses
-        health += 6 * tileSpawnerScript.numOfRivers;
-        health += 2 * tileSpawnerScript.numOfMountains;
-        health += 2 * tileSpawnerScript.numOfGraveyards;
-        armor += 1 * tileSpawnerScript.numOfMountains;
-        moveSpeed += 0.04f * tileSpawnerScript.numOfForests;
-        hpRegen += 1 * tileSpawnerScript.numOfGraveyards;
-        evasionChance += 0.02f * tileSpawnerScript.numOfSwamps;
+        health += 6 * GlobalVars.numOfRivers;
+        health += 2 * GlobalVars.numOfMountains;
+        health += 2 * GlobalVars.numOfGraveyards;
+        armor += 1 * GlobalVars.numOfMountains;
+        moveSpeed += 0.04f * GlobalVars.numOfForests;
+        hpRegen += 1 * GlobalVars.numOfGraveyards;
+        evasionChance += 0.02f * GlobalVars.numOfSwamps;
 
         //Apply any Tier 2 bonuses
-        health += 10 * tileSpawnerScript.numOfSeashores;
-        health += 7 * tileSpawnerScript.numOfThickets;
-        health += 5 * tileSpawnerScript.numOfSettlements;
-        health += 4 * tileSpawnerScript.numOfDeserts;
-        health += 3 * tileSpawnerScript.numOfTundras;
+        health += 10 * GlobalVars.numOfSeashores;
+        health += 7 * GlobalVars.numOfThickets;
+        health += 5 * GlobalVars.numOfSettlements;
+        health += 4 * GlobalVars.numOfDeserts;
+        health += 3 * GlobalVars.numOfTundras;
 
-        armor += 1 * tileSpawnerScript.numOfSeashores;
-        armor += 1 * tileSpawnerScript.numOfTundras;
-        armor += 2 * tileSpawnerScript.numOfCaverns;
+        armor += 1 * GlobalVars.numOfSeashores;
+        armor += 1 * GlobalVars.numOfTundras;
+        armor += 2 * GlobalVars.numOfCaverns;
 
-        moveSpeed += 0.02f * tileSpawnerScript.numOfTundras;
-        moveSpeed += 0.03f * tileSpawnerScript.numOfDeserts;
-        moveSpeed += 0.05f * tileSpawnerScript.numOfSettlements;
+        moveSpeed += 0.02f * GlobalVars.numOfTundras;
+        moveSpeed += 0.03f * GlobalVars.numOfDeserts;
+        moveSpeed += 0.05f * GlobalVars.numOfSettlements;
 
-        hpRegen += 1 * tileSpawnerScript.numOfThickets;
-        hpRegen += 1 * tileSpawnerScript.numOfTundras;
-        hpRegen += 2 * tileSpawnerScript.numOfCaverns;
+        hpRegen += 1 * GlobalVars.numOfThickets;
+        hpRegen += 1 * GlobalVars.numOfTundras;
+        hpRegen += 2 * GlobalVars.numOfCaverns;
 
-        evasionChance += 0.01f * tileSpawnerScript.numOfCaverns;
-        evasionChance += 0.01f * tileSpawnerScript.numOfDeserts;
-        evasionChance += 0.03f * tileSpawnerScript.numOfThickets;
+        evasionChance += 0.01f * GlobalVars.numOfCaverns;
+        evasionChance += 0.01f * GlobalVars.numOfDeserts;
+        evasionChance += 0.03f * GlobalVars.numOfThickets;
 
         //Apply any Tier 3 bonuses
 

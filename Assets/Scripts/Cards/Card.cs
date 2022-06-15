@@ -12,7 +12,6 @@ public class Card : MonoBehaviour
 
     GameObject tileManager;
     GameObject playerHud;
-    TileSpawner tileSpawnerScript;
     PlayerHud playerHudScript;
     MouseCursor mouseCursorScript;
 
@@ -20,7 +19,6 @@ public class Card : MonoBehaviour
     {
         tileManager = GameObject.Find("TileManager");
         playerHud = GameObject.Find("PlayerHud");
-        tileSpawnerScript = tileManager.GetComponent<TileSpawner>();
         playerHudScript = playerHud.GetComponent<PlayerHud>();
         mouseCursorScript = playerHud.GetComponent<MouseCursor>();
     }
@@ -43,9 +41,9 @@ public class Card : MonoBehaviour
     {
         if (!PauseMenuButtons.isPaused)
         {
-            tileSpawnerScript.tileCardSelected = cardName;
+            GlobalVars.tileCardSelected = cardName;
             IsHoveringOverUiCard = false;
-            tileSpawnerScript.triggerTileCardDestruction = true;
+            GlobalVars.triggerTileCardDestruction = true;
             playerHudScript.GetSetTriggerBonusStatsUpdate = true;
         }
     }
@@ -54,9 +52,9 @@ public class Card : MonoBehaviour
     {
         if (!PauseMenuButtons.isPaused)
         {
-            tileSpawnerScript.monsterCardSelected = cardName;
+            GlobalVars.monsterCardSelected = cardName;
             IsHoveringOverUiCard = false;
-            tileSpawnerScript.triggerMonsterCardDestruction = true;
+            GlobalVars.triggerMonsterCardDestruction = true;
             //Debug.Log("Monster Card selected: " + cardName);
         }
     }
@@ -65,11 +63,11 @@ public class Card : MonoBehaviour
     {
         if (PlayerHud.gold >= upgradeCost && !PauseMenuButtons.isPaused)
         {
-            TowerGrid.upgradeCardSelected = cardName;
-            TowerGrid.upgradeTypeSelected = upgradeType;
-            TowerGrid.upgradeGoldCost = upgradeCost;
+            GlobalVars.upgradeCardSelected = cardName;
+            GlobalVars.upgradeTypeSelected = upgradeType;
+            GlobalVars.upgradeGoldCost = upgradeCost;
             IsHoveringOverUiCard = false;
-            TowerGrid.triggerTowerUpgrade = true;
+            GlobalVars.triggerTowerUpgrade = true;
             GameObject.Find("UiSounds").GetComponent<AudioManager>().PlaySound("PlaceTower");
             //Debug.Log("Upgrade Card selected: " + cardName);
         }
@@ -92,38 +90,38 @@ public class Card : MonoBehaviour
                 switch (cardName)
                 {
                     case var _ when cardName.Contains("Neutral"):
-                        TileSpawner.bonusNormalDmg += 1;
-                        tileSpawnerScript.triggerShopCardDestruction = true;
+                        GlobalVars.bonusNormalDmg += 1;
+                        GlobalVars.triggerShopCardDestruction = true;
                         break;
 
                     case var _ when cardName.Contains("Fire"):
-                        TileSpawner.bonusFireDmg += 1;
-                        tileSpawnerScript.triggerShopCardDestruction = true;
+                        GlobalVars.bonusFireDmg += 1;
+                        GlobalVars.triggerShopCardDestruction = true;
                         break;
 
                     case var _ when cardName.Contains("Ice"):
-                        TileSpawner.bonusIceDmg += 1;
-                        tileSpawnerScript.triggerShopCardDestruction = true;
+                        GlobalVars.bonusIceDmg += 1;
+                        GlobalVars.triggerShopCardDestruction = true;
                         break;
 
                     case var _ when cardName.Contains("Thunder"):
-                        TileSpawner.bonusThunderDmg += 2;
-                        tileSpawnerScript.triggerShopCardDestruction = true;
+                        GlobalVars.bonusThunderDmg += 2;
+                        GlobalVars.triggerShopCardDestruction = true;
                         break;
 
                     case var _ when cardName.Contains("Holy"):
-                        TileSpawner.bonusHolyDmg += 2;
-                        tileSpawnerScript.triggerShopCardDestruction = true;
+                        GlobalVars.bonusHolyDmg += 2;
+                        GlobalVars.triggerShopCardDestruction = true;
                         break;
 
                     case var _ when cardName.Contains("Swift"):
-                        TileSpawner.bonusSwiftDmg += 2;
-                        tileSpawnerScript.triggerShopCardDestruction = true;
+                        GlobalVars.bonusSwiftDmg += 2;
+                        GlobalVars.triggerShopCardDestruction = true;
                         break;
 
                     case var _ when cardName.Contains("Cosmic"):
-                        TileSpawner.bonusCosmicDmg += 3;
-                        tileSpawnerScript.triggerShopCardDestruction = true;
+                        GlobalVars.bonusCosmicDmg += 3;
+                        GlobalVars.triggerShopCardDestruction = true;
                         break;
                 }
             }
@@ -133,9 +131,9 @@ public class Card : MonoBehaviour
                 mouseCursorScript.GetSetNewWeapon = cardName;
 
                 PlayerHud.newGoldValue = PlayerHud.gold - upgradeCost;
-                tileSpawnerScript.triggerShopCardDestruction = true;
+                GlobalVars.triggerShopCardDestruction = true;
                 IsHoveringOverUiCard = false;
-                TileSpawner.equipmentLvl++;
+                GlobalVars.equipmentLvl++;
             }
         }
 
@@ -149,7 +147,7 @@ public class Card : MonoBehaviour
     {
         if (!PauseMenuButtons.isPaused)
         {
-            tileSpawnerScript.triggerShopCardDestruction = true;
+            GlobalVars.triggerShopCardDestruction = true;
             IsHoveringOverUiCard = false;
         }
     }
@@ -158,7 +156,7 @@ public class Card : MonoBehaviour
     {
         if (!PauseMenuButtons.isPaused)
         {
-            TowerGrid.triggerTowerSell = true;
+            GlobalVars.triggerTowerSell = true;
         }
     }
 
@@ -166,7 +164,7 @@ public class Card : MonoBehaviour
     {
         if (!PauseMenuButtons.isPaused)
         {
-            TowerGrid.triggerUpgradeCardDestruction = true;
+            GlobalVars.triggerUpgradeCardDestruction = true;
         }
     }
 }

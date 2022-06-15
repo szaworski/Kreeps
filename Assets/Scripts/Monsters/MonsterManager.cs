@@ -7,35 +7,19 @@ using UnityEngine;
 public class MonsterManager : MonoBehaviour
 {
     private string prependMonsterName;
-    private int monsterCount;
-    private bool AllMonstersAreSpawned;
     private List<string> monsterList;
 
-    public int GetMonsterCount
-    {
-        get { return monsterCount; }
-    }
-    public bool GetSetAllMonstersAreSpawned
-    {
-        get { return AllMonstersAreSpawned; }
-        set { AllMonstersAreSpawned = value; }
-    }
-
-    GameObject tileManager;
     GameObject playerHud;
-    TileSpawner tileSpawnerScript;
     PlayerHud playerHudScript;
 
     void Awake()
     {
-        tileManager = GameObject.Find("TileManager");
         playerHud = GameObject.Find("PlayerHud");
-        tileSpawnerScript = tileManager.GetComponent<TileSpawner>();
         playerHudScript = playerHud.GetComponent<PlayerHud>();
 
-        monsterCount = 0;
+        GlobalVars.monsterCount = 0;
+        GlobalVars.allMonstersAreSpawned = false;
         monsterList = new List<string>();
-        AllMonstersAreSpawned = false;
     }
 
     void Update()
@@ -70,19 +54,19 @@ public class MonsterManager : MonoBehaviour
             monsterObj.transform.position = GameObject.Find("TileManager").transform.position;
         }
 
-        AllMonstersAreSpawned = true;
+        GlobalVars.allMonstersAreSpawned = true;
         //Debug.Log("Were all monsters spawned?: " + AllMonstersAreSpawned);
     }
 
     public void AddToMonsterList()
     {
         //After each tile is placed/Monster is selected, add the new monster to the list
-        if (monsterCount < tileSpawnerScript.numOfTimesPlaced && tileSpawnerScript.triggerMonsterCardDestruction || monsterCount < tileSpawnerScript.numOfTimesPlaced && tileSpawnerScript.numOfTimesPlaced <= 1)
+        if (GlobalVars.monsterCount < GlobalVars.numOfTimesPlaced && GlobalVars.triggerMonsterCardDestruction || GlobalVars.monsterCount < GlobalVars.numOfTimesPlaced && GlobalVars.numOfTimesPlaced <= 1)
         {
             //Prepend the proper file path for the monster
             PrependMonsterPath();
 
-            if (tileSpawnerScript.numOfTimesPlaced <= 1)
+            if (GlobalVars.numOfTimesPlaced <= 1)
             {
                 //Get a random starting monster from the 3 provided
                 var rand = new System.Random();
@@ -90,36 +74,36 @@ public class MonsterManager : MonoBehaviour
                 switch (startingMonsterIndex)
                 {
                     case 0:
-                        tileSpawnerScript.monsterCardSelected = "Forest/Wolf";
+                        GlobalVars.monsterCardSelected = "Forest/Wolf";
                         break;
                     case 1:
-                        tileSpawnerScript.monsterCardSelected = "Mountain/Ranger";
+                        GlobalVars.monsterCardSelected = "Mountain/Ranger";
                         break;
                     case 2:
-                        tileSpawnerScript.monsterCardSelected = "Graveyard/Zombie";
+                        GlobalVars.monsterCardSelected = "Graveyard/Zombie";
                         break;
                 }
             }
 
             //Add the selected monster to the list
-            monsterList.Add(prependMonsterName + tileSpawnerScript.monsterCardSelected);
+            monsterList.Add(prependMonsterName + GlobalVars.monsterCardSelected);
 
-            monsterCount++;
-            Debug.Log("Monster Count: " + monsterCount);
+            GlobalVars.monsterCount++;
+            Debug.Log("Monster Count: " + GlobalVars.monsterCount);
             Debug.Log("Monster List: " + String.Join("\n", monsterList));
         }
     }
 
     public void PrependMonsterPath()
     {
-        if (tileSpawnerScript.tileName.Contains("Starting"))
+        if (GlobalVars.tileName.Contains("Starting"))
         {
             prependMonsterName = "Monsters/Tier1/";
         }
 
         else
         {
-            prependMonsterName = "Monsters/" + tileSpawnerScript.currTier + "/" + tileSpawnerScript.tileCardSelected + "/";
+            prependMonsterName = "Monsters/" + GlobalVars.currTier + "/" + GlobalVars.tileCardSelected + "/";
         }
     }
 }

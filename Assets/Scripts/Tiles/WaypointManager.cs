@@ -13,6 +13,6 @@ public class WaypointManager : MonoBehaviour
         tileManager = GameObject.Find("TileManager");
         tileSpawnerScript = tileManager.GetComponent<TileSpawner>();
 
-        waypointNum = tileSpawnerScript.numOfTimesPlaced;
+        waypointNum = GlobalVars.numOfTimesPlaced;
     }
 }

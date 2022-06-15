@@ -52,13 +52,11 @@ public class PlayerHud : MonoBehaviour
 
     GameObject tileManager;
     GameObject monsterManager;
-    TileSpawner tileSpawnerScript;
     MonsterManager monsterManagerScript;
 
     void Awake()
     {
         tileManager = GameObject.Find("TileManager");
-        tileSpawnerScript = tileManager.GetComponent<TileSpawner>();
         monsterManager = GameObject.Find("MonsterManager");
         monsterManagerScript = monsterManager.GetComponent<MonsterManager>();
 
@@ -74,7 +72,7 @@ public class PlayerHud : MonoBehaviour
         showBonusStats = false;
 
         //"selectedTowerType" is set to neutral by deafult
-        TowerGrid.towerTypeSelected = "Neutral";
+        GlobalVars.towerTypeSelected = "Neutral";
     }
 
     void Update()
@@ -84,7 +82,7 @@ public class PlayerHud : MonoBehaviour
             ChangeGoldAmt();
         }
 
-        if (curWaveNum < monsterManagerScript.GetMonsterCount)
+        if (curWaveNum < GlobalVars.monsterCount)
         {
             ChangeWaveNum();
         }
@@ -107,13 +105,13 @@ public class PlayerHud : MonoBehaviour
     public void ChangeWaveNum()
     {
         //Update the wave number to be = to "monsterCount". (This count will match the wave number, so we can use this instead of a new variable)
-        curWaveNum = monsterManagerScript.GetMonsterCount;
+        curWaveNum = GlobalVars.monsterCount;
         waveNumUiText.SetText(curWaveNum.ToString());
     }
 
     public void HideShowStartWaveInstructions()
     {
-        //This gets set to true in "DestroyMonsterCards()" (See TileSpawner.cs)
+        //This gets set to true in "DestroyMonsterCards()" (See GlobalVars.cs)
         if (showStartWaveInstructions && !waveStartUiText.enabled)
         {
             waveStartUiText.enabled = true;
@@ -152,36 +150,36 @@ public class PlayerHud : MonoBehaviour
         bonusEvasion = 0;
 
         //Apply any Tier 1 bonuses
-        bonusMaxHealth += 6 * tileSpawnerScript.numOfRivers;
-        bonusMaxHealth += 2 * tileSpawnerScript.numOfMountains;
-        bonusMaxHealth += 2 * tileSpawnerScript.numOfGraveyards;
-        bonusArmor += 1 * tileSpawnerScript.numOfMountains;
-        bonusMoveSpeed += 0.04f * tileSpawnerScript.numOfForests;
-        bonusHpRegen += 1 * tileSpawnerScript.numOfGraveyards;
-        bonusEvasion += 0.02f * tileSpawnerScript.numOfSwamps;
+        bonusMaxHealth += 6 * GlobalVars.numOfRivers;
+        bonusMaxHealth += 2 * GlobalVars.numOfMountains;
+        bonusMaxHealth += 2 * GlobalVars.numOfGraveyards;
+        bonusArmor += 1 * GlobalVars.numOfMountains;
+        bonusMoveSpeed += 0.04f * GlobalVars.numOfForests;
+        bonusHpRegen += 1 * GlobalVars.numOfGraveyards;
+        bonusEvasion += 0.02f * GlobalVars.numOfSwamps;
 
         //Apply any Tier 2 bonuses
-        bonusMaxHealth += 10 * tileSpawnerScript.numOfSeashores;
-        bonusMaxHealth += 7 * tileSpawnerScript.numOfThickets;
-        bonusMaxHealth += 5 * tileSpawnerScript.numOfSettlements;
-        bonusMaxHealth += 4 * tileSpawnerScript.numOfDeserts;
-        bonusMaxHealth += 3 * tileSpawnerScript.numOfTundras;
+        bonusMaxHealth += 10 * GlobalVars.numOfSeashores;
+        bonusMaxHealth += 7 * GlobalVars.numOfThickets;
+        bonusMaxHealth += 5 * GlobalVars.numOfSettlements;
+        bonusMaxHealth += 4 * GlobalVars.numOfDeserts;
+        bonusMaxHealth += 3 * GlobalVars.numOfTundras;
 
-        bonusArmor += 1 * tileSpawnerScript.numOfSeashores;
-        bonusArmor += 1 * tileSpawnerScript.numOfTundras;
-        bonusArmor += 2 * tileSpawnerScript.numOfCaverns;
+        bonusArmor += 1 * GlobalVars.numOfSeashores;
+        bonusArmor += 1 * GlobalVars.numOfTundras;
+        bonusArmor += 2 * GlobalVars.numOfCaverns;
 
-        bonusMoveSpeed += 0.02f * tileSpawnerScript.numOfTundras;
-        bonusMoveSpeed += 0.03f * tileSpawnerScript.numOfDeserts;
-        bonusMoveSpeed += 0.05f * tileSpawnerScript.numOfSettlements;
+        bonusMoveSpeed += 0.02f * GlobalVars.numOfTundras;
+        bonusMoveSpeed += 0.03f * GlobalVars.numOfDeserts;
+        bonusMoveSpeed += 0.05f * GlobalVars.numOfSettlements;
 
-        bonusHpRegen += 1 * tileSpawnerScript.numOfThickets;
-        bonusHpRegen += 1 * tileSpawnerScript.numOfTundras;
-        bonusHpRegen += 2 * tileSpawnerScript.numOfCaverns;
+        bonusHpRegen += 1 * GlobalVars.numOfThickets;
+        bonusHpRegen += 1 * GlobalVars.numOfTundras;
+        bonusHpRegen += 2 * GlobalVars.numOfCaverns;
 
-        bonusEvasion += 0.01f * tileSpawnerScript.numOfCaverns;
-        bonusEvasion += 0.01f * tileSpawnerScript.numOfDeserts;
-        bonusEvasion += 0.03f * tileSpawnerScript.numOfThickets;
+        bonusEvasion += 0.01f * GlobalVars.numOfCaverns;
+        bonusEvasion += 0.01f * GlobalVars.numOfDeserts;
+        bonusEvasion += 0.03f * GlobalVars.numOfThickets;
 
         //Apply any Tier 3 bonuses
 

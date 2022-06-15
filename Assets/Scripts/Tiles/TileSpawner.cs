@@ -21,8 +21,11 @@ public class TileSpawner : TileTypes
     private bool checkOuterBottomOverlap;
     private bool checkOuterLeftOverlap;
     private bool checkOuterRightOverlap;
-    private string[] curTiles;
     private bool[] validTiles;
+    private string[] curTiles;
+    private string newTileName;
+    private string prependTileName;
+    private string spawnDirection;
     private List<string> validTilesList;
     private GameObject card1Obj;
     private GameObject card2Obj;
@@ -32,6 +35,7 @@ public class TileSpawner : TileTypes
     [SerializeField] private TMP_Text locationSelectText;
     [SerializeField] private TMP_Text monsterSelectText;
     [SerializeField] private TMP_Text shopSelectText;
+
 
     GameObject monsterManager;
     GameObject playerHud;
@@ -45,36 +49,36 @@ public class TileSpawner : TileTypes
         monsterManagerScript = monsterManager.GetComponent<MonsterManager>();
         playerHudScript = playerHud.GetComponent<PlayerHud>();
 
-        currTier = "Tier1";
-        numOfTimesPlaced = 0;
+        GlobalVars.currTier = "Tier1";
+        GlobalVars.numOfTimesPlaced = 0;
         curTiles = new string[6];
         validTiles = new bool[6];
         PlaceStartingTile();
 
         //Reset location nums
-        numOfForests = 0;
-        numOfGraveyards = 0;
-        numOfRivers = 0;
-        numOfMountains = 0;
-        numOfSwamps = 0;
+        GlobalVars.numOfForests = 0;
+        GlobalVars.numOfGraveyards = 0;
+        GlobalVars.numOfRivers = 0;
+        GlobalVars.numOfMountains = 0;
+        GlobalVars.numOfSwamps = 0;
 
-        numOfDeserts = 0;
-        numOfThickets = 0;
-        numOfTundras = 0;
-        numOfCaverns = 0;
-        numOfSettlements = 0;
-        numOfSeashores = 0;
+        GlobalVars.numOfDeserts = 0;
+        GlobalVars.numOfThickets = 0;
+        GlobalVars.numOfTundras = 0;
+        GlobalVars.numOfCaverns = 0;
+        GlobalVars.numOfSettlements = 0;
+        GlobalVars.numOfSeashores = 0;
 
         //Reset Bonus stats
-        bonusNormalDmg = 0;
-        bonusFireDmg = 0;
-        bonusIceDmg = 0;
-        bonusThunderDmg = 0;
-        bonusHolyDmg = 0;
-        bonusSwiftDmg = 0;
-        bonusCosmicDmg = 0;
+        GlobalVars.bonusNormalDmg = 0;
+        GlobalVars.bonusFireDmg = 0;
+        GlobalVars.bonusIceDmg = 0;
+        GlobalVars.bonusThunderDmg = 0;
+        GlobalVars.bonusHolyDmg = 0;
+        GlobalVars.bonusSwiftDmg = 0;
+        GlobalVars.bonusCosmicDmg = 0;
 
-        equipmentLvl = 1;
+        GlobalVars.equipmentLvl = 1;
     }
 
     void Update()
@@ -86,7 +90,7 @@ public class TileSpawner : TileTypes
 
     public void PlaceStartingTile()
     {
-        tileName = "StartingTile";
+        GlobalVars.tileName = "StartingTile";
 
         //Fetch the starting tile
         GameObject referenceStartTile = (GameObject)Instantiate(Resources.Load("Tiles/StartingTile"));
@@ -98,7 +102,7 @@ public class TileSpawner : TileTypes
         tile.transform.position = new Vector2(0, 0);
 
         //increment numOfTimesPlaced
-        numOfTimesPlaced++;
+        GlobalVars.numOfTimesPlaced++;
 
         //Place a waypoint node on the center of the tile
         GameObject waypoint = (GameObject)Instantiate(Resources.Load("Tiles/WaypointNode"), TileHolder.transform);
@@ -116,11 +120,11 @@ public class TileSpawner : TileTypes
     {
         //Is now called in GetAndShowTileCards() after a selection is made
         GetNewTile();
-        tileName = newTileName;
-        Debug.Log("Tile Pathway: " + prependTileName + tileName);
+        GlobalVars.tileName = newTileName;
+        Debug.Log("Tile Pathway: " + prependTileName + GlobalVars.tileName);
 
         //Find the tile in the resources folder
-        GameObject referenceStartTile = (GameObject)Instantiate(Resources.Load(prependTileName + tileName));
+        GameObject referenceStartTile = (GameObject)Instantiate(Resources.Load(prependTileName + GlobalVars.tileName));
         GameObject TileHolder = GameObject.Find("TileHolder");
 
         //Place the new tile
@@ -129,7 +133,7 @@ public class TileSpawner : TileTypes
         tile.transform.position = new Vector2(shiftAmtXpos, shiftAmtYpos);
 
         //increment numOfTimesPlaced
-        numOfTimesPlaced++;
+        GlobalVars.numOfTimesPlaced++;
 
         //Place a waypoint node on the center of the tile
         GameObject waypoint = (GameObject)Instantiate(Resources.Load("Tiles/WaypointNode"), TileHolder.transform);
@@ -157,7 +161,7 @@ public class TileSpawner : TileTypes
 
     public void MoveSpawnPos()
     {
-        if (tileName == "StartingTile")
+        if (GlobalVars.tileName == "StartingTile")
         {
             transform.position = new Vector2(shiftAmtXpos, shiftAmtYpos + 1);
         }
@@ -185,12 +189,12 @@ public class TileSpawner : TileTypes
 
     public void FindNewSpawnDirection()
     {
-        if (tileName == "StartingTile")
+        if (GlobalVars.tileName == "StartingTile")
         {
             spawnDirection = "up";
         }
 
-        if (tileName == curTiles[0])
+        if (GlobalVars.tileName == curTiles[0])
         {
             if (!checkTopOverlap)
             {
@@ -203,7 +207,7 @@ public class TileSpawner : TileTypes
             }
         }
 
-        else if (tileName == curTiles[1])
+        else if (GlobalVars.tileName == curTiles[1])
         {
             if (!checkRightOverlap)
             {
@@ -216,7 +220,7 @@ public class TileSpawner : TileTypes
             }
         }
 
-        else if (tileName == curTiles[2])
+        else if (GlobalVars.tileName == curTiles[2])
         {
             if (!checkRightOverlap)
             {
@@ -229,7 +233,7 @@ public class TileSpawner : TileTypes
             }
         }
 
-        else if (tileName == curTiles[3])
+        else if (GlobalVars.tileName == curTiles[3])
         {
             if (!checkLeftOverlap)
             {
@@ -242,7 +246,7 @@ public class TileSpawner : TileTypes
             }
         }
 
-        else if (tileName == curTiles[4])
+        else if (GlobalVars.tileName == curTiles[4])
         {
             if (!checkLeftOverlap)
             {
@@ -255,7 +259,7 @@ public class TileSpawner : TileTypes
             }
         }
 
-        else if (tileName == curTiles[5])
+        else if (GlobalVars.tileName == curTiles[5])
         {
             if (!checkRightOverlap)
             {
@@ -272,9 +276,9 @@ public class TileSpawner : TileTypes
     public void GetAndShowTileCards()
     {
         //Check if all monsters have been spawned for the wave and that all monsters are dead, then prompt for card selection
-        if (monsterManagerScript.GetSetAllMonstersAreSpawned && GameObject.Find("TileManager").transform.childCount == 0 && PlayerHealth.playerHealth > 0) //Input.GetKeyDown(KeyCode.Space)
+        if (GlobalVars.allMonstersAreSpawned && GameObject.Find("TileManager").transform.childCount == 0 && PlayerHealth.playerHealth > 0) //Input.GetKeyDown(KeyCode.Space)
         {
-            monsterManagerScript.GetSetAllMonstersAreSpawned = false;
+            GlobalVars.allMonstersAreSpawned = false;
 
             var rand = new System.Random();
             List<string> currentCardList = null;
@@ -283,15 +287,15 @@ public class TileSpawner : TileTypes
             string card3 = null;
 
             //Get the correct Tile card list based on the number of waves finished. (Copy the list from TileCards.cs)
-            if (numOfTimesPlaced < 10)
+            if (GlobalVars.numOfTimesPlaced < 10)
             {
                 currentCardList = tier1TileCards.ToList();
                 //Debug.Log("Card List: " + currentCardList[0] + " " + currentCardList[1] + " " + currentCardList[2] + " " + currentCardList[3] + " " + currentCardList[4]);
             }
 
-            else if (numOfTimesPlaced >= 10 && numOfTimesPlaced < 20)
+            else if (GlobalVars.numOfTimesPlaced >= 10 && GlobalVars.numOfTimesPlaced < 20)
             {
-                currTier = "Tier2";
+                GlobalVars.currTier = "Tier2";
                 currentCardList = tier2TileCards.ToList();
             }
 
@@ -328,9 +332,9 @@ public class TileSpawner : TileTypes
             GameObject cardSlot2 = GameObject.Find("TileCardSlot2");
             GameObject cardSlot3 = GameObject.Find("TileCardSlot3");
 
-            card1Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + currTier + "/" + card1), cardSlot1.transform);
-            card2Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + currTier + "/" + card2), cardSlot2.transform);
-            card3Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + currTier + "/" + card3), cardSlot3.transform);
+            card1Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + GlobalVars.currTier + "/" + card1), cardSlot1.transform);
+            card2Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + GlobalVars.currTier + "/" + card2), cardSlot2.transform);
+            card3Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + GlobalVars.currTier + "/" + card3), cardSlot3.transform);
 
             card1Obj.transform.position = cardSlot1.transform.position;
             card2Obj.transform.position = cardSlot2.transform.position;
@@ -339,7 +343,7 @@ public class TileSpawner : TileTypes
         }
 
         //Destory all tile card game objects after a selection is made. See Card.cs
-        if (triggerTileCardDestruction)
+        if (GlobalVars.triggerTileCardDestruction)
         {
             Destroy(card1Obj.gameObject);
             Destroy(card2Obj.gameObject);
@@ -347,7 +351,7 @@ public class TileSpawner : TileTypes
             //Spawn the new tile
             SpawnNewTile();
             //Reset this bool for next card selection later
-            triggerTileCardDestruction = false;
+            GlobalVars.triggerTileCardDestruction = false;
             locationSelectText.enabled = false;
             //Call GetAndShowMonsterCards() to spawn the Monster card options
             GetAndShowMonsterCards();
@@ -361,7 +365,7 @@ public class TileSpawner : TileTypes
         string card1 = null;
         string card2 = null;
 
-        switch (tileCardSelected)
+        switch (GlobalVars.tileCardSelected)
         {
             //Tier 1
             case "Forest":
@@ -440,8 +444,8 @@ public class TileSpawner : TileTypes
         GameObject cardSlot4 = GameObject.Find("TileCardSlot4");
         GameObject cardSlot5 = GameObject.Find("TileCardSlot5");
 
-        card1Obj = (GameObject)Instantiate(Resources.Load("UI/MonsterCards/" + currTier + "/" + tileCardSelected + "/" + card1), cardSlot4.transform);
-        card2Obj = (GameObject)Instantiate(Resources.Load("UI/MonsterCards/" + currTier + "/" + tileCardSelected + "/" + card2), cardSlot5.transform);
+        card1Obj = (GameObject)Instantiate(Resources.Load("UI/MonsterCards/" + GlobalVars.currTier + "/" + GlobalVars.tileCardSelected + "/" + card1), cardSlot4.transform);
+        card2Obj = (GameObject)Instantiate(Resources.Load("UI/MonsterCards/" + GlobalVars.currTier + "/" + GlobalVars.tileCardSelected + "/" + card2), cardSlot5.transform);
 
         card1Obj.transform.position = cardSlot4.transform.position;
         card2Obj.transform.position = cardSlot5.transform.position;
@@ -451,16 +455,16 @@ public class TileSpawner : TileTypes
     public void DestroyMonsterCards()
     {
         //Destory all monster card game objects after a selection is made. See Card.cs
-        if (triggerMonsterCardDestruction)
+        if (GlobalVars.triggerMonsterCardDestruction)
         {
             Destroy(card1Obj.gameObject);
             Destroy(card2Obj.gameObject);
             //Reset this bool for next card selection later
-            triggerMonsterCardDestruction = false;
+            GlobalVars.triggerMonsterCardDestruction = false;
             monsterSelectText.enabled = false;
             Debug.Log("Monster Cards Destoryed");
 
-            if (numOfTimesPlaced % 3 == 0)
+            if (GlobalVars.numOfTimesPlaced % 3 == 0)
             {
                 GetAndShowShopCards();
             }
@@ -483,7 +487,7 @@ public class TileSpawner : TileTypes
         string card4 = null;
         string card5 = "SkipCard";
 
-        switch (equipmentLvl)
+        switch (GlobalVars.equipmentLvl)
         {
             case 1:
                 weaponCardList = tier1WeaponCards.ToList();
@@ -557,8 +561,8 @@ public class TileSpawner : TileTypes
         GameObject cardSlot4 = GameObject.Find("ShopCardSlot4");
         GameObject cardSlot5 = GameObject.Find("ShopCardSlot5");
 
-        card1Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + "Tier" + equipmentLvl + "/" + card1), cardSlot1.transform);
-        card2Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + "Tier" + equipmentLvl + "/" + card2), cardSlot2.transform);
+        card1Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + "Tier" + GlobalVars.equipmentLvl + "/" + card1), cardSlot1.transform);
+        card2Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + "Tier" + GlobalVars.equipmentLvl + "/" + card2), cardSlot2.transform);
         card3Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card3), cardSlot3.transform);
         card4Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card4), cardSlot4.transform);
         card5Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card5), cardSlot5.transform);
@@ -574,7 +578,7 @@ public class TileSpawner : TileTypes
     public void DestroyShopCards()
     {
         //Destory all monster card game objects after a selection is made. See Card.cs
-        if (triggerShopCardDestruction)
+        if (GlobalVars.triggerShopCardDestruction)
         {
             Destroy(card1Obj.gameObject);
             Destroy(card2Obj.gameObject);
@@ -582,7 +586,7 @@ public class TileSpawner : TileTypes
             Destroy(card4Obj.gameObject);
             Destroy(card5Obj.gameObject);
             //Reset this bool for next card selection later
-            triggerShopCardDestruction = false;
+            GlobalVars.triggerShopCardDestruction = false;
             shopSelectText.enabled = false;
             playerHudScript.GetSetShowStartWaveInstructions = true;
             Debug.Log("Shop Cards Destoryed");
@@ -600,66 +604,66 @@ public class TileSpawner : TileTypes
     public void GetListOfValidTiles()
     {
         validTilesList = new List<string>();
-        prependTileName = "Tiles/" + currTier + "/" + tileCardSelected + "Tiles/";
+        prependTileName = "Tiles/" + GlobalVars.currTier + "/" + GlobalVars.tileCardSelected + "Tiles/";
 
         //Check for which tile card was selected and set the "curTiles" array accordingly 
-        switch (tileCardSelected)
+        switch (GlobalVars.tileCardSelected)
         {
             //Tier 1
             case "Forest":
                 curTiles = forestTiles;
-                numOfForests += 1;
+                GlobalVars.numOfForests += 1;
                 break;
 
             case "Graveyard":
                 curTiles = graveyardTiles;
-                numOfGraveyards += 1;
+                GlobalVars.numOfGraveyards += 1;
                 break;
 
             case "River":
                 curTiles = riverTiles;
-                numOfRivers += 1;
+                GlobalVars.numOfRivers += 1;
                 break;
 
             case "Mountain":
                 curTiles = mountainTiles;
-                numOfMountains += 1;
+                GlobalVars.numOfMountains += 1;
                 break;
 
             case "Swamp":
                 curTiles = swampTiles;
-                numOfSwamps += 1;
+                GlobalVars.numOfSwamps += 1;
                 break;
 
             //Tier 2
             case "Desert":
                 curTiles = desertTiles;
-                numOfDeserts += 1;
+                GlobalVars.numOfDeserts += 1;
                 break;
 
             case "Thicket":
                 curTiles = thicketTiles;
-                numOfThickets += 1;
+                GlobalVars.numOfThickets += 1;
                 break;
 
             case "Tundra":
                 curTiles = tundraTiles;
-                numOfTundras += 1;
+                GlobalVars.numOfTundras += 1;
                 break;
 
             case "Cavern":
                 curTiles = cavernTiles;
-                numOfCaverns += 1;
+                GlobalVars.numOfCaverns += 1;
                 break;
 
             case "Settlement":
                 curTiles = settlementTiles;
-                numOfSettlements += 1;
+                GlobalVars.numOfSettlements += 1;
                 break;
 
             case "Seashore":
                 curTiles = seashoreTiles;
-                numOfSeashores += 1;
+                GlobalVars.numOfSeashores += 1;
                 break;
 
                 //Tier 3
@@ -682,7 +686,7 @@ public class TileSpawner : TileTypes
             validTiles[i] = false;
         }
 
-        if (tileName == "StartingTile")
+        if (GlobalVars.tileName == "StartingTile")
         {
             validTiles[0] = true;
             validTiles[2] = true;
@@ -690,7 +694,7 @@ public class TileSpawner : TileTypes
             shiftAmtYpos += 1;
         }
 
-        else if (tileName == curTiles[0])
+        else if (GlobalVars.tileName == curTiles[0])
         {
             if (checkBottomOverlap && spawnDirection == "up")
             {
@@ -705,7 +709,7 @@ public class TileSpawner : TileTypes
             }
         }
 
-        else if (tileName == curTiles[1])
+        else if (GlobalVars.tileName == curTiles[1])
         {
             if (checkLeftOverlap && spawnDirection == "right")
             {
@@ -720,7 +724,7 @@ public class TileSpawner : TileTypes
             }
         }
 
-        else if (tileName == curTiles[2])
+        else if (GlobalVars.tileName == curTiles[2])
         {
             if (checkLeftOverlap && spawnDirection == "right")
             {
@@ -735,7 +739,7 @@ public class TileSpawner : TileTypes
             }
         }
 
-        else if (tileName == curTiles[3])
+        else if (GlobalVars.tileName == curTiles[3])
         {
             if (checkRightOverlap && spawnDirection == "left")
             {
@@ -750,7 +754,7 @@ public class TileSpawner : TileTypes
             }
         }
 
-        else if (tileName == curTiles[4])
+        else if (GlobalVars.tileName == curTiles[4])
         {
             if (checkRightOverlap && spawnDirection == "left")
             {
@@ -765,7 +769,7 @@ public class TileSpawner : TileTypes
             }
         }
 
-        else if (tileName == curTiles[5])
+        else if (GlobalVars.tileName == curTiles[5])
         {
             if (checkBottomOverlap && spawnDirection == "up")
             {

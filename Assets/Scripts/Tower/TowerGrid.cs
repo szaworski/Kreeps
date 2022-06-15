@@ -17,26 +17,6 @@ public class TowerGrid : MonoBehaviour
 
     [Header("Grid position vars")]
     private bool hasTower;
-    public static int goldCost;
-    public static int upgradeGoldCost;
-    public static string towerTypeSelected;
-
-    [Header("Tower Upgrade vars")]
-    public static GameObject oldTowerObj;
-    public static GameObject gridObj;
-    public static Vector3 upgradePosition;
-    public static string upgradeCardSelected;
-    public static string upgradeTypeSelected;
-    public static bool upgradeCardsArePresent;
-    public static bool triggerUpgradeCardDestruction;
-    public static bool triggerTowerUpgrade;
-    public static bool triggerTowerSell;
-    public static GameObject upgradeCard1Obj;
-    public static GameObject upgradeCard2Obj;
-    public static GameObject upgradeCard3Obj;
-    public static GameObject upgradeCard4Obj;
-    public static GameObject upgradeCard5Obj;
-    public static GameObject upgradeCard6Obj;
 
     void Awake()
     {
@@ -86,11 +66,11 @@ public class TowerGrid : MonoBehaviour
                 HideShowTowerStats();
 
                 //Spawn a tower on mouse click if one is not present
-                if (!hasTower && PlayerHud.gold >= goldCost)
+                if (!hasTower && PlayerHud.gold >= GlobalVars.goldCost)
                 {
                     //Get the tower GameObject
                     GameObject towerContainer = GameObject.Find("Towers");
-                    GameObject tower = (GameObject)Instantiate(Resources.Load("Towers/" + towerTypeSelected + "Tower"), towerContainer.transform);
+                    GameObject tower = (GameObject)Instantiate(Resources.Load("Towers/" + GlobalVars.towerTypeSelected + "Tower"), towerContainer.transform);
 
                     //Place the tower
                     tower.transform.position = this.transform.position;
@@ -103,11 +83,11 @@ public class TowerGrid : MonoBehaviour
                     towerScript = placedTower.GetComponent<Tower>();
 
                     //Subtract gold from the player
-                    PlayerHud.newGoldValue = PlayerHud.gold - goldCost;
+                    PlayerHud.newGoldValue = PlayerHud.gold - GlobalVars.goldCost;
                     GameObject.Find("UiSounds").GetComponent<AudioManager>().PlaySound("PlaceTower");
                 }
 
-                else if (!hasTower && PlayerHud.gold < goldCost)
+                else if (!hasTower && PlayerHud.gold < GlobalVars.goldCost)
                 {
                     GameObject.Find("UiSounds").GetComponent<AudioManager>().PlaySound("Error");
                 }
@@ -121,16 +101,16 @@ public class TowerGrid : MonoBehaviour
                 if (Input.GetMouseButtonDown(1))
                 {
                     //Show or destroy the tower upgrade cards on right click
-                    if (!upgradeCardsArePresent && towerScript.hasUpgrades)
+                    if (!GlobalVars.upgradeCardsArePresent && towerScript.hasUpgrades)
                     {
                         SpawnTowerUpgradeCards();
-                        upgradeCardsArePresent = true;
+                        GlobalVars.upgradeCardsArePresent = true;
                     }
 
-                    else if (upgradeCardsArePresent)
+                    else if (GlobalVars.upgradeCardsArePresent)
                     {
                         DestroyTowerUpgradeCards();
-                        upgradeCardsArePresent = false;
+                        GlobalVars.upgradeCardsArePresent = false;
                     }
                 }
 
@@ -172,10 +152,10 @@ public class TowerGrid : MonoBehaviour
                             break;
                     }
 
-                    if (upgradeCardsArePresent)
+                    if (GlobalVars.upgradeCardsArePresent)
                     {
                         DestroyTowerUpgradeCards();
-                        upgradeCardsArePresent = false;
+                        GlobalVars.upgradeCardsArePresent = false;
                     }
                 }
             }
@@ -203,7 +183,7 @@ public class TowerGrid : MonoBehaviour
 
     void SetSelectedTowerGhost()
     {
-        switch (towerTypeSelected)
+        switch (GlobalVars.towerTypeSelected)
         {
             case "Neutral":
                 towerGhostSprite.sprite = ghostSpriteArray[0];
@@ -251,11 +231,11 @@ public class TowerGrid : MonoBehaviour
     void SpawnTowerUpgradeCards()
     {
         //Get the towers position
-        upgradePosition = placedTower.transform.position;
+        GlobalVars.upgradePosition = placedTower.transform.position;
         //Get the current tower object
-        oldTowerObj = placedTower;
+        GlobalVars.oldTowerObj = placedTower;
         //Get the grid position object containing the tower
-        gridObj = this.gameObject;
+        GlobalVars.gridObj = this.gameObject;
         //Debug.Log("Old Tower position: " + upgradePosition);
         //Debug.Log("Upgrade grid object: " + gridObj);
 
@@ -273,61 +253,61 @@ public class TowerGrid : MonoBehaviour
 
         if (!string.IsNullOrEmpty(card1))
         {
-            upgradeCard1Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/" + card1), cardSlot1.transform);
-            upgradeCard1Obj.transform.position = cardSlot1.transform.position;
+            GlobalVars.upgradeCard1Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/" + card1), cardSlot1.transform);
+            GlobalVars.upgradeCard1Obj.transform.position = cardSlot1.transform.position;
         }
 
         if (!string.IsNullOrEmpty(card2))
         {
-            upgradeCard2Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/" + card2), cardSlot2.transform);
-            upgradeCard2Obj.transform.position = cardSlot2.transform.position;
+            GlobalVars.upgradeCard2Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/" + card2), cardSlot2.transform);
+            GlobalVars.upgradeCard2Obj.transform.position = cardSlot2.transform.position;
         }
 
         if (!string.IsNullOrEmpty(card3))
         {
-            upgradeCard3Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/" + card3), cardSlot3.transform);
-            upgradeCard3Obj.transform.position = cardSlot3.transform.position;
+            GlobalVars.upgradeCard3Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/" + card3), cardSlot3.transform);
+            GlobalVars.upgradeCard3Obj.transform.position = cardSlot3.transform.position;
         }
 
-        upgradeCard4Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/Close"), cardSlot4.transform);
-        upgradeCard5Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/Upgrade"), cardSlot5.transform);
-        upgradeCard6Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/SellButton"), cardSlot6.transform);
-        upgradeCard4Obj.transform.position = cardSlot4.transform.position;
-        upgradeCard5Obj.transform.position = cardSlot5.transform.position;
-        upgradeCard6Obj.transform.position = cardSlot6.transform.position;
+        GlobalVars.upgradeCard4Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/Close"), cardSlot4.transform);
+        GlobalVars.upgradeCard5Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/Upgrade"), cardSlot5.transform);
+        GlobalVars.upgradeCard6Obj = (GameObject)Instantiate(Resources.Load("UI/UpgradeCards/" + towerScript.damageType + "/SellButton"), cardSlot6.transform);
+        GlobalVars.upgradeCard4Obj.transform.position = cardSlot4.transform.position;
+        GlobalVars.upgradeCard5Obj.transform.position = cardSlot5.transform.position;
+        GlobalVars.upgradeCard6Obj.transform.position = cardSlot6.transform.position;
     }
 
     void UpgradeTower()
     {
         //Destory all card game objects after a selection is made. See Card.cs
-        if (triggerTowerUpgrade)
+        if (GlobalVars.triggerTowerUpgrade)
         {
             SetSelectedUpgrade();
             DestroyTowerUpgradeCards();
-            DestroyTower(oldTowerObj);
+            DestroyTower(GlobalVars.oldTowerObj);
             //Reset bools for next upgrade card selection
-            triggerTowerUpgrade = false;
-            upgradeCardsArePresent = false;
+            GlobalVars.triggerTowerUpgrade = false;
+            GlobalVars.upgradeCardsArePresent = false;
         }
 
-        if (triggerUpgradeCardDestruction)
+        if (GlobalVars.triggerUpgradeCardDestruction)
         {
             DestroyTowerUpgradeCards();
             //Reset bools for next upgrade card selection
-            triggerUpgradeCardDestruction = false;
-            upgradeCardsArePresent = false;
+            GlobalVars.triggerUpgradeCardDestruction = false;
+            GlobalVars.upgradeCardsArePresent = false;
         }
     }
 
     void SellTower()
     {
-        if (triggerTowerSell)
+        if (GlobalVars.triggerTowerSell)
         {
-            TowerGrid gridScript = gridObj.GetComponent<TowerGrid>();
+            TowerGrid gridScript = GlobalVars.gridObj.GetComponent<TowerGrid>();
             gridScript.hasTower = false;
 
             DestroyTowerUpgradeCards();
-            DestroyTower(oldTowerObj);
+            DestroyTower(GlobalVars.oldTowerObj);
             GameObject.Find("UiSounds").GetComponent<AudioManager>().PlaySound("SellTower");
 
             //Give gold to the player (Give back a set amount based on the tower type)
@@ -362,8 +342,8 @@ public class TowerGrid : MonoBehaviour
                     break;
             }
             //Reset bools for next upgrade card selection
-            triggerTowerSell = false;
-            upgradeCardsArePresent = false;
+            GlobalVars.triggerTowerSell = false;
+            GlobalVars.upgradeCardsArePresent = false;
         }
     }
 
@@ -371,11 +351,11 @@ public class TowerGrid : MonoBehaviour
     {
         //Get the tower GameObject
         GameObject towerContainer = GameObject.Find("Towers");
-        GameObject tower = (GameObject)Instantiate(Resources.Load("Towers/Upgrades/" + upgradeTypeSelected + "/" + upgradeCardSelected + "Tower"), towerContainer.transform);
+        GameObject tower = (GameObject)Instantiate(Resources.Load("Towers/Upgrades/" + GlobalVars.upgradeTypeSelected + "/" + GlobalVars.upgradeCardSelected + "Tower"), towerContainer.transform);
 
         //Place the tower
-        TowerGrid gridScript = gridObj.GetComponent<TowerGrid>();
-        tower.transform.position = upgradePosition;
+        TowerGrid gridScript = GlobalVars.gridObj.GetComponent<TowerGrid>();
+        tower.transform.position = GlobalVars.upgradePosition;
         gridScript.placedTower = tower;
         gridScript.hasTower = true;
 
@@ -386,40 +366,40 @@ public class TowerGrid : MonoBehaviour
         gridScript.towerAttackRadius.SetActive(false);
 
         //Subtract gold from the player
-        PlayerHud.newGoldValue = PlayerHud.gold - upgradeGoldCost;
+        PlayerHud.newGoldValue = PlayerHud.gold - GlobalVars.upgradeGoldCost;
     }
 
     void DestroyTowerUpgradeCards()
     {
         //Destory all upgrade card game objects
-        if (upgradeCard1Obj != null)
+        if (GlobalVars.upgradeCard1Obj != null)
         {
-            Destroy(upgradeCard1Obj.gameObject);
+            Destroy(GlobalVars.upgradeCard1Obj.gameObject);
         }
 
-        if (upgradeCard2Obj != null)
+        if (GlobalVars.upgradeCard2Obj != null)
         {
-            Destroy(upgradeCard2Obj.gameObject);
+            Destroy(GlobalVars.upgradeCard2Obj.gameObject);
         }
 
-        if (upgradeCard3Obj != null)
+        if (GlobalVars.upgradeCard3Obj != null)
         {
-            Destroy(upgradeCard3Obj.gameObject);
+            Destroy(GlobalVars.upgradeCard3Obj.gameObject);
         }
 
-        if (upgradeCard4Obj != null)
+        if (GlobalVars.upgradeCard4Obj != null)
         {
-            Destroy(upgradeCard4Obj.gameObject);
+            Destroy(GlobalVars.upgradeCard4Obj.gameObject);
         }
 
-        if (upgradeCard5Obj != null)
+        if (GlobalVars.upgradeCard5Obj != null)
         {
-            Destroy(upgradeCard5Obj.gameObject);
+            Destroy(GlobalVars.upgradeCard5Obj.gameObject);
         }
 
-        if (upgradeCard6Obj != null)
+        if (GlobalVars.upgradeCard6Obj != null)
         {
-            Destroy(upgradeCard6Obj.gameObject);
+            Destroy(GlobalVars.upgradeCard6Obj.gameObject);
         }
     }
 

@@ -15073,6 +15073,8 @@ MonoBehaviour:
   mouseWorldPosition: {x: 0, y: 0, z: 0}
   currentTarget: {fileID: 0}
   camera: {fileID: 519420031}
+  startingDamage: 0
+  bonusDamage: 0
   damage: 0
   projectileSpeed: 0
   attackSpeed: 0

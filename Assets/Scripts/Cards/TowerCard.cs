@@ -79,7 +79,7 @@ public class TowerCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     {
         if (mouseHover && Input.GetMouseButtonDown(0) && !PauseMenuButtons.isPaused)
         {
-            TowerGrid.towerTypeSelected = cardName;
+            GlobalVars.towerTypeSelected = cardName;
             SetGoldCost();
         }
     }
@@ -103,34 +103,34 @@ public class TowerCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     public void SetGoldCost()
     {
-        switch (TowerGrid.towerTypeSelected)
+        switch (GlobalVars.towerTypeSelected)
         {
             case "Neutral":
-                TowerGrid.goldCost = 50;
+                GlobalVars.goldCost = 50;
                 break;
 
             case "Fire":
-                TowerGrid.goldCost = 125;
+                GlobalVars.goldCost = 125;
                 break;
 
             case "Ice":
-                TowerGrid.goldCost = 125;
+                GlobalVars.goldCost = 125;
                 break;
 
             case "Thunder":
-                TowerGrid.goldCost = 150;
+                GlobalVars.goldCost = 150;
                 break;
 
             case "Holy":
-                TowerGrid.goldCost = 150;
+                GlobalVars.goldCost = 150;
                 break;
 
             case "Swift":
-                TowerGrid.goldCost = 225;
+                GlobalVars.goldCost = 225;
                 break;
 
             case "Cosmic":
-                TowerGrid.goldCost = 300; 
+                GlobalVars.goldCost = 300; 
                 break;
         }
     }
