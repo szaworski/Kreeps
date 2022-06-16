@@ -105,13 +105,13 @@ public class PlayerHud : MonoBehaviour
 
     public void HideShowBonusStats()
     {
-        if (Input.GetKeyDown(KeyCode.Tab) && showBonusStats)
+        if (Input.GetKeyDown(KeyCode.Tab) && showBonusStats && !GlobalVars.isPaused)
         {
             bonusStats.SetActive(false);
             showBonusStats = false;
         }
 
-        else if (Input.GetKeyDown(KeyCode.Tab) && !showBonusStats)
+        else if (Input.GetKeyDown(KeyCode.Tab) && !showBonusStats && !GlobalVars.isPaused)
         {
             bonusStats.SetActive(true);
             showBonusStats = true;

@@ -482,16 +482,16 @@ public class TileSpawner : TileTypes
                 weaponCardList = tier1WeaponCards.ToList();
                 break;
             case 2:
-                weaponCardList = tier1WeaponCards.ToList();
+                weaponCardList = tier2WeaponCards.ToList();
                 break;
             case 3:
-                weaponCardList = tier1WeaponCards.ToList();
+                weaponCardList = tier3WeaponCards.ToList();
                 break;
             case 4:
-                weaponCardList = tier1WeaponCards.ToList();
+                weaponCardList = tier4WeaponCards.ToList();
                 break;
             case 5:
-                weaponCardList = tier1WeaponCards.ToList();
+                weaponCardList = tier5WeaponCards.ToList();
                 break;
         }
 
@@ -502,8 +502,19 @@ public class TileSpawner : TileTypes
             int index = rand.Next(weaponCardList.Count);
             string selectedCard = weaponCardList[index];
 
-            //Remove the selected card from the list so we dont repeat any cards
-            weaponCardList.RemoveAt(index);
+            if (selectedCard == GlobalVars.currentWeapon)
+            {
+                //Remove the already held weapon from the list
+                weaponCardList.RemoveAt(index);
+                //Fetch a random element from the card list (After removing the already held weapon from the list)
+                index = rand.Next(weaponCardList.Count);
+                selectedCard = weaponCardList[index];
+            }
+            else
+            {
+                //Remove the selected card from the list so we dont repeat any cards
+                weaponCardList.RemoveAt(index);
+            }
 
             //Set each selected card to its correlating slot
             switch (i)

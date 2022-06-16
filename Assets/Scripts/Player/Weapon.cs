@@ -10,7 +10,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] private Vector3 mouseScreenPosition;
     [SerializeField] private Vector3 mouseWorldPosition;
     private bool monsterIsInRadius;
-    private float attackCd;
+    public float attackCd;
     public bool GetMonsterIsInRadius
     {
         get { return monsterIsInRadius; }

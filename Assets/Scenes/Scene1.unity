@@ -13398,8 +13398,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponImageIndex: 0
-  currentWeapon: 
-  newWeapon: 
   cursorImage: {fileID: 2800000, guid: d6679c18a06bd524f8f4437ef4a8f875, type: 3}
   weaponImages:
   - {fileID: 2800000, guid: 6cfdf3f5b3453d9429743c185c84d83e, type: 3}
@@ -14446,7 +14444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 372268515874915941, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 372268515874915942, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
       propertyPath: m_LocalPosition.x

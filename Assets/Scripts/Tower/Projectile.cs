@@ -62,6 +62,15 @@ public class Projectile : MonoBehaviour
             {
                 //If the target is not null, The projectile is destroyed after the damage value is received by the monster (See Monster.cs OnTriggerEnter2D function)
                 DestroyProjectile();
+
+                if (isWeapon)
+                {
+                    transform.parent.GetComponent<Weapon>().attackCd = 0;
+                }
+                else
+                {
+                    transform.parent.GetComponent<Tower>().attackCd = 0;
+                }
             }
         }
 
@@ -76,6 +85,15 @@ public class Projectile : MonoBehaviour
             {
                 //If the target is not null, The projectile is destroyed after the damage value is received by the monster (See Monster.cs OnTriggerEnter2D function)
                 DestroyProjectile();
+
+                if (isWeapon)
+                {
+                    transform.parent.GetComponent<Weapon>().attackCd = 0;
+                }
+                else
+                {
+                    transform.parent.GetComponent<Tower>().attackCd = 0;
+                }
             }
         }
 
