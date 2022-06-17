@@ -9,17 +9,6 @@ public class Card : MonoBehaviour
     [SerializeField] private int upgradeCost;
     [SerializeField] private string upgradeType;
 
-    GameObject playerHud;
-    PlayerHud playerHudScript;
-    MouseCursor mouseCursorScript;
-
-    void Awake()
-    {
-        playerHud = GameObject.Find("PlayerHud");
-        playerHudScript = playerHud.GetComponent<PlayerHud>();
-        mouseCursorScript = playerHud.GetComponent<MouseCursor>();
-    }
-
     void Update()
     {
         //Check if the mouse is over any UI elements to disable other functionality underneath

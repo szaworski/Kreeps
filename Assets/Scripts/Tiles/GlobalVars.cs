@@ -82,4 +82,38 @@ public class GlobalVars : MonoBehaviour
 
     //Pause Menu vars
     public static bool isPaused;
+
+    void Awake()
+    {
+        currTier = "Tier1";
+        numOfTimesPlaced = 0;
+        equipmentLvl = 1;
+
+        //Reset location nums
+        numOfForests = 0;
+        numOfGraveyards = 0;
+        numOfRivers = 0;
+        numOfMountains = 0;
+        numOfSwamps = 0;
+
+        numOfDeserts = 0;
+        numOfThickets = 0;
+        numOfTundras = 0;
+        numOfCaverns = 0;
+        numOfSettlements = 0;
+        numOfSeashores = 0;
+
+        //Reset Bonus stats
+        bonusNormalDmg = 0;
+        bonusFireDmg = 0;
+        bonusIceDmg = 0;
+        bonusThunderDmg = 0;
+        bonusHolyDmg = 0;
+        bonusSwiftDmg = 0;
+        bonusCosmicDmg = 0;
+
+        //Reset monster vars
+        monsterCount = 0;
+        allMonstersAreSpawned = false;
+    }
 }

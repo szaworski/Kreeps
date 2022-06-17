@@ -38,36 +38,9 @@ public class TileSpawner : TileTypes
 
     void Awake()
     {
-        GlobalVars.currTier = "Tier1";
-        GlobalVars.numOfTimesPlaced = 0;
         curTiles = new string[6];
         validTiles = new bool[6];
         PlaceStartingTile();
-
-        //Reset location nums
-        GlobalVars.numOfForests = 0;
-        GlobalVars.numOfGraveyards = 0;
-        GlobalVars.numOfRivers = 0;
-        GlobalVars.numOfMountains = 0;
-        GlobalVars.numOfSwamps = 0;
-
-        GlobalVars.numOfDeserts = 0;
-        GlobalVars.numOfThickets = 0;
-        GlobalVars.numOfTundras = 0;
-        GlobalVars.numOfCaverns = 0;
-        GlobalVars.numOfSettlements = 0;
-        GlobalVars.numOfSeashores = 0;
-
-        //Reset Bonus stats
-        GlobalVars.bonusNormalDmg = 0;
-        GlobalVars.bonusFireDmg = 0;
-        GlobalVars.bonusIceDmg = 0;
-        GlobalVars.bonusThunderDmg = 0;
-        GlobalVars.bonusHolyDmg = 0;
-        GlobalVars.bonusSwiftDmg = 0;
-        GlobalVars.bonusCosmicDmg = 0;
-
-        GlobalVars.equipmentLvl = 1;
     }
 
     void Update()

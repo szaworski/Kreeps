@@ -9,16 +9,8 @@ public class MonsterManager : MonoBehaviour
     private string prependMonsterName;
     private List<string> monsterList;
 
-    GameObject playerHud;
-    PlayerHud playerHudScript;
-
     void Awake()
     {
-        playerHud = GameObject.Find("PlayerHud");
-        playerHudScript = playerHud.GetComponent<PlayerHud>();
-
-        GlobalVars.monsterCount = 0;
-        GlobalVars.allMonstersAreSpawned = false;
         monsterList = new List<string>();
     }
 
