@@ -53,27 +53,21 @@ public class TileSpawner : TileTypes
     public void PlaceStartingTile()
     {
         GlobalVars.tileName = "StartingTile";
-
         //Fetch the starting tile
         GameObject referenceStartTile = (GameObject)Instantiate(Resources.Load("Tiles/StartingTile"));
         GameObject TileHolder = GameObject.Find("TileHolder");
-
         //Place the starting tile
         GameObject tile = (GameObject)Instantiate(referenceStartTile, TileHolder.transform);
         tile.transform.SetParent(TileHolder.transform);
         tile.transform.position = new Vector2(0, 0);
-
         //increment numOfTimesPlaced
         GlobalVars.numOfTimesPlaced++;
-
         //Place a waypoint node on the center of the tile
         GameObject waypoint = (GameObject)Instantiate(Resources.Load("Tiles/WaypointNode"), TileHolder.transform);
         waypoint.transform.SetParent(tile.transform);
         waypoint.transform.position = new Vector2(tile.transform.position.x, tile.transform.position.y);
-
         //Destroy the temporary reference object
         Destroy(referenceStartTile);
-
         FindNewSpawnDirection();
         MoveSpawnPos();
     }
@@ -84,27 +78,21 @@ public class TileSpawner : TileTypes
         GetNewTile();
         GlobalVars.tileName = newTileName;
         Debug.Log("Tile Pathway: " + prependTileName + GlobalVars.tileName);
-
         //Find the tile in the resources folder
         GameObject referenceStartTile = (GameObject)Instantiate(Resources.Load(prependTileName + GlobalVars.tileName));
         GameObject TileHolder = GameObject.Find("TileHolder");
-
         //Place the new tile
         GameObject tile = (GameObject)Instantiate(referenceStartTile, TileHolder.transform);
         tile.transform.SetParent(TileHolder.transform);
         tile.transform.position = new Vector2(shiftAmtXpos, shiftAmtYpos);
-
         //increment numOfTimesPlaced
         GlobalVars.numOfTimesPlaced++;
-
         //Place a waypoint node on the center of the tile
         GameObject waypoint = (GameObject)Instantiate(Resources.Load("Tiles/WaypointNode"), TileHolder.transform);
         waypoint.transform.SetParent(tile.transform);
         waypoint.transform.position = new Vector2(tile.transform.position.x, tile.transform.position.y);
-
         //Destroy the temporary reference objects
         Destroy(referenceStartTile);
-
         //Move the Spawn position
         FindNewSpawnDirection();
         //Debug.Log("Spawn direction: " + spawnDirection);
@@ -123,115 +111,66 @@ public class TileSpawner : TileTypes
 
     public void MoveSpawnPos()
     {
-        if (GlobalVars.tileName == "StartingTile")
+        switch (spawnDirection)
         {
-            transform.position = new Vector2(shiftAmtXpos, shiftAmtYpos + 1);
-        }
-
-        else if (spawnDirection == "up")
-        {
-            transform.position = new Vector2(shiftAmtXpos, shiftAmtYpos + 1);
-        }
-
-        else if (spawnDirection == "down")
-        {
-            transform.position = new Vector2(shiftAmtXpos, shiftAmtYpos - 1);
-        }
-
-        else if (spawnDirection == "left")
-        {
-            transform.position = new Vector2(shiftAmtXpos - 1, shiftAmtYpos);
-        }
-
-        else if (spawnDirection == "right")
-        {
-            transform.position = new Vector2(shiftAmtXpos + 1, shiftAmtYpos);
+            case "up":
+                transform.position = new Vector2(shiftAmtXpos, shiftAmtYpos + 1);
+                break;
+            case "down":
+                transform.position = new Vector2(shiftAmtXpos, shiftAmtYpos - 1);
+                break;
+            case "left":
+                transform.position = new Vector2(shiftAmtXpos - 1, shiftAmtYpos);
+                break;
+            case "right":
+                transform.position = new Vector2(shiftAmtXpos + 1, shiftAmtYpos);
+                break;
         }
     }
 
     public void FindNewSpawnDirection()
     {
-        if (GlobalVars.tileName == "StartingTile")
+        switch (GlobalVars.tileName)
         {
-            spawnDirection = "up";
-        }
-
-        if (GlobalVars.tileName == curTiles[0])
-        {
-            if (!checkTopOverlap)
-            {
+            case "StartingTile":
                 spawnDirection = "up";
-            }
-
-            else if (!checkBottomOverlap)
-            {
-                spawnDirection = "down";
-            }
-        }
-
-        else if (GlobalVars.tileName == curTiles[1])
-        {
-            if (!checkRightOverlap)
-            {
-                spawnDirection = "right";
-            }
-
-            else if (!checkLeftOverlap)
-            {
-                spawnDirection = "left";
-            }
-        }
-
-        else if (GlobalVars.tileName == curTiles[2])
-        {
-            if (!checkRightOverlap)
-            {
-                spawnDirection = "right";
-            }
-
-            else if (!checkBottomOverlap)
-            {
-                spawnDirection = "down";
-            }
-        }
-
-        else if (GlobalVars.tileName == curTiles[3])
-        {
-            if (!checkLeftOverlap)
-            {
-                spawnDirection = "left";
-            }
-
-            else if (!checkBottomOverlap)
-            {
-                spawnDirection = "down";
-            }
-        }
-
-        else if (GlobalVars.tileName == curTiles[4])
-        {
-            if (!checkLeftOverlap)
-            {
-                spawnDirection = "left";
-            }
-
-            else if (!checkTopOverlap)
-            {
-                spawnDirection = "up";
-            }
-        }
-
-        else if (GlobalVars.tileName == curTiles[5])
-        {
-            if (!checkRightOverlap)
-            {
-                spawnDirection = "right";
-            }
-
-            else if (!checkTopOverlap)
-            {
-                spawnDirection = "up";
-            }
+                break;
+            case string value when value == curTiles[0]:
+                if (!checkTopOverlap)
+                    spawnDirection = "up";
+                else if (!checkBottomOverlap)
+                    spawnDirection = "down";
+                break;
+            case string value when value == curTiles[1]:
+                if (!checkRightOverlap)
+                    spawnDirection = "right";
+                else if (!checkLeftOverlap)
+                    spawnDirection = "left";
+                break;
+            case string value when value == curTiles[2]:
+                if (!checkRightOverlap)
+                    spawnDirection = "right";
+                else if (!checkBottomOverlap)
+                    spawnDirection = "down";
+                break;
+            case string value when value == curTiles[3]:
+                if (!checkLeftOverlap)
+                    spawnDirection = "left";
+                else if (!checkBottomOverlap)
+                    spawnDirection = "down";
+                break;
+            case string value when value == curTiles[4]:
+                if (!checkLeftOverlap)
+                    spawnDirection = "left";
+                else if (!checkTopOverlap)
+                    spawnDirection = "up";
+                break;
+            case string value when value == curTiles[5]:
+                if (!checkRightOverlap)
+                    spawnDirection = "right";
+                else if (!checkTopOverlap)
+                    spawnDirection = "up";
+                break;
         }
     }
 
@@ -333,19 +272,15 @@ public class TileSpawner : TileTypes
             case "Forest":
                 currentCardList = forestMonsterCards.ToList();
                 break;
-
             case "Graveyard":
                 currentCardList = graveyardMonsterCards.ToList();
                 break;
-
             case "River":
                 currentCardList = riverMonsterCards.ToList();
                 break;
-
             case "Mountain":
                 currentCardList = mountainMonsterCards.ToList();
                 break;
-
             case "Swamp":
                 currentCardList = swampMonsterCards.ToList();
                 break;
@@ -354,23 +289,18 @@ public class TileSpawner : TileTypes
             case "Desert":
                 currentCardList = desertMonsterCards.ToList();
                 break;
-
             case "Thicket":
                 currentCardList = thicketMonsterCards.ToList();
                 break;
-
             case "Tundra":
                 currentCardList = tundraMonsterCards.ToList();
                 break;
-
             case "Cavern":
                 currentCardList = cavernMonsterCards.ToList();
                 break;
-
             case "Settlement":
                 currentCardList = settlementMonsterCards.ToList();
                 break;
-
             case "Seashore":
                 currentCardList = seashoreMonsterCards.ToList();
                 break;
@@ -587,22 +517,18 @@ public class TileSpawner : TileTypes
                 curTiles = forestTiles;
                 GlobalVars.numOfForests += 1;
                 break;
-
             case "Graveyard":
                 curTiles = graveyardTiles;
                 GlobalVars.numOfGraveyards += 1;
                 break;
-
             case "River":
                 curTiles = riverTiles;
                 GlobalVars.numOfRivers += 1;
                 break;
-
             case "Mountain":
                 curTiles = mountainTiles;
                 GlobalVars.numOfMountains += 1;
                 break;
-
             case "Swamp":
                 curTiles = swampTiles;
                 GlobalVars.numOfSwamps += 1;
@@ -613,27 +539,22 @@ public class TileSpawner : TileTypes
                 curTiles = desertTiles;
                 GlobalVars.numOfDeserts += 1;
                 break;
-
             case "Thicket":
                 curTiles = thicketTiles;
                 GlobalVars.numOfThickets += 1;
                 break;
-
             case "Tundra":
                 curTiles = tundraTiles;
                 GlobalVars.numOfTundras += 1;
                 break;
-
             case "Cavern":
                 curTiles = cavernTiles;
                 GlobalVars.numOfCaverns += 1;
                 break;
-
             case "Settlement":
                 curTiles = settlementTiles;
                 GlobalVars.numOfSettlements += 1;
                 break;
-
             case "Seashore":
                 curTiles = seashoreTiles;
                 GlobalVars.numOfSeashores += 1;
@@ -659,102 +580,86 @@ public class TileSpawner : TileTypes
             validTiles[i] = false;
         }
 
-        if (GlobalVars.tileName == "StartingTile")
+        switch (GlobalVars.tileName)
         {
-            validTiles[0] = true;
-            validTiles[2] = true;
-            validTiles[3] = true;
-            shiftAmtYpos += 1;
-        }
-
-        else if (GlobalVars.tileName == curTiles[0])
-        {
-            if (checkBottomOverlap && spawnDirection == "up")
-            {
-                CheckTopOverlaps();
+            case "StartingTile":
+                validTiles[0] = true;
+                validTiles[2] = true;
+                validTiles[3] = true;
                 shiftAmtYpos += 1;
-            }
-
-            else if (checkTopOverlap && spawnDirection == "down")
-            {
-                CheckBottomOverlaps();
-                shiftAmtYpos += -1;
-            }
-        }
-
-        else if (GlobalVars.tileName == curTiles[1])
-        {
-            if (checkLeftOverlap && spawnDirection == "right")
-            {
-                CheckRightOverlaps();
-                shiftAmtXpos += 1;
-            }
-
-            else if (checkRightOverlap && spawnDirection == "left")
-            {
-                CheckLeftOverlaps();
-                shiftAmtXpos += -1;
-            }
-        }
-
-        else if (GlobalVars.tileName == curTiles[2])
-        {
-            if (checkLeftOverlap && spawnDirection == "right")
-            {
-                CheckRightOverlaps();
-                shiftAmtXpos += 1;
-            }
-
-            else if (checkTopOverlap && spawnDirection == "down")
-            {
-                CheckBottomOverlaps();
-                shiftAmtYpos += -1;
-            }
-        }
-
-        else if (GlobalVars.tileName == curTiles[3])
-        {
-            if (checkRightOverlap && spawnDirection == "left")
-            {
-                CheckLeftOverlaps();
-                shiftAmtXpos += -1;
-            }
-
-            else if (checkTopOverlap && spawnDirection == "down")
-            {
-                CheckBottomOverlaps();
-                shiftAmtYpos += -1;
-            }
-        }
-
-        else if (GlobalVars.tileName == curTiles[4])
-        {
-            if (checkRightOverlap && spawnDirection == "left")
-            {
-                CheckLeftOverlaps();
-                shiftAmtXpos += -1;
-            }
-
-            else if (checkBottomOverlap && spawnDirection == "up")
-            {
-                CheckTopOverlaps();
-                shiftAmtYpos += 1;
-            }
-        }
-
-        else if (GlobalVars.tileName == curTiles[5])
-        {
-            if (checkBottomOverlap && spawnDirection == "up")
-            {
-                CheckTopOverlaps();
-                shiftAmtYpos += 1;
-            }
-
-            else if (checkLeftOverlap && spawnDirection == "right")
-            {
-                CheckRightOverlaps();
-                shiftAmtXpos += 1;
-            }
+                break;
+            case string value when value == curTiles[0]:
+                if (checkBottomOverlap && spawnDirection == "up")
+                {
+                    CheckTopOverlaps();
+                    shiftAmtYpos += 1;
+                }
+                else if (checkTopOverlap && spawnDirection == "down")
+                {
+                    CheckBottomOverlaps();
+                    shiftAmtYpos += -1;
+                }
+                break;
+            case string value when value == curTiles[1]:
+                if (checkLeftOverlap && spawnDirection == "right")
+                {
+                    CheckRightOverlaps();
+                    shiftAmtXpos += 1;
+                }
+                else if (checkRightOverlap && spawnDirection == "left")
+                {
+                    CheckLeftOverlaps();
+                    shiftAmtXpos += -1;
+                }
+                break;
+            case string value when value == curTiles[2]:
+                if (checkLeftOverlap && spawnDirection == "right")
+                {
+                    CheckRightOverlaps();
+                    shiftAmtXpos += 1;
+                }
+                else if (checkTopOverlap && spawnDirection == "down")
+                {
+                    CheckBottomOverlaps();
+                    shiftAmtYpos += -1;
+                }
+                break;
+            case string value when value == curTiles[3]:
+                if (checkRightOverlap && spawnDirection == "left")
+                {
+                    CheckLeftOverlaps();
+                    shiftAmtXpos += -1;
+                }
+                else if (checkTopOverlap && spawnDirection == "down")
+                {
+                    CheckBottomOverlaps();
+                    shiftAmtYpos += -1;
+                }
+                break;
+            case string value when value == curTiles[4]:
+                if (checkRightOverlap && spawnDirection == "left")
+                {
+                    CheckLeftOverlaps();
+                    shiftAmtXpos += -1;
+                }
+                else if (checkBottomOverlap && spawnDirection == "up")
+                {
+                    CheckTopOverlaps();
+                    shiftAmtYpos += 1;
+                }
+                break;
+            case string value when value == curTiles[5]:
+                if (checkBottomOverlap && spawnDirection == "up")
+                {
+                    CheckTopOverlaps();
+                    shiftAmtYpos += 1;
+                }
+                else if (checkLeftOverlap && spawnDirection == "right")
+                {
+                    CheckRightOverlaps();
+                    shiftAmtXpos += 1;
+                }
+                break;
         }
     }
 
