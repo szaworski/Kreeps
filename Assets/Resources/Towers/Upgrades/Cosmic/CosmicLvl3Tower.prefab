@@ -607,6 +607,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
+  attackCd: 0
   damage: 55
   projectileSpeed: 0
   attackSpeed: 0.8
@@ -977,7 +978,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cosmic
+  m_text: 'Cosmic Lvl 3
 
 
 '

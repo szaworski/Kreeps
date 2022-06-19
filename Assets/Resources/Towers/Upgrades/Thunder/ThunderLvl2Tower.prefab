@@ -98,7 +98,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Thunder
+  m_text: 'Thunder Lvl 2
 
 
 '
@@ -737,6 +737,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
+  attackCd: 0
   damage: 45
   projectileSpeed: 1
   attackSpeed: 1.5

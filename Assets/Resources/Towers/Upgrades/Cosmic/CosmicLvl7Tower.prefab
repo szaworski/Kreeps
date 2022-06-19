@@ -356,6 +356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
+  attackCd: 0
   damage: 200
   projectileSpeed: 1
   attackSpeed: 3
@@ -808,7 +809,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cosmic
+  m_text: 'Observatory
 
 
 '

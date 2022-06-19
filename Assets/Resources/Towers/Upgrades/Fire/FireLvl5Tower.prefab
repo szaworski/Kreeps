@@ -654,7 +654,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fire
+  m_text: 'Fire Spitter Lvl 2
 
 
 '
@@ -1166,6 +1166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
+  attackCd: 0
   damage: 30
   projectileSpeed: 4
   attackSpeed: 0.6
