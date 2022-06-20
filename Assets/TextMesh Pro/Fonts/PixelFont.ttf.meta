@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6952d88c587152c4baaedb8c3c2cce9c
+guid: ba95c600222900849a6186cef8499787
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -11,7 +11,7 @@ TrueTypeFontImporter:
   fontNames:
   - Mystery Font
   fallbackFontReferences:
-  - {fileID: 12800000, guid: 39e85ae3392391942a1b7265d509daeb, type: 3}
+  - {fileID: 12800000, guid: 6952d88c587152c4baaedb8c3c2cce9c, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
