@@ -189,42 +189,36 @@ public class Weapon : MonoBehaviour
                     bonusDamage = GlobalVars.bonusNormalDmg;
                 }
                 break;
-
             case var _ when damageType.Contains("Fire"):
                 if (bonusDamage < GlobalVars.bonusFireDmg)
                 {
                     bonusDamage = GlobalVars.bonusFireDmg;
                 }
                 break;
-
             case var _ when damageType.Contains("Ice"):
                 if (bonusDamage < GlobalVars.bonusIceDmg)
                 {
                     bonusDamage = GlobalVars.bonusIceDmg;
                 }
                 break;
-
             case var _ when damageType.Contains("Thunder"):
                 if (bonusDamage < GlobalVars.bonusThunderDmg)
                 {
                     bonusDamage = GlobalVars.bonusThunderDmg;
                 }
                 break;
-
             case var _ when damageType.Contains("Holy"):
                 if (bonusDamage < GlobalVars.bonusHolyDmg)
                 {
                     bonusDamage = GlobalVars.bonusHolyDmg;
                 }
                 break;
-
             case var _ when damageType.Contains("Swift"):
                 if (bonusDamage < GlobalVars.bonusSwiftDmg)
                 {
                     bonusDamage = GlobalVars.bonusSwiftDmg;
                 }
                 break;
-
             case var _ when damageType.Contains("Cosmic"):
                 if (bonusDamage < GlobalVars.bonusCosmicDmg)
                 {

@@ -1,5 +1,4 @@
 
-
 Possible game names: Kreeps
 
 Tower types:
@@ -29,7 +28,6 @@ Weak against: Demon
 Cosmic tower (Purple): High damage, low rate of fire, high range.
 Bonus against: Demon
 Weak against: Pest
-
 
 
 Monster types (With Characteristics) :
@@ -66,11 +64,17 @@ Negative effect ideas:
 5.
 
 
+Weapon ideas:
+
+Spawn shop cards every 3 waves ( if (numOfTimesPlaced % 3 == 0))
+
+
+
 
 
 Tier 1 tiles:
 
-Forest: Adds +5 move speed to all monsters for each Forest tile placed
+Forrest: Adds +5 move speed to all monsters for each Forrest tile placed
 Monsters: Wolf (Beast), Goblin (Humanoid), Bandit (Humanoid), Owl (Pest)
 
 Graveyard: Adds +1 HP regen per second to all monsters for each Graveyard tile placed
@@ -102,7 +106,7 @@ Thicket: Adds +3% evasion and +10 max health per Thicket tile
 Monsters: Minotaur(Brute), Panther (Beast), Giant Spider(Pest), Wild boar (Beast)
 
 Tundra: Adds +1 armor and +10 max health per Tundra tile
-Monsters: Polar bear (Brute), Arctic Wolf (Beast), Penguin (Pest), Lich (Undead)
+Monsters: Polar Bear (Brute), Arctic Wolf (Beast), Penguin (Pest), Lich (Undead)
 
 Cavern: Adds +2 armor and +2 Hp regen per Cavern tile
 Monsters: Ogre (Brute), Miner (Humanoid), Skeleton Warrior (Undead), Wraith (Undead)
@@ -123,7 +127,95 @@ Demon: 0
 
 
 
-Tier 3 tiles:
+Tier 3 tiles: 
+
+Sacred Plain: 
+Monsters: Lion
+
+Wasteland:
+Monsters: 
+
+Marsh:
+Monsters: 
+
+Crypt:
+Monsters: 
+
+River Crossing:
+Monsters:
+
+Sewer System:
+Monsters: 
+
+
+Humanoid: 0 
+Beast: 0
+Undead: 0
+Brute: 0
+Pest: 0
+Demon: 0
+
+
+Tier 4 tiles: 
+
+Volcano: 
+Monsters: 
+
+Underworld:
+Monsters: 
+
+Sunken Ruins:
+Monsters: 
+
+Necropolis:
+Monsters: 
+
+Wasteland:
+Monsters: 
+
+Wasteland:
+Monsters: 
+
+
+Humanoid: 0 
+Beast: 0
+Undead: 0
+Brute: 0
+Pest: 0
+Demon: 0
+
+
+Tier 5 tiles: 
+
+Abyss: 
+Monsters: 
+
+Wasteland:
+Monsters: 
+
+Wasteland:
+Monsters: 
+
+Wasteland:
+Monsters: 
+
+Wasteland:
+Monsters: 
+
+Wasteland:
+Monsters: 
+
+
+Humanoid: 0 
+Beast: 0
+Undead: 0
+Brute: 0
+Pest: 0
+Demon: 0
+
+
+
+
 
 
 

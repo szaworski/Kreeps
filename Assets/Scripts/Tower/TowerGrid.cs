@@ -112,6 +112,7 @@ public class TowerGrid : MonoBehaviour
                     }
                 }
 
+                //Sell the tower
                 if (Input.GetKeyDown(KeyCode.Delete) && !GlobalVars.isPaused)
                 {
                     DestroyTower(placedTower);

@@ -89,7 +89,7 @@ public class GlobalVars : MonoBehaviour
         numOfTimesPlaced = 0;
         equipmentLvl = 1;
 
-        //Reset location nums
+        //Reset location counts
         numOfForests = 0;
         numOfGraveyards = 0;
         numOfRivers = 0;
