@@ -4,20 +4,8 @@ using UnityEngine;
 
 public class GlobalVars : MonoBehaviour
 {
-    //Tier 1 Tiles counts
-    public static int numOfForests;
-    public static int numOfGraveyards;
-    public static int numOfRivers;
-    public static int numOfMountains;
-    public static int numOfSwamps;
-
-    //Tier 2 Tiles counts
-    public static int numOfDeserts;
-    public static int numOfThickets;
-    public static int numOfTundras;
-    public static int numOfCaverns;
-    public static int numOfSettlements;
-    public static int numOfSeashores;
+    public static Dictionary<string, int> tileCounters = new Dictionary<string, int>();
+    public static Dictionary<string, int> bonusStats = new Dictionary<string, int>();
 
     //Vars used for generating card choices
     public static string tileName;
@@ -27,17 +15,6 @@ public class GlobalVars : MonoBehaviour
     public static string tileCardSelected;
     public static string monsterCardSelected;
     public static string currTier;
-    public static int numOfTimesPlaced;
-
-    //Power up vars
-    public static int bonusNormalDmg;
-    public static int bonusFireDmg;
-    public static int bonusIceDmg;
-    public static int bonusThunderDmg;
-    public static int bonusHolyDmg;
-    public static int bonusSwiftDmg;
-    public static int bonusCosmicDmg;
-    public static int equipmentLvl;
 
     //Tower grid vars
     public static int goldCost;
@@ -85,34 +62,35 @@ public class GlobalVars : MonoBehaviour
 
     void Awake()
     {
+        //Add starting location counts (Reset location counts)
+        tileCounters.Clear();
+        tileCounters.Add("numOfTimesPlaced", 0);
+
+        tileCounters.Add("Forest", 0);
+        tileCounters.Add("Graveyard", 0);
+        tileCounters.Add("River", 0);
+        tileCounters.Add("Mountain", 0);
+        tileCounters.Add("Swamp", 0);
+
+        tileCounters.Add("Desert", 0);
+        tileCounters.Add("Thicket", 0);
+        tileCounters.Add("Tundra", 0);
+        tileCounters.Add("Cavern", 0);
+        tileCounters.Add("Settlement", 0);
+        tileCounters.Add("Seashore", 0);
+
+        //Add starting bonus stats
+        bonusStats.Clear();
+        bonusStats.Add("Neutral", 0);
+        bonusStats.Add("Fire", 0);
+        bonusStats.Add("Ice", 0);
+        bonusStats.Add("Thunder", 0);
+        bonusStats.Add("Holy", 0);
+        bonusStats.Add("Swift", 0);
+        bonusStats.Add("Cosmic", 0);
+        bonusStats.Add("EquipmentLvl", 1);
+
         currTier = "Tier1";
-        numOfTimesPlaced = 0;
-        equipmentLvl = 1;
-
-        //Reset location counts
-        numOfForests = 0;
-        numOfGraveyards = 0;
-        numOfRivers = 0;
-        numOfMountains = 0;
-        numOfSwamps = 0;
-
-        numOfDeserts = 0;
-        numOfThickets = 0;
-        numOfTundras = 0;
-        numOfCaverns = 0;
-        numOfSettlements = 0;
-        numOfSeashores = 0;
-
-        //Reset Bonus stats
-        bonusNormalDmg = 0;
-        bonusFireDmg = 0;
-        bonusIceDmg = 0;
-        bonusThunderDmg = 0;
-        bonusHolyDmg = 0;
-        bonusSwiftDmg = 0;
-        bonusCosmicDmg = 0;
-
-        //Reset monster vars
         monsterCount = 0;
         allMonstersAreSpawned = false;
     }

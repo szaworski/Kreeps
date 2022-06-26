@@ -53,12 +53,12 @@ public class MonsterManager : MonoBehaviour
     public void AddToMonsterList()
     {
         //After each tile is placed/Monster is selected, add the new monster to the list
-        if (GlobalVars.monsterCount < GlobalVars.numOfTimesPlaced && GlobalVars.triggerMonsterCardDestruction || GlobalVars.monsterCount < GlobalVars.numOfTimesPlaced && GlobalVars.numOfTimesPlaced <= 1)
+        if (GlobalVars.monsterCount < GlobalVars.tileCounters["numOfTimesPlaced"] && GlobalVars.triggerMonsterCardDestruction || GlobalVars.monsterCount < GlobalVars.tileCounters["numOfTimesPlaced"] && GlobalVars.tileCounters["numOfTimesPlaced"] <= 1)
         {
             //Prepend the proper file path for the monster
             PrependMonsterPath();
 
-            if (GlobalVars.numOfTimesPlaced <= 1)
+            if (GlobalVars.tileCounters["numOfTimesPlaced"] <= 1)
             {
                 //Get a random starting monster from the 3 provided
                 var rand = new System.Random();

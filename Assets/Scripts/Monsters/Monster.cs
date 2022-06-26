@@ -43,7 +43,7 @@ public class Monster : MonoBehaviour
         lastPos = transform.position;
         isFacingLeft = true;
         waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
-        currentWaypoint = GlobalVars.numOfTimesPlaced;
+        currentWaypoint = GlobalVars.tileCounters["numOfTimesPlaced"];
         //Apply any bonus values to the monster
         ApplySpawnBonuses();
         //Set the health values to be shown
@@ -353,36 +353,36 @@ public class Monster : MonoBehaviour
     void ApplySpawnBonuses()
     {
         //Apply any Tier 1 bonuses
-        health += 6 * GlobalVars.numOfRivers;
-        health += 2 * GlobalVars.numOfMountains;
-        health += 2 * GlobalVars.numOfGraveyards;
-        armor += 1 * GlobalVars.numOfMountains;
-        moveSpeed += 0.04f * GlobalVars.numOfForests;
-        hpRegen += 1 * GlobalVars.numOfGraveyards;
-        evasionChance += 0.02f * GlobalVars.numOfSwamps;
+        health += 6 * GlobalVars.tileCounters["River"];
+        health += 2 * GlobalVars.tileCounters["Mountain"];
+        health += 2 * GlobalVars.tileCounters["Graveyard"];
+        armor += 1 * GlobalVars.tileCounters["Mountain"];
+        moveSpeed += 0.04f * GlobalVars.tileCounters["Forest"];
+        hpRegen += 1 * GlobalVars.tileCounters["Graveyard"];
+        evasionChance += 0.02f * GlobalVars.tileCounters["Swamp"];
 
         //Apply any Tier 2 bonuses
-        health += 10 * GlobalVars.numOfSeashores;
-        health += 7 * GlobalVars.numOfThickets;
-        health += 5 * GlobalVars.numOfSettlements;
-        health += 4 * GlobalVars.numOfDeserts;
-        health += 3 * GlobalVars.numOfTundras;
+        health += 10 * GlobalVars.tileCounters["Seashore"];
+        health += 7 * GlobalVars.tileCounters["Thicket"];
+        health += 5 * GlobalVars.tileCounters["Settlement"];
+        health += 4 * GlobalVars.tileCounters["Desert"];
+        health += 3 * GlobalVars.tileCounters["Tundra"];
 
-        armor += 1 * GlobalVars.numOfSeashores;
-        armor += 1 * GlobalVars.numOfTundras;
-        armor += 2 * GlobalVars.numOfCaverns;
+        armor += 1 * GlobalVars.tileCounters["Seashore"];
+        armor += 1 * GlobalVars.tileCounters["Tundra"];
+        armor += 2 * GlobalVars.tileCounters["Cavern"];
 
-        moveSpeed += 0.02f * GlobalVars.numOfTundras;
-        moveSpeed += 0.03f * GlobalVars.numOfDeserts;
-        moveSpeed += 0.05f * GlobalVars.numOfSettlements;
+        moveSpeed += 0.02f * GlobalVars.tileCounters["Tundra"];
+        moveSpeed += 0.03f * GlobalVars.tileCounters["Desert"];
+        moveSpeed += 0.05f * GlobalVars.tileCounters["Settlement"];
 
-        hpRegen += 1 * GlobalVars.numOfThickets;
-        hpRegen += 1 * GlobalVars.numOfTundras;
-        hpRegen += 2 * GlobalVars.numOfCaverns;
+        hpRegen += 1 * GlobalVars.tileCounters["Thicket"];
+        hpRegen += 1 * GlobalVars.tileCounters["Tundra"];
+        hpRegen += 2 * GlobalVars.tileCounters["Cavern"];
 
-        evasionChance += 0.01f * GlobalVars.numOfCaverns;
-        evasionChance += 0.01f * GlobalVars.numOfDeserts;
-        evasionChance += 0.03f * GlobalVars.numOfThickets;
+        evasionChance += 0.01f * GlobalVars.tileCounters["Cavern"];
+        evasionChance += 0.01f * GlobalVars.tileCounters["Desert"];
+        evasionChance += 0.03f * GlobalVars.tileCounters["Thicket"];
 
         //Apply any Tier 3 bonuses
 

@@ -72,54 +72,17 @@ public class Card : MonoBehaviour
             {
                 GlobalVars.newGoldValue = GlobalVars.gold - upgradeCost;
                 GlobalVars.IsHoveringOverUiCard = false;
-
-                switch (cardName)
-                {
-                    case var _ when cardName.Contains("Neutral"):
-                        GlobalVars.bonusNormalDmg += 1;
-                        GlobalVars.triggerShopCardDestruction = true;
-                        break;
-
-                    case var _ when cardName.Contains("Fire"):
-                        GlobalVars.bonusFireDmg += 1;
-                        GlobalVars.triggerShopCardDestruction = true;
-                        break;
-
-                    case var _ when cardName.Contains("Ice"):
-                        GlobalVars.bonusIceDmg += 1;
-                        GlobalVars.triggerShopCardDestruction = true;
-                        break;
-
-                    case var _ when cardName.Contains("Thunder"):
-                        GlobalVars.bonusThunderDmg += 2;
-                        GlobalVars.triggerShopCardDestruction = true;
-                        break;
-
-                    case var _ when cardName.Contains("Holy"):
-                        GlobalVars.bonusHolyDmg += 2;
-                        GlobalVars.triggerShopCardDestruction = true;
-                        break;
-
-                    case var _ when cardName.Contains("Swift"):
-                        GlobalVars.bonusSwiftDmg += 2;
-                        GlobalVars.triggerShopCardDestruction = true;
-                        break;
-
-                    case var _ when cardName.Contains("Cosmic"):
-                        GlobalVars.bonusCosmicDmg += 3;
-                        GlobalVars.triggerShopCardDestruction = true;
-                        break;
-                }
+                GlobalVars.bonusStats[cardName]++;
+                GlobalVars.triggerShopCardDestruction = true;
             }
 
             if (upgradeType == "Weapon")
             {
                 GlobalVars.newWeapon = cardName;
-
                 GlobalVars.newGoldValue = GlobalVars.gold - upgradeCost;
                 GlobalVars.triggerShopCardDestruction = true;
                 GlobalVars.IsHoveringOverUiCard = false;
-                GlobalVars.equipmentLvl++;
+                GlobalVars.bonusStats["EquipmentLvl"]++;
             }
         }
 

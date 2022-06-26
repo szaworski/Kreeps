@@ -61,7 +61,7 @@ public class TileSpawner : TileTypes
         tile.transform.SetParent(TileHolder.transform);
         tile.transform.position = new Vector2(0, 0);
         //increment numOfTimesPlaced
-        GlobalVars.numOfTimesPlaced++;
+        GlobalVars.tileCounters["numOfTimesPlaced"]++;
         //Place a waypoint node on the center of the tile
         GameObject waypoint = (GameObject)Instantiate(Resources.Load("Tiles/WaypointNode"), TileHolder.transform);
         waypoint.transform.SetParent(tile.transform);
@@ -86,7 +86,7 @@ public class TileSpawner : TileTypes
         tile.transform.SetParent(TileHolder.transform);
         tile.transform.position = new Vector2(shiftAmtXpos, shiftAmtYpos);
         //increment numOfTimesPlaced
-        GlobalVars.numOfTimesPlaced++;
+        GlobalVars.tileCounters["numOfTimesPlaced"]++;
         //Place a waypoint node on the center of the tile
         GameObject waypoint = (GameObject)Instantiate(Resources.Load("Tiles/WaypointNode"), TileHolder.transform);
         waypoint.transform.SetParent(tile.transform);
@@ -188,13 +188,13 @@ public class TileSpawner : TileTypes
             string card3 = null;
 
             //Get the correct Tile card list based on the number of waves finished. (Copy the list from TileCards.cs)
-            if (GlobalVars.numOfTimesPlaced < 10)
+            if (GlobalVars.tileCounters["numOfTimesPlaced"] < 10)
             {
                 currentCardList = tier1TileCards.ToList();
                 //Debug.Log("Card List: " + currentCardList[0] + " " + currentCardList[1] + " " + currentCardList[2] + " " + currentCardList[3] + " " + currentCardList[4]);
             }
 
-            else if (GlobalVars.numOfTimesPlaced >= 10 && GlobalVars.numOfTimesPlaced < 20)
+            else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 10 && GlobalVars.tileCounters["numOfTimesPlaced"] < 20)
             {
                 GlobalVars.currTier = "Tier2";
                 currentCardList = tier2TileCards.ToList();
@@ -356,7 +356,7 @@ public class TileSpawner : TileTypes
             monsterSelectText.enabled = false;
             Debug.Log("Monster Cards Destoryed");
 
-            if (GlobalVars.numOfTimesPlaced % 3 == 0)
+            if (GlobalVars.tileCounters["numOfTimesPlaced"] % 3 == 0)
             {
                 GetAndShowShopCards();
             }
@@ -379,7 +379,7 @@ public class TileSpawner : TileTypes
         string card4 = null;
         string card5 = "SkipCard";
 
-        switch (GlobalVars.equipmentLvl)
+        switch (GlobalVars.bonusStats["EquipmentLvl"])
         {
             case 1:
                 weaponCardList = tier1WeaponCards.ToList();
@@ -464,8 +464,8 @@ public class TileSpawner : TileTypes
         GameObject cardSlot4 = GameObject.Find("ShopCardSlot4");
         GameObject cardSlot5 = GameObject.Find("ShopCardSlot5");
 
-        card1Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + "Tier" + GlobalVars.equipmentLvl + "/" + card1), cardSlot1.transform);
-        card2Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + "Tier" + GlobalVars.equipmentLvl + "/" + card2), cardSlot2.transform);
+        card1Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + "Tier" + GlobalVars.bonusStats["EquipmentLvl"] + "/" + card1), cardSlot1.transform);
+        card2Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + "Tier" + GlobalVars.bonusStats["EquipmentLvl"] + "/" + card2), cardSlot2.transform);
         card3Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card3), cardSlot3.transform);
         card4Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card4), cardSlot4.transform);
         card5Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card5), cardSlot5.transform);
@@ -508,6 +508,7 @@ public class TileSpawner : TileTypes
     {
         validTilesList = new List<string>();
         prependTileName = "Tiles/" + GlobalVars.currTier + "/" + GlobalVars.tileCardSelected + "Tiles/";
+        GlobalVars.tileCounters[GlobalVars.tileCardSelected]++;
 
         //Check for which tile card was selected and set the "curTiles" array accordingly 
         switch (GlobalVars.tileCardSelected)
@@ -515,49 +516,38 @@ public class TileSpawner : TileTypes
             //Tier 1
             case "Forest":
                 curTiles = forestTiles;
-                GlobalVars.numOfForests += 1;
                 break;
             case "Graveyard":
                 curTiles = graveyardTiles;
-                GlobalVars.numOfGraveyards += 1;
                 break;
             case "River":
                 curTiles = riverTiles;
-                GlobalVars.numOfRivers += 1;
                 break;
             case "Mountain":
                 curTiles = mountainTiles;
-                GlobalVars.numOfMountains += 1;
                 break;
             case "Swamp":
                 curTiles = swampTiles;
-                GlobalVars.numOfSwamps += 1;
                 break;
 
             //Tier 2
             case "Desert":
                 curTiles = desertTiles;
-                GlobalVars.numOfDeserts += 1;
                 break;
             case "Thicket":
                 curTiles = thicketTiles;
-                GlobalVars.numOfThickets += 1;
                 break;
             case "Tundra":
                 curTiles = tundraTiles;
-                GlobalVars.numOfTundras += 1;
                 break;
             case "Cavern":
                 curTiles = cavernTiles;
-                GlobalVars.numOfCaverns += 1;
                 break;
             case "Settlement":
                 curTiles = settlementTiles;
-                GlobalVars.numOfSettlements += 1;
                 break;
             case "Seashore":
                 curTiles = seashoreTiles;
-                GlobalVars.numOfSeashores += 1;
                 break;
 
                 //Tier 3
