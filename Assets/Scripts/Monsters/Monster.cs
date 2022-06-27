@@ -339,6 +339,7 @@ public class Monster : MonoBehaviour
                 hpRegenCd = 1f + Time.time;
                 health += hpRegen;
                 healthText.SetText(health.ToString());
+                StartCoroutine(SpawnHpRegenPopup(hpRegen, 0.25f));
             }
 
             else if (health + hpRegen >= maxHealth)
@@ -353,36 +354,41 @@ public class Monster : MonoBehaviour
     void ApplySpawnBonuses()
     {
         //Apply any Tier 1 bonuses
-        health += 6 * GlobalVars.tileCounters["River"];
-        health += 2 * GlobalVars.tileCounters["Mountain"];
-        health += 2 * GlobalVars.tileCounters["Graveyard"];
-        armor += 1 * GlobalVars.tileCounters["Mountain"];
         moveSpeed += 0.04f * GlobalVars.tileCounters["Forest"];
-        hpRegen += 1 * GlobalVars.tileCounters["Graveyard"];
+
+        health += 6 * GlobalVars.tileCounters["River"];
+
         evasionChance += 0.02f * GlobalVars.tileCounters["Swamp"];
+
+        health += 2 * GlobalVars.tileCounters["Mountain"];
+        armor += 1 * GlobalVars.tileCounters["Mountain"];
+
+        health += 2 * GlobalVars.tileCounters["Graveyard"];
+        hpRegen += 1 * GlobalVars.tileCounters["Graveyard"];
 
         //Apply any Tier 2 bonuses
         health += 10 * GlobalVars.tileCounters["Seashore"];
-        health += 7 * GlobalVars.tileCounters["Thicket"];
-        health += 5 * GlobalVars.tileCounters["Settlement"];
-        health += 4 * GlobalVars.tileCounters["Desert"];
-        health += 3 * GlobalVars.tileCounters["Tundra"];
-
         armor += 1 * GlobalVars.tileCounters["Seashore"];
-        armor += 1 * GlobalVars.tileCounters["Tundra"];
-        armor += 2 * GlobalVars.tileCounters["Cavern"];
 
-        moveSpeed += 0.02f * GlobalVars.tileCounters["Tundra"];
-        moveSpeed += 0.03f * GlobalVars.tileCounters["Desert"];
+        health += 7 * GlobalVars.tileCounters["Thicket"];
+        hpRegen += 1 * GlobalVars.tileCounters["Thicket"];
+        evasionChance += 0.03f * GlobalVars.tileCounters["Thicket"];
+
+        health += 5 * GlobalVars.tileCounters["Settlement"];
         moveSpeed += 0.05f * GlobalVars.tileCounters["Settlement"];
 
-        hpRegen += 1 * GlobalVars.tileCounters["Thicket"];
-        hpRegen += 1 * GlobalVars.tileCounters["Tundra"];
-        hpRegen += 2 * GlobalVars.tileCounters["Cavern"];
-
-        evasionChance += 0.01f * GlobalVars.tileCounters["Cavern"];
+        health += 4 * GlobalVars.tileCounters["Desert"];
+        moveSpeed += 0.03f * GlobalVars.tileCounters["Desert"];
         evasionChance += 0.01f * GlobalVars.tileCounters["Desert"];
-        evasionChance += 0.03f * GlobalVars.tileCounters["Thicket"];
+
+        health += 3 * GlobalVars.tileCounters["Tundra"];
+        armor += 1 * GlobalVars.tileCounters["Tundra"];
+        moveSpeed += 0.02f * GlobalVars.tileCounters["Tundra"];
+        hpRegen += 1 * GlobalVars.tileCounters["Tundra"];
+
+        armor += 2 * GlobalVars.tileCounters["Cavern"];
+        hpRegen += 2 * GlobalVars.tileCounters["Cavern"];
+        evasionChance += 0.01f * GlobalVars.tileCounters["Cavern"];
 
         //Apply any Tier 3 bonuses
 
@@ -511,6 +517,24 @@ public class Monster : MonoBehaviour
         //Destroy the damage popup after a short delay
         yield return new WaitForSeconds(delayTime);
         Destroy(damagePopupObj.gameObject);
+    }
+
+    IEnumerator SpawnHpRegenPopup(float regenVal, float delayTime)
+    {
+       
+        //Spawn the Hp Regen popup
+        GameObject regenPopupObj = (GameObject)Instantiate(Resources.Load("MonsterAttributes/" + "HpRegenPopup"), gameObject.transform);
+        regenPopupObj.transform.position = new Vector3(gameObject.transform.position.x + Random.Range(-0.02f, 0.02f), gameObject.transform.position.y + 0.25f, gameObject.transform.position.z);
+        regenPopupObj.transform.rotation = Quaternion.Euler(0, 0, 0);
+
+        if (regenVal > 0)
+        {
+            regenPopupObj.GetComponent<TextMeshPro>().text = "+" + regenVal.ToString();
+        }
+
+        //Destroy the hp regen popup after a short delay
+        yield return new WaitForSeconds(delayTime);
+        Destroy(regenPopupObj.gameObject);
     }
 
     IEnumerator ShakeHpContainer(float resetTimer)

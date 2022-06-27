@@ -37,6 +37,7 @@ public class Weapon : MonoBehaviour
 
     void Awake()
     {
+        damageType = "Neutral";
         weaponAttackRadius = this.transform.GetChild(0).gameObject;
         weaponCdSlider = this.transform.GetChild(1).gameObject;
     }
