@@ -367,28 +367,24 @@ public class Monster : MonoBehaviour
         hpRegen += 1 * GlobalVars.tileCounters["Graveyard"];
 
         //Apply any Tier 2 bonuses
-        health += 10 * GlobalVars.tileCounters["Seashore"];
+        health += 8 * GlobalVars.tileCounters["Seashore"];
         armor += 1 * GlobalVars.tileCounters["Seashore"];
 
-        health += 7 * GlobalVars.tileCounters["Thicket"];
-        hpRegen += 1 * GlobalVars.tileCounters["Thicket"];
-        evasionChance += 0.03f * GlobalVars.tileCounters["Thicket"];
+        health += 8 * GlobalVars.tileCounters["Thicket"];
+        evasionChance += 0.02f * GlobalVars.tileCounters["Thicket"];
 
         health += 5 * GlobalVars.tileCounters["Settlement"];
         moveSpeed += 0.05f * GlobalVars.tileCounters["Settlement"];
 
-        health += 4 * GlobalVars.tileCounters["Desert"];
         moveSpeed += 0.03f * GlobalVars.tileCounters["Desert"];
-        evasionChance += 0.01f * GlobalVars.tileCounters["Desert"];
+        evasionChance += 0.02f * GlobalVars.tileCounters["Desert"];
 
-        health += 3 * GlobalVars.tileCounters["Tundra"];
-        armor += 1 * GlobalVars.tileCounters["Tundra"];
-        moveSpeed += 0.02f * GlobalVars.tileCounters["Tundra"];
+        health += 5 * GlobalVars.tileCounters["Tundra"];
         hpRegen += 1 * GlobalVars.tileCounters["Tundra"];
+        moveSpeed += 0.01f * GlobalVars.tileCounters["Tundra"];
 
         armor += 2 * GlobalVars.tileCounters["Cavern"];
         hpRegen += 2 * GlobalVars.tileCounters["Cavern"];
-        evasionChance += 0.01f * GlobalVars.tileCounters["Cavern"];
 
         //Apply any Tier 3 bonuses
 

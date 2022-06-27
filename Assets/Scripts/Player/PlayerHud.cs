@@ -128,36 +128,37 @@ public class PlayerHud : MonoBehaviour
         bonusEvasion = 0;
 
         //Apply any Tier 1 bonuses
-        bonusMaxHealth += 6 * GlobalVars.tileCounters["River"];
-        bonusMaxHealth += 2 * GlobalVars.tileCounters["Mountain"];
-        bonusMaxHealth += 2 * GlobalVars.tileCounters["Graveyard"];
-        bonusArmor += 1 * GlobalVars.tileCounters["Mountain"];
         bonusMoveSpeed += 0.04f * GlobalVars.tileCounters["Forest"];
-        bonusHpRegen += 1 * GlobalVars.tileCounters["Graveyard"];
+
+        bonusMaxHealth += 6 * GlobalVars.tileCounters["River"];
+
         bonusEvasion += 0.02f * GlobalVars.tileCounters["Swamp"];
 
+        bonusMaxHealth += 2 * GlobalVars.tileCounters["Mountain"];
+        bonusArmor += 1 * GlobalVars.tileCounters["Mountain"];
+
+        bonusMaxHealth += 2 * GlobalVars.tileCounters["Graveyard"];
+        bonusHpRegen += 1 * GlobalVars.tileCounters["Graveyard"];
+
         //Apply any Tier 2 bonuses
-        bonusMaxHealth += 10 * GlobalVars.tileCounters["Seashore"];
-        bonusMaxHealth += 7 * GlobalVars.tileCounters["Thicket"];
-        bonusMaxHealth += 5 * GlobalVars.tileCounters["Settlement"];
-        bonusMaxHealth += 4 * GlobalVars.tileCounters["Desert"];
-        bonusMaxHealth += 3 * GlobalVars.tileCounters["Tundra"];
-
+        bonusMaxHealth += 8 * GlobalVars.tileCounters["Seashore"];
         bonusArmor += 1 * GlobalVars.tileCounters["Seashore"];
-        bonusArmor += 1 * GlobalVars.tileCounters["Tundra"];
-        bonusArmor += 2 * GlobalVars.tileCounters["Cavern"];
 
-        bonusMoveSpeed += 0.02f * GlobalVars.tileCounters["Tundra"];
-        bonusMoveSpeed += 0.03f * GlobalVars.tileCounters["Desert"];
+        bonusMaxHealth += 8 * GlobalVars.tileCounters["Thicket"];
+        bonusEvasion += 0.02f * GlobalVars.tileCounters["Thicket"];
+
+        bonusMaxHealth += 5 * GlobalVars.tileCounters["Settlement"];
         bonusMoveSpeed += 0.05f * GlobalVars.tileCounters["Settlement"];
 
-        bonusHpRegen += 1 * GlobalVars.tileCounters["Thicket"];
-        bonusHpRegen += 1 * GlobalVars.tileCounters["Tundra"];
-        bonusHpRegen += 2 * GlobalVars.tileCounters["Cavern"];
+        bonusMoveSpeed += 0.03f * GlobalVars.tileCounters["Desert"];
+        bonusEvasion += 0.02f * GlobalVars.tileCounters["Desert"];
 
-        bonusEvasion += 0.01f * GlobalVars.tileCounters["Cavern"];
-        bonusEvasion += 0.01f * GlobalVars.tileCounters["Desert"];
-        bonusEvasion += 0.03f * GlobalVars.tileCounters["Thicket"];
+        bonusMaxHealth += 5 * GlobalVars.tileCounters["Tundra"];
+        bonusHpRegen += 1 * GlobalVars.tileCounters["Tundra"];
+        bonusMoveSpeed += 0.01f * GlobalVars.tileCounters["Tundra"];
+
+        bonusArmor += 2 * GlobalVars.tileCounters["Cavern"];
+        bonusHpRegen += 2 * GlobalVars.tileCounters["Cavern"];
 
         //Apply any Tier 3 bonuses
 
