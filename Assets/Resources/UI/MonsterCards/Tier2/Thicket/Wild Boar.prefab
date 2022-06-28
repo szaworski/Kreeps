@@ -216,17 +216,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Type: Beast
 
-    Bounty: 15 gold
-
 
     Base stats:
 
     Health: 100
 
-    Armor:
-    1
+    Armor: 1
 
-    Speed: 37
+    Speed:
+    37
 
     Hp regen: 0'
   m_isRightToLeft: 0

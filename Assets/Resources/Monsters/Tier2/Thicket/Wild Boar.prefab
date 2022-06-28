@@ -486,7 +486,7 @@ MonoBehaviour:
   maxHealth: 0
   health: 100
   armor: 1
-  goldBounty: 15
+  goldBounty: 10
   type: Beast
   moveSpeed: 0.37
   hpRegen: 0

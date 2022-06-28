@@ -216,17 +216,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Type: Humanoid
 
-    Bounty: 15 gold
-
 
     Base stats:
 
     Health: 75
 
-    Armor:
-    0
+    Armor: 0
 
-    Speed: 42
+    Speed:
+    42
 
     Hp regen: 0'
   m_isRightToLeft: 0

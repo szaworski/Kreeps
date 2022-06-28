@@ -486,7 +486,7 @@ MonoBehaviour:
   maxHealth: 0
   health: 110
   armor: 1
-  goldBounty: 15
+  goldBounty: 10
   type: Brute
   moveSpeed: 0.32
   hpRegen: 0

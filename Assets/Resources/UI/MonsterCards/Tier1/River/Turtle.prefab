@@ -216,17 +216,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Type: Brute
 
-    Bounty: 10 gold
-
 
     Base stats:
 
     Health: 40
 
-    Armor:
-    1
+    Armor: 1
 
-    Speed: 35
+    Speed:
+    35
 
     Hp regen: 0'
   m_isRightToLeft: 0

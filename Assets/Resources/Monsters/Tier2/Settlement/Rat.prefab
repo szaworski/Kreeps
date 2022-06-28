@@ -486,7 +486,7 @@ MonoBehaviour:
   maxHealth: 0
   health: 55
   armor: 0
-  goldBounty: 15
+  goldBounty: 10
   type: Pest
   moveSpeed: 0.6
   hpRegen: 0

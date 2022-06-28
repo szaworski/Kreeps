@@ -486,7 +486,7 @@ MonoBehaviour:
   maxHealth: 0
   health: 75
   armor: 0
-  goldBounty: 15
+  goldBounty: 10
   type: Undead
   moveSpeed: 0.4
   hpRegen: 2
