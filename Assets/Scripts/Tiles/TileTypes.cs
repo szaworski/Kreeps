@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class TileTypes : CardsLists
+﻿public class TileTypes : CardsLists
 {
     //These arrays need to be set to NonSerizlized or else the contents won't update when edited
     //Tier 1
