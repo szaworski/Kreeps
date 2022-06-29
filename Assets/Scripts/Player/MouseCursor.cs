@@ -17,8 +17,8 @@ public class MouseCursor : MonoBehaviour
         playerHud = GameObject.Find("PlayerHud");
         weaponScript = playerWeapon.GetComponent<Weapon>();
         playerHudScript = playerHud.GetComponent<PlayerHud>();
-        GlobalVars.newWeapon = "";
 
+        GlobalVars.newWeapon = "";
         GlobalVars.weaponIsSelected = false;
         Cursor.SetCursor(cursorImage, Vector2.zero, CursorMode.ForceSoftware);
     }
@@ -97,10 +97,10 @@ public class MouseCursor : MonoBehaviour
                     ChangeWeaponStats(20, 1, 0.7f, 0.15f, "Swift", 0, true, 11);
                     break;
                 case "AstralSpear":
-                    ChangeWeaponStats(40, 1, 1.5f, 0.15f, "Cosmic", 0, true, 12);                    
+                    ChangeWeaponStats(40, 1, 1.5f, 0.15f, "Cosmic", 0, true, 12);
                     break;
 
-                //Lvl 3 Weapons
+                    //Lvl 3 Weapons
 
             }
 

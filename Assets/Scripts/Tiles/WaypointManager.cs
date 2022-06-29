@@ -6,7 +6,7 @@ public class WaypointManager : MonoBehaviour
 {
     public int waypointNum;
 
-    void Awake()
+    void Start()
     {
         waypointNum = GlobalVars.tileCounters["numOfTimesPlaced"];
     }

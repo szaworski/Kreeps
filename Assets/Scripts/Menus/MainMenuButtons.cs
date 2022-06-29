@@ -8,12 +8,15 @@ public class MainMenuButtons : LoadNewScene
     [SerializeField] private bool newGameButtonTriggered;
     [SerializeField] private bool optionsButtonTriggered;
     [SerializeField] private bool exitGameButtonTriggered;
+    [SerializeField] private Texture2D cursorImage;
 
     void Awake()
     {
         newGameButtonTriggered = false;
         optionsButtonTriggered = false;
         exitGameButtonTriggered = false;
+
+        Cursor.SetCursor(cursorImage, Vector2.zero, CursorMode.ForceSoftware);
     }
 
     public void StartNewGame()
