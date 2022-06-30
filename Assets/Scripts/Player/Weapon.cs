@@ -52,7 +52,6 @@ public class Weapon : MonoBehaviour
         if (GlobalVars.weaponIsSelected)
         {
             CheckAttackRadius();
-            weaponAttackRadius.SetActive(true);
             weaponCdSlider.SetActive(true);
 
             if (GameObject.Find("TileManager").transform.childCount == 0)
@@ -60,9 +59,18 @@ public class Weapon : MonoBehaviour
                 weaponAttackRadius.SetActive(false);
                 weaponCdSlider.SetActive(false);
             }
+
+            else if (!weaponAttackRadius.activeInHierarchy && Input.GetMouseButtonDown(1))
+            {
+                weaponAttackRadius.SetActive(true);
+            }
+            else if (weaponAttackRadius.activeInHierarchy && Input.GetMouseButtonDown(1))
+            {
+                weaponAttackRadius.SetActive(false);
+            }
         }
 
-        else if (!GlobalVars.weaponIsSelected && weaponAttackRadius.activeInHierarchy)
+        else if (!GlobalVars.weaponIsSelected)
         {
             weaponAttackRadius.SetActive(false);
             weaponCdSlider.SetActive(false);
