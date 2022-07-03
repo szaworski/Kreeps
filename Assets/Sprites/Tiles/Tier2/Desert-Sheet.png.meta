@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: a7a882ef2aee1b049ac6b92e4e1bdd4d
+guid: 0b9159f5e0410354682655046b4402c2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6863783339039083101
-    second: Cavern-Sheet_0
+      213: -576458976417761205
+    second: Desert-Sheet_0
   - first:
-      213: -5512969914070691133
-    second: Cavern-Sheet_1
+      213: -5578688697530303363
+    second: Desert-Sheet_1
   - first:
-      213: -3707641797507998956
-    second: Cavern-Sheet_2
+      213: -5760107091295306640
+    second: Desert-Sheet_2
   - first:
-      213: -7468503181472882500
-    second: Cavern-Sheet_3
+      213: 3974801786067203515
+    second: Desert-Sheet_3
   - first:
-      213: 8269857420187550652
-    second: Cavern-Sheet_4
+      213: -3626853492735752661
+    second: Desert-Sheet_4
   - first:
-      213: -9021681570899990907
-    second: Cavern-Sheet_5
+      213: -2370996631363342570
+    second: Desert-Sheet_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -61,7 +61,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 64
@@ -119,7 +119,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Cavern-Sheet_0
+      name: Desert-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -133,14 +133,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a5b4554b61feb0a0800000000000000
-      internalID: -6863783339039083101
+      spriteID: b48b80b7d910008f0800000000000000
+      internalID: -576458976417761205
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cavern-Sheet_1
+      name: Desert-Sheet_1
       rect:
         serializedVersion: 2
         x: 64
@@ -154,14 +154,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c29666721ffd73b0800000000000000
-      internalID: -5512969914070691133
+      spriteID: d7c383fcf248492b0800000000000000
+      internalID: -5578688697530303363
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cavern-Sheet_2
+      name: Desert-Sheet_2
       rect:
         serializedVersion: 2
         x: 128
@@ -175,14 +175,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41b1529dd6fcb8cc0800000000000000
-      internalID: -3707641797507998956
+      spriteID: 07c722b6e1dff00b0800000000000000
+      internalID: -5760107091295306640
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cavern-Sheet_3
+      name: Desert-Sheet_3
       rect:
         serializedVersion: 2
         x: 192
@@ -196,14 +196,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb02f602deb8a5890800000000000000
-      internalID: -7468503181472882500
+      spriteID: bb5bf1f3a25592730800000000000000
+      internalID: 3974801786067203515
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cavern-Sheet_4
+      name: Desert-Sheet_4
       rect:
         serializedVersion: 2
         x: 256
@@ -217,14 +217,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb34861128f64c270800000000000000
-      internalID: 8269857420187550652
+      spriteID: b26c919d6f3daadc0800000000000000
+      internalID: -3626853492735752661
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Cavern-Sheet_5
+      name: Desert-Sheet_5
       rect:
         serializedVersion: 2
         x: 320
@@ -238,8 +238,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58661d1096c8cc280800000000000000
-      internalID: -9021681570899990907
+      spriteID: 61fa0f73027881fd0800000000000000
+      internalID: -2370996631363342570
       vertices: []
       indices: 
       edges: []

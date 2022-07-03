@@ -162,11 +162,11 @@ public class Monster : MonoBehaviour
                         delayAmt = 0f;
                     }
 
-                    if (type == "Beast")
+                    if (type.Contains("Beast"))
                     {
                         incomingDamage *= 1.5f;
                     }
-                    else if (type == "Brute")
+                    else if (type.Contains("Brute"))
                     {
                         incomingDamage *= 0.5f;
                     }
@@ -190,11 +190,11 @@ public class Monster : MonoBehaviour
                         moveSpeed -= iceSlowAmt;
                     }
 
-                    if (type == "Humanoid")
+                    if (type.Contains("Humanoid"))
                     {
                         incomingDamage *= 1.5f;
                     }
-                    else if (type == "Undead")
+                    else if (type.Contains("Undead"))
                     {
                         incomingDamage *= 0.5f;
                     }
@@ -214,12 +214,12 @@ public class Monster : MonoBehaviour
                         delayAmt = 0.1f;
                     }
 
-                    if (type == "Brute")
+                    if (type.Contains("Brute"))
                     {
                         incomingDamage *= 1.5f;
                     }
 
-                    else if (type == "Beast")
+                    else if (type.Contains("Beast"))
                     {
                         incomingDamage *= 0.5f;
                     }
@@ -227,11 +227,11 @@ public class Monster : MonoBehaviour
 
                 case var _ when damageType.Contains("Holy"):
 
-                    if (type == "Undead")
+                    if (type.Contains("Undead"))
                     {
                         incomingDamage *= 1.5f;
                     }
-                    else if (type == "Humanoid")
+                    else if (type.Contains("Humanoid"))
                     {
                         incomingDamage *= 0.5f;
                     }
@@ -239,11 +239,11 @@ public class Monster : MonoBehaviour
 
                 case var _ when damageType.Contains("Swift"):
 
-                    if (type == "Pest")
+                    if (type.Contains("Pest"))
                     {
                         incomingDamage *= 1.5f;
                     }
-                    else if (type == "Demon")
+                    else if (type.Contains("Demon"))
                     {
                         incomingDamage *= 0.5f;
                     }
@@ -256,11 +256,11 @@ public class Monster : MonoBehaviour
                         delayAmt = 0.5f;
                     }
 
-                    if (type == "Demon")
+                    if (type.Contains("Demon"))
                     {
                         incomingDamage *= 1.5f;
                     }
-                    else if (type == "Pest")
+                    else if (type.Contains("Pest"))
                     {
                         incomingDamage *= 0.5f;
                     }
