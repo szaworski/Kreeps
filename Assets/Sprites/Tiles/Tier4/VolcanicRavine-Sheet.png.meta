@@ -1,22 +1,25 @@
 fileFormatVersion: 2
-guid: 6bdd6b4d361af7c458cc18d9e3967502
+guid: 3264d75e21e36fd49800229736a5e71e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 863353219541609075
-    second: Tier1TileCards_0
+      213: 4302644674312828563
+    second: VolcanicRavine-Sheet_0
   - first:
-      213: 7357452567135043331
-    second: Tier1TileCards_1
+      213: 6029470290698182075
+    second: VolcanicRavine-Sheet_1
   - first:
-      213: 2063765148798286151
-    second: Tier1TileCards_2
+      213: 2887108095857948886
+    second: VolcanicRavine-Sheet_2
   - first:
-      213: 6925025210904504365
-    second: Tier1TileCards_3
+      213: -2350222490723739045
+    second: VolcanicRavine-Sheet_3
   - first:
-      213: 2809277084861378174
-    second: Tier1TileCards_4
+      213: -8485521037524511107
+    second: VolcanicRavine-Sheet_4
+  - first:
+      213: -2006281901969359437
+    second: VolcanicRavine-Sheet_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -116,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tier1TileCards_0
+      name: VolcanicRavine-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 90
-        height: 160
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +133,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37aa77ecd2f3bfb00800000000000000
-      internalID: 863353219541609075
+      spriteID: 396742fe88016bb30800000000000000
+      internalID: 4302644674312828563
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tier1TileCards_1
+      name: VolcanicRavine-Sheet_1
       rect:
         serializedVersion: 2
-        x: 90
+        x: 64
         y: 0
-        width: 90
-        height: 160
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +154,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30fbedbd02cea1660800000000000000
-      internalID: 7357452567135043331
+      spriteID: bbd16dca84bfca350800000000000000
+      internalID: 6029470290698182075
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tier1TileCards_2
+      name: VolcanicRavine-Sheet_2
       rect:
         serializedVersion: 2
-        x: 180
+        x: 128
         y: 0
-        width: 90
-        height: 160
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +175,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 749f3f1f777f3ac10800000000000000
-      internalID: 2063765148798286151
+      spriteID: 6d874c14481111820800000000000000
+      internalID: 2887108095857948886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tier1TileCards_3
+      name: VolcanicRavine-Sheet_3
       rect:
         serializedVersion: 2
-        x: 270
+        x: 192
         y: 0
-        width: 90
-        height: 160
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d28669c2db1aa1060800000000000000
-      internalID: 6925025210904504365
+      spriteID: b5a1741c815526fd0800000000000000
+      internalID: -2350222490723739045
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tier1TileCards_4
+      name: VolcanicRavine-Sheet_4
       rect:
         serializedVersion: 2
-        x: 360
+        x: 256
         y: 0
-        width: 90
-        height: 160
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,8 +217,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7eaecedf9e8cf620800000000000000
-      internalID: 2809277084861378174
+      spriteID: d765f38139f5d3a80800000000000000
+      internalID: -8485521037524511107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VolcanicRavine-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd32d96d314824e0800000000000000
+      internalID: -2006281901969359437
       vertices: []
       indices: 
       edges: []

@@ -1,22 +1,25 @@
 fileFormatVersion: 2
-guid: 6bdd6b4d361af7c458cc18d9e3967502
+guid: 70b49a476c3f013409a7975504034778
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 863353219541609075
-    second: Tier1TileCards_0
+      213: 8026335190807580701
+    second: TaintedCanal-Sheet_0
   - first:
-      213: 7357452567135043331
-    second: Tier1TileCards_1
+      213: 8486341960057311457
+    second: TaintedCanal-Sheet_1
   - first:
-      213: 2063765148798286151
-    second: Tier1TileCards_2
+      213: -2220293255463063331
+    second: TaintedCanal-Sheet_2
   - first:
-      213: 6925025210904504365
-    second: Tier1TileCards_3
+      213: -2439476473843013398
+    second: TaintedCanal-Sheet_3
   - first:
-      213: 2809277084861378174
-    second: Tier1TileCards_4
+      213: 167350598823211295
+    second: TaintedCanal-Sheet_4
+  - first:
+      213: -2427946660232045074
+    second: TaintedCanal-Sheet_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -116,13 +119,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tier1TileCards_0
+      name: TaintedCanal-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 90
-        height: 160
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +133,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37aa77ecd2f3bfb00800000000000000
-      internalID: 863353219541609075
+      spriteID: d109d48a455436f60800000000000000
+      internalID: 8026335190807580701
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tier1TileCards_1
+      name: TaintedCanal-Sheet_1
       rect:
         serializedVersion: 2
-        x: 90
+        x: 64
         y: 0
-        width: 90
-        height: 160
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -151,20 +154,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30fbedbd02cea1660800000000000000
-      internalID: 7357452567135043331
+      spriteID: 1e055b3dc0b85c570800000000000000
+      internalID: 8486341960057311457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tier1TileCards_2
+      name: TaintedCanal-Sheet_2
       rect:
         serializedVersion: 2
-        x: 180
+        x: 128
         y: 0
-        width: 90
-        height: 160
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,20 +175,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 749f3f1f777f3ac10800000000000000
-      internalID: 2063765148798286151
+      spriteID: dd0bdea3c0fef21e0800000000000000
+      internalID: -2220293255463063331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tier1TileCards_3
+      name: TaintedCanal-Sheet_3
       rect:
         serializedVersion: 2
-        x: 270
+        x: 192
         y: 0
-        width: 90
-        height: 160
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d28669c2db1aa1060800000000000000
-      internalID: 6925025210904504365
+      spriteID: ae82aaa621d352ed0800000000000000
+      internalID: -2439476473843013398
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tier1TileCards_4
+      name: TaintedCanal-Sheet_4
       rect:
         serializedVersion: 2
-        x: 360
+        x: 256
         y: 0
-        width: 90
-        height: 160
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,8 +217,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7eaecedf9e8cf620800000000000000
-      internalID: 2809277084861378174
+      spriteID: f117ec3ab7c825200800000000000000
+      internalID: 167350598823211295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TaintedCanal-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eedd54750633e4ed0800000000000000
+      internalID: -2427946660232045074
       vertices: []
       indices: 
       edges: []
