@@ -167,6 +167,12 @@ public class PlayerHud : MonoBehaviour
         bonusEvasionUiText.SetText(("+") + Mathf.Round(bonusEvasion * 100) + ("%").ToString());
         bonusArmorUiText.SetText(("+") + bonusArmor.ToString());
 
+        GlobalVars.bonusKreepStats["BonusMoveSpeed"] = bonusMoveSpeed;
+        GlobalVars.bonusKreepStats["BonusMaxHealth"] = bonusMaxHealth;
+        GlobalVars.bonusKreepStats["BonusHpRegen"] = bonusHpRegen;
+        GlobalVars.bonusKreepStats["BonusArmor"] = bonusArmor;
+        GlobalVars.bonusKreepStats["BonusEvasion"] = bonusEvasion;
+
         GlobalVars.triggerBonusStatsUpdate = false;
     }
 }

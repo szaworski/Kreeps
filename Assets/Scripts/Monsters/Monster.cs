@@ -352,42 +352,11 @@ public class Monster : MonoBehaviour
 
     void ApplySpawnBonuses()
     {
-        //Apply any Tier 1 bonuses
-        moveSpeed += 0.04f * GlobalVars.tileCounters["Forest"];
-
-        health += 6 * GlobalVars.tileCounters["River"];
-
-        evasionChance += 0.02f * GlobalVars.tileCounters["Swamp"];
-
-        health += 2 * GlobalVars.tileCounters["Mountain"];
-        armor += 1 * GlobalVars.tileCounters["Mountain"];
-
-        health += 2 * GlobalVars.tileCounters["Graveyard"];
-        hpRegen += 1 * GlobalVars.tileCounters["Graveyard"];
-
-        //Apply any Tier 2 bonuses
-        health += 8 * GlobalVars.tileCounters["Seashore"];
-        armor += 1 * GlobalVars.tileCounters["Seashore"];
-
-        health += 8 * GlobalVars.tileCounters["Thicket"];
-        evasionChance += 0.02f * GlobalVars.tileCounters["Thicket"];
-
-        health += 5 * GlobalVars.tileCounters["Settlement"];
-        moveSpeed += 0.05f * GlobalVars.tileCounters["Settlement"];
-
-        moveSpeed += 0.03f * GlobalVars.tileCounters["Desert"];
-        evasionChance += 0.02f * GlobalVars.tileCounters["Desert"];
-
-        health += 5 * GlobalVars.tileCounters["Tundra"];
-        hpRegen += 1 * GlobalVars.tileCounters["Tundra"];
-        moveSpeed += 0.01f * GlobalVars.tileCounters["Tundra"];
-
-        armor += 2 * GlobalVars.tileCounters["Cavern"];
-        hpRegen += 2 * GlobalVars.tileCounters["Cavern"];
-
-        //Apply any Tier 3 bonuses
-
-        //Set the maxHealth value
+        evasionChance += GlobalVars.bonusKreepStats["BonusEvasion"];
+        moveSpeed += GlobalVars.bonusKreepStats["BonusMoveSpeed"];
+        hpRegen += GlobalVars.bonusKreepStats["BonusHpRegen"];
+        armor += GlobalVars.bonusKreepStats["BonusArmor"];
+        health += GlobalVars.bonusKreepStats["BonusMaxHealth"];
         maxHealth = health;
     }
 

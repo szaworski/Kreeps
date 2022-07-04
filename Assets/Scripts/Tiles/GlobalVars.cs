@@ -5,6 +5,7 @@ public class GlobalVars : MonoBehaviour
 {
     public static Dictionary<string, int> tileCounters = new Dictionary<string, int>();
     public static Dictionary<string, int> bonusStats = new Dictionary<string, int>();
+    public static Dictionary<string, float> bonusKreepStats = new Dictionary<string, float>();
 
     public static string currTier;
     public static string tileName;
@@ -78,6 +79,14 @@ public class GlobalVars : MonoBehaviour
         bonusStats.Add("Swift", 0);
         bonusStats.Add("Cosmic", 0);
         bonusStats.Add("EquipmentLvl", 1);
+
+        //Add starting kreep bonus stats
+        bonusKreepStats.Clear();
+        bonusKreepStats.Add("BonusMoveSpeed", 0f);
+        bonusKreepStats.Add("BonusMaxHealth", 0f);
+        bonusKreepStats.Add("BonusHpRegen", 0f);
+        bonusKreepStats.Add("BonusArmor", 0f);
+        bonusKreepStats.Add("BonusEvasion", 0f);
 
         currTier = "Tier1";
         monsterCount = 0;
