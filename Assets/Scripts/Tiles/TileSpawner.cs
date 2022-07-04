@@ -198,6 +198,18 @@ public class TileSpawner : TileTypes
                 currentCardList = tier2TileCards.ToList();
             }
 
+            else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 20 && GlobalVars.tileCounters["numOfTimesPlaced"] < 30)
+            {
+                GlobalVars.currTier = "Tier3";
+                currentCardList = tier3TileCards.ToList();
+            }
+
+            else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 30 && GlobalVars.tileCounters["numOfTimesPlaced"] < 40)
+            {
+                GlobalVars.currTier = "Tier4";
+                currentCardList = tier4TileCards.ToList();
+            }
+
             //Create a list of 3 unique random cards from the current card list
             for (int i = 0; i < 3; i++)
             {
@@ -548,7 +560,47 @@ public class TileSpawner : TileTypes
                 curTiles = seashoreTiles;
                 break;
 
-                //Tier 3
+            //Tier 3
+            case "CanyonCrossing":
+                curTiles = canyonCrossingTiles;
+                break;
+            case "CrimsonPlain":
+                curTiles = crimsonPlainTiles;
+                break;
+            case "Crypt":
+                curTiles = cryptTiles;
+                break;
+            case "EmeraldCave":
+                curTiles = emeraldCaveTiles;
+                break;
+            case "Marsh":
+                curTiles = marshTiles;
+                break;
+            case "Sewer":
+                curTiles = sewerTiles;
+                break;
+
+            //Tier 4
+            case "FrozenPassage":
+                curTiles = frozenPassageTiles;
+                break;
+            case "InfernalWoods":
+                curTiles = infernalWoodsTiles;
+                break;
+            case "SacredGrounds":
+                curTiles = sacredGroundsTiles;
+                break;
+            case "SapphireCave":
+                curTiles = sapphireCaveTiles;
+                break;
+            case "TaintedCanal":
+                curTiles = taintedCanalTiles;
+                break;
+            case "VolcanicRavine":
+                curTiles = volcanicRavineTiles;
+                break;
+
+                //Tier 5
         }
 
         for (int i = 0; i < 6; i++)

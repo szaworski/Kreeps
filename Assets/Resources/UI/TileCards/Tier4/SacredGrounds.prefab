@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6130404801214499859}
   - component: {fileID: 3346913848105228779}
   m_Layer: 5
-  m_Name: EmeraldCave
+  m_Name: SacredGrounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -6861677220672222835, guid: d267272dad5c3444b9acc75aebd2502e, type: 3}
+  m_Sprite: {fileID: -4950550829006968699, guid: 0c9f01294897bb9408e297197b1da32c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3c50722ec083041bcf2aec73db18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: EmeraldCave
+  cardName: SacredGrounds
   upgradeCost: 0
   upgradeType: 
 --- !u!1 &6903677155270138448
@@ -223,7 +223,7 @@ MonoBehaviour:
     +5 max health
 
     for
-    each Emerald Cavern placed'
+    each Sacred Grounds placed'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -357,7 +357,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Emerald Cavern
+  m_text: 'Sacred Grounds
 
 '
   m_isRightToLeft: 0

@@ -5,9 +5,9 @@ public class CardsLists : MonoBehaviour
 {
     [System.NonSerialized] public List<string> tier1TileCards = new List<string> { "Forest", "Graveyard", "Mountain", "River", "Swamp" };
     [System.NonSerialized] public List<string> tier2TileCards = new List<string> { "Desert", "Thicket", "Tundra", "Cavern", "Settlement", "Seashore" };
-    //[System.NonSerialized] public List<string> tier3TileCards = new List<string> { "Forest", "Graveyard", "Mountain", "River", "Swamp", "Swamp" };
-    //[System.NonSerialized] public List<string> tier4TileCards = new List<string> { "Forest", "Graveyard", "Mountain", "River", "Swamp", "Swamp" };
-    //[System.NonSerialized] public List<string> tier5TileCards = new List<string> { "Forest", "Graveyard", "Mountain", "River", "Swamp", "Swamp" };
+    [System.NonSerialized] public List<string> tier3TileCards = new List<string> { "CanyonCrossing", "CrimsonPlain", "Crypt", "EmeraldCave", "Marsh", "Sewer" };
+    [System.NonSerialized] public List<string> tier4TileCards = new List<string> { "FrozenPassage", "InfernalWoods", "SacredGrounds", "SapphireCave", "TaintedCanal", "VolcanicRavine" };
+    //[System.NonSerialized] public List<string> tier5TileCards = new List<string> { "Abyss", "AstralPlane", "Underworld", "River", "Swamp", "Swamp" };
 
     //Tier 1 Monsters
     [System.NonSerialized] public List<string> forestMonsterCards = new List<string> { "Wolf", "Goblin", "Skeleton", "Owl" };
