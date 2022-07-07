@@ -114,7 +114,7 @@ public class Monster : MonoBehaviour
         {
             //Destroy the game object once the monster reaches the main base
             Destroy(this.gameObject);
-            GameObject.Find("MonsterSounds").GetComponent<AudioManager>().PlaySound("PlayerDamage");
+            GetSound("MonsterSounds", "PlayerDamage");
 
             //Subtract a point of health from the main base
             SubtractPlayerHealth();
@@ -271,7 +271,7 @@ public class Monster : MonoBehaviour
 
             if (isWeapon && GlobalVars.useSlashAnim)
             {
-                 prependWeaponAnim = "Weapons/";
+                prependWeaponAnim = "Weapons/";
             }
 
             //Subtract the amount of damage taken from the health variable (First, check for teleporting projectiles with unique animations)
@@ -373,20 +373,7 @@ public class Monster : MonoBehaviour
         Destroy(this.gameObject);
 
         //Get a random death sound to play
-        var rand = new System.Random();
-        int deathSoundIndex = rand.Next(3);
-        switch (deathSoundIndex)
-        {
-            case 0:
-                GameObject.Find("MonsterSounds").GetComponent<AudioManager>().PlaySound("Death1");
-                break;
-            case 1:
-                GameObject.Find("MonsterSounds").GetComponent<AudioManager>().PlaySound("Death2");
-                break;
-            case 2:
-                GameObject.Find("MonsterSounds").GetComponent<AudioManager>().PlaySound("Death3");
-                break;
-        }
+        GetSound("MonsterSounds", "Death");
     }
 
     IEnumerator SubtractHealth(float incomingDamage, Collider2D projectileObj, string damageType, float delayTime)
@@ -400,7 +387,7 @@ public class Monster : MonoBehaviour
             if (incomingDamage <= 0)
             {
                 StartCoroutine(SpawnDamagePopup(incomingDamage, damageType, 0.25f));
-                GameObject.Find("DamageSounds").GetComponent<AudioManager>().PlaySound(damageType);
+                GetSound("DamageSounds", damageType);
             }
 
             //Make sure damage is greater than 0, and evasion does not occur
@@ -410,7 +397,7 @@ public class Monster : MonoBehaviour
                 health -= incomingDamage;
                 healthText.SetText(health.ToString());
                 StartCoroutine(SpawnDamagePopup(incomingDamage, damageType, 0.25f));
-                GameObject.Find("DamageSounds").GetComponent<AudioManager>().PlaySound(damageType);
+                GetSound("DamageSounds", damageType);
             }
 
             else if (randomFloat <= evasionChance)
@@ -485,7 +472,7 @@ public class Monster : MonoBehaviour
 
     IEnumerator SpawnHpRegenPopup(float regenVal, float delayTime)
     {
-       
+
         //Spawn the Hp Regen popup
         GameObject regenPopupObj = (GameObject)Instantiate(Resources.Load("MonsterAttributes/" + "HpRegenPopup"), gameObject.transform);
         regenPopupObj.transform.position = new Vector3(gameObject.transform.position.x + Random.Range(-0.02f, 0.02f), gameObject.transform.position.y + 0.25f, gameObject.transform.position.z);
@@ -510,5 +497,27 @@ public class Monster : MonoBehaviour
         yield return new WaitForSeconds(resetTimer);
         HealthContainer.transform.position = new Vector3(gameObject.transform.position.x, HealthContainer.transform.position.y, HealthContainer.transform.position.z);
         isTakingDamage = false;
+    }
+
+    public void GetSound(string soundObj, string soundName)
+    {
+        var rand = new System.Random();
+        int soundIndex = rand.Next(3);
+        var indexString = (soundIndex + 1).ToString();
+
+        if (soundObj == "DamageSounds")
+        {
+            GameObject.Find(soundObj + indexString).GetComponent<AudioManager>().PlaySound(soundName);
+        }
+
+        else if (soundObj == "MonsterSounds" && soundName == "Death")
+        {
+            GameObject.Find(soundObj).GetComponent<AudioManager>().PlaySound(soundName + indexString);
+        }
+
+        else
+        {
+            GameObject.Find(soundObj).GetComponent<AudioManager>().PlaySound(soundName);
+        }
     }
 }

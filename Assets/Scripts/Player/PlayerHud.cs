@@ -146,14 +146,13 @@ public class PlayerHud : MonoBehaviour
         bonusEvasion += 0.02f * GlobalVars.tileCounters["Thicket"];
 
         bonusMaxHealth += 5 * GlobalVars.tileCounters["Settlement"];
-        bonusMoveSpeed += 0.05f * GlobalVars.tileCounters["Settlement"];
+        bonusMoveSpeed += 0.04f * GlobalVars.tileCounters["Settlement"];
 
-        bonusMoveSpeed += 0.03f * GlobalVars.tileCounters["Desert"];
+        bonusHpRegen += 2 * GlobalVars.tileCounters["Desert"];
         bonusEvasion += 0.02f * GlobalVars.tileCounters["Desert"];
 
-        bonusMaxHealth += 5 * GlobalVars.tileCounters["Tundra"];
-        bonusHpRegen += 1 * GlobalVars.tileCounters["Tundra"];
-        bonusMoveSpeed += 0.01f * GlobalVars.tileCounters["Tundra"];
+        bonusHpRegen += 2 * GlobalVars.tileCounters["Tundra"];
+        bonusMoveSpeed += 0.02f * GlobalVars.tileCounters["Tundra"];
 
         bonusArmor += 2 * GlobalVars.tileCounters["Cavern"];
         bonusHpRegen += 2 * GlobalVars.tileCounters["Cavern"];

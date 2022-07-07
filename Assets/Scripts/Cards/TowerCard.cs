@@ -130,7 +130,7 @@ public class TowerCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
                 break;
 
             case "Cosmic":
-                GlobalVars.goldCost = 300; 
+                GlobalVars.goldCost = 300;
                 break;
         }
     }
