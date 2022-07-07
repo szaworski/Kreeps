@@ -60,8 +60,8 @@ public class MonsterManager : MonoBehaviour
             if (GlobalVars.tileCounters["numOfTimesPlaced"] <= 1)
             {
                 //Get a random starting monster from the 3 provided
-                var rand = new System.Random();
-                int startingMonsterIndex = rand.Next(3);
+                int startingMonsterIndex = UnityEngine.Random.Range(0, 3);
+
                 switch (startingMonsterIndex)
                 {
                     case 0:

@@ -501,13 +501,13 @@ public class Monster : MonoBehaviour
 
     public void GetSound(string soundObj, string soundName)
     {
-        var rand = new System.Random();
-        int soundIndex = rand.Next(3);
+        int soundIndex = Random.Range(0, 3);
         var indexString = (soundIndex + 1).ToString();
 
         if (soundObj == "DamageSounds")
         {
             GameObject.Find(soundObj + indexString).GetComponent<AudioManager>().PlaySound(soundName);
+            Debug.Log("Random damage sound: " + indexString);
         }
 
         else if (soundObj == "MonsterSounds" && soundName == "Death")
