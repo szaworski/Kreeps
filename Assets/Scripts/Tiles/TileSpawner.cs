@@ -179,7 +179,6 @@ public class TileSpawner : TileTypes
         {
             GlobalVars.allMonstersAreSpawned = false;
 
-            var rand = new System.Random();
             List<string> currentCardList = null;
             string card1 = null;
             string card2 = null;
@@ -214,7 +213,7 @@ public class TileSpawner : TileTypes
             for (int i = 0; i < 3; i++)
             {
                 //Fetch a random element from the card list
-                int index = rand.Next(currentCardList.Count);
+                int index = Random.Range(0, currentCardList.Count);
                 string selectedCard = currentCardList[index];
 
                 //Remove the selected card from the list so we dont repeat any cards
@@ -271,7 +270,6 @@ public class TileSpawner : TileTypes
 
     public void GetAndShowMonsterCards()
     {
-        var rand = new System.Random();
         List<string> currentCardList = null;
         string card1 = null;
         string card2 = null;
@@ -322,7 +320,7 @@ public class TileSpawner : TileTypes
         for (int i = 0; i < 2; i++)
         {
             //Fetch a random element from the card list
-            int index = rand.Next(currentCardList.Count);
+            int index = Random.Range(0, currentCardList.Count);
             string selectedCard = currentCardList[index];
 
             //Remove the selected card from the list so we dont repeat any cards
@@ -380,7 +378,6 @@ public class TileSpawner : TileTypes
 
     public void GetAndShowShopCards()
     {
-        var rand = new System.Random();
         List<string> weaponCardList = null;
         List<string> powerUpCardList = powerUpCards.ToList();
         string card1 = null;
@@ -412,7 +409,7 @@ public class TileSpawner : TileTypes
         for (int i = 0; i < 2; i++)
         {
             //Fetch a random element from the card list
-            int index = rand.Next(weaponCardList.Count);
+            int index = Random.Range(0, weaponCardList.Count);
             string selectedCard = weaponCardList[index];
 
             if (selectedCard == GlobalVars.currentWeapon)
@@ -420,7 +417,7 @@ public class TileSpawner : TileTypes
                 //Remove the already held weapon from the list
                 weaponCardList.RemoveAt(index);
                 //Fetch a random element from the card list (After removing the already held weapon from the list)
-                index = rand.Next(weaponCardList.Count);
+                index = Random.Range(0, weaponCardList.Count);
                 selectedCard = weaponCardList[index];
             }
             else
@@ -447,7 +444,7 @@ public class TileSpawner : TileTypes
         for (int i = 0; i < 2; i++)
         {
             //Fetch a random element from the card list
-            int index = rand.Next(powerUpCardList.Count);
+            int index = Random.Range(0, powerUpCardList.Count);
             string selectedCard = powerUpCardList[index];
 
             //Remove the selected card from the list so we dont repeat any cards
@@ -508,8 +505,7 @@ public class TileSpawner : TileTypes
 
     public void ChooseRandTileFromList()
     {
-        var rand = new System.Random();
-        int index = rand.Next(validTilesList.Count);
+        int index = Random.Range(0, validTilesList.Count);
         Debug.Log("The randomly Chosen tile is: " + validTilesList[index]);
         newTileName = validTilesList[index];
     }
