@@ -139,23 +139,23 @@ public class PlayerHud : MonoBehaviour
         bonusHpRegen += 1 * GlobalVars.tileCounters["Graveyard"];
 
         //Apply any Tier 2 bonuses
-        bonusMaxHealth += 8 * GlobalVars.tileCounters["Seashore"];
-        bonusArmor += 1 * GlobalVars.tileCounters["Seashore"];
-
-        bonusMaxHealth += 8 * GlobalVars.tileCounters["Thicket"];
-        bonusEvasion += 0.02f * GlobalVars.tileCounters["Thicket"];
-
-        bonusMaxHealth += 5 * GlobalVars.tileCounters["Settlement"];
-        bonusMoveSpeed += 0.04f * GlobalVars.tileCounters["Settlement"];
+        bonusArmor += 2 * GlobalVars.tileCounters["Cavern"];
+        bonusHpRegen += 2 * GlobalVars.tileCounters["Cavern"];
 
         bonusHpRegen += 2 * GlobalVars.tileCounters["Desert"];
         bonusEvasion += 0.02f * GlobalVars.tileCounters["Desert"];
 
+        bonusMaxHealth += 8 * GlobalVars.tileCounters["Seashore"];
+        bonusArmor += 1 * GlobalVars.tileCounters["Seashore"];
+
+        bonusMaxHealth += 5 * GlobalVars.tileCounters["Settlement"];
+        bonusMoveSpeed += 0.04f * GlobalVars.tileCounters["Settlement"];
+
+        bonusMaxHealth += 8 * GlobalVars.tileCounters["Thicket"];
+        bonusEvasion += 0.02f * GlobalVars.tileCounters["Thicket"];
+
         bonusHpRegen += 2 * GlobalVars.tileCounters["Tundra"];
         bonusMoveSpeed += 0.02f * GlobalVars.tileCounters["Tundra"];
-
-        bonusArmor += 2 * GlobalVars.tileCounters["Cavern"];
-        bonusHpRegen += 2 * GlobalVars.tileCounters["Cavern"];
 
         //Apply any Tier 3 bonuses
 

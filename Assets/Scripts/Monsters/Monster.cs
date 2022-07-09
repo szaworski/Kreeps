@@ -452,7 +452,7 @@ public class Monster : MonoBehaviour
 
         //Spawn the damage popup
         GameObject damagePopupObj = (GameObject)Instantiate(Resources.Load("MonsterAttributes/" + convertedDamageType + "DamagePopup"), gameObject.transform);
-        damagePopupObj.transform.position = new Vector3(gameObject.transform.position.x + Random.Range(-0.02f, 0.02f), gameObject.transform.position.y + 0.25f, gameObject.transform.position.z);
+        damagePopupObj.transform.position = new Vector3(gameObject.transform.position.x + Random.Range(-0.03f, 0.03f), gameObject.transform.position.y + 0.25f, gameObject.transform.position.z);
         damagePopupObj.transform.rotation = Quaternion.Euler(0, 0, 0);
 
         if (damageVal <= 0)
@@ -475,7 +475,7 @@ public class Monster : MonoBehaviour
 
         //Spawn the Hp Regen popup
         GameObject regenPopupObj = (GameObject)Instantiate(Resources.Load("MonsterAttributes/" + "HpRegenPopup"), gameObject.transform);
-        regenPopupObj.transform.position = new Vector3(gameObject.transform.position.x + Random.Range(-0.02f, 0.02f), gameObject.transform.position.y + 0.25f, gameObject.transform.position.z);
+        regenPopupObj.transform.position = new Vector3(gameObject.transform.position.x + Random.Range(-0.03f, 0.03f), gameObject.transform.position.y + 0.25f, gameObject.transform.position.z);
         regenPopupObj.transform.rotation = Quaternion.Euler(0, 0, 0);
 
         if (regenVal > 0)

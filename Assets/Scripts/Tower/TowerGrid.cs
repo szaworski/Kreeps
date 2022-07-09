@@ -233,8 +233,6 @@ public class TowerGrid : MonoBehaviour
         GlobalVars.oldTowerObj = placedTower;
         //Get the grid position object containing the tower
         GlobalVars.gridObj = this.gameObject;
-        //Debug.Log("Old Tower position: " + upgradePosition);
-        //Debug.Log("Upgrade grid object: " + gridObj);
 
         card1 = towerScript.upgrade1;
         card2 = towerScript.upgrade2;
@@ -402,7 +400,6 @@ public class TowerGrid : MonoBehaviour
 
     public void DestroyTower(GameObject towerObj)
     {
-        //Destroy the tower
         Destroy(towerObj);
     }
 }
