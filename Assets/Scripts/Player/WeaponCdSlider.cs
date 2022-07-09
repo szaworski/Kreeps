@@ -48,7 +48,7 @@ public class WeaponCdSlider : MonoBehaviour
         cdSlider.maxValue = weaponScript.attackSpeed;
         cdSlider.value += 1 * Time.deltaTime;
 
-        if (Input.GetMouseButtonDown(0) && GlobalVars.weaponIsSelected && cdSlider.value == cdSlider.maxValue && weaponScript.GetMonsterIsInRadius)
+        if ((Input.GetMouseButtonDown(0) || Input.GetMouseButton(0)) && GlobalVars.weaponIsSelected && cdSlider.value == cdSlider.maxValue && weaponScript.GetMonsterIsInRadius)
         {
             cdSlider.value = 0;
         }

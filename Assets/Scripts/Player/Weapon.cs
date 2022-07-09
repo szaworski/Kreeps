@@ -81,7 +81,7 @@ public class Weapon : MonoBehaviour
     {
         Collider2D[] monstersInRadius = Physics2D.OverlapCircleAll(this.transform.position, attackRange, LayerMask.GetMask("Monster"));
 
-        if (Input.GetMouseButtonDown(0))
+        if ((Input.GetMouseButtonDown(0) || Input.GetMouseButton(0)))
         {
             //Check if any monsters are found in the radius (Use this for towers that shoot projectiles)
             if (monstersInRadius.Length >= 1 && projectileSpeed >= 1)
