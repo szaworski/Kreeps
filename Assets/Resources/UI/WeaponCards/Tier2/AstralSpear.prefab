@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: AstralSpear
-  upgradeCost: 250
+  upgradeCost: 375
   upgradeType: Weapon
 --- !u!1 &8807727790484004626
 GameObject:

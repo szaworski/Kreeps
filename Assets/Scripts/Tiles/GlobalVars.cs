@@ -58,16 +58,37 @@ public class GlobalVars : MonoBehaviour
 
         tileCounters.Add("Forest", 0);
         tileCounters.Add("Graveyard", 0);
-        tileCounters.Add("River", 0);
         tileCounters.Add("Mountain", 0);
+        tileCounters.Add("River", 0);
         tileCounters.Add("Swamp", 0);
 
+        tileCounters.Add("Cavern", 0);
         tileCounters.Add("Desert", 0);
+        tileCounters.Add("Seashore", 0);
+        tileCounters.Add("Settlement", 0);
         tileCounters.Add("Thicket", 0);
         tileCounters.Add("Tundra", 0);
-        tileCounters.Add("Cavern", 0);
-        tileCounters.Add("Settlement", 0);
-        tileCounters.Add("Seashore", 0);
+
+        tileCounters.Add("CanyonCrossing", 0);
+        tileCounters.Add("CrimsonPlain", 0);
+        tileCounters.Add("Crypt", 0);
+        tileCounters.Add("EmeraldCave", 0);
+        tileCounters.Add("Marsh", 0);
+        tileCounters.Add("Sewer", 0);
+
+        tileCounters.Add("FrozenPassage", 0);
+        tileCounters.Add("InfernalWoods", 0);
+        tileCounters.Add("SacredGrounds", 0);
+        tileCounters.Add("SapphireCave", 0);
+        tileCounters.Add("TaintedCanal", 0);
+        tileCounters.Add("VolcanicRavine", 0);
+
+        //tileCounters.Add("FrozenPassage", 0);
+        //tileCounters.Add("InfernalWoods", 0);
+        //tileCounters.Add("SacredGrounds", 0);
+        //tileCounters.Add("SapphireCave", 0);
+        //tileCounters.Add("TaintedCanal", 0);
+        //tileCounters.Add("VolcanicRavine", 0);
 
         //Add starting bonus stats
         bonusStats.Clear();
