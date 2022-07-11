@@ -31,13 +31,18 @@ public class MouseCursor : MonoBehaviour
 
     public void SwapMouseCursor()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) || GlobalVars.isPaused || GameObject.Find("TileManager").transform.childCount == 0)
+        if (Input.GetKeyDown(KeyCode.Alpha1) || GlobalVars.isPaused || GlobalVars.waveEnded)
         {
             GlobalVars.weaponIsSelected = false;
             Cursor.SetCursor(cursorImage, Vector2.zero, CursorMode.ForceSoftware);
+
+            if (GlobalVars.waveEnded)
+            {
+                GlobalVars.waveEnded = false;
+            }
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2) && GlobalVars.currentWeapon != "" && !GlobalVars.isPaused && GameObject.Find("TileManager").transform.childCount != 0)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && GlobalVars.currentWeapon != "" && !GlobalVars.isPaused)
         {
             GlobalVars.weaponIsSelected = true;
             Cursor.SetCursor(weaponImages[weaponImageIndex], Vector2.zero, CursorMode.ForceSoftware);

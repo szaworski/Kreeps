@@ -39,6 +39,7 @@ public class GlobalVars : MonoBehaviour
     public static bool weaponIsSelected;
     public static bool useSlashAnim;
     public static bool isPaused;
+    public static bool waveEnded;
 
     public static GameObject oldTowerObj;
     public static GameObject gridObj;

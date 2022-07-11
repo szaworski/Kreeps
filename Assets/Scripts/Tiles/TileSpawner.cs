@@ -177,6 +177,7 @@ public class TileSpawner : TileTypes
         //Check if all monsters have been spawned for the wave and that all monsters are dead, then prompt for card selection
         if (GlobalVars.allMonstersAreSpawned && GameObject.Find("TileManager").transform.childCount == 0 && GlobalVars.playerHealth > 0) //Input.GetKeyDown(KeyCode.Space)
         {
+            GlobalVars.waveEnded = true;
             GlobalVars.allMonstersAreSpawned = false;
 
             List<string> currentCardList = null;
