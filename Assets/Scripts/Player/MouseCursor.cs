@@ -67,11 +67,11 @@ public class MouseCursor : MonoBehaviour
                     break;
 
                 case "LongSword":
-                    ChangeWeaponStats(10, 0, 2f, 0.2f, "Neutral", 0, true, 2);
+                    ChangeWeaponStats(10, 0, 1.25f, 0.2f, "Neutral", 0, true, 2);
                     break;
 
                 case "Spear":
-                    ChangeWeaponStats(15, 1, 1.25f, 0.1f, "Neutral", 0, true, 3);
+                    ChangeWeaponStats(15, 1, 1f, 0.1f, "Neutral", 0, true, 3);
                     break;
 
                 case "HandAxe":
