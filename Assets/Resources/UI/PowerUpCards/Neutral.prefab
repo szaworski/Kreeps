@@ -422,3 +422,4 @@ MonoBehaviour:
   cardName: Neutral
   upgradeCost: 50
   upgradeType: Bonus
+  bonusAmt: 1

@@ -149,6 +149,7 @@ MonoBehaviour:
   cardName: Ice
   upgradeCost: 50
   upgradeType: Bonus
+  bonusAmt: 1
 --- !u!1 &4698487345527608529
 GameObject:
   m_ObjectHideFlags: 0

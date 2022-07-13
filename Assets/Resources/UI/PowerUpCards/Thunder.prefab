@@ -286,6 +286,7 @@ MonoBehaviour:
   cardName: Thunder
   upgradeCost: 75
   upgradeType: Bonus
+  bonusAmt: 2
 --- !u!1 &4443217231390657293
 GameObject:
   m_ObjectHideFlags: 0

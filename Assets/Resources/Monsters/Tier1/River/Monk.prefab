@@ -654,11 +654,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 32
+  health: 25
   armor: 0
   goldBounty: 10
   type: Humanoid
-  moveSpeed: 0.42
+  moveSpeed: 0.55
   hpRegen: 0
   evasionChance: 0
   healthText: {fileID: 2240702306701519988}

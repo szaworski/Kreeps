@@ -219,9 +219,9 @@ MonoBehaviour:
 
     Base stats:
 
-    Health: 40
+    Health: 45
 
-    Armor: 1
+    Armor: 0
 
     Speed:
     32

@@ -149,6 +149,7 @@ MonoBehaviour:
   cardName: Fire
   upgradeCost: 50
   upgradeType: Bonus
+  bonusAmt: 1
 --- !u!1 &4979736243767342691
 GameObject:
   m_ObjectHideFlags: 0

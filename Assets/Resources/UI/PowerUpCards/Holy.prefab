@@ -149,6 +149,7 @@ MonoBehaviour:
   cardName: Holy
   upgradeCost: 75
   upgradeType: Bonus
+  bonusAmt: 2
 --- !u!1 &6911761215297631096
 GameObject:
   m_ObjectHideFlags: 0

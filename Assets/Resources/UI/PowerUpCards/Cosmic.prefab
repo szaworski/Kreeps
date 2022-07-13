@@ -285,6 +285,7 @@ MonoBehaviour:
   cardName: Cosmic
   upgradeCost: 100
   upgradeType: Bonus
+  bonusAmt: 3
 --- !u!1 &8139315525478325520
 GameObject:
   m_ObjectHideFlags: 0

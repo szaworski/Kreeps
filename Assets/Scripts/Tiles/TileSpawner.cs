@@ -406,8 +406,8 @@ public class TileSpawner : TileTypes
                 break;
         }
 
-        //Create a list of 2 unique random weapon cards from the current weapon card list
-        for (int i = 0; i < 2; i++)
+        //Create a list of 1 unique random weapon cards from the current weapon card list
+        for (int i = 0; i < 1; i++)
         {
             //Fetch a random element from the card list
             int index = Random.Range(0, weaponCardList.Count);
@@ -441,8 +441,8 @@ public class TileSpawner : TileTypes
             }
         }
 
-        //Create a list of 2 unique random powerup cards from the powerup card list
-        for (int i = 0; i < 2; i++)
+        //Create a list of 3 unique random powerup cards from the powerup card list
+        for (int i = 0; i < 3; i++)
         {
             //Fetch a random element from the card list
             int index = Random.Range(0, powerUpCardList.Count);
@@ -455,10 +455,14 @@ public class TileSpawner : TileTypes
             switch (i)
             {
                 case 0:
-                    card3 = selectedCard;
-                    Debug.Log("Weapon Card 1: " + card3);
+                    card2 = selectedCard;
+                    Debug.Log("Weapon Card 1: " + card2);
                     break;
                 case 1:
+                    card3 = selectedCard;
+                    Debug.Log("Weapon Card 2: " + card3);
+                    break;
+                case 2:
                     card4 = selectedCard;
                     Debug.Log("Weapon Card 2: " + card4);
                     break;
@@ -473,7 +477,7 @@ public class TileSpawner : TileTypes
         GameObject cardSlot5 = GameObject.Find("ShopCardSlot5");
 
         card1Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + "Tier" + GlobalVars.bonusStats["EquipmentLvl"] + "/" + card1), cardSlot1.transform);
-        card2Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + "Tier" + GlobalVars.bonusStats["EquipmentLvl"] + "/" + card2), cardSlot2.transform);
+        card2Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card2), cardSlot2.transform);
         card3Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card3), cardSlot3.transform);
         card4Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card4), cardSlot4.transform);
         card5Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card5), cardSlot5.transform);

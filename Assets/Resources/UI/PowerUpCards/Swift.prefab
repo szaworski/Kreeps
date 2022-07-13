@@ -286,6 +286,7 @@ MonoBehaviour:
   cardName: Swift
   upgradeCost: 75
   upgradeType: Bonus
+  bonusAmt: 2
 --- !u!1 &8692462336114237473
 GameObject:
   m_ObjectHideFlags: 0

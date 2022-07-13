@@ -6,6 +6,7 @@ public class Card : MonoBehaviour
     [SerializeField] private string cardName;
     [SerializeField] private int upgradeCost;
     [SerializeField] private string upgradeType;
+    [SerializeField] private int bonusAmt;
 
     void Update()
     {
@@ -70,7 +71,7 @@ public class Card : MonoBehaviour
             {
                 GlobalVars.newGoldValue = GlobalVars.gold - upgradeCost;
                 GlobalVars.IsHoveringOverUiCard = false;
-                GlobalVars.bonusStats[cardName]++;
+                GlobalVars.bonusStats[cardName] += bonusAmt;
                 GlobalVars.triggerShopCardDestruction = true;
             }
 
