@@ -10,6 +10,8 @@ public class Tower : MonoBehaviour
     [Header("Tower attributes")]
     private float startingDamage;
     private float bonusDamage;
+    private float bonusSpeed;
+    private float bonusRange;
     public float damage;
     public float projectileSpeed;
     public float attackSpeed;
@@ -31,7 +33,7 @@ public class Tower : MonoBehaviour
 
     void Awake()
     {
-        GetBonusDmg();
+        GetBonus();
         startingDamage = damage;
         damage = startingDamage + bonusDamage;
     }
@@ -48,8 +50,8 @@ public class Tower : MonoBehaviour
 
     void Update()
     {
-        GetBonusDmg();
-        AddBonusDmg();
+        GetBonus();
+        AddBonus();
         CheckTowerRadius();
     }
 
@@ -147,7 +149,7 @@ public class Tower : MonoBehaviour
         }
     }
 
-    public void GetBonusDmg()
+    public void GetBonus()
     {
         if (bonusDamage < GlobalVars.bonusStats[damageType])
         {
@@ -155,7 +157,7 @@ public class Tower : MonoBehaviour
         }
     }
 
-    public void AddBonusDmg()
+    public void AddBonus()
     {
         if (damage != startingDamage + bonusDamage)
         {

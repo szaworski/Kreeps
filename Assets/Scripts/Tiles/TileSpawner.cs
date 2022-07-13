@@ -432,11 +432,11 @@ public class TileSpawner : TileTypes
             {
                 case 0:
                     card1 = selectedCard;
-                    Debug.Log("Weapon Card 1: " + card1);
+                    //Debug.Log("Weapon Card 1: " + card1);
                     break;
                 case 1:
                     card2 = selectedCard;
-                    Debug.Log("Weapon Card 2: " + card2);
+                    //Debug.Log("Weapon Card 2: " + card2);
                     break;
             }
         }
@@ -456,15 +456,12 @@ public class TileSpawner : TileTypes
             {
                 case 0:
                     card2 = selectedCard;
-                    Debug.Log("Weapon Card 1: " + card2);
                     break;
                 case 1:
                     card3 = selectedCard;
-                    Debug.Log("Weapon Card 2: " + card3);
                     break;
                 case 2:
                     card4 = selectedCard;
-                    Debug.Log("Weapon Card 2: " + card4);
                     break;
             }
         }
@@ -477,9 +474,9 @@ public class TileSpawner : TileTypes
         GameObject cardSlot5 = GameObject.Find("ShopCardSlot5");
 
         card1Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + "Tier" + GlobalVars.bonusStats["EquipmentLvl"] + "/" + card1), cardSlot1.transform);
-        card2Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card2), cardSlot2.transform);
-        card3Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card3), cardSlot3.transform);
-        card4Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card4), cardSlot4.transform);
+        card2Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card2 + GlobalVars.bonusStats[card2 + "Lvl"]), cardSlot2.transform);
+        card3Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card3 + GlobalVars.bonusStats[card3 + "Lvl"]), cardSlot3.transform);
+        card4Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card4 + GlobalVars.bonusStats[card4 + "Lvl"]), cardSlot4.transform);
         card5Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card5), cardSlot5.transform);
 
         card1Obj.transform.position = cardSlot1.transform.position;

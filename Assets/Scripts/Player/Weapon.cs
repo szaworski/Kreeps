@@ -41,8 +41,8 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
-        GetBonusDmg();
-        AddBonusDmg();
+        GetBonus();
+        AddBonus();
         DrawAttackRadius();
         //Follow the mouse cursor with this object
         mouseScreenPosition = Input.mousePosition;
@@ -185,7 +185,7 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    public void GetBonusDmg()
+    public void GetBonus()
     {
         if (bonusDamage < GlobalVars.bonusStats[damageType])
         {
@@ -193,7 +193,7 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    public void AddBonusDmg()
+    public void AddBonus()
     {
         if (damage != startingDamage + bonusDamage)
         {

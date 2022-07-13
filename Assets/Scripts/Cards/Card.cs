@@ -73,6 +73,11 @@ public class Card : MonoBehaviour
                 GlobalVars.IsHoveringOverUiCard = false;
                 GlobalVars.bonusStats[cardName] += bonusAmt;
                 GlobalVars.triggerShopCardDestruction = true;
+
+                if (GlobalVars.bonusStats[cardName + "Lvl"] < 3)
+                {
+                    GlobalVars.bonusStats[cardName + "Lvl"]++;
+                }
             }
 
             if (upgradeType == "Weapon")
@@ -81,7 +86,11 @@ public class Card : MonoBehaviour
                 GlobalVars.newGoldValue = GlobalVars.gold - upgradeCost;
                 GlobalVars.triggerShopCardDestruction = true;
                 GlobalVars.IsHoveringOverUiCard = false;
-                GlobalVars.bonusStats["EquipmentLvl"]++;
+
+                if (GlobalVars.bonusStats["EquipmentLvl"] < 5)
+                {
+                    GlobalVars.bonusStats["EquipmentLvl"]++;
+                }
             }
         }
 
