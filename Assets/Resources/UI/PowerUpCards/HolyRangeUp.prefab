@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3908303887177809270}
   - component: {fileID: 3908303887177809271}
   m_Layer: 5
-  m_Name: Fire3
+  m_Name: HolyRangeUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,8 +31,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4996665206748320017}
-  - {fileID: 5994334386753327045}
+  - {fileID: 7555527289906225868}
+  - {fileID: 7621217935689886994}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4134415223196675546, guid: 0da14318c33243b42aa74f8efb026136, type: 3}
+  m_Sprite: {fileID: 6422903626800926781, guid: 0da14318c33243b42aa74f8efb026136, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -146,11 +146,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3c50722ec083041bcf2aec73db18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: Fire
-  upgradeCost: 300
-  upgradeType: BonusDmg
-  bonusAmt: 6
---- !u!1 &4979736243767342691
+  cardName: Holy
+  upgradeCost: 100
+  upgradeType: BonusRange
+  bonusAmt: 0
+  bonusRangeAmt: 0.1
+--- !u!1 &6911761215297631096
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,9 +159,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4996665206748320017}
-  - component: {fileID: 3230860292397594950}
-  - component: {fileID: 1706477086506927395}
+  - component: {fileID: 7555527289906225868}
+  - component: {fileID: 1033782198243946798}
+  - component: {fileID: 2311692935707851190}
   m_Layer: 0
   m_Name: Title
   m_TagString: Untagged
@@ -168,13 +169,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4996665206748320017
+--- !u!224 &7555527289906225868
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4979736243767342691}
+  m_GameObject: {fileID: 6911761215297631096}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -187,21 +188,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &3230860292397594950
+--- !u!222 &1033782198243946798
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4979736243767342691}
+  m_GameObject: {fileID: 6911761215297631096}
   m_CullTransparentMesh: 0
---- !u!114 &1706477086506927395
+--- !u!114 &2311692935707851190
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4979736243767342691}
+  m_GameObject: {fileID: 6911761215297631096}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -215,7 +216,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fire damage +
+  m_text: 'Holy range +
 
 '
   m_isRightToLeft: 0
@@ -286,7 +287,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &8127966510288412396
+--- !u!1 &7921046452440486869
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -294,9 +295,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5994334386753327045}
-  - component: {fileID: 1817949377506197222}
-  - component: {fileID: 7151414153182621581}
+  - component: {fileID: 7621217935689886994}
+  - component: {fileID: 6946502587741406062}
+  - component: {fileID: 7795713532536756621}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -304,13 +305,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &5994334386753327045
+--- !u!224 &7621217935689886994
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8127966510288412396}
+  m_GameObject: {fileID: 7921046452440486869}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -323,21 +324,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &1817949377506197222
+--- !u!222 &6946502587741406062
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8127966510288412396}
+  m_GameObject: {fileID: 7921046452440486869}
   m_CullTransparentMesh: 0
---- !u!114 &7151414153182621581
+--- !u!114 &7795713532536756621
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8127966510288412396}
+  m_GameObject: {fileID: 7921046452440486869}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -351,10 +352,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fire type weapons and towers gain +6 damage
+  m_text: 'Holy type weapons and towers gain +0.1 attack range
 
 
-    Cost: 300g'
+    Cost: 100g'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

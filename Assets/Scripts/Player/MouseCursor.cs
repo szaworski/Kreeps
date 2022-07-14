@@ -123,7 +123,7 @@ public class MouseCursor : MonoBehaviour
         weaponScript.bonusDamage = 0;
         weaponScript.projectileSpeed = projectileSpeed;
         weaponScript.attackSpeed = attackSpeed;
-        weaponScript.attackRange = attackRange;
+        weaponScript.startingAttackRange = attackRange;
         weaponScript.damageType = damageType;
         weaponScript.slowAmt = slowAmt;
         GlobalVars.useSlashAnim = useSlashAnim;

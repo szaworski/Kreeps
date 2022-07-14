@@ -5,7 +5,7 @@ public class GlobalVars : MonoBehaviour
 {
     public static Dictionary<string, int> tileCounters = new Dictionary<string, int>();
     public static Dictionary<string, int> bonusStats = new Dictionary<string, int>();
-    public static Dictionary<string, float> bonusStats2 = new Dictionary<string, float>();
+    public static Dictionary<string, float> bonusRange = new Dictionary<string, float>();
     public static Dictionary<string, float> bonusKreepStats = new Dictionary<string, float>();
 
     public static string currTier;
@@ -110,19 +110,21 @@ public class GlobalVars : MonoBehaviour
         bonusStats.Add("SwiftLvl", 1);
         bonusStats.Add("CosmicLvl", 1);
 
-        bonusStats2.Clear();
-        bonusStats.Add("FireSpeed", 0);
-        bonusStats.Add("IceSpeed", 0);
-        bonusStats.Add("ThunderSpeed", 0);
-        bonusStats.Add("HolySpeed", 0);
-        bonusStats.Add("SwiftSpeed", 0);
-        bonusStats.Add("CosmicSpeed", 0);
-        bonusStats.Add("FireRange", 0);
-        bonusStats.Add("IceRange", 0);
-        bonusStats.Add("ThunderRange", 0);
-        bonusStats.Add("HolyRange", 0);
-        bonusStats.Add("SwiftRange", 0);
-        bonusStats.Add("CosmicRange", 0);
+        bonusRange.Clear();
+        bonusRange.Add("Neutral", 0);
+        bonusRange.Add("Fire", 0);
+        bonusRange.Add("Ice", 0);
+        bonusRange.Add("Thunder", 0);
+        bonusRange.Add("Holy", 0);
+        bonusRange.Add("Swift", 0);
+        bonusRange.Add("Cosmic", 0);
+        bonusRange.Add("NeutralLvl", 1);
+        bonusRange.Add("FireLvl", 1);
+        bonusRange.Add("IceLvl", 1);
+        bonusRange.Add("ThunderLvl", 1);
+        bonusRange.Add("HolyLvl", 1);
+        bonusRange.Add("SwiftLvl", 1);
+        bonusRange.Add("CosmicLvl", 1);
 
         //Add starting kreep bonus stats
         bonusKreepStats.Clear();

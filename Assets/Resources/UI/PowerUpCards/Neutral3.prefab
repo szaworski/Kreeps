@@ -421,5 +421,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Neutral
   upgradeCost: 200
-  upgradeType: Bonus
+  upgradeType: BonusDmg
   bonusAmt: 4

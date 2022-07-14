@@ -285,7 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Swift
   upgradeCost: 100
-  upgradeType: Bonus
+  upgradeType: BonusDmg
   bonusAmt: 2
 --- !u!1 &8692462336114237473
 GameObject:

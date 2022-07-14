@@ -9,6 +9,7 @@ public class Tower : MonoBehaviour
 
     [Header("Tower attributes")]
     private float startingDamage;
+    private float startingAttackRange;
     private float bonusDamage;
     private float bonusSpeed;
     private float bonusRange;
@@ -35,7 +36,9 @@ public class Tower : MonoBehaviour
     {
         GetBonus();
         startingDamage = damage;
+        startingAttackRange = attackRange;
         damage = startingDamage + bonusDamage;
+        attackRange = startingAttackRange + bonusRange;
     }
 
     void Start()
@@ -155,6 +158,11 @@ public class Tower : MonoBehaviour
         {
             bonusDamage = GlobalVars.bonusStats[damageType];
         }
+
+        if (bonusRange < GlobalVars.bonusRange[damageType])
+        {
+            bonusRange = GlobalVars.bonusRange[damageType];
+        }
     }
 
     public void AddBonus()
@@ -163,6 +171,12 @@ public class Tower : MonoBehaviour
         {
             damage = startingDamage + bonusDamage;
             dmgText.SetText(damage.ToString());
+        }
+
+        if (attackRange != startingAttackRange + bonusRange)
+        {
+            attackRange = startingAttackRange + bonusRange;
+            rngText.SetText(attackRange.ToString());
         }
     }
 

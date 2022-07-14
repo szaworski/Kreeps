@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3908303887177809270}
   - component: {fileID: 3908303887177809271}
   m_Layer: 5
-  m_Name: Fire
+  m_Name: Fire1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Fire
   upgradeCost: 100
-  upgradeType: Bonus
+  upgradeType: BonusDmg
   bonusAmt: 2
 --- !u!1 &4979736243767342691
 GameObject:

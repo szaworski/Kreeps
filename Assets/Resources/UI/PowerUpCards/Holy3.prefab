@@ -148,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Holy
   upgradeCost: 300
-  upgradeType: Bonus
+  upgradeType: BonusDmg
   bonusAmt: 10
 --- !u!1 &6911761215297631096
 GameObject:

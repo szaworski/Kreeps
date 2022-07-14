@@ -7,6 +7,7 @@ public class Card : MonoBehaviour
     [SerializeField] private int upgradeCost;
     [SerializeField] private string upgradeType;
     [SerializeField] private int bonusAmt;
+    [SerializeField] private float bonusRangeAmt;
 
     void Update()
     {
@@ -67,7 +68,7 @@ public class Card : MonoBehaviour
     {
         if (GlobalVars.gold >= upgradeCost && !GlobalVars.isPaused)
         {
-            if (upgradeType == "Bonus")
+            if (upgradeType == "BonusDmg")
             {
                 GlobalVars.newGoldValue = GlobalVars.gold - upgradeCost;
                 GlobalVars.IsHoveringOverUiCard = false;
@@ -77,6 +78,19 @@ public class Card : MonoBehaviour
                 if (GlobalVars.bonusStats[cardName + "Lvl"] < 3)
                 {
                     GlobalVars.bonusStats[cardName + "Lvl"]++;
+                }
+            }
+
+            if (upgradeType == "BonusRange")
+            {
+                GlobalVars.newGoldValue = GlobalVars.gold - upgradeCost;
+                GlobalVars.IsHoveringOverUiCard = false;
+                GlobalVars.bonusRange[cardName] += bonusRangeAmt;
+                GlobalVars.triggerShopCardDestruction = true;
+
+                if (GlobalVars.bonusRange[cardName + "Lvl"] < 5)
+                {
+                    GlobalVars.bonusRange[cardName + "Lvl"]++;
                 }
             }
 

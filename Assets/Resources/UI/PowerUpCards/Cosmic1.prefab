@@ -284,7 +284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Cosmic
   upgradeCost: 200
-  upgradeType: Bonus
+  upgradeType: BonusDmg
   bonusAmt: 5
 --- !u!1 &8139315525478325520
 GameObject:

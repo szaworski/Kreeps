@@ -285,7 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Thunder
   upgradeCost: 200
-  upgradeType: Bonus
+  upgradeType: BonusDmg
   bonusAmt: 8
 --- !u!1 &4443217231390657293
 GameObject:

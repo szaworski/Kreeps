@@ -365,7 +365,7 @@ public class TileSpawner : TileTypes
             monsterSelectText.enabled = false;
             Debug.Log("Monster Cards Destoryed");
 
-            if (GlobalVars.tileCounters["numOfTimesPlaced"] % 2 == 0)
+            if ((GlobalVars.tileCounters["numOfTimesPlaced"] - 1) % 2 == 0)
             {
                 GetAndShowShopCards();
             }
@@ -455,13 +455,34 @@ public class TileSpawner : TileTypes
             switch (i)
             {
                 case 0:
-                    card2 = selectedCard;
+                    if(!selectedCard.Contains("Speed") && !selectedCard.Contains("Range"))
+                    {
+                        card2 = selectedCard + GlobalVars.bonusStats[selectedCard + "Lvl"];
+                    }
+                    else
+                    {
+                        card2 = selectedCard;
+                    }
                     break;
                 case 1:
-                    card3 = selectedCard;
+                    if (!selectedCard.Contains("Speed") && !selectedCard.Contains("Range"))
+                    {
+                        card3 = selectedCard + GlobalVars.bonusStats[selectedCard + "Lvl"];
+                    }
+                    else
+                    {
+                        card3 = selectedCard;
+                    }
                     break;
                 case 2:
-                    card4 = selectedCard;
+                    if (!selectedCard.Contains("Speed") && !selectedCard.Contains("Range"))
+                    {
+                        card4 = selectedCard + GlobalVars.bonusStats[selectedCard + "Lvl"];
+                    }
+                    else
+                    {
+                        card4 = selectedCard;
+                    }
                     break;
             }
         }
@@ -474,9 +495,9 @@ public class TileSpawner : TileTypes
         GameObject cardSlot5 = GameObject.Find("ShopCardSlot5");
 
         card1Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + "Tier" + GlobalVars.bonusStats["EquipmentLvl"] + "/" + card1), cardSlot1.transform);
-        card2Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card2 + GlobalVars.bonusStats[card2 + "Lvl"]), cardSlot2.transform);
-        card3Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card3 + GlobalVars.bonusStats[card3 + "Lvl"]), cardSlot3.transform);
-        card4Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card4 + GlobalVars.bonusStats[card4 + "Lvl"]), cardSlot4.transform);
+        card2Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card2), cardSlot2.transform);
+        card3Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card3), cardSlot3.transform);
+        card4Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card4), cardSlot4.transform);
         card5Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card5), cardSlot5.transform);
 
         card1Obj.transform.position = cardSlot1.transform.position;

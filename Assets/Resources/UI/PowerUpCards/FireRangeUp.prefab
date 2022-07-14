@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3908303887177809270}
   - component: {fileID: 3908303887177809271}
   m_Layer: 5
-  m_Name: Fire3
+  m_Name: FireRangeUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,9 +147,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: Fire
-  upgradeCost: 300
-  upgradeType: BonusDmg
-  bonusAmt: 6
+  upgradeCost: 100
+  upgradeType: BonusRange
+  bonusAmt: 0
+  bonusRangeAmt: 0.1
 --- !u!1 &4979736243767342691
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,7 +216,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fire damage +
+  m_text: 'Fire range +
 
 '
   m_isRightToLeft: 0
@@ -351,10 +352,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fire type weapons and towers gain +6 damage
+  m_text: 'Fire type weapons and towers gain +0.1 attack range
 
 
-    Cost: 300g'
+    Cost: 100g'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

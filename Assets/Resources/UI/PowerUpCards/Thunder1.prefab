@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 3908303887177809270}
   - component: {fileID: 3908303887177809271}
   m_Layer: 5
-  m_Name: Thunder
+  m_Name: Thunder1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Thunder
   upgradeCost: 100
-  upgradeType: Bonus
+  upgradeType: BonusDmg
   bonusAmt: 4
 --- !u!1 &4443217231390657293
 GameObject:

@@ -148,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Fire
   upgradeCost: 200
-  upgradeType: Bonus
+  upgradeType: BonusDmg
   bonusAmt: 4
 --- !u!1 &4979736243767342691
 GameObject:

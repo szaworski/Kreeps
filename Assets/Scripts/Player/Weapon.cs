@@ -23,7 +23,9 @@ public class Weapon : MonoBehaviour
 
     [Header("Weapon attributes")]
     public float startingDamage;
+    public float startingAttackRange;
     public float bonusDamage;
+    public float bonusRange;
     public float damage;
     public float projectileSpeed;
     public float attackSpeed;
@@ -191,6 +193,11 @@ public class Weapon : MonoBehaviour
         {
             bonusDamage = GlobalVars.bonusStats[damageType];
         }
+
+        if (bonusRange < GlobalVars.bonusRange[damageType])
+        {
+            bonusRange = GlobalVars.bonusRange[damageType];
+        }
     }
 
     public void AddBonus()
@@ -198,6 +205,11 @@ public class Weapon : MonoBehaviour
         if (damage != startingDamage + bonusDamage)
         {
             damage = startingDamage + bonusDamage;
+        }
+
+        if (attackRange != startingAttackRange + bonusRange)
+        {
+            attackRange = startingAttackRange + bonusRange;
         }
     }
 }

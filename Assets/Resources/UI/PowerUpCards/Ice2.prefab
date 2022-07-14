@@ -148,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: Ice
   upgradeCost: 200
-  upgradeType: Bonus
+  upgradeType: BonusDmg
   bonusAmt: 3
 --- !u!1 &4698487345527608529
 GameObject:
