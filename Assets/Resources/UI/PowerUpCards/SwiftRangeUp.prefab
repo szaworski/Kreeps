@@ -287,7 +287,7 @@ MonoBehaviour:
   upgradeCost: 100
   upgradeType: BonusRange
   bonusAmt: 0
-  bonusRangeAmt: 0.1
+  bonusFloatAmt: 0.1
 --- !u!1 &8692462336114237473
 GameObject:
   m_ObjectHideFlags: 0
