@@ -24,12 +24,17 @@ public class Weapon : MonoBehaviour
     [Header("Weapon attributes")]
     public float startingDamage;
     public float startingAttackRange;
+    public float startingSpeed;
+    public float startingCritChance;
     public float bonusDamage;
     public float bonusRange;
+    public float bonusSpeed;
+    public float bonusCritChance;
     public float damage;
     public float projectileSpeed;
     public float attackSpeed;
     public float attackRange;
+    public float critChance;
     public string damageType;
     public float slowAmt;
     public LineRenderer attackRadius;
@@ -194,9 +199,28 @@ public class Weapon : MonoBehaviour
             bonusDamage = GlobalVars.bonusStats[damageType];
         }
 
-        if (bonusRange < GlobalVars.bonusExtraStats[damageType + "RangeUp"])
+        if (damageType == "Ice" || damageType == "Swift")
         {
-            bonusRange = GlobalVars.bonusExtraStats[damageType + "RangeUp"];
+            if (bonusRange < GlobalVars.bonusExtraStats[damageType + "RangeUp"])
+            {
+                bonusRange = GlobalVars.bonusExtraStats[damageType + "RangeUp"];
+            }
+        }
+
+        if (damageType == "Fire" || damageType == "Holy")
+        {
+            if (bonusSpeed < GlobalVars.bonusExtraStats[damageType + "SpeedUp"])
+            {
+                bonusSpeed = GlobalVars.bonusExtraStats[damageType + "SpeedUp"];
+            }
+        }
+
+        if (damageType == "Thunder" || damageType == "Cosmic")
+        {
+            if (bonusCritChance < GlobalVars.bonusExtraStats[damageType + "CritChanceUp"])
+            {
+                bonusCritChance = GlobalVars.bonusExtraStats[damageType + "CritChanceUp"];
+            }
         }
     }
 
@@ -210,6 +234,16 @@ public class Weapon : MonoBehaviour
         if (attackRange != startingAttackRange + bonusRange)
         {
             attackRange = startingAttackRange + bonusRange;
+        }
+
+        if (attackSpeed != startingSpeed - bonusSpeed)
+        {
+            attackSpeed = startingSpeed - bonusSpeed;
+        }
+
+        if (critChance != startingCritChance + bonusCritChance)
+        {
+            critChance = startingCritChance + bonusCritChance;
         }
     }
 }

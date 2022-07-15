@@ -169,19 +169,28 @@ public class Tower : MonoBehaviour
             bonusDamage = GlobalVars.bonusStats[damageType];
         }
 
-        if (bonusRange < GlobalVars.bonusExtraStats[damageType + "RangeUp"])
+        if (damageType == "Ice" || damageType == "Swift")
         {
-            bonusRange = GlobalVars.bonusExtraStats[damageType + "RangeUp"];
+            if (bonusRange < GlobalVars.bonusExtraStats[damageType + "RangeUp"])
+            {
+                bonusRange = GlobalVars.bonusExtraStats[damageType + "RangeUp"];
+            }
         }
 
-        if (bonusSpeed < GlobalVars.bonusExtraStats[damageType + "SpeedUp"])
+        if (damageType == "Fire" || damageType == "Holy")
         {
-            bonusSpeed = GlobalVars.bonusExtraStats[damageType + "SpeedUp"];
+            if (bonusSpeed < GlobalVars.bonusExtraStats[damageType + "SpeedUp"])
+            {
+                bonusSpeed = GlobalVars.bonusExtraStats[damageType + "SpeedUp"];
+            }
         }
 
-        if (bonusCritChance < GlobalVars.bonusExtraStats[damageType + "CritChanceUp"])
+        if (damageType == "Thunder" || damageType == "Cosmic")
         {
-            bonusCritChance = GlobalVars.bonusExtraStats[damageType + "CritChanceUp"];
+            if (bonusCritChance < GlobalVars.bonusExtraStats[damageType + "CritChanceUp"])
+            {
+                bonusCritChance = GlobalVars.bonusExtraStats[damageType + "CritChanceUp"];
+            }
         }
     }
 
@@ -199,9 +208,9 @@ public class Tower : MonoBehaviour
             rngText.SetText(attackRange.ToString());
         }
 
-        if (attackSpeed != startingSpeed + bonusSpeed)
+        if (attackSpeed != startingSpeed - bonusSpeed)
         {
-            attackSpeed = startingSpeed + bonusSpeed;
+            attackSpeed = startingSpeed - bonusSpeed;
             rofText.SetText(attackSpeed.ToString());
         }
 

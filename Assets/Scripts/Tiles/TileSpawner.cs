@@ -365,7 +365,7 @@ public class TileSpawner : TileTypes
             monsterSelectText.enabled = false;
             Debug.Log("Monster Cards Destoryed");
 
-            if ((GlobalVars.tileCounters["numOfTimesPlaced"] - 1) % 2 == 0)
+            if ((GlobalVars.tileCounters["numOfTimesPlaced"]) % 1 == 0) //if ((GlobalVars.tileCounters["numOfTimesPlaced"] - 1) % 2 == 0)
             {
                 GetAndShowShopCards();
             }

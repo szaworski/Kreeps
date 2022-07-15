@@ -137,6 +137,7 @@ public class Monster : MonoBehaviour
             float incomingDamage = projectileObj.GetComponent<Projectile>().damageValue;
             float projectileSpeed = projectileObj.GetComponent<Projectile>().projectileSpeed;
             float slowAmt = projectileObj.GetComponent<Projectile>().slowAmt;
+            float critChance = projectileObj.GetComponent<Projectile>().critChance;
             string damageType = projectileObj.GetComponent<Projectile>().damageType;
             bool isWeapon = projectileObj.GetComponent<Projectile>().isWeapon;
             string prependWeaponAnim = "";
@@ -267,6 +268,18 @@ public class Monster : MonoBehaviour
                     break;
             }
 
+            //Apply crit damage if applicable  
+            if (damageType.Contains("Thunder") || damageType.Contains("Cosmic"))
+            {
+                float randomFloat = Random.value;
+
+                if (randomFloat <= critChance)
+                {
+                    incomingDamage *= 2;
+                }
+            }
+
+            //Reduce incomingDamage by armor value
             incomingDamage -= armor;
 
             if (isWeapon && GlobalVars.useSlashAnim)
@@ -507,7 +520,7 @@ public class Monster : MonoBehaviour
         if (soundObj == "DamageSounds")
         {
             GameObject.Find(soundObj + indexString).GetComponent<AudioManager>().PlaySound(soundName);
-            Debug.Log("Random damage sound: " + indexString);
+            //Debug.Log("Random damage sound: " + indexString);
         }
 
         else if (soundObj == "MonsterSounds" && soundName == "Death")

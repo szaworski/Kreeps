@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour
     public float projectileSpeed;
     public float attackRange;
     public float slowAmt;
+    public float critChance;
     public string damageType;
     public bool isWeapon;
 
@@ -22,6 +23,7 @@ public class Projectile : MonoBehaviour
             attackRange = transform.parent.GetComponent<Weapon>().attackRange;
             target = transform.parent.GetComponent<Weapon>().currentTarget;
             slowAmt = transform.parent.GetComponent<Weapon>().slowAmt;
+            critChance = transform.parent.GetComponent<Weapon>().critChance;
         }
 
         else
@@ -32,6 +34,7 @@ public class Projectile : MonoBehaviour
             attackRange = transform.parent.GetComponent<Tower>().attackRange;
             target = transform.parent.GetComponent<Tower>().currentTarget;
             slowAmt = transform.parent.GetComponent<Tower>().slowAmt;
+            critChance = transform.parent.GetComponent<Tower>().critChance;
         }
 
         if (projectileSpeed == 0)
