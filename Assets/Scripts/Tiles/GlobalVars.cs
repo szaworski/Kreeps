@@ -5,7 +5,7 @@ public class GlobalVars : MonoBehaviour
 {
     public static Dictionary<string, int> tileCounters = new Dictionary<string, int>();
     public static Dictionary<string, int> bonusStats = new Dictionary<string, int>();
-    public static Dictionary<string, float> bonusRange = new Dictionary<string, float>();
+    public static Dictionary<string, float> bonusExtraStats = new Dictionary<string, float>();
     public static Dictionary<string, float> bonusKreepStats = new Dictionary<string, float>();
 
     public static string currTier;
@@ -92,7 +92,7 @@ public class GlobalVars : MonoBehaviour
         //tileCounters.Add("TaintedCanal", 0);
         //tileCounters.Add("VolcanicRavine", 0);
 
-        //Add starting bonus stats
+        //Add starting bonus damage (and other bonus stats below)
         bonusStats.Clear();
         bonusStats.Add("Neutral", 0);
         bonusStats.Add("Fire", 0);
@@ -110,21 +110,21 @@ public class GlobalVars : MonoBehaviour
         bonusStats.Add("SwiftLvl", 1);
         bonusStats.Add("CosmicLvl", 1);
 
-        bonusRange.Clear();
-        bonusRange.Add("Neutral", 0);
-        bonusRange.Add("Fire", 0);
-        bonusRange.Add("Ice", 0);
-        bonusRange.Add("Thunder", 0);
-        bonusRange.Add("Holy", 0);
-        bonusRange.Add("Swift", 0);
-        bonusRange.Add("Cosmic", 0);
-        bonusRange.Add("NeutralLvl", 1);
-        bonusRange.Add("FireLvl", 1);
-        bonusRange.Add("IceLvl", 1);
-        bonusRange.Add("ThunderLvl", 1);
-        bonusRange.Add("HolyLvl", 1);
-        bonusRange.Add("SwiftLvl", 1);
-        bonusRange.Add("CosmicLvl", 1);
+        bonusExtraStats.Clear();
+        bonusExtraStats.Add("IceRangeUp", 0);
+        bonusExtraStats.Add("SwiftRangeUp", 0);
+        bonusExtraStats.Add("IceRangeUpLvl", 1);
+        bonusExtraStats.Add("SwiftRangeUpLvl", 1);
+
+        bonusExtraStats.Add("FireSpeedUp", 0);
+        bonusExtraStats.Add("HolySpeedUp", 0);
+        bonusExtraStats.Add("FireSpeedUpLvl", 1);
+        bonusExtraStats.Add("HolySpeedUpLvl", 1);
+
+        bonusExtraStats.Add("ThunderCritChanceUp", 0);
+        bonusExtraStats.Add("CosmicCritChanceUp", 0);
+        bonusExtraStats.Add("ThunderCritChanceUpLvl", 1);
+        bonusExtraStats.Add("CosmicCritChanceUpLvl", 1);
 
         //Add starting kreep bonus stats
         bonusKreepStats.Clear();

@@ -32,5 +32,5 @@ public class CardsLists : MonoBehaviour
     [System.NonSerialized] public List<string> tier5WeaponCards = new List<string> { "Dagger", "ShortSword", "LongSword", "Spear", "HandAxe", "Mace" };
 
     //Power up cards
-    [System.NonSerialized] public List<string> powerUpCards = new List<string> { "Neutral", "Fire", "Ice", "Thunder", "Holy", "Swift", "Cosmic", "FireRangeUp", "IceRangeUp", "ThunderRangeUp", "HolyRangeUp", "SwiftRangeUp", "CosmicRangeUp" };
+    [System.NonSerialized] public List<string> powerUpCards = new List<string> { "Neutral", "Fire", "Ice", "Thunder", "Holy", "Swift", "Cosmic", "FireSpeedUp", "IceRangeUp", "ThunderCritChanceUp", "HolySpeedUp", "SwiftRangeUp", "CosmicCritChanceUp" };
 }

@@ -194,9 +194,9 @@ public class Weapon : MonoBehaviour
             bonusDamage = GlobalVars.bonusStats[damageType];
         }
 
-        if (bonusRange < GlobalVars.bonusRange[damageType])
+        if (bonusRange < GlobalVars.bonusExtraStats[damageType + "RangeUp"])
         {
-            bonusRange = GlobalVars.bonusRange[damageType];
+            bonusRange = GlobalVars.bonusExtraStats[damageType + "RangeUp"];
         }
     }
 

@@ -10,13 +10,17 @@ public class Tower : MonoBehaviour
     [Header("Tower attributes")]
     private float startingDamage;
     private float startingAttackRange;
+    private float startingSpeed;
+    private float startingCritChance;
     private float bonusDamage;
-    private float bonusSpeed;
     private float bonusRange;
+    private float bonusSpeed;
+    private float bonusCritChance;
     public float damage;
     public float projectileSpeed;
     public float attackSpeed;
     public float attackRange;
+    public float critChance;
     public string damageType;
     public float slowAmt;
     public LineRenderer attackRadius;
@@ -35,10 +39,16 @@ public class Tower : MonoBehaviour
     void Awake()
     {
         GetBonus();
+
         startingDamage = damage;
+        startingSpeed = attackSpeed;
         startingAttackRange = attackRange;
+        startingCritChance = critChance;
+
         damage = startingDamage + bonusDamage;
+        attackSpeed = startingSpeed + bonusSpeed;
         attackRange = startingAttackRange + bonusRange;
+        critChance = startingCritChance + bonusCritChance;
     }
 
     void Start()
@@ -159,9 +169,19 @@ public class Tower : MonoBehaviour
             bonusDamage = GlobalVars.bonusStats[damageType];
         }
 
-        if (bonusRange < GlobalVars.bonusRange[damageType])
+        if (bonusRange < GlobalVars.bonusExtraStats[damageType + "RangeUp"])
         {
-            bonusRange = GlobalVars.bonusRange[damageType];
+            bonusRange = GlobalVars.bonusExtraStats[damageType + "RangeUp"];
+        }
+
+        if (bonusSpeed < GlobalVars.bonusExtraStats[damageType + "SpeedUp"])
+        {
+            bonusSpeed = GlobalVars.bonusExtraStats[damageType + "SpeedUp"];
+        }
+
+        if (bonusCritChance < GlobalVars.bonusExtraStats[damageType + "CritChanceUp"])
+        {
+            bonusCritChance = GlobalVars.bonusExtraStats[damageType + "CritChanceUp"];
         }
     }
 
@@ -177,6 +197,17 @@ public class Tower : MonoBehaviour
         {
             attackRange = startingAttackRange + bonusRange;
             rngText.SetText(attackRange.ToString());
+        }
+
+        if (attackSpeed != startingSpeed + bonusSpeed)
+        {
+            attackSpeed = startingSpeed + bonusSpeed;
+            rofText.SetText(attackSpeed.ToString());
+        }
+
+        if (critChance != startingCritChance + bonusCritChance)
+        {
+            critChance = startingCritChance + bonusCritChance;
         }
     }
 

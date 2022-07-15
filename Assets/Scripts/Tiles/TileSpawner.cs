@@ -444,6 +444,15 @@ public class TileSpawner : TileTypes
         //Create a list of 3 unique random powerup cards from the powerup card list
         for (int i = 0; i < 3; i++)
         {
+            //Check for and remove invalid powerups from the list
+            foreach (string item in powerUpCardList)
+            {
+                if (item.Contains("Up") && GlobalVars.bonusExtraStats[item + "Lvl"] == 4)
+                {
+                    powerUpCardList.Remove(item);
+                }
+            }
+
             //Fetch a random element from the card list
             int index = Random.Range(0, powerUpCardList.Count);
             string selectedCard = powerUpCardList[index];
@@ -455,33 +464,33 @@ public class TileSpawner : TileTypes
             switch (i)
             {
                 case 0:
-                    if(!selectedCard.Contains("Speed") && !selectedCard.Contains("Range"))
+                    if(!selectedCard.Contains("Up"))
                     {
                         card2 = selectedCard + GlobalVars.bonusStats[selectedCard + "Lvl"];
                     }
                     else
                     {
-                        card2 = selectedCard;
+                        card2 = selectedCard + GlobalVars.bonusExtraStats[selectedCard + "Lvl"];
                     }
                     break;
                 case 1:
-                    if (!selectedCard.Contains("Speed") && !selectedCard.Contains("Range"))
+                    if (!selectedCard.Contains("Up"))
                     {
                         card3 = selectedCard + GlobalVars.bonusStats[selectedCard + "Lvl"];
                     }
                     else
                     {
-                        card3 = selectedCard;
+                        card3 = selectedCard + GlobalVars.bonusExtraStats[selectedCard + "Lvl"];
                     }
                     break;
                 case 2:
-                    if (!selectedCard.Contains("Speed") && !selectedCard.Contains("Range"))
+                    if (!selectedCard.Contains("Up"))
                     {
                         card4 = selectedCard + GlobalVars.bonusStats[selectedCard + "Lvl"];
                     }
                     else
                     {
-                        card4 = selectedCard;
+                        card4 = selectedCard + GlobalVars.bonusExtraStats[selectedCard + "Lvl"];
                     }
                     break;
             }

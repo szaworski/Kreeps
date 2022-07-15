@@ -81,16 +81,42 @@ public class Card : MonoBehaviour
                 }
             }
 
+            if (upgradeType == "BonusSpeed")
+            {
+                GlobalVars.newGoldValue = GlobalVars.gold - upgradeCost;
+                GlobalVars.IsHoveringOverUiCard = false;
+                GlobalVars.bonusExtraStats[cardName] += bonusFloatAmt;
+                GlobalVars.triggerShopCardDestruction = true;
+
+                if (GlobalVars.bonusExtraStats[cardName + "Lvl"] < 4)
+                {
+                    GlobalVars.bonusExtraStats[cardName + "Lvl"]++;
+                }
+            }
+
             if (upgradeType == "BonusRange")
             {
                 GlobalVars.newGoldValue = GlobalVars.gold - upgradeCost;
                 GlobalVars.IsHoveringOverUiCard = false;
-                GlobalVars.bonusRange[cardName] += bonusFloatAmt;
+                GlobalVars.bonusExtraStats[cardName] += bonusFloatAmt;
                 GlobalVars.triggerShopCardDestruction = true;
 
-                if (GlobalVars.bonusRange[cardName + "Lvl"] < 5)
+                if (GlobalVars.bonusExtraStats[cardName + "Lvl"] < 4)
                 {
-                    GlobalVars.bonusRange[cardName + "Lvl"]++;
+                    GlobalVars.bonusExtraStats[cardName + "Lvl"]++;
+                }
+            }
+
+            if (upgradeType == "BonusCritChance")
+            {
+                GlobalVars.newGoldValue = GlobalVars.gold - upgradeCost;
+                GlobalVars.IsHoveringOverUiCard = false;
+                GlobalVars.bonusExtraStats[cardName] += bonusFloatAmt;
+                GlobalVars.triggerShopCardDestruction = true;
+
+                if (GlobalVars.bonusExtraStats[cardName + "Lvl"] < 4)
+                {
+                    GlobalVars.bonusExtraStats[cardName + "Lvl"]++;
                 }
             }
 

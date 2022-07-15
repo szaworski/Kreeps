@@ -68,7 +68,7 @@ public class MonsterManager : MonoBehaviour
                         GlobalVars.monsterCardSelected = "Forest/Wolf";
                         break;
                     case 1:
-                        GlobalVars.monsterCardSelected = "Mountain/Ranger";
+                        GlobalVars.monsterCardSelected = "River/Monk";
                         break;
                     case 2:
                         GlobalVars.monsterCardSelected = "Graveyard/Zombie";
