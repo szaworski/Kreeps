@@ -365,7 +365,7 @@ public class TileSpawner : TileTypes
             monsterSelectText.enabled = false;
             Debug.Log("Monster Cards Destoryed");
 
-            if ((GlobalVars.tileCounters["numOfTimesPlaced"]) % 1 == 0) //if ((GlobalVars.tileCounters["numOfTimesPlaced"] - 1) % 2 == 0)
+            if ((GlobalVars.tileCounters["numOfTimesPlaced"] - 1) % 2 == 0)  //if ((GlobalVars.tileCounters["numOfTimesPlaced"]) % 1 == 0)
             {
                 GetAndShowShopCards();
             }
@@ -445,7 +445,7 @@ public class TileSpawner : TileTypes
         for (int i = 0; i < 3; i++)
         {
             //Check for and remove invalid powerups from the list
-            foreach (string item in powerUpCardList)
+            foreach (string item in powerUpCardList.ToList())
             {
                 if (item.Contains("Up") && GlobalVars.bonusExtraStats[item + "Lvl"] == 4)
                 {
