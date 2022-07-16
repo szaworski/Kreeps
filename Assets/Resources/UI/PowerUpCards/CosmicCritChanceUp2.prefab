@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cosmic crit +
+  m_text: '+ Crit chance 2
 
 '
   m_isRightToLeft: 0
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -89304018017722683, guid: 0da14318c33243b42aa74f8efb026136, type: 3}
+  m_Sprite: {fileID: 3095894125050642863, guid: 0da14318c33243b42aa74f8efb026136, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

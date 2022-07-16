@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4134415223196675546, guid: 0da14318c33243b42aa74f8efb026136, type: 3}
+  m_Sprite: {fileID: -6346098952796623498, guid: 0da14318c33243b42aa74f8efb026136, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fire speed +
+  m_text: '+ Attack speed 3
 
 '
   m_isRightToLeft: 0
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fire type weapons and towers gain -0.2 attack rate
+  m_text: 'Fire type weapons and towers gain +0.2 attack rate
 
 
     Cost: 100g'

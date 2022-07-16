@@ -206,7 +206,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -639150423502658686, guid: 0da14318c33243b42aa74f8efb026136, type: 3}
+  m_Sprite: {fileID: 1812318321607629437, guid: 0da14318c33243b42aa74f8efb026136, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Swift range +
+  m_text: '+ Attack range 1
 
 '
   m_isRightToLeft: 0

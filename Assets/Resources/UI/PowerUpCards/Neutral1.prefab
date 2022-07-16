@@ -65,9 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Normal damage +
-
-'
+  m_text: + Damage 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -423,3 +421,4 @@ MonoBehaviour:
   upgradeCost: 100
   upgradeType: BonusDmg
   bonusAmt: 2
+  bonusFloatAmt: 0

@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cosmic damage +
+  m_text: '+ Damage 3
 
 '
   m_isRightToLeft: 0
@@ -286,6 +286,7 @@ MonoBehaviour:
   upgradeCost: 450
   upgradeType: BonusDmg
   bonusAmt: 15
+  bonusFloatAmt: 0
 --- !u!1 &8139315525478325520
 GameObject:
   m_ObjectHideFlags: 0

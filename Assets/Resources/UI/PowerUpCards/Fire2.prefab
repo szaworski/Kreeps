@@ -150,6 +150,7 @@ MonoBehaviour:
   upgradeCost: 200
   upgradeType: BonusDmg
   bonusAmt: 4
+  bonusFloatAmt: 0
 --- !u!1 &4979736243767342691
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,7 +216,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fire damage +
+  m_text: '+ Damage 2
 
 '
   m_isRightToLeft: 0

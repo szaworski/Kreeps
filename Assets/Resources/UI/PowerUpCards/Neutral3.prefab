@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Normal damage +
+  m_text: '+ Damage 3
 
 '
   m_isRightToLeft: 0
@@ -423,3 +423,4 @@ MonoBehaviour:
   upgradeCost: 200
   upgradeType: BonusDmg
   bonusAmt: 4
+  bonusFloatAmt: 0

@@ -206,7 +206,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2796592383115298097, guid: 0da14318c33243b42aa74f8efb026136, type: 3}
+  m_Sprite: {fileID: 2965180083980671877, guid: 0da14318c33243b42aa74f8efb026136, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Thunder crit +
+  m_text: '+ Crit chance 2
 
 '
   m_isRightToLeft: 0
