@@ -122,7 +122,7 @@ public class MouseCursor : MonoBehaviour
         weaponScript.startingDamage = damage;
         weaponScript.bonusDamage = 0;
         weaponScript.projectileSpeed = projectileSpeed;
-        weaponScript.attackSpeed = attackSpeed;
+        weaponScript.startingSpeed = attackSpeed;
         weaponScript.startingAttackRange = attackRange;
         weaponScript.damageType = damageType;
         weaponScript.slowAmt = slowAmt;
