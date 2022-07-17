@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 7601089371387317472, guid: 9845e4253184e584ab22083d7c6e97e0, type: 3}
+  m_Sprite: {fileID: 9205670426505434885, guid: e599a35dec1cd3a4eabc3612e19f83f0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -149,6 +149,8 @@ MonoBehaviour:
   cardName: NeutralLvl5
   upgradeCost: 125
   upgradeType: Neutral
+  bonusAmt: 0
+  bonusFloatAmt: 0
 --- !u!1 &354252274503662542
 GameObject:
   m_ObjectHideFlags: 0
