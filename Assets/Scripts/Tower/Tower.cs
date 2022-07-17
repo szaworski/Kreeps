@@ -206,6 +206,7 @@ public class Tower : MonoBehaviour
         {
             attackRange = startingAttackRange + bonusRange;
             rngText.SetText(attackRange.ToString());
+            DrawAttackRadius();
         }
 
         if (attackSpeed != startingSpeed - bonusSpeed)

@@ -140,6 +140,7 @@ public class Monster : MonoBehaviour
             float critChance = projectileObj.GetComponent<Projectile>().critChance;
             string damageType = projectileObj.GetComponent<Projectile>().damageType;
             bool isWeapon = projectileObj.GetComponent<Projectile>().isWeapon;
+            bool isCritHit = false;
             string prependWeaponAnim = "";
             //Debug.Log("Amount of incoming damage: " + incomingDamage);
 
@@ -275,6 +276,7 @@ public class Monster : MonoBehaviour
 
                 if (randomFloat <= critChance)
                 {
+                    isCritHit = true;
                     incomingDamage *= 2;
                 }
             }
@@ -295,13 +297,13 @@ public class Monster : MonoBehaviour
                 damageAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + yShiftAmt, gameObject.transform.position.z);
                 damageAnimObj.transform.rotation = Quaternion.Euler(0, 0, 0);
                 //Subtract health after the animation plays
-                StartCoroutine(SubtractHealth(incomingDamage, other, damageType, delayAmt));
+                StartCoroutine(SubtractHealth(incomingDamage, other, damageType, isCritHit, delayAmt));
             }
 
             //For certain types of projectiles, make sure this monster object is the target of the projectile (Check for moving projectiles)
             else if (this.gameObject != null && this.gameObject == monsterTarget && projectileSpeed > 1)
             {
-                StartCoroutine(SubtractHealth(incomingDamage, other, damageType, 0));
+                StartCoroutine(SubtractHealth(incomingDamage, other, damageType, isCritHit, 0));
             }
 
             //For towers without moving projectiles, we don't check for a target (Finally, check for AOE projectiles)
@@ -311,7 +313,7 @@ public class Monster : MonoBehaviour
                 damageAnimObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + yShiftAmt, gameObject.transform.position.z);
                 damageAnimObj.transform.rotation = Quaternion.Euler(0, 0, 0);
                 //Subtract health after the animation plays
-                StartCoroutine(SubtractHealth(incomingDamage, other, damageType, delayAmt));
+                StartCoroutine(SubtractHealth(incomingDamage, other, damageType, isCritHit, delayAmt));
             }
         }
     }
@@ -389,7 +391,7 @@ public class Monster : MonoBehaviour
         GetSound("MonsterSounds", "Death");
     }
 
-    IEnumerator SubtractHealth(float incomingDamage, Collider2D projectileObj, string damageType, float delayTime)
+    IEnumerator SubtractHealth(float incomingDamage, Collider2D projectileObj, string damageType, bool isCrit, float delayTime)
     {
         yield return new WaitForSeconds(delayTime);
 
@@ -399,7 +401,7 @@ public class Monster : MonoBehaviour
 
             if (incomingDamage <= 0)
             {
-                StartCoroutine(SpawnDamagePopup(incomingDamage, damageType, 0.25f));
+                StartCoroutine(SpawnDamagePopup(incomingDamage, damageType, isCrit, 0.25f));
                 GetSound("DamageSounds", damageType);
             }
 
@@ -409,7 +411,7 @@ public class Monster : MonoBehaviour
                 isTakingDamage = true;
                 health -= incomingDamage;
                 healthText.SetText(health.ToString());
-                StartCoroutine(SpawnDamagePopup(incomingDamage, damageType, 0.25f));
+                StartCoroutine(SpawnDamagePopup(incomingDamage, damageType, isCrit, 0.25f));
                 GetSound("DamageSounds", damageType);
             }
 
@@ -434,7 +436,7 @@ public class Monster : MonoBehaviour
         }
     }
 
-    IEnumerator SpawnDamagePopup(float damageVal, string damageType, float delayTime)
+    IEnumerator SpawnDamagePopup(float damageVal, string damageType, bool isCrit, float delayTime)
     {
         string convertedDamageType = "";
         //Get the specifc damage type
@@ -475,7 +477,15 @@ public class Monster : MonoBehaviour
 
         else
         {
-            damagePopupObj.GetComponent<TextMeshPro>().text = damageVal.ToString();
+            if(isCrit)
+            {
+                damagePopupObj.GetComponent<RectTransform>().localScale = new Vector3(1.25f, 1.25f, 1);
+                damagePopupObj.GetComponent<TextMeshPro>().text = damageVal.ToString();
+            }
+            else
+            {
+                damagePopupObj.GetComponent<TextMeshPro>().text = damageVal.ToString();
+            }
         }
 
         //Destroy the damage popup after a short delay

@@ -20,7 +20,7 @@ public class CameraMovement : MonoBehaviour
     void Update()
     {
         WasdCameraMovement();
-        CameraScrolling();
+        CameraZoom();
     }
 
     public void WasdCameraMovement()
@@ -51,8 +51,7 @@ public class CameraMovement : MonoBehaviour
         //Move the camera position
         transform.position = pos;
     }
-
-    public void CameraScrolling()
+    public void CameraZoom()
     {
         float scroll = Input.GetAxis("Mouse ScrollWheel");
 
