@@ -287,6 +287,8 @@ MonoBehaviour:
   cardName: River
   upgradeCost: 0
   upgradeType: 
+  bonusAmt: 0
+  bonusFloatAmt: 0
 --- !u!1 &8549088421056262557
 GameObject:
   m_ObjectHideFlags: 0

@@ -420,3 +420,5 @@ MonoBehaviour:
   cardName: Graveyard
   upgradeCost: 0
   upgradeType: 
+  bonusAmt: 0
+  bonusFloatAmt: 0

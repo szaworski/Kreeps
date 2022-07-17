@@ -149,6 +149,8 @@ MonoBehaviour:
   cardName: Swamp
   upgradeCost: 0
   upgradeType: 
+  bonusAmt: 0
+  bonusFloatAmt: 0
 --- !u!1 &6903677155270138448
 GameObject:
   m_ObjectHideFlags: 0

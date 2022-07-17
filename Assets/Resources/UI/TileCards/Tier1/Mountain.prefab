@@ -285,6 +285,8 @@ MonoBehaviour:
   cardName: Mountain
   upgradeCost: 0
   upgradeType: 
+  bonusAmt: 0
+  bonusFloatAmt: 0
 --- !u!1 &8055320014656591934
 GameObject:
   m_ObjectHideFlags: 0
