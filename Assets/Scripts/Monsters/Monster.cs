@@ -209,7 +209,6 @@ public class Monster : MonoBehaviour
                         yShiftAmt = 0.2f;
                         delayAmt = 0.1f;
                     }
-
                     else if (!isWeapon || isWeapon && !GlobalVars.useSlashAnim)
                     {
                         yShiftAmt = 0.1f;
@@ -220,7 +219,6 @@ public class Monster : MonoBehaviour
                     {
                         incomingDamage *= 1.5f;
                     }
-
                     else if (type.Contains("Beast"))
                     {
                         incomingDamage *= 0.5f;

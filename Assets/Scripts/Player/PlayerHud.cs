@@ -131,7 +131,6 @@ public class PlayerHud : MonoBehaviour
         bonusMaxHealth += 2 * GlobalVars.tileCounters["Graveyard"];
         bonusHpRegen += 1 * GlobalVars.tileCounters["Graveyard"];
 
-        bonusMaxHealth += 2 * GlobalVars.tileCounters["Mountain"];
         bonusArmor += 1 * GlobalVars.tileCounters["Mountain"];
 
         bonusMaxHealth += 5 * GlobalVars.tileCounters["River"];

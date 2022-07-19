@@ -101,7 +101,7 @@ MonoBehaviour:
   m_RefResolutionX: 640
   m_RefResolutionY: 320
   m_UpscaleRT: 0
-  m_PixelSnapping: 0
+  m_PixelSnapping: 1
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
@@ -117,3 +117,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8243d6f25411224eb90928ecdc96a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 0}
+  panSpeed: 5
+  scrollSpeed: 2.5
+  panLimit: {x: 0, y: 0}
+  pos: {x: 0, y: 0, z: 0}
