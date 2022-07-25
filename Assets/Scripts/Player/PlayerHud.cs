@@ -162,8 +162,8 @@ public class PlayerHud : MonoBehaviour
 
         bonusMoveSpeed += 0.05f * GlobalVars.tileCounters["CrimsonPlain"];
 
-        bonusHpRegen += 4 * GlobalVars.tileCounters["Crypt"];
-        bonusMoveSpeed += 0.01f * GlobalVars.tileCounters["Crypt"];
+        bonusHpRegen += 3 * GlobalVars.tileCounters["Crypt"];
+        bonusMoveSpeed += 0.03f * GlobalVars.tileCounters["Crypt"];
 
         bonusArmor += 3 * GlobalVars.tileCounters["EmeraldCave"];
 

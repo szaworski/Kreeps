@@ -210,6 +210,12 @@ public class TileSpawner : TileTypes
                 currentCardList = tier4TileCards.ToList();
             }
 
+            else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 40 && GlobalVars.tileCounters["numOfTimesPlaced"] < 50)
+            {
+                GlobalVars.currTier = "Tier5";
+                currentCardList = tier5TileCards.ToList();
+            }
+
             //Create a list of 3 unique random cards from the current card list
             for (int i = 0; i < 3; i++)
             {
@@ -365,7 +371,7 @@ public class TileSpawner : TileTypes
             monsterSelectText.enabled = false;
             Debug.Log("Monster Cards Destoryed");
 
-            if ((GlobalVars.tileCounters["numOfTimesPlaced"] - 1) % 2 == 0)  //if ((GlobalVars.tileCounters["numOfTimesPlaced"]) % 1 == 0)
+            if ((GlobalVars.tileCounters["numOfTimesPlaced"] - 1) % 2 == 0)
             {
                 GetAndShowShopCards();
             }
