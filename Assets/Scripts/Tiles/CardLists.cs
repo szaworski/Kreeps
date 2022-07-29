@@ -24,6 +24,14 @@ public class CardsLists : MonoBehaviour
     [System.NonSerialized] public List<string> settlementMonsterCards = new List<string> { "Knight", "Sheep", "Farmer", "Rat" };
     [System.NonSerialized] public List<string> seashoreMonsterCards = new List<string> { "Crab", "Drifter", "Fisherman", "Sea Serpent" };
 
+    //Tier 3 Monsters
+    [System.NonSerialized] public List<string> canyonCrossingMonsterCards = new List<string> { "Hunter", "Cavalry", "Pack Mule", "Falcon" };
+    [System.NonSerialized] public List<string> crimsonPlainMonsterCards = new List<string> { "Goblin Rider", "Imp", "Crimson Wolf", "Bison" };
+    [System.NonSerialized] public List<string> cryptMonsterCards = new List<string> { "Fiend", "Cultist", "Crawler", "Flying Skull" };
+    [System.NonSerialized] public List<string> emeraldCaveMonsterCards = new List<string> { "Gemstone Golem", "Jewel Thief", "Spectral Bear", "Badger" };
+    [System.NonSerialized] public List<string> marshMonsterCards = new List<string> { "Water Demon", "Reanimated Wolf", "Poison Toad", "Giant Slug" };
+    [System.NonSerialized] public List<string> sewerMonsterCards = new List<string> { "Slime", "Giant Roach", "Vile Wraith", "Dung Devil" };
+
     //Weapon cards
     [System.NonSerialized] public List<string> tier1WeaponCards = new List<string> { "Dagger", "ShortSword", "LongSword", "Spear", "HandAxe", "Mace" };
     [System.NonSerialized] public List<string> tier2WeaponCards = new List<string> { "SilverShortSword", "CharredDagger", "FrostWand", "JoltSabre", "Katana", "AstralSpear" };
