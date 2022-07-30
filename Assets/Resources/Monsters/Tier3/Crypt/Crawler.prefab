@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: -6739542867013121178}
   - component: {fileID: 6515737402300966651}
   m_Layer: 10
-  m_Name: Cavalry 4
+  m_Name: Crawler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -415,7 +415,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 429074423369542509, guid: 1cce512f6d58c5e47989446f25eff3db, type: 3}
+  m_Sprite: {fileID: 4158828487755506970, guid: d7d3dcc473ea7a941ab054b8b62ae6ef, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -443,7 +443,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.28125, y: 0.28125}
+    oldSize: {x: 0.21875, y: 0.21875}
     newSize: {x: 0.21875, y: 0.21875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -462,7 +462,7 @@ Animator:
   m_GameObject: {fileID: 6262272174153023960}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f64edf0adb3c01644a615ee6d1b111b9, type: 2}
+  m_Controller: {fileID: 9100000, guid: c18f4c65769ccf34aa80c78115833a1b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -484,12 +484,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 220
-  armor: 1
+  health: 320
+  armor: 0
   goldBounty: 10
-  type: Humanoid/Brute
-  moveSpeed: 0.6
-  hpRegen: 0
+  type: Undead
+  moveSpeed: 0.4
+  hpRegen: 3
   evasionChance: 0
   healthText: {fileID: 2240702306701519988}
   maxHealthText: {fileID: 7794477886941289041}
