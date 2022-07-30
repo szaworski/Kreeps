@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3c50722ec083041bcf2aec73db18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: Pacl Mule
+  cardName: Pack Mule
   upgradeCost: 0
   upgradeType: 
   bonusAmt: 0

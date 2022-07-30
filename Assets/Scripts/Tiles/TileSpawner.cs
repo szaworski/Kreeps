@@ -189,7 +189,6 @@ public class TileSpawner : TileTypes
             if (GlobalVars.tileCounters["numOfTimesPlaced"] < 10)
             {
                 currentCardList = tier1TileCards.ToList();
-                //Debug.Log("Card List: " + currentCardList[0] + " " + currentCardList[1] + " " + currentCardList[2] + " " + currentCardList[3] + " " + currentCardList[4]);
             }
 
             else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 10 && GlobalVars.tileCounters["numOfTimesPlaced"] < 20)
@@ -320,7 +319,27 @@ public class TileSpawner : TileTypes
                 currentCardList = seashoreMonsterCards.ToList();
                 break;
 
-                //Tier 3
+            //Tier 3
+            case "CanyonCrossing":
+                currentCardList = canyonCrossingMonsterCards.ToList();
+                break;
+            case "CrimsonPlain":
+                currentCardList = crimsonPlainMonsterCards.ToList();
+                break;
+            case "Crypt":
+                currentCardList = cryptMonsterCards.ToList();
+                break;
+            case "EmeraldCave":
+                currentCardList = emeraldCaveMonsterCards.ToList();
+                break;
+            case "Marsh":
+                currentCardList = marshMonsterCards.ToList();
+                break;
+            case "Sewer":
+                currentCardList = sewerMonsterCards.ToList();
+                break;
+
+                //Tier 4
         }
 
         //Create a list of 2 unique random cards from the current card list
