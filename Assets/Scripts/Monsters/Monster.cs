@@ -19,6 +19,9 @@ public class Monster : MonoBehaviour
     [SerializeField] private GameObject HealthContainer;
     private float hpRegenCd;
     private int damage;
+    private Color green = new Vector4(0, 1, 0, 1);
+    private Color yellow = new Vector4(1, 1, 0.02f, 1);
+    private Color red = new Vector4(1, 0, 0, 1);
 
     [Header("Vars used for targeting")]
     private Vector3 lastPos;
@@ -49,6 +52,9 @@ public class Monster : MonoBehaviour
         healthText.SetText(health.ToString());
         maxHealthText.SetText(health.ToString());
         armorText.SetText(armor.ToString());
+
+        healthText.color = green;
+        maxHealthText.color = green;
 
         foreach (GameObject waypoint in waypoints)
         {
@@ -352,6 +358,23 @@ public class Monster : MonoBehaviour
                 health += hpRegen;
                 healthText.SetText(health.ToString());
                 StartCoroutine(SpawnHpRegenPopup(hpRegen, 0.25f));
+
+                //Change health color when necessary 
+                if (health <= maxHealth * 0.7f && health >= maxHealth * 0.35f)
+                {
+                    healthText.color = yellow;
+                    maxHealthText.color = yellow;
+                }
+                else if (health < maxHealth * 0.35f)
+                {
+                    healthText.color = red;
+                    maxHealthText.color = red;
+                }
+                else if (health > maxHealth * 0.7f)
+                {
+                    healthText.color = green;
+                    maxHealthText.color = green;
+                }
             }
 
             else if (health + hpRegen >= maxHealth)
@@ -359,6 +382,8 @@ public class Monster : MonoBehaviour
                 hpRegenCd = 1f + Time.time;
                 health = maxHealth;
                 healthText.SetText(health.ToString());
+                healthText.color = green;
+                maxHealthText.color = green;
             }
         }
     }
@@ -430,6 +455,18 @@ public class Monster : MonoBehaviour
                 {
                     Destroy(projectileObj.gameObject);
                 }
+            }
+
+            //Change health color when necessary 
+            if (health <= maxHealth * 0.7f && health >= maxHealth * 0.35f)
+            {
+                healthText.color = yellow;
+                maxHealthText.color = yellow;
+            }
+            else if (health < maxHealth * 0.35f)
+            {
+                healthText.color = red;
+                maxHealthText.color = red;
             }
         }
     }
