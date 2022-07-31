@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 8293651273878270205}
   - component: {fileID: 8126199298144056618}
   - component: {fileID: 2587371828718998213}
+  - component: {fileID: 576158159329145034}
   m_Layer: 9
   m_Name: TowerGridPosition
   m_TagString: TowerGrid
@@ -191,6 +192,11 @@ MonoBehaviour:
   - {fileID: 4015292943814407837, guid: 9c16bbf81b141d24a8ed851d7f6593fe, type: 3}
   placedTower: {fileID: 0}
   towerAttackRadius: {fileID: 0}
+  towerStats: {fileID: 0}
+  towerScript: {fileID: 0}
+  card1: 
+  card2: 
+  card3: 
   hasTower: 0
 --- !u!65 &2587371828718998213
 BoxCollider:
@@ -205,3 +211,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3125, y: 0.3125, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &576158159329145034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8293651273878270204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c446d03a0ab3ab8458aa1d417320fff3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Right click to open the upgrade menu
+  isTowerGrid: 1

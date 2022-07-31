@@ -275,7 +275,8 @@ MonoBehaviour:
   projectileSpeed: 0
   attackSpeed: 0.7
   attackRange: 0.8
-  damageType: IceSpire
+  critChance: 0
+  damageType: Ice2
   slowAmt: 0.2
   attackRadius: {fileID: 247469621238869209}
   dmgText: {fileID: 2312874210526919566}

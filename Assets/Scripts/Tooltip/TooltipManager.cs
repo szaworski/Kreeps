@@ -28,7 +28,7 @@ public class TooltipManager : MonoBehaviour
 
     void Update()
     {
-        transform.position = Input.mousePosition;
+        transform.position = Input.mousePosition + new Vector3(0, 10, 0);
         //mouseScreenPosition = Input.mousePosition;
         //transform.position =  camera.ScreenToWorldPoint(new Vector3(mouseScreenPosition.x, mouseScreenPosition.y, camera.nearClipPlane));
     }

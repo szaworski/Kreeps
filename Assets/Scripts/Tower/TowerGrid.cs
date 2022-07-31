@@ -173,6 +173,7 @@ public class TowerGrid : MonoBehaviour
         if (hasTower)
         {
             //Hide the attack radius sprite on mouse exit 
+            GlobalVars.IsHoveringOverTower = false;
             towerAttackRadius.SetActive(false);
             towerStats.SetActive(false);
         }
@@ -216,11 +217,13 @@ public class TowerGrid : MonoBehaviour
     {
         if (hasTower && !towerStats.activeSelf)
         {
+            GlobalVars.IsHoveringOverTower = true;
             towerStats.SetActive(true);
         }
 
         else if (hasTower && towerStats.activeSelf)
         {
+            GlobalVars.IsHoveringOverTower = false;
             towerStats.SetActive(false);
         }
     }
@@ -401,5 +404,6 @@ public class TowerGrid : MonoBehaviour
     public void DestroyTower(GameObject towerObj)
     {
         Destroy(towerObj);
+        GlobalVars.IsHoveringOverTower = false;
     }
 }

@@ -285,6 +285,8 @@ MonoBehaviour:
   cardName: FireLvl7
   upgradeCost: 550
   upgradeType: Fire
+  bonusAmt: 0
+  bonusFloatAmt: 0
 --- !u!1 &1459147331767133334
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Text.RegularExpressions;
+using TMPro;
 using UnityEngine;
 
 public class Tower : MonoBehaviour
@@ -164,32 +165,34 @@ public class Tower : MonoBehaviour
 
     public void GetBonus()
     {
-        if (bonusDamage < GlobalVars.bonusStats[damageType])
+        string trimmedDamageType = Regex.Replace(damageType, @"[\d-]", string.Empty);
+
+        if (bonusDamage < GlobalVars.bonusStats[trimmedDamageType])
         {
-            bonusDamage = GlobalVars.bonusStats[damageType];
+            bonusDamage = GlobalVars.bonusStats[trimmedDamageType];
         }
 
-        if (damageType == "Ice" || damageType == "Swift")
+        if (trimmedDamageType == "Ice" || trimmedDamageType == "Swift")
         {
-            if (bonusRange < GlobalVars.bonusExtraStats[damageType + "RangeUp"])
+            if (bonusRange < GlobalVars.bonusExtraStats[trimmedDamageType + "RangeUp"])
             {
-                bonusRange = GlobalVars.bonusExtraStats[damageType + "RangeUp"];
+                bonusRange = GlobalVars.bonusExtraStats[trimmedDamageType + "RangeUp"];
             }
         }
 
-        if (damageType == "Fire" || damageType == "Holy")
+        if (trimmedDamageType == "Fire" || trimmedDamageType == "Holy")
         {
-            if (bonusSpeed < GlobalVars.bonusExtraStats[damageType + "SpeedUp"])
+            if (bonusSpeed < GlobalVars.bonusExtraStats[trimmedDamageType + "SpeedUp"])
             {
-                bonusSpeed = GlobalVars.bonusExtraStats[damageType + "SpeedUp"];
+                bonusSpeed = GlobalVars.bonusExtraStats[trimmedDamageType + "SpeedUp"];
             }
         }
 
-        if (damageType == "Thunder" || damageType == "Cosmic")
+        if (trimmedDamageType == "Thunder" || trimmedDamageType == "Cosmic")
         {
-            if (bonusCritChance < GlobalVars.bonusExtraStats[damageType + "CritChanceUp"])
+            if (bonusCritChance < GlobalVars.bonusExtraStats[trimmedDamageType + "CritChanceUp"])
             {
-                bonusCritChance = GlobalVars.bonusExtraStats[damageType + "CritChanceUp"];
+                bonusCritChance = GlobalVars.bonusExtraStats[trimmedDamageType + "CritChanceUp"];
             }
         }
     }
