@@ -149,6 +149,8 @@ MonoBehaviour:
   cardName: IceLvl4
   upgradeCost: 150
   upgradeType: Ice
+  bonusAmt: 0
+  bonusFloatAmt: 0
 --- !u!1 &8196507382453859790
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,10 +358,10 @@ MonoBehaviour:
 
     Cost: 150g
 
-    Dmg: 18
+    Dmg: 20
 
     Rof:
-    0.8
+    0.9
 
     Rng: 1'
   m_isRightToLeft: 0

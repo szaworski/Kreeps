@@ -206,7 +206,7 @@ MonoBehaviour:
 
     Cost: 300g
 
-    Dmg: 55
+    Dmg: 50
 
     Rof: 0.8
 
@@ -430,3 +430,5 @@ MonoBehaviour:
   cardName: CosmicLvl3
   upgradeCost: 300
   upgradeType: Cosmic
+  bonusAmt: 0
+  bonusFloatAmt: 0

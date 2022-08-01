@@ -68,11 +68,11 @@ MonoBehaviour:
   m_text: 'AOE in radius
 
 
-    Cost: 250g
+    Cost: 300g
 
-    Dmg: 30
+    Dmg: 40
 
-    Rof: 1.4
+    Rof: 1.5
 
     Rng: 0.8
 
@@ -428,5 +428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: ThunderLvl5
-  upgradeCost: 250
+  upgradeCost: 300
   upgradeType: Thunder
+  bonusAmt: 0
+  bonusFloatAmt: 0

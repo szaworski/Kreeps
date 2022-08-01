@@ -1170,7 +1170,8 @@ MonoBehaviour:
   damage: 35
   projectileSpeed: 5
   attackSpeed: 1
-  attackRange: 1.5
+  attackRange: 2
+  critChance: 0
   damageType: Neutral
   slowAmt: 0
   attackRadius: {fileID: 9061148783392565081}

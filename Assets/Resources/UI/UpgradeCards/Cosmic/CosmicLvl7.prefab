@@ -206,7 +206,7 @@ MonoBehaviour:
 
     Cost: 1000g
 
-    Dmg: 200
+    Dmg: 250
 
     Rof: 3
 
@@ -430,3 +430,5 @@ MonoBehaviour:
   cardName: CosmicLvl7
   upgradeCost: 1000
   upgradeType: Cosmic
+  bonusAmt: 0
+  bonusFloatAmt: 0

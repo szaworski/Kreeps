@@ -149,6 +149,8 @@ MonoBehaviour:
   cardName: SwiftLvl2
   upgradeCost: 225
   upgradeType: Swift
+  bonusAmt: 0
+  bonusFloatAmt: 0
 --- !u!1 &4263802425999131333
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,11 +357,11 @@ MonoBehaviour:
 
     Cost: 225g
 
-    Dmg: 20
+    Dmg: 18
 
-    Rof: 0.5
+    Rof: 0.45
 
-    Rng: 1
+    Rng: 0.8
 
 '
   m_isRightToLeft: 0

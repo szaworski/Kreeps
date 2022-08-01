@@ -149,6 +149,8 @@ MonoBehaviour:
   cardName: NeutralLvl4
   upgradeCost: 100
   upgradeType: Neutral
+  bonusAmt: 0
+  bonusFloatAmt: 0
 --- !u!1 &354252274503662542
 GameObject:
   m_ObjectHideFlags: 0

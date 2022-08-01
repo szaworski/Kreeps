@@ -360,8 +360,9 @@ MonoBehaviour:
   attackCd: 0
   damage: 50
   projectileSpeed: 4
-  attackSpeed: 1
+  attackSpeed: 0.9
   attackRange: 1
+  critChance: 0
   damageType: Ice
   slowAmt: 0.2
   attackRadius: {fileID: 247469621238869209}

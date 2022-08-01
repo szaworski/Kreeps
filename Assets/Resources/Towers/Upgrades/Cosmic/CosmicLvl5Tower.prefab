@@ -273,8 +273,9 @@ MonoBehaviour:
   attackCd: 0
   damage: 90
   projectileSpeed: 4
-  attackSpeed: 0.75
+  attackSpeed: 0.7
   attackRange: 1.5
+  critChance: 0
   damageType: Cosmic
   slowAmt: 0
   attackRadius: {fileID: 4442308903161421057}

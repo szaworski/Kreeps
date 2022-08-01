@@ -208,9 +208,9 @@ MonoBehaviour:
 
     Dmg: 30
 
-    Rof: 0.9
+    Rof: 0.8
 
-    Rng: 1
+    Rng: 0.8
 
 '
   m_isRightToLeft: 0
@@ -430,3 +430,5 @@ MonoBehaviour:
   cardName: NeutralLvl3
   upgradeCost: 100
   upgradeType: Neutral
+  bonusAmt: 0
+  bonusFloatAmt: 0

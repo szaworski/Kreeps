@@ -204,13 +204,13 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Cost: 650g
+    Cost: 800g
 
-    Dmg: 30
+    Dmg: 32
 
-    Rof: 0.25
+    Rof: 0.2
 
-    Rng: 1.4
+    Rng: 1.2
 
 '
   m_isRightToLeft: 0
@@ -428,5 +428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: SwiftLvl7
-  upgradeCost: 650
+  upgradeCost: 800
   upgradeType: Swift
+  bonusAmt: 0
+  bonusFloatAmt: 0

@@ -568,10 +568,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   attackCd: 0
-  damage: 55
+  damage: 50
   projectileSpeed: 4
-  attackSpeed: 0.8
+  attackSpeed: 0.7
   attackRange: 1
+  critChance: 0
   damageType: Thunder
   slowAmt: 0
   attackRadius: {fileID: 7682126142615179629}

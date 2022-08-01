@@ -270,10 +270,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   attackCd: 0
-  damage: 45
+  damage: 28
   projectileSpeed: 4
-  attackSpeed: 0.7
+  attackSpeed: 0.4
   attackRange: 1
+  critChance: 0
   damageType: Holy
   slowAmt: 0
   attackRadius: {fileID: 1578552572651102220}
