@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: Cosmic
-  upgradeCost: 250
+  upgradeCost: 150
   upgradeType: BonusDmg
   bonusAmt: 5
   bonusFloatAmt: 0
@@ -355,7 +355,7 @@ MonoBehaviour:
   m_text: 'Cosmic type weapons and towers gain +5 damage
 
 
-    Cost: 250g'
+    Cost: 150g'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

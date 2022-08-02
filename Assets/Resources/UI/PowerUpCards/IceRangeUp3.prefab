@@ -147,10 +147,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: IceRangeUp
-  upgradeCost: 300
+  upgradeCost: 200
   upgradeType: BonusRange
   bonusAmt: 0
-  bonusFloatAmt: 0.3
+  bonusFloatAmt: 0.2
 --- !u!1 &4698487345527608529
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,10 +352,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ice type weapons and towers gain +0.3 attack range
+  m_text: 'Ice type weapons and towers gain +0.2 attack range
 
 
-    Cost: 300g'
+    Cost: 200g'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

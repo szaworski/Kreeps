@@ -283,10 +283,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: CosmicCritChanceUp
-  upgradeCost: 600
+  upgradeCost: 250
   upgradeType: BonusCritChance
   bonusAmt: 0
-  bonusFloatAmt: 0.2
+  bonusFloatAmt: 0.1
 --- !u!1 &8139315525478325520
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,10 +352,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cosmic type weapons and towers gain +20% crit chance
+  m_text: 'Cosmic type weapons and towers gain +10% crit chance
 
 
-    Cost: 600g'
+    Cost: 250g'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
