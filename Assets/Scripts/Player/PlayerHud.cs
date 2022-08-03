@@ -147,7 +147,7 @@ public class PlayerHud : MonoBehaviour
         bonusMaxHealth += 5 * GlobalVars.tileCounters["Seashore"];
         bonusArmor += 1 * GlobalVars.tileCounters["Seashore"];
 
-        bonusMaxHealth += 4 * GlobalVars.tileCounters["Settlement"];
+        bonusMaxHealth += 5 * GlobalVars.tileCounters["Settlement"];
         bonusMoveSpeed += 0.03f * GlobalVars.tileCounters["Settlement"];
 
         bonusMaxHealth += 5 * GlobalVars.tileCounters["Thicket"];
@@ -188,7 +188,7 @@ public class PlayerHud : MonoBehaviour
         //Apply any Tier 5 bonuses
 
         //Set the new text values
-        bonusMoveSpeedUiText.SetText(("+") + (bonusMoveSpeed * 100).ToString());
+        bonusMoveSpeedUiText.SetText(("+") + Mathf.Round(bonusMoveSpeed * 100).ToString());
         bonusMaxHealthUiText.SetText(("+") + bonusMaxHealth.ToString());
         bonusHpRegenUiText.SetText(("+") + bonusHpRegen.ToString());
         bonusEvasionUiText.SetText(("+") + Mathf.Round(bonusEvasion * 100) + ("%").ToString());

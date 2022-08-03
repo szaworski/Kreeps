@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Swift type weapons and towers gain +4 damage
+  m_text: 'Swift type weapons and towers gain +6 damage
 
 
     Cost: 200g'
@@ -286,7 +286,7 @@ MonoBehaviour:
   cardName: Swift
   upgradeCost: 200
   upgradeType: BonusDmg
-  bonusAmt: 4
+  bonusAmt: 6
   bonusFloatAmt: 0
 --- !u!1 &8692462336114237473
 GameObject:
