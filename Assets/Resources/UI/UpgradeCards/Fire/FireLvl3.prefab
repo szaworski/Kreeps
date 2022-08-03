@@ -206,7 +206,7 @@ MonoBehaviour:
 
     Cost: 150g
 
-    Dmg: 16
+    Dmg: 12
 
     Rof: 0.75
 
@@ -430,3 +430,5 @@ MonoBehaviour:
   cardName: FireLvl3
   upgradeCost: 150
   upgradeType: Fire
+  bonusAmt: 0
+  bonusFloatAmt: 0

@@ -149,6 +149,8 @@ MonoBehaviour:
   cardName: Tundra
   upgradeCost: 0
   upgradeType: 
+  bonusAmt: 0
+  bonusFloatAmt: 0
 --- !u!1 &6903677155270138448
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,9 +218,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +2 hp regen
+    +3 hp regen
 
-    +2 move speed
+    +3 move speed
 
     for each Tundra
     placed'

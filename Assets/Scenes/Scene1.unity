@@ -1550,8 +1550,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\nCost: 50g\nSell value: 45g\nDamage: 7\nRate of fire: 0.9\nRange:
-    1\nBonus: \nNone\nPenalty:\nNone"
+  m_text: "Single target\nCost: 50g\nSell value: 45g\nDamage: 7\nRate of fire: 0.8\nRange:
+    0.8\nBonus: \nNone\nPenalty:\nNone"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -3325,12 +3325,12 @@ MonoBehaviour:
 
     Sell value: 175g
 
-    Damage: 9
+    Damage: 8
 
     Rate
     of fire: 0.5
 
-    Range: 1
+    Range: 0.8
 
     Bonus:
 
@@ -4965,7 +4965,7 @@ MonoBehaviour:
 
     Sell value: 125g
 
-    Damage: 16
+    Damage: 10
 
     Rate
     of fire: 1.2
@@ -8397,7 +8397,7 @@ MonoBehaviour:
 
     Sell value: 125g
 
-    Damage: 20
+    Damage: 14
 
     Rate
     of fire: 1.5

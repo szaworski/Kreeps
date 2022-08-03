@@ -207,7 +207,7 @@ MonoBehaviour:
 
     Cost: 150g
 
-    Dmg: 14
+    Dmg: 10
 
     Rof:
     0.75
@@ -432,3 +432,5 @@ MonoBehaviour:
   cardName: IceLvl3
   upgradeCost: 150
   upgradeType: Ice
+  bonusAmt: 0
+  bonusFloatAmt: 0

@@ -149,6 +149,8 @@ MonoBehaviour:
   cardName: Cavern
   upgradeCost: 0
   upgradeType: 
+  bonusAmt: 0
+  bonusFloatAmt: 0
 --- !u!1 &6903677155270138448
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,7 +218,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +1 armor
+    +2 armor
 
     +2 hp regen
 
