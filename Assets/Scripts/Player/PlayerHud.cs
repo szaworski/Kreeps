@@ -128,33 +128,33 @@ public class PlayerHud : MonoBehaviour
         //Apply any Tier 1 bonuses
         bonusMoveSpeed += 0.03f * GlobalVars.tileCounters["Forest"];
 
-        bonusMaxHealth += 2 * GlobalVars.tileCounters["Graveyard"];
-        bonusHpRegen += 1 * GlobalVars.tileCounters["Graveyard"];
+        bonusHpRegen += 2 * GlobalVars.tileCounters["Graveyard"];
 
         bonusArmor += 1 * GlobalVars.tileCounters["Mountain"];
+        bonusMaxHealth += 2 * GlobalVars.tileCounters["Mountain"];
 
         bonusMaxHealth += 5 * GlobalVars.tileCounters["River"];
 
-        bonusEvasion += 0.02f * GlobalVars.tileCounters["Swamp"];
+        bonusEvasion += 0.03f * GlobalVars.tileCounters["Swamp"];
 
         //Apply any Tier 2 bonuses
-        bonusArmor += 1 * GlobalVars.tileCounters["Cavern"];
+        bonusArmor += 2 * GlobalVars.tileCounters["Cavern"];
         bonusHpRegen += 2 * GlobalVars.tileCounters["Cavern"];
 
-        bonusHpRegen += 1 * GlobalVars.tileCounters["Desert"];
-        bonusEvasion += 0.02f * GlobalVars.tileCounters["Desert"];
+        bonusHpRegen += 2 * GlobalVars.tileCounters["Desert"];
+        bonusMaxHealth += 10 * GlobalVars.tileCounters["Desert"];
 
-        bonusMaxHealth += 5 * GlobalVars.tileCounters["Seashore"];
+        bonusMaxHealth += 10 * GlobalVars.tileCounters["Seashore"];
         bonusArmor += 1 * GlobalVars.tileCounters["Seashore"];
 
-        bonusMaxHealth += 5 * GlobalVars.tileCounters["Settlement"];
-        bonusMoveSpeed += 0.03f * GlobalVars.tileCounters["Settlement"];
+        bonusEvasion += 0.02f * GlobalVars.tileCounters["Settlement"];
+        bonusMoveSpeed += 0.04f * GlobalVars.tileCounters["Settlement"];
 
-        bonusMaxHealth += 5 * GlobalVars.tileCounters["Thicket"];
+        bonusMaxHealth += 10 * GlobalVars.tileCounters["Thicket"];
         bonusEvasion += 0.02f * GlobalVars.tileCounters["Thicket"];
 
-        bonusHpRegen += 2 * GlobalVars.tileCounters["Tundra"];
-        bonusMoveSpeed += 0.02f * GlobalVars.tileCounters["Tundra"];
+        bonusHpRegen += 3 * GlobalVars.tileCounters["Tundra"];
+        bonusMoveSpeed += 0.03f * GlobalVars.tileCounters["Tundra"];
 
         //Apply any Tier 3 bonuses
         bonusArmor += 2 * GlobalVars.tileCounters["CanyonCrossing"];
