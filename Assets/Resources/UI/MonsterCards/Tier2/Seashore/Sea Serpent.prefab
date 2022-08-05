@@ -149,6 +149,8 @@ MonoBehaviour:
   cardName: Sea Serpent
   upgradeCost: 0
   upgradeType: 
+  bonusAmt: 0
+  bonusFloatAmt: 0
 --- !u!1 &7402375620175900289
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,7 +221,7 @@ MonoBehaviour:
 
     Base stats:
 
-    Health: 100
+    Health: 180
 
     Armor: 0
 

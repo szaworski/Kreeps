@@ -99,10 +99,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   attackCd: 0
-  damage: 3
+  damage: 4
   projectileSpeed: 0
-  attackSpeed: 0.75
+  attackSpeed: 0.9
   attackRange: 0.6
+  critChance: 0
   damageType: Ice
   slowAmt: 0.05
   attackRadius: {fileID: 1235488988543047019}
