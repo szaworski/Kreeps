@@ -204,7 +204,7 @@ MonoBehaviour:
   m_text: 'AOE in radius
 
 
-    Cost: 300g
+    Cost: 250g
 
     Dmg: 22
 
@@ -428,7 +428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: CosmicLvl2
-  upgradeCost: 300
+  upgradeCost: 250
   upgradeType: Cosmic
   bonusAmt: 0
   bonusFloatAmt: 0

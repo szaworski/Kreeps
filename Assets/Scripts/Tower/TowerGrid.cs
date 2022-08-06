@@ -312,31 +312,31 @@ public class TowerGrid : MonoBehaviour
             switch (gridScript.towerScript.damageType)
             {
                 case var _ when gridScript.towerScript.damageType.Contains("Neutral"):
-                    GlobalVars.newGoldValue = GlobalVars.gold + 45;
+                    GlobalVars.newGoldValue = GlobalVars.gold + 65;
                     break;
 
                 case var _ when gridScript.towerScript.damageType.Contains("Fire"):
-                    GlobalVars.newGoldValue = GlobalVars.gold + 100;
+                    GlobalVars.newGoldValue = GlobalVars.gold + 80;
                     break;
 
                 case var _ when gridScript.towerScript.damageType.Contains("Ice"):
-                    GlobalVars.newGoldValue = GlobalVars.gold + 100;
+                    GlobalVars.newGoldValue = GlobalVars.gold + 80;
                     break;
 
                 case var _ when gridScript.towerScript.damageType.Contains("Thunder"):
-                    GlobalVars.newGoldValue = GlobalVars.gold + 125;
+                    GlobalVars.newGoldValue = GlobalVars.gold + 100;
                     break;
 
                 case var _ when gridScript.towerScript.damageType.Contains("Holy"):
-                    GlobalVars.newGoldValue = GlobalVars.gold + 125;
+                    GlobalVars.newGoldValue = GlobalVars.gold + 100;
                     break;
 
                 case var _ when gridScript.towerScript.damageType.Contains("Swift"):
-                    GlobalVars.newGoldValue = GlobalVars.gold + 175;
+                    GlobalVars.newGoldValue = GlobalVars.gold + 150;
                     break;
 
                 case var _ when gridScript.towerScript.damageType.Contains("Cosmic"):
-                    GlobalVars.newGoldValue = GlobalVars.gold + 250;
+                    GlobalVars.newGoldValue = GlobalVars.gold + 200;
                     break;
             }
             //Reset bools for next upgrade card selection

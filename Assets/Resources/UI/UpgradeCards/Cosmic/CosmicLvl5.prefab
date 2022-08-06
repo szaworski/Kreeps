@@ -68,7 +68,7 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Cost: 400g
+    Cost: 350g
 
     Dmg: 50
 
@@ -428,7 +428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: CosmicLvl5
-  upgradeCost: 400
+  upgradeCost: 350
   upgradeType: Cosmic
   bonusAmt: 0
   bonusFloatAmt: 0

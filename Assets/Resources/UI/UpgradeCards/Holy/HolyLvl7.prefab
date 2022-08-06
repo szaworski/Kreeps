@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: HolyLvl7
-  upgradeCost: 700
+  upgradeCost: 600
   upgradeType: Holy
   bonusAmt: 0
   bonusFloatAmt: 0
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_text: 'AOE in radius
 
 
-    Cost: 700g
+    Cost: 600g
 
     Dmg: 40
 
