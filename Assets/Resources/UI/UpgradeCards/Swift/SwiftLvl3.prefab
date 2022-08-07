@@ -216,7 +216,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Swift Lvl 3
+  m_text: 'Swift 3
 
 '
   m_isRightToLeft: 0

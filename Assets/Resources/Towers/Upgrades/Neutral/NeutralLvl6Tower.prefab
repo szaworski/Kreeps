@@ -823,7 +823,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sniper Lvl 3
+  m_text: 'Sniper 3
 
 
 '
@@ -1167,7 +1167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   attackCd: 0
-  damage: 24
+  damage: 25
   projectileSpeed: 5
   attackSpeed: 1
   attackRange: 2

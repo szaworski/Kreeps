@@ -676,7 +676,7 @@ public class TileSpawner : TileTypes
         switch (GlobalVars.tileName)
         {
             case "StartingTile":
-                validTiles[0] = true;
+                //validTiles[0] = true;
                 validTiles[2] = true;
                 validTiles[3] = true;
                 shiftAmtYpos += 1;

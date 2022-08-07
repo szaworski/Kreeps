@@ -654,7 +654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 20
+  health: 16
   armor: 0
   goldBounty: 10
   type: None

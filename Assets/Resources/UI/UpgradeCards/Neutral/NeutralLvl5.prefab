@@ -216,7 +216,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sniper Lvl 2
+  m_text: 'Sniper 2
 
 '
   m_isRightToLeft: 0
@@ -357,7 +357,7 @@ MonoBehaviour:
 
     Cost: 100g
 
-    Dmg: 18
+    Dmg: 20
 
     Rof: 1
 

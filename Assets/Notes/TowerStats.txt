@@ -2,25 +2,25 @@
 Normal towers:
 
 Normal Lvl 1
-Type: single target, Cost: 50, Dmg: 5, Rof: 0.8, Rng: 0.8
+Type: single target, Cost: 50, Dmg: 5, Rof: 0.9, Rng: 0.8
 
 Normal Lvl 2
-Type: single target, Cost: 75, Dmg: 10, Rof: 0.8, Rng: 0.8
+Type: single target, Cost: 75, Dmg: 10, Rof: 0.9, Rng: 0.8
 
 Normal Lvl 3
-Type: single target, Cost: 100, Dmg: 20, Rof: 0.8, Rng: 0.8
+Type: single target, Cost: 100, Dmg: 20, Rof: 0.9, Rng: 0.8
 
 Sniper Lvl 1
 Type: single target, Cost: 100, Dmg: 12, Rof: 1, Rng: 1.25
 
 Sniper Lvl 2
-Type: single target, Cost: 100, Dmg: 18, Rof: 1, Rng: 1.5
+Type: single target, Cost: 100, Dmg: 20, Rof: 1, Rng: 1.5
 
 Sniper Lvl 3
-Type: single target, Cost: 150, Dmg: 24, Rof: 1, Rng: 2
+Type: single target, Cost: 150, Dmg: 25, Rof: 1, Rng: 2
 
 Big Shot
-Type: single target, Cost: 200, Dmg: 32, Rof: 0.8, Rng: 0.8
+Type: single target, Cost: 200, Dmg: 32, Rof: 0.9, Rng: 0.8
 
 
 
@@ -35,13 +35,13 @@ Type: AOE, Cost: 125, Dmg: 8, Rof: 0.7, Rng: 0.6
 Fire Lvl 3
 Type: AOE, Cost: 150, Dmg: 12, Rof: 0.65, Rng: 0.6
 
-Fire Spitter Lvl 1
+Ember Lvl 1
 Type: single target, Cost: 125, Dmg: 14, Rof: 0.8, Rng: 1
 
-Fire Spitter Lvl 2
+Ember Lvl 2
 Type: single target, Cost: 175, Dmg: 22, Rof: 0.6, Rng: 1
 
-Fire Spitter Lvl 3
+Ember Lvl 3
 Type: single target, Cost: 250, Dmg: 40, Rof: 1, Rng: 1
 
 Fire Storm
@@ -60,16 +60,16 @@ Type: AOE, Cost: 125, Dmg: 8, Rof: 0.9, Rng: 0.6
 Ice Lvl 3
 Type: AOE, Cost: 150, Dmg: 12, Rof: 0.9, Rng: 0.6
 
-Ice Blaster Lvl 1
+Frost Lvl 1
 Type: single target, Cost: 125, Dmg: 10, Rof: 0.7, Rng: 1
 
-Ice Blaster Lvl 2
+Frost Lvl 2
 Type: single target, Cost: 175, Dmg: 18, Rof: 0.5, Rng: 1
 
-Ice Blaster Lvl 3
+Frost Lvl 3
 Type: single target, Cost: 250, Dmg: 28, Rof: 0.7, Rng: 1
 
-Ice Spire
+Snow Spire
 Type: AOE, Cost: 500, Dmg: 20, Rof: 0.7, Rng: 0.8
 
 
@@ -85,13 +85,13 @@ Type: single target, Cost: 125, Dmg: 30, Rof: 1.5, Rng: 1
 Thunder Lvl 3
 Type: single target, Cost: 150, Dmg: 50, Rof: 1.5, Rng: 1
 
-Thunder Shard Lvl 1
+Shock Lvl 1
 Type: single target, Cost: 150, Dmg: 24, Rof: 1, Rng: 1
 
-Thunder Shard Lvl 2
+Shock Lvl 2
 Type: AOE, Cost: 250, Dmg: 30, Rof: 1.5, Rng: 0.8
 
-Thunder Shard Lvl 3
+Shock Lvl 3
 Type: single target, Cost: 300, Dmg: 40, Rof: 0.7, Rng: 1
 
 Sunderbolt
@@ -110,13 +110,13 @@ Type: single target, Cost: 125, Dmg: 22, Rof: 1.2, Rng: 0.8
 Holy Lvl 3
 Type: single target, Cost: 150, Dmg: 40, Rof: 1.2, Rng: 0.8
 
-Holy Orb Lvl 1
+Divine Lvl 1
 Type: single target, Cost: 150, Dmg: 16, Rof: 0.8, Rng: 1
 
-Holy Orb Lvl 2
+Divine Lvl 2
 Type: single target, Cost: 250, Dmg: 30, Rof: 0.7, Rng: 1
 
-Holy Orb Lvl 3
+Divine Lvl 3
 Type: single target, Cost: 300, Dmg: 22, Rof: 0.4, Rng: 1
 
 Cathedral
@@ -135,13 +135,13 @@ Type: single target, Cost: 200, Dmg: 16, Rof: 0.45, Rng: 0.8
 Swift Lvl 3
 Type: single target, Cost: 250, Dmg: 30, Rof: 0.4, Rng: 0.8
 
-Swift Gunner Lvl 1
+Agile Lvl 1
 Type: single target, Cost: 250, Dmg: 18, Rof: 0.45, Rng: 1
 
-Swift Gunner Lvl 2
+Agile Lvl 2
 Type: single target, Cost: 250, Dmg: 32, Rof: 0.4, Rng: 1
 
-Swift Gunner Lvl 3
+Agile Lvl 3
 Type: single target, Cost: 350, Dmg: 36, Rof: 0.35, Rng: 1
 
 Citadel
@@ -159,13 +159,13 @@ Type: AOE, Cost: 250, Dmg: 22, Rof: 0.8, Rng: 0.8
 Cosmic Lvl 3
 Type: AOE, Cost: 250, Dmg: 40, Rof: 0.8, Rng: 0.8
 
-Cosmic Missile Lvl 1
+Comet Lvl 1
 Type: single target, Cost: 350, Dmg: 40, Rof: 0.9, Rng: 1.5
 
-Cosmic Missile Lvl 2
+Comet Lvl 2
 Type: single target, Cost: 350, Dmg: 50, Rof: 0.7, Rng: 1.5
 
-Cosmic Missile Lvl 3
+Comet Lvl 3
 Type: single target, Cost: 450, Dmg: 60, Rof: 0.5, Rng: 1.2
 
 Observatory
