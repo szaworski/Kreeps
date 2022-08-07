@@ -128,7 +128,8 @@ public class PlayerHud : MonoBehaviour
         //Apply any Tier 1 bonuses
         bonusMoveSpeed += 0.03f * GlobalVars.tileCounters["Forest"];
 
-        bonusHpRegen += 2 * GlobalVars.tileCounters["Graveyard"];
+        bonusHpRegen += 1 * GlobalVars.tileCounters["Graveyard"];
+        bonusMaxHealth += 2 * GlobalVars.tileCounters["Graveyard"];
 
         bonusArmor += 1 * GlobalVars.tileCounters["Mountain"];
         bonusMaxHealth += 2 * GlobalVars.tileCounters["Mountain"];
@@ -151,7 +152,6 @@ public class PlayerHud : MonoBehaviour
         bonusMoveSpeed += 0.04f * GlobalVars.tileCounters["Settlement"];
 
         bonusEvasion += 0.02f * GlobalVars.tileCounters["Thicket"];
-
         bonusMaxHealth += 10 * GlobalVars.tileCounters["Thicket"];
 
         bonusHpRegen += 3 * GlobalVars.tileCounters["Tundra"];

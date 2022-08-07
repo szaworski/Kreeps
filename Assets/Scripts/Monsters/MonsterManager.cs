@@ -59,21 +59,7 @@ public class MonsterManager : MonoBehaviour
 
             if (GlobalVars.tileCounters["numOfTimesPlaced"] <= 1)
             {
-                //Get a random starting monster from the 3 provided
-                int startingMonsterIndex = UnityEngine.Random.Range(0, 3);
-
-                switch (startingMonsterIndex)
-                {
-                    case 0:
-                        GlobalVars.monsterCardSelected = "Forest/Wolf";
-                        break;
-                    case 1:
-                        GlobalVars.monsterCardSelected = "River/Monk";
-                        break;
-                    case 2:
-                        GlobalVars.monsterCardSelected = "Graveyard/Zombie";
-                        break;
-                }
+                GlobalVars.monsterCardSelected = "Goon";
             }
 
             //Add the selected monster to the list

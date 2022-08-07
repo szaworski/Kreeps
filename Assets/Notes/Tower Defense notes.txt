@@ -30,6 +30,17 @@ Bonus against: Demon
 Weak against: Pest
 
 
+Unique tower bonus power-ups:
+
+Normal tower (Grey): none
+Fire tower (Red): Bonus attack speed
+Ice tower (Blue): Bonus attack range
+Thunder tower (Yellow): Chance to crit (x2 damage)
+Holy tower (White): Bonus attack speed
+Swift tower (Green): Bonus attack range
+Cosmic tower (Purple): Chance to crit (x2 damage)
+
+
 Monster types (With Characteristics) :
 
 Beast: High HP with medium movement speed.
@@ -74,19 +85,19 @@ Spawn shop cards every 3 waves ( if (numOfTimesPlaced % 3 == 0))
 
 Tier 1 tiles:
 
-Forrest: Adds +5 move speed to all monsters for each Forrest tile placed
+Forrest: +3 move speed for each Forrest tile placed
 Monsters: Wolf (Beast), Goblin (Humanoid), Bandit (Humanoid), Owl (Pest)
 
-Graveyard: Adds +1 HP regen per second to all monsters for each Graveyard tile placed
+Graveyard: +1 HP regen and +2 max HP for each Graveyard tile placed
 Monsters: Zombie (Undead), Skeleton (Undead), Ghost (Undead), Bat (Pest)
 
-Mountain: Adds +1 armor to all monsters for each Mountain tiles
+Mountain: +1 armor for each Mountain tiles
 Monsters: Golem (Brute), Goat (Beast), Ranger (Humanoid), Bear (Brute)
 
-River: Adds +5 to max health of all monsters for each River tile placed
+River: +5 to max health for each River tile placed
 Monsters: Bluegill (Beast), Turtle (Brute), Duck (Beast), Monk (Humanoid) 
 
-Swamp: Adds +3% to evade attacks to all monsters for each Swamp tile placed
+Swamp: +2% evasion for each Swamp tile placed
 Monsters: Spider (Pest), Alligator (Brute), Bullfrog(Pest), Ghoul (Undead)
 
 Beast: 4
@@ -99,23 +110,24 @@ Demon: 0
 
 Tier 2 tiles:
 
-Desert: Adds +1 armor, +5 move speed, and +1 HP regen per Desert tile
-Monsters: Mummy (Undead), Scorpion (Pest), Rattlesnake (Pest), Camel (Brute)
-
-Thicket: Adds +3% evasion and +10 max health per Thicket tile
-Monsters: Minotaur(Brute), Panther (Beast), Giant Spider(Pest), Wild boar (Beast)
-
-Tundra: Adds +1 armor and +10 max health per Tundra tile
-Monsters: Polar Bear (Brute), Arctic Wolf (Beast), Penguin (Pest), Lich (Undead)
-
-Cavern: Adds +2 armor and +2 Hp regen per Cavern tile
+Cavern: +1 armor and +2 Hp regen per tile
 Monsters: Ogre (Brute), Miner (Humanoid), Skeleton Warrior (Undead), Wraith (Undead)
 
-Settlement: Adds +10 move speed and +5 max health per Settlement tile
+Desert: +2% evasion and +1 HP regen per tile
+Monsters: Mummy (Undead), Scorpion (Pest), Rattlesnake (Pest), Camel (Brute)
+
+Seashore: +1 armor and +5 max HP per tile
+Monsters: Crab (Brute), Fisherman (Humanoid), Sea Serpent(Beast), Drifter (Undead)
+
+Settlement: +3 move speed and +4 max health per tile
 Monsters: Knight (Humanoid), Sheep (Beast), Farmer (Humanoid), Rat (Pest)
 
-Seashore: Adds +3% evasion and +5 move speed per Seashore tile
-Monsters: Crab (Brute), Fisherman (Humanoid), Sea Serpent(Beast), Drifter (Undead)
+Thicket: +2% evasion and +5 max health per tile
+Monsters: Minotaur(Brute), Panther (Beast), Giant Spider(Pest), Wild boar (Beast)
+
+Tundra: +2 HP regen and +2 move speed per tile
+Monsters: Polar Bear (Brute), Arctic Wolf (Beast), Penguin (Pest), Lich (Undead)
+
 
 
 Humanoid: 4 
@@ -129,52 +141,52 @@ Demon: 0
 
 Tier 3 tiles: 
 
-Sacred Plain: 
-Monsters: Lion
+Canyon Crossing: +2 armor and +5 max HP per tile
+Monsters: Hunter (Humanoid), Cavalry (Humanoid/Brute), Pack Mule (Beast), Falcon (Pest)
 
-Wasteland:
-Monsters: 
+Crimson Plain: +5 move speed per tile
+Monsters: Goblin Rider (Humanoid/Beast), Imp (Demon), Crimson Wolf (Beast/Demon), Bison (Brute)
 
-Marsh:
-Monsters: 
+Crypt: +3 HP regen and +3 move speed per tile
+Monsters: Fiend (Demon), Cultist (Humanoid/Demon), Crawler (Undead), Flying Skull (Undead/Pest)
 
-Crypt:
-Monsters: 
+Emerald Cave: +3 armor per tile
+Monsters: Gemstone Golem (Brute), Jewel Thief (Humanoid/Pest), Spectral Bear (Undead/Brute), Badger (Beast)
 
-River Crossing:
-Monsters:
+Marsh: +15 max HP per tile
+Monsters: Water Demon (Demon), Reanimated Wolf (Undead/Beast), Poison Toad (Pest), Giant Slug (Brute) 
 
-Sewer System:
-Monsters: 
+Sewer: +1 armor and +3% evasion per tile
+Monsters: Slime (Brute/Pest), Giant Roach (Pest), Vile Wraith (Undead), Dung Devil (Demon)
 
 
-Humanoid: 0 
-Beast: 0
-Undead: 0
-Brute: 0
-Pest: 0
-Demon: 0
+Humanoid: 5
+Beast: 5
+Undead: 5
+Brute: 6
+Pest: 6
+Demon: 6
 
 
 Tier 4 tiles: 
 
-Volcano: 
+Frozen Passage:
 Monsters: 
 
-Underworld:
+Infernal Woods:
 Monsters: 
 
-Sunken Ruins:
+Sacred Grounds:
 Monsters: 
 
-Necropolis:
+Sapphire Cave:
 Monsters: 
 
-Wasteland:
+Tainted Canal:
 Monsters: 
 
-Wasteland:
-Monsters: 
+Volcanic Ravine: 
+Monsters: Lava golem (Brute), 
 
 
 Humanoid: 0 
@@ -187,22 +199,22 @@ Demon: 0
 
 Tier 5 tiles: 
 
-Abyss: 
+Ocean Abyss: 
 Monsters: 
 
-Wasteland:
+Astral Plane:
 Monsters: 
 
-Wasteland:
+Underworld:
 Monsters: 
 
-Wasteland:
+:
 Monsters: 
 
-Wasteland:
+:
 Monsters: 
 
-Wasteland:
+:
 Monsters: 
 
 
