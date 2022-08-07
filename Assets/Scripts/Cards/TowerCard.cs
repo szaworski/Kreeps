@@ -110,23 +110,23 @@ public class TowerCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
                 break;
 
             case "Fire":
-                GlobalVars.goldCost = 100;
+                GlobalVars.goldCost = 75;
                 break;
 
             case "Ice":
-                GlobalVars.goldCost = 100;
+                GlobalVars.goldCost = 75;
                 break;
 
             case "Thunder":
-                GlobalVars.goldCost = 125;
+                GlobalVars.goldCost = 100;
                 break;
 
             case "Holy":
-                GlobalVars.goldCost = 125;
+                GlobalVars.goldCost = 100;
                 break;
 
             case "Swift":
-                GlobalVars.goldCost = 200;
+                GlobalVars.goldCost = 150;
                 break;
 
             case "Cosmic":

@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: IceLvl4
-  upgradeCost: 125
+  upgradeCost: 100
   upgradeType: Ice
   bonusAmt: 0
   bonusFloatAmt: 0
@@ -356,7 +356,7 @@ MonoBehaviour:
 
     -15 move speed
 
-    Cost: 125g
+    Cost: 100g
 
     Dmg: 10
 
