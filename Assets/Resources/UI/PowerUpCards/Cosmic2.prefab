@@ -285,7 +285,7 @@ MonoBehaviour:
   cardName: Cosmic
   upgradeCost: 150
   upgradeType: BonusDmg
-  bonusAmt: 8
+  bonusAmt: 4
   bonusFloatAmt: 0
 --- !u!1 &8139315525478325520
 GameObject:
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cosmic type weapons and towers gain +8 damage
+  m_text: 'Cosmic type weapons and towers gain +4 damage
 
 
     Cost: 150g'

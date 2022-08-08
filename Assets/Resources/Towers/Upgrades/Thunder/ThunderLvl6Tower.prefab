@@ -570,7 +570,7 @@ MonoBehaviour:
   attackCd: 0
   damage: 40
   projectileSpeed: 4
-  attackSpeed: 0.7
+  attackSpeed: 0.85
   attackRange: 1
   critChance: 0
   damageType: Thunder
