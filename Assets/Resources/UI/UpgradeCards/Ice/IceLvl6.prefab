@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: IceLvl6
-  upgradeCost: 200
+  upgradeCost: 225
   upgradeType: Ice
   bonusAmt: 0
   bonusFloatAmt: 0
@@ -356,12 +356,12 @@ MonoBehaviour:
 
     -20 move speed
 
-    Cost: 200g
+    Cost: 225g
 
-    Dmg: 28
+    Dmg: 20
 
     Rof:
-    0.7
+    0.65
 
     Rng: 1
 

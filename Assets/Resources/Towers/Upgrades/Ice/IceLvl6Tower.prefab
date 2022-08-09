@@ -358,9 +358,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   attackCd: 0
-  damage: 28
+  damage: 20
   projectileSpeed: 4
-  attackSpeed: 0.7
+  attackSpeed: 0.65
   attackRange: 1
   critChance: 0
   damageType: Ice

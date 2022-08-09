@@ -441,7 +441,7 @@ MonoBehaviour:
   attackCd: 0
   damage: 10
   projectileSpeed: 4
-  attackSpeed: 0.7
+  attackSpeed: 1
   attackRange: 1
   critChance: 0
   damageType: Ice
