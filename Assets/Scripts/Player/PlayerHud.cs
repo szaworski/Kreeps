@@ -6,6 +6,7 @@ public class PlayerHud : MonoBehaviour
 {
     [SerializeField] private TMP_Text goldAmtUiText;
     [SerializeField] private TMP_Text waveNumUiText;
+    [SerializeField] private TMP_Text waveTierNumUiText;
     [SerializeField] private TMP_Text waveStartUiText;
     [SerializeField] private TMP_Text bonusMoveSpeedUiText;
     [SerializeField] private TMP_Text bonusMaxHealthUiText;
@@ -83,6 +84,7 @@ public class PlayerHud : MonoBehaviour
         //Update the wave number to be = to "monsterCount". (This count will match the wave number, so we can use this instead of a new variable)
         curWaveNum = GlobalVars.monsterCount;
         waveNumUiText.SetText(curWaveNum.ToString());
+        waveTierNumUiText.SetText(GlobalVars.currTierNum.ToString());
     }
 
     public void HideShowStartWaveInstructions()

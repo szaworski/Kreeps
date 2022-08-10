@@ -287,6 +287,8 @@ public class Monster : MonoBehaviour
 
             //Reduce incomingDamage by armor value
             incomingDamage -= armor;
+            //Round the damage value in case it has a decimal
+            Mathf.Round(incomingDamage);
 
             if (isWeapon && GlobalVars.useSlashAnim)
             {

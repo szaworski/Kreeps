@@ -18,6 +18,7 @@ public class GlobalVars : MonoBehaviour
     public static string currentWeapon;
     public static string newWeapon;
 
+    public static int currTierNum;
     public static int goldCost;
     public static int upgradeGoldCost;
     public static int playerHealth;
@@ -136,6 +137,7 @@ public class GlobalVars : MonoBehaviour
         bonusKreepStats.Add("BonusEvasion", 0f);
 
         currTier = "Tier1";
+        currTierNum = 1;
         monsterCount = 0;
         allMonstersAreSpawned = false;
     }

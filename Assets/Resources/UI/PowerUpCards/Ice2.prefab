@@ -147,9 +147,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: Ice
-  upgradeCost: 75
+  upgradeCost: 50
   upgradeType: BonusDmg
-  bonusAmt: 2
+  bonusAmt: 3
   bonusFloatAmt: 0
 --- !u!1 &4698487345527608529
 GameObject:
@@ -352,10 +352,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ice type weapons and towers gain +2 damage
+  m_text: 'Ice type weapons and towers gain +3 damage
 
 
-    Cost: 75g'
+    Cost: 50g'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
