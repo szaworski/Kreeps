@@ -442,7 +442,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0.38}
     oldSize: {x: 0.3125, y: 0.3125}
     newSize: {x: 0.21875, y: 0.21875}
     adaptiveTilingThreshold: 0.5
@@ -484,7 +484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 200
+  health: 160
   armor: 1
   goldBounty: 10
   type: Brute
