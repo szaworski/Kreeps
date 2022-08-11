@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 828625423111454346}
   - component: {fileID: 8996551886923038629}
   m_Layer: 0
-  m_Name: Ice
+  m_Name: Thunder
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: af9f566b5c72c5942b24f3f736ca395d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -135,8 +135,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AoeRadius: {fileID: 828625423111454346}
+  target: {fileID: 0}
+  rb: {fileID: 0}
   damageValue: 0
   projectileSpeed: 0
   attackRange: 0
+  slowAmt: 0
+  critChance: 0
   damageType: 
-  target: {fileID: 0}
+  isWeapon: 0

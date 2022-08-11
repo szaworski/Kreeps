@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 284269777952114874}
   - component: {fileID: -7678257234164005604}
   m_Layer: 10
-  m_Name: IceSpire
+  m_Name: Ice2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: af9f566b5c72c5942b24f3f736ca395d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
