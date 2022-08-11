@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Type: Pest \n\nBase stats:\nHealth: 25\nArmor: 0\nSpeed: 55 \nHp regen:
+  m_text: "Type: Pest \n\nBase stats:\nHealth: 25\nArmor: 0\nSpeed: 50 \nHp regen:
     0"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -420,3 +420,5 @@ MonoBehaviour:
   cardName: Owl
   upgradeCost: 0
   upgradeType: 
+  bonusAmt: 0
+  bonusFloatAmt: 0

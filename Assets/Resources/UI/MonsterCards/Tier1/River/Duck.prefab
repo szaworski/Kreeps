@@ -149,6 +149,8 @@ MonoBehaviour:
   cardName: Duck
   upgradeCost: 0
   upgradeType: 
+  bonusAmt: 0
+  bonusFloatAmt: 0
 --- !u!1 &7402375620175900289
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,7 +216,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Type: Beast \n\nBase stats:\nHealth: 30\nArmor: 0\nSpeed: 45\nHp regen:
+  m_text: "Type: Beast \n\nBase stats:\nHealth: 30\nArmor: 0\nSpeed: 43\nHp regen:
     0"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}

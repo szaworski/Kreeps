@@ -149,6 +149,8 @@ MonoBehaviour:
   cardName: Monk
   upgradeCost: 0
   upgradeType: 
+  bonusAmt: 0
+  bonusFloatAmt: 0
 --- !u!1 &7402375620175900289
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,7 +226,7 @@ MonoBehaviour:
     Armor: 0
 
     Speed:
-    55
+    50
 
     Hp regen: 0'
   m_isRightToLeft: 0
