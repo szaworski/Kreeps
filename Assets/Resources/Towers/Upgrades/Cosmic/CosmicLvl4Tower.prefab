@@ -110,9 +110,9 @@ MonoBehaviour:
   dmgText: {fileID: 6426903152727244009}
   rofText: {fileID: 394520115278642697}
   rngText: {fileID: 8180115114701785829}
-  hasUpgrades: 0
-  upgrade1: 
-  upgrade2: 
+  hasUpgrades: 1
+  upgrade1: CosmicLvl5
+  upgrade2: CosmicLvl6
   upgrade3: 
 --- !u!1 &3177379213463666922
 GameObject:

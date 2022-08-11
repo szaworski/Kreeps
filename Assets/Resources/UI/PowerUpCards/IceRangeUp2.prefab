@@ -352,7 +352,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ice type weapons and towers gain +0.1 attack range
+  m_text: 'Ice type  weapons and towers gain +0.1 attack range
 
 
     Cost: 75g'

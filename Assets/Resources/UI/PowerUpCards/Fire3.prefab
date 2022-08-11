@@ -149,7 +149,7 @@ MonoBehaviour:
   cardName: Fire
   upgradeCost: 75
   upgradeType: BonusDmg
-  bonusAmt: 4
+  bonusAmt: 3
   bonusFloatAmt: 0
 --- !u!1 &4979736243767342691
 GameObject:
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fire type weapons and towers gain +4 damage
+  m_text: 'Fire type weapons and towers gain +3 damage
 
 
     Cost: 75g'

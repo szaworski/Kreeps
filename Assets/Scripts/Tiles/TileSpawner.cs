@@ -186,33 +186,33 @@ public class TileSpawner : TileTypes
             string card3 = null;
 
             //Get the correct Tile card list based on the number of waves finished. (Copy the list from TileCards.cs)
-            if (GlobalVars.tileCounters["numOfTimesPlaced"] < 8)
+            if (GlobalVars.tileCounters["numOfTimesPlaced"] < 10)
             {
                 currentCardList = tier1TileCards.ToList();
             }
 
-            else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 8 && GlobalVars.tileCounters["numOfTimesPlaced"] < 16)
+            else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 10 && GlobalVars.tileCounters["numOfTimesPlaced"] < 20)
             {
                 GlobalVars.currTier = "Tier2";
                 GlobalVars.currTierNum = 2;
                 currentCardList = tier2TileCards.ToList();
             }
 
-            else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 16 && GlobalVars.tileCounters["numOfTimesPlaced"] < 25)
+            else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 20 && GlobalVars.tileCounters["numOfTimesPlaced"] < 30)
             {
                 GlobalVars.currTier = "Tier3";
                 GlobalVars.currTierNum = 3;
                 currentCardList = tier3TileCards.ToList();
             }
 
-            else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 25 && GlobalVars.tileCounters["numOfTimesPlaced"] < 35)
+            else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 30 && GlobalVars.tileCounters["numOfTimesPlaced"] < 40)
             {
                 GlobalVars.currTier = "Tier4";
                 GlobalVars.currTierNum = 4;
                 currentCardList = tier4TileCards.ToList();
             }
 
-            else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 35 && GlobalVars.tileCounters["numOfTimesPlaced"] < 50)
+            else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 40 && GlobalVars.tileCounters["numOfTimesPlaced"] < 50)
             {
                 GlobalVars.currTier = "Tier5";
                 GlobalVars.currTierNum = 5;

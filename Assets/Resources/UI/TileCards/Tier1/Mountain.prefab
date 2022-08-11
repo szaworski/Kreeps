@@ -352,8 +352,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Kreeps gain:\n+1 armor \n+2 max health \nfor each Mountain placed\n\nIncoming
-    damage is reduced by the kreeps armor value"
+  m_text: "Kreeps gain:\n+1 armor \nfor each Mountain placed\n\n\nIncoming damage
+    is reduced by the kreeps armor value"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -380,8 +380,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 19
-  m_fontSizeBase: 19
+  m_fontSize: 19.5
+  m_fontSizeBase: 19.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -416,7 +416,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 8.131714, y: 43.55072, z: 1.7157593, w: -201.44711}
+  m_margin: {x: 7.934204, y: 43.55072, z: 2.9595337, w: -201.44711}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
