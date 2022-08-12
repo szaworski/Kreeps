@@ -5912,7 +5912,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "AOE in radius\nCost: 75g\nSell value: 60g\nDamage: 4 \nRate of fire: 0.75\nRange:
+  m_text: "AOE in radius\nCost: 75g\nSell value: 60g\nDamage: 4 \nRate of fire: 1\nRange:
     0.6\nBonus:\nx1.5 to Beasts\nPenalty:\nx0.5 to Brutes"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -7617,7 +7617,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "AOE in radius +Slow\nCost: 75g\nSell value: 60g\nDamage: 4 \nRate of fire:
-    0.9\nRange: 0.6\nBonus:\nx1.5 to Humanoids\nPenalty:\nx0.5 to Undead"
+    1\nRange: 0.6\nBonus:\nx1.5 to Humanoids\nPenalty:\nx0.5 to Undead"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

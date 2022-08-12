@@ -97,16 +97,10 @@ public class TowerGrid : MonoBehaviour
                 if (Input.GetMouseButtonDown(1))
                 {
                     //Show or destroy the tower upgrade cards on right click
-                    if (!GlobalVars.upgradeCardsArePresent && towerScript.hasUpgrades)
+                    if (towerScript.hasUpgrades)
                     {
                         SpawnTowerUpgradeCards();
                         GlobalVars.upgradeCardsArePresent = true;
-                    }
-
-                    else if (GlobalVars.upgradeCardsArePresent)
-                    {
-                        DestroyTowerUpgradeCards();
-                        GlobalVars.upgradeCardsArePresent = false;
                     }
                 }
 
@@ -230,6 +224,12 @@ public class TowerGrid : MonoBehaviour
 
     void SpawnTowerUpgradeCards()
     {
+        if (GlobalVars.upgradeCardsArePresent)
+        {
+            DestroyTowerUpgradeCards();
+            GlobalVars.upgradeCardsArePresent = false;
+        }
+
         //Get the towers position
         GlobalVars.upgradePosition = placedTower.transform.position;
         //Get the current tower object
