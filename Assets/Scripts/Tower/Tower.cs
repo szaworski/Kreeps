@@ -60,6 +60,9 @@ public class Tower : MonoBehaviour
         dmgText.SetText(damage.ToString());
         rofText.SetText(attackSpeed.ToString());
         rngText.SetText(attackRange.ToString());
+        dmgText.fontSize = 1.4f;
+        rofText.fontSize = 1.4f;
+        rngText.fontSize = 1.4f;
     }
 
     void Update()
