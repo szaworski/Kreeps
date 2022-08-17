@@ -1391,7 +1391,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -1, y: 2}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &173337944
@@ -1963,6 +1963,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 2094008185}
   - {fileID: 1480971272}
   - {fileID: 986707885}
   - {fileID: 1055063615}
@@ -2485,6 +2486,133 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &294362498
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 294362499}
+  - component: {fileID: 294362500}
+  m_Layer: 0
+  m_Name: Song1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &294362499
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294362498}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2094008185}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &294362500
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294362498}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 84abdda178d101748b9b95ac08c7f74e, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.25
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 256
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &300454185
 GameObject:
   m_ObjectHideFlags: 0
@@ -2648,7 +2776,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 206708603}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &307566666
 MonoBehaviour:
@@ -2667,21 +2795,29 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: b082246bd3a132b4eaebe33e28b275e8, type: 3}
     volume: 0.5
     pitch: 1
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Death2
     clip: {fileID: 8300000, guid: 718707048e687c041b53ea46e6099f87, type: 3}
     volume: 0.5
     pitch: 1
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Death3
     clip: {fileID: 8300000, guid: 9dde488f17e1a6442812fcfe1e5af3b8, type: 3}
     volume: 0.5
     pitch: 1
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: PlayerDamage
     clip: {fileID: 8300000, guid: 2ac66b2a5bbcb364cb53a08aa5a5bc9c, type: 3}
     volume: 0.5
     pitch: 0.2
+    priority: 0
+    loop: 0
     source: {fileID: 0}
 --- !u!1 &308587902
 GameObject:
@@ -7895,7 +8031,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 206708603}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &986707886
 MonoBehaviour:
@@ -7914,61 +8050,85 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 2ac66b2a5bbcb364cb53a08aa5a5bc9c, type: 3}
     volume: 0.5
     pitch: 0.6
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Fire
     clip: {fileID: 8300000, guid: af346247cf8516b49a50bf93d7e19bc5, type: 3}
     volume: 0.5
     pitch: 0.9
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Ice
     clip: {fileID: 8300000, guid: eaf380a3fdbf2b249af08133d8f70d52, type: 3}
     volume: 0.5
     pitch: 1.4
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Thunder
     clip: {fileID: 8300000, guid: 5e2ef8f28af610f48b1be8cba29463ca, type: 3}
     volume: 0.5
     pitch: 0.8
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Holy
     clip: {fileID: 8300000, guid: 68d10c1b6e8c1a84a840461d37f95e63, type: 3}
     volume: 0.5
     pitch: 1
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Swift
     clip: {fileID: 8300000, guid: 3923dd9a04a6eec478bf7688fd9b3df5, type: 3}
     volume: 0.5
     pitch: 0.5
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Fire2
     clip: {fileID: 8300000, guid: af346247cf8516b49a50bf93d7e19bc5, type: 3}
     volume: 0.5
     pitch: 0.55
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Ice2
     clip: {fileID: 8300000, guid: eaf380a3fdbf2b249af08133d8f70d52, type: 3}
     volume: 0.5
     pitch: 1.6
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Thunder2
     clip: {fileID: 8300000, guid: 5e2ef8f28af610f48b1be8cba29463ca, type: 3}
     volume: 0.5
     pitch: 0.3
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Cosmic
     clip: {fileID: 8300000, guid: 278c0062f77cf6b48bbf558e97fedfbd, type: 3}
     volume: 0.5
     pitch: 0.7
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Cosmic2
     clip: {fileID: 8300000, guid: 278c0062f77cf6b48bbf558e97fedfbd, type: 3}
     volume: 0.5
     pitch: 0.4
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Holy2
     clip: {fileID: 8300000, guid: 68d10c1b6e8c1a84a840461d37f95e63, type: 3}
     volume: 0.5
     pitch: 1.6
+    priority: 0
+    loop: 0
     source: {fileID: 0}
 --- !u!1 &1031701770
 GameObject:
@@ -8074,7 +8234,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 206708603}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1055063616
 MonoBehaviour:
@@ -8093,61 +8253,85 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 2ac66b2a5bbcb364cb53a08aa5a5bc9c, type: 3}
     volume: 0.5
     pitch: 0.8
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Fire
     clip: {fileID: 8300000, guid: af346247cf8516b49a50bf93d7e19bc5, type: 3}
     volume: 0.5
     pitch: 1.1
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Ice
     clip: {fileID: 8300000, guid: eaf380a3fdbf2b249af08133d8f70d52, type: 3}
     volume: 0.5
     pitch: 1.6
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Thunder
     clip: {fileID: 8300000, guid: 5e2ef8f28af610f48b1be8cba29463ca, type: 3}
     volume: 0.5
     pitch: 1.2
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Holy
     clip: {fileID: 8300000, guid: 68d10c1b6e8c1a84a840461d37f95e63, type: 3}
     volume: 0.5
     pitch: 1.4
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Swift
     clip: {fileID: 8300000, guid: 3923dd9a04a6eec478bf7688fd9b3df5, type: 3}
     volume: 0.5
     pitch: 0.7
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Fire2
     clip: {fileID: 8300000, guid: af346247cf8516b49a50bf93d7e19bc5, type: 3}
     volume: 0.5
     pitch: 0.75
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Ice2
     clip: {fileID: 8300000, guid: eaf380a3fdbf2b249af08133d8f70d52, type: 3}
     volume: 0.5
     pitch: 1.8
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Thunder2
     clip: {fileID: 8300000, guid: 5e2ef8f28af610f48b1be8cba29463ca, type: 3}
     volume: 0.5
     pitch: 0.7
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Cosmic
     clip: {fileID: 8300000, guid: 278c0062f77cf6b48bbf558e97fedfbd, type: 3}
     volume: 0.5
     pitch: 0.9
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Cosmic2
     clip: {fileID: 8300000, guid: 278c0062f77cf6b48bbf558e97fedfbd, type: 3}
     volume: 0.5
     pitch: 0.6
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Holy2
     clip: {fileID: 8300000, guid: 68d10c1b6e8c1a84a840461d37f95e63, type: 3}
     volume: 0.5
     pitch: 2
+    priority: 0
+    loop: 0
     source: {fileID: 0}
 --- !u!1 &1057807350
 GameObject:
@@ -11616,7 +11800,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 206708603}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1480971273
 MonoBehaviour:
@@ -11635,61 +11819,85 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 2ac66b2a5bbcb364cb53a08aa5a5bc9c, type: 3}
     volume: 0.5
     pitch: 0.7
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Fire
     clip: {fileID: 8300000, guid: af346247cf8516b49a50bf93d7e19bc5, type: 3}
     volume: 0.5
     pitch: 1
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Ice
     clip: {fileID: 8300000, guid: eaf380a3fdbf2b249af08133d8f70d52, type: 3}
     volume: 0.5
     pitch: 1.5
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Thunder
     clip: {fileID: 8300000, guid: 5e2ef8f28af610f48b1be8cba29463ca, type: 3}
     volume: 0.5
     pitch: 1
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Holy
     clip: {fileID: 8300000, guid: 68d10c1b6e8c1a84a840461d37f95e63, type: 3}
     volume: 0.5
     pitch: 1.2
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Swift
     clip: {fileID: 8300000, guid: 3923dd9a04a6eec478bf7688fd9b3df5, type: 3}
     volume: 0.5
     pitch: 0.6
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Fire2
     clip: {fileID: 8300000, guid: af346247cf8516b49a50bf93d7e19bc5, type: 3}
     volume: 0.5
     pitch: 0.65
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Ice2
     clip: {fileID: 8300000, guid: eaf380a3fdbf2b249af08133d8f70d52, type: 3}
     volume: 0.5
     pitch: 1.7
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Thunder2
     clip: {fileID: 8300000, guid: 5e2ef8f28af610f48b1be8cba29463ca, type: 3}
     volume: 0.5
     pitch: 0.5
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Cosmic
     clip: {fileID: 8300000, guid: 278c0062f77cf6b48bbf558e97fedfbd, type: 3}
     volume: 0.5
     pitch: 0.8
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Cosmic2
     clip: {fileID: 8300000, guid: 278c0062f77cf6b48bbf558e97fedfbd, type: 3}
     volume: 0.5
     pitch: 0.5
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Holy2
     clip: {fileID: 8300000, guid: 68d10c1b6e8c1a84a840461d37f95e63, type: 3}
     volume: 0.5
     pitch: 1.8
+    priority: 0
+    loop: 0
     source: {fileID: 0}
 --- !u!1 &1491472166
 GameObject:
@@ -17009,6 +17217,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2083938222}
   m_CullTransparentMesh: 0
+--- !u!1 &2094008184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2094008185}
+  m_Layer: 0
+  m_Name: BackgroundMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2094008185
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2094008184}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 294362499}
+  m_Father: {fileID: 206708603}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2099657013
 GameObject:
   m_ObjectHideFlags: 0
@@ -17038,7 +17277,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 206708603}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2099657015
 MonoBehaviour:
@@ -17057,16 +17296,22 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 3e1a2e53eca6aa94982f89b26974c801, type: 3}
     volume: 0.5
     pitch: 0.7
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: Error
     clip: {fileID: 8300000, guid: 24c7580a422398b4f872b887ab4ea42d, type: 3}
     volume: 0.5
     pitch: 1
+    priority: 0
+    loop: 0
     source: {fileID: 0}
   - name: SellTower
     clip: {fileID: 8300000, guid: 0669e51e159dfe04b838cf1516ea804b, type: 3}
     volume: 0.5
     pitch: 1
+    priority: 0
+    loop: 0
     source: {fileID: 0}
 --- !u!1 &2102976814
 GameObject:

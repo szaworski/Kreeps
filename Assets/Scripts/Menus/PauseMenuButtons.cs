@@ -53,6 +53,7 @@ public class PauseMenuButtons : LoadNewScene
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
+        GameObject.Find(GlobalVars.currentSong).GetComponent<AudioSource>().volume = GlobalVars.musicVolume * 0.5f;
     }
 
     public void Resume()
@@ -61,6 +62,11 @@ public class PauseMenuButtons : LoadNewScene
         pauseMenuUI.SetActive(false);
         //optionsMenuUI.SetActive(false);
         Time.timeScale = 1f;
+
+        if (GameObject.Find("TileManager").transform.childCount != 0)
+        {
+            GameObject.Find(GlobalVars.currentSong).GetComponent<AudioSource>().volume = GlobalVars.musicVolume;
+        }
     }
 
     public void OpenReturnToMainMenuUi()

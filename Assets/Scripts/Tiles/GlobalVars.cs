@@ -17,6 +17,9 @@ public class GlobalVars : MonoBehaviour
     public static string upgradeTypeSelected;
     public static string currentWeapon;
     public static string newWeapon;
+    public static string currentSong;
+
+    public static float musicVolume;
 
     public static int currTierNum;
     public static int goldCost;
@@ -140,5 +143,7 @@ public class GlobalVars : MonoBehaviour
         currTierNum = 1;
         monsterCount = 0;
         allMonstersAreSpawned = false;
+        currentSong = "Song1";
+        musicVolume = GameObject.Find(currentSong).GetComponent<AudioSource>().volume;
     }
 }
