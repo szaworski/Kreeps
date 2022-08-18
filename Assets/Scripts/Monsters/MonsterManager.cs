@@ -24,7 +24,7 @@ public class MonsterManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return) && GlobalVars.showStartWaveInstructions && GameObject.Find("TileManager").transform.childCount == 0)
         {
             //Reset the music volume
-            GameObject.Find(GlobalVars.currentSong).GetComponent<AudioSource>().volume = GlobalVars.musicVolume;
+            StartCoroutine(FadeMusic.StartFade(GameObject.Find(GlobalVars.currentSong).GetComponent<AudioSource>(), 1.25f, GlobalVars.musicVolume));
 
             //Make sure that the game isn't paused
             if (!GlobalVars.isPaused)

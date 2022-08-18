@@ -10,6 +10,9 @@ public class AudioManager : MonoBehaviour
     void Awake()
     {
         LoadSounds();
+    }
+    private void Start()
+    {
         StartCoroutine(SetStartingMusic(1f));
     }
 
@@ -37,6 +40,6 @@ public class AudioManager : MonoBehaviour
     {
         yield return new WaitForSeconds(delayTime);
         GameObject.Find(GlobalVars.currentSong).GetComponent<AudioSource>().volume = GlobalVars.musicVolume * 0.5f;
-        GameObject.Find("Song1").GetComponent<AudioSource>().Play();
+        GameObject.Find(GlobalVars.currentSong).GetComponent<AudioSource>().Play();
     }
 }
