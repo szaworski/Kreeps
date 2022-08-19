@@ -197,11 +197,6 @@ public class TileSpawner : TileTypes
                 GlobalVars.currTier = "Tier2";
                 GlobalVars.currTierNum = 2;
                 currentCardList = tier2TileCards.ToList();
-
-                if (GlobalVars.tileCounters["numOfTimesPlaced"] == 10)
-                {
-                    ChangeSong("Song2");
-                }
             }
 
             else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 20 && GlobalVars.tileCounters["numOfTimesPlaced"] < 30)
@@ -209,6 +204,11 @@ public class TileSpawner : TileTypes
                 GlobalVars.currTier = "Tier3";
                 GlobalVars.currTierNum = 3;
                 currentCardList = tier3TileCards.ToList();
+
+                if (GlobalVars.tileCounters["numOfTimesPlaced"] == 20)
+                {
+                    ChangeSong("Song2");
+                }
             }
 
             else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 30 && GlobalVars.tileCounters["numOfTimesPlaced"] < 40)
@@ -223,6 +223,11 @@ public class TileSpawner : TileTypes
                 GlobalVars.currTier = "Tier5";
                 GlobalVars.currTierNum = 5;
                 currentCardList = tier5TileCards.ToList();
+
+                if (GlobalVars.tileCounters["numOfTimesPlaced"] == 40)
+                {
+                    ChangeSong("Song3");
+                }
             }
 
             //Create a list of 3 unique random cards from the current card list
