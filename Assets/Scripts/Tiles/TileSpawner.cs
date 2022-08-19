@@ -177,7 +177,7 @@ public class TileSpawner : TileTypes
         //Check if all monsters have been spawned for the wave and that all monsters are dead, then prompt for card selection
         if (GlobalVars.allMonstersAreSpawned && GameObject.Find("TileManager").transform.childCount == 0 && GlobalVars.playerHealth > 0) //Input.GetKeyDown(KeyCode.Space)
         {
-            StartCoroutine(FadeMusic.StartFade(GameObject.Find(GlobalVars.currentSong).GetComponent<AudioSource>(), 1.25f, GlobalVars.musicVolume * 0.5f));
+            StartCoroutine(FadeMusic.StartFade(GameObject.Find(GlobalVars.currentSong).GetComponent<AudioSource>(), 1f, GlobalVars.musicVolume * 0.5f));
             GlobalVars.waveEnded = true;
             GlobalVars.allMonstersAreSpawned = false;
 
@@ -197,6 +197,11 @@ public class TileSpawner : TileTypes
                 GlobalVars.currTier = "Tier2";
                 GlobalVars.currTierNum = 2;
                 currentCardList = tier2TileCards.ToList();
+
+                if (GlobalVars.tileCounters["numOfTimesPlaced"] == 10)
+                {
+                    ChangeSong("Song2");
+                }
             }
 
             else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 20 && GlobalVars.tileCounters["numOfTimesPlaced"] < 30)
@@ -1079,6 +1084,14 @@ public class TileSpawner : TileTypes
         Vector3 outerRight = transform.position + new Vector3(1.65f, 0, 0);
         checkOuterRightOverlap = Physics2D.OverlapBox(outerRight, new Vector3(0.25f, 0.9f, 0), 0f, LayerMask.GetMask("GroundTile"));
         //Debug.Log("checkRightOverlap = " + checkRightOverlap);
+    }
+
+    public void ChangeSong(string newSong)
+    {
+        StartCoroutine(FadeMusic.StartFade(GameObject.Find(GlobalVars.currentSong).GetComponent<AudioSource>(), 4f, 0));
+        StartCoroutine(FadeMusic.EndSong(GameObject.Find(GlobalVars.currentSong).GetComponent<AudioSource>(), 4.5f));
+        GlobalVars.currentSong = newSong;
+        StartCoroutine(FadeMusic.StartNewSong(GameObject.Find(GlobalVars.currentSong).GetComponent<AudioSource>(), 8f));
     }
 
     public void OnDrawGizmos()

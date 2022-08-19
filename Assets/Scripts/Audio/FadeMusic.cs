@@ -18,4 +18,16 @@ public static class FadeMusic
 
         yield break;
     }
+
+    public static IEnumerator EndSong(AudioSource audioSource, float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+        audioSource.Stop();
+    }
+
+    public static IEnumerator StartNewSong(AudioSource audioSource, float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+        audioSource.Play();
+    }
 }
