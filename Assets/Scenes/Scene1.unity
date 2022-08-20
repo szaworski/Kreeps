@@ -1550,8 +1550,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\nCost: 50g\nSell value: 45g\nDamage: 5\nRate of fire: 0.9\nRange:
-    0.8\nBonus: \nNone\nPenalty:\nNone"
+  m_text: "Single target\n\nCost: 50g\nDamage: 5\nRate of fire: 0.9\nRange: 0.8\nBonus:
+    \nNone\nPenalty:\nNone"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -3457,16 +3457,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-    Cost: 150g
 
-    Sell value: 120g
+    Cost: 150g
 
     Damage: 5
 
-    Rate
-    of fire: 0.5
+    Rate of fire: 0.5
 
-    Range: 0.8
+    Range:
+    0.8
 
     Bonus:
 
@@ -3474,8 +3473,7 @@ MonoBehaviour:
 
     Penalty:
 
-    x0.5
-    to Demons'
+    x0.5 to Demons'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -4243,7 +4241,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 855, y: -360}
+  m_AnchoredPosition: {x: 855, y: -345}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &407552216
@@ -5097,16 +5095,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-    Cost: 100g
 
-    Sell value: 80g
+    Cost: 100g
 
     Damage: 10
 
-    Rate
-    of fire: 1.2
+    Rate of fire: 1.2
 
-    Range: 0.8
+    Range:
+    0.8
 
     Bonus:
 
@@ -5114,8 +5111,7 @@ MonoBehaviour:
 
     Penalty:
 
-    x0.5
-    to Humanoids'
+    x0.5 to Humanoids'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -6048,8 +6044,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "AOE in radius\nCost: 75g\nSell value: 60g\nDamage: 4 \nRate of fire: 1\nRange:
-    0.6\nBonus:\nx1.5 to Beasts\nPenalty:\nx0.5 to Brutes"
+  m_text: "AOE in radius\n\nCost: 75g\nDamage: 4 \nRate of fire: 1\nRange: 0.6\nBonus:\nx1.5
+    to Beasts\nPenalty:\nx0.5 to Brutes"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -7121,7 +7117,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 650, y: 300}
+  m_AnchoredPosition: {x: 650, y: 315}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &829377179
@@ -7750,8 +7746,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "AOE in radius +Slow\nCost: 75g\nSell value: 60g\nDamage: 4 \nRate of fire:
-    1\nRange: 0.6\nBonus:\nx1.5 to Humanoids\nPenalty:\nx0.5 to Undead"
+  m_text: "AOE in radius +Slow\n\nCost: 75g\nDamage: 4 \nRate of fire: 1\nRange:
+    0.6\nBonus:\nx1.5 to Humanoids\nPenalty:\nx0.5 to Undead"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -8422,16 +8418,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'AOE in radius
 
-    Cost: 250g
 
-    Sell value: 200g
+    Cost: 250g
 
     Damage: 10
 
-    Rate
-    of fire: 0.8
+    Rate of fire: 0.8
 
-    Range: 0.8
+    Range:
+    0.8
 
     Bonus:
 
@@ -8439,8 +8434,7 @@ MonoBehaviour:
 
     Penalty:
 
-    x0.5
-    to Pests'
+    x0.5 to Pests'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -8837,16 +8831,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-    Cost: 100g
 
-    Sell value: 80g
+    Cost: 100g
 
     Damage: 14
 
-    Rate
-    of fire: 1.5
+    Rate of fire: 1.5
 
-    Range: 1
+    Range:
+    1
 
     Bonus:
 
@@ -8854,8 +8847,7 @@ MonoBehaviour:
 
     Penalty:
 
-    x0.5
-    to Beasts'
+    x0.5 to Beasts'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -12324,7 +12316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 855, y: -30}
+  m_AnchoredPosition: {x: 855, y: -15}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1532734808
@@ -13578,7 +13570,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 650, y: 420}
+  m_AnchoredPosition: {x: 650, y: 435}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1673048593
@@ -14525,7 +14517,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 870, y: 480}
+  m_AnchoredPosition: {x: 870, y: 495}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1788185481
@@ -16391,7 +16383,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 450, y: 300}
+  m_AnchoredPosition: {x: 450, y: 315}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2011352080
@@ -18141,7 +18133,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 855, y: 300}
+  m_AnchoredPosition: {x: 855, y: 315}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2126907136

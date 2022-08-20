@@ -94,6 +94,14 @@ public class TowerGrid : MonoBehaviour
                 //Show the towers attack radius
                 towerAttackRadius.SetActive(true);
 
+                if (Input.GetMouseButtonDown(0))
+                {
+                    if (towerScript.hasUpgrades)
+                    {
+                        GlobalVars.selectedTowerHasUpgrades = true;
+                    }
+                }
+
                 if (Input.GetMouseButtonDown(1))
                 {
                     //Show or destroy the tower upgrade cards on right click
@@ -119,27 +127,27 @@ public class TowerGrid : MonoBehaviour
                             break;
 
                         case var _ when towerScript.damageType.Contains("Fire"):
-                            GlobalVars.newGoldValue = GlobalVars.gold + 100;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 60;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Ice"):
-                            GlobalVars.newGoldValue = GlobalVars.gold + 100;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 60;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Thunder"):
-                            GlobalVars.newGoldValue = GlobalVars.gold + 125;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 80;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Holy"):
-                            GlobalVars.newGoldValue = GlobalVars.gold + 125;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 80;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Swift"):
-                            GlobalVars.newGoldValue = GlobalVars.gold + 175;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 120;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Cosmic"):
-                            GlobalVars.newGoldValue = GlobalVars.gold + 250;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 200;
                             break;
                     }
 
@@ -168,6 +176,7 @@ public class TowerGrid : MonoBehaviour
         {
             //Hide the attack radius sprite on mouse exit 
             GlobalVars.IsHoveringOverTower = false;
+            GlobalVars.selectedTowerHasUpgrades = false;
             towerAttackRadius.SetActive(false);
             towerStats.SetActive(false);
         }

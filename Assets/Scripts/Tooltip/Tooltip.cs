@@ -16,7 +16,7 @@ public class Tooltip : MonoBehaviour
 
         else if (isTowerGrid)
         {
-            if (!GlobalVars.IsHoveringOverUiCard && GlobalVars.IsHoveringOverTower)
+            if (!GlobalVars.IsHoveringOverUiCard && GlobalVars.IsHoveringOverTower && GlobalVars.selectedTowerHasUpgrades)
             {
                 TooltipManager.tooltipInstance.SetAndShowTooltip(text);
             }

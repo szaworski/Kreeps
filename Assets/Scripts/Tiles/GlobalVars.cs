@@ -40,6 +40,7 @@ public class GlobalVars : MonoBehaviour
     public static bool allMonstersAreSpawned;
     public static bool IsHoveringOverUiCard;
     public static bool IsHoveringOverTower;
+    public static bool selectedTowerHasUpgrades;
     public static bool showStartWaveInstructions;
     public static bool triggerBonusStatsUpdate;
     public static bool weaponIsSelected;
