@@ -20,7 +20,7 @@ Sniper Lvl 3
 Type: single target, Cost: 150, Dmg: 20, Rof: 1, Rng: 1.5
 
 Big Shot
-Type: single target, Cost: 200, Dmg: 25, Rof: 0.9, Rng: 0.8
+Type: single target, Cost: 200, Dmg: 25, Rof: 0.9, Rng: 0.7
 
 
 
@@ -77,38 +77,38 @@ Type: AOE, Cost: 400, Dmg: 14, Rof: 0.9, Rng: 0.7
 Thunder Towers:
 
 Thunder Lvl 1
-Type: single target, Cost: 100, Dmg: 14, Rof: 1.5, Rng: 0.7
+Type: single target, Cost: 100, Dmg: 14, Rof: 1.5, Rng: 0.8
 
 Thunder Lvl 2
-Type: single target, Cost: 125, Dmg: 22, Rof: 1.25, Rng: 0.7
+Type: single target, Cost: 125, Dmg: 22, Rof: 1.25, Rng: 0.8
 
 Thunder Lvl 3
-Type: single target, Cost: 125, Dmg: 30, Rof: 1, Rng: 0.7
+Type: single target, Cost: 125, Dmg: 30, Rof: 1, Rng: 0.8
 
 Shock Lvl 1
-Type: single target, Cost: 150, Dmg: 18, Rof: 1, Rng: 0.8
+Type: single target, Cost: 150, Dmg: 18, Rof: 1, Rng: 1
 
 Shock Lvl 2
 Type: AOE, Cost: 200, Dmg: 24, Rof: 1.5, Rng: 0.7
 
 Shock Lvl 3
-Type: single target, Cost: 250, Dmg: 30, Rof: 0.85, Rng: 0.8
+Type: single target, Cost: 250, Dmg: 30, Rof: 0.85, Rng: 1
 
-Sunderbolt
-Type: single target, Cost: 400, Dmg: 60, Rof: 1, Rng: 0.8
+Sunder
+Type: single target, Cost: 400, Dmg: 60, Rof: 1, Rng: 1
 
 
 
 Holy Towers:
 
 Holy Lvl 1
-Type: single target, Cost: 100, Dmg: 10, Rof: 1.2, Rng: 0.7
+Type: single target, Cost: 100, Dmg: 10, Rof: 1.2, Rng: 0.8
 
 Holy Lvl 2
-Type: single target, Cost: 125, Dmg: 16, Rof: 1.2, Rng: 0.7
+Type: single target, Cost: 125, Dmg: 16, Rof: 1.2, Rng: 0.8
 
 Holy Lvl 3
-Type: single target, Cost: 125, Dmg: 24, Rof: 1, Rng: 0.7
+Type: single target, Cost: 125, Dmg: 24, Rof: 1, Rng: 0.8
 
 Divine Lvl 1
 Type: single target, Cost: 150, Dmg: 14, Rof: 0.9, Rng: 0.8
@@ -127,25 +127,25 @@ Type: AOE, Cost: 500, Dmg: 25, Rof: 1.5, Rng: 0.9
 Swift Towers:
 
 Swift Lvl 1
-Type: single target, Cost: 150, Dmg: 5, Rof: 0.5, Rng: 0.7
+Type: single target, Cost: 150, Dmg: 5, Rof: 0.5, Rng: 0.8
 
 Swift Lvl 2
-Type: single target, Cost: 150, Dmg: 9, Rof: 0.45, Rng: 0.7
+Type: single target, Cost: 150, Dmg: 9, Rof: 0.45, Rng: 0.8
 
 Swift Lvl 3
-Type: single target, Cost: 200, Dmg: 15, Rof: 0.4, Rng: 0.7
+Type: single target, Cost: 200, Dmg: 15, Rof: 0.4, Rng: 0.8
 
 Agile Lvl 1
-Type: single target, Cost: 175, Dmg: 10, Rof: 0.4, Rng: 0.6
+Type: single target, Cost: 175, Dmg: 10, Rof: 0.4, Rng: 0.7
 
 Agile Lvl 2
-Type: single target, Cost: 250, Dmg: 18, Rof: 0.35, Rng: 0.6
+Type: single target, Cost: 250, Dmg: 18, Rof: 0.35, Rng: 0.7
 
 Agile Lvl 3
-Type: single target, Cost: 325, Dmg: 22, Rof: 0.3, Rng: 0.6
+Type: single target, Cost: 325, Dmg: 22, Rof: 0.3, Rng: 0.7
 
 Citadel
-Type: single target, Cost: 600, Dmg: 20, Rof: 0.2, Rng: 0.7
+Type: single target, Cost: 600, Dmg: 20, Rof: 0.2, Rng: 0.8
 
 
 Cosmic Towers:
