@@ -102,7 +102,7 @@ MonoBehaviour:
   damage: 10
   projectileSpeed: 0
   attackSpeed: 0.8
-  attackRange: 0.8
+  attackRange: 0.7
   critChance: 0
   damageType: Cosmic
   slowAmt: 0

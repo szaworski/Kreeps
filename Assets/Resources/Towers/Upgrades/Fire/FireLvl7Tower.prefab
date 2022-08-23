@@ -868,8 +868,8 @@ MonoBehaviour:
   attackCd: 0
   damage: 18
   projectileSpeed: 0
-  attackSpeed: 1
-  attackRange: 0.8
+  attackSpeed: 0.9
+  attackRange: 0.7
   critChance: 0
   damageType: Fire2
   slowAmt: 0

@@ -360,7 +360,7 @@ MonoBehaviour:
   damage: 12
   projectileSpeed: 0
   attackSpeed: 1
-  attackRange: 0.6
+  attackRange: 0.5
   critChance: 0
   damageType: Ice
   slowAmt: 0.15
