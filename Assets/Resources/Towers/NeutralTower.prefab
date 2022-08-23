@@ -102,7 +102,7 @@ MonoBehaviour:
   damage: 4
   projectileSpeed: 4
   attackSpeed: 0.9
-  attackRange: 0.8
+  attackRange: 0.7
   critChance: 0
   damageType: Neutral
   slowAmt: 0
