@@ -742,7 +742,7 @@ MonoBehaviour:
   damage: 22
   projectileSpeed: 1
   attackSpeed: 1.25
-  attackRange: 0.7
+  attackRange: 1
   critChance: 0
   damageType: Thunder
   slowAmt: 0

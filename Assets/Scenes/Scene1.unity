@@ -1550,7 +1550,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nCost: 50g\nDamage: 4\nRate of fire: 0.9\nRange: 0.7\nBonus:
+  m_text: "Single target\n\nCost: 50g\nDamage: 4\nRate of fire: 0.9\nRange: 0.8\nBonus:
     \nNone\nPenalty:\nNone"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -3465,7 +3465,7 @@ MonoBehaviour:
     Rate of fire: 0.5
 
     Range:
-    0.7
+    0.8
 
     Bonus:
 
@@ -5100,10 +5100,10 @@ MonoBehaviour:
 
     Damage: 10
 
-    Rate of fire: 1.2
+    Rate of fire: 1
 
     Range:
-    0.7
+    0.8
 
     Bonus:
 
@@ -8839,7 +8839,7 @@ MonoBehaviour:
     Rate of fire: 1.5
 
     Range:
-    0.7
+    1
 
     Bonus:
 
