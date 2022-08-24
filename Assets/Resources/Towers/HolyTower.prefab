@@ -101,14 +101,14 @@ MonoBehaviour:
   attackCd: 0
   damage: 10
   projectileSpeed: 1
-  attackSpeed: 1
+  attackSpeed: 1.1
   attackRange: 0.8
   critChance: 0
   damageType: Holy
   slowAmt: 0
   attackRadius: {fileID: 3026728734037502744}
   dmgText: {fileID: 850094986459443374}
-  rofText: {fileID: 7062493690218927005}
+  rofText: {fileID: 6849132105906529563}
   rngText: {fileID: 7062493690218927005}
   hasUpgrades: 1
   upgrade1: HolyLvl2
@@ -577,7 +577,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.096877515, y: 1.007931, z: 0.41434073, w: -0.3569852}
+  m_margin: {x: 0.09314771, y: 0.9967415, z: 0.41434073, w: -0.3569852}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
