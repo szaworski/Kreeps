@@ -413,6 +413,7 @@ public class TileSpawner : TileTypes
             else
             {
                 GlobalVars.showStartWaveInstructions = true;
+                Resources.UnloadUnusedAssets();
             }
         }
     }
@@ -571,6 +572,7 @@ public class TileSpawner : TileTypes
             GlobalVars.triggerShopCardDestruction = false;
             shopSelectText.enabled = false;
             GlobalVars.showStartWaveInstructions = true;
+            Resources.UnloadUnusedAssets();
             Debug.Log("Shop Cards Destoryed");
         }
     }

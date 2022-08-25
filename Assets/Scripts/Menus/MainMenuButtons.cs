@@ -12,10 +12,10 @@ public class MainMenuButtons : LoadNewScene
 
     void Awake()
     {
+        Resources.UnloadUnusedAssets();
         newGameButtonTriggered = false;
         optionsButtonTriggered = false;
         exitGameButtonTriggered = false;
-
         Cursor.SetCursor(cursorImage, Vector2.zero, CursorMode.ForceSoftware);
     }
 

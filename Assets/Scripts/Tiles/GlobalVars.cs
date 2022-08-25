@@ -60,6 +60,8 @@ public class GlobalVars : MonoBehaviour
 
     void Awake()
     {
+        Resources.UnloadUnusedAssets();
+
         //Add starting location counts (Reset location counts)
         tileCounters.Clear();
         tileCounters.Add("numOfTimesPlaced", 0);
