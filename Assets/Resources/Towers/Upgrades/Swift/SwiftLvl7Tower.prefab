@@ -188,7 +188,7 @@ MonoBehaviour:
   attackCd: 0
   damage: 20
   projectileSpeed: 4
-  attackSpeed: 0.2
+  attackSpeed: 0.3
   attackRange: 1
   critChance: 0
   damageType: Swift
