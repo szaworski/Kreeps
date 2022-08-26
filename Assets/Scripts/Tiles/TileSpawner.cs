@@ -475,10 +475,6 @@ public class TileSpawner : TileTypes
                     card1 = selectedCard;
                     //Debug.Log("Weapon Card 1: " + card1);
                     break;
-                case 1:
-                    card2 = selectedCard;
-                    //Debug.Log("Weapon Card 2: " + card2);
-                    break;
             }
         }
 
