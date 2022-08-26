@@ -150,7 +150,7 @@ MonoBehaviour:
   upgradeCost: 50
   upgradeType: BonusSpeed
   bonusAmt: 0
-  bonusFloatAmt: 0.1
+  bonusFloatAmt: 0.05
 --- !u!1 &6911761215297631096
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Holy type weapons and towers gain +0.1 attack rate
+  m_text: 'Holy type weapons and towers gain +0.05 attack rate
 
 
     Cost: 50g'
