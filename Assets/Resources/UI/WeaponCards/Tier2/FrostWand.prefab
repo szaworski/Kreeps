@@ -71,13 +71,13 @@ MonoBehaviour:
 
     Damage: 8
 
-    Attack rate: 1.25
+    Attack rate: 2
 
     Range:
-    0.2
+    0.3
 
 
-    Cost: 300g'
+    Cost: 275g'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -293,7 +293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: FrostWand
-  upgradeCost: 300
+  upgradeCost: 275
   upgradeType: Weapon
   bonusAmt: 0
   bonusFloatAmt: 0

@@ -65,18 +65,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Single target
+  m_text: 'AOE in radius
 
+    Damage: 20
 
-    Damage: 40
+    Attack rate: 2
 
-    Attack rate: 1.5
-
-    Range: 0.15
+    Range: 0.3
 
 
     Cost:
-    375g'
+    350g'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -292,7 +291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: AstralSpear
-  upgradeCost: 375
+  upgradeCost: 350
   upgradeType: Weapon
   bonusAmt: 0
   bonusFloatAmt: 0
