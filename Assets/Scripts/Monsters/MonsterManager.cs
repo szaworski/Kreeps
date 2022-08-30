@@ -16,7 +16,7 @@ public class MonsterManager : MonoBehaviour
     void Update()
     {
         AddToMonsterList();
-        SpawnMonsters(0.55f);
+        SpawnMonsters(GlobalVars.kreepSpawnRate); //0.55f
     }
 
     public void SpawnMonsters(float amtOfTime)

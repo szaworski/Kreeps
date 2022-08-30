@@ -197,6 +197,7 @@ public class TileSpawner : TileTypes
                 GlobalVars.currTier = "Tier2";
                 GlobalVars.currTierNum = 2;
                 currentCardList = tier2TileCards.ToList();
+                GlobalVars.kreepSpawnRate = 0.45f;
             }
 
             else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 20 && GlobalVars.tileCounters["numOfTimesPlaced"] < 30)

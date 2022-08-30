@@ -63,23 +63,23 @@ public class MouseCursor : MonoBehaviour
                     break;
 
                 case "ShortSword":
-                    ChangeWeaponStats(7, 1, 0.8f, 0.1f, "Neutral", 0, true, 1);
+                    ChangeWeaponStats(6, 1, 0.8f, 0.1f, "Neutral", 0, true, 1);
                     break;
 
                 case "LongSword":
-                    ChangeWeaponStats(10, 0, 1.25f, 0.2f, "Neutral", 0, true, 2);
+                    ChangeWeaponStats(10, 0, 1.5f, 0.2f, "Neutral", 0, true, 2);
                     break;
 
                 case "Spear":
-                    ChangeWeaponStats(14, 1, 1f, 0.1f, "Neutral", 0, true, 3);
+                    ChangeWeaponStats(14, 1, 1.2f, 0.1f, "Neutral", 0, true, 3);
                     break;
 
                 case "HandAxe":
-                    ChangeWeaponStats(8, 1, 0.5f, 0.1f, "Neutral", 0, true, 4);
+                    ChangeWeaponStats(8, 1, 0.7f, 0.1f, "Neutral", 0, true, 4);
                     break;
 
                 case "Mace":
-                    ChangeWeaponStats(11, 1, 0.9f, 0.1f, "Neutral", 0, true, 5);
+                    ChangeWeaponStats(11, 1, 1f, 0.1f, "Neutral", 0, true, 5);
                     break;
 
                 //Lvl 2 Weapons
@@ -101,11 +101,36 @@ public class MouseCursor : MonoBehaviour
                 case "Katana":
                     ChangeWeaponStats(18, 1, 0.6f, 0.15f, "Swift", 0, true, 11);
                     break;
-                case "AstralSpear":
-                    ChangeWeaponStats(20, 0, 2f, 0.3f, "Cosmic", 0, true, 12);
+                case "CosmicSpear":
+                    ChangeWeaponStats(40, 1, 1.75f, 0.15f, "Cosmic", 0, true, 12);
                     break;
 
-                    //Lvl 3 Weapons
+                //Lvl 3 Weapons
+                case "GoldenShortSword":
+                    ChangeWeaponStats(24, 1, 0.7f, 0.15f, "Neutral", 0, true, 13);
+                    break;
+                case "EmberBattleAxe":
+                    ChangeWeaponStats(20, 0, 2f, 0.3f, "Fire", 0, true, 14);
+                    break;
+                case "FrostLongSword":
+                    ChangeWeaponStats(30, 1, 1f, 0.15f, "Ice", 0.10f, true, 15);
+                    break;
+                case "ShockLance":
+                    ChangeWeaponStats(42, 1, 1f, 0.15f, "Thunder", 0, true, 16);
+                    break;
+                case "SacredStaff":
+                    ChangeWeaponStats(30, 0, 2.5f, 0.4f, "Holy", 0, false, 17);
+                    break;
+                case "TwinDaggers":
+                    ChangeWeaponStats(22, 1, 0.4f, 0.15f, "Swift", 0, true, 18);
+                    break;
+                case "AstralGreatSword":
+                    ChangeWeaponStats(40, 0, 3f, 0.5f, "Cosmic", 0, true, 19);
+                    break;
+
+                //Lvl 4 Weapons
+
+                //Lvl 5 Weapons
 
             }
 

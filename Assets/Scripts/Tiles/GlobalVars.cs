@@ -20,6 +20,7 @@ public class GlobalVars : MonoBehaviour
     public static string currentSong;
 
     public static float musicVolume;
+    public static float kreepSpawnRate;
 
     public static int currTierNum;
     public static int goldCost;
@@ -145,6 +146,7 @@ public class GlobalVars : MonoBehaviour
         currTier = "Tier1";
         currTierNum = 1;
         monsterCount = 0;
+        kreepSpawnRate = 0.55f;
         allMonstersAreSpawned = false;
         currentSong = "Song1";
         musicVolume = GameObject.Find(currentSong).GetComponent<AudioSource>().volume;
