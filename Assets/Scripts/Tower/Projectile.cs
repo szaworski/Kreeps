@@ -109,7 +109,7 @@ public class Projectile : MonoBehaviour
                 }
                 else
                 {
-                    transform.parent.GetComponent<Tower>().attackCd = 0;
+                    //transform.parent.GetComponent<Tower>().attackCd = 0;
                 }
             }
         }
