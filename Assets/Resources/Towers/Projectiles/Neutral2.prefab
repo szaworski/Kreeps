@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AoeRadius: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   target: {fileID: 0}
   rb: {fileID: -7440129572534784170}
   damageValue: 0
