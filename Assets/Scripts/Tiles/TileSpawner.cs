@@ -205,6 +205,7 @@ public class TileSpawner : TileTypes
                 GlobalVars.currTier = "Tier3";
                 GlobalVars.currTierNum = 3;
                 currentCardList = tier3TileCards.ToList();
+                GlobalVars.kreepSpawnRate = 0.4f;
 
                 if (GlobalVars.tileCounters["numOfTimesPlaced"] == 20)
                 {

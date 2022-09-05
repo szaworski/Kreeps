@@ -386,6 +386,11 @@ public class Monster : MonoBehaviour
                 healthText.SetText(health.ToString());
                 healthText.color = green;
                 maxHealthText.color = green;
+
+                if (health < maxHealth)
+                {
+                    StartCoroutine(SpawnHpRegenPopup(hpRegen, 0.25f));
+                }
             }
         }
     }

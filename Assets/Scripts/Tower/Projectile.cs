@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
@@ -41,7 +42,14 @@ public class Projectile : MonoBehaviour
         {
             AoeRadius.radius = attackRange;
         }
+
         //Debug.Log("currentTarget target position: " + target.transform.position);
+    }
+
+    void Start()
+    {
+        Quaternion rotation = Quaternion.LookRotation(target.transform.position - transform.position, transform.TransformDirection(Vector3.up));
+        transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
     }
 
     void Update()
