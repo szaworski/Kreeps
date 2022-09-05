@@ -4,6 +4,7 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] private CircleCollider2D AoeRadius;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     public GameObject target;
     public Rigidbody2D rb;
     public float damageValue;
@@ -16,6 +17,8 @@ public class Projectile : MonoBehaviour
 
     void Awake()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
         if (isWeapon)
         {
             damageValue = transform.parent.GetComponent<Weapon>().damage;
@@ -48,6 +51,11 @@ public class Projectile : MonoBehaviour
 
     void Start()
     {
+        if (target.transform.position.x > transform.position.x)
+        {
+            spriteRenderer.flipX = true;
+        }
+
         Quaternion rotation = Quaternion.LookRotation(target.transform.position - transform.position, transform.TransformDirection(Vector3.up));
         transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
     }
