@@ -84,10 +84,6 @@ public class Projectile : MonoBehaviour
                 {
                     transform.parent.GetComponent<Weapon>().attackCd = 0;
                 }
-                else
-                {
-                    transform.parent.GetComponent<Tower>().attackCd = 0;
-                }
             }
         }
 
@@ -106,10 +102,6 @@ public class Projectile : MonoBehaviour
                 if (isWeapon)
                 {
                     transform.parent.GetComponent<Weapon>().attackCd = 0;
-                }
-                else
-                {
-                    //transform.parent.GetComponent<Tower>().attackCd = 0;
                 }
             }
         }

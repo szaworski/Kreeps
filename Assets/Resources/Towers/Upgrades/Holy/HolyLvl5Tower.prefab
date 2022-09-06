@@ -331,7 +331,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 4399466721232609003, guid: 7e0c2ab2930874644bf69d49321ae4c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -358,7 +358,7 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   attackCd: 0
   damage: 18
-  projectileSpeed: 3.25
+  projectileSpeed: 4
   attackSpeed: 0.9
   attackRange: 1
   critChance: 0
