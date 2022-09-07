@@ -457,7 +457,7 @@ public class Monster : MonoBehaviour
             if (projectileObj != null)
             {
                 //Adding a slight pause to make sure damage is received from the projectile
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.2f);
                 if (projectileObj != null)
                 {
                     Destroy(projectileObj.gameObject);
