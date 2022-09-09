@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6130404801214499859}
   - component: {fileID: 3346913848105228779}
   m_Layer: 5
-  m_Name: SapphireCave
+  m_Name: CrystalCave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3c50722ec083041bcf2aec73db18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: SapphireCave
+  cardName: CrystalCave
   upgradeCost: 0
   upgradeType: 
   bonusAmt: 0
@@ -359,7 +359,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sapphire Cavern
+  m_text: 'Crystal Cave
 
 '
   m_isRightToLeft: 0

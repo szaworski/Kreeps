@@ -658,8 +658,8 @@ public class TileSpawner : TileTypes
             case "SacredGrounds":
                 curTiles = sacredGroundsTiles;
                 break;
-            case "SapphireCave":
-                curTiles = sapphireCaveTiles;
+            case "CrystalCave":
+                curTiles = crystalCaveTiles;
                 break;
             case "TaintedCanal":
                 curTiles = taintedCanalTiles;

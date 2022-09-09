@@ -64,15 +64,6 @@ How does armorwork?: Armor reduces incoming attack damage by 1 for each 1 armor 
 
 Negative effect ideas: 
 
-1. Decrease gold bounty of monsters
-
-2. Increase kreep damage to player
-
-3. Frenzy: Increase movespeed by small amount per second after spawning
-
-4. Decrease damage of specific tower types
-
-5.
 
 
 Weapon ideas:
@@ -171,22 +162,22 @@ Demon: 6
 Tier 4 tiles: 
 
 Frozen Passage:
+Monsters: Yeti (Brute), Arctic Fox (Pest/Brute), Frost Ghoul (Undead/Beast), Reindeer (Beast)
+
+Infernal Woods: Greater Imp (Demon), Smoldering Skeleton (Undead/Brute), Raven (Pest), Orc Warrior (Humanoid/Beast)
 Monsters: 
 
-Infernal Woods:
+Sacred Grounds: Priest (Humanoid), Paladin (Humanoid/Brute), Fallen Angel (Undead/Demon), Undead Knight(Undead)
 Monsters: 
 
-Sacred Grounds:
+Crystal Cave: Crystalline Golem (Brute), Crystalline Skeleton (Undead), Sparkling Gecko (Brute/Pest), Geologist (Humanoid)
 Monsters: 
 
-Sapphire Cave:
-Monsters: 
-
-Tainted Canal:
+Tainted Canal: Viper (Pest), Toxic Otter (Pest), Plague Bear (Brute/Demon), Blight Beast (Beast)
 Monsters: 
 
 Volcanic Ravine: 
-Monsters: Lava golem (Brute), 
+Monsters: Magma Golem (Brute), Magma Demon (Brute/Demon), Slag Salamander (Pest), Phoenix (Pest)
 
 
 Humanoid: 0 

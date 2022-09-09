@@ -28,7 +28,7 @@
     [System.NonSerialized] public string[] frozenPassageTiles = new string[] { "FrozenPassageTile1", "FrozenPassageTile2", "FrozenPassageTile3", "FrozenPassageTile4", "FrozenPassageTile5", "FrozenPassageTile6" };
     [System.NonSerialized] public string[] infernalWoodsTiles = new string[] { "InfernalWoodsTile1", "InfernalWoodsTile2", "InfernalWoodsTile3", "InfernalWoodsTile4", "InfernalWoodsTile5", "InfernalWoodsTile6" };
     [System.NonSerialized] public string[] sacredGroundsTiles = new string[] { "SacredGroundsTile1", "SacredGroundsTile2", "SacredGroundsTile3", "SacredGroundsTile4", "SacredGroundsTile5", "SacredGroundsTile6" };
-    [System.NonSerialized] public string[] sapphireCaveTiles = new string[] { "SapphireCaveTile1", "SapphireCaveTile2", "SapphireCaveTile3", "SapphireCaveTile4", "SapphireCaveTile5", "SapphireCaveTile6" };
+    [System.NonSerialized] public string[] crystalCaveTiles = new string[] { "CrystalCaveTile1", "CrystalCaveTile2", "CrystalCaveTile3", "CrystalCaveTile4", "CrystalCaveTile5", "CrystalCaveTile6" };
     [System.NonSerialized] public string[] taintedCanalTiles = new string[] { "TaintedCanalTile1", "TaintedCanalTile2", "TaintedCanalTile3", "TaintedCanalTile4", "TaintedCanalTile5", "TaintedCanalTile6" };
     [System.NonSerialized] public string[] volcanicRavineTiles = new string[] { "VolcanicRavineTile1", "VolcanicRavineTile2", "VolcanicRavineTile3", "VolcanicRavineTile4", "VolcanicRavineTile5", "VolcanicRavineTile6" };
 
