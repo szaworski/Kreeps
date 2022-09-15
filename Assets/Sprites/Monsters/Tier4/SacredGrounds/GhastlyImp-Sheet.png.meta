@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 45a24cf218fb55343afa61bbba984508
+guid: c291aa6dd784f7f4ab9b629de61c06c5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1311638077235309289
-    second: Minotaur-Sheet_0
+      213: -8352710371015321849
+    second: GhastlyImp-Sheet_0
   - first:
-      213: -8556117816034751631
-    second: Minotaur-Sheet_1
+      213: 7336434868373227823
+    second: GhastlyImp-Sheet_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -107,13 +107,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Minotaur-Sheet_0
+      name: GhastlyImp-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 20
-        height: 20
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9eaac73c1efd33210800000000000000
-      internalID: 1311638077235309289
+      spriteID: 70719ef0c26351c80800000000000000
+      internalID: -8352710371015321849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minotaur-Sheet_1
+      name: GhastlyImp-Sheet_1
       rect:
         serializedVersion: 2
-        x: 20
+        x: 14
         y: 0
-        width: 20
-        height: 20
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,8 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17b8bd6bd20924980800000000000000
-      internalID: -8556117816034751631
+      spriteID: f290d2784a040d560800000000000000
+      internalID: 7336434868373227823
       vertices: []
       indices: 
       edges: []

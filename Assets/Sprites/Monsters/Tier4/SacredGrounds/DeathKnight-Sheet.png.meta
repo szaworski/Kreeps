@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 45a24cf218fb55343afa61bbba984508
+guid: 2048399a71d644441a6a9323c7920b19
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1311638077235309289
-    second: Minotaur-Sheet_0
+      213: 5734325465813531712
+    second: DeathKnight-Sheet_0
   - first:
-      213: -8556117816034751631
-    second: Minotaur-Sheet_1
+      213: 2044713030389006758
+    second: DeathKnight-Sheet_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -107,7 +107,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Minotaur-Sheet_0
+      name: DeathKnight-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,14 +121,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9eaac73c1efd33210800000000000000
-      internalID: 1311638077235309289
+      spriteID: 04cba4021aa649f40800000000000000
+      internalID: 5734325465813531712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minotaur-Sheet_1
+      name: DeathKnight-Sheet_1
       rect:
         serializedVersion: 2
         x: 20
@@ -142,8 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17b8bd6bd20924980800000000000000
-      internalID: -8556117816034751631
+      spriteID: 6a103f3faa7406c10800000000000000
+      internalID: 2044713030389006758
       vertices: []
       indices: 
       edges: []
