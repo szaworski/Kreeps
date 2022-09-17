@@ -356,7 +356,27 @@ public class TileSpawner : TileTypes
                 currentCardList = sewerMonsterCards.ToList();
                 break;
 
-                //Tier 4
+            //Tier 4
+            case "CrystalCave":
+                currentCardList = crystalCaveMonsterCards.ToList();
+                break;
+            case "FrozenPassage":
+                currentCardList = frozenPassageMonsterCards.ToList();
+                break;
+            case "InfernalWoods":
+                currentCardList = infernalWoodsMonsterCards.ToList();
+                break;
+            case "SacredGrounds":
+                currentCardList = sacredGroundsMonsterCards.ToList();
+                break;
+            case "TaintedCanal":
+                currentCardList = taintedCanalMonsterCards.ToList();
+                break;
+            case "VolcanicRavine":
+                currentCardList = volcanicRavineMonsterCards.ToList();
+                break;
+
+                //Tier 5
         }
 
         //Create a list of 2 unique random cards from the current card list

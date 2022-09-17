@@ -6,7 +6,7 @@ public class CardsLists : MonoBehaviour
     [System.NonSerialized] public List<string> tier1TileCards = new List<string> { "Forest", "Graveyard", "Mountain", "River", "Swamp" };
     [System.NonSerialized] public List<string> tier2TileCards = new List<string> { "Desert", "Thicket", "Tundra", "Cavern", "Settlement", "Seashore" };
     [System.NonSerialized] public List<string> tier3TileCards = new List<string> { "CanyonCrossing", "CrimsonPlain", "Crypt", "EmeraldCave", "Marsh", "Sewer" };
-    [System.NonSerialized] public List<string> tier4TileCards = new List<string> { "FrozenPassage", "InfernalWoods", "SacredGrounds", "SapphireCave", "TaintedCanal", "VolcanicRavine" };
+    [System.NonSerialized] public List<string> tier4TileCards = new List<string> { "CrystalCave", "FrozenPassage", "InfernalWoods", "SacredGrounds", "TaintedCanal", "VolcanicRavine" };
     [System.NonSerialized] public List<string> tier5TileCards = new List<string> { "Abyss", "AstralPlane", "Underworld", "", "", "" };
 
     //Tier 1 Monsters
@@ -31,6 +31,14 @@ public class CardsLists : MonoBehaviour
     [System.NonSerialized] public List<string> emeraldCaveMonsterCards = new List<string> { "Gemstone Golem", "Jewel Thief", "Spectral Bear", "Badger" };
     [System.NonSerialized] public List<string> marshMonsterCards = new List<string> { "Water Demon", "Reanimated Wolf", "Poison Toad", "Giant Slug" };
     [System.NonSerialized] public List<string> sewerMonsterCards = new List<string> { "Slime", "Giant Roach", "Vile Wraith", "Dung Devil" };
+
+    //Tier 4 Monsters
+    [System.NonSerialized] public List<string> crystalCaveMonsterCards = new List<string> { "Crystalline Ogre", "Crystalline Zombie", "Diamond Gecko", "Geologist" };
+    [System.NonSerialized] public List<string> frozenPassageMonsterCards = new List<string> { "Frost Giant", "Arctic Fox", "Frost Ghoul", "Reindeer" };
+    [System.NonSerialized] public List<string> infernalWoodsMonsterCards = new List<string> { "Cinder Goblin", "Smoldering Skeleton", "Raven", "Orc Warrior" };
+    [System.NonSerialized] public List<string> sacredGroundsMonsterCards = new List<string> { "Priest", "Paladin", "Ghastly Imp", "Death Knight" };
+    [System.NonSerialized] public List<string> taintedCanalMonsterCards = new List<string> { "Viper", "Toxic Wolf", "Plague Bear", "Basilisk" };
+    [System.NonSerialized] public List<string> volcanicRavineMonsterCards = new List<string> { "Magma Golem", "Lava Demon", "Necromancer", "Phoenix" };
 
     //Weapon cards
     [System.NonSerialized] public List<string> tier1WeaponCards = new List<string> { "Dagger", "ShortSword", "LongSword", "Spear", "HandAxe", "Mace" };

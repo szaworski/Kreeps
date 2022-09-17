@@ -87,10 +87,10 @@ public class GlobalVars : MonoBehaviour
         tileCounters.Add("Marsh", 0);
         tileCounters.Add("Sewer", 0);
 
+        tileCounters.Add("CrystalCave", 0);
         tileCounters.Add("FrozenPassage", 0);
         tileCounters.Add("InfernalWoods", 0);
         tileCounters.Add("SacredGrounds", 0);
-        tileCounters.Add("SapphireCave", 0);
         tileCounters.Add("TaintedCanal", 0);
         tileCounters.Add("VolcanicRavine", 0);
 

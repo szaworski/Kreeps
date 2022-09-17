@@ -161,10 +161,10 @@ public class PlayerHud : MonoBehaviour
         bonusArmor += 2 * GlobalVars.tileCounters["CanyonCrossing"];
         bonusMaxHealth += 5 * GlobalVars.tileCounters["CanyonCrossing"];
 
-        bonusMoveSpeed += 0.05f * GlobalVars.tileCounters["CrimsonPlain"];
+        bonusMoveSpeed += 0.04f * GlobalVars.tileCounters["CrimsonPlain"];
 
         bonusHpRegen += 3 * GlobalVars.tileCounters["Crypt"];
-        bonusMoveSpeed += 0.03f * GlobalVars.tileCounters["Crypt"];
+        bonusMoveSpeed += 0.02f * GlobalVars.tileCounters["Crypt"];
 
         bonusArmor += 3 * GlobalVars.tileCounters["EmeraldCave"];
 
@@ -174,17 +174,19 @@ public class PlayerHud : MonoBehaviour
         bonusEvasion += 0.03f * GlobalVars.tileCounters["Sewer"];
 
         //Apply any Tier 4 bonuses
-        bonusArmor += 2 * GlobalVars.tileCounters["FrozenPassage"];
+        bonusArmor += 5 * GlobalVars.tileCounters["CrystalCave"];
+
+        bonusMaxHealth += 25 * GlobalVars.tileCounters["FrozenPassage"];
 
         bonusMoveSpeed += 0.05f * GlobalVars.tileCounters["InfernalWoods"];
 
-        bonusHpRegen += 4 * GlobalVars.tileCounters["SacredGrounds"];
+        bonusHpRegen += 5 * GlobalVars.tileCounters["SacredGrounds"];
 
-        bonusArmor += 3 * GlobalVars.tileCounters["SapphireCave"];
+        bonusMoveSpeed += 0.02f * GlobalVars.tileCounters["TaintedCanal"];
+        bonusEvasion += 0.04f * GlobalVars.tileCounters["TaintedCanal"];
 
-        bonusMaxHealth += 15 * GlobalVars.tileCounters["TaintedCanal"];
-
-        bonusArmor += 1 * GlobalVars.tileCounters["VolcanicRavine"];
+        bonusArmor += 3 * GlobalVars.tileCounters["VolcanicRavine"];
+        bonusMaxHealth += 10 * GlobalVars.tileCounters["VolcanicRavine"];
 
         //Apply any Tier 5 bonuses
 

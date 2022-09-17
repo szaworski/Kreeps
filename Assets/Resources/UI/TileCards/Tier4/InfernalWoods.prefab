@@ -218,14 +218,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +1 hp regen
+    +5 move speed
 
-    +1 move speed
-
-    +5 max health
-
-    for
-    each Infernal Woods placed'
+    for each Infernal Woods placed'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
