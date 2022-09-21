@@ -7,7 +7,7 @@ public class CardsLists : MonoBehaviour
     [System.NonSerialized] public List<string> tier2TileCards = new List<string> { "Desert", "Thicket", "Tundra", "Cavern", "Settlement", "Seashore" };
     [System.NonSerialized] public List<string> tier3TileCards = new List<string> { "CanyonCrossing", "CrimsonPlain", "Crypt", "EmeraldCave", "Marsh", "Sewer" };
     [System.NonSerialized] public List<string> tier4TileCards = new List<string> { "CrystalCave", "FrozenPassage", "InfernalWoods", "SacredGrounds", "TaintedCanal", "VolcanicRavine" };
-    [System.NonSerialized] public List<string> tier5TileCards = new List<string> { "Abyss", "AstralPlane", "Underworld", "", "", "" };
+    [System.NonSerialized] public List<string> tier5TileCards = new List<string> { "OceanAbyss", "CelestialPlane", "Underworld", "AncestralForest", "MysticMountain", "CorruptedIsle" };
 
     //Tier 1 Monsters
     [System.NonSerialized] public List<string> forestMonsterCards = new List<string> { "Wolf", "Goblin", "Skeleton", "Owl" };
