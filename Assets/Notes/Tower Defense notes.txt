@@ -76,7 +76,7 @@ Spawn shop cards every 3 waves ( if (numOfTimesPlaced % 3 == 0))
 
 Tier 1 tiles:
 
-Forrest: +3 move speed for each Forrest tile placed
+Forest: +3 move speed for each Forrest tile placed
 Monsters: Wolf (Beast), Goblin (Humanoid), Bandit (Humanoid), Owl (Pest)
 
 Graveyard: +1 HP regen and +2 max HP for each Graveyard tile placed
@@ -135,10 +135,10 @@ Tier 3 tiles:
 Canyon Crossing: +2 armor and +5 max HP per tile
 Monsters: Hunter (Humanoid), Cavalry (Humanoid/Brute), Pack Mule (Beast), Falcon (Pest)
 
-Crimson Plain: +5 move speed per tile
+Crimson Plain: +4 move speed per tile
 Monsters: Goblin Rider (Humanoid/Beast), Imp (Demon), Crimson Wolf (Beast/Demon), Bison (Brute)
 
-Crypt: +3 HP regen and +3 move speed per tile
+Crypt: +3 HP regen and +2 move speed per tile
 Monsters: Fiend (Demon), Cultist (Humanoid/Demon), Crawler (Undead), Flying Skull (Undead/Pest)
 
 Emerald Cave: +3 armor per tile
@@ -161,31 +161,31 @@ Demon: 6
 
 Tier 4 tiles: 
 
-Frozen Passage:
-Monsters: Yeti (Brute), Arctic Fox (Pest/Brute), Frost Ghoul (Undead/Beast), Reindeer (Beast)
+Crystal Cave: +5 armor
+Monsters: Crystalline Ogre (Brute/Demon), Crystalline Zombie (Undead/Brute), Diamond Gecko (Pest), Geologist (Humanoid)
 
-Infernal Woods: Greater Imp (Demon), Smoldering Skeleton (Undead/Brute), Raven (Pest), Orc Warrior (Humanoid/Beast)
-Monsters: 
+Frozen Passage: +25 max hp per tile
+Monsters: Frost Giant (Brute), Arctic Fox (Pest/Beast), Frost Ghoul (Undead/Beast), Reindeer (Beast)
 
-Sacred Grounds: Priest (Humanoid), Paladin (Humanoid/Brute), Fallen Angel (Undead/Demon), Undead Knight(Undead)
-Monsters: 
+Infernal Woods: +5 move speed per tile
+Monsters: Cinder Goblin (Humanoid), Smoldering Skeleton (Undead/Brute), Raven (Pest), Orc Warrior (Humanoid/Beast)
 
-Crystal Cave: Crystalline Golem (Brute), Crystalline Skeleton (Undead), Sparkling Gecko (Brute/Pest), Geologist (Humanoid)
-Monsters: 
+Sacred Grounds: +5 hp regen per tile
+Monsters: Priest (Humanoid), Paladin (Humanoid/Brute), Ghastly Imp (Undead/Demon), Death Knight(Undead)
 
-Tainted Canal: Viper (Pest), Toxic Otter (Pest), Plague Bear (Brute/Demon), Blight Beast (Beast)
-Monsters: 
+Tainted Canal: +4% evasion and +2 move speed per tile
+Monsters: Viper (Pest), Toxic Wolf (Beast/Pest), Plague Bear (Demon), Basilisk (Demon/Beast)
 
-Volcanic Ravine: 
-Monsters: Magma Golem (Brute), Magma Demon (Brute/Demon), Slag Salamander (Pest), Phoenix (Pest)
+Volcanic Ravine: +3 armor and +10 max hp per tile 
+Monsters: Magma Golem (Brute), Lava Demon (Demon), Necromancer (Undead/Demon), Phoenix (Pest)
 
 
-Humanoid: 0 
-Beast: 0
-Undead: 0
-Brute: 0
-Pest: 0
-Demon: 0
+Humanoid: 5
+Beast: 6
+Undead: 6
+Brute: 6
+Pest: 6
+Demon: 6
 
 
 Tier 5 tiles: 
@@ -193,19 +193,19 @@ Tier 5 tiles:
 Ocean Abyss: 
 Monsters: 
 
-Astral Plane:
+Celestial Plane:
 Monsters: 
 
 Underworld:
 Monsters: 
 
-:
+Ancestral Forest:
 Monsters: 
 
-:
+Mystic Mountain:
 Monsters: 
 
-:
+Corrupted Isle:
 Monsters: 
 
 
