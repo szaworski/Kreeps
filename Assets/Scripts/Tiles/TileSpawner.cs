@@ -50,20 +50,22 @@ public class TileSpawner : TileTypes
 
     public void PlaceStartingTile()
     {
-        GlobalVars.tileName = "StartingTile";
         //Fetch the starting tile
+        GlobalVars.tileName = "StartingTile";
         GameObject referenceStartTile = (GameObject)Instantiate(Resources.Load("Tiles/StartingTile"));
         GameObject TileHolder = GameObject.Find("TileHolder");
+
         //Place the starting tile
         GameObject tile = (GameObject)Instantiate(referenceStartTile, TileHolder.transform);
         tile.transform.SetParent(TileHolder.transform);
         tile.transform.position = new Vector2(0, 0);
-        //increment numOfTimesPlaced
         GlobalVars.tileCounters["numOfTimesPlaced"]++;
+
         //Place a waypoint node on the center of the tile
         GameObject waypoint = (GameObject)Instantiate(Resources.Load("Tiles/WaypointNode"), TileHolder.transform);
         waypoint.transform.SetParent(tile.transform);
         waypoint.transform.position = new Vector2(tile.transform.position.x, tile.transform.position.y);
+
         //Destroy the temporary reference object
         Destroy(referenceStartTile);
         FindNewSpawnDirection();
@@ -72,39 +74,42 @@ public class TileSpawner : TileTypes
 
     public void SpawnNewTile()
     {
-        //Is now called in GetAndShowTileCards() after a selection is made
-        GetNewTile();
-        GlobalVars.tileName = newTileName;
-        Debug.Log("Tile Pathway: " + prependTileName + GlobalVars.tileName);
-        //Find the tile in the resources folder
-        GameObject referenceStartTile = (GameObject)Instantiate(Resources.Load(prependTileName + GlobalVars.tileName));
-        GameObject TileHolder = GameObject.Find("TileHolder");
-        //Place the new tile
-        GameObject tile = (GameObject)Instantiate(referenceStartTile, TileHolder.transform);
-        tile.transform.SetParent(TileHolder.transform);
-        tile.transform.position = new Vector2(shiftAmtXpos, shiftAmtYpos);
-        //increment numOfTimesPlaced
-        GlobalVars.tileCounters["numOfTimesPlaced"]++;
-        //Place a waypoint node on the center of the tile
-        GameObject waypoint = (GameObject)Instantiate(Resources.Load("Tiles/WaypointNode"), TileHolder.transform);
-        waypoint.transform.SetParent(tile.transform);
-        waypoint.transform.position = new Vector2(tile.transform.position.x, tile.transform.position.y);
-        //Destroy the temporary reference objects
-        Destroy(referenceStartTile);
-        //Move the Spawn position
-        FindNewSpawnDirection();
-        //Debug.Log("Spawn direction: " + spawnDirection);
-        MoveSpawnPos();
-        //Use raycasts to detect distances from other tiles (Trying to detect dead end. In progress)
-        CheckTilesWithRayCasts();
-    }
-
-    public void GetNewTile()
-    {
+        //Get the new tile
         CheckTileOverlap();
         CheckForValidTiles();
         GetListOfValidTiles();
         ChooseRandTileFromList();
+        GlobalVars.tileName = newTileName;
+        Debug.Log("Tile Pathway: " + prependTileName + GlobalVars.tileName);
+
+        //Find the tile in the resources folder
+        GameObject referenceStartTile = (GameObject)Instantiate(Resources.Load(prependTileName + GlobalVars.tileName));
+        GameObject TileHolder = GameObject.Find("TileHolder");
+
+        //Place the new tile
+        GameObject tile = (GameObject)Instantiate(referenceStartTile, TileHolder.transform);
+        tile.transform.SetParent(TileHolder.transform);
+        tile.transform.position = new Vector2(shiftAmtXpos, shiftAmtYpos);
+
+        //increment numOfTimesPlaced
+        GlobalVars.tileCounters["numOfTimesPlaced"]++;
+
+        //Place a waypoint node on the center of the tile
+        GameObject waypoint = (GameObject)Instantiate(Resources.Load("Tiles/WaypointNode"), TileHolder.transform);
+        waypoint.transform.SetParent(tile.transform);
+        waypoint.transform.position = new Vector2(tile.transform.position.x, tile.transform.position.y);
+
+        //Destroy the temporary reference objects
+        Destroy(referenceStartTile);
+
+        //Move the Spawn position
+        FindNewSpawnDirection();
+
+        //Debug.Log("Spawn direction: " + spawnDirection);
+        MoveSpawnPos();
+
+        //Use raycasts to detect distances from other tiles (Trying to detect dead end. In progress)
+        CheckTilesWithRayCasts();
     }
 
     public void MoveSpawnPos()

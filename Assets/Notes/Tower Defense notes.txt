@@ -190,23 +190,24 @@ Demon: 6
 
 Tier 5 tiles: 
 
-Ocean Abyss: 
-Monsters: 
+Ancestral Forest:
+Monsters: Earth Elemental (Brute/Pest), Forest Guardian (Brute/Humanoid), Colossal Wolf (Beast), Ancestral Spirit(Beast/Undead)
 
 Celestial Plane:
-Monsters: 
-
-Underworld:
-Monsters: 
-
-Ancestral Forest:
-Monsters: 
-
-Mystic Mountain:
-Monsters: 
+Monsters: Celestial Imp (Demon), Astronaut (Humanoid), Celestial Serpent (Pest/Beast), Martian(Humanoid/Pest)
 
 Corrupted Isle:
-Monsters: 
+Monsters: Rotten Raven (Pest), 
+
+Mystic Mountain:
+Monsters: Mystic Mage (Humanoid/Demon), Arcane Ghoul (Undead/Pest), Rune Bear (Brute/Demon), 
+
+Ocean Abyss: 
+Monsters: Colossal Shrimp (Pest), Ghost Ship (Brute/Undead), Shark (Beast/Pest), Pirate (Humanoid)
+
+Underworld:
+Monsters: Chaos Demon (Demon), Skeleton Lord (Undead/Demon), Blood Mage (Humanoid/Pest), Hell Hound (Beast/Undead) 
+
 
 
 Humanoid: 0 
