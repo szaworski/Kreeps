@@ -191,31 +191,31 @@ Demon: 6
 Tier 5 tiles: 
 
 Ancestral Forest:
-Monsters: Earth Elemental (Brute/Pest), Forest Guardian (Brute/Humanoid), Colossal Wolf (Beast), Ancestral Spirit(Beast/Undead)
+Monsters: Earth Elemental (Brute), Forest Guardian (Brute/Humanoid), Colossal Wolf (Beast), Ancestral Spirit(Beast/Undead)
 
 Celestial Plane:
-Monsters: Celestial Imp (Demon), Astronaut (Humanoid), Celestial Serpent (Pest/Beast), Martian(Humanoid/Pest)
+Monsters: Celestial Imp (Demon), Astronaut (Humanoid), Celestial Serpent (Pest/Beast), Martian (Humanoid/Pest)
 
 Corrupted Isle:
-Monsters: Rotten Raven (Pest), 
+Monsters: Rot Raven (Pest), Festering Ghoul (Undead/Demon), Noxious Ogre (Brute/Undead), Blight Fiend (Demon)
 
 Mystic Mountain:
-Monsters: Mystic Mage (Humanoid/Demon), Arcane Ghoul (Undead/Pest), Rune Bear (Brute/Demon), 
+Monsters: Mystic Mage (Humanoid/Demon), Arcane Ghoul (Undead/Pest), Rune Bear (Brute/Demon), Arcane Eagle (Pest/Beast)
 
 Ocean Abyss: 
 Monsters: Colossal Shrimp (Pest), Ghost Ship (Brute/Undead), Shark (Beast/Pest), Pirate (Humanoid)
 
 Underworld:
-Monsters: Chaos Demon (Demon), Skeleton Lord (Undead/Demon), Blood Mage (Humanoid/Pest), Hell Hound (Beast/Undead) 
+Monsters: Chaos Demon (Brute/Demon), Skeleton Lord (Undead/Demon), Blood Mage (Humanoid/Demon), Hell Hound (Beast) 
 
 
 
-Humanoid: 0 
-Beast: 0
-Undead: 0
-Brute: 0
-Pest: 0
-Demon: 0
+Humanoid: 6
+Beast: 6
+Undead: 6
+Brute: 6
+Pest: 7
+Demon: 8
 
 
 
