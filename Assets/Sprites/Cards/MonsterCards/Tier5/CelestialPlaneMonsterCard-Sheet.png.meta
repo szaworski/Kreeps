@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 6954b648297619340ac962ad1acf4811
+guid: d16f7bd7f1a6f9a4b97c7b02d5019f16
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5451967452494205837
-    second: ColossalShrimp-Sheet_0
+      213: 962380562980892317
+    second: CelestialPlaneMonsterCard-Sheet_0
   - first:
-      213: 4428010816082271390
-    second: ColossalShrimp-Sheet_1
+      213: 7533434326891961243
+    second: CelestialPlaneMonsterCard-Sheet_1
+  - first:
+      213: -5486766256293381225
+    second: CelestialPlaneMonsterCard-Sheet_2
+  - first:
+      213: 8479873767310947204
+    second: CelestialPlaneMonsterCard-Sheet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -107,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ColossalShrimp-Sheet_0
+      name: CelestialPlaneMonsterCard-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 19
-        height: 14
+        width: 90
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37c671bdc78b654b0800000000000000
-      internalID: -5451967452494205837
+      spriteID: d9e673be5001b5d00800000000000000
+      internalID: 962380562980892317
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ColossalShrimp-Sheet_1
+      name: CelestialPlaneMonsterCard-Sheet_1
       rect:
         serializedVersion: 2
-        x: 19
+        x: 90
         y: 0
-        width: 19
-        height: 14
+        width: 90
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,8 +148,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9cdb2a6064737d30800000000000000
-      internalID: 4428010816082271390
+      spriteID: b9b11214b922c8860800000000000000
+      internalID: 7533434326891961243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CelestialPlaneMonsterCard-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 90
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79b7808f8271bd3b0800000000000000
+      internalID: -5486766256293381225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CelestialPlaneMonsterCard-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0
+        width: 90
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 483f8b853409ea570800000000000000
+      internalID: 8479873767310947204
       vertices: []
       indices: 
       edges: []

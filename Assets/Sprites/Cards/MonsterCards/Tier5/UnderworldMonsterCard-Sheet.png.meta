@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 6954b648297619340ac962ad1acf4811
+guid: 3bca1c6bd5e5054498d24c4854eaf46b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5451967452494205837
-    second: ColossalShrimp-Sheet_0
+      213: -3129905900352833920
+    second: UnderworldMonsterCard-Sheet_0
   - first:
-      213: 4428010816082271390
-    second: ColossalShrimp-Sheet_1
+      213: -4231978420834885067
+    second: UnderworldMonsterCard-Sheet_1
+  - first:
+      213: 4924915927410388577
+    second: UnderworldMonsterCard-Sheet_2
+  - first:
+      213: -5331769577017277055
+    second: UnderworldMonsterCard-Sheet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -107,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ColossalShrimp-Sheet_0
+      name: UnderworldMonsterCard-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 19
-        height: 14
+        width: 90
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37c671bdc78b654b0800000000000000
-      internalID: -5451967452494205837
+      spriteID: 086f115aa275094d0800000000000000
+      internalID: -3129905900352833920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ColossalShrimp-Sheet_1
+      name: UnderworldMonsterCard-Sheet_1
       rect:
         serializedVersion: 2
-        x: 19
+        x: 90
         y: 0
-        width: 19
-        height: 14
+        width: 90
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,8 +148,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9cdb2a6064737d30800000000000000
-      internalID: 4428010816082271390
+      spriteID: 532a4095c0ef445c0800000000000000
+      internalID: -4231978420834885067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UnderworldMonsterCard-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 90
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16ea5f151f0d85440800000000000000
+      internalID: 4924915927410388577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UnderworldMonsterCard-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0
+        width: 90
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18586a191dfb106b0800000000000000
+      internalID: -5331769577017277055
       vertices: []
       indices: 
       edges: []

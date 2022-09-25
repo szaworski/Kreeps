@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 6954b648297619340ac962ad1acf4811
+guid: c5c498e584b896747a957c59495e41a6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5451967452494205837
-    second: ColossalShrimp-Sheet_0
+      213: -934152626133323827
+    second: HellHound-Sheet_0
   - first:
-      213: 4428010816082271390
-    second: ColossalShrimp-Sheet_1
+      213: -3897414010596750908
+    second: HellHound-Sheet_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -107,12 +107,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ColossalShrimp-Sheet_0
+      name: HellHound-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 19
+        width: 14
         height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -121,19 +121,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37c671bdc78b654b0800000000000000
-      internalID: -5451967452494205837
+      spriteID: dcf2359c2293903f0800000000000000
+      internalID: -934152626133323827
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ColossalShrimp-Sheet_1
+      name: HellHound-Sheet_1
       rect:
         serializedVersion: 2
-        x: 19
+        x: 14
         y: 0
-        width: 19
+        width: 14
         height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -142,8 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9cdb2a6064737d30800000000000000
-      internalID: 4428010816082271390
+      spriteID: 4c900c35b9a99e9c0800000000000000
+      internalID: -3897414010596750908
       vertices: []
       indices: 
       edges: []

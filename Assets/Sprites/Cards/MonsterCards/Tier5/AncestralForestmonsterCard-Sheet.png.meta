@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: 6954b648297619340ac962ad1acf4811
+guid: 2ea4d45c2ef372443ba10d8e15397411
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5451967452494205837
-    second: ColossalShrimp-Sheet_0
+      213: -1249279316742443566
+    second: AncestralForestmonsterCard-Sheet_0
   - first:
-      213: 4428010816082271390
-    second: ColossalShrimp-Sheet_1
+      213: -4221602300440513033
+    second: AncestralForestmonsterCard-Sheet_1
+  - first:
+      213: 5623163690605371623
+    second: AncestralForestmonsterCard-Sheet_2
+  - first:
+      213: 5433005093822486250
+    second: AncestralForestmonsterCard-Sheet_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -107,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ColossalShrimp-Sheet_0
+      name: AncestralForestmonsterCard-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 19
-        height: 14
+        width: 90
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 37c671bdc78b654b0800000000000000
-      internalID: -5451967452494205837
+      spriteID: 2dde254941ba9aee0800000000000000
+      internalID: -1249279316742443566
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ColossalShrimp-Sheet_1
+      name: AncestralForestmonsterCard-Sheet_1
       rect:
         serializedVersion: 2
-        x: 19
+        x: 90
         y: 0
-        width: 19
-        height: 14
+        width: 90
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,8 +148,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9cdb2a6064737d30800000000000000
-      internalID: 4428010816082271390
+      spriteID: 7f57543231bd965c0800000000000000
+      internalID: -4221602300440513033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AncestralForestmonsterCard-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 90
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e06864759d790e40800000000000000
+      internalID: 5623163690605371623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AncestralForestmonsterCard-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0
+        width: 90
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae65d28f859e56b40800000000000000
+      internalID: 5433005093822486250
       vertices: []
       indices: 
       edges: []
