@@ -216,19 +216,19 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Type: Demon
+  m_text: 'Type: Humanoid
 
 
     Base stats:
 
-    Health: 280
+    Health: 420
 
     Armor: 0
 
     Speed:
-    55
+    54
 
-    Hp regen: 0'
+    Hp regen: 4'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

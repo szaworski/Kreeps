@@ -164,7 +164,7 @@ Tier 4 tiles:
 Crystal Cave: +5 armor
 Monsters: Crystalline Ogre (Brute/Demon), Crystalline Zombie (Undead/Brute), Diamond Gecko (Pest), Geologist (Humanoid)
 
-Frozen Passage: +25 max hp per tile
+Frozen Passage: +30 max hp per tile
 Monsters: Frost Giant (Brute), Arctic Fox (Pest/Beast), Frost Ghoul (Undead/Beast), Reindeer (Beast)
 
 Infernal Woods: +5 move speed per tile
@@ -190,22 +190,22 @@ Demon: 6
 
 Tier 5 tiles: 
 
-Ancestral Forest:
-Monsters: Earth Elemental (Brute), Forest Guardian (Brute/Humanoid), Colossal Wolf (Beast), Ancestral Spirit(Beast/Undead)
+AncestralForest: +40 max hp and +3 hp regen per tile
+Monsters: Earth Elemental (Brute), Forest Guardian (Brute/Humanoid), Great Wolf (Beast), Ancestral Spirit (Beast/Undead)
 
-Celestial Plane:
+CelestialPlane: + 2 move speed, + 3% evasion, + 3 armor, and + 3 hp regen per tile
 Monsters: Celestial Imp (Demon), Astronaut (Humanoid), Celestial Serpent (Pest/Beast), Martian (Humanoid/Pest)
 
-Corrupted Isle:
+CorruptedIsle: +10 hp regen and +2 armor per tile 
 Monsters: Rot Raven (Pest), Festering Ghoul (Undead/Demon), Noxious Ogre (Brute/Undead), Blight Fiend (Demon)
 
-Mystic Mountain:
+MysticMountain: +7 move speed and +3% evasion per tile
 Monsters: Mystic Mage (Humanoid/Demon), Arcane Ghoul (Undead/Pest), Rune Bear (Brute/Demon), Arcane Eagle (Pest/Beast)
 
-Ocean Abyss: 
-Monsters: Colossal Shrimp (Pest), Ghost Ship (Brute/Undead), Shark (Beast/Pest), Pirate (Humanoid)
+OceanAbyss: +7 armor and +20 max hp per tile
+Monsters: Colossal Shrimp (Pest), Ghost Ship (Brute/Undead), Dolphin (Beast/Pest), Pirate (Humanoid)
 
-Underworld:
+Underworld: +7% evasion and +3 move speed per tile
 Monsters: Chaos Demon (Brute/Demon), Skeleton Lord (Undead/Demon), Blood Mage (Humanoid/Demon), Hell Hound (Beast) 
 
 

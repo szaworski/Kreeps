@@ -216,17 +216,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Type: Demon
+  m_text: 'Type: Brute/Demon
 
 
     Base stats:
 
-    Health: 280
+    Health: 550
 
-    Armor: 0
+    Armor: 3
 
     Speed:
-    55
+    32
 
     Hp regen: 0'
   m_isRightToLeft: 0
