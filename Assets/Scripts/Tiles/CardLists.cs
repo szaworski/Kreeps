@@ -40,6 +40,14 @@ public class CardsLists : MonoBehaviour
     [System.NonSerialized] public List<string> taintedCanalMonsterCards = new List<string> { "Viper", "Toxic Wolf", "Plague Bear", "Basilisk" };
     [System.NonSerialized] public List<string> volcanicRavineMonsterCards = new List<string> { "Magma Golem", "Lava Demon", "Necromancer", "Phoenix" };
 
+    //Tier 5 Monsters
+    [System.NonSerialized] public List<string> ancestralForestMonsterCards = new List<string> { "Crystalline Ogre", "Crystalline Zombie", "Diamond Gecko", "Geologist" };
+    [System.NonSerialized] public List<string> celestialPlaneMonsterCards = new List<string> { "Frost Giant", "Arctic Fox", "Frost Ghoul", "Reindeer" };
+    [System.NonSerialized] public List<string> corruptedIsleMonsterCards = new List<string> { "Cinder Goblin", "Smoldering Skeleton", "Raven", "Orc Warrior" };
+    [System.NonSerialized] public List<string> mysticMountainMonsterCards = new List<string> { "Priest", "Paladin", "Ghastly Imp", "Death Knight" };
+    [System.NonSerialized] public List<string> oceanAbyssMonsterCards = new List<string> { "Viper", "Toxic Wolf", "Plague Bear", "Basilisk" };
+    [System.NonSerialized] public List<string> underworldMonsterCards = new List<string> { "Magma Golem", "Lava Demon", "Necromancer", "Phoenix" };
+
     //Weapon cards
     [System.NonSerialized] public List<string> tier1WeaponCards = new List<string> { "Dagger", "ShortSword", "LongSword", "Spear", "HandAxe", "Mace" };
     [System.NonSerialized] public List<string> tier2WeaponCards = new List<string> { "SilverShortSword", "CharredDagger", "FrostWand", "JoltSabre", "Katana", "CosmicSpear" };

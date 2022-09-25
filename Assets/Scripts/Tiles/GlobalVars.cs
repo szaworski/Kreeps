@@ -94,12 +94,12 @@ public class GlobalVars : MonoBehaviour
         tileCounters.Add("TaintedCanal", 0);
         tileCounters.Add("VolcanicRavine", 0);
 
-        //tileCounters.Add("FrozenPassage", 0);
-        //tileCounters.Add("InfernalWoods", 0);
-        //tileCounters.Add("SacredGrounds", 0);
-        //tileCounters.Add("SapphireCave", 0);
-        //tileCounters.Add("TaintedCanal", 0);
-        //tileCounters.Add("VolcanicRavine", 0);
+        tileCounters.Add("AncestralForest", 0);
+        tileCounters.Add("CelestialPlane", 0);
+        tileCounters.Add("CorruptedIsle", 0);
+        tileCounters.Add("MysticMountain", 0);
+        tileCounters.Add("OceanAbyss", 0);
+        tileCounters.Add("Underworld", 0);
 
         //Add starting bonus damage (and other bonus stats below)
         bonusStats.Clear();

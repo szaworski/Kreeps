@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using TMPro;
 
-public class TileSpawner : TileTypes
+public class TileSpawner : CardsLists
 {
     private int shiftAmtXpos;
     private int shiftAmtYpos;
@@ -381,7 +381,25 @@ public class TileSpawner : TileTypes
                 currentCardList = volcanicRavineMonsterCards.ToList();
                 break;
 
-                //Tier 5
+            //Tier 5
+            case "AncestralForest":
+                currentCardList = ancestralForestMonsterCards.ToList();
+                break;
+            case "CelestialPlane":
+                currentCardList = celestialPlaneMonsterCards.ToList();
+                break;
+            case "CorruptedIsle":
+                currentCardList = corruptedIsleMonsterCards.ToList();
+                break;
+            case "MysticMountain":
+                currentCardList = mysticMountainMonsterCards.ToList();
+                break;
+            case "OceanAbyss":
+                currentCardList = oceanAbyssMonsterCards.ToList();
+                break;
+            case "Underworld":
+                currentCardList = underworldMonsterCards.ToList();
+                break;
         }
 
         //Create a list of 2 unique random cards from the current card list
@@ -612,89 +630,7 @@ public class TileSpawner : TileTypes
         validTilesList = new List<string>();
         prependTileName = "Tiles/" + GlobalVars.currTier + "/" + GlobalVars.tileCardSelected + "Tiles/";
         GlobalVars.tileCounters[GlobalVars.tileCardSelected]++;
-
-        //Check for which tile card was selected and set the "curTiles" array accordingly 
-        switch (GlobalVars.tileCardSelected)
-        {
-            //Tier 1
-            case "Forest":
-                curTiles = forestTiles;
-                break;
-            case "Graveyard":
-                curTiles = graveyardTiles;
-                break;
-            case "River":
-                curTiles = riverTiles;
-                break;
-            case "Mountain":
-                curTiles = mountainTiles;
-                break;
-            case "Swamp":
-                curTiles = swampTiles;
-                break;
-
-            //Tier 2
-            case "Desert":
-                curTiles = desertTiles;
-                break;
-            case "Thicket":
-                curTiles = thicketTiles;
-                break;
-            case "Tundra":
-                curTiles = tundraTiles;
-                break;
-            case "Cavern":
-                curTiles = cavernTiles;
-                break;
-            case "Settlement":
-                curTiles = settlementTiles;
-                break;
-            case "Seashore":
-                curTiles = seashoreTiles;
-                break;
-
-            //Tier 3
-            case "CanyonCrossing":
-                curTiles = canyonCrossingTiles;
-                break;
-            case "CrimsonPlain":
-                curTiles = crimsonPlainTiles;
-                break;
-            case "Crypt":
-                curTiles = cryptTiles;
-                break;
-            case "EmeraldCave":
-                curTiles = emeraldCaveTiles;
-                break;
-            case "Marsh":
-                curTiles = marshTiles;
-                break;
-            case "Sewer":
-                curTiles = sewerTiles;
-                break;
-
-            //Tier 4
-            case "FrozenPassage":
-                curTiles = frozenPassageTiles;
-                break;
-            case "InfernalWoods":
-                curTiles = infernalWoodsTiles;
-                break;
-            case "SacredGrounds":
-                curTiles = sacredGroundsTiles;
-                break;
-            case "CrystalCave":
-                curTiles = crystalCaveTiles;
-                break;
-            case "TaintedCanal":
-                curTiles = taintedCanalTiles;
-                break;
-            case "VolcanicRavine":
-                curTiles = volcanicRavineTiles;
-                break;
-
-                //Tier 5
-        }
+        curTiles = new string[] { GlobalVars.tileCardSelected + "Tile1", GlobalVars.tileCardSelected + "Tile2", GlobalVars.tileCardSelected + "Tile3", GlobalVars.tileCardSelected + "Tile4", GlobalVars.tileCardSelected + "Tile5", GlobalVars.tileCardSelected + "Tile6" };
 
         for (int i = 0; i < 6; i++)
         {

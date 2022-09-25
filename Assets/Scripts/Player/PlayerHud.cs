@@ -176,7 +176,7 @@ public class PlayerHud : MonoBehaviour
         //Apply any Tier 4 bonuses
         bonusArmor += 5 * GlobalVars.tileCounters["CrystalCave"];
 
-        bonusMaxHealth += 25 * GlobalVars.tileCounters["FrozenPassage"];
+        bonusMaxHealth += 30 * GlobalVars.tileCounters["FrozenPassage"];
 
         bonusMoveSpeed += 0.05f * GlobalVars.tileCounters["InfernalWoods"];
 
@@ -189,7 +189,26 @@ public class PlayerHud : MonoBehaviour
         bonusMaxHealth += 10 * GlobalVars.tileCounters["VolcanicRavine"];
 
         //Apply any Tier 5 bonuses
+        bonusHpRegen += 3 * GlobalVars.tileCounters["AncestralForest"];
+        bonusMaxHealth += 40 * GlobalVars.tileCounters["AncestralForest"];
 
+        bonusMoveSpeed += 0.02f * GlobalVars.tileCounters["CelestialPlane"];
+        bonusEvasion += 0.03f * GlobalVars.tileCounters["CelestialPlane"];
+        bonusArmor += 3 * GlobalVars.tileCounters["CelestialPlane"];
+        bonusHpRegen += 3 * GlobalVars.tileCounters["CelestialPlane"];
+
+        bonusArmor += 2 * GlobalVars.tileCounters["CorruptedIsle"];
+        bonusHpRegen += 10 * GlobalVars.tileCounters["CorruptedIsle"];
+
+        bonusEvasion += 0.03f * GlobalVars.tileCounters["MysticMountain"];
+        bonusMoveSpeed += 0.07f * GlobalVars.tileCounters["MysticMountain"];
+
+        bonusArmor += 7 * GlobalVars.tileCounters["OceanAbyss"];
+        bonusMaxHealth += 20 * GlobalVars.tileCounters["OceanAbyss"];
+
+        bonusMoveSpeed += 0.03f * GlobalVars.tileCounters["Underworld"];
+        bonusEvasion += 0.07f * GlobalVars.tileCounters["Underworld"];
+ 
         //Set the new text values
         bonusMoveSpeedUiText.SetText(("+") + Mathf.Round(bonusMoveSpeed * 100).ToString());
         bonusMaxHealthUiText.SetText(("+") + bonusMaxHealth.ToString());

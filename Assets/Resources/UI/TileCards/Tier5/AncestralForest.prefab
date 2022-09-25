@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6130404801214499859}
   - component: {fileID: 3346913848105228779}
   m_Layer: 5
-  m_Name: FrozenPassage
+  m_Name: AncestralForest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3894570193065094071, guid: 0c9f01294897bb9408e297197b1da32c, type: 3}
+  m_Sprite: {fileID: -2264917410740771649, guid: 7bb24b7ae1640c2439ae674a2d3123fb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3c50722ec083041bcf2aec73db18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: FrozenPassage
+  cardName: AncestralForest
   upgradeCost: 0
   upgradeType: 
   bonusAmt: 0
@@ -218,9 +218,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +30 max health
+    +3 hp regen
 
-    for each Forzen Passage placed'
+    +40 max health
+
+    for each Ancestral
+    Forest placed'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -354,7 +357,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Forzen Passage
+  m_text: 'Ancestral Forest
 
 '
   m_isRightToLeft: 0
@@ -365,8 +368,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4291348680
-  m_fontColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    rgba: 4286085240
+  m_fontColor: {r: 0.47058824, g: 0.47058824, b: 0.47058824, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
