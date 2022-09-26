@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6130404801214499859}
   - component: {fileID: -185125906687809208}
   m_Layer: 5
-  m_Name: Magma Golem
+  m_Name: Lava Demon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8156038871094870061, guid: f4bf481563434bc4a91a1094c9999fcb, type: 3}
+  m_Sprite: {fileID: -3033406513278711918, guid: f4bf481563434bc4a91a1094c9999fcb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3c50722ec083041bcf2aec73db18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: Magma Golem
+  cardName: Lava Demon
   upgradeCost: 0
   upgradeType: 
   bonusAmt: 0
@@ -216,17 +216,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Type: Brute
+  m_text: 'Type: Demon
 
 
     Base stats:
 
-    Health: 280
+    Health: 600
 
-    Armor: 0
+    Armor: 2
 
     Speed:
-    55
+    30
 
     Hp regen: 0'
   m_isRightToLeft: 0
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Magma Golem
+  m_text: Lava Demon
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

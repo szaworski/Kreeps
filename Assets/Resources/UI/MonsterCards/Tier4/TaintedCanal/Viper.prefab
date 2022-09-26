@@ -216,17 +216,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Type: Demon
+  m_text: 'Type: Pest
 
 
     Base stats:
 
-    Health: 280
+    Health: 430
 
     Armor: 0
 
     Speed:
-    55
+    60
 
     Hp regen: 0'
   m_isRightToLeft: 0

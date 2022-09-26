@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6130404801214499859}
   - component: {fileID: -185125906687809208}
   m_Layer: 5
-  m_Name: Viper
+  m_Name: Plague Bear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4799899833827212426, guid: 71ed1cf6bffb37d488b5c3a27f6cb61e, type: 3}
+  m_Sprite: {fileID: 4144177914607494246, guid: 71ed1cf6bffb37d488b5c3a27f6cb61e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3c50722ec083041bcf2aec73db18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: Viper
+  cardName: Plague Bear
   upgradeCost: 0
   upgradeType: 
   bonusAmt: 0
@@ -221,12 +221,12 @@ MonoBehaviour:
 
     Base stats:
 
-    Health: 280
+    Health: 580
 
     Armor: 0
 
     Speed:
-    55
+    40
 
     Hp regen: 0'
   m_isRightToLeft: 0
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Viper
+  m_text: Plague Bear
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
