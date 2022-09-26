@@ -740,7 +740,7 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   attackCd: 0
   damage: 22
-  projectileSpeed: 1
+  projectileSpeed: 4
   attackSpeed: 1.4
   attackRange: 0.8
   critChance: 0

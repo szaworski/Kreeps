@@ -99,13 +99,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   attackCd: 0
-  damage: 10
-  projectileSpeed: 4
+  damage: 5
+  projectileSpeed: 0
   attackSpeed: 1
-  attackRange: 0.8
+  attackRange: 0.5
   critChance: 0
   damageType: Ice
-  slowAmt: 0.15
+  slowAmt: 0.1
   attackRadius: {fileID: 247469621238869209}
   dmgText: {fileID: 2677907579771665875}
   rofText: {fileID: 7164098853743625092}

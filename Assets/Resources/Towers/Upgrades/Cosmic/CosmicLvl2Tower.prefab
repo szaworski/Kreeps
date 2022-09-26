@@ -355,10 +355,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   attackCd: 0
-  damage: 22
-  projectileSpeed: 0
+  damage: 32
+  projectileSpeed: 4
   attackSpeed: 0.9
-  attackRange: 0.7
+  attackRange: 1
   critChance: 0
   damageType: Cosmic
   slowAmt: 0
