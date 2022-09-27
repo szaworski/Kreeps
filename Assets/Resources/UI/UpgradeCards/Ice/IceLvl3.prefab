@@ -199,18 +199,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'AOE in radius
+  m_text: 'Single target
 
     -15 move speed
 
-    Cost: 125g
+    Cost: 100g
 
-    Dmg: 12
+    Dmg: 15
 
     Rof:
-    1
+    0.9
 
-    Rng: 0.5
+    Rng: 0.8
 
 '
   m_isRightToLeft: 0
@@ -428,7 +428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: IceLvl3
-  upgradeCost: 125
+  upgradeCost: 100
   upgradeType: Ice
   bonusAmt: 0
   bonusFloatAmt: 0

@@ -6178,7 +6178,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "AOE in radius\nCost: 75g\nDamage: 4 \nRate of fire: 1\nRange: 0.5\nBonus:\nx1.5
+  m_text: "Single target\nCost: 75g\nDamage: 5 \nRate of fire: 0.9\nRange: 0.8\nBonus:\nx1.5
     to Beasts\nPenalty:\nx0.5 to Brutes"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -7880,8 +7880,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "AOE in radius +Slow\nCost: 75g\nDamage: 4 \nRate of fire: 1\nRange: 0.5\nBonus:\nx1.5
-    to Humanoids\nPenalty:\nx0.5 to Undead"
+  m_text: "Single target +Slow\nCost: 75g\nDamage: 4 \nRate of fire: 0.9\nRange:
+    0.8\nBonus:\nx1.5 to Humanoids\nPenalty:\nx0.5 to Undead"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -8550,16 +8550,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'AOE in radius
+  m_text: 'Single target
 
     Cost: 250g
 
-    Damage: 10
+    Damage: 16
 
-    Rate of fire: 0.8
+    Rate of fire: 0.9
 
     Range:
-    0.7
+    1
 
     Bonus:
 

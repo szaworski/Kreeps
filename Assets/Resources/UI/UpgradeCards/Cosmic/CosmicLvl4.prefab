@@ -65,16 +65,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Single target
+  m_text: 'AOE in radius
 
 
     Cost: 350g
 
-    Dmg: 40
+    Dmg: 16
 
     Rof: 0.9
 
-    Rng: 1
+    Rng: 0.7
 
 '
   m_isRightToLeft: 0
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Astral
+  m_text: 'Comet
 
 '
   m_isRightToLeft: 0
