@@ -144,7 +144,7 @@ public class Tower : MonoBehaviour
     {
         if (Time.time > attackCd && monsterIsInRadius)
         {
-            GameObject aoeRadius = (GameObject)Instantiate(Resources.Load("Towers/Projectiles/Aoe/" + damageType), this.transform);
+            GameObject aoeRadius = (GameObject)Instantiate(Resources.Load("Towers/Projectiles/WithAnim/" + damageType), this.transform);
             aoeRadius.transform.position = this.transform.position;
             attackCd = attackSpeed + Time.time;
         }
