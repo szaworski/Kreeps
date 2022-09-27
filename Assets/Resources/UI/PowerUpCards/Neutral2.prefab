@@ -204,7 +204,7 @@ MonoBehaviour:
   m_text: 'Normal type weapons and towers gain +2 damage
 
 
-    Cost: 50g'
+    Cost: 75g'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -420,7 +420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: Neutral
-  upgradeCost: 50
+  upgradeCost: 75
   upgradeType: BonusDmg
   bonusAmt: 2
   bonusFloatAmt: 0
