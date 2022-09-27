@@ -1550,7 +1550,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\nCost: 50g\nDamage: 4\nRate of fire: 0.8\nRange: 0.8\nBonus:
+  m_text: "Single target\nCost: 50g\nDamage: 5\nRate of fire: 0.8\nRange: 0.8\nBonus:
     \nNone\nPenalty:\nNone"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -3461,7 +3461,7 @@ MonoBehaviour:
 
     Cost: 150g
 
-    Damage: 5
+    Damage: 6
 
     Rate of fire: 0.55
 
@@ -5232,9 +5232,9 @@ MonoBehaviour:
 
     Cost: 100g
 
-    Damage: 10
+    Damage: 12
 
-    Rate of fire: 1
+    Rate of fire: 1.2
 
     Range:
     0.8
@@ -6178,7 +6178,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\nCost: 75g\nDamage: 5 \nRate of fire: 0.8\nRange: 0.8\nBonus:\nx1.5
+  m_text: "Single target\nCost: 75g\nDamage: 6 \nRate of fire: 0.8\nRange: 0.8\nBonus:\nx1.5
     to Beasts\nPenalty:\nx0.5 to Brutes"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -7880,7 +7880,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target +Slow\nCost: 75g\nDamage: 4 \nRate of fire: 0.8\nRange:
+  m_text: "Single target +Slow\nCost: 75g\nDamage: 5 \nRate of fire: 0.8\nRange:
     0.8\nBonus:\nx1.5 to Humanoids\nPenalty:\nx0.5 to Undead"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -8966,12 +8966,12 @@ MonoBehaviour:
 
     Cost: 100g
 
-    Damage: 14
+    Damage: 15
 
     Rate of fire: 1.5
 
     Range:
-    1
+    0.8
 
     Bonus:
 
