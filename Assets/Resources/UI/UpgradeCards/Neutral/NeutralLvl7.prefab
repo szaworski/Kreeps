@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Big Shot
+  m_text: 'Fortress
 
 '
   m_isRightToLeft: 0
@@ -359,7 +359,7 @@ MonoBehaviour:
 
     Dmg: 25
 
-    Rof: 0.9
+    Rof: 0.8
 
     Rng: 0.8
 
