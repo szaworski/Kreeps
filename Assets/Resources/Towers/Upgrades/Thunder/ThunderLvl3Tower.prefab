@@ -824,9 +824,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   attackCd: 0
-  damage: 32
+  damage: 36
   projectileSpeed: 1
-  attackSpeed: 1.35
+  attackSpeed: 2
   attackRange: 0.8
   critChance: 0
   damageType: Thunder

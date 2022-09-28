@@ -77,22 +77,22 @@ Type: AOE, Cost: 400, Dmg: 16, Rof: 0.8, Rng: 0.8
 Thunder Towers:
 
 Thunder Lvl 1
-Type: single target, Cost: 100, Dmg: 15, Rof: 1.5, Rng: 0.8
+Type: single target, Cost: 100, Dmg: 16, Rof: 2, Rng: 0.8
 
 Thunder Lvl 2
-Type: single target, Cost: 125, Dmg: 24, Rof: 1.5, Rng: 0.8
+Type: single target, Cost: 125, Dmg: 26, Rof: 2, Rng: 0.8
 
 Thunder Lvl 3
-Type: single target, Cost: 125, Dmg: 32, Rof: 1.5, Rng: 0.8
+Type: single target, Cost: 125, Dmg: 36, Rof: 2, Rng: 0.8
 
 Shock Lvl 1
-Type: single target, Cost: 150, Dmg: 20, Rof: 1.25, Rng: 0.8
+Type: single target, Cost: 150, Dmg: 20, Rof: 1.5, Rng: 0.8
 
 Shock Lvl 2
 Type: AOE, Cost: 200, Dmg: 26, Rof: 1.5, Rng: 0.7
 
 Shock Lvl 3
-Type: single target, Cost: 250, Dmg: 35, Rof: 1.2, Rng: 0.9
+Type: single target, Cost: 250, Dmg: 35, Rof: 1.25, Rng: 0.9
 
 Sunder
 Type: single target, Cost: 400, Dmg: 75, Rof: 1.5, Rng: 1
@@ -102,22 +102,22 @@ Type: single target, Cost: 400, Dmg: 75, Rof: 1.5, Rng: 1
 Holy Towers:
 
 Holy Lvl 1
-Type: single target, Cost: 100, Dmg: 12, Rof: 1.3, Rng: 0.8
+Type: single target, Cost: 100, Dmg: 13, Rof: 1.5, Rng: 0.8
 
 Holy Lvl 2
-Type: single target, Cost: 125, Dmg: 18, Rof: 1.3, Rng: 0.8
+Type: single target, Cost: 125, Dmg: 20, Rof: 1.5, Rng: 0.8
 
 Holy Lvl 3
-Type: single target, Cost: 125, Dmg: 26, Rof: 1.3, Rng: 0.8
+Type: single target, Cost: 125, Dmg: 28, Rof: 1.5, Rng: 0.8
 
 Divine Lvl 1
 Type: single target, Cost: 150, Dmg: 16, Rof: 1.2, Rng: 0.9
 
 Divine Lvl 2
-Type: single target, Cost: 200, Dmg: 24, Rof: 1, Rng: 0.9
+Type: single target, Cost: 200, Dmg: 22, Rof: 1, Rng: 0.9
 
 Divine Lvl 3
-Type: single target, Cost: 250, Dmg: 26, Rof: 1, Rng: 1.2
+Type: single target, Cost: 250, Dmg: 40, Rof: 1.75, Rng: 1.2
 
 Cathedral
 Type: AOE, Cost: 500, Dmg: 30, Rof: 1.5, Rng: 0.8
@@ -151,7 +151,7 @@ Type: single target, Cost: 600, Dmg: 22, Rof: 0.25, Rng: 1
 Cosmic Towers:
 
 Cosmic Lvl 1
-Type: single target, Cost: 250, Dmg: 16, Rof: 0.9, Rng: 1
+Type: single target, Cost: 250, Dmg: 18, Rof: 0.9, Rng: 1
 
 Cosmic Lvl 2
 Type: single target, Cost: 250, Dmg: 32, Rof: 0.9, Rng: 1
