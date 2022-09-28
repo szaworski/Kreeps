@@ -352,19 +352,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Type: Humanoid
-
-
-    Base stats:
+  m_text: 'Base stats:
 
     Health: 45
 
     Armor: 0
 
-    Speed:
-    30
+    Speed: 30
 
-    Hp regen: 0
+    Hp regen:
+    0
 
 '
   m_isRightToLeft: 0
