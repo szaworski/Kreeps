@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Phoenix
+  m_Name: Martian
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 7099576420685294827, guid: 1e0467e4c18a0af4e8e8c5f0a9c10ba1, type: 3}
+      value: {fileID: -1012026820647229708, guid: 8279e21b90330e94f921aee3750e1150, type: 3}
     - time: 0.5
-      value: {fileID: -8198555595377257463, guid: 1e0467e4c18a0af4e8e8c5f0a9c10ba1, type: 3}
+      value: {fileID: 5011349577197847286, guid: 8279e21b90330e94f921aee3750e1150, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -42,8 +42,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 7099576420685294827, guid: 1e0467e4c18a0af4e8e8c5f0a9c10ba1, type: 3}
-    - {fileID: -8198555595377257463, guid: 1e0467e4c18a0af4e8e8c5f0a9c10ba1, type: 3}
+    - {fileID: -1012026820647229708, guid: 8279e21b90330e94f921aee3750e1150, type: 3}
+    - {fileID: 5011349577197847286, guid: 8279e21b90330e94f921aee3750e1150, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

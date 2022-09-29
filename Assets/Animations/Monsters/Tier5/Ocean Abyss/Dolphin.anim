@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Phoenix
+  m_Name: Dolphin
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,9 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 7099576420685294827, guid: 1e0467e4c18a0af4e8e8c5f0a9c10ba1, type: 3}
+      value: {fileID: 3516042478080520919, guid: cad4348cf7150ba4d80798c3f0ef4c3b, type: 3}
     - time: 0.5
-      value: {fileID: -8198555595377257463, guid: 1e0467e4c18a0af4e8e8c5f0a9c10ba1, type: 3}
+      value: {fileID: -1332732554036531248, guid: cad4348cf7150ba4d80798c3f0ef4c3b, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -42,8 +42,8 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 7099576420685294827, guid: 1e0467e4c18a0af4e8e8c5f0a9c10ba1, type: 3}
-    - {fileID: -8198555595377257463, guid: 1e0467e4c18a0af4e8e8c5f0a9c10ba1, type: 3}
+    - {fileID: 3516042478080520919, guid: cad4348cf7150ba4d80798c3f0ef4c3b, type: 3}
+    - {fileID: -1332732554036531248, guid: cad4348cf7150ba4d80798c3f0ef4c3b, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
