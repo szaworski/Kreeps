@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6130404801214499856}
   - component: {fileID: 6130404801214499859}
   - component: {fileID: -185125906687809208}
+  - component: {fileID: 1704356372517667505}
   m_Layer: 5
   m_Name: Magma Golem
   m_TagString: Untagged
@@ -151,6 +152,25 @@ MonoBehaviour:
   upgradeType: 
   bonusAmt: 0
   bonusFloatAmt: 0
+--- !u!95 &1704356372517667505
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6130404801214499861}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7ca46f68eb21c754dbe47ec4ec8e67b2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7402375620175900289
 GameObject:
   m_ObjectHideFlags: 0
