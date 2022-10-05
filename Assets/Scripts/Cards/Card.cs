@@ -140,10 +140,11 @@ public class Card : MonoBehaviour
         }
     }
 
-    public void SelectExitCard()
+    public void SelectGoldCard()
     {
         if (!GlobalVars.isPaused)
         {
+            GlobalVars.newGoldValue = GlobalVars.gold + 25;
             GlobalVars.triggerShopCardDestruction = true;
             GlobalVars.IsHoveringOverUiCard = false;
         }
