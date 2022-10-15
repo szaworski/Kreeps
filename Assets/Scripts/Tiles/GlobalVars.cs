@@ -30,6 +30,7 @@ public class GlobalVars : MonoBehaviour
     public static int gold;
     public static int newGoldValue;
     public static int monsterCount;
+    public static int coinChoiceCount;
 
     public static bool triggerTileCardDestruction;
     public static bool triggerMonsterCardDestruction;
@@ -146,6 +147,7 @@ public class GlobalVars : MonoBehaviour
         currTier = "Tier1";
         currTierNum = 1;
         monsterCount = 0;
+        coinChoiceCount = 0;
         kreepSpawnRate = 0.55f;
         allMonstersAreSpawned = false;
         currentSong = "Song1";
