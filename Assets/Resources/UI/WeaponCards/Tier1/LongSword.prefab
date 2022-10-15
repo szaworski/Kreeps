@@ -354,7 +354,7 @@ MonoBehaviour:
 
     Damage: 6
 
-    Attack rate: 2
+    Attack rate: 2.5
 
     Range: 0.2
 

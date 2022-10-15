@@ -127,7 +127,7 @@ public class Card : MonoBehaviour
                 GlobalVars.triggerShopCardDestruction = true;
                 GlobalVars.IsHoveringOverUiCard = false;
 
-                if (GlobalVars.bonusStats["EquipmentLvl"] < 5)
+                if (GlobalVars.bonusStats["EquipmentLvl"] < 4)
                 {
                     GlobalVars.bonusStats["EquipmentLvl"]++;
                 }

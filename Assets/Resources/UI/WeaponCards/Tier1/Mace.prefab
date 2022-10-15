@@ -201,15 +201,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-    Damage: 6
+    Damage: 10
 
-    Attack rate: 1.2
+    Attack rate: 1.4
 
     Range: 0.1
 
 
     Cost:
-    75g'
+    150g'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: Mace
-  upgradeCost: 75
+  upgradeCost: 150
   upgradeType: Weapon
   bonusAmt: 0
   bonusFloatAmt: 0

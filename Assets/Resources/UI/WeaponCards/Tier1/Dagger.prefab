@@ -67,15 +67,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-    Damage: 2
+    Damage: 4
 
-    Attack rate: 0.8
+    Attack rate: 0.9
 
     Range: 0.1
 
 
     Cost:
-    25g'
+    100g'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: Dagger
-  upgradeCost: 25
+  upgradeCost: 100
   upgradeType: Weapon
   bonusAmt: 0
   bonusFloatAmt: 0

@@ -487,9 +487,6 @@ public class TileSpawner : CardsLists
             case 4:
                 weaponCardList = tier4WeaponCards.ToList();
                 break;
-            case 5:
-                weaponCardList = tier5WeaponCards.ToList();
-                break;
         }
 
         //Create a list of 1 unique random weapon cards from the current weapon card list

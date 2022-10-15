@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: HandAxe
-  upgradeCost: 125
+  upgradeCost: 150
   upgradeType: Weapon
   bonusAmt: 0
   bonusFloatAmt: 0
@@ -352,15 +352,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-    Damage: 4
+    Damage: 6
 
-    Attack rate: 0.7
+    Attack rate: 0.9
 
     Range: 0.1
 
 
     Cost:
-    125g'
+    150g'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

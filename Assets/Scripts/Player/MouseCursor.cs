@@ -59,15 +59,11 @@ public class MouseCursor : MonoBehaviour
             {
                 //Lvl 1 Weapons
                 case "Dagger":
-                    ChangeWeaponStats(2, 1, 0.8f, 0.1f, "Neutral", 0, true, 0);
+                    ChangeWeaponStats(4, 1, 0.9f, 0.1f, "Neutral", 0, true, 0);
                     break;
 
                 case "ShortSword":
-                    ChangeWeaponStats(4, 1, 1f, 0.1f, "Neutral", 0, true, 1);
-                    break;
-
-                case "LongSword":
-                    ChangeWeaponStats(6, 0, 2f, 0.2f, "Neutral", 0, true, 2);
+                    ChangeWeaponStats(6, 1, 1.2f, 0.1f, "Neutral", 0, true, 1);
                     break;
 
                 case "Spear":
@@ -75,11 +71,15 @@ public class MouseCursor : MonoBehaviour
                     break;
 
                 case "HandAxe":
-                    ChangeWeaponStats(4, 1, 0.7f, 0.1f, "Neutral", 0, true, 4);
+                    ChangeWeaponStats(6, 1, 0.9f, 0.1f, "Neutral", 0, true, 4);
                     break;
 
                 case "Mace":
-                    ChangeWeaponStats(6, 1, 1.2f, 0.1f, "Neutral", 0, true, 5);
+                    ChangeWeaponStats(10, 1, 1.4f, 0.1f, "Neutral", 0, true, 5);
+                    break;
+
+                case "LongSword":
+                    ChangeWeaponStats(6, 0, 2.5f, 0.2f, "Neutral", 0, true, 2);
                     break;
 
                 //Lvl 2 Weapons
@@ -129,8 +129,6 @@ public class MouseCursor : MonoBehaviour
                     break;
 
                 //Lvl 4 Weapons
-
-                //Lvl 5 Weapons
 
             }
 
