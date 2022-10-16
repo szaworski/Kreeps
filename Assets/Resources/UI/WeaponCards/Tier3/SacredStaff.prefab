@@ -67,7 +67,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'AOE in radius
 
-    Damage: 18
+    Damage: 20
 
     Attack rate: 2.5
 

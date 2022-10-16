@@ -102,25 +102,25 @@ public class MouseCursor : MonoBehaviour
 
                 //Lvl 3 Weapons
                 case "GoldenShortSword":
-                    ChangeWeaponStats(18, 1, 1f, 0.15f, "Neutral", 0, true, 13);
+                    ChangeWeaponStats(28, 1, 1.2f, 0.15f, "Neutral", 0, true, 13);
                     break;
                 case "EmberBattleAxe":
-                    ChangeWeaponStats(14, 0, 2.5f, 0.3f, "Fire", 0, true, 14);
+                    ChangeWeaponStats(18, 0, 2.5f, 0.3f, "Fire", 0, true, 14);
                     break;
                 case "FrostLongSword":
-                    ChangeWeaponStats(20, 1, 1.2f, 0.15f, "Ice", 0.10f, true, 15);
+                    ChangeWeaponStats(16, 0, 2.5f, 0.3f, "Ice", 0.10f, true, 15);
                     break;
                 case "ShockLance":
-                    ChangeWeaponStats(26, 1, 1.4f, 0.15f, "Thunder", 0, true, 16);
+                    ChangeWeaponStats(32, 1, 1.5f, 0.15f, "Thunder", 0, true, 16);
                     break;
                 case "SacredStaff":
-                    ChangeWeaponStats(18, 0, 2.5f, 0.4f, "Holy", 0, false, 17);
+                    ChangeWeaponStats(20, 0, 2.5f, 0.4f, "Holy", 0, false, 17);
                     break;
                 case "TwinDaggers":
-                    ChangeWeaponStats(12, 1, 0.6f, 0.15f, "Swift", 0, true, 18);
+                    ChangeWeaponStats(16, 1, 0.6f, 0.15f, "Swift", 0, true, 18);
                     break;
                 case "AstralGreatSword":
-                    ChangeWeaponStats(24, 0, 3f, 0.5f, "Cosmic", 0, true, 19);
+                    ChangeWeaponStats(50, 1, 2f, 0.5f, "Cosmic", 0, true, 19);
                     break;
 
                 //Lvl 4 Weapons
