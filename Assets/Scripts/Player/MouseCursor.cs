@@ -93,8 +93,8 @@ public class MouseCursor : MonoBehaviour
                 case "DivineHammer":
                     ChangeWeaponStats(20, 1, 1.8f, 0.15f, "Holy", 0, true, 10);
                     break;
-                case "Katana":
-                    ChangeWeaponStats(14, 1, 1f, 0.15f, "Swift", 0, true, 11);
+                case "TwinDaggers":
+                    ChangeWeaponStats(10, 1, 0.7f, 0.15f, "Swift", 0, true, 11);
                     break;
                 case "CosmicSpear":
                     ChangeWeaponStats(18, 1, 1.5f, 0.15f, "Cosmic", 0, true, 12);
@@ -116,11 +116,11 @@ public class MouseCursor : MonoBehaviour
                 case "SacredStaff":
                     ChangeWeaponStats(20, 0, 2.5f, 0.4f, "Holy", 0, false, 17);
                     break;
-                case "TwinDaggers":
-                    ChangeWeaponStats(16, 1, 0.6f, 0.15f, "Swift", 0, true, 18);
+                case "Katana":
+                    ChangeWeaponStats(14, 0, 1f, 0.4f, "Swift", 0, true, 18);
                     break;
                 case "AstralGreatSword":
-                    ChangeWeaponStats(50, 1, 2f, 0.5f, "Cosmic", 0, true, 19);
+                    ChangeWeaponStats(50, 1, 2f, 0.15f, "Cosmic", 0, true, 19);
                     break;
 
                 //Lvl 4 Weapons

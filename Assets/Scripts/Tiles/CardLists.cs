@@ -50,8 +50,8 @@ public class CardsLists : MonoBehaviour
 
     //Weapon cards
     [System.NonSerialized] public List<string> tier1WeaponCards = new List<string> { "Dagger", "ShortSword", "LongSword", "Spear", "HandAxe", "Mace" };
-    [System.NonSerialized] public List<string> tier2WeaponCards = new List<string> { "SilverShortSword", "CharredDagger", "FrostWand", "JoltSabre", "Katana", "CosmicSpear" };
-    [System.NonSerialized] public List<string> tier3WeaponCards = new List<string> { "GoldenShortSword", "EmberBattleAxe", "FrostLongSword", "ShockLance", "SacredStaff", "TwinDaggers", "AstralGreatSword" };
+    [System.NonSerialized] public List<string> tier2WeaponCards = new List<string> { "SilverShortSword", "CharredDagger", "FrostWand", "JoltSabre", "TwinDaggers", "CosmicSpear" };
+    [System.NonSerialized] public List<string> tier3WeaponCards = new List<string> { "GoldenShortSword", "EmberBattleAxe", "FrostLongSword", "ShockLance", "SacredStaff", "Katana", "AstralGreatSword" };
     [System.NonSerialized] public List<string> tier4WeaponCards = new List<string> { "Dagger", "ShortSword", "LongSword", "Spear", "HandAxe", "Mace", "" };
 
     //Power up cards
