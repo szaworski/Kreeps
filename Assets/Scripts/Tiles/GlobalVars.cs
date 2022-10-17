@@ -35,6 +35,7 @@ public class GlobalVars : MonoBehaviour
     public static bool triggerTileCardDestruction;
     public static bool triggerMonsterCardDestruction;
     public static bool triggerShopCardDestruction;
+    public static bool triggerWeaponHudStatsUpdate;
     public static bool upgradeCardsArePresent;
     public static bool triggerUpgradeCardDestruction;
     public static bool triggerTowerUpgrade;
