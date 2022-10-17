@@ -218,7 +218,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +4 move speed
+    +5 move speed
 
     for each Crimson Plain placed'
   m_isRightToLeft: 0

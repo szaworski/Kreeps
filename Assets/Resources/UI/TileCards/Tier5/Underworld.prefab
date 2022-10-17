@@ -218,9 +218,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +3 move speed
+    +4 move speed
 
-    +7% evasion
+    +8% evasion
 
     for each Underworld
     placed'

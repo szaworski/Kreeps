@@ -67,7 +67,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +4 max health
+    +6 max hp
 
     for each River placed'
   m_isRightToLeft: 0

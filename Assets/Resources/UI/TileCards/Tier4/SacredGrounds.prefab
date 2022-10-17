@@ -218,7 +218,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +5 hp regen
+    +8 hp regen
 
     for each Sacred Grounds placed'
   m_isRightToLeft: 0

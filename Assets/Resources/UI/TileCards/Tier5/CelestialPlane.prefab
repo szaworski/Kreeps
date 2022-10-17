@@ -216,7 +216,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Kreeps gain:\n+2 move speed\n+3% evasion \n+3 armor\n+3 hp regen\nfor
+  m_text: "Kreeps gain:\n+3 move speed\n+3% evasion \n+3 armor\n+3 hp regen\nfor
     each Celestial Plane placed"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
