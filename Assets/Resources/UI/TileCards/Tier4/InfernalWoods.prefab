@@ -218,7 +218,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +7 move speed
+    +6 move speed
 
     for each Infernal Woods placed'
   m_isRightToLeft: 0
