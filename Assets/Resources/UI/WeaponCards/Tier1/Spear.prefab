@@ -218,7 +218,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-    Damage: 8
+    Damage: 10
 
     Attack rate: 1.5
 

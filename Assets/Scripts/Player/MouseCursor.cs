@@ -59,68 +59,68 @@ public class MouseCursor : MonoBehaviour
             {
                 //Lvl 1 Weapons
                 case "Dagger":
-                    ChangeWeaponStats(4, 1, 0.9f, 0.1f, "Neutral", 0, true, 0);
+                    ChangeWeaponStats(6, 1, 0.9f, 0.1f, "Neutral", 0, true, 0);
                     break;
                 case "ShortSword":
-                    ChangeWeaponStats(6, 1, 1.2f, 0.1f, "Neutral", 0, true, 1);
+                    ChangeWeaponStats(8, 1, 1.2f, 0.1f, "Neutral", 0, true, 1);
                     break;
                 case "Spear":
-                    ChangeWeaponStats(8, 1, 1.5f, 0.1f, "Neutral", 0, true, 3);
+                    ChangeWeaponStats(10, 1, 1.5f, 0.1f, "Neutral", 0, true, 3);
                     break;
                 case "HandAxe":
-                    ChangeWeaponStats(6, 1, 0.9f, 0.1f, "Neutral", 0, true, 4);
+                    ChangeWeaponStats(8, 1, 0.9f, 0.1f, "Neutral", 0, true, 4);
                     break;
                 case "Mace":
-                    ChangeWeaponStats(10, 1, 1.4f, 0.1f, "Neutral", 0, true, 5);
+                    ChangeWeaponStats(12, 1, 1.4f, 0.1f, "Neutral", 0, true, 5);
                     break;
                 case "LongSword":
-                    ChangeWeaponStats(6, 0, 2.5f, 0.2f, "Neutral", 0, true, 2);
+                    ChangeWeaponStats(8, 0, 2.5f, 0.2f, "Neutral", 0, true, 2);
                     break;
 
                 //Lvl 2 Weapons
                 case "SilverShortSword":
-                    ChangeWeaponStats(14, 1, 1.2f, 0.15f, "Neutral", 0, true, 6);
+                    ChangeWeaponStats(16, 1, 1.2f, 0.15f, "Neutral", 0, true, 6);
                     break;
                 case "CharredDagger":
-                    ChangeWeaponStats(10, 1, 0.9f, 0.15f, "Fire", 0, true, 7);
+                    ChangeWeaponStats(12, 1, 0.9f, 0.15f, "Fire", 0, true, 7);
                     break;
                 case "FrostWand":
-                    ChangeWeaponStats(6, 0, 3f, 0.3f, "Ice", 0.05f, false, 8);
+                    ChangeWeaponStats(8, 0, 3f, 0.3f, "Ice", 0.05f, false, 8);
                     break;
                 case "JoltSabre":
-                    ChangeWeaponStats(16, 1, 1.4f, 0.15f, "Thunder", 0, true, 9);
+                    ChangeWeaponStats(18, 1, 1.4f, 0.15f, "Thunder", 0, true, 9);
                     break;
                 case "DivineHammer":
-                    ChangeWeaponStats(20, 1, 1.8f, 0.15f, "Holy", 0, true, 10);
+                    ChangeWeaponStats(22, 1, 1.8f, 0.15f, "Holy", 0, true, 10);
                     break;
                 case "TwinDaggers":
-                    ChangeWeaponStats(10, 1, 0.7f, 0.15f, "Swift", 0, true, 11);
+                    ChangeWeaponStats(12, 1, 0.7f, 0.15f, "Swift", 0, true, 11);
                     break;
                 case "CosmicSpear":
-                    ChangeWeaponStats(18, 1, 1.5f, 0.15f, "Cosmic", 0, true, 12);
+                    ChangeWeaponStats(20, 1, 1.5f, 0.15f, "Cosmic", 0, true, 12);
                     break;
 
                 //Lvl 3 Weapons
                 case "GoldenShortSword":
-                    ChangeWeaponStats(28, 1, 1.2f, 0.15f, "Neutral", 0, true, 13);
+                    ChangeWeaponStats(30, 1, 1.2f, 0.15f, "Neutral", 0, true, 13);
                     break;
                 case "EmberBattleAxe":
-                    ChangeWeaponStats(18, 0, 2.5f, 0.3f, "Fire", 0, true, 14);
+                    ChangeWeaponStats(20, 0, 2.5f, 0.3f, "Fire", 0, true, 14);
                     break;
                 case "FrostLongSword":
-                    ChangeWeaponStats(16, 0, 2.5f, 0.3f, "Ice", 0.10f, true, 15);
+                    ChangeWeaponStats(18, 0, 2.5f, 0.3f, "Ice", 0.10f, true, 15);
                     break;
                 case "ShockLance":
-                    ChangeWeaponStats(32, 1, 1.5f, 0.15f, "Thunder", 0, true, 16);
+                    ChangeWeaponStats(34, 1, 1.5f, 0.15f, "Thunder", 0, true, 16);
                     break;
                 case "SacredStaff":
-                    ChangeWeaponStats(20, 0, 2.5f, 0.4f, "Holy", 0, false, 17);
+                    ChangeWeaponStats(22, 0, 2.5f, 0.4f, "Holy", 0, false, 17);
                     break;
                 case "Katana":
-                    ChangeWeaponStats(14, 0, 1f, 0.4f, "Swift", 0, true, 18);
+                    ChangeWeaponStats(16, 0, 1f, 0.4f, "Swift", 0, true, 18);
                     break;
                 case "AstralGreatSword":
-                    ChangeWeaponStats(50, 1, 2f, 0.15f, "Cosmic", 0, true, 19);
+                    ChangeWeaponStats(54, 1, 2f, 0.15f, "Cosmic", 0, true, 19);
                     break;
 
                 //Lvl 4 Weapons
