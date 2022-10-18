@@ -147,7 +147,6 @@ public class MouseCursor : MonoBehaviour
         GlobalVars.useSlashAnim = useSlashAnim;
         weaponImageIndex = weaponIndex;
         playerHudScript.GetSetweaponHudImage.sprite = playerHudScript.GetWeaponHudImagesList[weaponIndex + 1];
-
         GlobalVars.triggerWeaponHudStatsUpdate = true;
     }
 }
