@@ -170,7 +170,7 @@ public class Monster : MonoBehaviour
                         delayAmt = 0f;
                     }
 
-                    if (type.Contains("Beast"))
+                    if (type.Contains("Beast") && armor <= 0)
                     {
                         incomingDamage *= 1.5f;
                     }
@@ -198,7 +198,7 @@ public class Monster : MonoBehaviour
                         moveSpeed -= iceSlowAmt;
                     }
 
-                    if (type.Contains("Humanoid"))
+                    if (type.Contains("Humanoid") && armor <= 0)
                     {
                         incomingDamage *= 1.5f;
                     }
@@ -221,7 +221,7 @@ public class Monster : MonoBehaviour
                         delayAmt = 0.1f;
                     }
 
-                    if (type.Contains("Brute"))
+                    if (type.Contains("Brute") && armor <= 0)
                     {
                         incomingDamage *= 1.5f;
                     }
@@ -233,7 +233,7 @@ public class Monster : MonoBehaviour
 
                 case var _ when damageType.Contains("Holy"):
 
-                    if (type.Contains("Undead"))
+                    if (type.Contains("Undead") && armor <= 0)
                     {
                         incomingDamage *= 1.5f;
                     }
@@ -245,7 +245,7 @@ public class Monster : MonoBehaviour
 
                 case var _ when damageType.Contains("Swift"):
 
-                    if (type.Contains("Pest"))
+                    if (type.Contains("Pest") && armor <= 0)
                     {
                         incomingDamage *= 1.5f;
                     }
@@ -262,7 +262,7 @@ public class Monster : MonoBehaviour
                         delayAmt = 0.5f;
                     }
 
-                    if (type.Contains("Demon"))
+                    if (type.Contains("Demon") && armor <= 0)
                     {
                         incomingDamage *= 1.5f;
                     }
@@ -287,8 +287,6 @@ public class Monster : MonoBehaviour
 
             //Round the damage value in case it has a decimal
             incomingDamage = Mathf.Floor(incomingDamage);
-            //Reduce incomingDamage by armor value
-            incomingDamage -= armor;
 
             if (isWeapon && GlobalVars.useSlashAnim)
             {
@@ -439,8 +437,26 @@ public class Monster : MonoBehaviour
             else if (incomingDamage > 0 && randomFloat > evasionChance)
             {
                 isTakingDamage = true;
-                health -= incomingDamage;
-                healthText.SetText(health.ToString());
+
+                if (armor <= 0)
+                {
+                    health -= incomingDamage;
+                    healthText.SetText(health.ToString());
+                }
+
+                else
+                {
+                    armor -= incomingDamage;
+                    if (armor <= 0)
+                    {
+                        armorText.SetText("0");
+                    }
+                    else
+                    {
+                        armorText.SetText(armor.ToString());
+                    }
+                }
+
                 StartCoroutine(SpawnDamagePopup(incomingDamage, damageType, isCrit, 0.25f));
                 GetSound("DamageSounds", damageType);
             }
