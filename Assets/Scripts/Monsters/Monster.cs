@@ -17,6 +17,7 @@ public class Monster : MonoBehaviour
     [SerializeField] private TMP_Text maxHealthText;
     [SerializeField] private TMP_Text armorText;
     [SerializeField] private GameObject HealthContainer;
+    [SerializeField] private GameObject ArmorObject;
     private float hpRegenCd;
     private int damage;
     private Color green = new Vector4(0, 1, 0, 1);
@@ -44,6 +45,7 @@ public class Monster : MonoBehaviour
         damage = 1;
         lastPos = transform.position;
         isFacingLeft = true;
+        ArmorObject = HealthContainer.transform.GetChild(3).gameObject;
         waypoints = GameObject.FindGameObjectsWithTag("Waypoint");
         currentWaypoint = GlobalVars.tileCounters["numOfTimesPlaced"];
         //Apply any bonus values to the monster
@@ -59,6 +61,11 @@ public class Monster : MonoBehaviour
         foreach (GameObject waypoint in waypoints)
         {
             waypointNum = waypoint.GetComponent<WaypointManager>().waypointNum;
+        }
+
+        if (armor <= 0)
+        {        
+            ArmorObject.SetActive(false);
         }
     }
 
@@ -449,7 +456,8 @@ public class Monster : MonoBehaviour
                     armor -= incomingDamage;
                     if (armor <= 0)
                     {
-                        armorText.SetText("0");
+                        armorText.SetText("");
+                        ArmorObject.SetActive(false);
                     }
                     else
                     {
