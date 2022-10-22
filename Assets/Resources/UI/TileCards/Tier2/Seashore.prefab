@@ -218,9 +218,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +4 armor
+    +6 armor
 
-    +8 max hp
+    +10 max hp
 
     for each Seashore placed'
   m_isRightToLeft: 0
