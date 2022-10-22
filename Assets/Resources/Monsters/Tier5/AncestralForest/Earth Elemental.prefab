@@ -484,8 +484,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 800
-  armor: 5
+  health: 400
+  armor: 400
   goldBounty: 10
   type: Brute
   moveSpeed: 0.4
@@ -495,6 +495,7 @@ MonoBehaviour:
   maxHealthText: {fileID: 7794477886941289041}
   armorText: {fileID: 8403216988957587450}
   HealthContainer: {fileID: 7549338442133584252}
+  ArmorObject: {fileID: 0}
   distanceTraveled: 0
   isTakingDamage: 0
   iceSlowCd: 0

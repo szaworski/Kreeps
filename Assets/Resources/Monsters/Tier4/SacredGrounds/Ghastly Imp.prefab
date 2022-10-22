@@ -489,12 +489,13 @@ MonoBehaviour:
   goldBounty: 10
   type: Undead/Demon
   moveSpeed: 0.52
-  hpRegen: 2
+  hpRegen: 8
   evasionChance: 0
   healthText: {fileID: 2240702306701519988}
   maxHealthText: {fileID: 7794477886941289041}
   armorText: {fileID: 5624308436239634807}
   HealthContainer: {fileID: 7549338442133584252}
+  ArmorObject: {fileID: 0}
   distanceTraveled: 0
   isTakingDamage: 0
   iceSlowCd: 0

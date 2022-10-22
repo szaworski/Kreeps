@@ -218,14 +218,14 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Base stats:
 
-    Health: 300
+    Health: 250
 
-    Armor: 2
+    Armor: 50
 
     Speed: 42
 
     Hp regen:
-    2'
+    4'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
