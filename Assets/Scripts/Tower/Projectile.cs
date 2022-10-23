@@ -51,13 +51,16 @@ public class Projectile : MonoBehaviour
 
     void Start()
     {
-        if (target.transform.position.x > transform.position.x)
+        if (projectileSpeed != 0)
         {
-            spriteRenderer.flipX = true;
-        }
+            if (target.transform.position.x > transform.position.x)
+            {
+                spriteRenderer.flipX = true;
+            }
 
-        Quaternion rotation = Quaternion.LookRotation(target.transform.position - transform.position, transform.TransformDirection(Vector3.up));
-        transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
+            Quaternion rotation = Quaternion.LookRotation(target.transform.position - transform.position, transform.TransformDirection(Vector3.up));
+            transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
+        }
     }
 
     void Update()

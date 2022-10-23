@@ -8146,7 +8146,7 @@ MonoBehaviour:
   - name: Thunder2
     clip: {fileID: 8300000, guid: 5e2ef8f28af610f48b1be8cba29463ca, type: 3}
     volume: 0.5
-    pitch: 0.3
+    pitch: 1.1
     priority: 0
     loop: 0
     source: {fileID: 0}
@@ -8483,7 +8483,7 @@ MonoBehaviour:
   - name: Thunder2
     clip: {fileID: 8300000, guid: 5e2ef8f28af610f48b1be8cba29463ca, type: 3}
     volume: 0.5
-    pitch: 0.7
+    pitch: 1.5
     priority: 0
     loop: 0
     source: {fileID: 0}
@@ -12526,7 +12526,7 @@ MonoBehaviour:
   - name: Thunder2
     clip: {fileID: 8300000, guid: 5e2ef8f28af610f48b1be8cba29463ca, type: 3}
     volume: 0.5
-    pitch: 0.5
+    pitch: 1.3
     priority: 0
     loop: 0
     source: {fileID: 0}

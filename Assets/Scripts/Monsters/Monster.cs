@@ -219,8 +219,8 @@ public class Monster : MonoBehaviour
 
                     if (damageType.Contains("Thunder2"))
                     {
-                        yShiftAmt = 0.2f;
-                        delayAmt = 0.1f;
+                        yShiftAmt = 0;
+                        delayAmt = 0;
                     }
                     else if (!isWeapon || isWeapon && !GlobalVars.useSlashAnim)
                     {

@@ -134,7 +134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33060c8c575bca74eb44c40fe589c225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AoeRadius: {fileID: 0}
+  AoeRadius: {fileID: 828625423111454346}
+  spriteRenderer: {fileID: 0}
   target: {fileID: 0}
   rb: {fileID: 0}
   damageValue: 0
