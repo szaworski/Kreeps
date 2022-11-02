@@ -17301,7 +17301,11 @@ MonoBehaviour:
   startingAttackRange: 0
   startingSpeed: 0
   startingCritChance: 0
+  startingSlowAmt: 0
   bonusDamage: 0
+  bonusArmorDmg: 0
+  bonusHpDmg: 0
+  bonusSlowAmt: 0
   bonusRange: 0
   bonusSpeed: 0
   bonusCritChance: 0

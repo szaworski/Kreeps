@@ -287,12 +287,18 @@ public class Monster : MonoBehaviour
             {
                 case var _ when damageType.Contains("Thunder"):
 
-                    incomingDamage += bonusArmorDamage;
+                    if (armor > 0)
+                    {
+                        incomingDamage += bonusArmorDamage;
+                    }
                     break;
 
                 case var _ when damageType.Contains("Swift"):
 
-                    incomingDamage += bonusHpDamage;
+                    if (armor <= 0)
+                    {
+                        incomingDamage += bonusHpDamage;
+                    }
                     break;
 
                 case var _ when damageType.Contains("Cosmic"):

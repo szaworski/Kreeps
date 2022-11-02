@@ -70,7 +70,6 @@ public class Card : MonoBehaviour
         {
             GlobalVars.newGoldValue = GlobalVars.gold - upgradeCost;
             GlobalVars.IsHoveringOverUiCard = false;
-            GlobalVars.bonusStats[cardName] += bonusAmt;
             GlobalVars.triggerShopCardDestruction = true;
 
             switch (upgradeType)
@@ -78,6 +77,7 @@ public class Card : MonoBehaviour
                 case "BonusDmg":
                     if (GlobalVars.bonusStats[cardName + "Lvl"] < 3)
                     {
+                        GlobalVars.bonusStats[cardName] += bonusAmt;
                         GlobalVars.bonusStats[cardName + "Lvl"]++;
                     }
                     break;
@@ -85,6 +85,7 @@ public class Card : MonoBehaviour
                 case "Special":
                     if (GlobalVars.bonusExtraStats[cardName + "Lvl"] < 4)
                     {
+                        GlobalVars.bonusExtraStats[cardName] += bonusFloatAmt;
                         GlobalVars.bonusExtraStats[cardName + "Lvl"]++;
                     }
                     break;
