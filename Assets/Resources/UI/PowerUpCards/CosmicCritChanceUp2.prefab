@@ -284,7 +284,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: CosmicCritChanceUp
   upgradeCost: 150
-  upgradeType: BonusCritChance
+  upgradeType: Special
   bonusAmt: 0
   bonusFloatAmt: 0.1
 --- !u!1 &8139315525478325520

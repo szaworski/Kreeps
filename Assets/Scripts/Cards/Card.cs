@@ -68,69 +68,33 @@ public class Card : MonoBehaviour
     {
         if (GlobalVars.gold >= upgradeCost && !GlobalVars.isPaused)
         {
-            if (upgradeType == "BonusDmg")
+            GlobalVars.newGoldValue = GlobalVars.gold - upgradeCost;
+            GlobalVars.IsHoveringOverUiCard = false;
+            GlobalVars.bonusStats[cardName] += bonusAmt;
+            GlobalVars.triggerShopCardDestruction = true;
+
+            switch (upgradeType)
             {
-                GlobalVars.newGoldValue = GlobalVars.gold - upgradeCost;
-                GlobalVars.IsHoveringOverUiCard = false;
-                GlobalVars.bonusStats[cardName] += bonusAmt;
-                GlobalVars.triggerShopCardDestruction = true;
+                case "BonusDmg":
+                    if (GlobalVars.bonusStats[cardName + "Lvl"] < 3)
+                    {
+                        GlobalVars.bonusStats[cardName + "Lvl"]++;
+                    }
+                    break;
 
-                if (GlobalVars.bonusStats[cardName + "Lvl"] < 3)
-                {
-                    GlobalVars.bonusStats[cardName + "Lvl"]++;
-                }
-            }
+                case "Special":
+                    if (GlobalVars.bonusExtraStats[cardName + "Lvl"] < 4)
+                    {
+                        GlobalVars.bonusExtraStats[cardName + "Lvl"]++;
+                    }
+                    break;
 
-            if (upgradeType == "BonusSpeed")
-            {
-                GlobalVars.newGoldValue = GlobalVars.gold - upgradeCost;
-                GlobalVars.IsHoveringOverUiCard = false;
-                GlobalVars.bonusExtraStats[cardName] += bonusFloatAmt;
-                GlobalVars.triggerShopCardDestruction = true;
-
-                if (GlobalVars.bonusExtraStats[cardName + "Lvl"] < 4)
-                {
-                    GlobalVars.bonusExtraStats[cardName + "Lvl"]++;
-                }
-            }
-
-            if (upgradeType == "BonusRange")
-            {
-                GlobalVars.newGoldValue = GlobalVars.gold - upgradeCost;
-                GlobalVars.IsHoveringOverUiCard = false;
-                GlobalVars.bonusExtraStats[cardName] += bonusFloatAmt;
-                GlobalVars.triggerShopCardDestruction = true;
-
-                if (GlobalVars.bonusExtraStats[cardName + "Lvl"] < 4)
-                {
-                    GlobalVars.bonusExtraStats[cardName + "Lvl"]++;
-                }
-            }
-
-            if (upgradeType == "BonusCritChance")
-            {
-                GlobalVars.newGoldValue = GlobalVars.gold - upgradeCost;
-                GlobalVars.IsHoveringOverUiCard = false;
-                GlobalVars.bonusExtraStats[cardName] += bonusFloatAmt;
-                GlobalVars.triggerShopCardDestruction = true;
-
-                if (GlobalVars.bonusExtraStats[cardName + "Lvl"] < 4)
-                {
-                    GlobalVars.bonusExtraStats[cardName + "Lvl"]++;
-                }
-            }
-
-            if (upgradeType == "Weapon")
-            {
-                GlobalVars.newWeapon = cardName;
-                GlobalVars.newGoldValue = GlobalVars.gold - upgradeCost;
-                GlobalVars.triggerShopCardDestruction = true;
-                GlobalVars.IsHoveringOverUiCard = false;
-
-                if (GlobalVars.bonusStats["EquipmentLvl"] < 4)
-                {
-                    GlobalVars.bonusStats["EquipmentLvl"]++;
-                }
+                case "Weapon":
+                    if (GlobalVars.bonusStats["EquipmentLvl"] < 4)
+                    {
+                        GlobalVars.bonusStats["EquipmentLvl"]++;
+                    }
+                    break;
             }
         }
 

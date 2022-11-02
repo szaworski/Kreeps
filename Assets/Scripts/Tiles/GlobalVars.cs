@@ -122,19 +122,17 @@ public class GlobalVars : MonoBehaviour
         bonusStats.Add("CosmicLvl", 1);
 
         bonusExtraStats.Clear();
-        bonusExtraStats.Add("IceRangeUp", 0);
-        bonusExtraStats.Add("SwiftRangeUp", 0);
-        bonusExtraStats.Add("IceRangeUpLvl", 1);
-        bonusExtraStats.Add("SwiftRangeUpLvl", 1);
-
         bonusExtraStats.Add("FireSpeedUp", 0);
-        bonusExtraStats.Add("HolySpeedUp", 0);
         bonusExtraStats.Add("FireSpeedUpLvl", 1);
-        bonusExtraStats.Add("HolySpeedUpLvl", 1);
-
-        bonusExtraStats.Add("ThunderCritChanceUp", 0);
+        bonusExtraStats.Add("IceSlowUp", 0);
+        bonusExtraStats.Add("IceSlowUpLvl", 1);
+        bonusExtraStats.Add("ThunderArmorDmgUp", 0);
+        bonusExtraStats.Add("ThunderArmorDmgUpLvl", 1);
+        bonusExtraStats.Add("HolyRangeUp", 0);
+        bonusExtraStats.Add("HolyRangeUpLvl", 1);
+        bonusExtraStats.Add("SwiftHpDmgUp", 0);
+        bonusExtraStats.Add("SwiftHpDmgUpLvl", 1);
         bonusExtraStats.Add("CosmicCritChanceUp", 0);
-        bonusExtraStats.Add("ThunderCritChanceUpLvl", 1);
         bonusExtraStats.Add("CosmicCritChanceUpLvl", 1);
 
         //Add starting kreep bonus stats

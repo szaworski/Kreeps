@@ -65,10 +65,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Thunder type weapons and towers gain +15% crit chance
+  m_text: 'Thunder type weapons and towers gain +10% crit chance
 
 
-    Cost: 200g'
+    Cost: 100g'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 3908303887177809270}
   - component: {fileID: 3908303887177809271}
   m_Layer: 5
-  m_Name: ThunderCritChanceUp3
+  m_Name: ThunderCritChanceUp1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -283,11 +283,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3c50722ec083041bcf2aec73db18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: ThunderCritChanceUp
-  upgradeCost: 200
-  upgradeType: BonusCritChance
+  cardName: ThunderArmorDmgUp
+  upgradeCost: 100
+  upgradeType: Special
   bonusAmt: 0
-  bonusFloatAmt: 0.15
+  bonusFloatAmt: 0.1
 --- !u!1 &4443217231390657293
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '+ Crit chance 3
+  m_text: '+ Crit chance 1
 
 '
   m_isRightToLeft: 0

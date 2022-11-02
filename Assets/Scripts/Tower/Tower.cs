@@ -13,7 +13,11 @@ public class Tower : MonoBehaviour
     private float startingAttackRange;
     private float startingSpeed;
     private float startingCritChance;
+    private float startingSlowAmt;
     private float bonusDamage;
+    private float bonusArmorDmg;
+    private float bonusHpDmg;
+    private float bonusSlowAmt;
     private float bonusRange;
     private float bonusSpeed;
     private float bonusCritChance;
@@ -45,11 +49,13 @@ public class Tower : MonoBehaviour
         startingSpeed = attackSpeed;
         startingAttackRange = attackRange;
         startingCritChance = critChance;
+        startingSlowAmt = slowAmt;
 
         damage = startingDamage + bonusDamage;
         attackSpeed = startingSpeed + bonusSpeed;
         attackRange = startingAttackRange + bonusRange;
         critChance = startingCritChance + bonusCritChance;
+        slowAmt = startingSlowAmt + bonusSlowAmt;
     }
 
     void Start()
@@ -175,28 +181,49 @@ public class Tower : MonoBehaviour
             bonusDamage = GlobalVars.bonusStats[trimmedDamageType];
         }
 
-        if (trimmedDamageType == "Ice" || trimmedDamageType == "Swift")
+        switch (trimmedDamageType)
         {
-            if (bonusRange < GlobalVars.bonusExtraStats[trimmedDamageType + "RangeUp"])
-            {
-                bonusRange = GlobalVars.bonusExtraStats[trimmedDamageType + "RangeUp"];
-            }
-        }
+            case "Fire":
+                if (bonusSpeed < GlobalVars.bonusExtraStats["FireSpeedUp"])
+                {
+                    bonusSpeed = GlobalVars.bonusExtraStats["FireSpeedUp"];
+                }
+                break;
 
-        if (trimmedDamageType == "Fire" || trimmedDamageType == "Holy")
-        {
-            if (bonusSpeed < GlobalVars.bonusExtraStats[trimmedDamageType + "SpeedUp"])
-            {
-                bonusSpeed = GlobalVars.bonusExtraStats[trimmedDamageType + "SpeedUp"];
-            }
-        }
+            case "Ice":
+                if (bonusSlowAmt < GlobalVars.bonusExtraStats["IceSlowUp"])
+                {
+                    bonusSlowAmt = GlobalVars.bonusExtraStats["IceSlowUp"];
+                }
+                break;
 
-        if (trimmedDamageType == "Thunder" || trimmedDamageType == "Cosmic")
-        {
-            if (bonusCritChance < GlobalVars.bonusExtraStats[trimmedDamageType + "CritChanceUp"])
-            {
-                bonusCritChance = GlobalVars.bonusExtraStats[trimmedDamageType + "CritChanceUp"];
-            }
+            case "Thunder":
+                if (bonusArmorDmg < GlobalVars.bonusExtraStats["ThunderArmorDmgUp"])
+                {
+                    bonusArmorDmg = GlobalVars.bonusExtraStats["ThunderArmorDmgUp"];
+                }
+                break;
+
+            case "Holy":
+                if (bonusRange < GlobalVars.bonusExtraStats["HolyRangeUp"])
+                {
+                    bonusRange = GlobalVars.bonusExtraStats["HolyRangeUp"];
+                }
+                break;
+
+            case "Swift":
+                if (bonusHpDmg < GlobalVars.bonusExtraStats["SwiftHpDmgUp"])
+                {
+                    bonusHpDmg = GlobalVars.bonusExtraStats["SwiftHpDmgUp"];
+                }
+                break;
+
+            case "Cosmic":
+                if (bonusCritChance < GlobalVars.bonusExtraStats["CosmicCritChanceUp"])
+                {
+                    bonusCritChance = GlobalVars.bonusExtraStats["CosmicCritChanceUp"];
+                }
+                break;
         }
     }
 
@@ -224,6 +251,11 @@ public class Tower : MonoBehaviour
         if (critChance != startingCritChance + bonusCritChance)
         {
             critChance = startingCritChance + bonusCritChance;
+        }
+
+        if (slowAmt != startingSlowAmt + bonusSlowAmt)
+        {
+            slowAmt = startingSlowAmt + bonusSlowAmt;
         }
     }
 

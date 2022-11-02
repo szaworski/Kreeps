@@ -146,9 +146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3c50722ec083041bcf2aec73db18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: HolySpeedUp
+  cardName: HolyRangeUp
   upgradeCost: 150
-  upgradeType: BonusSpeed
+  upgradeType: Special
   bonusAmt: 0
   bonusFloatAmt: 0.1
 --- !u!1 &6911761215297631096

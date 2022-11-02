@@ -148,7 +148,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: FireSpeedUp
   upgradeCost: 125
-  upgradeType: BonusSpeed
+  upgradeType: Special
   bonusAmt: 0
   bonusFloatAmt: 0.1
 --- !u!1 &4979736243767342691
