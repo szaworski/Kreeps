@@ -15,13 +15,13 @@ public class Tower : MonoBehaviour
     private float startingCritChance;
     private float startingSlowAmt;
     private float bonusDamage;
-    private float bonusArmorDmg;
-    private float bonusHpDmg;
     private float bonusSlowAmt;
     private float bonusRange;
     private float bonusSpeed;
     private float bonusCritChance;
     public float damage;
+    public float bonusArmorDmg;
+    public float bonusHpDmg;
     public float projectileSpeed;
     public float attackSpeed;
     public float attackRange;

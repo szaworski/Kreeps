@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3908303887177809270}
   - component: {fileID: 3908303887177809271}
   m_Layer: 5
-  m_Name: IceRangeUp3
+  m_Name: IceSlowUp3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -147,10 +147,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: IceSlowUp
-  upgradeCost: 125
+  upgradeCost: 200
   upgradeType: Special
   bonusAmt: 0
-  bonusFloatAmt: 0.1
+  bonusFloatAmt: 0.15
 --- !u!1 &4698487345527608529
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '+ Attack range 3
+  m_text: '+ Slow 3
 
 '
   m_isRightToLeft: 0
@@ -352,10 +352,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ice type  weapons and towers gain +0.1 attack range
+  m_text: 'Ice type weapons and towers gain an additional -15 move speed slow
 
 
-    Cost: 125g'
+    Cost:
+    200g'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

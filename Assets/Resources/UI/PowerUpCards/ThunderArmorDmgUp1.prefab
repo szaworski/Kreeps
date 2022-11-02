@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Thunder type weapons and towers gain +10% crit chance
+  m_text: 'Thunder type weapons and towers gain +5 damage to armor
 
 
     Cost: 100g'
@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 3908303887177809270}
   - component: {fileID: 3908303887177809271}
   m_Layer: 5
-  m_Name: ThunderCritChanceUp1
+  m_Name: ThunderArmorDmgUp1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -287,7 +287,7 @@ MonoBehaviour:
   upgradeCost: 100
   upgradeType: Special
   bonusAmt: 0
-  bonusFloatAmt: 0.1
+  bonusFloatAmt: 5
 --- !u!1 &4443217231390657293
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '+ Crit chance 1
+  m_text: '+ Armor damage 1
 
 '
   m_isRightToLeft: 0

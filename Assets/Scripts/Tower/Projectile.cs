@@ -8,6 +8,8 @@ public class Projectile : MonoBehaviour
     public GameObject target;
     public Rigidbody2D rb;
     public float damageValue;
+    public float bonusHpDamage;
+    public float bonusArmorDamage;
     public float projectileSpeed;
     public float attackRange;
     public float slowAmt;
@@ -22,6 +24,8 @@ public class Projectile : MonoBehaviour
         if (isWeapon)
         {
             damageValue = transform.parent.GetComponent<Weapon>().damage;
+            bonusHpDamage = transform.parent.GetComponent<Weapon>().bonusHpDmg;
+            bonusArmorDamage = transform.parent.GetComponent<Weapon>().bonusArmorDmg;
             projectileSpeed = transform.parent.GetComponent<Weapon>().projectileSpeed;
             damageType = transform.parent.GetComponent<Weapon>().damageType;
             attackRange = transform.parent.GetComponent<Weapon>().attackRange;
@@ -33,6 +37,8 @@ public class Projectile : MonoBehaviour
         else
         {
             damageValue = transform.parent.GetComponent<Tower>().damage;
+            bonusHpDamage = transform.parent.GetComponent<Tower>().bonusHpDmg;
+            bonusArmorDamage = transform.parent.GetComponent<Tower>().bonusArmorDmg;
             projectileSpeed = transform.parent.GetComponent<Tower>().projectileSpeed;
             damageType = transform.parent.GetComponent<Tower>().damageType;
             attackRange = transform.parent.GetComponent<Tower>().attackRange;

@@ -26,7 +26,11 @@ public class Weapon : MonoBehaviour
     public float startingAttackRange;
     public float startingSpeed;
     public float startingCritChance;
+    public float startingSlowAmt;
     public float bonusDamage;
+    public float bonusArmorDmg;
+    public float bonusHpDmg;
+    public float bonusSlowAmt;
     public float bonusRange;
     public float bonusSpeed;
     public float bonusCritChance;
@@ -199,28 +203,49 @@ public class Weapon : MonoBehaviour
             bonusDamage = GlobalVars.bonusStats[damageType];
         }
 
-        if (damageType == "Ice" || damageType == "Swift")
+        switch (damageType)
         {
-            if (bonusRange < GlobalVars.bonusExtraStats[damageType + "RangeUp"])
-            {
-                bonusRange = GlobalVars.bonusExtraStats[damageType + "RangeUp"];
-            }
-        }
+            case "Fire":
+                if (bonusSpeed < GlobalVars.bonusExtraStats["FireSpeedUp"])
+                {
+                    bonusSpeed = GlobalVars.bonusExtraStats["FireSpeedUp"];
+                }
+                break;
 
-        if (damageType == "Fire" || damageType == "Holy")
-        {
-            if (bonusSpeed < GlobalVars.bonusExtraStats[damageType + "SpeedUp"])
-            {
-                bonusSpeed = GlobalVars.bonusExtraStats[damageType + "SpeedUp"];
-            }
-        }
+            case "Ice":
+                if (bonusSlowAmt < GlobalVars.bonusExtraStats["IceSlowUp"])
+                {
+                    bonusSlowAmt = GlobalVars.bonusExtraStats["IceSlowUp"];
+                }
+                break;
 
-        if (damageType == "Thunder" || damageType == "Cosmic")
-        {
-            if (bonusCritChance < GlobalVars.bonusExtraStats[damageType + "CritChanceUp"])
-            {
-                bonusCritChance = GlobalVars.bonusExtraStats[damageType + "CritChanceUp"];
-            }
+            case "Thunder":
+                if (bonusArmorDmg < GlobalVars.bonusExtraStats["ThunderArmorDmgUp"])
+                {
+                    bonusArmorDmg = GlobalVars.bonusExtraStats["ThunderArmorDmgUp"];
+                }
+                break;
+
+            case "Holy":
+                if (bonusRange < GlobalVars.bonusExtraStats["HolyRangeUp"])
+                {
+                    bonusRange = GlobalVars.bonusExtraStats["HolyRangeUp"];
+                }
+                break;
+
+            case "Swift":
+                if (bonusHpDmg < GlobalVars.bonusExtraStats["SwiftHpDmgUp"])
+                {
+                    bonusHpDmg = GlobalVars.bonusExtraStats["SwiftHpDmgUp"];
+                }
+                break;
+
+            case "Cosmic":
+                if (bonusCritChance < GlobalVars.bonusExtraStats["CosmicCritChanceUp"])
+                {
+                    bonusCritChance = GlobalVars.bonusExtraStats["CosmicCritChanceUp"];
+                }
+                break;
         }
     }
 
@@ -244,6 +269,11 @@ public class Weapon : MonoBehaviour
         if (critChance != startingCritChance + bonusCritChance)
         {
             critChance = startingCritChance + bonusCritChance;
+        }
+
+        if (slowAmt != startingSlowAmt + bonusSlowAmt)
+        {
+            slowAmt = startingSlowAmt + bonusSlowAmt;
         }
     }
 }

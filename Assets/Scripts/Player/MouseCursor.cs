@@ -143,7 +143,7 @@ public class MouseCursor : MonoBehaviour
         weaponScript.startingSpeed = attackSpeed;
         weaponScript.startingAttackRange = attackRange;
         weaponScript.damageType = damageType;
-        weaponScript.slowAmt = slowAmt;
+        weaponScript.startingSlowAmt = slowAmt;
         GlobalVars.useSlashAnim = useSlashAnim;
         weaponImageIndex = weaponIndex;
         playerHudScript.GetSetweaponHudImage.sprite = playerHudScript.GetWeaponHudImagesList[weaponIndex + 1];

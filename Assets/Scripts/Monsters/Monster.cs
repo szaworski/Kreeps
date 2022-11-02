@@ -148,6 +148,8 @@ public class Monster : MonoBehaviour
             GameObject projectileObj = other.gameObject;
             GameObject monsterTarget = projectileObj.GetComponent<Projectile>().target;
             float incomingDamage = projectileObj.GetComponent<Projectile>().damageValue;
+            float bonusHpDamage = projectileObj.GetComponent<Projectile>().bonusHpDamage;
+            float bonusArmorDamage = projectileObj.GetComponent<Projectile>().bonusArmorDamage;
             float projectileSpeed = projectileObj.GetComponent<Projectile>().projectileSpeed;
             float slowAmt = projectileObj.GetComponent<Projectile>().slowAmt;
             float critChance = projectileObj.GetComponent<Projectile>().critChance;
@@ -280,16 +282,29 @@ public class Monster : MonoBehaviour
                     break;
             }
 
-            //Apply crit damage if applicable  
-            if (damageType.Contains("Thunder") || damageType.Contains("Cosmic"))
+            //Apply crit/bonus damage if applicable  
+            switch (damageType)
             {
-                float randomFloat = Random.value;
+                case var _ when damageType.Contains("Thunder"):
 
-                if (randomFloat <= critChance)
-                {
-                    isCritHit = true;
-                    incomingDamage *= 2;
-                }
+                    incomingDamage += bonusArmorDamage;
+                    break;
+
+                case var _ when damageType.Contains("Swift"):
+
+                    incomingDamage += bonusHpDamage;
+                    break;
+
+                case var _ when damageType.Contains("Cosmic"):
+
+                    float randomFloat = Random.value;
+
+                    if (randomFloat <= critChance)
+                    {
+                        isCritHit = true;
+                        incomingDamage *= 2;
+                    }
+                    break;
             }
 
             //Round the damage value in case it has a decimal

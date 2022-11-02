@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3908303887177809270}
   - component: {fileID: 3908303887177809271}
   m_Layer: 5
-  m_Name: HolySpeedUp1
+  m_Name: HolyRangeUp1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Holy type weapons and towers gain +0.1 attack rate
+  m_text: 'Holy type weapons and towers gain +0.1 attack range
 
 
     Cost: 100g'
