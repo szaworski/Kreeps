@@ -65,7 +65,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Thunder type weapons and towers gain +15 damage to armor
+  m_text: 'Thunder type weapons and towers gain +15 damage to armor. This damage
+    is not dealt to hp
 
 
     Cost: 200g'

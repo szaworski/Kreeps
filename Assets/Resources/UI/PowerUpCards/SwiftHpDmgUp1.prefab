@@ -65,7 +65,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Swift type weapons and towers gain +4 damage to hp
+  m_text: 'Swift type weapons and towers gain +4 damage to hp. This damage is not
+    dealt to armor
 
 
     Cost: 100g'
