@@ -33,6 +33,8 @@ public class Monster : MonoBehaviour
     [SerializeField] private float iceSlowCd;
     [SerializeField] private bool iceSlowStatus;
     [SerializeField] private float iceSlowAmt;
+    [SerializeField] private bool isPoisoned;
+    [SerializeField] private bool isTakingPoisonDamage;
 
     //Waypoint vars
     private bool isFacingLeft;
@@ -64,7 +66,7 @@ public class Monster : MonoBehaviour
         }
 
         if (armor <= 0)
-        {        
+        {
             ArmorObject.SetActive(false);
         }
     }
@@ -86,6 +88,12 @@ public class Monster : MonoBehaviour
         {
             StartCoroutine(DestroyMonster(0.1f));
         }
+
+        if (isPoisoned && !isTakingPoisonDamage && GlobalVars.bonusExtraStats["SwiftPsnDmgUp"] > 0)
+        {
+            StartCoroutine(inflictPoisonDamage(0.5f));
+        }
+
         //Debug.Log("Total distance traveled: " + distanceTraveled);
     }
 
@@ -148,7 +156,6 @@ public class Monster : MonoBehaviour
             GameObject projectileObj = other.gameObject;
             GameObject monsterTarget = projectileObj.GetComponent<Projectile>().target;
             float incomingDamage = projectileObj.GetComponent<Projectile>().damageValue;
-            float bonusHpDamage = projectileObj.GetComponent<Projectile>().bonusHpDamage;
             float bonusArmorDamage = projectileObj.GetComponent<Projectile>().bonusArmorDamage;
             float projectileSpeed = projectileObj.GetComponent<Projectile>().projectileSpeed;
             float slowAmt = projectileObj.GetComponent<Projectile>().slowAmt;
@@ -282,7 +289,7 @@ public class Monster : MonoBehaviour
                     break;
             }
 
-            //Apply crit/bonus damage if applicable  
+            //Apply crit/bonus damage/poison if applicable  
             switch (damageType)
             {
                 case var _ when damageType.Contains("Thunder"):
@@ -295,9 +302,9 @@ public class Monster : MonoBehaviour
 
                 case var _ when damageType.Contains("Swift"):
 
-                    if (armor <= 0)
+                    if (!isPoisoned)
                     {
-                        incomingDamage += bonusHpDamage;
+                        StartCoroutine(triggerPoison(0.5f));
                     }
                     break;
 
@@ -447,6 +454,20 @@ public class Monster : MonoBehaviour
         GetSound("MonsterSounds", "Death");
     }
 
+    IEnumerator inflictPoisonDamage(float delayTime)
+    {
+        isTakingPoisonDamage = true;
+        StartCoroutine(SubtractHealth(GlobalVars.bonusExtraStats["SwiftPsnDmgUp"], null, "Swift", false, 0));
+        yield return new WaitForSeconds(delayTime);
+        isTakingPoisonDamage = false;
+    }
+
+    IEnumerator triggerPoison(float delayTime)
+    {
+        yield return new WaitForSeconds(delayTime);
+        isPoisoned = true;
+    }
+
     IEnumerator SubtractHealth(float incomingDamage, Collider2D projectileObj, string damageType, bool isCrit, float delayTime)
     {
         yield return new WaitForSeconds(delayTime);
@@ -564,7 +585,7 @@ public class Monster : MonoBehaviour
 
         else
         {
-            if(isCrit)
+            if (isCrit)
             {
                 damagePopupObj.GetComponent<RectTransform>().localScale = new Vector3(1.25f, 1.25f, 1);
                 damagePopupObj.GetComponent<TextMeshPro>().text = damageVal.ToString();

@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 3908303887177809270}
   - component: {fileID: 3908303887177809271}
   m_Layer: 5
-  m_Name: SwiftHpDmgUp3
+  m_Name: SwiftPsnDmgUp3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -284,11 +284,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3c50722ec083041bcf2aec73db18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: SwiftHpDmgUp
+  cardName: SwiftPsnDmgUp
   upgradeCost: 200
   upgradeType: Special
   bonusAmt: 0
-  bonusFloatAmt: 8
+  bonusFloatAmt: 3
 --- !u!1 &8692462336114237473
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,7 +354,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '+ Hp damage 3
+  m_text: '+ Poison damage 3
 
 '
   m_isRightToLeft: 0

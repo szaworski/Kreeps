@@ -29,7 +29,6 @@ public class Weapon : MonoBehaviour
     public float startingSlowAmt;
     public float bonusDamage;
     public float bonusArmorDmg;
-    public float bonusHpDmg;
     public float bonusSlowAmt;
     public float bonusRange;
     public float bonusSpeed;
@@ -230,13 +229,6 @@ public class Weapon : MonoBehaviour
                 if (bonusRange < GlobalVars.bonusExtraStats["HolyRangeUp"])
                 {
                     bonusRange = GlobalVars.bonusExtraStats["HolyRangeUp"];
-                }
-                break;
-
-            case "Swift":
-                if (bonusHpDmg < GlobalVars.bonusExtraStats["SwiftHpDmgUp"])
-                {
-                    bonusHpDmg = GlobalVars.bonusExtraStats["SwiftHpDmgUp"];
                 }
                 break;
 

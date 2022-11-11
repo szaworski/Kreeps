@@ -24,7 +24,6 @@ public class Projectile : MonoBehaviour
         if (isWeapon)
         {
             damageValue = transform.parent.GetComponent<Weapon>().damage;
-            bonusHpDamage = transform.parent.GetComponent<Weapon>().bonusHpDmg;
             bonusArmorDamage = transform.parent.GetComponent<Weapon>().bonusArmorDmg;
             projectileSpeed = transform.parent.GetComponent<Weapon>().projectileSpeed;
             damageType = transform.parent.GetComponent<Weapon>().damageType;
@@ -37,7 +36,6 @@ public class Projectile : MonoBehaviour
         else
         {
             damageValue = transform.parent.GetComponent<Tower>().damage;
-            bonusHpDamage = transform.parent.GetComponent<Tower>().bonusHpDmg;
             bonusArmorDamage = transform.parent.GetComponent<Tower>().bonusArmorDmg;
             projectileSpeed = transform.parent.GetComponent<Tower>().projectileSpeed;
             damageType = transform.parent.GetComponent<Tower>().damageType;

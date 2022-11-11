@@ -21,7 +21,6 @@ public class Tower : MonoBehaviour
     private float bonusCritChance;
     public float damage;
     public float bonusArmorDmg;
-    public float bonusHpDmg;
     public float projectileSpeed;
     public float attackSpeed;
     public float attackRange;
@@ -208,13 +207,6 @@ public class Tower : MonoBehaviour
                 if (bonusRange < GlobalVars.bonusExtraStats["HolyRangeUp"])
                 {
                     bonusRange = GlobalVars.bonusExtraStats["HolyRangeUp"];
-                }
-                break;
-
-            case "Swift":
-                if (bonusHpDmg < GlobalVars.bonusExtraStats["SwiftHpDmgUp"])
-                {
-                    bonusHpDmg = GlobalVars.bonusExtraStats["SwiftHpDmgUp"];
                 }
                 break;
 

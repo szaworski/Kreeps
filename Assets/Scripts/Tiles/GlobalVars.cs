@@ -130,8 +130,8 @@ public class GlobalVars : MonoBehaviour
         bonusExtraStats.Add("ThunderArmorDmgUpLvl", 1);
         bonusExtraStats.Add("HolyRangeUp", 0);
         bonusExtraStats.Add("HolyRangeUpLvl", 1);
-        bonusExtraStats.Add("SwiftHpDmgUp", 0);
-        bonusExtraStats.Add("SwiftHpDmgUpLvl", 1);
+        bonusExtraStats.Add("SwiftPsnDmgUp", 1);
+        bonusExtraStats.Add("SwiftPsnDmgUpLvl", 1);
         bonusExtraStats.Add("CosmicCritChanceUp", 0);
         bonusExtraStats.Add("CosmicCritChanceUpLvl", 1);
 
