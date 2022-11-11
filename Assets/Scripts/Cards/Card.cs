@@ -91,6 +91,8 @@ public class Card : MonoBehaviour
                     break;
 
                 case "Weapon":
+                    GlobalVars.newWeapon = cardName;
+
                     if (GlobalVars.bonusStats["EquipmentLvl"] < 4)
                     {
                         GlobalVars.bonusStats["EquipmentLvl"]++;
