@@ -357,11 +357,11 @@ MonoBehaviour:
 
     Cost: 275g
 
-    Dmg: 60
+    Dmg: 50
 
     Rof: 2
 
-    Rng: 1
+    Rng: 0.9
 
 '
   m_isRightToLeft: 0

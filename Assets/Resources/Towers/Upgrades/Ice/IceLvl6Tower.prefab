@@ -699,7 +699,7 @@ MonoBehaviour:
   bonusArmorDmg: 0
   projectileSpeed: 1
   attackSpeed: 0.8
-  attackRange: 0.8
+  attackRange: 0.7
   critChance: 0
   damageType: Ice
   slowAmt: 0.08

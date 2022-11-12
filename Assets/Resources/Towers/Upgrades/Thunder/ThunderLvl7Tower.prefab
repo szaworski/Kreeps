@@ -909,9 +909,10 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   attackCd: 0
   damage: 75
+  bonusArmorDmg: 0
   projectileSpeed: 1
   attackSpeed: 1.5
-  attackRange: 1
+  attackRange: 0.8
   critChance: 0
   damageType: Thunder
   slowAmt: 0

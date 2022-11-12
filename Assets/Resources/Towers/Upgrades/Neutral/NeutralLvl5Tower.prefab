@@ -996,9 +996,10 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   attackCd: 0
   damage: 24
+  bonusArmorDmg: 0
   projectileSpeed: 4
   attackSpeed: 1
-  attackRange: 1.25
+  attackRange: 1
   critChance: 0
   damageType: Neutral
   slowAmt: 0

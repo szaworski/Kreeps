@@ -359,10 +359,9 @@ MonoBehaviour:
   attackCd: 0
   damage: 6
   bonusArmorDmg: 0
-  bonusHpDmg: 0
   projectileSpeed: 1
   attackSpeed: 0.3
-  attackRange: 0.8
+  attackRange: 0.7
   critChance: 0
   damageType: Holy
   slowAmt: 0
