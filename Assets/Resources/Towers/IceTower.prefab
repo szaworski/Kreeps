@@ -101,13 +101,12 @@ MonoBehaviour:
   attackCd: 0
   damage: 5
   bonusArmorDmg: 0
-  bonusHpDmg: 0
   projectileSpeed: 1
   attackSpeed: 1
   attackRange: 0.8
   critChance: 0
   damageType: Ice
-  slowAmt: 0.05
+  slowAmt: 0.04
   attackRadius: {fileID: 1235488988543047019}
   dmgText: {fileID: 2435213018244139950}
   rofText: {fileID: 1809360481666060924}
@@ -514,7 +513,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n-5 move speed\nDamage:  \nRate of fire: \nRange: \n\n\n\n"
+  m_text: "Single target\n\nDamage:  \nRate of fire: \nRange: \n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

@@ -354,7 +354,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'AOE in radius
 
-    -15 move speed
+    -4 move speed
 
     Cost: 100g
 

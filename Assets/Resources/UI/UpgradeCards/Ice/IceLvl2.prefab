@@ -203,7 +203,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-    -10 move speed
+    -6 move speed
 
     Cost: 100g
 
