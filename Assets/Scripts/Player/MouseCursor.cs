@@ -124,6 +124,27 @@ public class MouseCursor : MonoBehaviour
                     break;
 
                 //Lvl 4 Weapons
+                case "TitaniumShortSword":
+                    ChangeWeaponStats(80, 1, 1.2f, 0.15f, "Neutral", 0, true, 20);
+                    break;
+                case "InfernalLongSword":
+                    ChangeWeaponStats(80, 1, 1.2f, 0.15f, "Fire", 0, true, 20);
+                    break;
+                case "SnowScepter":
+                    ChangeWeaponStats(80, 1, 1.2f, 0.15f, "Ice", 0, true, 20);
+                    break;
+                case "LightningGreatAxe":
+                    ChangeWeaponStats(80, 1, 1.2f, 0.15f, "Thunder", 0, true, 20);
+                    break;
+                case "HeavenlyGreatSword":
+                    ChangeWeaponStats(80, 1, 1.2f, 0.15f, "Holy", 0, true, 20);
+                    break;
+                case "ReinforcedMorningStar":
+                    ChangeWeaponStats(80, 1, 1.2f, 0.15f, "Swift", 0, true, 20);
+                    break;
+                case "GalacticBroadSword":
+                    ChangeWeaponStats(80, 1, 1.2f, 0.15f, "Cosmic", 0, true, 20);
+                    break;
 
             }
 

@@ -1731,7 +1731,7 @@ MonoBehaviour:
     Rate of fire: 0.8
 
     Range:
-    0.8
+    0.6
 
 
     Damage Bonus: None
@@ -5357,7 +5357,7 @@ MonoBehaviour:
     Rate of fire: 1
 
     Range:
-    0.8
+    0.7
 
 
     Damage Bonus:
@@ -9371,7 +9371,7 @@ MonoBehaviour:
     Rate of fire: 1.5
 
     Range:
-    0.8
+    0.7
 
 
     Damage Bonus:
@@ -9558,7 +9558,7 @@ MonoBehaviour:
     Rate of fire:
     1
 
-    Range: 0.8
+    Range: 0.7
 
 
     Damage Bonus:
@@ -11439,7 +11439,7 @@ MonoBehaviour:
     Rate of fire: 0.9
 
     Range:
-    1
+    0.8
 
 
     Damage Bonus:
@@ -12618,7 +12618,7 @@ MonoBehaviour:
     Rate of fire: 2
 
     Range:
-    0.8
+    0.7
 
 
     Damage Bonus:
@@ -14395,7 +14395,7 @@ MonoBehaviour:
     Rate of fire: 0.55
 
     Range:
-    0.8
+    0.7
 
 
     Damage Bonus:
