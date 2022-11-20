@@ -65,16 +65,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'AOE in radius
+  m_text: 'Single target
 
-    -10 move speed
+    -15 move speed
 
-    Damage: 20
+    Damage: 90
 
-    Attack rate: 2
+    Attack rate: 1.3
 
     Range:
-    0.3
+    0.15
 
 
     Cost: 500g'
