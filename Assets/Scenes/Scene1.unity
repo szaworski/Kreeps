@@ -9548,15 +9548,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Single target +Slow
+  m_text: 'Single target +slow
 
+    -5 move speed
 
     Cost: 75g
 
     Damage: 6
 
-    Rate of fire:
-    1
+    Rate
+    of fire: 1
 
     Range: 0.7
 

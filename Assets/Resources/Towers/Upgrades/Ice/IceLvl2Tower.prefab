@@ -446,7 +446,7 @@ MonoBehaviour:
   attackRange: 0.7
   critChance: 0
   damageType: Ice
-  slowAmt: 0.06
+  slowAmt: 0.07
   attackRadius: {fileID: 247469621238869209}
   dmgText: {fileID: 4967675868932689679}
   rofText: {fileID: 2787975337062105219}
