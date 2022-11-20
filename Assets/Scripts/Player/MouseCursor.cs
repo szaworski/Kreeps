@@ -130,20 +130,20 @@ public class MouseCursor : MonoBehaviour
                 case "InfernalLongSword":
                     ChangeWeaponStats(150, 1, 1f, 0.15f, "Fire", 0, true, 21);
                     break;
-                case "SnowScepter":
-                    ChangeWeaponStats(90, 0, 3f, 0.5f, "Ice", 0.15f, false, 22);
+                case "BlizzardBroadSword":
+                    ChangeWeaponStats(90, 0, 2.5f, 0.5f, "Ice", 0.15f, true, 22);
                     break;
                 case "LightningGreatAxe":
-                    ChangeWeaponStats(450, 1, 3f, 0.15f, "Thunder", 0, true, 23);
+                    ChangeWeaponStats(450, 1, 2f, 0.15f, "Thunder", 0, true, 23);
                     break;
                 case "HeavenlyGreatSword":
-                    ChangeWeaponStats(100, 0, 2.5f, 0.5f, "Holy", 0, true, 24);
+                    ChangeWeaponStats(100, 0, 2f, 0.5f, "Holy", 0, true, 24);
                     break;
                 case "ReinforcedMorningStar":
                     ChangeWeaponStats(80, 1, 0.3f, 0.15f, "Swift", 0, true, 25);
                     break;
-                case "GalacticBroadSword":
-                    ChangeWeaponStats(250, 1, 1.1f, 0.15f, "Cosmic", 0, true, 26);
+                case "GalacticScepter":
+                    ChangeWeaponStats(125, 0, 2.2f, 0.5f, "Cosmic", 0, false, 26);
                     break;
 
             }

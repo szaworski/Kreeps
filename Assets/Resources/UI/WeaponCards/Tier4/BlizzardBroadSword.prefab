@@ -71,7 +71,7 @@ MonoBehaviour:
 
     Damage: 90
 
-    Attack rate: 3
+    Attack rate: 2.5
 
     Range:
     0.5
@@ -160,7 +160,7 @@ GameObject:
   - component: {fileID: 3908303887177809270}
   - component: {fileID: 3908303887177809271}
   m_Layer: 5
-  m_Name: SnowScepter
+  m_Name: BlizzardBroadSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3c50722ec083041bcf2aec73db18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: SnowScepter
+  cardName: BlizzardBroadSword
   upgradeCost: 900
   upgradeType: Weapon
   bonusAmt: 0
@@ -362,7 +362,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Snow Scepter
+  m_text: Blizzard Broad Sword
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
