@@ -218,9 +218,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +2 hp regen
-
-    +10 armor
+    +15 armor
 
     for each Cavern placed'
   m_isRightToLeft: 0

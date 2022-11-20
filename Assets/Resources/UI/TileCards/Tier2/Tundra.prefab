@@ -220,8 +220,6 @@ MonoBehaviour:
 
     +4 hp regen
 
-    +4 max hp
-
     for each Tundra placed'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}

@@ -132,46 +132,41 @@ public class PlayerHud : MonoBehaviour
 
         bonusHpRegen += 2 * GlobalVars.tileCounters["Graveyard"];
 
-        bonusArmor += 6 * GlobalVars.tileCounters["Mountain"];
+        bonusArmor += 5 * GlobalVars.tileCounters["Mountain"];
 
-        bonusMaxHealth += 6 * GlobalVars.tileCounters["River"];
+        bonusMaxHealth += 5 * GlobalVars.tileCounters["River"];
 
         bonusEvasion += 0.02f * GlobalVars.tileCounters["Swamp"];
 
         //Apply any Tier 2 bonuses
-        bonusHpRegen += 2 * GlobalVars.tileCounters["Cavern"];
-        bonusArmor += 10 * GlobalVars.tileCounters["Cavern"];
+        bonusArmor += 15 * GlobalVars.tileCounters["Cavern"];
 
-        bonusMoveSpeed += 0.02f * GlobalVars.tileCounters["Desert"];
-        bonusMaxHealth += 10 * GlobalVars.tileCounters["Desert"];
+        bonusMaxHealth += 15 * GlobalVars.tileCounters["Desert"];
 
-        bonusArmor += 10 * GlobalVars.tileCounters["Seashore"];
-        bonusMaxHealth += 10 * GlobalVars.tileCounters["Seashore"];
+        bonusMoveSpeed += 0.01f * GlobalVars.tileCounters["Seashore"];
+        bonusMaxHealth += 8 * GlobalVars.tileCounters["Seashore"];
 
-        bonusMoveSpeed += 0.02f * GlobalVars.tileCounters["Settlement"];
-        bonusEvasion += 0.02f * GlobalVars.tileCounters["Settlement"];
+        bonusMoveSpeed += 0.03f * GlobalVars.tileCounters["Settlement"];
 
-        bonusEvasion += 0.02f * GlobalVars.tileCounters["Thicket"];
-        bonusMaxHealth += 10 * GlobalVars.tileCounters["Thicket"];
+        bonusEvasion += 0.03f * GlobalVars.tileCounters["Thicket"];
 
         bonusHpRegen += 4 * GlobalVars.tileCounters["Tundra"];
-        bonusMaxHealth += 4 * GlobalVars.tileCounters["Tundra"];
 
         //Apply any Tier 3 bonuses
         bonusHpRegen += 4 * GlobalVars.tileCounters["CanyonCrossing"];
-        bonusMaxHealth += 16 * GlobalVars.tileCounters["CanyonCrossing"];
+        bonusMaxHealth += 15 * GlobalVars.tileCounters["CanyonCrossing"];
 
         bonusMoveSpeed += 0.04f * GlobalVars.tileCounters["CrimsonPlain"];
 
         bonusMoveSpeed += 0.02f * GlobalVars.tileCounters["Crypt"];
-        bonusHpRegen += 6 * GlobalVars.tileCounters["Crypt"];
+        bonusHpRegen += 5 * GlobalVars.tileCounters["Crypt"];
 
         bonusArmor += 30 * GlobalVars.tileCounters["EmeraldCave"];
 
         bonusMaxHealth += 30 * GlobalVars.tileCounters["Marsh"];
 
         bonusEvasion += 0.03f * GlobalVars.tileCounters["Sewer"];
-        bonusArmor += 10 * GlobalVars.tileCounters["Sewer"];
+        bonusArmor += 15 * GlobalVars.tileCounters["Sewer"];
 
         //Apply any Tier 4 bonuses
         bonusArmor += 50 * GlobalVars.tileCounters["CrystalCave"];
@@ -201,12 +196,12 @@ public class PlayerHud : MonoBehaviour
         bonusArmor += 40 * GlobalVars.tileCounters["CorruptedIsle"];
 
         bonusEvasion += 0.04f * GlobalVars.tileCounters["MysticMountain"];
-        bonusMoveSpeed += 0.07f * GlobalVars.tileCounters["MysticMountain"];
+        bonusMoveSpeed += 0.06f * GlobalVars.tileCounters["MysticMountain"];
 
         bonusArmor += 80 * GlobalVars.tileCounters["OceanAbyss"];
 
         bonusMoveSpeed += 0.04f * GlobalVars.tileCounters["Underworld"];
-        bonusEvasion += 0.07f * GlobalVars.tileCounters["Underworld"];
+        bonusEvasion += 0.06f * GlobalVars.tileCounters["Underworld"];
  
         //Set the new text values
         bonusMoveSpeedUiText.SetText(("+") + Mathf.Round(bonusMoveSpeed * 100).ToString());
