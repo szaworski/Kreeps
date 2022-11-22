@@ -352,7 +352,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fire type weapons and towers gain +0.2 attack rate
+  m_text: 'Fire type weapons and towers gain -0.2s attack rate
 
 
 
