@@ -63,7 +63,7 @@ public class Tower : MonoBehaviour
 
         //Set stats text
         dmgText.SetText(damage.ToString());
-        rofText.SetText(attackSpeed.ToString());
+        rofText.SetText(attackSpeed.ToString() + "s");
         rngText.SetText(attackRange.ToString());
         dmgText.fontSize = 1.3f;
         rofText.fontSize = 1.3f;
@@ -237,7 +237,7 @@ public class Tower : MonoBehaviour
         if (attackSpeed != startingSpeed - bonusSpeed)
         {
             attackSpeed = startingSpeed - bonusSpeed;
-            rofText.SetText(attackSpeed.ToString());
+            rofText.SetText(attackSpeed.ToString() + "s");
         }
 
         if (critChance != startingCritChance + bonusCritChance)

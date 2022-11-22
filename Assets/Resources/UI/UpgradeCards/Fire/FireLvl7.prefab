@@ -359,7 +359,7 @@ MonoBehaviour:
 
     Dmg: 30
 
-    Rof: 1
+    Rof: 1s
 
     Rng: 0.6
 

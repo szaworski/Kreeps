@@ -116,8 +116,8 @@ public class Projectile : MonoBehaviour
         else if (projectileSpeed == 0)
         {
             //The projectile is destroyed after the damage value is received by the monster (See Monster.cs OnTriggerEnter2D function)
-            //Need to use invoke to give time for the damage to be dealt
-            Invoke("destroyProjectile", 0.1f);
+            //Invoke("destroyProjectile", 0.01f);
+            DestroyProjectile();
         }
     }
 

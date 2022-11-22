@@ -1728,7 +1728,7 @@ MonoBehaviour:
 
     Damage: 5
 
-    Rate of fire: 0.8
+    Rate of fire: 0.8s
 
     Range:
     0.6
@@ -5354,7 +5354,7 @@ MonoBehaviour:
 
     Damage: 6
 
-    Rate of fire: 1
+    Rate of fire: 1s
 
     Range:
     0.7
@@ -9368,7 +9368,7 @@ MonoBehaviour:
 
     Damage: 12
 
-    Rate of fire: 1.5
+    Rate of fire: 1.5s
 
     Range:
     0.7
@@ -9557,7 +9557,7 @@ MonoBehaviour:
     Damage: 5
 
     Rate
-    of fire: 1
+    of fire: 1s
 
     Range: 0.7
 
@@ -11437,7 +11437,7 @@ MonoBehaviour:
 
     Damage: 18
 
-    Rate of fire: 0.9
+    Rate of fire: 0.9s
 
     Range:
     0.8
@@ -12616,7 +12616,7 @@ MonoBehaviour:
 
     Damage: 16
 
-    Rate of fire: 2
+    Rate of fire: 2s
 
     Range:
     0.7
@@ -14393,7 +14393,7 @@ MonoBehaviour:
 
     Damage: 6
 
-    Rate of fire: 0.55
+    Rate of fire: 0.55s
 
     Range:
     0.7
@@ -15345,6 +15345,13 @@ MonoBehaviour:
   - {fileID: -7844550258586445652, guid: 4069ca0477f40d84593fc825148c1f0e, type: 3}
   - {fileID: 7945910245820865771, guid: 4069ca0477f40d84593fc825148c1f0e, type: 3}
   - {fileID: 2134465380185719225, guid: 4069ca0477f40d84593fc825148c1f0e, type: 3}
+  - {fileID: 1578325304218596738, guid: fbec2be952c1c8345bbedf84934b4055, type: 3}
+  - {fileID: -4894107839496484153, guid: fbec2be952c1c8345bbedf84934b4055, type: 3}
+  - {fileID: 4490138291428191469, guid: fbec2be952c1c8345bbedf84934b4055, type: 3}
+  - {fileID: 5664357285576923312, guid: fbec2be952c1c8345bbedf84934b4055, type: 3}
+  - {fileID: -8663235950691074134, guid: fbec2be952c1c8345bbedf84934b4055, type: 3}
+  - {fileID: -6944315561913407112, guid: fbec2be952c1c8345bbedf84934b4055, type: 3}
+  - {fileID: -6940685154976221347, guid: fbec2be952c1c8345bbedf84934b4055, type: 3}
 --- !u!114 &1741423459
 MonoBehaviour:
   m_ObjectHideFlags: 0

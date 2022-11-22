@@ -72,9 +72,10 @@ MonoBehaviour:
 
     Dmg: 24
 
-    Rof: 0.35
+    Rof: 0.35s
 
-    Rng: 0.7
+    Rng:
+    0.7
 
 '
   m_isRightToLeft: 0
