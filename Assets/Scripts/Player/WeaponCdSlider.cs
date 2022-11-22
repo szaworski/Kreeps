@@ -19,7 +19,7 @@ public class WeaponCdSlider : MonoBehaviour
     {
         weapon = GameObject.Find("PlayerWeapon");
         weaponScript = weapon.GetComponent<Weapon>();
-        xOffset = 10;
+        xOffset = 25;
         yOffest = 20;
     }
 
