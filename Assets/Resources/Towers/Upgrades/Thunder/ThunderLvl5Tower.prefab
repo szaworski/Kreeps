@@ -656,7 +656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   attackCd: 0
-  damage: 4
+  damage: 3
   bonusArmorDmg: 0
   projectileSpeed: 0
   attackSpeed: 0.5

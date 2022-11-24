@@ -32,6 +32,8 @@ public class Tower : MonoBehaviour
     public string damageType;
     public float slowAmt;
     public LineRenderer attackRadius;
+    public bool hasRectangleRadius;
+    public bool rectIsVertical;
 
     [Header("Tower Stats")]
     public TMP_Text dmgText;
@@ -83,7 +85,25 @@ public class Tower : MonoBehaviour
 
     public void CheckTowerRadius()
     {
-        Collider2D[] monstersInRadius = Physics2D.OverlapCircleAll(this.transform.position, attackRange, LayerMask.GetMask("Monster"));
+        Collider2D[] monstersInRadius;
+
+        if (hasRectangleRadius)
+        {
+            //Vertical rectangle
+            if (rectIsVertical)
+            {
+                monstersInRadius = Physics2D.OverlapAreaAll(new Vector2(transform.position.x - attackRange * 0.5f, transform.position.y + attackRange * 2), new Vector2(transform.position.x + attackRange * 0.5f, transform.position.y - attackRange * 2), LayerMask.GetMask("Monster"));
+            }
+            else
+            {
+                monstersInRadius = Physics2D.OverlapAreaAll(new Vector2(transform.position.x - attackRange * 2, transform.position.y + attackRange * 0.5f), new Vector2(transform.position.x + attackRange * 2, transform.position.y - attackRange * 0.5f), LayerMask.GetMask("Monster"));
+            }
+        }
+
+        else 
+        {
+            monstersInRadius = Physics2D.OverlapCircleAll(this.transform.position, attackRange, LayerMask.GetMask("Monster"));
+        }
 
         //Check if any monsters are found in the radius (Use this for towers that shoot projectiles)
         if (monstersInRadius.Length >= 1 && projectileSpeed >= 1)
@@ -162,16 +182,40 @@ public class Tower : MonoBehaviour
     void DrawAttackRadius()
     {
         attackRadius.widthMultiplier = 0.01f;
-        attackRadius.positionCount = 40;
 
-        float deltaTheta = (2f * Mathf.PI) / 40;
-        float theta = 0f;
-
-        for (int i = 0; i < attackRadius.positionCount; i++)
+        if (hasRectangleRadius)
         {
-            Vector3 pos = new Vector3(attackRange * Mathf.Cos(theta), attackRange * Mathf.Sin(theta), 0f);
-            attackRadius.SetPosition(i, transform.position + pos);
-            theta += deltaTheta;
+            attackRadius.positionCount = 4;
+
+            if (rectIsVertical)
+            {
+                attackRadius.SetPosition(0, new Vector3(transform.position.x - attackRange * 0.55f, transform.position.y + attackRange * 1.5f));
+                attackRadius.SetPosition(1, new Vector3(transform.position.x + attackRange * 0.55f, transform.position.y + attackRange * 1.5f));
+                attackRadius.SetPosition(2, new Vector3(transform.position.x + attackRange * 0.55f, transform.position.y - attackRange * 1.5f));
+                attackRadius.SetPosition(3, new Vector3(transform.position.x - attackRange * 0.55f, transform.position.y - attackRange * 1.5f));
+            }
+            else
+            {
+                attackRadius.SetPosition(0, new Vector3(transform.position.x - attackRange * 1.5f, transform.position.y + attackRange * 0.55f));
+                attackRadius.SetPosition(1, new Vector3(transform.position.x + attackRange * 1.5f, transform.position.y + attackRange * 0.55f));
+                attackRadius.SetPosition(2, new Vector3(transform.position.x + attackRange * 1.5f, transform.position.y - attackRange * 0.55f));
+                attackRadius.SetPosition(3, new Vector3(transform.position.x - attackRange * 1.5f, transform.position.y - attackRange * 0.55f));
+            }
+        }
+
+        else
+        {
+            attackRadius.positionCount = 40;
+
+            float deltaTheta = (2f * Mathf.PI) / 40;
+            float theta = 0f;
+
+            for (int i = 0; i < attackRadius.positionCount; i++)
+            {
+                Vector3 pos = new Vector3(attackRange * Mathf.Cos(theta), attackRange * Mathf.Sin(theta), 0f);
+                attackRadius.SetPosition(i, transform.position + pos);
+                theta += deltaTheta;
+            }
         }
     }
 

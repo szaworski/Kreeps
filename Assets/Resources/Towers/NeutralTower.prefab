@@ -109,6 +109,7 @@ MonoBehaviour:
   damageType: Neutral
   slowAmt: 0
   attackRadius: {fileID: 3165370115641405093}
+  hasRectangleRadius: 0
   dmgText: {fileID: 5786394100654136238}
   rofText: {fileID: 5074361660432804511}
   rngText: {fileID: 915761522927388092}
