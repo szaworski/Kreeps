@@ -34,6 +34,7 @@ public class Tower : MonoBehaviour
     public LineRenderer attackRadius;
     public bool hasRectangleRadius;
     public bool rectIsVertical;
+    public bool triggerRadiusFlip;
 
     [Header("Tower Stats")]
     public TMP_Text dmgText;
@@ -78,6 +79,12 @@ public class Tower : MonoBehaviour
 
     void Update()
     {
+        if (triggerRadiusFlip)
+        {
+            DrawAttackRadius();
+            triggerRadiusFlip = false;
+        }
+
         GetBonus();
         AddBonus();
         CheckTowerRadius();
@@ -92,11 +99,11 @@ public class Tower : MonoBehaviour
             //Vertical rectangle
             if (rectIsVertical)
             {
-                monstersInRadius = Physics2D.OverlapAreaAll(new Vector2(transform.position.x - attackRange * 0.5f, transform.position.y + attackRange * 2), new Vector2(transform.position.x + attackRange * 0.5f, transform.position.y - attackRange * 2), LayerMask.GetMask("Monster"));
+                monstersInRadius = Physics2D.OverlapAreaAll(new Vector2(transform.position.x - attackRange * 0.55f, transform.position.y + attackRange * 1.4f), new Vector2(transform.position.x + attackRange * 0.55f, transform.position.y - attackRange * 1.4f), LayerMask.GetMask("Monster"));
             }
             else
             {
-                monstersInRadius = Physics2D.OverlapAreaAll(new Vector2(transform.position.x - attackRange * 2, transform.position.y + attackRange * 0.5f), new Vector2(transform.position.x + attackRange * 2, transform.position.y - attackRange * 0.5f), LayerMask.GetMask("Monster"));
+                monstersInRadius = Physics2D.OverlapAreaAll(new Vector2(transform.position.x - attackRange * 1.4f, transform.position.y + attackRange * 0.55f), new Vector2(transform.position.x + attackRange * 1.4f, transform.position.y - attackRange * 0.55f), LayerMask.GetMask("Monster"));
             }
         }
 
@@ -189,17 +196,17 @@ public class Tower : MonoBehaviour
 
             if (rectIsVertical)
             {
-                attackRadius.SetPosition(0, new Vector3(transform.position.x - attackRange * 0.55f, transform.position.y + attackRange * 1.5f));
-                attackRadius.SetPosition(1, new Vector3(transform.position.x + attackRange * 0.55f, transform.position.y + attackRange * 1.5f));
-                attackRadius.SetPosition(2, new Vector3(transform.position.x + attackRange * 0.55f, transform.position.y - attackRange * 1.5f));
-                attackRadius.SetPosition(3, new Vector3(transform.position.x - attackRange * 0.55f, transform.position.y - attackRange * 1.5f));
+                attackRadius.SetPosition(0, new Vector3(transform.position.x - attackRange * 0.55f, transform.position.y + attackRange * 1.4f));
+                attackRadius.SetPosition(1, new Vector3(transform.position.x + attackRange * 0.55f, transform.position.y + attackRange * 1.4f));
+                attackRadius.SetPosition(2, new Vector3(transform.position.x + attackRange * 0.55f, transform.position.y - attackRange * 1.4f));
+                attackRadius.SetPosition(3, new Vector3(transform.position.x - attackRange * 0.55f, transform.position.y - attackRange * 1.4f));
             }
             else
             {
-                attackRadius.SetPosition(0, new Vector3(transform.position.x - attackRange * 1.5f, transform.position.y + attackRange * 0.55f));
-                attackRadius.SetPosition(1, new Vector3(transform.position.x + attackRange * 1.5f, transform.position.y + attackRange * 0.55f));
-                attackRadius.SetPosition(2, new Vector3(transform.position.x + attackRange * 1.5f, transform.position.y - attackRange * 0.55f));
-                attackRadius.SetPosition(3, new Vector3(transform.position.x - attackRange * 1.5f, transform.position.y - attackRange * 0.55f));
+                attackRadius.SetPosition(0, new Vector3(transform.position.x - attackRange * 1.4f, transform.position.y + attackRange * 0.55f));
+                attackRadius.SetPosition(1, new Vector3(transform.position.x + attackRange * 1.4f, transform.position.y + attackRange * 0.55f));
+                attackRadius.SetPosition(2, new Vector3(transform.position.x + attackRange * 1.4f, transform.position.y - attackRange * 0.55f));
+                attackRadius.SetPosition(3, new Vector3(transform.position.x - attackRange * 1.4f, transform.position.y - attackRange * 0.55f));
             }
         }
 

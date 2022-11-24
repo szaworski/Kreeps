@@ -223,5 +223,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c446d03a0ab3ab8458aa1d417320fff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Right click to open the upgrade menu
+  text: Right click to upgrade, middle mouse to flip radius
   isTowerGrid: 1

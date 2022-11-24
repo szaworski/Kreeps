@@ -112,6 +112,15 @@ public class TowerGrid : MonoBehaviour
                     }
                 }
 
+                if (Input.GetMouseButtonDown(2) && GameObject.Find("TileManager").transform.childCount == 0)
+                {
+                    if (towerScript.hasRectangleRadius)
+                    {
+                        towerScript.rectIsVertical = !towerScript.rectIsVertical;
+                        towerScript.triggerRadiusFlip = true;
+                    }
+                }
+
                 //Sell the tower
                 if (Input.GetKeyDown(KeyCode.Delete) && !GlobalVars.isPaused)
                 {
