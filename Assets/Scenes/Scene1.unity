@@ -9368,7 +9368,7 @@ MonoBehaviour:
 
     Damage: 12
 
-    Rate of fire: 1.5s
+    Rate of fire: 1.4s
 
     Range:
     0.7
@@ -12616,7 +12616,7 @@ MonoBehaviour:
 
     Damage: 16
 
-    Rate of fire: 2s
+    Rate of fire: 1.75s
 
     Range:
     0.7

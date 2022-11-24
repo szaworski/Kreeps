@@ -6,6 +6,10 @@ public class Tower : MonoBehaviour
 {
     [HideInInspector] public GameObject currentTarget;
     private bool monsterIsInRadius;
+    public bool GetMonsterIsInRadius
+    {
+        get { return monsterIsInRadius; }
+    }
     public float attackCd;
 
     [Header("Tower attributes")]
