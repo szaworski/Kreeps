@@ -1909,7 +1909,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 75g
+  m_text: 80g
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -3915,7 +3915,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 75g
+  m_text: 80g
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -4049,7 +4049,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 60g
+  m_text: 50g
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -5759,7 +5759,7 @@ MonoBehaviour:
 
     Rate of fire: 1s
 
-    Range: 0.7
+    Range: 0.6
 
     Radius
     type: Rectangle
@@ -13425,7 +13425,7 @@ MonoBehaviour:
 
     Rate of fire: 1.75s
 
-    Range: 0.7
+    Range: 0.6
 
     Radius
     type: Rectangle
@@ -15339,7 +15339,7 @@ MonoBehaviour:
 
     Rate of fire: 0.55s
 
-    Range: 0.7
+    Range: 0.6
 
     Radius
     type: Rectangle

@@ -132,7 +132,7 @@ public class TowerGrid : MonoBehaviour
                     switch (towerScript.damageType)
                     {
                         case var _ when towerScript.damageType.Contains("Neutral"):
-                            GlobalVars.newGoldValue = GlobalVars.gold + 45;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 40;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Fire"):

@@ -203,7 +203,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-    Cost: 75g
+    Cost: 60g
 
     Dmg: 12
 
@@ -428,7 +428,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: NeutralLvl2
-  upgradeCost: 75
+  upgradeCost: 60
   upgradeType: Neutral
   bonusAmt: 0
   bonusFloatAmt: 0
