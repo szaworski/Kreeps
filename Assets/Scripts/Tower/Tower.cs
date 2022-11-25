@@ -197,6 +197,7 @@ public class Tower : MonoBehaviour
 
             if (rectIsVertical)
             {
+                attackRadius.numCornerVertices = 5;
                 attackRadius.SetPosition(0, new Vector3(transform.position.x - 0.5f, transform.position.y + attackRange * 1.5f));
                 attackRadius.SetPosition(1, new Vector3(transform.position.x + 0.5f, transform.position.y + attackRange * 1.5f));
                 attackRadius.SetPosition(2, new Vector3(transform.position.x + 0.5f, transform.position.y - attackRange * 1.5f));
@@ -204,6 +205,7 @@ public class Tower : MonoBehaviour
             }
             else
             {
+                attackRadius.numCornerVertices = 5;
                 attackRadius.SetPosition(0, new Vector3(transform.position.x - attackRange * 1.5f, transform.position.y + 0.5f));
                 attackRadius.SetPosition(1, new Vector3(transform.position.x + attackRange * 1.5f, transform.position.y + 0.5f));
                 attackRadius.SetPosition(2, new Vector3(transform.position.x + attackRange * 1.5f, transform.position.y - 0.5f));
