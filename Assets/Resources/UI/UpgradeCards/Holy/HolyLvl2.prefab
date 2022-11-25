@@ -203,7 +203,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-    Cost: 80g
+    Cost: 70g
 
     Dmg: 20
 
@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: HolyLvl2
-  upgradeCost: 80
+  upgradeCost: 70
   upgradeType: Holy
   bonusAmt: 0
   bonusFloatAmt: 0

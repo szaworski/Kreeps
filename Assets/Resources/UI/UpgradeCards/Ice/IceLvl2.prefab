@@ -203,7 +203,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target -7ms
 
-    Cost: 60g
+    Cost: 50g
 
     Dmg: 10
 
@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: IceLvl2
-  upgradeCost: 60
+  upgradeCost: 50
   upgradeType: Ice
   bonusAmt: 0
   bonusFloatAmt: 0

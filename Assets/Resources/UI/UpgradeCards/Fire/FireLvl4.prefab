@@ -67,7 +67,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'AOE in radius
 
-    Cost: 80g
+    Cost: 75g
 
     Dmg: 4
 
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: FireLvl4
-  upgradeCost: 80
+  upgradeCost: 75
   upgradeType: Fire
   bonusAmt: 0
   bonusFloatAmt: 0
