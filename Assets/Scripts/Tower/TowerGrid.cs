@@ -298,6 +298,9 @@ public class TowerGrid : MonoBehaviour
         //Destory all card game objects after a selection is made. See Card.cs
         if (GlobalVars.triggerTowerUpgrade)
         {
+            TowerGrid gridScript = GlobalVars.gridObj.GetComponent<TowerGrid>();
+            GlobalVars.selectedRectIsVertical = gridScript.towerScript.rectIsVertical;
+
             SetSelectedUpgrade();
             DestroyTowerUpgradeCards();
             DestroyTower(GlobalVars.oldTowerObj);
@@ -374,6 +377,7 @@ public class TowerGrid : MonoBehaviour
         tower.transform.position = GlobalVars.upgradePosition;
         gridScript.placedTower = tower;
         gridScript.hasTower = true;
+        GlobalVars.selectedRectIsVertical = true;
 
         //Get the attack radius GameObject attached to the tower
         gridScript.towerAttackRadius = gridScript.placedTower.transform.GetChild(0).gameObject;

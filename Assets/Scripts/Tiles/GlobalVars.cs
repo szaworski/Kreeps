@@ -39,6 +39,7 @@ public class GlobalVars : MonoBehaviour
     public static bool upgradeCardsArePresent;
     public static bool triggerUpgradeCardDestruction;
     public static bool triggerTowerUpgrade;
+    public static bool selectedRectIsVertical;
     public static bool triggerTowerSell;
     public static bool allMonstersAreSpawned;
     public static bool IsHoveringOverUiCard;
@@ -151,5 +152,6 @@ public class GlobalVars : MonoBehaviour
         allMonstersAreSpawned = false;
         currentSong = "Song1";
         musicVolume = GameObject.Find(currentSong).GetComponent<AudioSource>().volume;
+        selectedRectIsVertical = true;
     }
 }

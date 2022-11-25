@@ -49,6 +49,7 @@ public class Tower : MonoBehaviour
 
     void Awake()
     {
+        rectIsVertical = GlobalVars.selectedRectIsVertical;
         GetBonus();
 
         startingDamage = damage;
