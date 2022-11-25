@@ -273,7 +273,7 @@ MonoBehaviour:
   bonusArmorDmg: 0
   projectileSpeed: 1
   attackSpeed: 1
-  attackRange: 0.7
+  attackRange: 0.6
   critChance: 0
   damageType: Fire
   slowAmt: 0

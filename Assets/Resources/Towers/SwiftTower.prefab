@@ -275,7 +275,7 @@ MonoBehaviour:
   bonusArmorDmg: 0
   projectileSpeed: 4
   attackSpeed: 0.55
-  attackRange: 0.7
+  attackRange: 0.6
   critChance: 0
   damageType: Swift
   slowAmt: 0

@@ -360,7 +360,7 @@ MonoBehaviour:
 
     Rof: 0.45s
 
-    Rng: 0.7
+    Rng: 0.6
 
     Radius:
     Rectangle
