@@ -492,14 +492,27 @@ public class Monster : MonoBehaviour
                     health -= incomingDamage;
                     healthText.SetText(health.ToString());
                 }
-
                 else
                 {
+                    float tempHpDmg = 0;
+
+                    if (armor - incomingDamage < 0)
+                    {
+                        tempHpDmg = System.Math.Abs(armor - incomingDamage);
+                    }
+
                     armor -= incomingDamage;
+
                     if (armor <= 0)
                     {
                         armorText.SetText("");
                         ArmorObject.SetActive(false);
+
+                        if (armor < 0)
+                        {
+                            health -= tempHpDmg;
+                            healthText.SetText(health.ToString());
+                        }
                     }
                     else
                     {
