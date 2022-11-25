@@ -352,7 +352,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Gain +20 gold
+  m_text: 'Gain +10 gold
 
 
     Gain an additional +5 gold for each time Gold coins
