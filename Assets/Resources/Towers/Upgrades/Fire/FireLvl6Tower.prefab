@@ -1177,6 +1177,9 @@ MonoBehaviour:
   damageType: Fire
   slowAmt: 0
   attackRadius: {fileID: 9061148783392565081}
+  hasRectangleRadius: 1
+  rectIsVertical: 1
+  triggerRadiusFlip: 0
   dmgText: {fileID: 6456396076836151459}
   rofText: {fileID: 7736834824280675991}
   rngText: {fileID: 3246527505184720360}

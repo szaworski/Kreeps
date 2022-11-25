@@ -67,7 +67,6 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'AOE in radius
 
-
     Cost: 200g
 
     Dmg: 3
@@ -75,6 +74,9 @@ MonoBehaviour:
     Rof: 0.5s
 
     Rng: 0.5
+
+    Radius:
+    Circle
 
 '
   m_isRightToLeft: 0
@@ -139,7 +141,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 38.65454, y: 36.205265, z: 34.826523, w: -124.11741}
+  m_margin: {x: 38.65454, y: 36.205265, z: 34.826523, w: -109.823494}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

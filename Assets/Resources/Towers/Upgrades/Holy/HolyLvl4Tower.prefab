@@ -109,6 +109,9 @@ MonoBehaviour:
   damageType: Holy
   slowAmt: 0
   attackRadius: {fileID: 1578552572651102220}
+  hasRectangleRadius: 1
+  rectIsVertical: 1
+  triggerRadiusFlip: 0
   dmgText: {fileID: 8861058954239533484}
   rofText: {fileID: 2759643705959703615}
   rngText: {fileID: 5694027869207964367}

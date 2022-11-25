@@ -67,15 +67,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-
     Cost: 325g
 
     Dmg: 24
 
     Rof: 0.35s
 
-    Rng:
-    0.7
+    Rng: 0.7
+
+    Radius:
+    Rectangle
 
 '
   m_isRightToLeft: 0

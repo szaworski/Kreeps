@@ -665,6 +665,9 @@ MonoBehaviour:
   damageType: Thunder2
   slowAmt: 0
   attackRadius: {fileID: 7682126142615179629}
+  hasRectangleRadius: 0
+  rectIsVertical: 0
+  triggerRadiusFlip: 0
   dmgText: {fileID: 6857706585125853127}
   rofText: {fileID: 8776237865939741790}
   rngText: {fileID: 3439233024907853215}

@@ -1000,11 +1000,14 @@ MonoBehaviour:
   bonusArmorDmg: 0
   projectileSpeed: 4
   attackSpeed: 1
-  attackRange: 1
+  attackRange: 0.8
   critChance: 0
   damageType: Neutral
   slowAmt: 0
   attackRadius: {fileID: 9061148783392565081}
+  hasRectangleRadius: 1
+  rectIsVertical: 1
+  triggerRadiusFlip: 0
   dmgText: {fileID: 5539473653354877803}
   rofText: {fileID: 4226955803391967570}
   rngText: {fileID: 4233257494209963447}

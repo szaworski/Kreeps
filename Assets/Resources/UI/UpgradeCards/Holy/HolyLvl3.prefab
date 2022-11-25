@@ -203,7 +203,6 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-
     Cost: 125g
 
     Dmg: 30
@@ -212,7 +211,8 @@ MonoBehaviour:
 
     Rng: 0.7
 
-'
+    Radius:
+    Circle'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

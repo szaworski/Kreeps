@@ -201,18 +201,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Single target
-
-    -7 move speed
+  m_text: 'Single target -7ms
 
     Cost: 100g
 
     Dmg: 12
 
-    Rof:
-    1s
+    Rof: 1s
 
-    Rng: 0.7
+    Rng:
+    0.7
+
+    Radius: Circle
 
 '
   m_isRightToLeft: 0

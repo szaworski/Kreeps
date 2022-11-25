@@ -354,15 +354,17 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-
     Cost: 125g
 
     Dmg: 26
 
-    Rof: 1.75s
+    Rof: 1.8s
 
-    Rng:
-    0.7
+    Rng: 0.7
+
+    Radius:
+    Rectangle
+
 
 '
   m_isRightToLeft: 0
@@ -427,7 +429,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 38.65454, y: 36.205265, z: 34.826523, w: -124.11741}
+  m_margin: {x: 38.65454, y: 36.205265, z: 34.826523, w: -106.91761}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

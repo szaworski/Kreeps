@@ -278,6 +278,9 @@ MonoBehaviour:
   damageType: Cosmic
   slowAmt: 0
   attackRadius: {fileID: 4442308903161421057}
+  hasRectangleRadius: 1
+  rectIsVertical: 1
+  triggerRadiusFlip: 0
   dmgText: {fileID: 8145781331815243154}
   rofText: {fileID: 3405197064570487100}
   rngText: {fileID: 5421992395340859611}

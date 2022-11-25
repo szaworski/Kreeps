@@ -201,20 +201,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'AOE in radius
-
-    -12 move speed
+  m_text: 'AOE in radius -12ms
 
     Cost: 400g
 
     Dmg: 26
 
-    Rof:
-    1s
+    Rof: 1s
 
-    Rng: 0.6
+    Rng:
+    0.6
 
-'
+    Radius: Circle'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

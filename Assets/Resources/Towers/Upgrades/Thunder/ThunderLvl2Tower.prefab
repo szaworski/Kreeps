@@ -743,12 +743,15 @@ MonoBehaviour:
   damage: 26
   bonusArmorDmg: 0
   projectileSpeed: 1
-  attackSpeed: 1.75
+  attackSpeed: 1.8
   attackRange: 0.7
   critChance: 0
   damageType: Thunder
   slowAmt: 0
   attackRadius: {fileID: 7682126142615179629}
+  hasRectangleRadius: 1
+  rectIsVertical: 1
+  triggerRadiusFlip: 0
   dmgText: {fileID: 1415286863920957770}
   rofText: {fileID: 5090514495414231281}
   rngText: {fileID: 6010539149962711555}

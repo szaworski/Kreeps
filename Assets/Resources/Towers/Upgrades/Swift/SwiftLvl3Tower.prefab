@@ -196,6 +196,9 @@ MonoBehaviour:
   damageType: Swift
   slowAmt: 0
   attackRadius: {fileID: 4442308903161421057}
+  hasRectangleRadius: 1
+  rectIsVertical: 1
+  triggerRadiusFlip: 0
   dmgText: {fileID: 7803838903169783219}
   rofText: {fileID: 7355200793016927411}
   rngText: {fileID: 1615835009219390707}
