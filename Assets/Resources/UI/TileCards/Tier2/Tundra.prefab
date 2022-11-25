@@ -218,7 +218,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +4 hp regen
+    +3 hp regen
 
     for each Tundra placed'
   m_isRightToLeft: 0

@@ -128,15 +128,15 @@ public class PlayerHud : MonoBehaviour
         bonusEvasion = 0;
 
         //Apply any Tier 1 bonuses
-        bonusMoveSpeed += 0.02f * GlobalVars.tileCounters["Forest"];
+        bonusMoveSpeed += 0.01f * GlobalVars.tileCounters["Forest"];
 
-        bonusHpRegen += 2 * GlobalVars.tileCounters["Graveyard"];
+        bonusHpRegen += 1 * GlobalVars.tileCounters["Graveyard"];
 
         bonusArmor += 5 * GlobalVars.tileCounters["Mountain"];
 
         bonusMaxHealth += 5 * GlobalVars.tileCounters["River"];
 
-        bonusEvasion += 0.02f * GlobalVars.tileCounters["Swamp"];
+        bonusEvasion += 0.01f * GlobalVars.tileCounters["Swamp"];
 
         //Apply any Tier 2 bonuses
         bonusArmor += 15 * GlobalVars.tileCounters["Cavern"];
@@ -148,13 +148,13 @@ public class PlayerHud : MonoBehaviour
 
         bonusMoveSpeed += 0.03f * GlobalVars.tileCounters["Settlement"];
 
-        bonusEvasion += 0.03f * GlobalVars.tileCounters["Thicket"];
+        bonusEvasion += 0.02f * GlobalVars.tileCounters["Thicket"];
 
-        bonusHpRegen += 4 * GlobalVars.tileCounters["Tundra"];
+        bonusHpRegen += 3 * GlobalVars.tileCounters["Tundra"];
 
         //Apply any Tier 3 bonuses
         bonusHpRegen += 4 * GlobalVars.tileCounters["CanyonCrossing"];
-        bonusMaxHealth += 15 * GlobalVars.tileCounters["CanyonCrossing"];
+        bonusMaxHealth += 10 * GlobalVars.tileCounters["CanyonCrossing"];
 
         bonusMoveSpeed += 0.04f * GlobalVars.tileCounters["CrimsonPlain"];
 
@@ -166,14 +166,14 @@ public class PlayerHud : MonoBehaviour
         bonusMaxHealth += 30 * GlobalVars.tileCounters["Marsh"];
 
         bonusEvasion += 0.03f * GlobalVars.tileCounters["Sewer"];
-        bonusArmor += 15 * GlobalVars.tileCounters["Sewer"];
+        bonusArmor += 10 * GlobalVars.tileCounters["Sewer"];
 
         //Apply any Tier 4 bonuses
         bonusArmor += 50 * GlobalVars.tileCounters["CrystalCave"];
 
         bonusMaxHealth += 50 * GlobalVars.tileCounters["FrozenPassage"];
 
-        bonusMoveSpeed += 0.06f * GlobalVars.tileCounters["InfernalWoods"];
+        bonusMoveSpeed += 0.05f * GlobalVars.tileCounters["InfernalWoods"];
 
         bonusEvasion += 0.02f * GlobalVars.tileCounters["TaintedCanal"];
         bonusHpRegen += 7 * GlobalVars.tileCounters["SacredGrounds"];
