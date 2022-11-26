@@ -75,7 +75,7 @@ public class Card : MonoBehaviour
             switch (upgradeType)
             {
                 case "BonusDmg":
-                    if (GlobalVars.bonusStats[cardName + "Lvl"] < 3)
+                    if (GlobalVars.bonusStats[cardName + "Lvl"] < 4)
                     {
                         GlobalVars.bonusStats[cardName] += bonusAmt;
                         GlobalVars.bonusStats[cardName + "Lvl"]++;

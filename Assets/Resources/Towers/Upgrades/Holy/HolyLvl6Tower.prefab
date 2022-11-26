@@ -273,11 +273,14 @@ MonoBehaviour:
   bonusArmorDmg: 0
   projectileSpeed: 1
   attackSpeed: 1.8
-  attackRange: 0.9
+  attackRange: 1
   critChance: 0
   damageType: Holy
   slowAmt: 0
   attackRadius: {fileID: 1578552572651102220}
+  hasRectangleRadius: 0
+  rectIsVertical: 0
+  triggerRadiusFlip: 0
   dmgText: {fileID: 1195535119511184491}
   rofText: {fileID: 7353115142756573388}
   rngText: {fileID: 1243685779184769971}
