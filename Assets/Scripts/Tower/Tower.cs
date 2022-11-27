@@ -35,6 +35,7 @@ public class Tower : MonoBehaviour
     public bool hasRectangleRadius;
     public bool rectIsVertical;
     public bool triggerRadiusFlip;
+    public bool isAoeWithProjectiles;
 
     [Header("Tower Stats")]
     public TMP_Text dmgText;
@@ -108,7 +109,7 @@ public class Tower : MonoBehaviour
             }
         }
 
-        else 
+        else
         {
             monstersInRadius = Physics2D.OverlapCircleAll(this.transform.position, attackRange, LayerMask.GetMask("Monster"));
         }
@@ -126,15 +127,22 @@ public class Tower : MonoBehaviour
             //Loop through for each object found in the radius
             for (int i = 0; i < monstersInRadius.Length; i++)
             {
-                //Check the distance that each monster in the radius has traveled
-                float travelDistance = monstersInRadius[i].gameObject.GetComponent<Monster>().distanceTraveled;
-
-                //Check the distance that each monster has traveled so that we can target the object with the most distance
-                if (travelDistance > farthestTraveledSoFar)
+                if (!isAoeWithProjectiles)
                 {
-                    //Set the new target if one object gains more distance than the current target
-                    currentTarget = monstersInRadius[i].gameObject;
-                    farthestTraveledSoFar = travelDistance;
+                    //Check the distance that each monster in the radius has traveled
+                    float travelDistance = monstersInRadius[i].gameObject.GetComponent<Monster>().distanceTraveled;
+
+                    //Check the distance that each monster has traveled so that we can target the object with the most distance
+                    if (travelDistance > farthestTraveledSoFar)
+                    {
+                        //Set the new target if one object gains more distance than the current target
+                        currentTarget = monstersInRadius[i].gameObject;
+                        farthestTraveledSoFar = travelDistance;
+                    }
+                }
+                else
+                {
+                    CreateAoeProjectiles(monstersInRadius[i].gameObject, monstersInRadius.Length, i);
                 }
             }
             //Spawn the projectile to send at the target
@@ -174,6 +182,33 @@ public class Tower : MonoBehaviour
             GameObject projectile = (GameObject)Instantiate(Resources.Load(prependProjectileName + damageType), this.transform);
             projectile.transform.position = this.transform.position;
             attackCd = attackSpeed + Time.time;
+        }
+    }
+
+    public void CreateAoeProjectiles(GameObject target, int numOfMonsters, int currentNum)
+    {
+        if (Time.time > attackCd && target != null && monsterIsInRadius)
+        {
+            string prependProjectileName = "";
+
+            if (projectileSpeed > 1)
+            {
+                prependProjectileName = "Towers/Projectiles/";
+            }
+
+            else
+            {
+                prependProjectileName = "Towers/Projectiles/WithAnim/";
+            }
+
+            currentTarget = target;
+            GameObject projectile = (GameObject)Instantiate(Resources.Load(prependProjectileName + damageType), this.transform);
+            projectile.transform.position = this.transform.position;
+
+            if (numOfMonsters - 1 == currentNum)
+            {
+                attackCd = attackSpeed + Time.time;
+            }
         }
     }
 

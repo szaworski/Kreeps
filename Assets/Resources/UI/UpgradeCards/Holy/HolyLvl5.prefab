@@ -356,11 +356,11 @@ MonoBehaviour:
 
     Cost: 150g
 
-    Dmg: 8
+    Dmg: 6
 
-    Rof: 0.3s
+    Rof: 0.4s
 
-    Rng: 0.8
+    Rng: 0.7
 
     Radius:
     Rectangle'

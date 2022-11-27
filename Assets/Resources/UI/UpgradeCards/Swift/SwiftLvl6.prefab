@@ -65,15 +65,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Single target
+  m_text: 'AOE in radius
 
     Cost: 250g
 
-    Dmg: 24
+    Dmg: 4
 
-    Rof: 0.35s
+    Rof: 2
 
-    Rng: 0.7
+    Rng: 0.6
 
     Radius:
     Rectangle
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Agile 3
+  m_text: 'Scattershot
 
 '
   m_isRightToLeft: 0
