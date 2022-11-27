@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: NeutralLvl7
-  upgradeCost: 120
+  upgradeCost: 100
   upgradeType: Neutral
   bonusAmt: 0
   bonusFloatAmt: 0
@@ -354,13 +354,13 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'AOE in radius
 
-    Cost: 120g
+    Cost: 100g
 
-    Dmg: 10
+    Dmg: 8
 
-    Rof: 1.5s
+    Rof: 2s
 
-    Rng: 0.7
+    Rng: 0.6
 
     Radius:
     Circle'

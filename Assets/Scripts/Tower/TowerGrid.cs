@@ -112,12 +112,16 @@ public class TowerGrid : MonoBehaviour
                     }
                 }
 
-                if (Input.GetMouseButtonDown(2) && GameObject.Find("TileManager").transform.childCount == 0)
+                if (Input.GetMouseButtonDown(2))
                 {
-                    if (towerScript.hasRectangleRadius)
+                    if (towerScript.hasRectangleRadius && GameObject.Find("TileManager").transform.childCount == 0)
                     {
                         towerScript.rectIsVertical = !towerScript.rectIsVertical;
                         towerScript.triggerRadiusFlip = true;
+                    }
+                    else
+                    {
+                        GameObject.Find("UiSounds").GetComponent<AudioManager>().PlaySound("Error");
                     }
                 }
 
@@ -132,7 +136,7 @@ public class TowerGrid : MonoBehaviour
                     switch (towerScript.damageType)
                     {
                         case var _ when towerScript.damageType.Contains("Neutral"):
-                            GlobalVars.newGoldValue = GlobalVars.gold + 40;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 35;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Fire"):

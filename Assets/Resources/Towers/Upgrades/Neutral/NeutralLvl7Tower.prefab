@@ -611,11 +611,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   attackCd: 0
-  damage: 10
+  damage: 8
   bonusArmorDmg: 0
   projectileSpeed: 4
   attackSpeed: 1.5
-  attackRange: 0.7
+  attackRange: 0.6
   critChance: 0
   damageType: Neutral
   slowAmt: 0
