@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Swift type weapons and towers gain +4 poison damage
+  m_text: 'Swift type weapons and towers gain +3 poison damage
 
 
 
@@ -289,7 +289,7 @@ MonoBehaviour:
   upgradeCost: 150
   upgradeType: Special
   bonusAmt: 0
-  bonusFloatAmt: 4
+  bonusFloatAmt: 3
 --- !u!1 &8692462336114237473
 GameObject:
   m_ObjectHideFlags: 0

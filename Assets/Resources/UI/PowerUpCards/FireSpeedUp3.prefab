@@ -150,7 +150,7 @@ MonoBehaviour:
   upgradeCost: 200
   upgradeType: Special
   bonusAmt: 0
-  bonusFloatAmt: 0.2
+  bonusFloatAmt: 0.1
 --- !u!1 &4979736243767342691
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fire type weapons and towers gain -0.2s attack speed
+  m_text: 'Fire type weapons and towers gain -0.1s attack speed
 
 
 
