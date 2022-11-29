@@ -199,6 +199,7 @@ MonoBehaviour:
   hasRectangleRadius: 1
   rectIsVertical: 1
   triggerRadiusFlip: 0
+  isAoeWithProjectiles: 0
   dmgText: {fileID: 8423571220667160237}
   rofText: {fileID: 2666888629492016744}
   rngText: {fileID: 772104733393511720}
@@ -369,7 +370,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.096877515, y: 1.007931, z: 0.41434073, w: -0.3569852}
+  m_margin: {x: -0.17007005, y: 1.007931, z: 0.41434073, w: -0.3569852}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -475,7 +476,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nDamage:  \nRate of fire: \nRange: \n\n\n\n"
+  m_text: "Single target\n\nDamage:  \nSpeed: \nRange: \n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

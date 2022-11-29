@@ -31,7 +31,7 @@ Transform:
   - {fileID: 8383750929842119601}
   - {fileID: 106002336063223563}
   - {fileID: 1884976165595267989}
-  - {fileID: 4986852203569025053}
+  - {fileID: 3803178491415431434}
   - {fileID: 6628845014184693407}
   m_Father: {fileID: 1927634959647619065}
   m_RootOrder: 1
@@ -368,14 +368,15 @@ MonoBehaviour:
   hasRectangleRadius: 0
   rectIsVertical: 0
   triggerRadiusFlip: 0
+  isAoeWithProjectiles: 0
   dmgText: {fileID: 7265525572884810983}
-  rofText: {fileID: 2453133727112703876}
+  rofText: {fileID: 5886004584928803738}
   rngText: {fileID: 8124030199568162578}
   hasUpgrades: 1
   upgrade1: CosmicLvl3
   upgrade2: 
   upgrade3: 
---- !u!1 &5369499215801023127
+--- !u!1 &3267554118774837846
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -383,9 +384,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4986852203569025053}
-  - component: {fileID: 3868376935352574515}
-  - component: {fileID: 2453133727112703876}
+  - component: {fileID: 3803178491415431434}
+  - component: {fileID: 9147027493582363232}
+  - component: {fileID: 5886004584928803738}
   m_Layer: 0
   m_Name: Rof
   m_TagString: Untagged
@@ -393,13 +394,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &4986852203569025053
+--- !u!224 &3803178491415431434
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5369499215801023127}
+  m_GameObject: {fileID: 3267554118774837846}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -409,16 +410,16 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.024999946}
+  m_AnchoredPosition: {x: 0, y: 0.024999917}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0, y: 0}
---- !u!23 &3868376935352574515
+--- !u!23 &9147027493582363232
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5369499215801023127}
+  m_GameObject: {fileID: 3267554118774837846}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -453,13 +454,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 4
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2453133727112703876
+--- !u!114 &5886004584928803738
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5369499215801023127}
+  m_GameObject: {fileID: 3267554118774837846}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
@@ -538,11 +539,11 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.096877515, y: 1.007931, z: 0.41434073, w: -0.3569852}
+  m_margin: {x: -0.17007005, y: 1.007931, z: 0.41434073, w: -0.3569852}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 3868376935352574515}
+  m_renderer: {fileID: 9147027493582363232}
   m_maskType: 0
   _SortingLayerID: 0
   _SortingOrder: 4
@@ -644,7 +645,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target\n\nDamage:  \nRate of fire: \nRange: \n\n\n\n\n"
+  m_text: "Single target\n\nDamage:  \nSpeed: \nRange: \n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
