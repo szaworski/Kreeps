@@ -150,7 +150,7 @@ MonoBehaviour:
   upgradeCost: 200
   upgradeType: Special
   bonusAmt: 0
-  bonusFloatAmt: 0.1
+  bonusFloatAmt: 0.05
 --- !u!1 &4698487345527608529
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ice type weapons and towers gain an additional -10 move speed slow
+  m_text: 'Ice type weapons and towers gain an additional -5 move speed slow
 
 
 
