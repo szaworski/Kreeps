@@ -488,7 +488,7 @@ MonoBehaviour:
   armor: 0
   goldBounty: 10
   type: None
-  moveSpeed: 0.35
+  moveSpeed: 0.38
   hpRegen: 0
   evasionChance: 0
   healthText: {fileID: 2240702306701519988}

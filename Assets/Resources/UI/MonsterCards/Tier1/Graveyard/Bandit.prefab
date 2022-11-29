@@ -352,7 +352,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Base stats:\nHealth: 35 \nArmor: 0\nSpeed: 32\nHp regen: 0\n\n"
+  m_text: "Base stats:\nHealth: 35 \nArmor: 0\nSpeed: 36\nHp regen: 0\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

@@ -488,7 +488,7 @@ MonoBehaviour:
   armor: 15
   goldBounty: 10
   type: Brute
-  moveSpeed: 0.25
+  moveSpeed: 0.29
   hpRegen: 0
   evasionChance: 0
   healthText: {fileID: 2240702306701519988}

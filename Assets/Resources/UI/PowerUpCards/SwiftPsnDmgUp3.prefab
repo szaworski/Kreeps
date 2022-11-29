@@ -355,7 +355,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '+ Poison 3
+  m_text: '+ Poison 3/3
 
 '
   m_isRightToLeft: 0
@@ -420,7 +420,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -35.04248, y: -220.23688, z: -35.23883, w: 203.89832}
+  m_margin: {x: -35.04248, y: -220.23688, z: -35.23883, w: 205.2716}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

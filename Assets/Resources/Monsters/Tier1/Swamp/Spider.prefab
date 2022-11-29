@@ -488,7 +488,7 @@ MonoBehaviour:
   armor: 0
   goldBounty: 10
   type: Pest
-  moveSpeed: 0.46
+  moveSpeed: 0.5
   hpRegen: 0
   evasionChance: 0
   healthText: {fileID: 2240702306701519988}
