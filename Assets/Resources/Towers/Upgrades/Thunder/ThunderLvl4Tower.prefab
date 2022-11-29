@@ -400,10 +400,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   attackCd: 0
-  damage: 20
+  damage: 22
   bonusArmorDmg: 0
   projectileSpeed: 1
-  attackSpeed: 1.25
+  attackSpeed: 1.5
   attackRange: 0.7
   critChance: 0
   damageType: Thunder

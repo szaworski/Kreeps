@@ -103,7 +103,7 @@ MonoBehaviour:
   damage: 60
   bonusArmorDmg: 0
   projectileSpeed: 1
-  attackSpeed: 0.6
+  attackSpeed: 0.7
   attackRange: 1
   critChance: 0
   damageType: Cosmic

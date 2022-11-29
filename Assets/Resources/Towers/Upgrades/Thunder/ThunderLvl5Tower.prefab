@@ -827,10 +827,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   attackCd: 0
-  damage: 4
+  damage: 2
   bonusArmorDmg: 0
   projectileSpeed: 0
-  attackSpeed: 0.5
+  attackSpeed: 0.8
   attackRange: 0.5
   critChance: 0
   damageType: Thunder2

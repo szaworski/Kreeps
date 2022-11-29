@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   attackCd: 0
-  damage: 40
+  damage: 30
   bonusArmorDmg: 0
   projectileSpeed: 0
   attackSpeed: 1.5

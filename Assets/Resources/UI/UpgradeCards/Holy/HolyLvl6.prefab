@@ -358,10 +358,10 @@ MonoBehaviour:
 
     Damage: 60
 
-    Speed: 1.8s
+    Speed: 2s
 
     Range:
-    1
+    0.9
 
     Radius: Circle'
   m_isRightToLeft: 0

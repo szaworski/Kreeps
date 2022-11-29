@@ -567,11 +567,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   attackCd: 0
-  damage: 14
+  damage: 30
   bonusArmorDmg: 0
   projectileSpeed: 1
-  attackSpeed: 0.6
-  attackRange: 1
+  attackSpeed: 1.25
+  attackRange: 0.8
   critChance: 0
   damageType: Thunder
   slowAmt: 0
