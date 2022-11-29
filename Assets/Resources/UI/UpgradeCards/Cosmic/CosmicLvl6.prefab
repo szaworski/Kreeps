@@ -69,14 +69,14 @@ MonoBehaviour:
 
     Cost: 300g
 
-    Dmg: 60
+    Damage: 60
 
-    Rof: 0.6s
+    Speed: 0.6s
 
-    Rng: 1
+    Range:
+    1
 
-    Radius:
-    Rectangle'
+    Radius: Rectangle'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

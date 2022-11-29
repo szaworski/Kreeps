@@ -356,14 +356,14 @@ MonoBehaviour:
 
     Cost: 100g
 
-    Dmg: 10
+    Damage: 10
 
-    Rof: 0.45s
+    Speed: 0.45s
 
-    Rng: 0.6
+    Range:
+    0.6
 
-    Radius:
-    Rectangle
+    Radius: Rectangle
 
 '
   m_isRightToLeft: 0

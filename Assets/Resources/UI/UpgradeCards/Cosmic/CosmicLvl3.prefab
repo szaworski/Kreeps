@@ -205,14 +205,14 @@ MonoBehaviour:
 
     Cost: 175g
 
-    Dmg: 50
+    Damage: 50
 
-    Rof: 0.9s
+    Speed: 0.9s
 
-    Rng: 0.8
+    Range:
+    0.8
 
-    Radius:
-    Circle'
+    Radius: Circle'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

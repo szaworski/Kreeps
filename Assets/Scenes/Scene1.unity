@@ -1727,7 +1727,7 @@ MonoBehaviour:
 
     Damage: 4
 
-    Rate of fire: 0.8s
+    Speed: 0.8s
 
     Range: 0.6
 
@@ -5757,7 +5757,7 @@ MonoBehaviour:
 
     Damage: 7
 
-    Rate of fire: 1s
+    Speed: 1s
 
     Range: 0.6
 
@@ -10173,7 +10173,7 @@ MonoBehaviour:
 
     Damage: 12
 
-    Rate of fire: 1.4s
+    Speed: 1.4s
 
     Range: 0.8
 
@@ -10361,10 +10361,10 @@ MonoBehaviour:
 
     Damage: 6
 
-    Rate of fire:
-    1s
+    Speed: 1s
 
-    Range: 0.7
+    Range:
+    0.7
 
     Radius type: Circle
 
@@ -10372,8 +10372,7 @@ MonoBehaviour:
     Damage Bonus:
 
 
-    Damage
-    Penalty:
+    Damage Penalty:
 
 '
   m_isRightToLeft: 0
@@ -12243,7 +12242,7 @@ MonoBehaviour:
 
     Damage: 18
 
-    Rate of fire: 0.9s
+    Speed: 0.9s
 
     Range: 0.8
 
@@ -13423,7 +13422,7 @@ MonoBehaviour:
 
     Damage: 16
 
-    Rate of fire: 1.75s
+    Speed: 1.75s
 
     Range: 0.6
 
@@ -15337,7 +15336,7 @@ MonoBehaviour:
 
     Damage: 6
 
-    Rate of fire: 0.55s
+    Speed: 0.55s
 
     Range: 0.6
 

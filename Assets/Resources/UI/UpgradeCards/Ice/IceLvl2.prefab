@@ -205,11 +205,11 @@ MonoBehaviour:
 
     Cost: 50g
 
-    Dmg: 10
+    Damage: 10
 
-    Rof: 1s
+    Speed: 1s
 
-    Rng:
+    Range:
     0.7
 
     Radius: Circle

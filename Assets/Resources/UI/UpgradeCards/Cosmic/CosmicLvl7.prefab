@@ -205,14 +205,14 @@ MonoBehaviour:
 
     Cost: 650g
 
-    Dmg: 200
+    Damage: 200
 
-    Rof: 3s
+    Speed: 3s
 
-    Rng: 3
+    Range:
+    3
 
-    Radius:
-    Circle
+    Radius: Circle
 
 '
   m_isRightToLeft: 0
