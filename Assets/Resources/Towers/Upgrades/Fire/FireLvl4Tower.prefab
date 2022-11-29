@@ -997,7 +997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   attackCd: 0
-  damage: 4
+  damage: 6
   bonusArmorDmg: 0
   projectileSpeed: 0
   attackSpeed: 1
@@ -1009,6 +1009,7 @@ MonoBehaviour:
   hasRectangleRadius: 0
   rectIsVertical: 0
   triggerRadiusFlip: 0
+  isAoeWithProjectiles: 0
   dmgText: {fileID: 3780281401173872187}
   rofText: {fileID: 2234173735689929910}
   rngText: {fileID: 5819031178914394824}
