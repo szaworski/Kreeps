@@ -520,18 +520,21 @@ MonoBehaviour:
   armor: 0
   goldBounty: 10
   type: Pest
-  moveSpeed: 0.5
+  moveSpeed: 0.42
   hpRegen: 0
   evasionChance: 0
   healthText: {fileID: 2040553587281962461}
   maxHealthText: {fileID: 346445757991752093}
   armorText: {fileID: 1115167688914373883}
   HealthContainer: {fileID: 5580167391688881138}
+  ArmorObject: {fileID: 0}
   distanceTraveled: 0
   isTakingDamage: 0
   iceSlowCd: 0
   iceSlowStatus: 0
   iceSlowAmt: 0.1
+  isPoisoned: 0
+  isTakingPoisonDamage: 0
 --- !u!1 &7809768508584465408
 GameObject:
   m_ObjectHideFlags: 0

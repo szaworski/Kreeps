@@ -488,18 +488,21 @@ MonoBehaviour:
   armor: 0
   goldBounty: 10
   type: Beast
-  moveSpeed: 0.4
+  moveSpeed: 0.32
   hpRegen: 0
   evasionChance: 0
   healthText: {fileID: 2240702306701519988}
   maxHealthText: {fileID: 7794477886941289041}
   armorText: {fileID: 8331582343531268827}
   HealthContainer: {fileID: 7549338442133584252}
+  ArmorObject: {fileID: 0}
   distanceTraveled: 0
   isTakingDamage: 0
   iceSlowCd: 0
   iceSlowStatus: 0
   iceSlowAmt: 0.1
+  isPoisoned: 0
+  isTakingPoisonDamage: 0
 --- !u!1 &6959035619013095681
 GameObject:
   m_ObjectHideFlags: 0

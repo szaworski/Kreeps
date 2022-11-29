@@ -182,18 +182,21 @@ MonoBehaviour:
   armor: 0
   goldBounty: 10
   type: Humanoid
-  moveSpeed: 0.3
+  moveSpeed: 0.28
   hpRegen: 0
   evasionChance: 0
   healthText: {fileID: 5125449798840335830}
   maxHealthText: {fileID: 1136820460886720270}
   armorText: {fileID: 7975137808493568304}
   HealthContainer: {fileID: 2618511777463355792}
+  ArmorObject: {fileID: 0}
   distanceTraveled: 0
   isTakingDamage: 0
   iceSlowCd: 0
   iceSlowStatus: 0
   iceSlowAmt: 0.1
+  isPoisoned: 0
+  isTakingPoisonDamage: 0
 --- !u!1 &7480134897859211182
 GameObject:
   m_ObjectHideFlags: 0

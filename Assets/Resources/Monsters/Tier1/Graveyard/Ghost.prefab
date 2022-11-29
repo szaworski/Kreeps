@@ -484,22 +484,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 35
+  health: 30
   armor: 0
   goldBounty: 10
   type: Undead
-  moveSpeed: 0.35
+  moveSpeed: 0.34
   hpRegen: 1
   evasionChance: 0
   healthText: {fileID: 2240702306701519988}
   maxHealthText: {fileID: 7794477886941289041}
   armorText: {fileID: 5733852432817773173}
   HealthContainer: {fileID: 7549338442133584252}
+  ArmorObject: {fileID: 0}
   distanceTraveled: 0
   isTakingDamage: 0
   iceSlowCd: 0
   iceSlowStatus: 0
   iceSlowAmt: 0.1
+  isPoisoned: 0
+  isTakingPoisonDamage: 0
 --- !u!1 &6959035619013095681
 GameObject:
   m_ObjectHideFlags: 0
