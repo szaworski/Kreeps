@@ -192,12 +192,12 @@ public class TileSpawner : CardsLists
             string card3 = null;
 
             //Get the correct Tile card list based on the number of waves finished. (Copy the list from TileCards.cs)
-            if (GlobalVars.tileCounters["numOfTimesPlaced"] < 10)
+            if (GlobalVars.tileCounters["numOfTimesPlaced"] < 8)
             {
                 currentCardList = tier1TileCards.ToList();
             }
 
-            else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 10 && GlobalVars.tileCounters["numOfTimesPlaced"] < 20)
+            else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 8 && GlobalVars.tileCounters["numOfTimesPlaced"] < 16)
             {
                 GlobalVars.currTier = "Tier2";
                 GlobalVars.currTierNum = 2;
@@ -205,33 +205,33 @@ public class TileSpawner : CardsLists
                 GlobalVars.kreepSpawnRate = 0.45f;
             }
 
-            else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 20 && GlobalVars.tileCounters["numOfTimesPlaced"] < 30)
+            else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 16 && GlobalVars.tileCounters["numOfTimesPlaced"] < 24)
             {
                 GlobalVars.currTier = "Tier3";
                 GlobalVars.currTierNum = 3;
                 currentCardList = tier3TileCards.ToList();
                 GlobalVars.kreepSpawnRate = 0.4f;
 
-                if (GlobalVars.tileCounters["numOfTimesPlaced"] == 20)
+                if (GlobalVars.tileCounters["numOfTimesPlaced"] == 16)
                 {
                     ChangeSong("Song2");
                 }
             }
 
-            else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 30 && GlobalVars.tileCounters["numOfTimesPlaced"] < 40)
+            else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 24 && GlobalVars.tileCounters["numOfTimesPlaced"] < 32)
             {
                 GlobalVars.currTier = "Tier4";
                 GlobalVars.currTierNum = 4;
                 currentCardList = tier4TileCards.ToList();
             }
 
-            else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 40 && GlobalVars.tileCounters["numOfTimesPlaced"] < 50)
+            else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 32 && GlobalVars.tileCounters["numOfTimesPlaced"] < 40)
             {
                 GlobalVars.currTier = "Tier5";
                 GlobalVars.currTierNum = 5;
                 currentCardList = tier5TileCards.ToList();
 
-                if (GlobalVars.tileCounters["numOfTimesPlaced"] == 40)
+                if (GlobalVars.tileCounters["numOfTimesPlaced"] == 32)
                 {
                     ChangeSong("Song3");
                 }
