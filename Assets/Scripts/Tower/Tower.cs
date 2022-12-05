@@ -101,17 +101,17 @@ public class Tower : MonoBehaviour
             //Vertical rectangle
             if (rectIsVertical)
             {
-                monstersInRadius = Physics2D.OverlapAreaAll(new Vector2(transform.position.x - 0.5f, transform.position.y + attackRange * 1.5f), new Vector2(transform.position.x + 0.5f, transform.position.y - attackRange * 1.5f), LayerMask.GetMask("Monster"));
+                monstersInRadius = Physics2D.OverlapAreaAll(new Vector2(transform.position.x - 0.375f, transform.position.y + attackRange * 1.5f), new Vector2(transform.position.x + 0.375f, transform.position.y - attackRange * 1.5f), LayerMask.GetMask("Monster"));
             }
             else
             {
-                monstersInRadius = Physics2D.OverlapAreaAll(new Vector2(transform.position.x - attackRange * 1.5f, transform.position.y + 0.5f), new Vector2(transform.position.x + attackRange * 1.5f, transform.position.y - 0.5f), LayerMask.GetMask("Monster"));
+                monstersInRadius = Physics2D.OverlapAreaAll(new Vector2(transform.position.x - attackRange * 1.5f, transform.position.y + 0.375f), new Vector2(transform.position.x + attackRange * 1.5f, transform.position.y - 0.375f), LayerMask.GetMask("Monster"));
             }
         }
 
         else
         {
-            monstersInRadius = Physics2D.OverlapCircleAll(this.transform.position, attackRange, LayerMask.GetMask("Monster"));
+            monstersInRadius = Physics2D.OverlapAreaAll(new Vector2(transform.position.x - attackRange, transform.position.y + attackRange), new Vector2(transform.position.x + attackRange, transform.position.y - attackRange), LayerMask.GetMask("Monster"));
         }
 
         //Check if any monsters are found in the radius (Use this for towers that shoot projectiles)
@@ -225,42 +225,35 @@ public class Tower : MonoBehaviour
     void DrawAttackRadius()
     {
         attackRadius.widthMultiplier = 0.0075f;
+                    attackRadius.positionCount = 4;
 
         if (hasRectangleRadius)
         {
-            attackRadius.positionCount = 4;
-
             if (rectIsVertical)
             {
                 attackRadius.numCornerVertices = 5;
-                attackRadius.SetPosition(0, new Vector3(transform.position.x - 0.5f, transform.position.y + attackRange * 1.5f));
-                attackRadius.SetPosition(1, new Vector3(transform.position.x + 0.5f, transform.position.y + attackRange * 1.5f));
-                attackRadius.SetPosition(2, new Vector3(transform.position.x + 0.5f, transform.position.y - attackRange * 1.5f));
-                attackRadius.SetPosition(3, new Vector3(transform.position.x - 0.5f, transform.position.y - attackRange * 1.5f));
+                attackRadius.SetPosition(0, new Vector3(transform.position.x - 0.375f, transform.position.y + attackRange * 1.5f));
+                attackRadius.SetPosition(1, new Vector3(transform.position.x + 0.375f, transform.position.y + attackRange * 1.5f));
+                attackRadius.SetPosition(2, new Vector3(transform.position.x + 0.375f, transform.position.y - attackRange * 1.5f));
+                attackRadius.SetPosition(3, new Vector3(transform.position.x - 0.375f, transform.position.y - attackRange * 1.5f));
             }
             else
             {
                 attackRadius.numCornerVertices = 5;
-                attackRadius.SetPosition(0, new Vector3(transform.position.x - attackRange * 1.5f, transform.position.y + 0.5f));
-                attackRadius.SetPosition(1, new Vector3(transform.position.x + attackRange * 1.5f, transform.position.y + 0.5f));
-                attackRadius.SetPosition(2, new Vector3(transform.position.x + attackRange * 1.5f, transform.position.y - 0.5f));
-                attackRadius.SetPosition(3, new Vector3(transform.position.x - attackRange * 1.5f, transform.position.y - 0.5f));
+                attackRadius.SetPosition(0, new Vector3(transform.position.x - attackRange * 1.5f, transform.position.y + 0.375f));
+                attackRadius.SetPosition(1, new Vector3(transform.position.x + attackRange * 1.5f, transform.position.y + 0.375f));
+                attackRadius.SetPosition(2, new Vector3(transform.position.x + attackRange * 1.5f, transform.position.y - 0.375f));
+                attackRadius.SetPosition(3, new Vector3(transform.position.x - attackRange * 1.5f, transform.position.y - 0.375f));
             }
         }
 
         else
         {
-            attackRadius.positionCount = 40;
-
-            float deltaTheta = (2f * Mathf.PI) / 40;
-            float theta = 0f;
-
-            for (int i = 0; i < attackRadius.positionCount; i++)
-            {
-                Vector3 pos = new Vector3(attackRange * Mathf.Cos(theta), attackRange * Mathf.Sin(theta), 0f);
-                attackRadius.SetPosition(i, transform.position + pos);
-                theta += deltaTheta;
-            }
+            attackRadius.numCornerVertices = 5;
+            attackRadius.SetPosition(0, new Vector3(transform.position.x - attackRange, transform.position.y + attackRange));
+            attackRadius.SetPosition(1, new Vector3(transform.position.x + attackRange, transform.position.y + attackRange));
+            attackRadius.SetPosition(2, new Vector3(transform.position.x + attackRange, transform.position.y - attackRange));
+            attackRadius.SetPosition(3, new Vector3(transform.position.x - attackRange, transform.position.y - attackRange));
         }
     }
 
