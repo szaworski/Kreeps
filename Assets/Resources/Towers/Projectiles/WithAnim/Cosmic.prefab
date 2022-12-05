@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5368021634085733370}
   - component: {fileID: 5368021634085733371}
   - component: {fileID: -7440129572534784170}
-  - component: {fileID: 828625423111454346}
+  - component: {fileID: 2881883509385655621}
   - component: {fileID: 8996551886923038629}
   m_Layer: 0
   m_Name: Cosmic
@@ -106,7 +106,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!58 &828625423111454346
+--- !u!58 &2881883509385655621
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,7 +121,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.0001
+  m_Radius: 0.001
 --- !u!114 &8996551886923038629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,10 +134,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33060c8c575bca74eb44c40fe589c225, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AoeRadius: {fileID: 828625423111454346}
+  AoeRadius: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   target: {fileID: 0}
   rb: {fileID: 0}
   damageValue: 0
+  bonusHpDamage: 0
+  bonusArmorDamage: 0
   projectileSpeed: 0
   attackRange: 0
   slowAmt: 0

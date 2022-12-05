@@ -115,7 +115,7 @@ public class Tower : MonoBehaviour
         }
 
         //Check if any monsters are found in the radius (Use this for towers that shoot projectiles)
-        if (monstersInRadius.Length >= 1 && projectileSpeed >= 1)
+        if (monstersInRadius.Length >= 1)
         {
             monsterIsInRadius = true;
 
@@ -149,11 +149,10 @@ public class Tower : MonoBehaviour
             CreateProjectile(currentTarget);
         }
 
-        //Check if any monsters are found in the radius (Use this for towers that deal AOE damage in an area)
-        else if (monstersInRadius.Length >= 1 && projectileSpeed == 0)
+        //Check if any monsters are found in the radius
+        else if (monstersInRadius.Length >= 1)
         {
             monsterIsInRadius = true;
-            CreateAoeDamageRadius();
         }
 
         else
@@ -212,20 +211,10 @@ public class Tower : MonoBehaviour
         }
     }
 
-    public void CreateAoeDamageRadius()
-    {
-        if (Time.time > attackCd && monsterIsInRadius)
-        {
-            GameObject aoeRadius = (GameObject)Instantiate(Resources.Load("Towers/Projectiles/WithAnim/" + damageType), this.transform);
-            aoeRadius.transform.position = this.transform.position;
-            attackCd = attackSpeed + Time.time;
-        }
-    }
-
     void DrawAttackRadius()
     {
         attackRadius.widthMultiplier = 0.0075f;
-                    attackRadius.positionCount = 4;
+        attackRadius.positionCount = 4;
 
         if (hasRectangleRadius)
         {

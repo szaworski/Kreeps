@@ -189,7 +189,7 @@ MonoBehaviour:
   attackCd: 0
   damage: 30
   bonusArmorDmg: 0
-  projectileSpeed: 0
+  projectileSpeed: 1
   attackSpeed: 1.5
   attackRange: 0.5
   critChance: 0
@@ -199,7 +199,7 @@ MonoBehaviour:
   hasRectangleRadius: 0
   rectIsVertical: 0
   triggerRadiusFlip: 0
-  isAoeWithProjectiles: 0
+  isAoeWithProjectiles: 1
   dmgText: {fileID: 4771944620475875555}
   rofText: {fileID: 1052989733081473313}
   rngText: {fileID: 4060352409470095183}

@@ -31,6 +31,11 @@ public class Projectile : MonoBehaviour
             target = transform.parent.GetComponent<Weapon>().currentTarget;
             slowAmt = transform.parent.GetComponent<Weapon>().slowAmt;
             critChance = transform.parent.GetComponent<Weapon>().critChance;
+
+            if (projectileSpeed == 0)
+            {
+                AoeRadius.radius = attackRange;
+            }
         }
 
         else
@@ -43,11 +48,6 @@ public class Projectile : MonoBehaviour
             target = transform.parent.GetComponent<Tower>().currentTarget;
             slowAmt = transform.parent.GetComponent<Tower>().slowAmt;
             critChance = transform.parent.GetComponent<Tower>().critChance;
-        }
-
-        if (projectileSpeed == 0)
-        {
-            AoeRadius.radius = attackRange;
         }
 
         //Debug.Log("currentTarget target position: " + target.transform.position);
