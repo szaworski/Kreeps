@@ -76,7 +76,7 @@ MonoBehaviour:
     Range:
     0.8
 
-    Radius: Circle
+    Radius: Square
 
 '
   m_isRightToLeft: 0

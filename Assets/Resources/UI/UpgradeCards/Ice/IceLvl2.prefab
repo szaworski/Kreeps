@@ -210,9 +210,9 @@ MonoBehaviour:
     Speed: 1s
 
     Range:
-    0.7
+    0.6
 
-    Radius: Circle
+    Radius: Square
 
 '
   m_isRightToLeft: 0

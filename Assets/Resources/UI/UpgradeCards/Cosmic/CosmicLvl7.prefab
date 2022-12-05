@@ -212,7 +212,7 @@ MonoBehaviour:
     Range:
     3
 
-    Radius: Circle
+    Radius: Square
 
 '
   m_isRightToLeft: 0

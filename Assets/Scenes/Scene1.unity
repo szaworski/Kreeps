@@ -1732,7 +1732,7 @@ MonoBehaviour:
     Range: 0.6
 
     Radius
-    type: Circle
+    type: Square
 
 
     Damage Bonus: None
@@ -10178,7 +10178,7 @@ MonoBehaviour:
     Range: 0.8
 
     Radius
-    type: Circle
+    type: Square
 
 
     Damage Bonus:
@@ -10366,7 +10366,7 @@ MonoBehaviour:
     Range:
     0.7
 
-    Radius type: Circle
+    Radius type: Square
 
 
     Damage Bonus:
@@ -12247,7 +12247,7 @@ MonoBehaviour:
     Range: 0.8
 
     Radius
-    type: Circle
+    type: Square
 
 
     Damage Bonus:
