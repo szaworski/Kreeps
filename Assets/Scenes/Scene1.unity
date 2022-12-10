@@ -10175,7 +10175,7 @@ MonoBehaviour:
 
     Speed: 1.4s
 
-    Range: 0.8
+    Range: 0.7
 
     Radius
     type: Square
@@ -10364,7 +10364,7 @@ MonoBehaviour:
     Speed: 1s
 
     Range:
-    0.7
+    0.6
 
     Radius type: Square
 
@@ -12244,7 +12244,7 @@ MonoBehaviour:
 
     Speed: 0.9s
 
-    Range: 0.8
+    Range: 0.7
 
     Radius
     type: Square
