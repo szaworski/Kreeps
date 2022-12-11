@@ -104,6 +104,7 @@ public class TowerGrid : MonoBehaviour
                     if (GlobalVars.stoneIsSelected)
                     {
                         GlobalVars.stoneIsSelected = false;
+                        GameObject.Find("UiSounds").GetComponent<AudioManager>().PlaySound("PowerUp");
 
                         if (GlobalVars.stoneTypeSelected == 0)
                         {

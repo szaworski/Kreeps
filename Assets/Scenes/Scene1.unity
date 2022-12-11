@@ -19704,6 +19704,13 @@ MonoBehaviour:
     priority: 0
     loop: 0
     source: {fileID: 0}
+  - name: PowerUp
+    clip: {fileID: 8300000, guid: 51edea358e6a6de42aea1304f6a160d7, type: 3}
+    volume: 0.5
+    pitch: 1
+    priority: 0
+    loop: 0
+    source: {fileID: 0}
 --- !u!1 &2102976814
 GameObject:
   m_ObjectHideFlags: 0
