@@ -24,6 +24,8 @@ public class Tower : MonoBehaviour
     private float bonusSpeed;
     private float bonusCritChance;
     public float damage;
+    public float bonusDamage2;
+    public float bonusRange2;
     public float bonusArmorDmg;
     public float projectileSpeed;
     public float attackSpeed;
@@ -296,15 +298,15 @@ public class Tower : MonoBehaviour
 
     public void AddBonus()
     {
-        if (damage != startingDamage + bonusDamage)
+        if (damage != startingDamage + bonusDamage + bonusDamage2)
         {
-            damage = startingDamage + bonusDamage;
+            damage = startingDamage + bonusDamage + bonusDamage2;
             dmgText.SetText(damage.ToString());
         }
 
-        if (attackRange != startingAttackRange + bonusRange)
+        if (attackRange != startingAttackRange + bonusRange + bonusRange2)
         {
-            attackRange = startingAttackRange + bonusRange;
+            attackRange = startingAttackRange + bonusRange + bonusRange2;
             rngText.SetText(attackRange.ToString());
             DrawAttackRadius();
         }

@@ -41,6 +41,12 @@ TextureImporter:
   - first:
       213: 3095894125050642863
     second: PowerUp-Sheet_12
+  - first:
+      213: 1065837512141003602
+    second: PowerUp-Sheet_13
+  - first:
+      213: 6247146801685285927
+    second: PowerUp-Sheet_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -408,6 +414,48 @@ TextureImporter:
       bones: []
       spriteID: fa1ccd1dd43d6fa20800000000000000
       internalID: 3095894125050642863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 0
+        width: 90
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b537bf19d9ace00800000000000000
+      internalID: 1065837512141003602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 0
+        width: 90
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72c4b26dae252b650800000000000000
+      internalID: 6247146801685285927
       vertices: []
       indices: 
       edges: []

@@ -31,6 +31,7 @@ public class GlobalVars : MonoBehaviour
     public static int newGoldValue;
     public static int monsterCount;
     public static int coinChoiceCount;
+    public static int stoneTypeSelected;
 
     public static bool triggerTileCardDestruction;
     public static bool triggerMonsterCardDestruction;
@@ -48,6 +49,7 @@ public class GlobalVars : MonoBehaviour
     public static bool showStartWaveInstructions;
     public static bool triggerBonusStatsUpdate;
     public static bool weaponIsSelected;
+    public static bool stoneIsSelected;
     public static bool useSlashAnim;
     public static bool isPaused;
     public static bool waveEnded;
@@ -121,6 +123,7 @@ public class GlobalVars : MonoBehaviour
         bonusStats.Add("HolyLvl", 1);
         bonusStats.Add("SwiftLvl", 1);
         bonusStats.Add("CosmicLvl", 1);
+        bonusStats.Add("PowerStone", 0);
 
         bonusExtraStats.Clear();
         bonusExtraStats.Add("FireSpeedUp", 0);
@@ -135,6 +138,7 @@ public class GlobalVars : MonoBehaviour
         bonusExtraStats.Add("SwiftPsnDmgUpLvl", 1);
         bonusExtraStats.Add("CosmicCritChanceUp", 0);
         bonusExtraStats.Add("CosmicCritChanceUpLvl", 1);
+        bonusExtraStats.Add("IntStone", 0);
 
         //Add starting kreep bonus stats
         bonusKreepStats.Clear();

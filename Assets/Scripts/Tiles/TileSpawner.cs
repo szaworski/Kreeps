@@ -543,7 +543,11 @@ public class TileSpawner : CardsLists
             switch (i)
             {
                 case 0:
-                    if (!selectedCard.Contains("Up"))
+                    if (selectedCard.Contains("Stone"))
+                    {
+                        card2 = selectedCard;
+                    }
+                    else if (!selectedCard.Contains("Up"))
                     {
                         card2 = selectedCard + GlobalVars.bonusStats[selectedCard + "Lvl"];
                     }
@@ -553,7 +557,11 @@ public class TileSpawner : CardsLists
                     }
                     break;
                 case 1:
-                    if (!selectedCard.Contains("Up"))
+                    if (selectedCard.Contains("Stone"))
+                    {
+                        card3 = selectedCard;
+                    }
+                    else if(!selectedCard.Contains("Up"))
                     {
                         card3 = selectedCard + GlobalVars.bonusStats[selectedCard + "Lvl"];
                     }
@@ -563,7 +571,11 @@ public class TileSpawner : CardsLists
                     }
                     break;
                 case 2:
-                    if (!selectedCard.Contains("Up"))
+                    if (selectedCard.Contains("Stone"))
+                    {
+                        card4 = selectedCard;
+                    }
+                    else if (!selectedCard.Contains("Up"))
                     {
                         card4 = selectedCard + GlobalVars.bonusStats[selectedCard + "Lvl"];
                     }

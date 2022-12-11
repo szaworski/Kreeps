@@ -99,6 +99,22 @@ public class Card : MonoBehaviour
                         GlobalVars.bonusStats["EquipmentLvl"]++;
                     }
                     break;
+
+                case "Stone":
+                    GlobalVars.stoneIsSelected = true;
+
+                    if (cardName == "StonePwr")
+                    {
+                        GlobalVars.stoneTypeSelected = 0;
+                        GlobalVars.bonusStats[cardName] = bonusAmt;
+
+                    }
+                    else if (cardName == "StoneInt")
+                    {
+                        GlobalVars.stoneTypeSelected = 1;
+                        GlobalVars.bonusExtraStats[cardName] = bonusFloatAmt;
+                    }
+                    break;
             }
         }
 

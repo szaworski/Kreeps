@@ -100,6 +100,20 @@ public class TowerGrid : MonoBehaviour
                     {
                         GlobalVars.selectedTowerHasUpgrades = true;
                     }
+
+                    if (GlobalVars.stoneIsSelected)
+                    {
+                        GlobalVars.stoneIsSelected = false;
+
+                        if (GlobalVars.stoneTypeSelected == 0)
+                        {
+                            towerScript.bonusDamage2 += GlobalVars.bonusStats["StonePwr"];
+                        }
+                        else if (GlobalVars.stoneTypeSelected == 1)
+                        {
+                            towerScript.bonusRange2 += GlobalVars.bonusExtraStats["StoneInt"];
+                        }
+                    }
                 }
 
                 if (Input.GetMouseButtonDown(1))

@@ -5,6 +5,7 @@ public class MouseCursor : MonoBehaviour
     [SerializeField] private int weaponImageIndex;
     [SerializeField] private Texture2D cursorImage;
     [SerializeField] private Texture2D[] weaponImages;
+    [SerializeField] private Texture2D[] itemImages;
 
     GameObject playerWeapon;
     GameObject playerHud;
@@ -31,7 +32,7 @@ public class MouseCursor : MonoBehaviour
 
     public void SwapMouseCursor()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) || GlobalVars.isPaused || GlobalVars.waveEnded)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && !GlobalVars.stoneIsSelected || GlobalVars.isPaused && !GlobalVars.stoneIsSelected || GlobalVars.waveEnded || !GlobalVars.stoneIsSelected)
         {
             GlobalVars.weaponIsSelected = false;
             Cursor.SetCursor(cursorImage, Vector2.zero, CursorMode.ForceSoftware);
@@ -42,10 +43,15 @@ public class MouseCursor : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2) && GlobalVars.currentWeapon != "" && !GlobalVars.isPaused)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && GlobalVars.currentWeapon != "" && !GlobalVars.isPaused && !GlobalVars.stoneIsSelected)
         {
             GlobalVars.weaponIsSelected = true;
             Cursor.SetCursor(weaponImages[weaponImageIndex], Vector2.zero, CursorMode.ForceSoftware);
+        }
+
+        if (GlobalVars.stoneIsSelected && !GlobalVars.isPaused)
+        {
+            Cursor.SetCursor(itemImages[GlobalVars.stoneTypeSelected], Vector2.zero, CursorMode.ForceSoftware);
         }
     }
 
