@@ -215,6 +215,7 @@ public class Tower : MonoBehaviour
 
     void DrawAttackRadius()
     {
+        attackRadius.sortingOrder = 2;
         attackRadius.widthMultiplier = 0.0075f;
         attackRadius.positionCount = 4;
 
