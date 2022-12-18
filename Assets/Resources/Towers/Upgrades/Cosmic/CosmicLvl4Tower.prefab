@@ -273,6 +273,8 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   attackCd: 0
   damage: 18
+  bonusDamage2: 0
+  bonusRange2: 0
   bonusArmorDmg: 0
   projectileSpeed: 1
   attackSpeed: 1.2

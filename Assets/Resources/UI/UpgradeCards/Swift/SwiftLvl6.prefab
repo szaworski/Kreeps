@@ -69,9 +69,9 @@ MonoBehaviour:
 
     Cost: 250g
 
-    Damage: 6
+    Damage: 12
 
-    Speed: 2
+    Speed: 1.75
 
     Range:
     0.6
