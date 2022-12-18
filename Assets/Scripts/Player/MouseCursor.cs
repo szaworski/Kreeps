@@ -32,7 +32,7 @@ public class MouseCursor : MonoBehaviour
 
     public void SwapMouseCursor()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) && !GlobalVars.stoneIsSelected || GlobalVars.isPaused && !GlobalVars.stoneIsSelected || GlobalVars.waveEnded || !GlobalVars.stoneIsSelected)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && !GlobalVars.stoneIsSelected || GlobalVars.isPaused && !GlobalVars.stoneIsSelected || GlobalVars.waveEnded)
         {
             GlobalVars.weaponIsSelected = false;
             Cursor.SetCursor(cursorImage, Vector2.zero, CursorMode.ForceSoftware);
