@@ -15894,6 +15894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9af59bfcd66b47e4ba88e8f04ea3032f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds: []
   pauseMenuUI: {fileID: 1561706221}
   controlsMenuUI: {fileID: 2128432104}
   optionsMenuUI: {fileID: 0}
@@ -17910,7 +17911,8 @@ PrefabInstance:
       propertyPath: m_BlockingMask.m_Bits
       value: 4294967295
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 372268515874915943, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
 --- !u!95 &1858014790 stripped
 Animator:

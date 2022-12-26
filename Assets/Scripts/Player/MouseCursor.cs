@@ -11,6 +11,7 @@ public class MouseCursor : MonoBehaviour
     GameObject playerHud;
     Weapon weaponScript;
     PlayerHud playerHudScript;
+    bool triggerStoneSelect;
 
     void Awake()
     {
@@ -18,6 +19,7 @@ public class MouseCursor : MonoBehaviour
         playerHud = GameObject.Find("PlayerHud");
         weaponScript = playerWeapon.GetComponent<Weapon>();
         playerHudScript = playerHud.GetComponent<PlayerHud>();
+        triggerStoneSelect = false;
 
         GlobalVars.newWeapon = "";
         GlobalVars.weaponIsSelected = false;
@@ -51,7 +53,22 @@ public class MouseCursor : MonoBehaviour
 
         if (GlobalVars.stoneIsSelected && !GlobalVars.isPaused)
         {
+            triggerStoneSelect = true;
             Cursor.SetCursor(itemImages[GlobalVars.stoneTypeSelected], Vector2.zero, CursorMode.ForceSoftware);
+        }
+
+        else if (!GlobalVars.stoneIsSelected && triggerStoneSelect && !GlobalVars.isPaused)
+        {
+            triggerStoneSelect = false;
+
+            if (GlobalVars.weaponIsSelected)
+            {
+                Cursor.SetCursor(weaponImages[weaponImageIndex], Vector2.zero, CursorMode.ForceSoftware);
+            }
+            else
+            {
+                Cursor.SetCursor(cursorImage, Vector2.zero, CursorMode.ForceSoftware);
+            }
         }
     }
 

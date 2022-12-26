@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class AudioManager : MonoBehaviour
     void Awake()
     {
         LoadSounds();
+        SetMusicVolume(PlayerPrefs.GetFloat("musicVolume"));
+        SetSfxVolume(PlayerPrefs.GetFloat("sfxVolume"));
     }
     private void Start()
     {
@@ -36,10 +39,41 @@ public class AudioManager : MonoBehaviour
         snd.source.Play();
     }
 
+    public void SetSfxVolume(float volChange)
+    {
+        foreach (Sound snd in sounds)
+        {
+            snd.source.volume = volChange;
+        }
+
+        PlayerPrefs.SetFloat("sfxVolume", volChange);
+    }
+
+    public void SetMusicVolume(float volChange)
+    {
+        GameObject.Find("Song1").GetComponent<AudioSource>().volume = volChange;
+        GameObject.Find("Song2").GetComponent<AudioSource>().volume = volChange;
+        GameObject.Find("Song3").GetComponent<AudioSource>().volume = volChange;
+        PlayerPrefs.SetFloat("musicVolume", volChange);
+    }
+
+    public void SaveSfxVolumeMainMenu(float volChange)
+    {
+        PlayerPrefs.SetFloat("sfxVolume", volChange);
+    }
+
+    public void SaveMusicVolumeMainMenu(float volChange)
+    {
+        PlayerPrefs.SetFloat("musicVolume", volChange);
+    }
+
     IEnumerator SetStartingMusic(float delayTime)
     {
-        yield return new WaitForSeconds(delayTime);
-        GameObject.Find(GlobalVars.currentSong).GetComponent<AudioSource>().volume = GlobalVars.musicVolume * 0.5f;
-        GameObject.Find(GlobalVars.currentSong).GetComponent<AudioSource>().Play();
+        if (SceneManager.GetActiveScene().name == "Scene1")
+        {
+            yield return new WaitForSeconds(delayTime);
+            GameObject.Find(GlobalVars.currentSong).GetComponent<AudioSource>().volume = GlobalVars.musicVolume * 0.5f;
+            GameObject.Find(GlobalVars.currentSong).GetComponent<AudioSource>().Play();
+        }
     }
 }

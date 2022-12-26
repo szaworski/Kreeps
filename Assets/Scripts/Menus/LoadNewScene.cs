@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadNewScene : MonoBehaviour
+public class LoadNewScene : AudioManager
 {
     public IEnumerator LoadScene(int sceneIndex, Animator transition)
     {
