@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class MainMenuButtons : LoadNewScene
@@ -18,7 +17,6 @@ public class MainMenuButtons : LoadNewScene
     public Text effectsVolumePercentage;
     public float musicVolume;
     public float soundEffectsVolume;
-    public bool triggerSettingsChange;
 
     void Awake()
     {

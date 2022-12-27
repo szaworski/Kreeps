@@ -1,6 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class PauseMenuButtons : LoadNewScene
 {
@@ -13,10 +12,19 @@ public class PauseMenuButtons : LoadNewScene
     [SerializeField] private Animator transition;
     [SerializeField] private bool isLoading;
 
+    public Slider musicVolumeSlider;
+    public Slider effectsVolumeSlider;
+    public Text musicVolumePercentage;
+    public Text effectsVolumePercentage;
+    public float musicVolume;
+    public float soundEffectsVolume;
+
     void Awake()
     {
         isLoading = false;
         GlobalVars.isPaused = false;
+        musicVolumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
+        effectsVolumeSlider.value = PlayerPrefs.GetFloat("sfxVolume");
     }
 
     void Update()
@@ -41,6 +49,13 @@ public class PauseMenuButtons : LoadNewScene
                 Pause();
                 GlobalVars.isPaused = true;
             }
+        }
+
+        if (optionsMenuUI.activeInHierarchy)
+        {
+            musicVolume = musicVolumeSlider.value;
+            soundEffectsVolume = effectsVolumeSlider.value;
+            UpdatePercentages(musicVolume, soundEffectsVolume);
         }
 
         if (GlobalVars.playerHealth <= 0)
@@ -85,6 +100,12 @@ public class PauseMenuButtons : LoadNewScene
     {
         pauseMenuUI.SetActive(false);
         exitGameMenuUI.SetActive(true);
+    }
+
+    public void OpenOptionsMenuUi()
+    {
+        pauseMenuUI.SetActive(false);
+        optionsMenuUI.SetActive(true);
     }
 
     public void OpenGameOverMenuUi()
@@ -154,8 +175,20 @@ public class PauseMenuButtons : LoadNewScene
 
         else if (optionsMenuUI.activeInHierarchy)
         {
-            //optionsMenuUI.SetActive(false);
+            optionsMenuUI.SetActive(false);
             pauseMenuUI.SetActive(true);
         }
+    }
+
+    public void SaveOptionsChanges()
+    {
+        SaveMusicVolumeMainMenu(musicVolume);
+        SaveSfxVolumeMainMenu(soundEffectsVolume);
+    }
+
+    public void UpdatePercentages(float musicVol, float effectsVol)
+    {
+        musicVolumePercentage.text = Mathf.RoundToInt(musicVol * 100) + "%";
+        effectsVolumePercentage.text = Mathf.RoundToInt(effectsVol * 100) + "%";
     }
 }
