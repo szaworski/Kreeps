@@ -51,17 +51,14 @@ public class PauseMenuButtons : LoadNewScene
             }
         }
 
-        if (optionsMenuUI.activeInHierarchy)
-        {
-            musicVolume = musicVolumeSlider.value;
-            soundEffectsVolume = effectsVolumeSlider.value;
-            UpdatePercentages(musicVolume, soundEffectsVolume);
-        }
-
         if (GlobalVars.playerHealth <= 0)
         {
             OpenGameOverMenuUi();
         }
+
+        musicVolume = musicVolumeSlider.value;
+        soundEffectsVolume = effectsVolumeSlider.value;
+        UpdatePercentages(musicVolume, soundEffectsVolume);
     }
 
     public void Pause()
@@ -182,8 +179,8 @@ public class PauseMenuButtons : LoadNewScene
 
     public void SaveOptionsChanges()
     {
-        SaveMusicVolumeMainMenu(musicVolume);
-        SaveSfxVolumeMainMenu(soundEffectsVolume);
+        SetMusicVolume(musicVolume);
+        SetSfxVolume(soundEffectsVolume);
     }
 
     public void UpdatePercentages(float musicVol, float effectsVol)

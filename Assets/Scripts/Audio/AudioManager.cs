@@ -25,7 +25,7 @@ public class AudioManager : MonoBehaviour
         {
             snd.source = gameObject.AddComponent<AudioSource>();
             snd.source.clip = snd.clip;
-            snd.source.volume = snd.volume;
+            snd.source.volume = PlayerPrefs.GetFloat("sfxVolume");
             snd.source.pitch = snd.pitch;
             snd.source.spatialBlend = 1;
             snd.source.priority = snd.priority;
@@ -51,10 +51,12 @@ public class AudioManager : MonoBehaviour
 
     public void SetMusicVolume(float volChange)
     {
-        GameObject.Find("Song1").GetComponent<AudioSource>().volume = volChange;
-        GameObject.Find("Song2").GetComponent<AudioSource>().volume = volChange;
-        GameObject.Find("Song3").GetComponent<AudioSource>().volume = volChange;
+         GameObject.Find("Song1").GetComponent<AudioSource>().volume = volChange * 0.5f;
+         GameObject.Find("Song2").GetComponent<AudioSource>().volume = volChange * 0.5f;
+         GameObject.Find("Song3").GetComponent<AudioSource>().volume = volChange * 0.5f;
+
         PlayerPrefs.SetFloat("musicVolume", volChange);
+        GlobalVars.musicVolume = volChange;
     }
 
     public void SaveSfxVolumeMainMenu(float volChange)

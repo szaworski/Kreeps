@@ -155,7 +155,7 @@ public class GlobalVars : MonoBehaviour
         kreepSpawnRate = 0.55f;
         allMonstersAreSpawned = false;
         currentSong = "Song1";
-        musicVolume = GameObject.Find(currentSong).GetComponent<AudioSource>().volume;
+        musicVolume = PlayerPrefs.GetFloat("musicVolume");
         selectedRectIsVertical = true;
     }
 }
