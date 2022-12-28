@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SavePopup : MonoBehaviour
 {
@@ -11,7 +11,15 @@ public class SavePopup : MonoBehaviour
     {
         triggerPopupText = true;
         popUpText.gameObject.SetActive(true);
-        StartCoroutine(SpawnPopup(0.3f, 0.5f, 8));
+
+        if (SceneManager.GetActiveScene().name == "Scene1")
+        {
+            StartCoroutine(SpawnPopup(0.3f, 0.5f, 2));
+        }
+        else
+        {
+            StartCoroutine(SpawnPopup(0.3f, 0.5f, 8));
+        }
     }
 
     void Update()
@@ -27,8 +35,8 @@ public class SavePopup : MonoBehaviour
         float startingXpos = this.transform.position.x;
         float startingYpos = this.transform.position.y;
 
-        this.transform.position = Vector2.MoveTowards(this.transform.position, new Vector2(this.transform.position.x, this.transform.position.y + distance), speed * Time.deltaTime);
-        yield return new WaitForSeconds(delayTime);
+        this.transform.position = Vector2.MoveTowards(this.transform.position, new Vector2(this.transform.position.x, this.transform.position.y + distance), speed * Time.unscaledDeltaTime);
+        yield return new WaitForSecondsRealtime(delayTime);
 
         this.transform.position = new Vector2(startingXpos, startingYpos);
         popUpText.gameObject.SetActive(false);

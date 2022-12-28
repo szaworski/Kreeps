@@ -41,9 +41,35 @@ public class AudioManager : MonoBehaviour
 
     public void SetSfxVolume(float volChange)
     {
-        foreach (Sound snd in sounds)
+        Component[] dmgSounds1 = GameObject.Find("DamageSounds1").GetComponents(typeof(AudioSource));
+        Component[] dmgSounds2 = GameObject.Find("DamageSounds2").GetComponents(typeof(AudioSource));
+        Component[] dmgSounds3 = GameObject.Find("DamageSounds3").GetComponents(typeof(AudioSource));
+        Component[] monsterSounds = GameObject.Find("MonsterSounds").GetComponents(typeof(AudioSource));
+        Component[] uiSounds = GameObject.Find("UiSounds").GetComponents(typeof(AudioSource));
+
+        foreach (AudioSource AudSrc in dmgSounds1)
         {
-            snd.source.volume = volChange;
+            AudSrc.volume = volChange;
+        }
+
+        foreach (AudioSource AudSrc in dmgSounds2)
+        {
+            AudSrc.volume = volChange;
+        }
+
+        foreach (AudioSource AudSrc in dmgSounds3)
+        {
+            AudSrc.volume = volChange;
+        }
+
+        foreach (AudioSource AudSrc in monsterSounds)
+        {
+            AudSrc.volume = volChange;
+        }
+
+        foreach (AudioSource AudSrc in uiSounds)
+        {
+            AudSrc.volume = volChange;
         }
 
         PlayerPrefs.SetFloat("sfxVolume", volChange);
