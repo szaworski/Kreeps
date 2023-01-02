@@ -147,10 +147,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: IceSlowUp
-  upgradeCost: 150
+  upgradeCost: 100
   upgradeType: Special
   bonusAmt: 0
-  bonusFloatAmt: 0.05
+  bonusFloatAmt: 0.08
 --- !u!1 &6107287453653215060
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,12 +216,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ice type weapons and towers gain an additional -5 move speed slow
+  m_text: 'Ice type weapons and towers gain an additional -8 move speed slow
 
 
 
     Cost:
-    150g'
+    100g'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

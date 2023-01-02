@@ -285,7 +285,7 @@ MonoBehaviour:
   cardName: Ice
   upgradeCost: 25
   upgradeType: BonusDmg
-  bonusAmt: 1
+  bonusAmt: 2
   bonusFloatAmt: 0
 --- !u!1 &6107287453653215060
 GameObject:
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ice type  weapons and towers gain +1 damage
+  m_text: 'Ice type  weapons and towers gain +2 damage
 
 
 

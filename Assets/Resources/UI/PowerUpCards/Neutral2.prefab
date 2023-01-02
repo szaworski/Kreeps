@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Normal type weapons and towers gain +2 damage
+  m_text: 'Normal type weapons and towers gain +4 damage
 
 
 
@@ -288,7 +288,7 @@ MonoBehaviour:
   cardName: Neutral
   upgradeCost: 50
   upgradeType: BonusDmg
-  bonusAmt: 2
+  bonusAmt: 4
   bonusFloatAmt: 0
 --- !u!1 &5125715559219115843
 GameObject:
