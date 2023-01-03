@@ -218,7 +218,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +30 armor
+    +20 armor
 
     for each Emerald Cavern placed'
   m_isRightToLeft: 0
