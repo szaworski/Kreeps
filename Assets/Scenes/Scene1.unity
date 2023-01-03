@@ -6529,7 +6529,7 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Damage: 8
+    Damage: 6
 
     Speed: 1s
 
@@ -11567,7 +11567,7 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Damage: 12
+    Damage: 10
 
     Speed: 1.2s
 
@@ -11755,7 +11755,7 @@ MonoBehaviour:
 
     -5 move speed
 
-    Damage: 7
+    Damage: 5
 
     Speed: 1s
 
@@ -13636,7 +13636,7 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Damage: 25
+    Damage: 20
 
     Speed: 0.9s
 
@@ -14898,7 +14898,7 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Damage: 18
+    Damage: 14
 
     Speed: 1.5s
 
