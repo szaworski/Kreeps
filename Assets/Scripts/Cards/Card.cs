@@ -76,11 +76,6 @@ public class Card : MonoBehaviour
             {
                 case "BonusDmg":
                     GlobalVars.bonusStats[cardName] += bonusAmt;
-
-                    if (GlobalVars.bonusStats[cardName + "Lvl"] < 3)
-                    {
-                        GlobalVars.bonusStats[cardName + "Lvl"]++;
-                    }
                     break;
 
                 case "Special":
