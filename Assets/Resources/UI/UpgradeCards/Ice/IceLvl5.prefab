@@ -352,7 +352,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'AOE in radius -7ms
+  m_text: 'AOE in radius -10ms
 
     Cost: 100g
 

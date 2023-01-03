@@ -405,7 +405,7 @@ MonoBehaviour:
   bonusRange2: 0
   bonusArmorDmg: 0
   projectileSpeed: 1
-  attackSpeed: 1.4
+  attackSpeed: 1.25
   attackRange: 0.7
   critChance: 0
   damageType: Thunder

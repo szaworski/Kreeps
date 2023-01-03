@@ -618,7 +618,7 @@ MonoBehaviour:
   attackRange: 0.6
   critChance: 0
   damageType: Ice2
-  slowAmt: 0.12
+  slowAmt: 0.15
   attackRadius: {fileID: 247469621238869209}
   hasRectangleRadius: 0
   rectIsVertical: 0
