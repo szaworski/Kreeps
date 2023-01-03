@@ -909,7 +909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   attackCd: 0
-  damage: 80
+  damage: 70
   bonusDamage2: 0
   bonusRange2: 0
   bonusArmorDmg: 0

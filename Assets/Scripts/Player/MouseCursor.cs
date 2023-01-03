@@ -88,7 +88,7 @@ public class MouseCursor : MonoBehaviour
                     ChangeWeaponStats(10, 1, 1.2f, 0.1f, "Neutral", 0, true, 1);
                     break;
                 case "LongSword":
-                    ChangeWeaponStats(10, 0, 2f, 0.3f, "Neutral", 0, true, 2);
+                    ChangeWeaponStats(8, 0, 2f, 0.3f, "Neutral", 0, true, 2);
                     break;
                 case "Spear":
                     ChangeWeaponStats(13, 1, 1.5f, 0.1f, "Neutral", 0, true, 3);
