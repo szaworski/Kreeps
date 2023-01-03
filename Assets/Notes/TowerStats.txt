@@ -15,10 +15,10 @@ Sniper Lvl 1
 Type: single target, Cost: 30, Dmg: 10, Rof: 1.25, Rng: 0.6
 
 Sniper Lvl 2
-Type: single target, Cost: 40, Dmg: 15, Rof: 1, Rng: 0.6
+Type: single target, Cost: 40, Dmg: 14, Rof: 1, Rng: 0.6
 
 Sniper Lvl 3
-Type: single target, Cost: 60, Dmg: 18, Rof: 1, Rng: 0.7
+Type: single target, Cost: 60, Dmg: 16, Rof: 1, Rng: 0.7
 
 Fortress
 Type: AOE, Cost: 100, Dmg: 10, Rof: 2, Rng: 0.6
