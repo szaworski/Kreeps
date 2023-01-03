@@ -11567,9 +11567,9 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Damage: 14
+    Damage: 16
 
-    Speed: 1.3s
+    Speed: 1.25s
 
     Range: 0.7
 
@@ -13636,7 +13636,7 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Damage: 20
+    Damage: 25
 
     Speed: 0.9s
 
@@ -14900,7 +14900,7 @@ MonoBehaviour:
 
     Damage: 18
 
-    Speed: 1.6s
+    Speed: 1.5s
 
     Range: 0.6
 
@@ -16943,7 +16943,7 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Damage: 4
+    Damage: 8
 
     Speed: 0.55s
 
