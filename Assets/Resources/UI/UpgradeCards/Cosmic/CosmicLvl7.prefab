@@ -207,10 +207,10 @@ MonoBehaviour:
 
     Damage: 200
 
-    Speed: 3s
+    Speed: 2s
 
     Range:
-    3
+    2
 
     Radius: Square
 

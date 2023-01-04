@@ -207,7 +207,7 @@ MonoBehaviour:
 
     Damage: 60
 
-    Speed: 0.9s
+    Speed: 0.7s
 
     Range:
     0.7
