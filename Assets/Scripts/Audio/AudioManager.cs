@@ -16,7 +16,7 @@ public class AudioManager : MonoBehaviour
     }
     private void Start()
     {
-        StartCoroutine(SetStartingMusic(1f));
+        StartCoroutine(SetStartingMusic(2f));
     }
 
     public void LoadSounds()

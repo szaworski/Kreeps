@@ -30,19 +30,19 @@ public class MouseCursor : MonoBehaviour
     {
         SetNewWeapon();
         SwapMouseCursor();
+
+        if (GlobalVars.waveEnded)
+        {
+            GlobalVars.waveEnded = false;
+        }
     }
 
     public void SwapMouseCursor()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) && !GlobalVars.stoneIsSelected || GlobalVars.isPaused && !GlobalVars.stoneIsSelected || GlobalVars.waveEnded)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && !GlobalVars.stoneIsSelected || GlobalVars.isPaused && !GlobalVars.stoneIsSelected)
         {
             GlobalVars.weaponIsSelected = false;
             Cursor.SetCursor(cursorImage, Vector2.zero, CursorMode.ForceSoftware);
-
-            if (GlobalVars.waveEnded)
-            {
-                GlobalVars.waveEnded = false;
-            }
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2) && GlobalVars.currentWeapon != "" && !GlobalVars.isPaused && !GlobalVars.stoneIsSelected)

@@ -25,12 +25,17 @@ public class Card : MonoBehaviour
 
     public void SetSelectedCardType()
     {
-        if (!GlobalVars.isPaused)
+        if (!GlobalVars.isPaused && !GlobalVars.weaponIsSelected)
         {
             GlobalVars.tileCardSelected = cardName;
             GlobalVars.IsHoveringOverUiCard = false;
             GlobalVars.triggerTileCardDestruction = true;
             GlobalVars.triggerBonusStatsUpdate = true;
+        }
+
+        else
+        {
+            GameObject.Find("UiSounds").GetComponent<AudioManager>().PlaySound("Error");
         }
     }
 

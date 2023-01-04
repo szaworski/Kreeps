@@ -19838,6 +19838,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 372268516383256110, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 990907417794489581, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
@@ -19848,15 +19852,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4465957350087987226, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
       propertyPath: m_Color.r
-      value: 0.47058824
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4465957350087987226, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
       propertyPath: m_Color.g
-      value: 0.47058824
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4465957350087987226, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
       propertyPath: m_Color.b
-      value: 0.47058824
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5860450592416952545, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
       propertyPath: m_IgnoreReversedGraphics

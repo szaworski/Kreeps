@@ -57,7 +57,7 @@ public class PauseMenuButtons : LoadNewScene
             OpenGameOverMenuUi();
         }
 
-        if (GlobalVars.victory && GlobalVars.playerHealth > 0)
+        else if (GlobalVars.playerHealth > 0  && GlobalVars.victory)
         {
             OpenVictoryMenuUi();
         }
@@ -114,7 +114,6 @@ public class PauseMenuButtons : LoadNewScene
     public void OpenGameOverMenuUi()
     {
         GlobalVars.isPaused = true;
-        Time.timeScale = 0f;
 
         pauseMenuUI.SetActive(false);
         returnToMainMenuUI.SetActive(false);
@@ -126,7 +125,6 @@ public class PauseMenuButtons : LoadNewScene
     public void OpenVictoryMenuUi()
     {
         GlobalVars.isPaused = true;
-        Time.timeScale = 0f;
 
         pauseMenuUI.SetActive(false);
         returnToMainMenuUI.SetActive(false);

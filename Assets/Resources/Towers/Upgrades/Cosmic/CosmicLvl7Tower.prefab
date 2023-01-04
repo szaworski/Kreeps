@@ -188,10 +188,12 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   attackCd: 0
   damage: 200
+  bonusDamage2: 0
+  bonusRange2: 0
   bonusArmorDmg: 0
   projectileSpeed: 1
   attackSpeed: 3
-  attackRange: 3
+  attackRange: 2
   critChance: 0
   damageType: Cosmic2
   slowAmt: 0
@@ -1195,6 +1197,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1927634959647619065}
     m_Modifications:
+    - target: {fileID: 2690022899279082505, guid: c47af3680bb2df64e88dae0b6b5a9433, type: 3}
+      propertyPath: m_MaxValue
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3597337855953576760, guid: c47af3680bb2df64e88dae0b6b5a9433, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
