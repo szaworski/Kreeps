@@ -39,14 +39,25 @@ public class WeaponHudIcon : MonoBehaviour
     {
         if (GlobalVars.newWeapon != "")
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                HideShowWeaponStats();
-            }
+            ShowWeaponStats();
         }
     }
 
-    void HideShowWeaponStats()
+    void OnMouseExit()
+    {
+        HideWeaponStats();
+    }
+
+    void HideWeaponStats()
+    {
+        if (weaponStats.activeSelf)
+        {
+            GlobalVars.IsHoveringOverUiCard = false;
+            weaponStats.SetActive(false);
+        }
+    }
+
+    void ShowWeaponStats()
     {
         if (!weaponStats.activeSelf)
         {
@@ -54,20 +65,14 @@ public class WeaponHudIcon : MonoBehaviour
             GlobalVars.IsHoveringOverUiCard = true;
             weaponStats.SetActive(true);
         }
-
-        else if (weaponStats.activeSelf)
-        {
-            GlobalVars.IsHoveringOverUiCard = false;
-            weaponStats.SetActive(false);
-        }
     }
 
     void UpdateWeaponStatsText()
     {
-        damage = weaponScript.startingDamage;
+        damage = weaponScript.damage;
         projectileSpeed = weaponScript.projectileSpeed;
-        attackSpeed = weaponScript.startingSpeed;
-        attackRange = weaponScript.startingAttackRange;
+        attackSpeed = weaponScript.attackSpeed;
+        attackRange = weaponScript.attackRange;
 
         if (projectileSpeed == 0)
         {
