@@ -9,6 +9,7 @@ public class PauseMenuButtons : LoadNewScene
     [SerializeField] private GameObject returnToMainMenuUI;
     [SerializeField] private GameObject exitGameMenuUI;
     [SerializeField] private GameObject gameOverMenuUI;
+    [SerializeField] private GameObject victoryMenuUI;
     [SerializeField] private Animator transition;
     [SerializeField] private bool isLoading;
 
@@ -54,6 +55,11 @@ public class PauseMenuButtons : LoadNewScene
         if (GlobalVars.playerHealth <= 0)
         {
             OpenGameOverMenuUi();
+        }
+
+        if (GlobalVars.victory && GlobalVars.playerHealth > 0)
+        {
+            OpenVictoryMenuUi();
         }
 
         musicVolume = musicVolumeSlider.value;
@@ -108,12 +114,25 @@ public class PauseMenuButtons : LoadNewScene
     public void OpenGameOverMenuUi()
     {
         GlobalVars.isPaused = true;
+        Time.timeScale = 0f;
 
         pauseMenuUI.SetActive(false);
         returnToMainMenuUI.SetActive(false);
         exitGameMenuUI.SetActive(false);
-        //optionsMenuUI.SetActive(false);
+        optionsMenuUI.SetActive(false);
         gameOverMenuUI.SetActive(true);
+    }
+
+    public void OpenVictoryMenuUi()
+    {
+        GlobalVars.isPaused = true;
+        Time.timeScale = 0f;
+
+        pauseMenuUI.SetActive(false);
+        returnToMainMenuUI.SetActive(false);
+        exitGameMenuUI.SetActive(false);
+        optionsMenuUI.SetActive(false);
+        victoryMenuUI.SetActive(true);
     }
 
     public void ReturnToMainMenuCancel()

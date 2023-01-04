@@ -42,7 +42,7 @@ public class PlayerHud : MonoBehaviour
         weaponHudImage.sprite = weaponHudImagesList[0];
 
         //When changing the gold value, add or subtract from the "gold" variable, and then set "goldAmtUiText" to the new value
-        GlobalVars.gold = 150;
+        GlobalVars.gold = 120;
         GlobalVars.newGoldValue = GlobalVars.gold;
         goldAmtUiText.SetText(GlobalVars.gold.ToString());
         GlobalVars.showStartWaveInstructions = true;

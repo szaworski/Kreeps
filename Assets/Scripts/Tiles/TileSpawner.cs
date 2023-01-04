@@ -237,47 +237,55 @@ public class TileSpawner : CardsLists
                 }
             }
 
-            //Create a list of 3 unique random cards from the current card list
-            for (int i = 0; i < 3; i++)
+            else if (GlobalVars.tileCounters["numOfTimesPlaced"] == 40)
             {
-                //Fetch a random element from the card list
-                int index = Random.Range(0, currentCardList.Count);
-                string selectedCard = currentCardList[index];
-
-                //Remove the selected card from the list so we dont repeat any cards
-                currentCardList.RemoveAt(index);
-
-                //Set each selected card to its correlating slot
-                switch (i)
-                {
-                    case 0:
-                        card1 = selectedCard;
-                        Debug.Log("Card 1: " + card1);
-                        break;
-                    case 1:
-                        card2 = selectedCard;
-                        Debug.Log("Card 2: " + card2);
-                        break;
-                    case 2:
-                        card3 = selectedCard;
-                        Debug.Log("Card 3: " + card3);
-                        break;
-                }
+                GlobalVars.victory = true;
             }
 
-            //Instantiate the Tile Cards
-            GameObject cardSlot1 = GameObject.Find("TileCardSlot1");
-            GameObject cardSlot2 = GameObject.Find("TileCardSlot2");
-            GameObject cardSlot3 = GameObject.Find("TileCardSlot3");
+            if (!GlobalVars.victory)
+            {
+                //Create a list of 3 unique random cards from the current card list
+                for (int i = 0; i < 3; i++)
+                {
+                    //Fetch a random element from the card list
+                    int index = Random.Range(0, currentCardList.Count);
+                    string selectedCard = currentCardList[index];
 
-            card1Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + GlobalVars.currTier + "/" + card1), cardSlot1.transform);
-            card2Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + GlobalVars.currTier + "/" + card2), cardSlot2.transform);
-            card3Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + GlobalVars.currTier + "/" + card3), cardSlot3.transform);
+                    //Remove the selected card from the list so we dont repeat any cards
+                    currentCardList.RemoveAt(index);
 
-            card1Obj.transform.position = cardSlot1.transform.position;
-            card2Obj.transform.position = cardSlot2.transform.position;
-            card3Obj.transform.position = cardSlot3.transform.position;
-            locationSelectText.enabled = true;
+                    //Set each selected card to its correlating slot
+                    switch (i)
+                    {
+                        case 0:
+                            card1 = selectedCard;
+                            Debug.Log("Card 1: " + card1);
+                            break;
+                        case 1:
+                            card2 = selectedCard;
+                            Debug.Log("Card 2: " + card2);
+                            break;
+                        case 2:
+                            card3 = selectedCard;
+                            Debug.Log("Card 3: " + card3);
+                            break;
+                    }
+                }
+
+                //Instantiate the Tile Cards
+                GameObject cardSlot1 = GameObject.Find("TileCardSlot1");
+                GameObject cardSlot2 = GameObject.Find("TileCardSlot2");
+                GameObject cardSlot3 = GameObject.Find("TileCardSlot3");
+
+                card1Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + GlobalVars.currTier + "/" + card1), cardSlot1.transform);
+                card2Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + GlobalVars.currTier + "/" + card2), cardSlot2.transform);
+                card3Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + GlobalVars.currTier + "/" + card3), cardSlot3.transform);
+
+                card1Obj.transform.position = cardSlot1.transform.position;
+                card2Obj.transform.position = cardSlot2.transform.position;
+                card3Obj.transform.position = cardSlot3.transform.position;
+                locationSelectText.enabled = true;
+            }
         }
 
         //Destory all tile card game objects after a selection is made. See Card.cs
