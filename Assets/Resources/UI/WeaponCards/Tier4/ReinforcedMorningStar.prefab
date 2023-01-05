@@ -67,9 +67,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-    Damage: 80
+    Damage: 70
 
-    Speed: 0.3s
+    Speed: 0.4s
 
     Range: 0.15
 

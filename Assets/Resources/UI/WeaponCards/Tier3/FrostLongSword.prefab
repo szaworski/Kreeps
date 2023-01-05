@@ -69,9 +69,9 @@ MonoBehaviour:
 
     -15 move speed
 
-    Damage: 90
+    Damage: 70
 
-    Speed: 1.3s
+    Speed: 1.4s
 
     Range:
     0.15
