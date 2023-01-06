@@ -484,22 +484,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 275
+  health: 300
   armor: 0
   goldBounty: 10
   type: Humanoid/Beast
-  moveSpeed: 0.55
+  moveSpeed: 0.58
   hpRegen: 0
   evasionChance: 0
   healthText: {fileID: 2240702306701519988}
   maxHealthText: {fileID: 7794477886941289041}
   armorText: {fileID: 2734610523239855658}
   HealthContainer: {fileID: 7549338442133584252}
+  ArmorObject: {fileID: 0}
   distanceTraveled: 0
   isTakingDamage: 0
   iceSlowCd: 0
   iceSlowStatus: 0
   iceSlowAmt: 0.1
+  isPoisoned: 0
+  isTakingPoisonDamage: 0
 --- !u!1 &6959035619013095681
 GameObject:
   m_ObjectHideFlags: 0
