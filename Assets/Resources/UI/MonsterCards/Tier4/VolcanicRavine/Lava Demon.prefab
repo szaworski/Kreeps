@@ -238,9 +238,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Base stats:
 
-    Health: 500
+    Health: 800
 
-    Armor: 100
+    Armor: 300
 
     Speed: 30
 

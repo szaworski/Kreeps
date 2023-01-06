@@ -484,7 +484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 430
+  health: 480
   armor: 0
   goldBounty: 10
   type: Pest
@@ -495,11 +495,14 @@ MonoBehaviour:
   maxHealthText: {fileID: 7794477886941289041}
   armorText: {fileID: 6231204991781277909}
   HealthContainer: {fileID: 7549338442133584252}
+  ArmorObject: {fileID: 0}
   distanceTraveled: 0
   isTakingDamage: 0
   iceSlowCd: 0
   iceSlowStatus: 0
   iceSlowAmt: 0.1
+  isPoisoned: 0
+  isTakingPoisonDamage: 0
 --- !u!1 &6959035619013095681
 GameObject:
   m_ObjectHideFlags: 0

@@ -484,8 +484,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 450
-  armor: 100
+  health: 500
+  armor: 600
   goldBounty: 10
   type: Brute/Demon
   moveSpeed: 0.32
@@ -501,6 +501,8 @@ MonoBehaviour:
   iceSlowCd: 0
   iceSlowStatus: 0
   iceSlowAmt: 0.1
+  isPoisoned: 0
+  isTakingPoisonDamage: 0
 --- !u!1 &6959035619013095681
 GameObject:
   m_ObjectHideFlags: 0
