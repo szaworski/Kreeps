@@ -302,20 +302,20 @@ public class Tower : MonoBehaviour
         if (damage != startingDamage + bonusDamage + bonusDamage2)
         {
             damage = startingDamage + bonusDamage + bonusDamage2;
-            dmgText.SetText(damage.ToString());
+            dmgText.SetText(Mathf.Round(damage).ToString());
         }
 
         if (attackRange != startingAttackRange + bonusRange + bonusRange2)
         {
             attackRange = startingAttackRange + bonusRange + bonusRange2;
-            rngText.SetText(attackRange.ToString());
+            rngText.SetText(attackRange.ToString("F1"));
             DrawAttackRadius();
         }
 
         if (attackSpeed != startingSpeed - bonusSpeed)
         {
             attackSpeed = startingSpeed - bonusSpeed;
-            rofText.SetText(attackSpeed.ToString() + "s");
+            rofText.SetText(attackSpeed.ToString("F1") + "s");
         }
 
         if (critChance != startingCritChance + bonusCritChance)

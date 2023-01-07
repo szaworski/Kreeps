@@ -143,11 +143,11 @@ public class GlobalVars : MonoBehaviour
 
         //Add starting kreep bonus stats
         bonusKreepStats.Clear();
-        bonusKreepStats.Add("BonusMoveSpeed", 0f);
-        bonusKreepStats.Add("BonusMaxHealth", 0f);
-        bonusKreepStats.Add("BonusHpRegen", 0f);
-        bonusKreepStats.Add("BonusArmor", 0f);
-        bonusKreepStats.Add("BonusEvasion", 0f);
+        bonusKreepStats.Add("BonusMoveSpeed", 0);
+        bonusKreepStats.Add("BonusMaxHealth", 0);
+        bonusKreepStats.Add("BonusHpRegen", 0);
+        bonusKreepStats.Add("BonusArmor", 0);
+        bonusKreepStats.Add("BonusEvasion", 0);
 
         currTier = "Tier1";
         currTierNum = 1;

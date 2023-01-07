@@ -205,10 +205,10 @@ public class PlayerHud : MonoBehaviour
  
         //Set the new text values
         bonusMoveSpeedUiText.SetText(("+") + Mathf.Round(bonusMoveSpeed * 100).ToString());
-        bonusMaxHealthUiText.SetText(("+") + bonusMaxHealth.ToString());
-        bonusHpRegenUiText.SetText(("+") + bonusHpRegen.ToString());
+        bonusMaxHealthUiText.SetText(("+") + Mathf.Round(bonusMaxHealth).ToString());
+        bonusHpRegenUiText.SetText(("+") + Mathf.Round(bonusHpRegen).ToString());
         bonusEvasionUiText.SetText(("+") + Mathf.Round(bonusEvasion * 100) + ("%").ToString());
-        bonusArmorUiText.SetText(("+") + bonusArmor.ToString());
+        bonusArmorUiText.SetText(("+") + Mathf.Round(bonusArmor).ToString());
 
         GlobalVars.bonusKreepStats["BonusMoveSpeed"] = bonusMoveSpeed;
         GlobalVars.bonusKreepStats["BonusMaxHealth"] = bonusMaxHealth;

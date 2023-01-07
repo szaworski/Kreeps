@@ -83,8 +83,8 @@ public class WeaponHudIcon : MonoBehaviour
             typeText.SetText("Single target");
         }
 
-        dmgText.SetText(damage.ToString());
-        rofText.SetText(attackSpeed.ToString());
-        rngText.SetText(attackRange.ToString());
+        dmgText.SetText(Mathf.Round(damage).ToString());
+        rofText.SetText(attackSpeed.ToString("F1"));
+        rngText.SetText(attackRange.ToString("F1"));
     }
 }
