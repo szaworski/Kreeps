@@ -18,6 +18,7 @@ public class Monster : MonoBehaviour
     [SerializeField] private TMP_Text armorText;
     [SerializeField] private GameObject HealthContainer;
     [SerializeField] private GameObject ArmorObject;
+    private float reducedMoveSpeed;
     private float hpRegenCd;
     private int damage;
     private Color green = new Vector4(0, 1, 0, 1);
@@ -198,7 +199,7 @@ public class Monster : MonoBehaviour
 
                 case var _ when damageType.Contains("Ice"):
 
-                    iceSlowCd = 1f + Time.time;
+                    iceSlowCd = 0.8f + Time.time;
 
                     if (!iceSlowStatus || iceSlowStatus && slowAmt > iceSlowAmt)
                     {
@@ -363,9 +364,9 @@ public class Monster : MonoBehaviour
         {
             iceSlowStatus = false;
 
-            if (moveSpeed == 0.1f)
+            if (moveSpeed == 0.25f)
             {
-                moveSpeed += iceSlowAmt - 0.1f;
+                moveSpeed = reducedMoveSpeed + iceSlowAmt;
             }
 
             else
@@ -377,9 +378,10 @@ public class Monster : MonoBehaviour
 
     void LimitMoveSpeedReduction()
     {
-        if (iceSlowStatus && moveSpeed <= 0.1f)
+        if (iceSlowStatus && moveSpeed <= 0.25f)
         {
-            moveSpeed = 0.1f;
+            reducedMoveSpeed = moveSpeed;
+            moveSpeed = 0.25f;
         }
     }
 

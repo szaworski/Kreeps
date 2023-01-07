@@ -873,13 +873,13 @@ MonoBehaviour:
   bonusArmorDmg: 0
   projectileSpeed: 1
   attackSpeed: 1.2
-  attackRange: 0.5
+  attackRange: 0.6
   critChance: 0
   damageType: Fire2
   slowAmt: 0
   attackRadius: {fileID: 1578552572651102220}
-  hasRectangleRadius: 1
-  rectIsVertical: 1
+  hasRectangleRadius: 0
+  rectIsVertical: 0
   triggerRadiusFlip: 0
   isAoeWithProjectiles: 1
   dmgText: {fileID: 6047158923372121903}
