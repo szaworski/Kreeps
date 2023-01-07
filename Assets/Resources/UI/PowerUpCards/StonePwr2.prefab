@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Give a single tower +6 damage. This damage is removed if the tower is
+  m_text: 'Give a single tower +5 damage. This damage is removed if the tower is
     upgraded
 
 
@@ -288,7 +288,7 @@ MonoBehaviour:
   cardName: StonePwr
   upgradeCost: 50
   upgradeType: Stone
-  bonusAmt: 6
+  bonusAmt: 5
   bonusFloatAmt: 0
 --- !u!1 &4767132728337282758
 GameObject:

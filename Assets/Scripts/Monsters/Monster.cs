@@ -389,7 +389,7 @@ public class Monster : MonoBehaviour
         {
             if (health + hpRegen < maxHealth)
             {
-                hpRegenCd = 1f + Time.time;
+                hpRegenCd = 0.8f + Time.time;
                 health += hpRegen;
                 healthText.SetText(health.ToString());
                 StartCoroutine(SpawnHpRegenPopup(hpRegen, 0.25f));
@@ -414,16 +414,12 @@ public class Monster : MonoBehaviour
 
             else if (health + hpRegen >= maxHealth)
             {
-                hpRegenCd = 1f + Time.time;
+                hpRegenCd = 0.8f + Time.time;
                 health = maxHealth;
                 healthText.SetText(health.ToString());
                 healthText.color = green;
                 maxHealthText.color = green;
-
-                if (health < maxHealth)
-                {
-                    StartCoroutine(SpawnHpRegenPopup(hpRegen, 0.25f));
-                }
+                StartCoroutine(SpawnHpRegenPopup(hpRegen, 0.25f));
             }
         }
     }

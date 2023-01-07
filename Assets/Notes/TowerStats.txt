@@ -12,16 +12,16 @@ Normal Lvl 3
 Type: single target, Cost: 20, Dmg: 12, Rof: 0.9, Rng: 0.6
 
 Sniper Lvl 1
-Type: single target, Cost: 30, Dmg: 10, Rof: 1.25, Rng: 0.6
+Type: single target, Cost: 30, Dmg: 10, Rof: 1.5, Rng: 0.6
 
 Sniper Lvl 2
-Type: single target, Cost: 40, Dmg: 14, Rof: 1, Rng: 0.6
+Type: single target, Cost: 40, Dmg: 12, Rof: 1.2, Rng: 0.6
 
 Sniper Lvl 3
-Type: single target, Cost: 60, Dmg: 16, Rof: 1, Rng: 0.7
+Type: single target, Cost: 60, Dmg: 18, Rof: 1.5, Rng: 0.7
 
 Fortress
-Type: AOE, Cost: 100, Dmg: 10, Rof: 2, Rng: 0.6
+Type: AOE, Cost: 100, Dmg: 12, Rof: 2, Rng: 0.6
 
 
 
@@ -93,7 +93,7 @@ Shock Lvl 1
 Type: single target, Cost: 100, Dmg: 16, Rof: 1.25, Rng: 0.7
 
 Shock Lvl 2
-Type: AOE, Cost: 150, Dmg: 3, Rof: 0.8, Rng: 0.5
+Type: AOE, Cost: 150, Dmg: 3, Rof: 0.75, Rng: 0.5
 
 Shock Lvl 3
 Type: single target, Cost: 200, Dmg: 24, Rof: 1, Rng: 0.8
@@ -125,7 +125,7 @@ Divine Lvl 3
 Type: single target, Cost: 200, Dmg: 45, Rof: 2, Rng: 0.8
 
 Cathedral
-Type: AOE, Cost: 400, Dmg: 18, Rof: 1.5, Rng: 0.5
+Type: AOE, Cost: 400, Dmg: 20, Rof: 1.5, Rng: 0.5
 
 
 
@@ -145,26 +145,28 @@ Agile Lvl 1
 Type: single target, Cost: 150, Dmg: 14, Rof: 0.45, Rng: 0.7
 
 Agile Lvl 2
-Type: single target, Cost: 200, Dmg: 24, Rof: 0.4, Rng: 0.7
+Type: single target, Cost: 200, Dmg: 22, Rof: 0.4, Rng: 0.7
 
 Scattershot
-Type: AOE, Cost: 250, Dmg: 18, Rof: 1.75, Rng: 0.6
+Type: AOE, Cost: 250, Dmg: 18, Rof: 2, Rng: 0.6
 
 Citadel
 Type: single target, Cost: 500, Dmg: 20, Rof: 0.25, Rng: 0.8
+
+
 
 
 Cosmic Towers:
 Bonus power: + crit chance
 
 Cosmic Lvl 1
-Type: single target, Cost: 250, Dmg: 20, Rof: 0.9, Rng: 0.7
+Type: single target, Cost: 250, Dmg: 20, Rof: 0.8, Rng: 0.7
 
 Cosmic Lvl 2
-Type: single target, Cost: 175, Dmg: 40, Rof: 0.9, Rng: 0.7
+Type: single target, Cost: 175, Dmg: 40, Rof: 0.75, Rng: 0.7
 
 Cosmic Lvl 3
-Type: single target, Cost: 175, Dmg: 60, Rof: 0.9, Rng: 0.7
+Type: single target, Cost: 175, Dmg: 60, Rof: 0.7, Rng: 0.7
 
 Comet Lvl 1
 Type: AOE, Cost: 250, Dmg: 20, Rof: 1.2, Rng: 0.6
@@ -173,10 +175,10 @@ Comet Lvl 2
 Type: AOE, Cost: 300, Dmg: 40, Rof: 1, Rng: 0.6
 
 Comet Lvl 3
-Type: single target, Cost: 300, Dmg: 80, Rof: 0.7, Rng: 1
+Type: single target, Cost: 300, Dmg: 80, Rof: 0.6, Rng: 1
 
 Observatory
-Type: single target, Cost: 650, Dmg: 200, Rof: 3, Rng: 3
+Type: single target, Cost: 650, Dmg: 200, Rof: 2, Rng: 2
 
 
 
