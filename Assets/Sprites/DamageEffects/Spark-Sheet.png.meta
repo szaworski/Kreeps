@@ -8,12 +8,6 @@ TextureImporter:
   - first:
       213: -5665611290911695472
     second: Spark-Sheet_1
-  - first:
-      213: 3533237948495138872
-    second: Spark-Sheet_0
-  - first:
-      213: -6948163621424600501
-    second: Spark-Sheet_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -127,8 +121,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8309bfab135980130800000000000000
-      internalID: 3533237948495138872
+      spriteID: 5c8333d7e7b6556c0800000000000000
+      internalID: -4155296890168854331
       vertices: []
       indices: 
       edges: []
@@ -148,8 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4ae1bfcff9239f90800000000000000
-      internalID: -6948163621424600501
+      spriteID: 09d14c17c84bf51b0800000000000000
+      internalID: -5665611290911695472
       vertices: []
       indices: 
       edges: []
