@@ -133,7 +133,7 @@ Swift Towers:
 Bonus power: + poison damage
 
 Swift Lvl 1
-Type: single target, Cost: 150, Dmg: 5, Rof: 0.7, Rng: 0.5
+Type: single target, Cost: 150, Dmg: 6, Rof: 0.7, Rng: 0.5
 
 Swift Lvl 2
 Type: single target, Cost: 100, Dmg: 9, Rof: 0.65, Rng: 0.5
@@ -169,10 +169,10 @@ Cosmic Lvl 3
 Type: single target, Cost: 175, Dmg: 60, Rof: 0.7, Rng: 0.7
 
 Comet Lvl 1
-Type: AOE, Cost: 250, Dmg: 20, Rof: 1.2, Rng: 0.6
+Type: AOE, Cost: 250, Dmg: 20, Rof: 1.2, Rng: 0.5
 
 Comet Lvl 2
-Type: AOE, Cost: 300, Dmg: 40, Rof: 1, Rng: 0.6
+Type: AOE, Cost: 300, Dmg: 40, Rof: 1, Rng: 0.5
 
 Comet Lvl 3
 Type: single target, Cost: 300, Dmg: 80, Rof: 0.6, Rng: 1
