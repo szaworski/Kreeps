@@ -18,10 +18,10 @@ public class CardsLists : MonoBehaviour
 
     //Tier 2 Monsters
     [System.NonSerialized] public List<string> desertMonsterCards = new List<string> { "Mummy", "Scorpion", "Rattlesnake", "Camel" };
-    [System.NonSerialized] public List<string> thicketMonsterCards = new List<string> { "Wild Boar", "Minotaur", "Panther", "Giant Spider" };
+    [System.NonSerialized] public List<string> thicketMonsterCards = new List<string> { "Ogre", "Minotaur", "Panther", "Giant Spider" };
     [System.NonSerialized] public List<string> tundraMonsterCards = new List<string> { "Polar Bear", "Arctic Wolf", "Penguin", "Lich" };
-    [System.NonSerialized] public List<string> cavernMonsterCards = new List<string> { "Ogre", "Miner", "Wraith", "Skeleton Warrior" };
-    [System.NonSerialized] public List<string> settlementMonsterCards = new List<string> { "Knight", "Sheep", "Farmer", "Rat" };
+    [System.NonSerialized] public List<string> cavernMonsterCards = new List<string> { "Rat", "Miner", "Wraith", "Skeleton Warrior" };
+    [System.NonSerialized] public List<string> settlementMonsterCards = new List<string> { "Knight", "Sheep", "Farmer", "Wild Boar" };
     [System.NonSerialized] public List<string> seashoreMonsterCards = new List<string> { "Crab", "Drifter", "Fisherman", "Sea Serpent" };
 
     //Tier 3 Monsters
