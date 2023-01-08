@@ -6740,11 +6740,11 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Damage: 6
+    Damage: 7
 
     Speed: 1s
 
-    Range: 0.6
+    Range: 0.5
 
     Radius
     type: Rectangle
@@ -12176,14 +12176,14 @@ MonoBehaviour:
 
     -5 move speed
 
-    Damage: 5
+    Damage: 6
 
     Speed: 1s
 
     Range:
-    0.6
+    0.5
 
-    Radius type: Square
+    Radius type: Rectangle
 
 
     Damage Bonus:

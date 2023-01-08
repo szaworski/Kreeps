@@ -205,12 +205,12 @@ MonoBehaviour:
 
     Cost: 50g
 
-    Damage: 10
+    Damage: 12
 
     Speed: 1s
 
     Range:
-    0.6
+    0.5
 
     Radius: Rectangle'
   m_isRightToLeft: 0
