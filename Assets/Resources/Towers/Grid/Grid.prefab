@@ -50,6 +50,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TowerGridPosition 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8293651273878270205, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293651273878270205, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8293651273878270206, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.345
@@ -111,6 +119,14 @@ PrefabInstance:
     - target: {fileID: 8293651273878270204, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
       propertyPath: m_Name
       value: TowerGridPosition 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293651273878270205, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293651273878270205, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8293651273878270206, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -174,6 +190,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TowerGridPosition 5
       objectReference: {fileID: 0}
+    - target: {fileID: 8293651273878270205, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293651273878270205, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8293651273878270206, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -235,6 +259,14 @@ PrefabInstance:
     - target: {fileID: 8293651273878270204, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
       propertyPath: m_Name
       value: TowerGridPosition 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293651273878270205, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293651273878270205, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8293651273878270206, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -298,6 +330,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TowerGridPosition 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8293651273878270205, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293651273878270205, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8293651273878270206, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.345
@@ -359,6 +399,14 @@ PrefabInstance:
     - target: {fileID: 8293651273878270204, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
       propertyPath: m_Name
       value: TowerGridPosition 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293651273878270205, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293651273878270205, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8293651273878270206, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -422,6 +470,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TowerGridPosition 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8293651273878270205, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293651273878270205, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8293651273878270206, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.345
@@ -484,6 +540,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TowerGridPosition 9
       objectReference: {fileID: 0}
+    - target: {fileID: 8293651273878270205, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293651273878270205, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 8293651273878270206, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.345
@@ -545,6 +609,14 @@ PrefabInstance:
     - target: {fileID: 8293651273878270204, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
       propertyPath: m_Name
       value: TowerGridPosition 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293651273878270205, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8293651273878270205, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8293651273878270206, guid: 750c9f7cc46074941b0aa7beb3f0db4c, type: 3}
       propertyPath: m_LocalPosition.x
