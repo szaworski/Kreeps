@@ -47,7 +47,7 @@ Ember Lvl 3
 Type: single target, Cost: 150, Dmg: 18, Rof: 0.8, Rng: 0.7
 
 Fire Storm
-Type: AOE, Cost: 300, Dmg: 14, Rof: 1.2, Rng: 0.5
+Type: AOE, Cost: 300, Dmg: 14, Rof: 1.2, Rng: 0.6
 
 
 
@@ -133,25 +133,25 @@ Swift Towers:
 Bonus power: + poison damage
 
 Swift Lvl 1
-Type: single target, Cost: 150, Dmg: 8, Rof: 0.55, Rng: 0.6
+Type: single target, Cost: 150, Dmg: 8, Rof: 0.7, Rng: 0.5
 
 Swift Lvl 2
-Type: single target, Cost: 100, Dmg: 12, Rof: 0.5, Rng: 0.6
+Type: single target, Cost: 100, Dmg: 12, Rof: 0.65, Rng: 0.5
 
 Swift Lvl 3
-Type: single target, Cost: 100, Dmg: 16, Rof: 0.45, Rng: 0.6
+Type: single target, Cost: 100, Dmg: 16, Rof: 0.6, Rng: 0.5
 
 Agile Lvl 1
-Type: single target, Cost: 150, Dmg: 14, Rof: 0.45, Rng: 0.7
+Type: single target, Cost: 150, Dmg: 14, Rof: 0.6, Rng: 0.6
 
 Agile Lvl 2
-Type: single target, Cost: 200, Dmg: 22, Rof: 0.4, Rng: 0.7
+Type: single target, Cost: 200, Dmg: 22, Rof: 0.5, Rng: 0.6
 
 Scattershot
-Type: AOE, Cost: 250, Dmg: 18, Rof: 2, Rng: 0.6
+Type: AOE, Cost: 250, Dmg: 18, Rof: 2, Rng: 0.5
 
 Citadel
-Type: single target, Cost: 500, Dmg: 20, Rof: 0.25, Rng: 0.8
+Type: single target, Cost: 500, Dmg: 20, Rof: 0.35, Rng: 0.8
 
 
 

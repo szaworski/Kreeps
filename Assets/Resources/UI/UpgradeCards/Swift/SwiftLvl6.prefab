@@ -74,7 +74,7 @@ MonoBehaviour:
     Speed: 2
 
     Range:
-    0.6
+    0.5
 
     Radius: Rectangle
 

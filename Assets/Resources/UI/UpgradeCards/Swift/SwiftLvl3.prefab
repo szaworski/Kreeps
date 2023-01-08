@@ -358,10 +358,10 @@ MonoBehaviour:
 
     Damage: 16
 
-    Speed: 0.45s
+    Speed: 0.6s
 
     Range:
-    0.6
+    0.5
 
     Radius: Rectangle
 
