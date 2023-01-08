@@ -133,25 +133,25 @@ Swift Towers:
 Bonus power: + poison damage
 
 Swift Lvl 1
-Type: single target, Cost: 150, Dmg: 8, Rof: 0.7, Rng: 0.5
+Type: single target, Cost: 150, Dmg: 5, Rof: 0.7, Rng: 0.5
 
 Swift Lvl 2
-Type: single target, Cost: 100, Dmg: 12, Rof: 0.65, Rng: 0.5
+Type: single target, Cost: 100, Dmg: 9, Rof: 0.65, Rng: 0.5
 
 Swift Lvl 3
-Type: single target, Cost: 100, Dmg: 16, Rof: 0.6, Rng: 0.5
+Type: single target, Cost: 100, Dmg: 12, Rof: 0.6, Rng: 0.5
 
 Agile Lvl 1
-Type: single target, Cost: 150, Dmg: 14, Rof: 0.6, Rng: 0.6
+Type: single target, Cost: 150, Dmg: 10, Rof: 0.6, Rng: 0.6
 
 Agile Lvl 2
-Type: single target, Cost: 200, Dmg: 22, Rof: 0.5, Rng: 0.6
+Type: single target, Cost: 200, Dmg: 15, Rof: 0.5, Rng: 0.6
 
 Scattershot
-Type: AOE, Cost: 250, Dmg: 18, Rof: 2, Rng: 0.5
+Type: AOE, Cost: 250, Dmg: 15, Rof: 2, Rng: 0.5
 
 Citadel
-Type: single target, Cost: 500, Dmg: 20, Rof: 0.35, Rng: 0.8
+Type: single target, Cost: 500, Dmg: 16, Rof: 0.35, Rng: 0.8
 
 
 
