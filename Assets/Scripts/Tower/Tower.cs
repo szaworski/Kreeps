@@ -113,7 +113,7 @@ public class Tower : MonoBehaviour
 
         else
         {
-            monstersInRadius = Physics2D.OverlapAreaAll(new Vector2(transform.position.x - attackRange * 0.9f, transform.position.y + attackRange * 0.9f), new Vector2(transform.position.x + attackRange * 0.9f, transform.position.y - attackRange * 0.9f), LayerMask.GetMask("Monster"));
+            monstersInRadius = Physics2D.OverlapAreaAll(new Vector2(transform.position.x - attackRange, transform.position.y + attackRange), new Vector2(transform.position.x + attackRange, transform.position.y - attackRange), LayerMask.GetMask("Monster"));
         }
 
         //Check if any monsters are found in the radius (Use this for towers that shoot projectiles)
@@ -242,10 +242,10 @@ public class Tower : MonoBehaviour
         else
         {
             attackRadius.numCornerVertices = 5;
-            attackRadius.SetPosition(0, new Vector3(transform.position.x - attackRange * 0.9f, transform.position.y + attackRange * 0.9f));
-            attackRadius.SetPosition(1, new Vector3(transform.position.x + attackRange * 0.9f, transform.position.y + attackRange * 0.9f));
-            attackRadius.SetPosition(2, new Vector3(transform.position.x + attackRange * 0.9f, transform.position.y - attackRange * 0.9f));
-            attackRadius.SetPosition(3, new Vector3(transform.position.x - attackRange * 0.9f, transform.position.y - attackRange * 0.9f));
+            attackRadius.SetPosition(0, new Vector3(transform.position.x - attackRange, transform.position.y + attackRange));
+            attackRadius.SetPosition(1, new Vector3(transform.position.x + attackRange, transform.position.y + attackRange));
+            attackRadius.SetPosition(2, new Vector3(transform.position.x + attackRange, transform.position.y - attackRange));
+            attackRadius.SetPosition(3, new Vector3(transform.position.x - attackRange, transform.position.y - attackRange));
         }
     }
 

@@ -21,7 +21,7 @@ Sniper Lvl 3
 Type: single target, Cost: 60, Dmg: 18, Rof: 1.4, Rng: 0.7
 
 Fortress
-Type: AOE, Cost: 100, Dmg: 12, Rof: 1.75, Rng: 0.6
+Type: AOE, Cost: 100, Dmg: 12, Rof: 2, Rng: 0.6
 
 
 
@@ -29,13 +29,13 @@ Fire Towers:
 Bonus power: + attack speed
 
 Fire Lvl 1
-Type: single target, Cost: 75, Dmg: 6, Rof: 1, Rng: 0.6
+Type: single target, Cost: 75, Dmg: 7, Rof: 1, Rng: 0.5
 
 Fire Lvl 2
-Type: single target, Cost: 50, Dmg: 10, Rof: 1, Rng: 0.6
+Type: single target, Cost: 50, Dmg: 12, Rof: 1, Rng: 0.5
 
 Fire Lvl 3
-Type: single target, Cost: 50, Dmg: 16, Rof: 1, Rng: 0.6
+Type: single target, Cost: 50, Dmg: 18, Rof: 1, Rng: 0.5
 
 Ember Lvl 1
 Type: AOE, Cost: 75, Dmg: 5, Rof: 1.5, Rng: 0.5
@@ -44,10 +44,10 @@ Ember Lvl 2
 Type: AOE, Cost: 100, Dmg: 10, Rof: 1.2, Rng: 0.5
 
 Ember Lvl 3
-Type: single target, Cost: 150, Dmg: 18, Rof: 0.9, Rng: 0.8
+Type: single target, Cost: 150, Dmg: 20, Rof: 0.9, Rng: 0.8
 
 Fire Storm
-Type: single target, Cost: 300, Dmg: 10, Rof: 1, Rng: 0.6
+Type: single target, Cost: 300, Dmg: 12, Rof: 1, Rng: 0.6
 
 
 
@@ -55,13 +55,13 @@ Ice Towers:
 Bonus power: + move speed slow
 
 Ice Lvl 1
-Type: single target, Cost: 75, Dmg: 5, Rof: 1, Rng: 0.6 Move slow: 5
+Type: single target, Cost: 75, Dmg: 6, Rof: 1, Rng: 0.5 Move slow: 5
 
 Ice Lvl 2
-Type: single target, Cost: 50, Dmg: 9, Rof: 1, Rng: 0.6 Move slow: 7
+Type: single target, Cost: 50, Dmg: 10, Rof: 1, Rng: 0.5 Move slow: 7
 
 Ice Lvl 3
-Type: single target, Cost: 50, Dmg: 14, Rof: 1, Rng: 0.6 Move slow: 10
+Type: single target, Cost: 50, Dmg: 15, Rof: 1, Rng: 0.5 Move slow: 10
 
 Frost Lvl 1
 Type: AOE, Cost: 75, Dmg: 4, Rof: 1.5, Rng: 0.5 Move slow: 5
@@ -70,7 +70,7 @@ Frost Lvl 2
 Type: AOE, Cost: 100, Dmg: 8, Rof: 1.5, Rng: 0.5 Move slow: 10
 
 Frost Lvl 3
-Type: single target, Cost: 150, Dmg: 16, Rof: 0.9, Rng: 0.8 Move slow: 12
+Type: single target, Cost: 150, Dmg: 18, Rof: 0.9, Rng: 0.8 Move slow: 12
 
 Snow Spire
 Type: AOE, Cost: 300, Dmg: 12, Rof: 1.5, Rng: 0.6 Move slow: 15
@@ -107,13 +107,13 @@ Holy Towers:
 Bonus power: + attack range
 
 Holy Lvl 1
-Type: single target, Cost: 100, Dmg: 10, Rof: 1.2, Rng: 0.6
+Type: single target, Cost: 100, Dmg: 10, Rof: 1.2, Rng: 0.7
 
 Holy Lvl 2
-Type: single target, Cost: 70, Dmg: 16, Rof: 1.2, Rng: 0.6
+Type: single target, Cost: 70, Dmg: 16, Rof: 1.2, Rng: 0.7
 
 Holy Lvl 3
-Type: single target, Cost: 70, Dmg: 24, Rof: 1.2, Rng: 0.6
+Type: single target, Cost: 70, Dmg: 24, Rof: 1.2, Rng: 0.7
 
 Divine Lvl 1
 Type: single target, Cost: 100, Dmg: 12, Rof: 1, Rng: 0.6
