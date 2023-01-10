@@ -606,7 +606,7 @@ public class Monster : MonoBehaviour
 
         //Spawn the damage popup
         GameObject damagePopupObj = (GameObject)Instantiate(Resources.Load("MonsterAttributes/" + convertedDamageType + "DamagePopup"), gameObject.transform);
-        damagePopupObj.transform.position = new Vector3(gameObject.transform.position.x + Random.Range(-0.03f, 0.03f), gameObject.transform.position.y + 0.25f, gameObject.transform.position.z);
+        damagePopupObj.transform.position = new Vector3(gameObject.transform.position.x + Random.Range(-0.05f, 0.05f), gameObject.transform.position.y + 0.25f, gameObject.transform.position.z);
         damagePopupObj.transform.rotation = Quaternion.Euler(0, 0, 0);
 
         if (damageVal <= 0)
