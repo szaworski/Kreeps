@@ -212,34 +212,25 @@ public class Weapon : MonoBehaviour
                 break;
 
             case "Ice":
-                if (bonusSlowAmt < GlobalVars.bonusExtraStats["IceSlowUp"])
+                if (bonusSlowAmt < GlobalVars.bonusExtraStats["IceSlowUp"] || bonusRange < GlobalVars.bonusExtraStats["IceRangeUp"])
                 {
                     bonusSlowAmt = GlobalVars.bonusExtraStats["IceSlowUp"];
-                }
-                if (bonusRange < GlobalVars.bonusExtraStats["IceRangeUp"])
-                {
                     bonusRange = GlobalVars.bonusExtraStats["IceRangeUp"];
                 }
                 break;
 
             case "Thunder":
-                if (bonusArmorDmg < GlobalVars.bonusExtraStats["ThunderArmorDmgUp"])
+                if (bonusArmorDmg < GlobalVars.bonusExtraStats["ThunderArmorDmgUp"] || bonusCritChance < GlobalVars.bonusExtraStats["ThunderCritChanceUp"])
                 {
                     bonusArmorDmg = GlobalVars.bonusExtraStats["ThunderArmorDmgUp"];
-                }
-                if (bonusCritChance < GlobalVars.bonusExtraStats["ThunderCritChanceUp"])
-                {
                     bonusCritChance = GlobalVars.bonusExtraStats["ThunderCritChanceUp"];
                 }
                 break;
 
             case "Holy":
-                if (bonusRange < GlobalVars.bonusExtraStats["HolyRangeUp"])
+                if (bonusRange < GlobalVars.bonusExtraStats["HolyRangeUp"] || bonusSpeed < GlobalVars.bonusExtraStats["HolySpeedUp"])
                 {
                     bonusRange = GlobalVars.bonusExtraStats["HolyRangeUp"];
-                }
-                if (bonusSpeed < GlobalVars.bonusExtraStats["HolySpeedUp"])
-                {
                     bonusSpeed = GlobalVars.bonusExtraStats["HolySpeedUp"];
                 }
                 break;
@@ -252,12 +243,9 @@ public class Weapon : MonoBehaviour
                 break;
 
             case "Cosmic":
-                if (bonusCritChance < GlobalVars.bonusExtraStats["CosmicCritChanceUp"])
+                if (bonusCritChance < GlobalVars.bonusExtraStats["CosmicCritChanceUp"] || bonusRange < GlobalVars.bonusExtraStats["CosmicRangeUp"])
                 {
                     bonusCritChance = GlobalVars.bonusExtraStats["CosmicCritChanceUp"];
-                }
-                if (bonusRange < GlobalVars.bonusExtraStats["CosmicRangeUp"])
-                {
                     bonusRange = GlobalVars.bonusExtraStats["CosmicRangeUp"];
                 }
                 break;
