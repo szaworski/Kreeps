@@ -352,8 +352,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cosmic type weapons and towers gain +10% crit chance
+  m_text: 'Cosmic type weapons and towers gain +10% crit chance. Crits deal
 
+    x2
+    damage
 
 
 

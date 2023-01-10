@@ -272,12 +272,20 @@ public class Tower : MonoBehaviour
                 {
                     bonusSlowAmt = GlobalVars.bonusExtraStats["IceSlowUp"];
                 }
+                if (bonusRange < GlobalVars.bonusExtraStats["IceRangeUp"])
+                {
+                    bonusRange = GlobalVars.bonusExtraStats["IceRangeUp"];
+                }
                 break;
 
             case "Thunder":
                 if (bonusArmorDmg < GlobalVars.bonusExtraStats["ThunderArmorDmgUp"])
                 {
                     bonusArmorDmg = GlobalVars.bonusExtraStats["ThunderArmorDmgUp"];
+                }
+                if (bonusCritChance < GlobalVars.bonusExtraStats["ThunderCritChanceUp"])
+                {
+                    bonusCritChance = GlobalVars.bonusExtraStats["ThunderCritChanceUp"];
                 }
                 break;
 
@@ -286,12 +294,27 @@ public class Tower : MonoBehaviour
                 {
                     bonusRange = GlobalVars.bonusExtraStats["HolyRangeUp"];
                 }
+                if (bonusSpeed < GlobalVars.bonusExtraStats["HolySpeedUp"])
+                {
+                    bonusSpeed = GlobalVars.bonusExtraStats["HolySpeedUp"];
+                }
+                break;
+
+            case "Swift":
+                if (bonusSpeed < GlobalVars.bonusExtraStats["SwiftSpeedUp"])
+                {
+                    bonusSpeed = GlobalVars.bonusExtraStats["SwiftSpeedUp"];
+                }
                 break;
 
             case "Cosmic":
                 if (bonusCritChance < GlobalVars.bonusExtraStats["CosmicCritChanceUp"])
                 {
                     bonusCritChance = GlobalVars.bonusExtraStats["CosmicCritChanceUp"];
+                }
+                if (bonusRange < GlobalVars.bonusExtraStats["CosmicRangeUp"])
+                {
+                    bonusRange = GlobalVars.bonusExtraStats["CosmicRangeUp"];
                 }
                 break;
         }
