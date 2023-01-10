@@ -26,7 +26,7 @@ Type: AOE, Cost: 100, Dmg: 12, Rof: 2, Rng: 0.6
 
 
 Fire Towers:
-Bonus power: + attack speed
+Bonus power: + attack speed, + burn damage (chance to deal an additional set amount of damage)
 
 Fire Lvl 1
 Type: single target, Cost: 75, Dmg: 7, Rof: 1, Rng: 0.5
@@ -52,7 +52,7 @@ Type: single target, Cost: 300, Dmg: 12, Rof: 1, Rng: 0.6
 
 
 Ice Towers:
-Bonus power: + move speed slow
+Bonus power: + move speed slow, + attack range
 
 Ice Lvl 1
 Type: single target, Cost: 75, Dmg: 6, Rof: 1, Rng: 0.5 Move slow: 5
@@ -78,7 +78,7 @@ Type: AOE, Cost: 300, Dmg: 12, Rof: 1.5, Rng: 0.6 Move slow: 15
 
 
 Thunder Towers:
-Bonus power: + armor damage
+Bonus power: + armor damage, + crit chance
 
 Thunder Lvl 1
 Type: single target, Cost: 100, Dmg: 14, Rof: 1.5, Rng: 0.6
@@ -104,7 +104,7 @@ Type: single target, Cost: 350, Dmg: 70, Rof: 1.5, Rng: 0.7
 
 
 Holy Towers:
-Bonus power: + attack range
+Bonus power: + attack range, + attack speed
 
 Holy Lvl 1
 Type: single target, Cost: 100, Dmg: 10, Rof: 1.2, Rng: 0.7
@@ -130,13 +130,13 @@ Type: AOE, Cost: 400, Dmg: 20, Rof: 1.5, Rng: 0.5
 
 
 Swift Towers:
-Bonus power: + poison damage
+Bonus power: + attack speed, + poison damage, 
 
 Swift Lvl 1
-Type: single target, Cost: 150, Dmg: 6, Rof: 0.7, Rng: 0.5
+Type: single target, Cost: 150, Dmg: 6, Rof: 0.8, Rng: 0.5
 
 Swift Lvl 2
-Type: single target, Cost: 100, Dmg: 9, Rof: 0.65, Rng: 0.5
+Type: single target, Cost: 100, Dmg: 9, Rof: 0.7, Rng: 0.5
 
 Swift Lvl 3
 Type: single target, Cost: 100, Dmg: 12, Rof: 0.6, Rng: 0.5
@@ -151,13 +151,13 @@ Scattershot
 Type: AOE, Cost: 250, Dmg: 15, Rof: 2, Rng: 0.5
 
 Citadel
-Type: single target, Cost: 500, Dmg: 16, Rof: 0.35, Rng: 0.8
+Type: single target, Cost: 500, Dmg: 20, Rof: 0.5, Rng: 0.8
 
 
 
 
 Cosmic Towers:
-Bonus power: + crit chance
+Bonus power: + crit chance, + attack range
 
 Cosmic Lvl 1
 Type: single target, Cost: 250, Dmg: 20, Rof: 0.8, Rng: 0.7
