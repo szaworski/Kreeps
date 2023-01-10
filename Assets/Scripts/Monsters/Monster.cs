@@ -157,7 +157,6 @@ public class Monster : MonoBehaviour
             GameObject projectileObj = other.gameObject;
             GameObject monsterTarget = projectileObj.GetComponent<Projectile>().target;
             float incomingDamage = projectileObj.GetComponent<Projectile>().damageValue;
-            float bonusArmorDamage = projectileObj.GetComponent<Projectile>().bonusArmorDamage;
             float projectileSpeed = projectileObj.GetComponent<Projectile>().projectileSpeed;
             float slowAmt = projectileObj.GetComponent<Projectile>().slowAmt;
             float critChance = projectileObj.GetComponent<Projectile>().critChance;
@@ -311,7 +310,7 @@ public class Monster : MonoBehaviour
 
                     if (armor > 0)
                     {
-                        incomingDamage += bonusArmorDamage;
+                        incomingDamage += GlobalVars.bonusExtraStats["ThunderArmorDmgUp"];
                     }
 
                     if (randFloat <= critChance)

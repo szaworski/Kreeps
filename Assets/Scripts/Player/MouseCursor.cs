@@ -54,7 +54,7 @@ public class MouseCursor : MonoBehaviour
         if (GlobalVars.stoneIsSelected && !GlobalVars.isPaused)
         {
             triggerStoneSelect = true;
-            Cursor.SetCursor(itemImages[GlobalVars.stoneTypeSelected], Vector2.zero, CursorMode.ForceSoftware);
+            Cursor.SetCursor(itemImages[0], Vector2.zero, CursorMode.ForceSoftware);
         }
 
         else if (!GlobalVars.stoneIsSelected && triggerStoneSelect && !GlobalVars.isPaused)
@@ -168,7 +168,6 @@ public class MouseCursor : MonoBehaviour
                 case "GalacticScepter":
                     ChangeWeaponStats(100, 0, 5f, 0.4f, "Cosmic", 0, false, 26);
                     break;
-
             }
 
             if (GlobalVars.weaponIsSelected)

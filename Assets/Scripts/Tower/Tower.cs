@@ -13,23 +13,16 @@ public class Tower : MonoBehaviour
     public float attackCd;
 
     [Header("Tower attributes")]
-    private float [] startingStats = new float[5];
-    private float[] bonusStats = new float[] { 0, 0, 0, 0, 0 };
-    private float bonusDamage;
-    private float bonusSlowAmt;
-    private float bonusRange;
-    private float bonusSpeed;
-    private float bonusCritChance;
+    private float[] startingStats = new float[5];
+    private float[] bonusStats = new float[5];
     public float damage;
-    public float bonusDamage2;
-    public float bonusRange2;
-    public float bonusArmorDmg;
     public float projectileSpeed;
     public float attackSpeed;
     public float attackRange;
     public float critChance;
     public string damageType;
     public float slowAmt;
+    public float bonusDamage2;
     public LineRenderer attackRadius;
     public bool hasRectangleRadius;
     public bool rectIsVertical;
@@ -49,16 +42,16 @@ public class Tower : MonoBehaviour
 
     void Awake()
     {
-        rectIsVertical = GlobalVars.selectedRectIsVertical;
-
         GetBonus();
-        startingStats = new float [] { damage, attackSpeed, attackRange, critChance, slowAmt };
+        startingStats = new float[] { damage, attackSpeed, attackRange, critChance, slowAmt };
 
-        damage = startingStats[0] + bonusDamage;
-        attackSpeed = startingStats[1] + bonusSpeed;
-        attackRange = startingStats[2] + bonusRange;
-        critChance = startingStats[3] + bonusCritChance;
-        slowAmt = startingStats[4] + bonusSlowAmt;
+        damage = startingStats[0] + bonusStats[0];
+        attackSpeed = startingStats[1] + bonusStats[1];
+        attackRange = startingStats[2] + bonusStats[2];
+        critChance = startingStats[3] + bonusStats[3];
+        slowAmt = startingStats[4] + bonusStats[4];
+
+        rectIsVertical = GlobalVars.selectedRectIsVertical;
     }
 
     void Start()
@@ -246,56 +239,55 @@ public class Tower : MonoBehaviour
     {
         string trimmedDamageType = Regex.Replace(damageType, @"[\d-]", string.Empty);
 
-        if (bonusDamage < GlobalVars.bonusStats[trimmedDamageType])
+        if (bonusStats[0] < GlobalVars.bonusStats[trimmedDamageType])
         {
-            bonusDamage = GlobalVars.bonusStats[trimmedDamageType];
+            bonusStats[0] = GlobalVars.bonusStats[trimmedDamageType];
         }
 
         switch (trimmedDamageType)
         {
             case "Fire":
-                if (bonusSpeed < GlobalVars.bonusExtraStats["FireSpeedUp"])
+                if (bonusStats[1] < GlobalVars.bonusExtraStats["FireSpeedUp"])
                 {
-                    bonusSpeed = GlobalVars.bonusExtraStats["FireSpeedUp"];
+                    bonusStats[1] = GlobalVars.bonusExtraStats["FireSpeedUp"];
                 }
                 break;
 
             case "Ice":
-                if (bonusSlowAmt < GlobalVars.bonusExtraStats["IceSlowUp"] || bonusRange < GlobalVars.bonusExtraStats["IceRangeUp"])
+                if (bonusStats[2] < GlobalVars.bonusExtraStats["IceRangeUp"] || bonusStats[4] < GlobalVars.bonusExtraStats["IceSlowUp"])
                 {
-                    bonusSlowAmt = GlobalVars.bonusExtraStats["IceSlowUp"];
-                    bonusRange = GlobalVars.bonusExtraStats["IceRangeUp"];
+                    bonusStats[2] = GlobalVars.bonusExtraStats["IceRangeUp"];
+                    bonusStats[4] = GlobalVars.bonusExtraStats["IceSlowUp"];
                 }
                 break;
 
             case "Thunder":
-                if (bonusArmorDmg < GlobalVars.bonusExtraStats["ThunderArmorDmgUp"] || bonusCritChance < GlobalVars.bonusExtraStats["ThunderCritChanceUp"])
+                if (bonusStats[3] < GlobalVars.bonusExtraStats["ThunderCritChanceUp"])
                 {
-                    bonusArmorDmg = GlobalVars.bonusExtraStats["ThunderArmorDmgUp"];
-                    bonusCritChance = GlobalVars.bonusExtraStats["ThunderCritChanceUp"];
+                    bonusStats[3] = GlobalVars.bonusExtraStats["ThunderCritChanceUp"];
                 }
                 break;
 
             case "Holy":
-                if (bonusRange < GlobalVars.bonusExtraStats["HolyRangeUp"] || bonusSpeed < GlobalVars.bonusExtraStats["HolySpeedUp"])
+                if (bonusStats[1] < GlobalVars.bonusExtraStats["HolySpeedUp"] || bonusStats[2] < GlobalVars.bonusExtraStats["HolyRangeUp"])
                 {
-                    bonusRange = GlobalVars.bonusExtraStats["HolyRangeUp"];
-                    bonusSpeed = GlobalVars.bonusExtraStats["HolySpeedUp"];
+                    bonusStats[1] = GlobalVars.bonusExtraStats["HolySpeedUp"];
+                    bonusStats[2] = GlobalVars.bonusExtraStats["HolyRangeUp"];
                 }
                 break;
 
             case "Swift":
-                if (bonusSpeed < GlobalVars.bonusExtraStats["SwiftSpeedUp"])
+                if (bonusStats[1] < GlobalVars.bonusExtraStats["SwiftSpeedUp"])
                 {
-                    bonusSpeed = GlobalVars.bonusExtraStats["SwiftSpeedUp"];
+                    bonusStats[1] = GlobalVars.bonusExtraStats["SwiftSpeedUp"];
                 }
                 break;
 
             case "Cosmic":
-                if (bonusCritChance < GlobalVars.bonusExtraStats["CosmicCritChanceUp"] || bonusRange < GlobalVars.bonusExtraStats["CosmicRangeUp"])
+                if (bonusStats[2] < GlobalVars.bonusExtraStats["CosmicRangeUp"] || bonusStats[3] < GlobalVars.bonusExtraStats["CosmicCritChanceUp"])
                 {
-                    bonusCritChance = GlobalVars.bonusExtraStats["CosmicCritChanceUp"];
-                    bonusRange = GlobalVars.bonusExtraStats["CosmicRangeUp"];
+                    bonusStats[2] = GlobalVars.bonusExtraStats["CosmicRangeUp"];
+                    bonusStats[3] = GlobalVars.bonusExtraStats["CosmicCritChanceUp"];
                 }
                 break;
         }
@@ -303,33 +295,33 @@ public class Tower : MonoBehaviour
 
     public void AddBonus()
     {
-        if (damage != startingStats[0] + bonusDamage + bonusDamage2)
+        if (damage != startingStats[0] + bonusStats[0] + bonusDamage2)
         {
-            damage = startingStats[0] + bonusDamage + bonusDamage2;
+            damage = startingStats[0] + bonusStats[0] + bonusDamage2;
             dmgText.SetText(Mathf.Round(damage).ToString());
         }
 
-        if (attackSpeed != startingStats[1] - bonusSpeed)
+        if (attackSpeed != startingStats[1] - bonusStats[1])
         {
-            attackSpeed = startingStats[1] - bonusSpeed;
+            attackSpeed = startingStats[1] - bonusStats[1];
             rofText.SetText(attackSpeed.ToString("F1") + "s");
         }
 
-        if (attackRange != startingStats[2] + bonusRange + bonusRange2)
+        if (attackRange != startingStats[2] + bonusStats[2])
         {
-            attackRange = startingStats[2] + bonusRange + bonusRange2;
+            attackRange = startingStats[2] + bonusStats[2];
             rngText.SetText(attackRange.ToString("F1"));
             DrawAttackRadius();
         }
 
-        if (critChance != startingStats[3] + bonusCritChance)
+        if (critChance != startingStats[3] + bonusStats[3])
         {
-            critChance = startingStats[3] + bonusCritChance;
+            critChance = startingStats[3] + bonusStats[3];
         }
 
-        if (slowAmt != startingStats[4] + bonusSlowAmt)
+        if (slowAmt != startingStats[4] + bonusStats[4])
         {
-            slowAmt = startingStats[4] + bonusSlowAmt;
+            slowAmt = startingStats[4] + bonusStats[4];
         }
     }
 

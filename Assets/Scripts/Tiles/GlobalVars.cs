@@ -31,7 +31,6 @@ public class GlobalVars : MonoBehaviour
     public static int newGoldValue;
     public static int monsterCount;
     public static int coinChoiceCount;
-    public static int stoneTypeSelected;
 
     public static bool triggerTileCardDestruction;
     public static bool triggerMonsterCardDestruction;
@@ -156,8 +155,6 @@ public class GlobalVars : MonoBehaviour
         bonusExtraStats.Add("CosmicCritChanceUpLvl", 1);
         bonusExtraStats.Add("CosmicRangeUp", 0);
         bonusExtraStats.Add("CosmicRangeUpLvl", 1);
-
-        bonusExtraStats.Add("IntStone", 0);
 
         //Add starting kreep bonus stats
         bonusKreepStats.Clear();

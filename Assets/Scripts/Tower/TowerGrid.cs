@@ -105,15 +105,7 @@ public class TowerGrid : MonoBehaviour
                     {
                         GlobalVars.stoneIsSelected = false;
                         GameObject.Find("UiSounds").GetComponent<AudioManager>().PlaySound("PowerUp");
-
-                        if (GlobalVars.stoneTypeSelected == 0)
-                        {
-                            towerScript.bonusDamage2 += GlobalVars.bonusStats["StonePwr"];
-                        }
-                        else if (GlobalVars.stoneTypeSelected == 1)
-                        {
-                            towerScript.bonusRange2 += GlobalVars.bonusExtraStats["StoneInt"];
-                        }
+                        towerScript.bonusDamage2 += GlobalVars.bonusStats["StonePwr"];
                     }
                 }
 

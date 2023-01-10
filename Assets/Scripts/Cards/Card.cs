@@ -105,14 +105,7 @@ public class Card : MonoBehaviour
 
                     if (cardName == "StonePwr")
                     {
-                        GlobalVars.stoneTypeSelected = 0;
                         GlobalVars.bonusStats[cardName] = bonusAmt;
-
-                    }
-                    else if (cardName == "StoneInt")
-                    {
-                        GlobalVars.stoneTypeSelected = 1;
-                        GlobalVars.bonusExtraStats[cardName] = bonusFloatAmt;
                     }
                     break;
             }
