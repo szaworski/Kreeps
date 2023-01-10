@@ -290,16 +290,16 @@ public class Monster : MonoBehaviour
                     break;
             }
 
-            float randomFloat;
+            float randFloat;
 
             //Apply any special bonuses if applicable  
             switch (damageType)
             {
                 case var _ when damageType.Contains("Fire"):
 
-                    randomFloat = Random.value;
+                    randFloat = Random.value;
 
-                    if (randomFloat <= 0.25f)
+                    if (randFloat <= 0.25f)
                     {
                         incomingDamage += GlobalVars.bonusExtraStats["FireBurnUp"];
                     }
@@ -307,9 +307,17 @@ public class Monster : MonoBehaviour
 
                 case var _ when damageType.Contains("Thunder"):
 
+                    randFloat = Random.value;
+
                     if (armor > 0)
                     {
                         incomingDamage += bonusArmorDamage;
+                    }
+
+                    if (randFloat <= critChance)
+                    {
+                        isCritHit = true;
+                        incomingDamage *= 2;
                     }
                     break;
 
@@ -323,9 +331,9 @@ public class Monster : MonoBehaviour
 
                 case var _ when damageType.Contains("Cosmic"):
 
-                    randomFloat = Random.value;
+                    randFloat = Random.value;
 
-                    if (randomFloat <= critChance)
+                    if (randFloat <= critChance)
                     {
                         isCritHit = true;
                         incomingDamage *= 2;

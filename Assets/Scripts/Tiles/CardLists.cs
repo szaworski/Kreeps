@@ -55,5 +55,5 @@ public class CardsLists : MonoBehaviour
     [System.NonSerialized] public List<string> tier4WeaponCards = new List<string> { "TitaniumShortSword", "InfernalLongSword", "BlizzardBroadSword", "LightningGreatAxe", "HeavenlyGreatSword", "ReinforcedMorningStar", "GalacticScepter" };
 
     //Power up cards
-    [System.NonSerialized] public List<string> powerUpCards = new List<string> { "Neutral", "Fire", "Ice", "Thunder", "Holy", "Swift", "Cosmic", "FireSpeedUp", "IceSlowUp", "ThunderArmorDmgUp", "HolyRangeUp", "SwiftPsnDmgUp", "CosmicCritChanceUp", "StonePwr1", "StonePwr2"}; //, "StoneInt1", "StoneInt2" 
+    [System.NonSerialized] public List<string> powerUpCards = new List<string> { "Neutral", "Fire", "Ice", "Thunder", "Holy", "Swift", "Cosmic", "FireSpeedUp", "IceSlowUp", "ThunderArmorDmgUp", "HolyRangeUp", "SwiftPsnDmgUp", "CosmicCritChanceUp", "FireBurnUp", "IceRangeUp", "ThunderCritChanceUp", "HolySpeedUp", "SwiftSpeedUp", "CosmicRangeUp", "StonePwr1", "StonePwr2" }; //, "StoneInt1", "StoneInt2" 
 }
