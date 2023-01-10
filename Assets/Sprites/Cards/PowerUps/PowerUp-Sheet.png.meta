@@ -47,6 +47,24 @@ TextureImporter:
   - first:
       213: 6247146801685285927
     second: PowerUp-Sheet_14
+  - first:
+      213: 4059671028854887421
+    second: PowerUp-Sheet_15
+  - first:
+      213: 7155426102093964953
+    second: PowerUp-Sheet_16
+  - first:
+      213: -442955786765966295
+    second: PowerUp-Sheet_17
+  - first:
+      213: -3853377702413308239
+    second: PowerUp-Sheet_18
+  - first:
+      213: 2406215237556727728
+    second: PowerUp-Sheet_19
+  - first:
+      213: -3376214625447141430
+    second: PowerUp-Sheet_20
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -456,6 +474,132 @@ TextureImporter:
       bones: []
       spriteID: 72c4b26dae252b650800000000000000
       internalID: 6247146801685285927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 0
+        width: 90
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df317dbaa49d65830800000000000000
+      internalID: 4059671028854887421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 90
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9966ed7f02e2d4360800000000000000
+      internalID: 7155426102093964953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1530
+        y: 0
+        width: 90
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9246c9e0f0e4ad9f0800000000000000
+      internalID: -442955786765966295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 0
+        width: 90
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be6e3e456d068ac0800000000000000
+      internalID: -3853377702413308239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1710
+        y: 0
+        width: 90
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bf63b78208946120800000000000000
+      internalID: 2406215237556727728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 0
+        width: 90
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf9eb4afa64521d0800000000000000
+      internalID: -3376214625447141430
       vertices: []
       indices: 
       edges: []

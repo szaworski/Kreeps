@@ -299,7 +299,7 @@ public class Monster : MonoBehaviour
 
                     randomFloat = Random.value;
 
-                    if (randomFloat <= 0.20f)
+                    if (randomFloat <= 0.25f)
                     {
                         incomingDamage += GlobalVars.bonusExtraStats["FireBurnUp"];
                     }
