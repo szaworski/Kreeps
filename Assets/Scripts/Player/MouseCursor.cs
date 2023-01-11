@@ -180,13 +180,12 @@ public class MouseCursor : MonoBehaviour
 
     public void ChangeWeaponStats(float damage, float projectileSpeed, float attackSpeed, float attackRange, string damageType, float slowAmt, bool useSlashAnim, int weaponIndex)
     {
-        weaponScript.startingDamage = damage;
-        weaponScript.bonusDamage = 0;
+        weaponScript.startingStats[0] = damage;
+        weaponScript.startingStats[1] = attackSpeed;
+        weaponScript.startingStats[2] = attackRange;
+        weaponScript.startingStats[4] = slowAmt;
         weaponScript.projectileSpeed = projectileSpeed;
-        weaponScript.startingSpeed = attackSpeed;
-        weaponScript.startingAttackRange = attackRange;
         weaponScript.damageType = damageType;
-        weaponScript.startingSlowAmt = slowAmt;
         GlobalVars.useSlashAnim = useSlashAnim;
         weaponImageIndex = weaponIndex;
         playerHudScript.GetSetweaponHudImage.sprite = playerHudScript.GetWeaponHudImagesList[weaponIndex + 1];

@@ -22,24 +22,15 @@ public class Weapon : MonoBehaviour
     public new Camera camera;
 
     [Header("Weapon attributes")]
-    public float startingDamage;
-    public float startingAttackRange;
-    public float startingSpeed;
-    public float startingCritChance;
-    public float startingSlowAmt;
-    public float bonusDamage;
-    public float bonusArmorDmg;
-    public float bonusSlowAmt;
-    public float bonusRange;
-    public float bonusSpeed;
-    public float bonusCritChance;
+    public float[] startingStats = new float[] {0, 0, 0, 0, 0 };
+    public float[] bonusStats = new float[] { 0, 0, 0, 0, 0 };
     public float damage;
     public float projectileSpeed;
     public float attackSpeed;
     public float attackRange;
     public float critChance;
-    public string damageType;
     public float slowAmt;
+    public string damageType;
     public LineRenderer attackRadius;
 
     void Awake()
@@ -197,56 +188,55 @@ public class Weapon : MonoBehaviour
 
     public void GetBonus()
     {
-        if (bonusDamage < GlobalVars.bonusStats[damageType])
+        if (bonusStats[0] < GlobalVars.bonusStats[damageType])
         {
-            bonusDamage = GlobalVars.bonusStats[damageType];
+            bonusStats[0] = GlobalVars.bonusStats[damageType];
         }
 
         switch (damageType)
         {
             case "Fire":
-                if (bonusSpeed < GlobalVars.bonusExtraStats["FireSpeedUp"])
+                if (bonusStats[1] < GlobalVars.bonusExtraStats["FireSpeedUp"])
                 {
-                    bonusSpeed = GlobalVars.bonusExtraStats["FireSpeedUp"];
+                    bonusStats[1] = GlobalVars.bonusExtraStats["FireSpeedUp"];
                 }
                 break;
 
             case "Ice":
-                if (bonusSlowAmt < GlobalVars.bonusExtraStats["IceSlowUp"] || bonusRange < GlobalVars.bonusExtraStats["IceRangeUp"])
+                if (bonusStats[2] < GlobalVars.bonusExtraStats["IceRangeUp"] || bonusStats[4] < GlobalVars.bonusExtraStats["IceSlowUp"])
                 {
-                    bonusSlowAmt = GlobalVars.bonusExtraStats["IceSlowUp"];
-                    bonusRange = GlobalVars.bonusExtraStats["IceRangeUp"];
+                    bonusStats[2] = GlobalVars.bonusExtraStats["IceRangeUp"];
+                    bonusStats[4] = GlobalVars.bonusExtraStats["IceSlowUp"];
                 }
                 break;
 
             case "Thunder":
-                if (bonusArmorDmg < GlobalVars.bonusExtraStats["ThunderArmorDmgUp"] || bonusCritChance < GlobalVars.bonusExtraStats["ThunderCritChanceUp"])
+                if (bonusStats[3] < GlobalVars.bonusExtraStats["ThunderCritChanceUp"])
                 {
-                    bonusArmorDmg = GlobalVars.bonusExtraStats["ThunderArmorDmgUp"];
-                    bonusCritChance = GlobalVars.bonusExtraStats["ThunderCritChanceUp"];
+                    bonusStats[3] = GlobalVars.bonusExtraStats["ThunderCritChanceUp"];
                 }
                 break;
 
             case "Holy":
-                if (bonusRange < GlobalVars.bonusExtraStats["HolyRangeUp"] || bonusSpeed < GlobalVars.bonusExtraStats["HolySpeedUp"])
+                if (bonusStats[1] < GlobalVars.bonusExtraStats["HolySpeedUp"] || bonusStats[2] < GlobalVars.bonusExtraStats["HolyRangeUp"])
                 {
-                    bonusRange = GlobalVars.bonusExtraStats["HolyRangeUp"];
-                    bonusSpeed = GlobalVars.bonusExtraStats["HolySpeedUp"];
+                    bonusStats[1] = GlobalVars.bonusExtraStats["HolySpeedUp"];
+                    bonusStats[2] = GlobalVars.bonusExtraStats["HolyRangeUp"];
                 }
                 break;
 
             case "Swift":
-                if (bonusSpeed < GlobalVars.bonusExtraStats["SwiftSpeedUp"])
+                if (bonusStats[1] < GlobalVars.bonusExtraStats["SwiftSpeedUp"])
                 {
-                    bonusSpeed = GlobalVars.bonusExtraStats["SwiftSpeedUp"];
+                    bonusStats[1] = GlobalVars.bonusExtraStats["SwiftSpeedUp"];
                 }
                 break;
 
             case "Cosmic":
-                if (bonusCritChance < GlobalVars.bonusExtraStats["CosmicCritChanceUp"] || bonusRange < GlobalVars.bonusExtraStats["CosmicRangeUp"])
+                if (bonusStats[2] < GlobalVars.bonusExtraStats["CosmicRangeUp"] || bonusStats[3] < GlobalVars.bonusExtraStats["CosmicCritChanceUp"])
                 {
-                    bonusCritChance = GlobalVars.bonusExtraStats["CosmicCritChanceUp"];
-                    bonusRange = GlobalVars.bonusExtraStats["CosmicRangeUp"];
+                    bonusStats[2] = GlobalVars.bonusExtraStats["CosmicRangeUp"];
+                    bonusStats[3] = GlobalVars.bonusExtraStats["CosmicCritChanceUp"];
                 }
                 break;
         }
@@ -254,29 +244,29 @@ public class Weapon : MonoBehaviour
 
     public void AddBonus()
     {
-        if (damage != startingDamage + bonusDamage)
+        if (damage != startingStats[0] + bonusStats[0])
         {
-            damage = startingDamage + bonusDamage;
+            damage = startingStats[0] + bonusStats[0];
         }
 
-        if (attackRange != startingAttackRange + bonusRange)
+        if (attackSpeed != startingStats[1] - bonusStats[1])
         {
-            attackRange = startingAttackRange + bonusRange;
+            attackSpeed = startingStats[1] - bonusStats[1];
         }
 
-        if (attackSpeed != startingSpeed - bonusSpeed)
+        if (attackRange != startingStats[2] + bonusStats[2])
         {
-            attackSpeed = startingSpeed - bonusSpeed;
+            attackRange = startingStats[2] + bonusStats[2];
         }
 
-        if (critChance != startingCritChance + bonusCritChance)
+        if (critChance != startingStats[3] + bonusStats[3])
         {
-            critChance = startingCritChance + bonusCritChance;
+            critChance = startingStats[3] + bonusStats[3];
         }
 
-        if (slowAmt != startingSlowAmt + bonusSlowAmt)
+        if (slowAmt != startingStats[4] + bonusStats[4])
         {
-            slowAmt = startingSlowAmt + bonusSlowAmt;
+            slowAmt = startingStats[4] + bonusStats[4];
         }
     }
 }
