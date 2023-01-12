@@ -126,7 +126,7 @@ public class TowerCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
                 break;
 
             case "Swift":
-                GlobalVars.goldCost = 150;
+                GlobalVars.goldCost = 125;
                 break;
 
             case "Cosmic":
