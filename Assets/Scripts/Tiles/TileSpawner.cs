@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using TMPro;
 
-public class TileSpawner : CardsLists
+public class TileSpawner : CardLists
 {
     private int shiftAmtXpos;
     private int shiftAmtYpos;

@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sell for 120g
+  m_text: 'Sell for 100g
 
 '
   m_isRightToLeft: 0

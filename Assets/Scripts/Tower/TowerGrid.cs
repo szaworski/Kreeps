@@ -163,7 +163,7 @@ public class TowerGrid : MonoBehaviour
                             break;
 
                         case var _ when towerScript.damageType.Contains("Swift"):
-                            GlobalVars.newGoldValue = GlobalVars.gold + 120;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 100;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Cosmic"):
