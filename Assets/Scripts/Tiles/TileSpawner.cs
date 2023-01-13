@@ -24,12 +24,18 @@ public class TileSpawner : CardLists
     private string newTileName;
     private string prependTileName;
     private string spawnDirection;
+    private string currentCardPhase;
     private List<string> validTilesList;
     private GameObject card1Obj;
     private GameObject card2Obj;
     private GameObject card3Obj;
     private GameObject card4Obj;
     private GameObject card5Obj;
+    private GameObject cardSlot1;
+    private GameObject cardSlot2;
+    private GameObject cardSlot3;
+    private GameObject cardSlot4;
+    private GameObject cardSlot5;
     [SerializeField] private TMP_Text locationSelectText;
     [SerializeField] private TMP_Text monsterSelectText;
     [SerializeField] private TMP_Text shopSelectText;
@@ -46,6 +52,7 @@ public class TileSpawner : CardLists
         GetAndShowTileCards();
         DestroyMonsterCards();
         DestroyShopCards();
+        SlideCardObjects();
     }
 
     public void PlaceStartingTile()
@@ -185,6 +192,7 @@ public class TileSpawner : CardLists
             StartCoroutine(FadeMusic.StartFade(GameObject.Find(GlobalVars.currentSong).GetComponent<AudioSource>(), 1f, GlobalVars.musicVolume * 0.5f));
             GlobalVars.waveEnded = true;
             GlobalVars.allMonstersAreSpawned = false;
+            currentCardPhase = "Tile";
 
             List<string> currentCardList = null;
             string card1 = null;
@@ -273,17 +281,17 @@ public class TileSpawner : CardLists
                 }
 
                 //Instantiate the Tile Cards
-                GameObject cardSlot1 = GameObject.Find("TileCardSlot1");
-                GameObject cardSlot2 = GameObject.Find("TileCardSlot2");
-                GameObject cardSlot3 = GameObject.Find("TileCardSlot3");
+                cardSlot1 = GameObject.Find("TileCardSlot1");
+                cardSlot2 = GameObject.Find("TileCardSlot2");
+                cardSlot3 = GameObject.Find("TileCardSlot3");
 
                 card1Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + GlobalVars.currTier + "/" + card1), cardSlot1.transform);
                 card2Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + GlobalVars.currTier + "/" + card2), cardSlot2.transform);
                 card3Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + GlobalVars.currTier + "/" + card3), cardSlot3.transform);
 
-                card1Obj.transform.position = cardSlot1.transform.position;
-                card2Obj.transform.position = cardSlot2.transform.position;
-                card3Obj.transform.position = cardSlot3.transform.position;
+                card1Obj.transform.position = new Vector3(cardSlot1.transform.position.x + 5, cardSlot1.transform.position.y, cardSlot1.transform.position.z);
+                card2Obj.transform.position = new Vector3(cardSlot2.transform.position.x + 5, cardSlot2.transform.position.y, cardSlot1.transform.position.z);
+                card3Obj.transform.position = new Vector3(cardSlot3.transform.position.x + 5, cardSlot3.transform.position.y, cardSlot1.transform.position.z);
                 locationSelectText.enabled = true;
             }
         }
@@ -309,6 +317,7 @@ public class TileSpawner : CardLists
         List<string> currentCardList = null;
         string card1 = null;
         string card2 = null;
+        currentCardPhase = "Monster";
 
         switch (GlobalVars.tileCardSelected)
         {
@@ -435,14 +444,14 @@ public class TileSpawner : CardLists
         }
 
         //Instantiate the Monster Cards
-        GameObject cardSlot4 = GameObject.Find("TileCardSlot4");
-        GameObject cardSlot5 = GameObject.Find("TileCardSlot5");
+        cardSlot4 = GameObject.Find("TileCardSlot4");
+        cardSlot5 = GameObject.Find("TileCardSlot5");
 
-        card1Obj = (GameObject)Instantiate(Resources.Load("UI/MonsterCards/" + GlobalVars.currTier + "/" + GlobalVars.tileCardSelected + "/" + card1), cardSlot4.transform);
-        card2Obj = (GameObject)Instantiate(Resources.Load("UI/MonsterCards/" + GlobalVars.currTier + "/" + GlobalVars.tileCardSelected + "/" + card2), cardSlot5.transform);
+        card4Obj = (GameObject)Instantiate(Resources.Load("UI/MonsterCards/" + GlobalVars.currTier + "/" + GlobalVars.tileCardSelected + "/" + card1), cardSlot4.transform);
+        card5Obj = (GameObject)Instantiate(Resources.Load("UI/MonsterCards/" + GlobalVars.currTier + "/" + GlobalVars.tileCardSelected + "/" + card2), cardSlot5.transform);
 
-        card1Obj.transform.position = cardSlot4.transform.position;
-        card2Obj.transform.position = cardSlot5.transform.position;
+        card4Obj.transform.position = new Vector3(cardSlot4.transform.position.x + 5, cardSlot4.transform.position.y, cardSlot4.transform.position.z);
+        card5Obj.transform.position = new Vector3(cardSlot5.transform.position.x + 5, cardSlot5.transform.position.y, cardSlot5.transform.position.z);
         monsterSelectText.enabled = true;
     }
 
@@ -451,8 +460,8 @@ public class TileSpawner : CardLists
         //Destory all monster card game objects after a selection is made. See Card.cs
         if (GlobalVars.triggerMonsterCardDestruction)
         {
-            Destroy(card1Obj.gameObject);
-            Destroy(card2Obj.gameObject);
+            Destroy(card4Obj.gameObject);
+            Destroy(card5Obj.gameObject);
             //Reset this bool for next card selection later
             GlobalVars.triggerMonsterCardDestruction = false;
             monsterSelectText.enabled = false;
@@ -480,6 +489,7 @@ public class TileSpawner : CardLists
         string card3 = null;
         string card4 = null;
         string card5 = "SkipCard";
+        currentCardPhase = "Shop";
 
         switch (GlobalVars.bonusStats["EquipmentLvl"])
         {
@@ -596,11 +606,11 @@ public class TileSpawner : CardLists
         }
 
         //Instantiate the Shop Cards
-        GameObject cardSlot1 = GameObject.Find("ShopCardSlot1");
-        GameObject cardSlot2 = GameObject.Find("ShopCardSlot2");
-        GameObject cardSlot3 = GameObject.Find("ShopCardSlot3");
-        GameObject cardSlot4 = GameObject.Find("ShopCardSlot4");
-        GameObject cardSlot5 = GameObject.Find("ShopCardSlot5");
+        cardSlot1 = GameObject.Find("ShopCardSlot1");
+        cardSlot2 = GameObject.Find("ShopCardSlot2");
+        cardSlot3 = GameObject.Find("ShopCardSlot3");
+        cardSlot4 = GameObject.Find("ShopCardSlot4");
+        cardSlot5 = GameObject.Find("ShopCardSlot5");
 
         card1Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + "Tier" + GlobalVars.bonusStats["EquipmentLvl"] + "/" + card1), cardSlot1.transform);
         card2Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card2), cardSlot2.transform);
@@ -608,11 +618,11 @@ public class TileSpawner : CardLists
         card4Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card4), cardSlot4.transform);
         card5Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card5), cardSlot5.transform);
 
-        card1Obj.transform.position = cardSlot1.transform.position;
-        card2Obj.transform.position = cardSlot2.transform.position;
-        card3Obj.transform.position = cardSlot3.transform.position;
-        card4Obj.transform.position = cardSlot4.transform.position;
-        card5Obj.transform.position = cardSlot5.transform.position;
+        card1Obj.transform.position = new Vector3(cardSlot1.transform.position.x + 6, cardSlot1.transform.position.y, cardSlot1.transform.position.z);
+        card2Obj.transform.position = new Vector3(cardSlot2.transform.position.x + 6, cardSlot2.transform.position.y, cardSlot2.transform.position.z);
+        card3Obj.transform.position = new Vector3(cardSlot3.transform.position.x + 6, cardSlot3.transform.position.y, cardSlot3.transform.position.z);
+        card4Obj.transform.position = new Vector3(cardSlot4.transform.position.x + 6, cardSlot4.transform.position.y, cardSlot4.transform.position.z);
+        card5Obj.transform.position = new Vector3(cardSlot5.transform.position.x + 6, cardSlot5.transform.position.y, cardSlot5.transform.position.z);
         shopSelectText.enabled = true;
     }
 
@@ -1075,6 +1085,31 @@ public class TileSpawner : CardLists
         StartCoroutine(FadeMusic.EndSong(GameObject.Find(GlobalVars.currentSong).GetComponent<AudioSource>(), 4.5f));
         GlobalVars.currentSong = newSong;
         StartCoroutine(FadeMusic.StartNewSong(GameObject.Find(GlobalVars.currentSong).GetComponent<AudioSource>(), 8f));
+    }
+
+    public void SlideCardObjects()
+    {
+        if (card1Obj != null && currentCardPhase == "Tile")
+        {
+            card1Obj.transform.position = Vector3.Lerp(card1Obj.transform.position, cardSlot1.transform.position, (Time.deltaTime * 10));
+            card2Obj.transform.position = Vector3.Lerp(card2Obj.transform.position, cardSlot2.transform.position, (Time.deltaTime * 10));
+            card3Obj.transform.position = Vector3.Lerp(card3Obj.transform.position, cardSlot3.transform.position, (Time.deltaTime * 10));
+        }
+
+        if (card4Obj != null && currentCardPhase == "Monster")
+        {
+            card4Obj.transform.position = Vector3.Lerp(card4Obj.transform.position, cardSlot4.transform.position, (Time.deltaTime * 10));
+            card5Obj.transform.position = Vector3.Lerp(card5Obj.transform.position, cardSlot5.transform.position, (Time.deltaTime * 10));
+        }
+
+        if (card1Obj != null && currentCardPhase == "Shop")
+        {
+            card1Obj.transform.position = Vector3.Lerp(card1Obj.transform.position, cardSlot1.transform.position, (Time.deltaTime * 10));
+            card2Obj.transform.position = Vector3.Lerp(card2Obj.transform.position, cardSlot2.transform.position, (Time.deltaTime * 10));
+            card3Obj.transform.position = Vector3.Lerp(card3Obj.transform.position, cardSlot3.transform.position, (Time.deltaTime * 10));
+            card4Obj.transform.position = Vector3.Lerp(card4Obj.transform.position, cardSlot4.transform.position, (Time.deltaTime * 10));
+            card5Obj.transform.position = Vector3.Lerp(card5Obj.transform.position, cardSlot5.transform.position, (Time.deltaTime * 10));
+        }
     }
 
     public void OnDrawGizmos()
