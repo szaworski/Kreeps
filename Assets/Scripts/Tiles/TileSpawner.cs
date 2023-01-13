@@ -289,9 +289,9 @@ public class TileSpawner : CardLists
                 card2Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + GlobalVars.currTier + "/" + card2), cardSlot2.transform);
                 card3Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + GlobalVars.currTier + "/" + card3), cardSlot3.transform);
 
-                card1Obj.transform.position = new Vector3(cardSlot1.transform.position.x + 5, cardSlot1.transform.position.y, cardSlot1.transform.position.z);
-                card2Obj.transform.position = new Vector3(cardSlot2.transform.position.x + 5, cardSlot2.transform.position.y, cardSlot1.transform.position.z);
-                card3Obj.transform.position = new Vector3(cardSlot3.transform.position.x + 5, cardSlot3.transform.position.y, cardSlot1.transform.position.z);
+                card1Obj.transform.position = new Vector3(cardSlot1.transform.position.x, cardSlot1.transform.position.y - 5, cardSlot1.transform.position.z);
+                card2Obj.transform.position = new Vector3(cardSlot2.transform.position.x, cardSlot2.transform.position.y + 5, cardSlot1.transform.position.z);
+                card3Obj.transform.position = new Vector3(cardSlot3.transform.position.x, cardSlot3.transform.position.y - 5, cardSlot1.transform.position.z);
                 locationSelectText.enabled = true;
             }
         }
@@ -450,8 +450,8 @@ public class TileSpawner : CardLists
         card4Obj = (GameObject)Instantiate(Resources.Load("UI/MonsterCards/" + GlobalVars.currTier + "/" + GlobalVars.tileCardSelected + "/" + card1), cardSlot4.transform);
         card5Obj = (GameObject)Instantiate(Resources.Load("UI/MonsterCards/" + GlobalVars.currTier + "/" + GlobalVars.tileCardSelected + "/" + card2), cardSlot5.transform);
 
-        card4Obj.transform.position = new Vector3(cardSlot4.transform.position.x + 5, cardSlot4.transform.position.y, cardSlot4.transform.position.z);
-        card5Obj.transform.position = new Vector3(cardSlot5.transform.position.x + 5, cardSlot5.transform.position.y, cardSlot5.transform.position.z);
+        card4Obj.transform.position = new Vector3(cardSlot4.transform.position.x, cardSlot4.transform.position.y - 5, cardSlot4.transform.position.z);
+        card5Obj.transform.position = new Vector3(cardSlot5.transform.position.x, cardSlot5.transform.position.y + 5, cardSlot5.transform.position.z);
         monsterSelectText.enabled = true;
     }
 
@@ -618,11 +618,11 @@ public class TileSpawner : CardLists
         card4Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card4), cardSlot4.transform);
         card5Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card5), cardSlot5.transform);
 
-        card1Obj.transform.position = new Vector3(cardSlot1.transform.position.x + 6, cardSlot1.transform.position.y, cardSlot1.transform.position.z);
-        card2Obj.transform.position = new Vector3(cardSlot2.transform.position.x + 6, cardSlot2.transform.position.y, cardSlot2.transform.position.z);
-        card3Obj.transform.position = new Vector3(cardSlot3.transform.position.x + 6, cardSlot3.transform.position.y, cardSlot3.transform.position.z);
-        card4Obj.transform.position = new Vector3(cardSlot4.transform.position.x + 6, cardSlot4.transform.position.y, cardSlot4.transform.position.z);
-        card5Obj.transform.position = new Vector3(cardSlot5.transform.position.x + 6, cardSlot5.transform.position.y, cardSlot5.transform.position.z);
+        card1Obj.transform.position = new Vector3(cardSlot1.transform.position.x, cardSlot1.transform.position.y - 5, cardSlot1.transform.position.z);
+        card2Obj.transform.position = new Vector3(cardSlot2.transform.position.x, cardSlot2.transform.position.y + 5, cardSlot2.transform.position.z);
+        card3Obj.transform.position = new Vector3(cardSlot3.transform.position.x, cardSlot3.transform.position.y - 5, cardSlot3.transform.position.z);
+        card4Obj.transform.position = new Vector3(cardSlot4.transform.position.x, cardSlot4.transform.position.y + 5, cardSlot4.transform.position.z);
+        card5Obj.transform.position = new Vector3(cardSlot5.transform.position.x, cardSlot5.transform.position.y - 5, cardSlot5.transform.position.z);
         shopSelectText.enabled = true;
     }
 
