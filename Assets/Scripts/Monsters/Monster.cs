@@ -90,7 +90,7 @@ public class Monster : MonoBehaviour
             StartCoroutine(DestroyMonster(0.1f));
         }
 
-        if (isPoisoned && !isTakingPoisonDamage && GlobalVars.bonusExtraStats["SwiftPsnDmgUp"] > 0)
+        if (isPoisoned && !isTakingPoisonDamage)
         {
             StartCoroutine(inflictPoisonDamage(0.5f));
         }
@@ -189,7 +189,7 @@ public class Monster : MonoBehaviour
                         delayAmt = 0f;
                     }
 
-                    if (randFloat <= 0.25f)
+                    if (randFloat <= 0.25f && GlobalVars.bonusExtraStats["FireBurnUp"] > 0)
                     {
                         incomingDamage += GlobalVars.bonusExtraStats["FireBurnUp"];
                     }
@@ -254,7 +254,7 @@ public class Monster : MonoBehaviour
                         incomingDamage *= 0.5f;
                     }
 
-                    if (armor > 0)
+                    if (armor > 0 && GlobalVars.bonusExtraStats["ThunderArmorDmgUp"] > 0)
                     {
                         incomingDamage += GlobalVars.bonusExtraStats["ThunderArmorDmgUp"];
                     }
@@ -289,7 +289,7 @@ public class Monster : MonoBehaviour
                         incomingDamage *= 0.5f;
                     }
 
-                    if (!isPoisoned)
+                    if (!isPoisoned && GlobalVars.bonusExtraStats["SwiftPsnDmgUp"] > 0)
                     {
                         StartCoroutine(triggerPoison(0.5f));
                     }
