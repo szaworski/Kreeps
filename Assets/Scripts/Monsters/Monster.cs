@@ -170,6 +170,9 @@ public class Monster : MonoBehaviour
             float yShiftAmt = 0;
             float delayAmt = 0;
 
+            //Used for percent chance occurrences
+            float randFloat = Random.value;
+
             // Check the monster type against damage type and modify damage values
             switch (damageType)
             {
@@ -186,6 +189,11 @@ public class Monster : MonoBehaviour
                         delayAmt = 0f;
                     }
 
+                    if (randFloat <= 0.25f)
+                    {
+                        incomingDamage += GlobalVars.bonusExtraStats["FireBurnUp"];
+                    }
+
                     if (type.Contains("Beast") && armor <= 0)
                     {
                         incomingDamage *= 1.5f;
@@ -198,7 +206,7 @@ public class Monster : MonoBehaviour
 
                 case var _ when damageType.Contains("Ice"):
 
-                    iceSlowCd = 0.8f + Time.time;
+                    iceSlowCd = 0.9f + Time.time;
 
                     if (!iceSlowStatus || iceSlowStatus && slowAmt > iceSlowAmt)
                     {
@@ -245,6 +253,17 @@ public class Monster : MonoBehaviour
                     {
                         incomingDamage *= 0.5f;
                     }
+
+                    if (armor > 0)
+                    {
+                        incomingDamage += GlobalVars.bonusExtraStats["ThunderArmorDmgUp"];
+                    }
+
+                    if (randFloat <= critChance)
+                    {
+                        isCritHit = true;
+                        incomingDamage *= 2;
+                    }
                     break;
 
                 case var _ when damageType.Contains("Holy"):
@@ -269,6 +288,11 @@ public class Monster : MonoBehaviour
                     {
                         incomingDamage *= 0.5f;
                     }
+
+                    if (!isPoisoned)
+                    {
+                        StartCoroutine(triggerPoison(0.5f));
+                    }
                     break;
 
                 case var _ when damageType.Contains("Cosmic"):
@@ -286,51 +310,6 @@ public class Monster : MonoBehaviour
                     {
                         incomingDamage *= 0.5f;
                     }
-                    break;
-            }
-
-            float randFloat;
-
-            //Apply any special bonuses if applicable  
-            switch (damageType)
-            {
-                case var _ when damageType.Contains("Fire"):
-
-                    randFloat = Random.value;
-
-                    if (randFloat <= 0.25f)
-                    {
-                        incomingDamage += GlobalVars.bonusExtraStats["FireBurnUp"];
-                    }
-                    break;
-
-                case var _ when damageType.Contains("Thunder"):
-
-                    randFloat = Random.value;
-
-                    if (armor > 0)
-                    {
-                        incomingDamage += GlobalVars.bonusExtraStats["ThunderArmorDmgUp"];
-                    }
-
-                    if (randFloat <= critChance)
-                    {
-                        isCritHit = true;
-                        incomingDamage *= 2;
-                    }
-                    break;
-
-                case var _ when damageType.Contains("Swift"):
-
-                    if (!isPoisoned)
-                    {
-                        StartCoroutine(triggerPoison(0.5f));
-                    }
-                    break;
-
-                case var _ when damageType.Contains("Cosmic"):
-
-                    randFloat = Random.value;
 
                     if (randFloat <= critChance)
                     {
@@ -383,7 +362,7 @@ public class Monster : MonoBehaviour
         {
             iceSlowStatus = false;
 
-            if (moveSpeed == 0.25f)
+            if (moveSpeed == 0.20f)
             {
                 moveSpeed = reducedMoveSpeed + iceSlowAmt;
             }
@@ -397,10 +376,10 @@ public class Monster : MonoBehaviour
 
     void LimitMoveSpeedReduction()
     {
-        if (iceSlowStatus && moveSpeed <= 0.25f)
+        if (iceSlowStatus && moveSpeed <= 0.20f)
         {
             reducedMoveSpeed = moveSpeed;
-            moveSpeed = 0.25f;
+            moveSpeed = 0.20f;
         }
     }
 
