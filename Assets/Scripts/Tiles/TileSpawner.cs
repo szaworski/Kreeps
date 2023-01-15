@@ -36,6 +36,9 @@ public class TileSpawner : CardLists
     private GameObject cardSlot3;
     private GameObject cardSlot4;
     private GameObject cardSlot5;
+    private GameObject rerollSlot;
+    private GameObject rerollCost;
+    [SerializeField] private GameObject rerollButton;
     [SerializeField] private TMP_Text locationSelectText;
     [SerializeField] private TMP_Text monsterSelectText;
     [SerializeField] private TMP_Text shopSelectText;
@@ -45,6 +48,7 @@ public class TileSpawner : CardLists
         curTiles = new string[6];
         validTiles = new bool[6];
         PlaceStartingTile();
+        rerollCost = rerollButton.transform.GetChild(1).gameObject;
     }
 
     void Update()
@@ -203,6 +207,7 @@ public class TileSpawner : CardLists
             if (GlobalVars.tileCounters["numOfTimesPlaced"] < 8)
             {
                 currentCardList = tier1TileCards.ToList();
+                GlobalVars.rerollCost = 25;
             }
 
             else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 8 && GlobalVars.tileCounters["numOfTimesPlaced"] < 16)
@@ -211,6 +216,7 @@ public class TileSpawner : CardLists
                 GlobalVars.currTierNum = 2;
                 currentCardList = tier2TileCards.ToList();
                 GlobalVars.kreepSpawnRate = 0.45f;
+                GlobalVars.rerollCost = 50;
             }
 
             else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 16 && GlobalVars.tileCounters["numOfTimesPlaced"] < 24)
@@ -219,6 +225,7 @@ public class TileSpawner : CardLists
                 GlobalVars.currTierNum = 3;
                 currentCardList = tier3TileCards.ToList();
                 GlobalVars.kreepSpawnRate = 0.4f;
+                GlobalVars.rerollCost = 100;
 
                 if (GlobalVars.tileCounters["numOfTimesPlaced"] == 16)
                 {
@@ -231,6 +238,7 @@ public class TileSpawner : CardLists
                 GlobalVars.currTier = "Tier4";
                 GlobalVars.currTierNum = 4;
                 currentCardList = tier4TileCards.ToList();
+                GlobalVars.rerollCost = 150;
             }
 
             else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 32 && GlobalVars.tileCounters["numOfTimesPlaced"] < 40)
@@ -238,6 +246,7 @@ public class TileSpawner : CardLists
                 GlobalVars.currTier = "Tier5";
                 GlobalVars.currTierNum = 5;
                 currentCardList = tier5TileCards.ToList();
+                GlobalVars.rerollCost = 200;
 
                 if (GlobalVars.tileCounters["numOfTimesPlaced"] == 32)
                 {
@@ -490,6 +499,8 @@ public class TileSpawner : CardLists
         string card4 = null;
         string card5 = "SkipCard";
         currentCardPhase = "Shop";
+        rerollButton.SetActive(true);
+        rerollCost.transform.GetComponent<TextMeshProUGUI>().text = GlobalVars.rerollCost.ToString() + "g";
 
         switch (GlobalVars.bonusStats["EquipmentLvl"])
         {
@@ -579,7 +590,7 @@ public class TileSpawner : CardLists
                     {
                         card3 = selectedCard;
                     }
-                    else if(!selectedCard.Contains("Up"))
+                    else if (!selectedCard.Contains("Up"))
                     {
                         card3 = selectedCard + GlobalVars.bonusStats[selectedCard + "Lvl"];
                     }
@@ -611,12 +622,14 @@ public class TileSpawner : CardLists
         cardSlot3 = GameObject.Find("ShopCardSlot3");
         cardSlot4 = GameObject.Find("ShopCardSlot4");
         cardSlot5 = GameObject.Find("ShopCardSlot5");
+        rerollSlot = GameObject.Find("RerollButtonSlot");
 
         card1Obj = (GameObject)Instantiate(Resources.Load("UI/WeaponCards/" + "Tier" + GlobalVars.bonusStats["EquipmentLvl"] + "/" + card1), cardSlot1.transform);
         card2Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card2), cardSlot2.transform);
         card3Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card3), cardSlot3.transform);
         card4Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card4), cardSlot4.transform);
         card5Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card5), cardSlot5.transform);
+        rerollButton.transform.position = new Vector3(rerollButton.transform.position.x, cardSlot5.transform.position.y - 20, cardSlot5.transform.position.z);
 
         card1Obj.transform.position = new Vector3(cardSlot1.transform.position.x, cardSlot1.transform.position.y - 5, cardSlot1.transform.position.z);
         card2Obj.transform.position = new Vector3(cardSlot2.transform.position.x, cardSlot2.transform.position.y + 5, cardSlot2.transform.position.z);
@@ -628,7 +641,6 @@ public class TileSpawner : CardLists
 
     public void DestroyShopCards()
     {
-        //Destory all monster card game objects after a selection is made. See Card.cs
         if (GlobalVars.triggerShopCardDestruction)
         {
             Destroy(card1Obj.gameObject);
@@ -642,6 +654,35 @@ public class TileSpawner : CardLists
             GlobalVars.showStartWaveInstructions = true;
             Resources.UnloadUnusedAssets();
             Debug.Log("Shop Cards Destoryed");
+            rerollButton.SetActive(false);
+        }
+    }
+
+    public void RerollShopCards()
+    {
+        if (GlobalVars.gold >= GlobalVars.rerollCost && !GlobalVars.isPaused)
+        {
+            GlobalVars.newGoldValue = GlobalVars.gold - GlobalVars.rerollCost;
+
+            Destroy(card1Obj.gameObject);
+            Destroy(card2Obj.gameObject);
+            Destroy(card3Obj.gameObject);
+            Destroy(card4Obj.gameObject);
+            Destroy(card5Obj.gameObject);
+            //Reset this bool for next card selection later
+            GlobalVars.triggerShopCardDestruction = false;
+            shopSelectText.enabled = false;
+            GlobalVars.showStartWaveInstructions = true;
+            Resources.UnloadUnusedAssets();
+            Debug.Log("Shop Cards Destoryed");
+            rerollButton.SetActive(false);
+            rerollButton.SetActive(true);
+
+            GetAndShowShopCards();
+        }
+        else
+        {
+            GameObject.Find("UiSounds").GetComponent<AudioManager>().PlaySound("Error");
         }
     }
 
@@ -1109,6 +1150,7 @@ public class TileSpawner : CardLists
             card3Obj.transform.position = Vector3.Lerp(card3Obj.transform.position, cardSlot3.transform.position, (Time.deltaTime * 10));
             card4Obj.transform.position = Vector3.Lerp(card4Obj.transform.position, cardSlot4.transform.position, (Time.deltaTime * 10));
             card5Obj.transform.position = Vector3.Lerp(card5Obj.transform.position, cardSlot5.transform.position, (Time.deltaTime * 10));
+            rerollButton.transform.position = Vector3.Lerp(rerollButton.transform.position, rerollSlot.transform.position, (Time.deltaTime * 10));
         }
     }
 

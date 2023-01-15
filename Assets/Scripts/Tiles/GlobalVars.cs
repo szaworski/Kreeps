@@ -23,6 +23,7 @@ public class GlobalVars : MonoBehaviour
     public static float kreepSpawnRate;
 
     public static int currTierNum;
+    public static int rerollCost;
     public static int goldCost;
     public static int upgradeGoldCost;
     public static int playerHealth;
