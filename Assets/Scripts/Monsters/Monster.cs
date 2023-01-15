@@ -90,12 +90,10 @@ public class Monster : MonoBehaviour
             StartCoroutine(DestroyMonster(0.1f));
         }
 
-        if (isPoisoned && !isTakingPoisonDamage)
+        if (isPoisoned && !isTakingPoisonDamage && armor <= 0)
         {
             StartCoroutine(inflictPoisonDamage(0.5f));
         }
-
-        //Debug.Log("Total distance traveled: " + distanceTraveled);
     }
 
     public void FollowWaypoints()

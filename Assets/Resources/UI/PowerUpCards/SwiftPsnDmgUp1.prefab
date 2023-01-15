@@ -65,8 +65,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Swift type weapons and towers inflict poison on their targets dealing
-    3 damage every 0.5 seconds
+  m_text: 'Swift type weapons and towers gain poison (3 damage every 0.5 seconds).
+    This damage is not dealt to armor
 
     Cost: 75g'
   m_isRightToLeft: 0
