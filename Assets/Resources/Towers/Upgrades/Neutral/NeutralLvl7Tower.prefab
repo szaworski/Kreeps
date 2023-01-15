@@ -441,15 +441,13 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   attackCd: 0
   damage: 12
-  bonusDamage2: 0
-  bonusRange2: 0
-  bonusArmorDmg: 0
   projectileSpeed: 4
   attackSpeed: 2
   attackRange: 0.6
   critChance: 0
   damageType: Neutral
   slowAmt: 0
+  bonusDamage2: 0
   attackRadius: {fileID: 1578552572651102220}
   hasRectangleRadius: 0
   rectIsVertical: 0

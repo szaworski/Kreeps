@@ -74,9 +74,9 @@ MonoBehaviour:
     Speed: 2
 
     Range:
-    0.5
+    0.6
 
-    Radius: Rectangle
+    Radius: Square
 
 '
   m_isRightToLeft: 0
