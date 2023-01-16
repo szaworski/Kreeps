@@ -283,7 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: CosmicCritChanceUp
-  upgradeCost: 75
+  upgradeCost: 50
   upgradeType: Special
   bonusAmt: 0
   bonusFloatAmt: 0.1
@@ -359,7 +359,7 @@ MonoBehaviour:
 
 
 
-    Cost: 75g'
+    Cost: 50g'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

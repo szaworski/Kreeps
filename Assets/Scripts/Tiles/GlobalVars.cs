@@ -166,6 +166,7 @@ public class GlobalVars : MonoBehaviour
         coinChoiceCount = 0;
         kreepSpawnRate = 0.45f;
         allMonstersAreSpawned = false;
+        stoneIsSelected = false;
         currentSong = "Song1";
         musicVolume = PlayerPrefs.GetFloat("musicVolume");
         selectedRectIsVertical = true;

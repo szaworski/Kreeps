@@ -187,7 +187,7 @@ public class Monster : MonoBehaviour
                         delayAmt = 0f;
                     }
 
-                    if (randFloat <= 0.25f && GlobalVars.bonusExtraStats["FireBurnUp"] > 0)
+                    if (randFloat <= 0.50f && GlobalVars.bonusExtraStats["FireBurnUp"] > 0)
                     {
                         incomingDamage += GlobalVars.bonusExtraStats["FireBurnUp"];
                     }
@@ -204,7 +204,7 @@ public class Monster : MonoBehaviour
 
                 case var _ when damageType.Contains("Ice"):
 
-                    iceSlowCd = 0.75f + Time.time;
+                    iceSlowCd = 1f + Time.time;
 
                     if (!iceSlowStatus || iceSlowStatus && slowAmt > iceSlowAmt)
                     {
