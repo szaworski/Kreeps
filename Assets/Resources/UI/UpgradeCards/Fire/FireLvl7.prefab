@@ -361,7 +361,7 @@ MonoBehaviour:
     Speed: 1s
 
     Range:
-    0.6
+    0.5
 
     Radius: Square'
   m_isRightToLeft: 0

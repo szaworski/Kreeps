@@ -207,10 +207,10 @@ MonoBehaviour:
 
     Damage: 10
 
-    Speed: 1.5s
+    Speed: 1.75s
 
     Range:
-    0.6
+    0.5
 
     Radius: Square'
   m_isRightToLeft: 0
