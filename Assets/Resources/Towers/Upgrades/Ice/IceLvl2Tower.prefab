@@ -441,15 +441,13 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   attackCd: 0
   damage: 10
-  bonusDamage2: 0
-  bonusRange2: 0
-  bonusArmorDmg: 0
   projectileSpeed: 1
   attackSpeed: 1
   attackRange: 0.5
   critChance: 0
   damageType: Ice
-  slowAmt: 0.07
+  slowAmt: 0.1
+  bonusDamage2: 0
   attackRadius: {fileID: 247469621238869209}
   hasRectangleRadius: 1
   rectIsVertical: 1

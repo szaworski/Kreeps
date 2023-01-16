@@ -352,11 +352,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Single target -12ms
+  m_text: 'Single target -18ms
 
     Cost: 150g
 
-    Damage: 18
+    Damage: 20
 
     Speed: 0.9s
 
