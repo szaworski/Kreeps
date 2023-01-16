@@ -201,11 +201,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'AOE in radius -20ms
+  m_text: 'AOE in radius -14ms
 
     Cost: 300g
 
-    Damage: 14
+    Damage: 10
 
     Speed: 1.5s
 

@@ -204,7 +204,7 @@ public class Monster : MonoBehaviour
 
                 case var _ when damageType.Contains("Ice"):
 
-                    iceSlowCd = 1f + Time.time;
+                    iceSlowCd = 0.85f + Time.time;
 
                     if (!iceSlowStatus || iceSlowStatus && slowAmt > iceSlowAmt)
                     {
@@ -360,7 +360,7 @@ public class Monster : MonoBehaviour
         {
             iceSlowStatus = false;
 
-            if (moveSpeed == 0.20f)
+            if (moveSpeed == 0.28f)
             {
                 moveSpeed = reducedMoveSpeed + iceSlowAmt;
             }
@@ -374,10 +374,10 @@ public class Monster : MonoBehaviour
 
     void LimitMoveSpeedReduction()
     {
-        if (iceSlowStatus && moveSpeed <= 0.20f)
+        if (iceSlowStatus && moveSpeed <= 0.28f)
         {
             reducedMoveSpeed = moveSpeed;
-            moveSpeed = 0.20f;
+            moveSpeed = 0.28f;
         }
     }
 
