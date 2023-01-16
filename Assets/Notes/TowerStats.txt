@@ -29,25 +29,25 @@ Fire Towers:
 Bonus power: + attack speed, + burn damage (chance to deal an additional set amount of damage)
 
 Fire Lvl 1
-Type: single target, Cost: 75, Dmg: 7, Rof: 1, Rng: 0.5
+Type: single target, Cost: 75, Dmg: 6, Rof: 0.9, Rng: 0.5
 
 Fire Lvl 2
-Type: single target, Cost: 50, Dmg: 12, Rof: 1, Rng: 0.5
+Type: single target, Cost: 50, Dmg: 12, Rof: 0.9, Rng: 0.5
 
 Fire Lvl 3
-Type: single target, Cost: 50, Dmg: 18, Rof: 1, Rng: 0.5
+Type: single target, Cost: 50, Dmg: 18, Rof: 0.9, Rng: 0.5
 
 Ember Lvl 1
-Type: AOE, Cost: 75, Dmg: 5, Rof: 1.5, Rng: 0.5
+Type: AOE, Cost: 75, Dmg: 6, Rof: 1.5, Rng: 0.4
 
 Ember Lvl 2
-Type: AOE, Cost: 100, Dmg: 10, Rof: 1.2, Rng: 0.5
+Type: AOE, Cost: 100, Dmg: 12, Rof: 1.2, Rng: 0.4
 
 Ember Lvl 3
-Type: single target, Cost: 150, Dmg: 20, Rof: 0.9, Rng: 0.8
+Type: single target, Cost: 150, Dmg: 22, Rof: 0.8, Rng: 0.8
 
 Fire Storm
-Type: single target, Cost: 300, Dmg: 12, Rof: 1, Rng: 0.6
+Type: single target, Cost: 300, Dmg: 14, Rof: 1, Rng: 0.5
 
 
 
@@ -55,25 +55,25 @@ Ice Towers:
 Bonus power: + move speed slow, + attack range
 
 Ice Lvl 1
-Type: single target, Cost: 75, Dmg: 6, Rof: 1, Rng: 0.5 Move slow: 5
+Type: single target, Cost: 75, Dmg: 6, Rof: 1, Rng: 0.5 Move slow: 6
 
 Ice Lvl 2
-Type: single target, Cost: 50, Dmg: 10, Rof: 1, Rng: 0.5 Move slow: 7
+Type: single target, Cost: 50, Dmg: 10, Rof: 1, Rng: 0.5 Move slow: 8
 
 Ice Lvl 3
-Type: single target, Cost: 50, Dmg: 15, Rof: 1, Rng: 0.5 Move slow: 10
+Type: single target, Cost: 50, Dmg: 14, Rof: 1, Rng: 0.5 Move slow: 10
 
 Frost Lvl 1
-Type: AOE, Cost: 75, Dmg: 4, Rof: 1.5, Rng: 0.5 Move slow: 5
+Type: AOE, Cost: 75, Dmg: 4, Rof: 1.75, Rng: 0.4 Move slow: 6
 
 Frost Lvl 2
-Type: AOE, Cost: 100, Dmg: 8, Rof: 1.5, Rng: 0.5 Move slow: 10
+Type: AOE, Cost: 100, Dmg: 8, Rof: 1.75, Rng: 0.4 Move slow: 10
 
 Frost Lvl 3
-Type: single target, Cost: 150, Dmg: 18, Rof: 0.9, Rng: 0.8 Move slow: 12
+Type: single target, Cost: 150, Dmg: 16, Rof: 0.9, Rng: 0.8 Move slow: 12
 
 Snow Spire
-Type: AOE, Cost: 300, Dmg: 12, Rof: 1.5, Rng: 0.6 Move slow: 15
+Type: AOE, Cost: 300, Dmg: 10, Rof: 1.75, Rng: 0.5 Move slow: 14
 
 
 
@@ -90,16 +90,16 @@ Thunder Lvl 3
 Type: single target, Cost: 70, Dmg: 36, Rof: 1.5, Rng: 0.6
 
 Shock Lvl 1
-Type: single target, Cost: 100, Dmg: 16, Rof: 1.25, Rng: 0.7
+Type: single target, Cost: 100, Dmg: 20, Rof: 1.25, Rng: 0.7
 
 Shock Lvl 2
-Type: AOE, Cost: 150, Dmg: 3, Rof: 0.75, Rng: 0.5
+Type: AOE, Cost: 150, Dmg: 4, Rof: 0.75, Rng: 0.5
 
 Shock Lvl 3
-Type: single target, Cost: 200, Dmg: 24, Rof: 1, Rng: 0.8
+Type: single target, Cost: 200, Dmg: 32, Rof: 0.9, Rng: 0.8
 
 Sunderbolt
-Type: single target, Cost: 350, Dmg: 70, Rof: 1.5, Rng: 0.7
+Type: single target, Cost: 350, Dmg: 80, Rof: 1.5, Rng: 0.7
 
 
 
@@ -110,22 +110,22 @@ Holy Lvl 1
 Type: single target, Cost: 100, Dmg: 10, Rof: 1.2, Rng: 0.7
 
 Holy Lvl 2
-Type: single target, Cost: 70, Dmg: 16, Rof: 1.2, Rng: 0.7
+Type: single target, Cost: 70, Dmg: 18, Rof: 1.2, Rng: 0.7
 
 Holy Lvl 3
-Type: single target, Cost: 70, Dmg: 24, Rof: 1.2, Rng: 0.7
+Type: single target, Cost: 70, Dmg: 28, Rof: 1.2, Rng: 0.7
 
 Divine Lvl 1
-Type: single target, Cost: 100, Dmg: 12, Rof: 1, Rng: 0.6
+Type: single target, Cost: 100, Dmg: 16, Rof: 1, Rng: 0.6
 
 Divine Lvl 2
-Type: single target, Cost: 150, Dmg: 18, Rof: 0.8, Rng: 0.7
+Type: single target, Cost: 150, Dmg: 24, Rof: 0.8, Rng: 0.7
 
 Divine Lvl 3
-Type: single target, Cost: 200, Dmg: 45, Rof: 2, Rng: 0.8
+Type: single target, Cost: 200, Dmg: 60, Rof: 2, Rng: 0.8
 
 Cathedral
-Type: AOE, Cost: 400, Dmg: 20, Rof: 1.5, Rng: 0.5
+Type: AOE, Cost: 400, Dmg: 22, Rof: 1.2, Rng: 0.5
 
 
 
@@ -133,25 +133,25 @@ Swift Towers:
 Bonus power: + attack speed, + poison damage, 
 
 Swift Lvl 1
-Type: single target, Cost: 150, Dmg: 6, Rof: 0.8, Rng: 0.5
+Type: single target, Cost: 125, Dmg: 8, Rof: 0.8, Rng: 0.5
 
 Swift Lvl 2
-Type: single target, Cost: 100, Dmg: 9, Rof: 0.7, Rng: 0.5
+Type: single target, Cost: 85, Dmg: 10, Rof: 0.7, Rng: 0.5
 
 Swift Lvl 3
-Type: single target, Cost: 100, Dmg: 12, Rof: 0.6, Rng: 0.5
+Type: single target, Cost: 85, Dmg: 14, Rof: 0.6, Rng: 0.5
 
 Agile Lvl 1
-Type: single target, Cost: 150, Dmg: 10, Rof: 0.6, Rng: 0.6
+Type: single target, Cost: 125, Dmg: 10, Rof: 0.6, Rng: 0.6
 
 Agile Lvl 2
-Type: single target, Cost: 200, Dmg: 15, Rof: 0.5, Rng: 0.6
+Type: single target, Cost: 175, Dmg: 16, Rof: 0.5, Rng: 0.6
 
 Scattershot
-Type: AOE, Cost: 250, Dmg: 15, Rof: 2, Rng: 0.5
+Type: AOE, Cost: 225, Dmg: 15, Rof: 2, Rng: 0.5
 
 Citadel
-Type: single target, Cost: 500, Dmg: 20, Rof: 0.5, Rng: 0.8
+Type: single target, Cost: 450, Dmg: 20, Rof: 0.5, Rng: 0.8
 
 
 
@@ -169,10 +169,10 @@ Cosmic Lvl 3
 Type: single target, Cost: 175, Dmg: 60, Rof: 0.7, Rng: 0.7
 
 Comet Lvl 1
-Type: AOE, Cost: 250, Dmg: 20, Rof: 1.2, Rng: 0.5
+Type: AOE, Cost: 250, Dmg: 20, Rof: 1.4, Rng: 0.5
 
 Comet Lvl 2
-Type: AOE, Cost: 300, Dmg: 40, Rof: 1, Rng: 0.5
+Type: AOE, Cost: 300, Dmg: 40, Rof: 1.2, Rng: 0.5
 
 Comet Lvl 3
 Type: single target, Cost: 300, Dmg: 80, Rof: 0.6, Rng: 1
