@@ -328,105 +328,7 @@ public class TileSpawner : CardLists
         string card2 = null;
         currentCardPhase = "Monster";
 
-        switch (GlobalVars.tileCardSelected)
-        {
-            //Tier 1
-            case "Forest":
-                currentCardList = forestMonsterCards.ToList();
-                break;
-            case "Graveyard":
-                currentCardList = graveyardMonsterCards.ToList();
-                break;
-            case "River":
-                currentCardList = riverMonsterCards.ToList();
-                break;
-            case "Mountain":
-                currentCardList = mountainMonsterCards.ToList();
-                break;
-            case "Swamp":
-                currentCardList = swampMonsterCards.ToList();
-                break;
-
-            //Tier 2
-            case "Desert":
-                currentCardList = desertMonsterCards.ToList();
-                break;
-            case "Thicket":
-                currentCardList = thicketMonsterCards.ToList();
-                break;
-            case "Tundra":
-                currentCardList = tundraMonsterCards.ToList();
-                break;
-            case "Cavern":
-                currentCardList = cavernMonsterCards.ToList();
-                break;
-            case "Settlement":
-                currentCardList = settlementMonsterCards.ToList();
-                break;
-            case "Seashore":
-                currentCardList = seashoreMonsterCards.ToList();
-                break;
-
-            //Tier 3
-            case "CanyonCrossing":
-                currentCardList = canyonCrossingMonsterCards.ToList();
-                break;
-            case "CrimsonPlain":
-                currentCardList = crimsonPlainMonsterCards.ToList();
-                break;
-            case "Crypt":
-                currentCardList = cryptMonsterCards.ToList();
-                break;
-            case "EmeraldCave":
-                currentCardList = emeraldCaveMonsterCards.ToList();
-                break;
-            case "Marsh":
-                currentCardList = marshMonsterCards.ToList();
-                break;
-            case "Sewer":
-                currentCardList = sewerMonsterCards.ToList();
-                break;
-
-            //Tier 4
-            case "CrystalCave":
-                currentCardList = crystalCaveMonsterCards.ToList();
-                break;
-            case "FrozenPassage":
-                currentCardList = frozenPassageMonsterCards.ToList();
-                break;
-            case "InfernalWoods":
-                currentCardList = infernalWoodsMonsterCards.ToList();
-                break;
-            case "SacredGrounds":
-                currentCardList = sacredGroundsMonsterCards.ToList();
-                break;
-            case "TaintedCanal":
-                currentCardList = taintedCanalMonsterCards.ToList();
-                break;
-            case "VolcanicRavine":
-                currentCardList = volcanicRavineMonsterCards.ToList();
-                break;
-
-            //Tier 5
-            case "AncestralForest":
-                currentCardList = ancestralForestMonsterCards.ToList();
-                break;
-            case "CelestialPlane":
-                currentCardList = celestialPlaneMonsterCards.ToList();
-                break;
-            case "CorruptedIsle":
-                currentCardList = corruptedIsleMonsterCards.ToList();
-                break;
-            case "MysticMountain":
-                currentCardList = mysticMountainMonsterCards.ToList();
-                break;
-            case "OceanAbyss":
-                currentCardList = oceanAbyssMonsterCards.ToList();
-                break;
-            case "Underworld":
-                currentCardList = underworldMonsterCards.ToList();
-                break;
-        }
+        currentCardList = monsterCards[GlobalVars.tileCardSelected].ToList();
 
         //Create a list of 2 unique random cards from the current card list
         for (int i = 0; i < 2; i++)
@@ -502,21 +404,7 @@ public class TileSpawner : CardLists
         rerollButton.SetActive(true);
         rerollCost.transform.GetComponent<TextMeshProUGUI>().text = GlobalVars.rerollCost.ToString() + "g";
 
-        switch (GlobalVars.bonusStats["EquipmentLvl"])
-        {
-            case 1:
-                weaponCardList = tier1WeaponCards.ToList();
-                break;
-            case 2:
-                weaponCardList = tier2WeaponCards.ToList();
-                break;
-            case 3:
-                weaponCardList = tier3WeaponCards.ToList();
-                break;
-            case 4:
-                weaponCardList = tier4WeaponCards.ToList();
-                break;
-        }
+        weaponCardList = weaponCards[GlobalVars.bonusStats["EquipmentLvl"]].ToList();
 
         //Create a list of 1 unique random weapon cards from the current weapon card list
         for (int i = 0; i < 1; i++)
@@ -572,11 +460,7 @@ public class TileSpawner : CardLists
             switch (i)
             {
                 case 0:
-                    if (selectedCard.Contains("Stone"))
-                    {
-                        card2 = selectedCard;
-                    }
-                    else if (!selectedCard.Contains("Up"))
+                    if (!selectedCard.Contains("Up"))
                     {
                         card2 = selectedCard + GlobalVars.bonusStats[selectedCard + "Lvl"];
                     }
@@ -586,11 +470,7 @@ public class TileSpawner : CardLists
                     }
                     break;
                 case 1:
-                    if (selectedCard.Contains("Stone"))
-                    {
-                        card3 = selectedCard;
-                    }
-                    else if (!selectedCard.Contains("Up"))
+                    if (!selectedCard.Contains("Up"))
                     {
                         card3 = selectedCard + GlobalVars.bonusStats[selectedCard + "Lvl"];
                     }
@@ -600,11 +480,7 @@ public class TileSpawner : CardLists
                     }
                     break;
                 case 2:
-                    if (selectedCard.Contains("Stone"))
-                    {
-                        card4 = selectedCard;
-                    }
-                    else if (!selectedCard.Contains("Up"))
+                    if (!selectedCard.Contains("Up"))
                     {
                         card4 = selectedCard + GlobalVars.bonusStats[selectedCard + "Lvl"];
                     }
