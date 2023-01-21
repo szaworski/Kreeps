@@ -1167,16 +1167,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   attackCd: 0
-  damage: 10
-  bonusDamage2: 0
-  bonusRange2: 0
-  bonusArmorDmg: 0
+  damage: 12
   projectileSpeed: 4
   attackSpeed: 1.4
   attackRange: 0.6
   critChance: 0
   damageType: Neutral
   slowAmt: 0
+  bonusDamage2: 0
   attackRadius: {fileID: 9061148783392565081}
   hasRectangleRadius: 1
   rectIsVertical: 1

@@ -442,7 +442,7 @@ MonoBehaviour:
   attackCd: 0
   damage: 12
   projectileSpeed: 4
-  attackSpeed: 2
+  attackSpeed: 1.8
   attackRange: 0.6
   critChance: 0
   damageType: Neutral
