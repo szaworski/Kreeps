@@ -352,16 +352,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'AOE in radius -6ms
+  m_text: 'AOE in radius
+
+    -20% move speed
 
     Cost: 75g
 
     Damage: 4
 
-    Speed: 1.8s
+    Speed:
+    1.8s
 
-    Range:
-    0.4
+    Range: 0.4
 
     Radius: Square'
   m_isRightToLeft: 0
@@ -390,8 +392,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -426,7 +428,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 38.65454, y: 36.205265, z: 34.826523, w: -124.11741}
+  m_margin: {x: 38.6, y: 34.2, z: 34.8, w: -124}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

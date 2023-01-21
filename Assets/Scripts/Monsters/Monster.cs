@@ -18,7 +18,7 @@ public class Monster : MonoBehaviour
     [SerializeField] private TMP_Text armorText;
     [SerializeField] private GameObject HealthContainer;
     [SerializeField] private GameObject ArmorObject;
-    private float reducedMoveSpeed;
+    private float startingMoveSpeed;
     private float hpRegenCd;
     private int damage;
     private Color green = new Vector4(0, 1, 0, 1);
@@ -53,6 +53,7 @@ public class Monster : MonoBehaviour
         currentWaypoint = GlobalVars.tileCounters["numOfTimesPlaced"];
         //Apply any bonus values to the monster
         ApplySpawnBonuses();
+        startingMoveSpeed = moveSpeed;
         //Set the health values to be shown
         healthText.SetText(health.ToString());
         maxHealthText.SetText(health.ToString());
@@ -78,7 +79,6 @@ public class Monster : MonoBehaviour
         FollowWaypoints();
         ResetEffectAnims();
         ApplyHpRegen();
-        LimitMoveSpeedReduction();
 
         if (isTakingDamage)
         {
@@ -212,12 +212,12 @@ public class Monster : MonoBehaviour
                         if (iceSlowStatus && slowAmt > iceSlowAmt)
                         {
                             //Add back the current slow amount so we don't stack the slow values
-                            moveSpeed += iceSlowAmt;
+                            moveSpeed += iceSlowAmt * startingMoveSpeed;
                         }
 
                         iceSlowStatus = true;
                         iceSlowAmt = slowAmt;
-                        moveSpeed -= iceSlowAmt;
+                        moveSpeed -= iceSlowAmt * startingMoveSpeed;
                     }
 
                     if (type.Contains("Humanoid") && armor <= 0)
@@ -359,25 +359,7 @@ public class Monster : MonoBehaviour
         if (Time.time > iceSlowCd && iceSlowStatus)
         {
             iceSlowStatus = false;
-
-            if (moveSpeed == 0.28f)
-            {
-                moveSpeed = reducedMoveSpeed + iceSlowAmt;
-            }
-
-            else
-            {
-                moveSpeed += iceSlowAmt;
-            }
-        }
-    }
-
-    void LimitMoveSpeedReduction()
-    {
-        if (iceSlowStatus && moveSpeed <= 0.28f)
-        {
-            reducedMoveSpeed = moveSpeed;
-            moveSpeed = 0.28f;
+            moveSpeed = startingMoveSpeed;
         }
     }
 

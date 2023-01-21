@@ -12399,7 +12399,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target +slow
 
-    -6 move speed
+    -15% move speed
 
     Damage: 6
 

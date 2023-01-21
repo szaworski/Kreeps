@@ -201,20 +201,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Single target -8ms
-
-    Cost: 50g
-
-    Damage: 10
-
-    Speed: 1s
-
-    Range:
-    0.5
-
-    Radius: Rectangle
-
-'
+  m_text: "Single target \n-25% move speed\nCost: 50g\nDamage: 10\nSpeed: 1s\nRange:
+    0.5\nRadius: Rectangle\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -241,8 +229,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -277,7 +265,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 38.65454, y: 36.205265, z: 34.826523, w: -124.11741}
+  m_margin: {x: 38.6, y: 34.2, z: 34.8, w: -124}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
