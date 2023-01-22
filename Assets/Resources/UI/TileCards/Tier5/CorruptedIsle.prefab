@@ -218,12 +218,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +6 hp regen
+    +8 hp regen
 
-    +50 armor
+    +100 armor
 
-    for each Corrupted Isle
-    placed'
+    for each Corrupted
+    Isle placed'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

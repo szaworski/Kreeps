@@ -218,9 +218,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +4 hp regen
+    +5 hp regen
 
-    +60 max hp
+    +150 max hp
 
     for each Ancestral
     Forest placed'

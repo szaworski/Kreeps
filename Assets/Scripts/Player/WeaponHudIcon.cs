@@ -84,7 +84,15 @@ public class WeaponHudIcon : MonoBehaviour
         }
 
         dmgText.SetText(Mathf.Round(damage).ToString());
-        rofText.SetText(attackSpeed.ToString("F1"));
         rngText.SetText(attackRange.ToString("F1"));
+
+        if ((attackSpeed % 1) == 0)
+        {
+            rofText.SetText(string.Format("{0:C0}", attackSpeed.ToString()) + "s");
+        }
+        else
+        {
+            rofText.SetText(attackSpeed.ToString("F1") + "s");
+        }
     }
 }

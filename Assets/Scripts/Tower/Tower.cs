@@ -1,4 +1,5 @@
-﻿using System.Text.RegularExpressions;
+﻿using System;
+using System.Text.RegularExpressions;
 using TMPro;
 using UnityEngine;
 
@@ -304,7 +305,15 @@ public class Tower : MonoBehaviour
         if (attackSpeed != startingStats[1] - bonusStats[1])
         {
             attackSpeed = startingStats[1] - bonusStats[1];
-            rofText.SetText(attackSpeed.ToString("F1") + "s");
+
+            if ((attackSpeed % 1) == 0)
+            {
+                rofText.SetText(string.Format("{0:C0}", attackSpeed.ToString()) + "s");
+            }
+            else
+            {
+                rofText.SetText(attackSpeed.ToString("F1") + "s");
+            }
         }
 
         if (attackRange != startingStats[2] + bonusStats[2])

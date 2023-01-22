@@ -218,7 +218,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +50 max hp
+    +100 max hp
 
     for each Frozen Passage placed'
   m_isRightToLeft: 0
