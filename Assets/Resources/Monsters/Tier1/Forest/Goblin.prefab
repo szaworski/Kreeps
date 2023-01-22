@@ -273,7 +273,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 3
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &5125449798840335830
 MonoBehaviour:
@@ -365,7 +365,7 @@ MonoBehaviour:
   m_renderer: {fileID: 7720648513124108799}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 4
+  _SortingOrder: 3
 --- !u!1 &7825737259067920398
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,7 +442,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 3
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &8664535287974654576
 MonoBehaviour:
@@ -536,7 +536,7 @@ MonoBehaviour:
   m_renderer: {fileID: 985754049548444558}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 4
+  _SortingOrder: 3
 --- !u!1 &8219983176282641018
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,7 +613,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 3
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &1136820460886720270
 MonoBehaviour:
@@ -705,7 +705,7 @@ MonoBehaviour:
   m_renderer: {fileID: 3268719389793457508}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 4
+  _SortingOrder: 3
 --- !u!1001 &1502384004566752864
 PrefabInstance:
   m_ObjectHideFlags: 0
