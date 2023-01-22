@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: IceLvl5
-  upgradeCost: 100
+  upgradeCost: 75
   upgradeType: Ice
   bonusAmt: 0
   bonusFloatAmt: 0
@@ -354,9 +354,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'AOE in radius
 
-    -30% move speed
+    -25% move speed
 
-    Cost: 100g
+    Cost: 75g
 
     Damage: 8
 

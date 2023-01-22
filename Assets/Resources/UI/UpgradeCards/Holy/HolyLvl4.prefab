@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: HolyLvl4
-  upgradeCost: 100
+  upgradeCost: 75
   upgradeType: Holy
   bonusAmt: 0
   bonusFloatAmt: 0
@@ -354,7 +354,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-    Cost: 100g
+    Cost: 75g
 
     Damage: 16
 

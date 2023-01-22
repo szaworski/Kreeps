@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: IceLvl6
-  upgradeCost: 150
+  upgradeCost: 100
   upgradeType: Ice
   bonusAmt: 0
   bonusFloatAmt: 0
@@ -354,9 +354,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-    -45% move speed
+    -40% move speed
 
-    Cost: 150g
+    Cost: 100g
 
     Damage: 16
 

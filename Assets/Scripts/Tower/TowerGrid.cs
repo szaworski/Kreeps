@@ -143,31 +143,31 @@ public class TowerGrid : MonoBehaviour
                     switch (towerScript.damageType)
                     {
                         case var _ when towerScript.damageType.Contains("Neutral"):
-                            GlobalVars.newGoldValue = GlobalVars.gold + 35;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 20;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Fire"):
-                            GlobalVars.newGoldValue = GlobalVars.gold + 60;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 40;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Ice"):
-                            GlobalVars.newGoldValue = GlobalVars.gold + 60;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 40;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Thunder"):
-                            GlobalVars.newGoldValue = GlobalVars.gold + 80;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 60;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Holy"):
-                            GlobalVars.newGoldValue = GlobalVars.gold + 80;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 60;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Swift"):
-                            GlobalVars.newGoldValue = GlobalVars.gold + 100;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 75;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Cosmic"):
-                            GlobalVars.newGoldValue = GlobalVars.gold + 200;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 150;
                             break;
                     }
 

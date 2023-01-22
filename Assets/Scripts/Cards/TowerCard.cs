@@ -106,31 +106,31 @@ public class TowerCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         switch (GlobalVars.towerTypeSelected)
         {
             case "Neutral":
-                GlobalVars.goldCost = 40;
+                GlobalVars.goldCost = 25;
                 break;
 
             case "Fire":
-                GlobalVars.goldCost = 75;
+                GlobalVars.goldCost = 50;
                 break;
 
             case "Ice":
-                GlobalVars.goldCost = 75;
+                GlobalVars.goldCost = 50;
                 break;
 
             case "Thunder":
-                GlobalVars.goldCost = 100;
+                GlobalVars.goldCost = 75;
                 break;
 
             case "Holy":
-                GlobalVars.goldCost = 100;
+                GlobalVars.goldCost = 75;
                 break;
 
             case "Swift":
-                GlobalVars.goldCost = 125;
+                GlobalVars.goldCost = 100;
                 break;
 
             case "Cosmic":
-                GlobalVars.goldCost = 250;
+                GlobalVars.goldCost = 200;
                 break;
         }
     }

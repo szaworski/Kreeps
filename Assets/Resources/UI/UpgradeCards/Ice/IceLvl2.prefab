@@ -201,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Single target \n-25% move speed\nCost: 50g\nDamage: 10\nSpeed: 1s\nRange:
+  m_text: "Single target \n-20% move speed\nCost: 35g\nDamage: 10\nSpeed: 1s\nRange:
     0.5\nRadius: Rectangle\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -418,7 +418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: IceLvl2
-  upgradeCost: 50
+  upgradeCost: 35
   upgradeType: Ice
   bonusAmt: 0
   bonusFloatAmt: 0
