@@ -699,7 +699,7 @@ MonoBehaviour:
   damage: 18
   projectileSpeed: 1
   attackSpeed: 1.2
-  attackRange: 0.7
+  attackRange: 0.6
   critChance: 0
   damageType: Holy
   slowAmt: 0
