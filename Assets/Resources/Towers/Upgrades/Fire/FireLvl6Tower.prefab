@@ -1170,7 +1170,7 @@ MonoBehaviour:
   attackCd: 0
   damage: 22
   projectileSpeed: 1
-  attackSpeed: 0.8
+  attackSpeed: 0.9
   attackRange: 0.8
   critChance: 0
   damageType: Fire
