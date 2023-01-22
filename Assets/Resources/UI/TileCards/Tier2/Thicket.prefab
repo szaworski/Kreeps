@@ -218,7 +218,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +10 armor
+    +15 armor
 
     for each Thicket placed'
   m_isRightToLeft: 0
