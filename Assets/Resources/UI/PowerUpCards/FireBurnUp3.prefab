@@ -286,7 +286,7 @@ MonoBehaviour:
   upgradeCost: 150
   upgradeType: Special
   bonusAmt: 0
-  bonusFloatAmt: 5
+  bonusFloatAmt: 6
 --- !u!1 &8127966510288412396
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,7 +352,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Fire type weapons and towers gain +5 burn damage
+  m_text: 'Fire type weapons and towers gain +6 burn damage
 
 
 
