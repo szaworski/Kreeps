@@ -220,7 +220,7 @@ MonoBehaviour:
 
     Health: 1000
 
-    Armor: 100
+    Armor: 400
 
     Speed: 45
 

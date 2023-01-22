@@ -485,10 +485,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 0
   health: 800
-  armor: 300
+  armor: 600
   goldBounty: 10
   type: Demon
-  moveSpeed: 0.3
+  moveSpeed: 0.38
   hpRegen: 0
   evasionChance: 0
   healthText: {fileID: 2240702306701519988}

@@ -240,9 +240,9 @@ MonoBehaviour:
 
     Health: 300
 
-    Armor: 700
+    Armor: 1200
 
-    Speed: 35
+    Speed: 36
 
     Hp regen:
     0'

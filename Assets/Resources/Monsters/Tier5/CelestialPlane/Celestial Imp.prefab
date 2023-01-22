@@ -484,7 +484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 950
+  health: 1100
   armor: 0
   goldBounty: 10
   type: Demon
