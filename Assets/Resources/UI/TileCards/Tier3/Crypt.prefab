@@ -220,7 +220,7 @@ MonoBehaviour:
 
     +2 move speed
 
-    +3 hp regen
+    +2 hp regen
 
     for each Crypt placed'
   m_isRightToLeft: 0

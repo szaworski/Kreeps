@@ -139,60 +139,60 @@ public class PlayerHud : MonoBehaviour
         bonusEvasion += 0.01f * GlobalVars.tileCounters["Swamp"];
 
         //Apply any Tier 2 bonuses
-        bonusHpRegen += 3 * GlobalVars.tileCounters["Cavern"];
+        bonusHpRegen += 2 * GlobalVars.tileCounters["Cavern"];
 
-        bonusMoveSpeed += 0.03f * GlobalVars.tileCounters["Desert"];
+        bonusMoveSpeed += 0.02f * GlobalVars.tileCounters["Desert"];
 
         bonusMoveSpeed += 0.01f * GlobalVars.tileCounters["Seashore"];
-        bonusMaxHealth += 20 * GlobalVars.tileCounters["Seashore"];
+        bonusMaxHealth += 15 * GlobalVars.tileCounters["Seashore"];
 
-        bonusMaxHealth += 30 * GlobalVars.tileCounters["Settlement"];
+        bonusMaxHealth += 25 * GlobalVars.tileCounters["Settlement"];
 
-        bonusArmor += 30 * GlobalVars.tileCounters["Thicket"];
+        bonusArmor += 25 * GlobalVars.tileCounters["Thicket"];
 
-        bonusEvasion += 0.03f * GlobalVars.tileCounters["Tundra"];
+        bonusEvasion += 0.02f * GlobalVars.tileCounters["Tundra"];
 
         //Apply any Tier 3 bonuses
-        bonusHpRegen += 3 * GlobalVars.tileCounters["CanyonCrossing"];
+        bonusHpRegen += 2 * GlobalVars.tileCounters["CanyonCrossing"];
         bonusMaxHealth += 20 * GlobalVars.tileCounters["CanyonCrossing"];
 
-        bonusMoveSpeed += 0.04f * GlobalVars.tileCounters["CrimsonPlain"];
+        bonusMoveSpeed += 0.03f * GlobalVars.tileCounters["CrimsonPlain"];
 
         bonusMoveSpeed += 0.02f * GlobalVars.tileCounters["Crypt"];
-        bonusHpRegen += 3 * GlobalVars.tileCounters["Crypt"];
+        bonusHpRegen += 2 * GlobalVars.tileCounters["Crypt"];
 
         bonusArmor += 50 * GlobalVars.tileCounters["EmeraldCave"];
 
         bonusMaxHealth += 50 * GlobalVars.tileCounters["Marsh"];
 
         bonusEvasion += 0.02f * GlobalVars.tileCounters["Sewer"];
-        bonusArmor += 25 * GlobalVars.tileCounters["Sewer"];
+        bonusArmor += 20 * GlobalVars.tileCounters["Sewer"];
 
         //Apply any Tier 4 bonuses
         bonusArmor += 100 * GlobalVars.tileCounters["CrystalCave"];
 
         bonusMaxHealth += 100 * GlobalVars.tileCounters["FrozenPassage"];
 
-        bonusMoveSpeed += 0.05f * GlobalVars.tileCounters["InfernalWoods"];
+        bonusMoveSpeed += 0.04f * GlobalVars.tileCounters["InfernalWoods"];
 
         bonusEvasion += 0.02f * GlobalVars.tileCounters["TaintedCanal"];
-        bonusHpRegen += 6 * GlobalVars.tileCounters["SacredGrounds"];
+        bonusHpRegen += 4 * GlobalVars.tileCounters["SacredGrounds"];
 
         bonusMoveSpeed += 0.02f * GlobalVars.tileCounters["TaintedCanal"];
-        bonusEvasion += 0.04f * GlobalVars.tileCounters["TaintedCanal"];
+        bonusEvasion += 0.03f * GlobalVars.tileCounters["TaintedCanal"];
 
         bonusMoveSpeed += 0.03f * GlobalVars.tileCounters["VolcanicRavine"];
         bonusArmor += 40 * GlobalVars.tileCounters["VolcanicRavine"];
 
         //Apply any Tier 5 bonuses
-        bonusHpRegen += 5 * GlobalVars.tileCounters["AncestralForest"];
+        bonusHpRegen += 4 * GlobalVars.tileCounters["AncestralForest"];
         bonusMaxHealth += 150 * GlobalVars.tileCounters["AncestralForest"];
 
         bonusMoveSpeed += 0.03f * GlobalVars.tileCounters["CelestialPlane"];
         bonusEvasion += 0.03f * GlobalVars.tileCounters["CelestialPlane"];
         bonusHpRegen += 3 * GlobalVars.tileCounters["CelestialPlane"];
 
-        bonusHpRegen += 8 * GlobalVars.tileCounters["CorruptedIsle"];
+        bonusHpRegen += 6 * GlobalVars.tileCounters["CorruptedIsle"];
         bonusArmor += 100 * GlobalVars.tileCounters["CorruptedIsle"];
 
         bonusEvasion += 0.03f * GlobalVars.tileCounters["MysticMountain"];

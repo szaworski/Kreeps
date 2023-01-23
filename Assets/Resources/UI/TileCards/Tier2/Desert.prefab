@@ -218,7 +218,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +3 move speed
+    +2 move speed
 
     for each Desert placed'
   m_isRightToLeft: 0
