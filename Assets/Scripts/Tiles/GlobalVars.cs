@@ -49,7 +49,6 @@ public class GlobalVars : MonoBehaviour
     public static bool showStartWaveInstructions;
     public static bool triggerBonusStatsUpdate;
     public static bool weaponIsSelected;
-    public static bool stoneIsSelected;
     public static bool useSlashAnim;
     public static bool isPaused;
     public static bool waveEnded;
@@ -124,7 +123,6 @@ public class GlobalVars : MonoBehaviour
         bonusStats.Add("HolyLvl", 1);
         bonusStats.Add("SwiftLvl", 1);
         bonusStats.Add("CosmicLvl", 1);
-        bonusStats.Add("StonePwr", 0);
 
         bonusExtraStats.Clear();
         bonusExtraStats.Add("FireSpeedUp", 0);
@@ -166,7 +164,6 @@ public class GlobalVars : MonoBehaviour
         coinChoiceCount = 0;
         kreepSpawnRate = 0.45f;
         allMonstersAreSpawned = false;
-        stoneIsSelected = false;
         currentSong = "Song1";
         musicVolume = PlayerPrefs.GetFloat("musicVolume");
         selectedRectIsVertical = true;

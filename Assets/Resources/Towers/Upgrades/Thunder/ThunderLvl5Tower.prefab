@@ -829,7 +829,7 @@ MonoBehaviour:
   attackCd: 0
   damage: 4
   projectileSpeed: 1
-  attackSpeed: 1
+  attackSpeed: 0.8
   attackRange: 0.5
   critChance: 0
   damageType: Thunder2

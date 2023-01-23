@@ -62,7 +62,7 @@ public class TowerGrid : MonoBehaviour
                 HideShowTowerStats();
 
                 //Spawn a tower on mouse click if one is not present
-                if (!hasTower && GlobalVars.gold >= GlobalVars.goldCost && !GlobalVars.stoneIsSelected)
+                if (!hasTower && GlobalVars.gold >= GlobalVars.goldCost)
                 {
                     //Get the tower GameObject
                     GameObject towerContainer = GameObject.Find("Towers");
@@ -83,7 +83,7 @@ public class TowerGrid : MonoBehaviour
                     GameObject.Find("UiSounds").GetComponent<AudioManager>().PlaySound("PlaceTower");
                 }
 
-                else if (!hasTower && GlobalVars.gold < GlobalVars.goldCost || GlobalVars.stoneIsSelected)
+                else if (!hasTower && GlobalVars.gold < GlobalVars.goldCost)
                 {
                     GameObject.Find("UiSounds").GetComponent<AudioManager>().PlaySound("Error");
                 }
@@ -99,13 +99,6 @@ public class TowerGrid : MonoBehaviour
                     if (towerScript.hasUpgrades)
                     {
                         GlobalVars.selectedTowerHasUpgrades = true;
-                    }
-
-                    if (GlobalVars.stoneIsSelected)
-                    {
-                        GlobalVars.stoneIsSelected = false;
-                        GameObject.Find("UiSounds").GetComponent<AudioManager>().PlaySound("PowerUp");
-                        towerScript.bonusDamage2 += GlobalVars.bonusStats["StonePwr"];
                     }
                 }
 

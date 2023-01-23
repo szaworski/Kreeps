@@ -39,36 +39,16 @@ public class MouseCursor : MonoBehaviour
 
     public void SwapMouseCursor()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1) && !GlobalVars.stoneIsSelected || GlobalVars.isPaused && !GlobalVars.stoneIsSelected)
+        if (Input.GetKeyDown(KeyCode.Alpha1) || GlobalVars.isPaused)
         {
             GlobalVars.weaponIsSelected = false;
             Cursor.SetCursor(cursorImage, Vector2.zero, CursorMode.ForceSoftware);
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2) && GlobalVars.currentWeapon != "" && !GlobalVars.isPaused && !GlobalVars.stoneIsSelected)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && GlobalVars.currentWeapon != "" && !GlobalVars.isPaused)
         {
             GlobalVars.weaponIsSelected = true;
             Cursor.SetCursor(weaponImages[weaponImageIndex], Vector2.zero, CursorMode.ForceSoftware);
-        }
-
-        if (GlobalVars.stoneIsSelected && !GlobalVars.isPaused)
-        {
-            triggerStoneSelect = true;
-            Cursor.SetCursor(itemImages[0], Vector2.zero, CursorMode.ForceSoftware);
-        }
-
-        else if (!GlobalVars.stoneIsSelected && triggerStoneSelect && !GlobalVars.isPaused)
-        {
-            triggerStoneSelect = false;
-
-            if (GlobalVars.weaponIsSelected)
-            {
-                Cursor.SetCursor(weaponImages[weaponImageIndex], Vector2.zero, CursorMode.ForceSoftware);
-            }
-            else
-            {
-                Cursor.SetCursor(cursorImage, Vector2.zero, CursorMode.ForceSoftware);
-            }
         }
     }
 
