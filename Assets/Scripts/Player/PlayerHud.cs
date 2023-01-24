@@ -166,7 +166,7 @@ public class PlayerHud : MonoBehaviour
         bonusMaxHealth += 50 * GlobalVars.tileCounters["Marsh"];
 
         bonusEvasion += 0.02f * GlobalVars.tileCounters["Sewer"];
-        bonusArmor += 20 * GlobalVars.tileCounters["Sewer"];
+        bonusArmor += 25 * GlobalVars.tileCounters["Sewer"];
 
         //Apply any Tier 4 bonuses
         bonusArmor += 100 * GlobalVars.tileCounters["CrystalCave"];
