@@ -65,8 +65,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Thunder type weapons and towers gain +8 damage to armor. This damage is
-    not dealt to hp
+  m_text: 'Thunder type weapons and towers gain +10 damage to armor. This damage
+    is not dealt to hp
 
 
     Cost: 100g'
@@ -288,7 +288,7 @@ MonoBehaviour:
   upgradeCost: 100
   upgradeType: Special
   bonusAmt: 0
-  bonusFloatAmt: 8
+  bonusFloatAmt: 10
 --- !u!1 &6854694388176082041
 GameObject:
   m_ObjectHideFlags: 0

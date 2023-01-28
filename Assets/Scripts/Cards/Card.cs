@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Card : MonoBehaviour
@@ -8,6 +9,17 @@ public class Card : MonoBehaviour
     [SerializeField] private string upgradeType;
     [SerializeField] private int bonusAmt;
     [SerializeField] private float bonusFloatAmt;
+
+    [Header("Exponential Value")]
+    public TMP_Text exponentTxt;
+
+    private void Awake()
+    {
+        if (exponentTxt != null)
+        {
+            exponentTxt.SetText( "(+" + (GlobalVars.coinChoiceCount * 5).ToString() + ")");
+        }
+    }
 
     void Update()
     {
@@ -81,6 +93,7 @@ public class Card : MonoBehaviour
             {
                 case "BonusDmg":
                     GlobalVars.bonusStats[cardName] += bonusAmt;
+                    GlobalVars.bonusStats[cardName + "Lvl"]++;
                     break;
 
                 case "Special":

@@ -287,6 +287,7 @@ MonoBehaviour:
   upgradeType: BonusDmg
   bonusAmt: 2
   bonusFloatAmt: 0
+  exponentTxt: {fileID: 0}
 --- !u!1 &8127966510288412396
 GameObject:
   m_ObjectHideFlags: 0
