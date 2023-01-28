@@ -11,12 +11,29 @@ public class AudioManager : MonoBehaviour
     void Awake()
     {
         LoadSounds();
-        SetMusicVolume(PlayerPrefs.GetFloat("musicVolume"));
-        SetSfxVolume(PlayerPrefs.GetFloat("sfxVolume"));
+
+        if (SceneManager.GetActiveScene().name == "Scene1")
+        {
+            SetMusicVolume(PlayerPrefs.GetFloat("musicVolume"));
+            SetSfxVolume(PlayerPrefs.GetFloat("sfxVolume"));
+        }
+
+        else
+        {
+            SetMusicVolume(PlayerPrefs.GetFloat("musicVolume"));
+        }
     }
     private void Start()
     {
-        StartCoroutine(SetStartingMusic(1.4f));
+
+        if (SceneManager.GetActiveScene().name == "Scene1")
+        {
+            StartCoroutine(SetStartingMusic(1.5f));
+        }
+        else
+        {
+            StartCoroutine(SetStartingMusic(1f));
+        }
     }
 
     public void LoadSounds()
@@ -92,16 +109,23 @@ public class AudioManager : MonoBehaviour
 
     public void SaveMusicVolumeMainMenu(float volChange)
     {
+        GameObject.Find("Song1").GetComponent<AudioSource>().volume = volChange;
         PlayerPrefs.SetFloat("musicVolume", volChange);
     }
 
     IEnumerator SetStartingMusic(float delayTime)
     {
+        yield return new WaitForSeconds(delayTime);
         if (SceneManager.GetActiveScene().name == "Scene1")
         {
-            yield return new WaitForSeconds(delayTime);
             GameObject.Find(GlobalVars.currentSong).GetComponent<AudioSource>().volume = GlobalVars.musicVolume * 0.5f;
             GameObject.Find(GlobalVars.currentSong).GetComponent<AudioSource>().Play();
+        }
+
+        else if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            GameObject.Find("Song1").GetComponent<AudioSource>().volume = GlobalVars.musicVolume;
+            GameObject.Find("Song1").GetComponent<AudioSource>().Play();
         }
     }
 }

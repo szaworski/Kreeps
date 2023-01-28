@@ -45,6 +45,8 @@ public class MainMenuButtons : LoadNewScene
             newGameButtonTriggered = true;
             //Load the main game scene
             StartCoroutine(LoadScene(1, transition));
+            StartCoroutine(FadeMusic.StartFade(GameObject.Find("Song1").GetComponent<AudioSource>(), 2f, 0));
+            StartCoroutine(FadeMusic.EndSong(GameObject.Find("Song1").GetComponent<AudioSource>(), 2.5f));
         }
     }
 
