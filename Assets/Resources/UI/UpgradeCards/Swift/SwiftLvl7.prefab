@@ -205,7 +205,7 @@ MonoBehaviour:
 
     Cost: 350g
 
-    Damage: 20
+    Damage: 24
 
     Speed: 0.5s
 
@@ -434,3 +434,4 @@ MonoBehaviour:
   upgradeType: Swift
   bonusAmt: 0
   bonusFloatAmt: 0
+  exponentTxt: {fileID: 0}

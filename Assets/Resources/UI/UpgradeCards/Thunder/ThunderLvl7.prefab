@@ -69,7 +69,7 @@ MonoBehaviour:
 
     Cost: 250g
 
-    Damage: 80
+    Damage: 100
 
     Speed: 1.4s
 
@@ -298,6 +298,7 @@ MonoBehaviour:
   upgradeType: Thunder
   bonusAmt: 0
   bonusFloatAmt: 0
+  exponentTxt: {fileID: 0}
 --- !u!1 &1109068775768762606
 GameObject:
   m_ObjectHideFlags: 0

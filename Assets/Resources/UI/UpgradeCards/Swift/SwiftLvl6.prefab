@@ -69,12 +69,12 @@ MonoBehaviour:
 
     Cost: 175g
 
-    Damage: 15
+    Damage: 20
 
     Speed: 2
 
     Range:
-    0.6
+    0.5
 
     Radius: Square
 
@@ -434,3 +434,4 @@ MonoBehaviour:
   upgradeType: Swift
   bonusAmt: 0
   bonusFloatAmt: 0
+  exponentTxt: {fileID: 0}

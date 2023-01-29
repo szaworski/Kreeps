@@ -151,6 +151,7 @@ MonoBehaviour:
   upgradeType: Holy
   bonusAmt: 0
   bonusFloatAmt: 0
+  exponentTxt: {fileID: 0}
 --- !u!1 &7010376220308496012
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,7 +223,7 @@ MonoBehaviour:
 
     Damage: 20
 
-    Speed: 2s
+    Speed: 1.8s
 
     Range:
     0.4
