@@ -93,7 +93,7 @@ public class Card : MonoBehaviour
             {
                 case "BonusDmg":
                     GlobalVars.bonusStats[cardName] += bonusAmt;
-                    GlobalVars.bonusStats[cardName + "Lvl"]++;
+                    //GlobalVars.bonusStats[cardName + "Lvl"]++;
                     break;
 
                 case "Special":
