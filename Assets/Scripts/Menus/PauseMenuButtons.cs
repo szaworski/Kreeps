@@ -22,6 +22,7 @@ public class PauseMenuButtons : LoadNewScene
 
     void Awake()
     {
+        Cursor.visible = true;
         isLoading = false;
         GlobalVars.isPaused = false;
         musicVolumeSlider.value = PlayerPrefs.GetFloat("musicVolume");

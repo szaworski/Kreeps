@@ -140,27 +140,27 @@ public class TowerGrid : MonoBehaviour
                             break;
 
                         case var _ when towerScript.damageType.Contains("Fire"):
-                            GlobalVars.newGoldValue = GlobalVars.gold + 40;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 30;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Ice"):
-                            GlobalVars.newGoldValue = GlobalVars.gold + 40;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 30;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Thunder"):
-                            GlobalVars.newGoldValue = GlobalVars.gold + 60;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 45;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Holy"):
-                            GlobalVars.newGoldValue = GlobalVars.gold + 60;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 45;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Swift"):
-                            GlobalVars.newGoldValue = GlobalVars.gold + 75;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 60;
                             break;
 
                         case var _ when towerScript.damageType.Contains("Cosmic"):
-                            GlobalVars.newGoldValue = GlobalVars.gold + 150;
+                            GlobalVars.newGoldValue = GlobalVars.gold + 120;
                             break;
                     }
 

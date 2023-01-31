@@ -203,7 +203,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-    Cost: 150g
+    Cost: 75g
 
     Damage: 60
 
@@ -428,7 +428,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: CosmicLvl3
-  upgradeCost: 150
+  upgradeCost: 75
   upgradeType: Cosmic
   bonusAmt: 0
   bonusFloatAmt: 0
+  exponentTxt: {fileID: 0}

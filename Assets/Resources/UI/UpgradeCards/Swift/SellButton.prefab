@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sell for 75g
+  m_text: 'Sell for 60g
 
 '
   m_isRightToLeft: 0
@@ -286,3 +286,4 @@ MonoBehaviour:
   upgradeType: 
   bonusAmt: 0
   bonusFloatAmt: 0
+  exponentTxt: {fileID: 0}

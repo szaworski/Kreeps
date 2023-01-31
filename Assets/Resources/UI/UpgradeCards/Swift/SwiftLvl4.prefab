@@ -67,7 +67,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-    Cost: 100g
+    Cost: 80g
 
     Damage: 14
 
@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: SwiftLvl4
-  upgradeCost: 100
+  upgradeCost: 80
   upgradeType: Swift
   bonusAmt: 0
   bonusFloatAmt: 0

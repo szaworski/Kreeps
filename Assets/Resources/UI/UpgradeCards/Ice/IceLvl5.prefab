@@ -147,10 +147,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: IceLvl5
-  upgradeCost: 75
+  upgradeCost: 60
   upgradeType: Ice
   bonusAmt: 0
   bonusFloatAmt: 0
+  exponentTxt: {fileID: 0}
 --- !u!1 &8196507382453859790
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,7 +357,7 @@ MonoBehaviour:
 
     -25% move speed
 
-    Cost: 75g
+    Cost: 60g
 
     Damage: 8
 

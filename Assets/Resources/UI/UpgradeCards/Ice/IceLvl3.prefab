@@ -203,7 +203,7 @@ MonoBehaviour:
 
     -30% move speed
 
-    Cost: 35g
+    Cost: 20g
 
     Damage: 14
 
@@ -428,7 +428,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: IceLvl3
-  upgradeCost: 35
+  upgradeCost: 20
   upgradeType: Ice
   bonusAmt: 0
   bonusFloatAmt: 0
+  exponentTxt: {fileID: 0}

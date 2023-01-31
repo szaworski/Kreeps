@@ -283,10 +283,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: FireLvl7
-  upgradeCost: 200
+  upgradeCost: 150
   upgradeType: Fire
   bonusAmt: 0
   bonusFloatAmt: 0
+  exponentTxt: {fileID: 0}
 --- !u!1 &1459147331767133334
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,7 +355,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'AOE in radius
 
-    Cost: 200g
+    Cost: 150g
 
     Damage: 14
 

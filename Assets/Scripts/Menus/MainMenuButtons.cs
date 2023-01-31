@@ -42,6 +42,7 @@ public class MainMenuButtons : LoadNewScene
     {
         if (!newGameButtonTriggered)
         {
+            Cursor.visible = false;
             newGameButtonTriggered = true;
             //Load the main game scene
             StartCoroutine(LoadScene(1, transition));

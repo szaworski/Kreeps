@@ -67,9 +67,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'AOE in radius
 
-    Cost: 175g
+    Cost: 100g
 
-    Damage: 20
+    Damage: 16
 
     Speed: 2
 
@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: SwiftLvl6
-  upgradeCost: 175
+  upgradeCost: 100
   upgradeType: Swift
   bonusAmt: 0
   bonusFloatAmt: 0

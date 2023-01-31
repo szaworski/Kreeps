@@ -147,10 +147,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: HolyLvl5
-  upgradeCost: 125
+  upgradeCost: 80
   upgradeType: Holy
   bonusAmt: 0
   bonusFloatAmt: 0
+  exponentTxt: {fileID: 0}
 --- !u!1 &7386134516583892986
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,7 +355,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-    Cost: 125g
+    Cost: 80g
 
     Damage: 26
 
