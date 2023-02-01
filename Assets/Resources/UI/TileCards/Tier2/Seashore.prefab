@@ -151,6 +151,7 @@ MonoBehaviour:
   upgradeType: 
   bonusAmt: 0
   bonusFloatAmt: 0
+  exponentTxt: {fileID: 0}
 --- !u!1 &6903677155270138448
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +221,7 @@ MonoBehaviour:
 
     +1 move speed
 
-    +15 max hp
+    +10 max hp
 
     for each Seashore
     placed'

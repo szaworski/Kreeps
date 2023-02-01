@@ -144,11 +144,11 @@ public class PlayerHud : MonoBehaviour
         bonusMoveSpeed += 0.02f * GlobalVars.tileCounters["Desert"];
 
         bonusMoveSpeed += 0.01f * GlobalVars.tileCounters["Seashore"];
-        bonusMaxHealth += 15 * GlobalVars.tileCounters["Seashore"];
+        bonusMaxHealth += 10 * GlobalVars.tileCounters["Seashore"];
 
         bonusMaxHealth += 25 * GlobalVars.tileCounters["Settlement"];
 
-        bonusArmor += 25 * GlobalVars.tileCounters["Thicket"];
+        bonusArmor += 20 * GlobalVars.tileCounters["Thicket"];
 
         bonusEvasion += 0.02f * GlobalVars.tileCounters["Tundra"];
 
@@ -161,15 +161,15 @@ public class PlayerHud : MonoBehaviour
         bonusMoveSpeed += 0.02f * GlobalVars.tileCounters["Crypt"];
         bonusHpRegen += 2 * GlobalVars.tileCounters["Crypt"];
 
-        bonusArmor += 50 * GlobalVars.tileCounters["EmeraldCave"];
+        bonusArmor += 40 * GlobalVars.tileCounters["EmeraldCave"];
 
         bonusMaxHealth += 50 * GlobalVars.tileCounters["Marsh"];
 
         bonusEvasion += 0.02f * GlobalVars.tileCounters["Sewer"];
-        bonusArmor += 25 * GlobalVars.tileCounters["Sewer"];
+        bonusArmor += 10 * GlobalVars.tileCounters["Sewer"];
 
         //Apply any Tier 4 bonuses
-        bonusArmor += 100 * GlobalVars.tileCounters["CrystalCave"];
+        bonusArmor += 80 * GlobalVars.tileCounters["CrystalCave"];
 
         bonusMaxHealth += 100 * GlobalVars.tileCounters["FrozenPassage"];
 
@@ -182,7 +182,7 @@ public class PlayerHud : MonoBehaviour
         bonusEvasion += 0.03f * GlobalVars.tileCounters["TaintedCanal"];
 
         bonusMoveSpeed += 0.03f * GlobalVars.tileCounters["VolcanicRavine"];
-        bonusArmor += 40 * GlobalVars.tileCounters["VolcanicRavine"];
+        bonusArmor += 30 * GlobalVars.tileCounters["VolcanicRavine"];
 
         //Apply any Tier 5 bonuses
         bonusHpRegen += 4 * GlobalVars.tileCounters["AncestralForest"];
