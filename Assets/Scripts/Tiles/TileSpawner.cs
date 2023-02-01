@@ -207,7 +207,7 @@ public class TileSpawner : CardLists
             if (GlobalVars.tileCounters["numOfTimesPlaced"] < 8)
             {
                 currentCardList = tier1TileCards.ToList();
-                GlobalVars.rerollCost = 25;
+                GlobalVars.rerollCost = 20;
             }
 
             else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 8 && GlobalVars.tileCounters["numOfTimesPlaced"] < 16)
@@ -216,7 +216,7 @@ public class TileSpawner : CardLists
                 GlobalVars.currTierNum = 2;
                 currentCardList = tier2TileCards.ToList();
                 GlobalVars.kreepSpawnRate = 0.45f;
-                GlobalVars.rerollCost = 50;
+                GlobalVars.rerollCost = 25;
             }
 
             else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 16 && GlobalVars.tileCounters["numOfTimesPlaced"] < 24)
@@ -225,7 +225,7 @@ public class TileSpawner : CardLists
                 GlobalVars.currTierNum = 3;
                 currentCardList = tier3TileCards.ToList();
                 GlobalVars.kreepSpawnRate = 0.4f;
-                GlobalVars.rerollCost = 100;
+                GlobalVars.rerollCost = 50;
 
                 if (GlobalVars.tileCounters["numOfTimesPlaced"] == 16)
                 {
@@ -238,7 +238,7 @@ public class TileSpawner : CardLists
                 GlobalVars.currTier = "Tier4";
                 GlobalVars.currTierNum = 4;
                 currentCardList = tier4TileCards.ToList();
-                GlobalVars.rerollCost = 150;
+                GlobalVars.rerollCost = 75;
             }
 
             else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 32 && GlobalVars.tileCounters["numOfTimesPlaced"] < 40)
@@ -246,7 +246,7 @@ public class TileSpawner : CardLists
                 GlobalVars.currTier = "Tier5";
                 GlobalVars.currTierNum = 5;
                 currentCardList = tier5TileCards.ToList();
-                GlobalVars.rerollCost = 200;
+                GlobalVars.rerollCost = 100;
 
                 if (GlobalVars.tileCounters["numOfTimesPlaced"] == 32)
                 {
