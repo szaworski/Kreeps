@@ -175,7 +175,7 @@ public class PlayerHud : MonoBehaviour
 
         bonusMoveSpeed += 0.04f * GlobalVars.tileCounters["InfernalWoods"];
 
-        bonusEvasion += 0.02f * GlobalVars.tileCounters["TaintedCanal"];
+        bonusEvasion += 0.02f * GlobalVars.tileCounters["SacredGrounds"];
         bonusHpRegen += 4 * GlobalVars.tileCounters["SacredGrounds"];
 
         bonusMoveSpeed += 0.02f * GlobalVars.tileCounters["TaintedCanal"];
