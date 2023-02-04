@@ -101,5 +101,5 @@ public class CardLists : MonoBehaviour
     [System.NonSerialized] public static string[] tier4WeaponCards = new string[] { "TitaniumShortSword", "InfernalLongSword", "BlizzardBroadSword", "LightningGreatAxe", "HeavenlyGreatSword", "ReinforcedMorningStar", "GalacticScepter" };
 
     //Power up cards
-    [System.NonSerialized] public static string[] powerUpCards = new string[] { "Neutral", "Fire", "Ice", "Thunder", "Holy", "Swift", "Cosmic", "FireSpeedUp", "IceSlowUp", "ThunderArmorDmgUp", "HolyRangeUp", "SwiftPsnDmgUp", "CosmicCritChanceUp", "FireBurnUp", "IceRangeUp", "ThunderCritChanceUp", "HolySpeedUp", "SwiftSpeedUp", "CosmicRangeUp" }; //"StonePwr1", "StonePwr2"
+    [System.NonSerialized] public static string[] powerUpCards = new string[] { "Neutral", "Fire", "Ice", "Thunder", "Holy", "Swift", "Cosmic", "FireSpeedUp", "IceSlowUp", "ThunderArmorDmgUp", "HolyRangeUp", "SwiftPsnDmgUp", "CosmicCritChanceUp", "FireBurnUp", "IceRangeUp", "ThunderSpeedUp", "HolyBlessingDmgUp", "SwiftSpeedUp", "CosmicRangeUp" }; //"StonePwr1", "StonePwr2"
 }
