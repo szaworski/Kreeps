@@ -271,9 +271,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   attackCd: 0
-  damage: 6
+  damage: 8
   projectileSpeed: 4
-  attackSpeed: 0.8
+  attackSpeed: 0.9
   attackRange: 0.5
   critChance: 0
   damageType: Swift

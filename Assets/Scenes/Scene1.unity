@@ -17510,9 +17510,9 @@ MonoBehaviour:
   m_text: 'Single target
 
 
-    Damage: 6
+    Damage: 8
 
-    Speed: 0.8s
+    Speed: 0.9s
 
     Range: 0.5
 
