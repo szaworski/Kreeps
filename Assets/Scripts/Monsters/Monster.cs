@@ -90,7 +90,7 @@ public class Monster : MonoBehaviour
             StartCoroutine(DestroyMonster(0.1f));
         }
 
-        if (isPoisoned && !isTakingPoisonDamage && armor <= 0)
+        if (isPoisoned && !isTakingPoisonDamage)
         {
             StartCoroutine(inflictPoisonDamage(0.5f));
         }
@@ -256,15 +256,14 @@ public class Monster : MonoBehaviour
                     {
                         incomingDamage += GlobalVars.bonusExtraStats["ThunderArmorDmgUp"];
                     }
-
-                    if (randFloat <= critChance)
-                    {
-                        isCritHit = true;
-                        incomingDamage *= 2;
-                    }
                     break;
 
                 case var _ when damageType.Contains("Holy"):
+
+                    if (armor <= 0 && GlobalVars.bonusExtraStats["HolyBlessingDmgUp"] > 0)
+                    {
+                        incomingDamage += GlobalVars.bonusExtraStats["HolyBlessingDmgUp"];
+                    }
 
                     if (type.Contains("Undead") && armor <= 0)
                     {

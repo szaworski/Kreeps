@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '+ Attack speed 1/3
+  m_text: '+ Blessing 1/3
 
 '
   m_isRightToLeft: 0
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 3908303887177809270}
   - component: {fileID: 3908303887177809271}
   m_Layer: 5
-  m_Name: HolySpeedUp1
+  m_Name: HolyBlessingDmgUp1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -282,11 +282,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c3c50722ec083041bcf2aec73db18ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardName: HolySpeedUp
+  cardName: HolyBlessingDmgUp
   upgradeCost: 50
   upgradeType: Special
   bonusAmt: 0
-  bonusFloatAmt: 0.1
+  bonusFloatAmt: 10
+  exponentTxt: {fileID: 0}
 --- !u!1 &7921046452440486869
 GameObject:
   m_ObjectHideFlags: 0
@@ -352,9 +353,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Holy type weapons and towers gain -0.1s attack speed
-
-
+  m_text: 'Holy type weapons and towers gain +10 damage to health. This damage is
+    not dealt to armor
 
 
     Cost: 50g'

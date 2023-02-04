@@ -207,7 +207,7 @@ public class TileSpawner : CardLists
             if (GlobalVars.tileCounters["numOfTimesPlaced"] < 8)
             {
                 currentCardList = tier1TileCards.ToList();
-                GlobalVars.rerollCost = 20;
+                GlobalVars.rerollCost = 15;
             }
 
             else if (GlobalVars.tileCounters["numOfTimesPlaced"] >= 8 && GlobalVars.tileCounters["numOfTimesPlaced"] < 16)

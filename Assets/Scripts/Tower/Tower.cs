@@ -263,16 +263,15 @@ public class Tower : MonoBehaviour
                 break;
 
             case "Thunder":
-                if (bonusStats[3] < GlobalVars.bonusExtraStats["ThunderCritChanceUp"])
+                if (bonusStats[1] < GlobalVars.bonusExtraStats["ThunderSpeedUp"])
                 {
-                    bonusStats[3] = GlobalVars.bonusExtraStats["ThunderCritChanceUp"];
+                    bonusStats[1] = GlobalVars.bonusExtraStats["ThunderSpeedUp"];
                 }
                 break;
 
             case "Holy":
-                if (bonusStats[1] < GlobalVars.bonusExtraStats["HolySpeedUp"] || bonusStats[2] < GlobalVars.bonusExtraStats["HolyRangeUp"])
+                if (bonusStats[2] < GlobalVars.bonusExtraStats["HolyRangeUp"])
                 {
-                    bonusStats[1] = GlobalVars.bonusExtraStats["HolySpeedUp"];
                     bonusStats[2] = GlobalVars.bonusExtraStats["HolyRangeUp"];
                 }
                 break;

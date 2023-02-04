@@ -135,12 +135,12 @@ public class GlobalVars : MonoBehaviour
         bonusExtraStats.Add("IceRangeUpLvl", 1);
         bonusExtraStats.Add("ThunderArmorDmgUp", 0);
         bonusExtraStats.Add("ThunderArmorDmgUpLvl", 1);
-        bonusExtraStats.Add("ThunderCritChanceUp", 0);
-        bonusExtraStats.Add("ThunderCritChanceUpLvl", 1);
+        bonusExtraStats.Add("ThunderSpeedUp", 0);
+        bonusExtraStats.Add("ThunderSpeedUpLvl", 1);
         bonusExtraStats.Add("HolyRangeUp", 0);
         bonusExtraStats.Add("HolyRangeUpLvl", 1);
-        bonusExtraStats.Add("HolySpeedUp", 0);
-        bonusExtraStats.Add("HolySpeedUpLvl", 1);
+        bonusExtraStats.Add("HolyBlessingDmgUp", 0);
+        bonusExtraStats.Add("HolyBlessingDmgUpLvl", 1);
         bonusExtraStats.Add("SwiftPsnDmgUp", 0);
         bonusExtraStats.Add("SwiftPsnDmgUpLvl", 1);
         bonusExtraStats.Add("SwiftSpeedUp", 0);
