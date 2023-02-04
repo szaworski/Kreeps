@@ -357,15 +357,13 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   attackCd: 0
   damage: 40
-  bonusDamage2: 0
-  bonusRange2: 0
-  bonusArmorDmg: 0
   projectileSpeed: 1
-  attackSpeed: 0.75
+  attackSpeed: 0.85
   attackRange: 0.7
   critChance: 0
   damageType: Cosmic
   slowAmt: 0
+  bonusDamage2: 0
   attackRadius: {fileID: 4442308903161421057}
   hasRectangleRadius: 0
   rectIsVertical: 0
