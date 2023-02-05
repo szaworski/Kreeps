@@ -6,6 +6,6 @@ public class DamagePopup : MonoBehaviour
 {
     void Update()
     {
-        this.transform.position = Vector3.MoveTowards(this.transform.position, new Vector3(this.transform.position.x, this.transform.position.y + 0.05f, 0), 0.5f * Time.deltaTime);
+        this.transform.position = Vector3.MoveTowards(this.transform.position, new Vector3(this.transform.position.x, this.transform.position.y + 0.1f, 0), 0.6f * Time.deltaTime);
     }
 }
