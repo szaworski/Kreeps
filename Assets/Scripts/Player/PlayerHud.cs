@@ -148,7 +148,7 @@ public class PlayerHud : MonoBehaviour
 
         bonusMaxHealth += 25 * GlobalVars.tileCounters["Settlement"];
 
-        bonusArmor += 20 * GlobalVars.tileCounters["Thicket"];
+        bonusArmor += 25 * GlobalVars.tileCounters["Thicket"];
 
         bonusEvasion += 0.02f * GlobalVars.tileCounters["Tundra"];
 
@@ -161,15 +161,15 @@ public class PlayerHud : MonoBehaviour
         bonusMoveSpeed += 0.02f * GlobalVars.tileCounters["Crypt"];
         bonusHpRegen += 2 * GlobalVars.tileCounters["Crypt"];
 
-        bonusArmor += 40 * GlobalVars.tileCounters["EmeraldCave"];
+        bonusArmor += 50 * GlobalVars.tileCounters["EmeraldCave"];
 
         bonusMaxHealth += 50 * GlobalVars.tileCounters["Marsh"];
 
         bonusEvasion += 0.02f * GlobalVars.tileCounters["Sewer"];
-        bonusArmor += 10 * GlobalVars.tileCounters["Sewer"];
+        bonusArmor += 20 * GlobalVars.tileCounters["Sewer"];
 
         //Apply any Tier 4 bonuses
-        bonusArmor += 80 * GlobalVars.tileCounters["CrystalCave"];
+        bonusArmor += 100 * GlobalVars.tileCounters["CrystalCave"];
 
         bonusMaxHealth += 100 * GlobalVars.tileCounters["FrozenPassage"];
 
@@ -182,7 +182,7 @@ public class PlayerHud : MonoBehaviour
         bonusEvasion += 0.03f * GlobalVars.tileCounters["TaintedCanal"];
 
         bonusMoveSpeed += 0.03f * GlobalVars.tileCounters["VolcanicRavine"];
-        bonusArmor += 30 * GlobalVars.tileCounters["VolcanicRavine"];
+        bonusArmor += 40 * GlobalVars.tileCounters["VolcanicRavine"];
 
         //Apply any Tier 5 bonuses
         bonusHpRegen += 4 * GlobalVars.tileCounters["AncestralForest"];
@@ -193,7 +193,7 @@ public class PlayerHud : MonoBehaviour
         bonusHpRegen += 3 * GlobalVars.tileCounters["CelestialPlane"];
 
         bonusHpRegen += 6 * GlobalVars.tileCounters["CorruptedIsle"];
-        bonusArmor += 100 * GlobalVars.tileCounters["CorruptedIsle"];
+        bonusArmor += 120 * GlobalVars.tileCounters["CorruptedIsle"];
 
         bonusEvasion += 0.03f * GlobalVars.tileCounters["MysticMountain"];
         bonusMoveSpeed += 0.05f * GlobalVars.tileCounters["MysticMountain"];
