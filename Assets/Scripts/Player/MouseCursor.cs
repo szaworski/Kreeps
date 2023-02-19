@@ -88,7 +88,7 @@ public class MouseCursor : MonoBehaviour
                     ChangeWeaponStats(20, 1, 0.9f, 0.1f, "Fire", 0, true, 7);
                     break;
                 case "FrostWand":
-                    ChangeWeaponStats(18, 0, 4f, 0.3f, "Ice", 0.05f, false, 8);
+                    ChangeWeaponStats(18, 0, 4f, 0.3f, "Ice", 0.1f, false, 8);
                     break;
                 case "JoltSabre":
                     ChangeWeaponStats(32, 1, 1.4f, 0.1f, "Thunder", 0, true, 9);
@@ -111,7 +111,7 @@ public class MouseCursor : MonoBehaviour
                     ChangeWeaponStats(35, 0, 3.5f, 0.3f, "Fire", 0, true, 14);
                     break;
                 case "FrostLongSword":
-                    ChangeWeaponStats(70, 1, 1.4f, 0.1f, "Ice", 0.15f, true, 15);
+                    ChangeWeaponStats(70, 1, 1.4f, 0.1f, "Ice", 0.2f, true, 15);
                     break;
                 case "ShockLance":
                     ChangeWeaponStats(75, 1, 1f, 0.1f, "Thunder", 0, true, 16);
@@ -134,7 +134,7 @@ public class MouseCursor : MonoBehaviour
                     ChangeWeaponStats(100, 1, 1f, 0.1f, "Fire", 0, true, 21);
                     break;
                 case "BlizzardBroadSword":
-                    ChangeWeaponStats(50, 0, 4f, 0.3f, "Ice", 0.15f, true, 22);
+                    ChangeWeaponStats(50, 0, 4f, 0.3f, "Ice", 0.30f, true, 22);
                     break;
                 case "LightningGreatAxe":
                     ChangeWeaponStats(250, 1, 2f, 0.1f, "Thunder", 0, true, 23);

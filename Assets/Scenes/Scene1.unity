@@ -3080,7 +3080,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Options
+  m_text: 'Settings
 
 '
   m_isRightToLeft: 0
@@ -12399,7 +12399,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target +slow
 
-    -15% move speed
+    -10% move speed
 
     Damage: 6
 

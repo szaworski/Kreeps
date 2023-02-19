@@ -67,7 +67,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'AOE in radius
 
-    -5 move speed
+    -10% move speed
 
     Damage: 18
 
@@ -77,7 +77,7 @@ MonoBehaviour:
     0.3
 
 
-    Cost: 250g'
+    Cost: 200g'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -293,10 +293,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: FrostWand
-  upgradeCost: 250
+  upgradeCost: 200
   upgradeType: Weapon
   bonusAmt: 0
   bonusFloatAmt: 0
+  exponentTxt: {fileID: 0}
 --- !u!1 &8807727790484004626
 GameObject:
   m_ObjectHideFlags: 0
