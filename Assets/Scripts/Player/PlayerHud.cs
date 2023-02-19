@@ -215,7 +215,6 @@ public class PlayerHud : MonoBehaviour
         GlobalVars.bonusKreepStats["BonusHpRegen"] = bonusHpRegen;
         GlobalVars.bonusKreepStats["BonusArmor"] = bonusArmor;
         GlobalVars.bonusKreepStats["BonusEvasion"] = bonusEvasion;
-
         GlobalVars.triggerBonusStatsUpdate = false;
     }
 }

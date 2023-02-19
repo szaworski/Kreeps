@@ -204,7 +204,7 @@ public class Monster : MonoBehaviour
 
                 case var _ when damageType.Contains("Ice"):
 
-                    iceSlowCd = 0.9f + Time.time;
+                    iceSlowCd = 0.75f + Time.time;
 
                     if (!iceSlowStatus || iceSlowStatus && slowAmt > iceSlowAmt)
                     {
