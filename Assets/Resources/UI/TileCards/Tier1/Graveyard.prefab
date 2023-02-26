@@ -201,7 +201,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Kreeps gain:\n+1 hp regen \nfor each Graveyard placed\n\nRegen occurs
+  m_text: "Kreeps gain:\n+2 hp regen \nfor each Graveyard placed\n\nRegen occurs
     every 0.8s\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -265,7 +265,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 8.166321, y: 40.94391, z: 2.6895142, w: -179.56372}
+  m_margin: {x: 8.166321, y: 42.29706, z: 2.6895142, w: -180.91684}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -422,3 +422,4 @@ MonoBehaviour:
   upgradeType: 
   bonusAmt: 0
   bonusFloatAmt: 0
+  exponentTxt: {fileID: 0}

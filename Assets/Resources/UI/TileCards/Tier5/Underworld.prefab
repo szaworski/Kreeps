@@ -151,6 +151,7 @@ MonoBehaviour:
   upgradeType: 
   bonusAmt: 0
   bonusFloatAmt: 0
+  exponentTxt: {fileID: 0}
 --- !u!1 &6903677155270138448
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,9 +219,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +3 move speed
+    +4 move speed
 
-    +5% evasion
+    +6% evasion
 
     for each Underworld
     placed'
