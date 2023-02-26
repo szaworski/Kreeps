@@ -423,6 +423,7 @@ public class Monster : MonoBehaviour
         yield return new WaitForSeconds(delayTime);
         //After a delay, give gold to the player = to the "goldBounty" value
         GlobalVars.newGoldValue = GlobalVars.gold + goldBounty;
+        SpawnGoldPopup();
         Destroy(this.gameObject);
 
         //Get a random death sound to play
@@ -605,6 +606,14 @@ public class Monster : MonoBehaviour
         //Destroy the hp regen popup after a short delay
         yield return new WaitForSeconds(delayTime);
         Destroy(regenPopupObj.gameObject);
+    }
+
+    public void SpawnGoldPopup()
+    {
+        //Spawn the popup
+        GameObject goldPopupObj = (GameObject)Instantiate(Resources.Load("MonsterAttributes/" + "GoldPopup"), gameObject.transform.parent);
+        goldPopupObj.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + 0.25f, gameObject.transform.position.z);
+        goldPopupObj.transform.rotation = Quaternion.Euler(0, 0, 0);
     }
 
     IEnumerator ShakeHpContainer(float resetTimer)
