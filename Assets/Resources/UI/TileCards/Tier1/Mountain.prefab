@@ -353,7 +353,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Kreeps gain:\n+10 armor \nfor each Mountain placed\n\nArmor ignores bonus
+  m_text: "Kreeps gain:\n+5 armor \nfor each Mountain placed\n\nArmor ignores bonus
     damage\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}

@@ -11,7 +11,6 @@ public class MouseCursor : MonoBehaviour
     GameObject playerHud;
     Weapon weaponScript;
     PlayerHud playerHudScript;
-    bool triggerStoneSelect;
 
     void Awake()
     {
@@ -19,7 +18,6 @@ public class MouseCursor : MonoBehaviour
         playerHud = GameObject.Find("PlayerHud");
         weaponScript = playerWeapon.GetComponent<Weapon>();
         playerHudScript = playerHud.GetComponent<PlayerHud>();
-        triggerStoneSelect = false;
 
         GlobalVars.newWeapon = "";
         GlobalVars.weaponIsSelected = false;
