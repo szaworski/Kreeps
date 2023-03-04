@@ -20262,7 +20262,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3158350151068748156, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4465957350087987226, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
       propertyPath: m_Color.r
@@ -20276,6 +20276,10 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5437755298952266219, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5860450592416952545, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
       propertyPath: m_IgnoreReversedGraphics
       value: 1
@@ -20284,12 +20288,16 @@ PrefabInstance:
       propertyPath: m_BlockingMask.m_Bits
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 8925460371646191162, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 4a3845424740f8242b57a84f43f6d0b9, type: 2}
     m_RemovedComponents:
     - {fileID: 372268515874915943, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
 --- !u!95 &1858014790 stripped
 Animator:
-  m_CorrespondingSourceObject: {fileID: 688514114435962944, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8925460371646191162, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
   m_PrefabInstance: {fileID: 1858014789}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1866560211

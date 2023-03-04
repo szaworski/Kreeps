@@ -2088,14 +2088,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3158350151068748156, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 372268515874915943, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
 --- !u!95 &765579050 stripped
 Animator:
-  m_CorrespondingSourceObject: {fileID: 688514114435962944, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8925460371646191162, guid: 2169e73519ea7234d82933edd45e443f, type: 3}
   m_PrefabInstance: {fileID: 765579049}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &838279987

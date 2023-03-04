@@ -154,6 +154,7 @@ public class PauseMenuButtons : LoadNewScene
 
     public void ReturnToMainMenu()
     {
+        Cursor.visible = false;
         isLoading = true;
         StartCoroutine(LoadScene(0, transition));
         Resume(); //Unpause the game when returning to the main menu

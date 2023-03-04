@@ -20,6 +20,7 @@ public class MainMenuButtons : LoadNewScene
 
     void Awake()
     {
+        Cursor.visible = true;
         Resources.UnloadUnusedAssets();
         newGameButtonTriggered = false;
         optionsButtonTriggered = false;
