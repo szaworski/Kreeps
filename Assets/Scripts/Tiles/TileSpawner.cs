@@ -38,10 +38,11 @@ public class TileSpawner : CardLists
     private GameObject cardSlot5;
     private GameObject rerollSlot;
     private GameObject rerollCost;
+    [SerializeField] private GameObject cardSelectTitleSlot;
     [SerializeField] private GameObject rerollButton;
-    [SerializeField] private TMP_Text locationSelectText;
-    [SerializeField] private TMP_Text monsterSelectText;
-    [SerializeField] private TMP_Text shopSelectText;
+    [SerializeField] private GameObject locationSelectText;
+    [SerializeField] private GameObject monsterSelectText;
+    [SerializeField] private GameObject shopSelectText;
 
     void Awake()
     {
@@ -49,6 +50,7 @@ public class TileSpawner : CardLists
         validTiles = new bool[6];
         PlaceStartingTile();
         rerollCost = rerollButton.transform.GetChild(1).gameObject;
+        cardSelectTitleSlot = GameObject.Find("CardSelectTitleSlot");
     }
 
     void Update()
@@ -298,10 +300,11 @@ public class TileSpawner : CardLists
                 card2Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + GlobalVars.currTier + "/" + card2), cardSlot2.transform);
                 card3Obj = (GameObject)Instantiate(Resources.Load("UI/TileCards/" + GlobalVars.currTier + "/" + card3), cardSlot3.transform);
 
+                locationSelectText.transform.position = new Vector3(locationSelectText.transform.position.x, cardSelectTitleSlot.transform.position.y + 10, cardSelectTitleSlot.transform.position.z);
                 card1Obj.transform.position = new Vector3(cardSlot1.transform.position.x, cardSlot1.transform.position.y - 5, cardSlot1.transform.position.z);
                 card2Obj.transform.position = new Vector3(cardSlot2.transform.position.x, cardSlot2.transform.position.y + 5, cardSlot1.transform.position.z);
                 card3Obj.transform.position = new Vector3(cardSlot3.transform.position.x, cardSlot3.transform.position.y - 5, cardSlot1.transform.position.z);
-                locationSelectText.enabled = true;
+                locationSelectText.SetActive(true);
             }
         }
 
@@ -315,7 +318,7 @@ public class TileSpawner : CardLists
             SpawnNewTile();
             //Reset this bool for next card selection later
             GlobalVars.triggerTileCardDestruction = false;
-            locationSelectText.enabled = false;
+            locationSelectText.SetActive(false);
             //Call GetAndShowMonsterCards() to spawn the Monster card options
             GetAndShowMonsterCards();
         }
@@ -361,9 +364,10 @@ public class TileSpawner : CardLists
         card4Obj = (GameObject)Instantiate(Resources.Load("UI/MonsterCards/" + GlobalVars.currTier + "/" + GlobalVars.tileCardSelected + "/" + card1), cardSlot4.transform);
         card5Obj = (GameObject)Instantiate(Resources.Load("UI/MonsterCards/" + GlobalVars.currTier + "/" + GlobalVars.tileCardSelected + "/" + card2), cardSlot5.transform);
 
+        monsterSelectText.transform.position = new Vector3(monsterSelectText.transform.position.x, cardSelectTitleSlot.transform.position.y + 10, cardSelectTitleSlot.transform.position.z);
         card4Obj.transform.position = new Vector3(cardSlot4.transform.position.x, cardSlot4.transform.position.y - 5, cardSlot4.transform.position.z);
         card5Obj.transform.position = new Vector3(cardSlot5.transform.position.x, cardSlot5.transform.position.y + 5, cardSlot5.transform.position.z);
-        monsterSelectText.enabled = true;
+        monsterSelectText.SetActive(true);
     }
 
     public void DestroyMonsterCards()
@@ -375,7 +379,7 @@ public class TileSpawner : CardLists
             Destroy(card5Obj.gameObject);
             //Reset this bool for next card selection later
             GlobalVars.triggerMonsterCardDestruction = false;
-            monsterSelectText.enabled = false;
+            monsterSelectText.SetActive(false);
             Debug.Log("Monster Cards Destoryed");
 
             if ((GlobalVars.tileCounters["numOfTimesPlaced"] - 1) % 1 == 0)
@@ -493,6 +497,7 @@ public class TileSpawner : CardLists
         }
 
         //Instantiate the Shop Cards
+
         cardSlot1 = GameObject.Find("ShopCardSlot1");
         cardSlot2 = GameObject.Find("ShopCardSlot2");
         cardSlot3 = GameObject.Find("ShopCardSlot3");
@@ -505,14 +510,15 @@ public class TileSpawner : CardLists
         card3Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card3), cardSlot3.transform);
         card4Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card4), cardSlot4.transform);
         card5Obj = (GameObject)Instantiate(Resources.Load("UI/PowerUpCards/" + card5), cardSlot5.transform);
-        rerollButton.transform.position = new Vector3(rerollButton.transform.position.x, cardSlot5.transform.position.y - 20, cardSlot5.transform.position.z);
 
+        shopSelectText.transform.position = new Vector3(shopSelectText.transform.position.x, cardSelectTitleSlot.transform.position.y + 10, cardSelectTitleSlot.transform.position.z);
+        rerollButton.transform.position = new Vector3(rerollButton.transform.position.x, cardSlot5.transform.position.y - 20, cardSlot5.transform.position.z);
         card1Obj.transform.position = new Vector3(cardSlot1.transform.position.x, cardSlot1.transform.position.y - 5, cardSlot1.transform.position.z);
         card2Obj.transform.position = new Vector3(cardSlot2.transform.position.x, cardSlot2.transform.position.y + 5, cardSlot2.transform.position.z);
         card3Obj.transform.position = new Vector3(cardSlot3.transform.position.x, cardSlot3.transform.position.y - 5, cardSlot3.transform.position.z);
         card4Obj.transform.position = new Vector3(cardSlot4.transform.position.x, cardSlot4.transform.position.y + 5, cardSlot4.transform.position.z);
         card5Obj.transform.position = new Vector3(cardSlot5.transform.position.x, cardSlot5.transform.position.y - 5, cardSlot5.transform.position.z);
-        shopSelectText.enabled = true;
+        shopSelectText.SetActive(true);
     }
 
     public void DestroyShopCards()
@@ -526,7 +532,7 @@ public class TileSpawner : CardLists
             Destroy(card5Obj.gameObject);
             //Reset this bool for next card selection later
             GlobalVars.triggerShopCardDestruction = false;
-            shopSelectText.enabled = false;
+            shopSelectText.SetActive(false);
             GlobalVars.showStartWaveInstructions = true;
             Resources.UnloadUnusedAssets();
             Debug.Log("Shop Cards Destoryed");
@@ -547,7 +553,7 @@ public class TileSpawner : CardLists
             Destroy(card5Obj.gameObject);
             //Reset this bool for next card selection later
             GlobalVars.triggerShopCardDestruction = false;
-            shopSelectText.enabled = false;
+            shopSelectText.SetActive(false);
             GlobalVars.showStartWaveInstructions = true;
             Resources.UnloadUnusedAssets();
             Debug.Log("Shop Cards Destoryed");
@@ -1008,6 +1014,7 @@ public class TileSpawner : CardLists
     {
         if (card1Obj != null && currentCardPhase == "Tile")
         {
+            locationSelectText.transform.position = Vector3.Lerp(locationSelectText.transform.position, cardSelectTitleSlot.transform.position, (Time.deltaTime * 10));
             card1Obj.transform.position = Vector3.Lerp(card1Obj.transform.position, cardSlot1.transform.position, (Time.deltaTime * 10));
             card2Obj.transform.position = Vector3.Lerp(card2Obj.transform.position, cardSlot2.transform.position, (Time.deltaTime * 10));
             card3Obj.transform.position = Vector3.Lerp(card3Obj.transform.position, cardSlot3.transform.position, (Time.deltaTime * 10));
@@ -1015,12 +1022,14 @@ public class TileSpawner : CardLists
 
         if (card4Obj != null && currentCardPhase == "Monster")
         {
+            monsterSelectText.transform.position = Vector3.Lerp(monsterSelectText.transform.position, cardSelectTitleSlot.transform.position, (Time.deltaTime * 10));
             card4Obj.transform.position = Vector3.Lerp(card4Obj.transform.position, cardSlot4.transform.position, (Time.deltaTime * 10));
             card5Obj.transform.position = Vector3.Lerp(card5Obj.transform.position, cardSlot5.transform.position, (Time.deltaTime * 10));
         }
 
         if (card1Obj != null && currentCardPhase == "Shop")
         {
+            shopSelectText.transform.position = Vector3.Lerp(shopSelectText.transform.position, cardSelectTitleSlot.transform.position, (Time.deltaTime * 10));
             card1Obj.transform.position = Vector3.Lerp(card1Obj.transform.position, cardSlot1.transform.position, (Time.deltaTime * 10));
             card2Obj.transform.position = Vector3.Lerp(card2Obj.transform.position, cardSlot2.transform.position, (Time.deltaTime * 10));
             card3Obj.transform.position = Vector3.Lerp(card3Obj.transform.position, cardSlot3.transform.position, (Time.deltaTime * 10));

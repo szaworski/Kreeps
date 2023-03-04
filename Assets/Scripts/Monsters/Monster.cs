@@ -206,18 +206,21 @@ public class Monster : MonoBehaviour
 
                     iceSlowCd = 0.75f + Time.time;
 
-                    if (!iceSlowStatus || iceSlowStatus && slowAmt > iceSlowAmt)
+                    if (this.gameObject == monsterTarget)
                     {
-                        // if a hit is detected with a greater slowAmt, adjust iceSlowAmt accordingly without stacking the values
-                        if (iceSlowStatus && slowAmt > iceSlowAmt)
+                        if (!iceSlowStatus || iceSlowStatus && slowAmt > iceSlowAmt)
                         {
-                            //Add back the current slow amount so we don't stack the slow values
-                            moveSpeed += iceSlowAmt * startingMoveSpeed;
-                        }
+                            // if a hit is detected with a greater slowAmt, adjust iceSlowAmt accordingly without stacking the values
+                            if (iceSlowStatus && slowAmt > iceSlowAmt)
+                            {
+                                //Add back the current slow amount so we don't stack the slow values
+                                moveSpeed += iceSlowAmt * startingMoveSpeed;
+                            }
 
-                        iceSlowStatus = true;
-                        iceSlowAmt = slowAmt;
-                        moveSpeed -= iceSlowAmt * startingMoveSpeed;
+                            iceSlowStatus = true;
+                            iceSlowAmt = slowAmt;
+                            moveSpeed -= iceSlowAmt * startingMoveSpeed;
+                        }
                     }
 
                     if (type.Contains("Humanoid") && armor <= 0)
