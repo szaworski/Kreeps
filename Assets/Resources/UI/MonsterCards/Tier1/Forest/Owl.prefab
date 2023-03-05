@@ -67,11 +67,11 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Base stats:
 
-    Health: 25
+    Health: 30
 
     Armor: 0
 
-    Speed: 46
+    Speed: 50
 
     Hp regen:
     0'
@@ -430,3 +430,4 @@ MonoBehaviour:
   upgradeType: 
   bonusAmt: 0
   bonusFloatAmt: 0
+  exponentTxt: {fileID: 0}
