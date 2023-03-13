@@ -283,10 +283,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: FireSpeedUp
-  upgradeCost: 100
+  upgradeCost: 0
   upgradeType: Special
   bonusAmt: 0
   bonusFloatAmt: 0.1
+  exponentTxt: {fileID: 0}
 --- !u!1 &8127966510288412396
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,10 +355,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Fire type weapons and towers gain -0.1s attack speed
 
-
-
-
-    Cost: 100g'
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
