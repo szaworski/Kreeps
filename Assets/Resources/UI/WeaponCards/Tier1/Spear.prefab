@@ -147,10 +147,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: Spear
-  upgradeCost: 75
+  upgradeCost: 50
   upgradeType: Weapon
   bonusAmt: 0
   bonusFloatAmt: 0
+  exponentTxt: {fileID: 0}
 --- !u!1 &7525889388956682805
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +228,7 @@ MonoBehaviour:
 
 
     Cost:
-    75g'
+    50g'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

@@ -76,7 +76,7 @@ MonoBehaviour:
 
 
     Cost:
-    500g'
+    400g'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: Katana
-  upgradeCost: 500
+  upgradeCost: 400
   upgradeType: Weapon
   bonusAmt: 0
   bonusFloatAmt: 0

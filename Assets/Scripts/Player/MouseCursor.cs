@@ -83,7 +83,7 @@ public class MouseCursor : MonoBehaviour
                     ChangeWeaponStats(30, 1, 1.2f, 0.1f, "Neutral", 0, true, 6);
                     break;
                 case "CharredDagger":
-                    ChangeWeaponStats(20, 1, 0.9f, 0.1f, "Fire", 0, true, 7);
+                    ChangeWeaponStats(20, 1, 1f, 0.1f, "Fire", 0, true, 7);
                     break;
                 case "FrostWand":
                     ChangeWeaponStats(18, 0, 4f, 0.3f, "Ice", 0.1f, false, 8);
