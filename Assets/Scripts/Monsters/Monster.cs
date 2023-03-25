@@ -418,7 +418,10 @@ public class Monster : MonoBehaviour
 
     void SubtractPlayerHealth()
     {
-        GlobalVars.newPlayerHealthValue -= damage;
+        if (GlobalVars.newPlayerHealthValue > 0)
+        {
+            GlobalVars.newPlayerHealthValue -= damage;
+        }
     }
 
     IEnumerator DestroyMonster(float delayTime)
