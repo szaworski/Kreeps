@@ -19,7 +19,7 @@ public class MouseCursor : MonoBehaviour
         weaponScript = playerWeapon.GetComponent<Weapon>();
         playerHudScript = playerHud.GetComponent<PlayerHud>();
 
-        GlobalVars.newWeapon = "";
+        GlobalVars.newWeapon = "FrostWand";
         GlobalVars.weaponIsSelected = false;
         Cursor.SetCursor(cursorImage, Vector2.zero, CursorMode.ForceSoftware);
     }
@@ -86,7 +86,7 @@ public class MouseCursor : MonoBehaviour
                     ChangeWeaponStats(20, 1, 1f, 0.1f, "Fire", 0, true, 7);
                     break;
                 case "FrostWand":
-                    ChangeWeaponStats(18, 0, 4f, 0.3f, "Ice", 0.1f, false, 8);
+                    ChangeWeaponStats(18, 0, 3f, 0.3f, "Ice", 0.1f, false, 8);
                     break;
                 case "JoltSabre":
                     ChangeWeaponStats(32, 1, 1.4f, 0.1f, "Thunder", 0, true, 9);
@@ -106,7 +106,7 @@ public class MouseCursor : MonoBehaviour
                     ChangeWeaponStats(60, 1, 1.2f, 0.1f, "Neutral", 0, true, 13);
                     break;
                 case "EmberBattleAxe":
-                    ChangeWeaponStats(35, 0, 3.5f, 0.3f, "Fire", 0, true, 14);
+                    ChangeWeaponStats(35, 0, 3f, 0.3f, "Fire", 0, true, 14);
                     break;
                 case "FrostLongSword":
                     ChangeWeaponStats(70, 1, 1.4f, 0.1f, "Ice", 0.2f, true, 15);
@@ -115,7 +115,7 @@ public class MouseCursor : MonoBehaviour
                     ChangeWeaponStats(75, 1, 1f, 0.1f, "Thunder", 0, true, 16);
                     break;
                 case "SacredStaff":
-                    ChangeWeaponStats(40, 0, 4f, 0.3f, "Holy", 0, false, 17);
+                    ChangeWeaponStats(40, 0, 3f, 0.3f, "Holy", 0, false, 17);
                     break;
                 case "Katana":
                     ChangeWeaponStats(20, 0, 2f, 0.3f, "Swift", 0, true, 18);
@@ -132,19 +132,19 @@ public class MouseCursor : MonoBehaviour
                     ChangeWeaponStats(100, 1, 1f, 0.1f, "Fire", 0, true, 21);
                     break;
                 case "BlizzardBroadSword":
-                    ChangeWeaponStats(50, 0, 4f, 0.3f, "Ice", 0.30f, true, 22);
+                    ChangeWeaponStats(50, 0, 3f, 0.3f, "Ice", 0.30f, true, 22);
                     break;
                 case "LightningGreatAxe":
-                    ChangeWeaponStats(250, 1, 2f, 0.1f, "Thunder", 0, true, 23);
+                    ChangeWeaponStats(250, 1, 1.5f, 0.1f, "Thunder", 0, true, 23);
                     break;
                 case "HeavenlyGreatSword":
-                    ChangeWeaponStats(60, 0, 3.5f, 0.4f, "Holy", 0, true, 24);
+                    ChangeWeaponStats(60, 0, 2.5f, 0.4f, "Holy", 0, true, 24);
                     break;
                 case "ReinforcedMorningStar":
                     ChangeWeaponStats(70, 1, 0.5f, 0.1f, "Swift", 0, true, 25);
                     break;
                 case "GalacticScepter":
-                    ChangeWeaponStats(100, 0, 5f, 0.4f, "Cosmic", 0, false, 26);
+                    ChangeWeaponStats(100, 0, 3f, 0.4f, "Cosmic", 0, false, 26);
                     break;
             }
 
