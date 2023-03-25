@@ -206,7 +206,7 @@ public class Monster : MonoBehaviour
 
                     iceSlowCd = 0.8f + Time.time;
 
-                    if (this.gameObject == monsterTarget)
+                    if (this.gameObject == monsterTarget || isWeapon && projectileSpeed == 0)
                     {
                         if (!iceSlowStatus || iceSlowStatus && slowAmt > iceSlowAmt)
                         {
