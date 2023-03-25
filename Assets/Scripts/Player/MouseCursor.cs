@@ -19,7 +19,7 @@ public class MouseCursor : MonoBehaviour
         weaponScript = playerWeapon.GetComponent<Weapon>();
         playerHudScript = playerHud.GetComponent<PlayerHud>();
 
-        GlobalVars.newWeapon = "FrostWand";
+        GlobalVars.newWeapon = "";
         GlobalVars.weaponIsSelected = false;
         Cursor.SetCursor(cursorImage, Vector2.zero, CursorMode.ForceSoftware);
     }
