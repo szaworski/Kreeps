@@ -112,7 +112,7 @@ public class TowerGrid : MonoBehaviour
                     }
                 }
 
-                if (Input.GetMouseButtonDown(2))
+                if (Input.GetMouseButtonDown(2) || Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift))
                 {
                     if (towerScript.hasRectangleRadius && GameObject.Find("TileManager").transform.childCount == 0)
                     {
