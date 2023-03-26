@@ -77,7 +77,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 5
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &3402642597731285243
 MonoBehaviour:
@@ -108,8 +108,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278976291
-  m_fontColor: {r: 0.13782607, g: 1, b: 0.042452812, a: 1}
+    rgba: 4278255385
+  m_fontColor: {r: 0.09836066, g: 1, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -149,7 +149,7 @@ MonoBehaviour:
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
   m_enableExtraPadding: 1
-  checkPaddingRequired: 1
+  checkPaddingRequired: 0
   m_isRichText: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_renderer: {fileID: 3385769920514694967}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 4
+  _SortingOrder: 5
 --- !u!114 &1535699393449488873
 MonoBehaviour:
   m_ObjectHideFlags: 0
