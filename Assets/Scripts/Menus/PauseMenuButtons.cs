@@ -160,6 +160,14 @@ public class PauseMenuButtons : LoadNewScene
         Resume(); //Unpause the game when returning to the main menu
     }
 
+    public void Restart()
+    {
+        Cursor.visible = false;
+        isLoading = true;
+        StartCoroutine(LoadScene(1, transition));
+        Resume(); //Unpause the game when returning to the main menu
+    }
+
     public void ExitGame()
     {
         Application.Quit();
