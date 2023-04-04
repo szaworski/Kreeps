@@ -176,17 +176,6 @@ public class Monster : MonoBehaviour
             {
                 case var _ when damageType.Contains("Fire"):
 
-                    if (damageType.Contains("Fire2"))
-                    {
-                        yShiftAmt = 0.05f;
-                        delayAmt = 0f;
-                    }
-                    else
-                    {
-                        yShiftAmt = 0f;
-                        delayAmt = 0f;
-                    }
-
                     if (randFloat <= 0.50f && GlobalVars.bonusExtraStats["FireBurnUp"] > 0)
                     {
                         incomingDamage += GlobalVars.bonusExtraStats["FireBurnUp"];

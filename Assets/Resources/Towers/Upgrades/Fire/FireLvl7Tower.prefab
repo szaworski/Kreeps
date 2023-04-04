@@ -354,7 +354,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "AOE in radius\n\nDamage:  \nSpeed: \nRange: \n\n\n\n"
+  m_text: "Single target\n\nDamage:  \nSpeed: \nRange: \n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}
@@ -867,9 +867,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   attackCd: 0
-  damage: 14
+  damage: 12
   projectileSpeed: 1
-  attackSpeed: 1.4
+  attackSpeed: 0.5
   attackRange: 0.5
   critChance: 0
   damageType: Fire2
@@ -879,7 +879,7 @@ MonoBehaviour:
   hasRectangleRadius: 0
   rectIsVertical: 0
   triggerRadiusFlip: 0
-  isAoeWithProjectiles: 1
+  isAoeWithProjectiles: 0
   dmgText: {fileID: 6047158923372121903}
   rofText: {fileID: 1819926842306579874}
   rngText: {fileID: 2872117314169803890}

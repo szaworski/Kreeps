@@ -353,13 +353,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'AOE in radius
+  m_text: 'Single target
 
     Cost: 150g
 
-    Damage: 14
+    Damage: 12
 
-    Speed: 1.4s
+    Speed: 0.5s
 
     Range:
     0.5
