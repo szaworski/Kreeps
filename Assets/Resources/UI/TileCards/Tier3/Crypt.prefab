@@ -219,9 +219,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +2 move speed
-
-    +4 hp regen
+    +5 hp regen
 
     for each Crypt placed'
   m_isRightToLeft: 0
