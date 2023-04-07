@@ -484,7 +484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 60
+  health: 70
   armor: 0
   goldBounty: 10
   type: Beast

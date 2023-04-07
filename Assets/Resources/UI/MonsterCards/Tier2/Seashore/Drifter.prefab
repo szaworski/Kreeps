@@ -151,6 +151,7 @@ MonoBehaviour:
   upgradeType: 
   bonusAmt: 0
   bonusFloatAmt: 0
+  exponentTxt: {fileID: 0}
 --- !u!1 &7402375620175900289
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,14 +219,14 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Base stats:
 
-    Health: 110
+    Health: 140
 
     Armor: 0
 
-    Speed: 39
+    Speed: 42
 
     Hp regen:
-    3'
+    2'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

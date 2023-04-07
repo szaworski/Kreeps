@@ -484,8 +484,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 90
-  armor: 40
+  health: 100
+  armor: 80
   goldBounty: 10
   type: Humanoid
   moveSpeed: 0.38

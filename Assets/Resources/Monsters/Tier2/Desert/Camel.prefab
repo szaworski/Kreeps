@@ -484,11 +484,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 100
-  armor: 45
+  health: 120
+  armor: 60
   goldBounty: 10
   type: Brute
-  moveSpeed: 0.39
+  moveSpeed: 0.38
   hpRegen: 0
   evasionChance: 0
   healthText: {fileID: 2240702306701519988}

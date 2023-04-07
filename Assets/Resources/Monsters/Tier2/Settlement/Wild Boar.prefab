@@ -484,11 +484,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 155
+  health: 150
   armor: 10
   goldBounty: 10
   type: Beast
-  moveSpeed: 0.39
+  moveSpeed: 0.46
   hpRegen: 0
   evasionChance: 0
   healthText: {fileID: 2240702306701519988}
