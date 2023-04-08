@@ -484,12 +484,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 280
+  health: 350
   armor: 0
   goldBounty: 10
   type: Undead
   moveSpeed: 0.6
-  hpRegen: 6
+  hpRegen: 4
   evasionChance: 0
   healthText: {fileID: 2240702306701519988}
   maxHealthText: {fileID: 7794477886941289041}

@@ -484,12 +484,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 500
+  health: 450
   armor: 0
   goldBounty: 10
   type: Humanoid
-  moveSpeed: 0.54
-  hpRegen: 10
+  moveSpeed: 0.55
+  hpRegen: 40
   evasionChance: 0
   healthText: {fileID: 2240702306701519988}
   maxHealthText: {fileID: 7794477886941289041}

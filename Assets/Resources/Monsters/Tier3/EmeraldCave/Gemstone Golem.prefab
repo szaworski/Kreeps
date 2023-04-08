@@ -484,7 +484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  health: 75
+  health: 200
   armor: 500
   goldBounty: 10
   type: Brute

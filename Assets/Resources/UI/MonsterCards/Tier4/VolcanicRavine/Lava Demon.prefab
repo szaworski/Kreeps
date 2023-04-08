@@ -152,6 +152,7 @@ MonoBehaviour:
   upgradeType: 
   bonusAmt: 0
   bonusFloatAmt: 0
+  exponentTxt: {fileID: 0}
 --- !u!95 &121315641327178865
 Animator:
   serializedVersion: 3
@@ -238,11 +239,11 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Base stats:
 
-    Health: 800
+    Health: 1200
 
-    Armor: 600
+    Armor: 500
 
-    Speed: 38
+    Speed: 40
 
     Hp regen:
     0'
