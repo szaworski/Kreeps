@@ -219,7 +219,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +100 max hp
+    +80 max hp
 
     for each Marsh placed'
   m_isRightToLeft: 0

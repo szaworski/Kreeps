@@ -219,9 +219,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +8 hp regen
+    +10 hp regen
 
-    +120 armor
+    +100 armor
 
     for each Corrupted
     Isle placed'

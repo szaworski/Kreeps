@@ -219,7 +219,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +40 max hp
+    +30 max hp
 
     for each Settlement placed'
   m_isRightToLeft: 0

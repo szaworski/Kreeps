@@ -219,7 +219,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +200 armor
+    +150 armor
 
     for each Crystal Cave placed'
   m_isRightToLeft: 0

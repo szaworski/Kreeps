@@ -219,9 +219,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Kreeps gain:
 
-    +2 hp regen
+    +3 hp regen
 
-    +40 max hp
+    +30 max hp
 
     for each Canyon Crossing
     placed'
