@@ -17,7 +17,7 @@ public class Card : MonoBehaviour
     {
         if (exponentTxt != null)
         {
-            exponentTxt.SetText( "(+" + (GlobalVars.coinChoiceCount * 5).ToString() + ")");
+            exponentTxt.SetText( "(+" + (GlobalVars.coinChoiceCount * 10).ToString() + ")");
         }
     }
 
