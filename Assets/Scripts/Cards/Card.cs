@@ -125,7 +125,7 @@ public class Card : MonoBehaviour
     {
         if (!GlobalVars.isPaused)
         {
-            GlobalVars.newGoldValue = GlobalVars.gold + 20 + (GlobalVars.coinChoiceCount * 10);
+            GlobalVars.newGoldValue = GlobalVars.gold + 10 + (GlobalVars.coinChoiceCount * 10);
             GlobalVars.triggerShopCardDestruction = true;
             GlobalVars.IsHoveringOverUiCard = false;
             GlobalVars.coinChoiceCount++;

@@ -190,7 +190,7 @@ MonoBehaviour:
   damage: 20
   projectileSpeed: 4
   attackSpeed: 0.5
-  attackRange: 0.8
+  attackRange: 0.7
   critChance: 0
   damageType: Swift
   slowAmt: 0

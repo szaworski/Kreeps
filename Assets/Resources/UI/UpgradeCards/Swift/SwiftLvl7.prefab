@@ -203,14 +203,14 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-    Cost: 250g
+    Cost: 300g
 
     Damage: 20
 
     Speed: 0.5s
 
     Range:
-    0.8
+    0.7
 
     Radius: Rectangle
 
