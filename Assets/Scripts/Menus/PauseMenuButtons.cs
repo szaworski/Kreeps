@@ -31,7 +31,7 @@ public class PauseMenuButtons : LoadNewScene
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && Time.timeSinceLevelLoad > 1f)
+        if (Input.GetKeyDown(KeyCode.Escape) && Time.timeSinceLevelLoad > 1f && !GlobalVars.upgradeCardsArePresent)
         {
             if (GlobalVars.isPaused)
             {
@@ -58,7 +58,7 @@ public class PauseMenuButtons : LoadNewScene
             OpenGameOverMenuUi();
         }
 
-        else if (GlobalVars.playerHealth > 0  && GlobalVars.victory)
+        else if (GlobalVars.playerHealth > 0 && GlobalVars.victory)
         {
             OpenVictoryMenuUi();
         }

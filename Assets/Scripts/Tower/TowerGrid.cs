@@ -13,6 +13,7 @@ public class TowerGrid : MonoBehaviour
     [SerializeField] private string card2;
     [SerializeField] private string card3;
     [SerializeField] private bool hasTower;
+    [SerializeField] private bool isHoveringOver;
 
     void Awake()
     {
@@ -24,9 +25,12 @@ public class TowerGrid : MonoBehaviour
     void Update()
     {
         //Check if the mouse is over any UI elements to disable other functionality underneath
-        if (GlobalVars.IsHoveringOverUiCard)
+        if (GlobalVars.selectedTower != this.gameObject || !GlobalVars.upgradeCardsArePresent) //GlobalVars.IsHoveringOverUiCard
         {
-            sprite.enabled = false;
+            if (!isHoveringOver)
+            {
+                sprite.enabled = false;
+            }
         }
 
         if (!GlobalVars.isPaused)
@@ -39,10 +43,18 @@ public class TowerGrid : MonoBehaviour
         {
             HideGridSprites();
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && GlobalVars.upgradeCardsArePresent && !GlobalVars.isPaused)
+        {
+            Invoke("DestroyTowerUpgradeCards", 0.00001f);
+            //DestroyTowerUpgradeCards();
+            //GlobalVars.upgradeCardsArePresent = false;
+        }
     }
 
     void OnMouseOver()
     {
+        isHoveringOver = true;
         //Check to make sure we aren't hovering over a UI element and that the game isn't paused 
         if (!GlobalVars.IsHoveringOverUiCard && !GlobalVars.isPaused && !GlobalVars.weaponIsSelected)
         {
@@ -71,7 +83,8 @@ public class TowerGrid : MonoBehaviour
                     //Place the tower
                     tower.transform.position = this.transform.position;
                     placedTower = tower;
-                    hasTower = true;
+                    Invoke("SetHasTower", 0.00001f);
+                    //hasTower = true;
 
                     //Get the attack radius GameObject attached to the tower
                     towerAttackRadius = placedTower.transform.GetChild(0).gameObject;
@@ -96,17 +109,9 @@ public class TowerGrid : MonoBehaviour
 
                 if (Input.GetMouseButtonDown(0))
                 {
-                    if (towerScript.hasUpgrades)
+                    if (towerScript.hasUpgrades) //towerStats.activeSelf && 
                     {
-                        GlobalVars.selectedTowerHasUpgrades = true;
-                    }
-                }
-
-                if (Input.GetMouseButtonDown(1))
-                {
-                    //Show or destroy the tower upgrade cards on right click
-                    if (towerScript.hasUpgrades)
-                    {
+                        GlobalVars.selectedTower = this.gameObject;
                         SpawnTowerUpgradeCards();
                         GlobalVars.upgradeCardsArePresent = true;
                     }
@@ -167,7 +172,6 @@ public class TowerGrid : MonoBehaviour
                     if (GlobalVars.upgradeCardsArePresent)
                     {
                         DestroyTowerUpgradeCards();
-                        GlobalVars.upgradeCardsArePresent = false;
                     }
                 }
             }
@@ -176,20 +180,23 @@ public class TowerGrid : MonoBehaviour
 
     void OnMouseExit()
     {
+        isHoveringOver = false;
         HideGridSprites();
     }
 
     void HideGridSprites()
     {
         //Hide the grid sprite on mouse exit 
-        sprite.enabled = false;
+        if (GlobalVars.selectedTower != this.gameObject)
+        {
+            sprite.enabled = false;
+        }
         towerGhostSprite.enabled = false;
 
         if (hasTower)
         {
             //Hide the attack radius sprite on mouse exit 
             GlobalVars.IsHoveringOverTower = false;
-            GlobalVars.selectedTowerHasUpgrades = false;
             towerAttackRadius.SetActive(false);
             towerStats.SetActive(false);
         }
@@ -249,7 +256,6 @@ public class TowerGrid : MonoBehaviour
         if (GlobalVars.upgradeCardsArePresent)
         {
             DestroyTowerUpgradeCards();
-            GlobalVars.upgradeCardsArePresent = false;
         }
 
         //Get the towers position
@@ -310,7 +316,6 @@ public class TowerGrid : MonoBehaviour
             DestroyTower(GlobalVars.oldTowerObj);
             //Reset bools for next upgrade card selection
             GlobalVars.triggerTowerUpgrade = false;
-            GlobalVars.upgradeCardsArePresent = false;
         }
 
         if (GlobalVars.triggerUpgradeCardDestruction)
@@ -318,7 +323,6 @@ public class TowerGrid : MonoBehaviour
             DestroyTowerUpgradeCards();
             //Reset bools for next upgrade card selection
             GlobalVars.triggerUpgradeCardDestruction = false;
-            GlobalVars.upgradeCardsArePresent = false;
         }
     }
 
@@ -366,7 +370,6 @@ public class TowerGrid : MonoBehaviour
             }
             //Reset bools for next upgrade card selection
             GlobalVars.triggerTowerSell = false;
-            GlobalVars.upgradeCardsArePresent = false;
         }
     }
 
@@ -391,6 +394,11 @@ public class TowerGrid : MonoBehaviour
 
         //Subtract gold from the player
         GlobalVars.newGoldValue = GlobalVars.gold - GlobalVars.upgradeGoldCost;
+    }
+
+    void SetHasTower()
+    {
+        hasTower = true;
     }
 
     void DestroyTowerUpgradeCards()
@@ -425,6 +433,8 @@ public class TowerGrid : MonoBehaviour
         {
             Destroy(GlobalVars.upgradeCard6Obj.gameObject);
         }
+
+        GlobalVars.upgradeCardsArePresent = false;
     }
 
     public void DestroyTower(GameObject towerObj)
