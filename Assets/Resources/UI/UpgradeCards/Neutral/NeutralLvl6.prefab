@@ -217,7 +217,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sniper 3
+  m_text: 'Burst Sniper
 
 '
   m_isRightToLeft: 0

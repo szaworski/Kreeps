@@ -212,7 +212,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Scattershot
+  m_text: 'Splinter Shot
 
 '
   m_isRightToLeft: 0

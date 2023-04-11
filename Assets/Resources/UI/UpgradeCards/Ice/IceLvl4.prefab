@@ -217,7 +217,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Frost
+  m_text: 'Frost Orb
 
 '
   m_isRightToLeft: 0

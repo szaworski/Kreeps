@@ -212,7 +212,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Shock 3
+  m_text: 'Bolter
 
 '
   m_isRightToLeft: 0

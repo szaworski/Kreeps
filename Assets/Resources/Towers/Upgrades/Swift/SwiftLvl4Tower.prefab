@@ -100,17 +100,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   attackCd: 0
-  damage: 12
+  damage: 10
   projectileSpeed: 4
-  attackSpeed: 0.7
-  attackRange: 0.6
+  attackSpeed: 0.6
+  attackRange: 0.4
   critChance: 0
   damageType: Swift
   slowAmt: 0
   bonusDamage2: 0
   attackRadius: {fileID: 4442308903161421057}
-  hasRectangleRadius: 1
-  rectIsVertical: 1
+  hasRectangleRadius: 0
+  rectIsVertical: 0
   triggerRadiusFlip: 0
   isAoeWithProjectiles: 0
   dmgText: {fileID: 5596320627373325324}
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Agile
+  m_text: 'Repeater
 
 '
   m_isRightToLeft: 0

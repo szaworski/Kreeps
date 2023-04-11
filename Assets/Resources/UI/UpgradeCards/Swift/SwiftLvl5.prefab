@@ -71,12 +71,12 @@ MonoBehaviour:
 
     Damage: 18
 
-    Speed: 0.6s
+    Speed: 0.5s
 
     Range:
-    0.6
+    0.5
 
-    Radius: Rectangle
+    Radius: Square
 
 '
   m_isRightToLeft: 0
@@ -212,7 +212,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Agile 2
+  m_text: 'Repeater 2
 
 '
   m_isRightToLeft: 0

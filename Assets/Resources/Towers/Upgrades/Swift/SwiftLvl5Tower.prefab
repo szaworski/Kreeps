@@ -271,15 +271,15 @@ MonoBehaviour:
   attackCd: 0
   damage: 18
   projectileSpeed: 4
-  attackSpeed: 0.6
-  attackRange: 0.6
+  attackSpeed: 0.5
+  attackRange: 0.5
   critChance: 0
   damageType: Swift
   slowAmt: 0
   bonusDamage2: 0
   attackRadius: {fileID: 4442308903161421057}
-  hasRectangleRadius: 1
-  rectIsVertical: 1
+  hasRectangleRadius: 0
+  rectIsVertical: 0
   triggerRadiusFlip: 0
   isAoeWithProjectiles: 0
   dmgText: {fileID: 858375804153491877}
@@ -985,7 +985,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Agile 2
+  m_text: 'Repeater 2
 
 '
   m_isRightToLeft: 0
