@@ -217,7 +217,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Burst Sniper
+  m_text: 'Encampment
 
 '
   m_isRightToLeft: 0
@@ -359,12 +359,12 @@ MonoBehaviour:
 
     Damage: 8
 
-    Speed: 0.6s
+    Speed: 0.5s
 
     Range:
     0.6
 
-    Radius: Rectangle'
+    Radius: Square'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 33a962580c12e9341923307204248896, type: 2}
   m_sharedMaterial: {fileID: -6190569943052692032, guid: 33a962580c12e9341923307204248896, type: 2}

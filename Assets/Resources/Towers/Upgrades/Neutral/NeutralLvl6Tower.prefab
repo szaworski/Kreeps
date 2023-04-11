@@ -823,7 +823,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sniper 3
+  m_text: 'Encampment
 
 '
   m_isRightToLeft: 0
@@ -1169,15 +1169,15 @@ MonoBehaviour:
   attackCd: 0
   damage: 8
   projectileSpeed: 4
-  attackSpeed: 0.6
+  attackSpeed: 0.5
   attackRange: 0.6
   critChance: 0
   damageType: Neutral
   slowAmt: 0
   bonusDamage2: 0
   attackRadius: {fileID: 9061148783392565081}
-  hasRectangleRadius: 1
-  rectIsVertical: 1
+  hasRectangleRadius: 0
+  rectIsVertical: 0
   triggerRadiusFlip: 0
   isAoeWithProjectiles: 0
   dmgText: {fileID: 3300370300063958889}
