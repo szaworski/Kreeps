@@ -203,11 +203,11 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Single target
 
-    Cost: 450g
+    Cost: 400g
 
     Damage: 200
 
-    Speed: 2s
+    Speed: 1.8s
 
     Range:
     2
@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: CosmicLvl7
-  upgradeCost: 450
+  upgradeCost: 400
   upgradeType: Cosmic
   bonusAmt: 0
   bonusFloatAmt: 0

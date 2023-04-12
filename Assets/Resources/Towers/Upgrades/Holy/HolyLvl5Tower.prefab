@@ -529,9 +529,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   attackCd: 0
-  damage: 26
+  damage: 24
   projectileSpeed: 1
-  attackSpeed: 0.8
+  attackSpeed: 0.6
   attackRange: 0.7
   critChance: 0
   damageType: Holy

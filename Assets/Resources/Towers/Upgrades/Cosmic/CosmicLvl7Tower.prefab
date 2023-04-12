@@ -189,7 +189,7 @@ MonoBehaviour:
   attackCd: 0
   damage: 200
   projectileSpeed: 1
-  attackSpeed: 2
+  attackSpeed: 1.8
   attackRange: 2
   critChance: 0
   damageType: Cosmic2
