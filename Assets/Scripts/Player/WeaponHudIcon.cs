@@ -83,6 +83,7 @@ public class WeaponHudIcon : MonoBehaviour
             typeText.SetText("Single target");
         }
 
+
         dmgText.SetText(Mathf.Round(damage).ToString());
         rngText.SetText(attackRange.ToString("F1"));
 

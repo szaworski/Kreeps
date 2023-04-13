@@ -60,7 +60,7 @@ public class Tower : MonoBehaviour
         DrawAttackRadius();
 
         //Set stats text
-        dmgText.SetText(damage.ToString());
+        dmgText.SetText(Mathf.Round(damage - bonusStats[0]).ToString() + " (+" + Mathf.Round(bonusStats[0]).ToString() + ")");
         rofText.SetText(attackSpeed.ToString() + "s");
         rngText.SetText(attackRange.ToString());
         dmgText.fontSize = 1.3f;
@@ -298,7 +298,7 @@ public class Tower : MonoBehaviour
         if (damage != startingStats[0] + bonusStats[0] + bonusDamage2)
         {
             damage = startingStats[0] + bonusStats[0] + bonusDamage2;
-            dmgText.SetText(Mathf.Round(damage).ToString());
+            dmgText.SetText(Mathf.Round(damage - bonusStats[0]).ToString() + " (+" + Mathf.Round(bonusStats[0]).ToString() + ")");
         }
 
         if (attackSpeed != startingStats[1] - bonusStats[1])
