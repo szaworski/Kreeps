@@ -23,7 +23,6 @@ public class Tower : MonoBehaviour
     public float critChance;
     public string damageType;
     public float slowAmt;
-    public float bonusDamage2;
     public LineRenderer attackRadius;
     public bool hasRectangleRadius;
     public bool rectIsVertical;
@@ -58,14 +57,7 @@ public class Tower : MonoBehaviour
     void Start()
     {
         DrawAttackRadius();
-
-        //Set stats text
-        dmgText.SetText(Mathf.Round(damage - bonusStats[0]).ToString() + " (+" + Mathf.Round(bonusStats[0]).ToString() + ")");
-        rofText.SetText(attackSpeed.ToString() + "s");
-        rngText.SetText(attackRange.ToString());
-        dmgText.fontSize = 1.3f;
-        rofText.fontSize = 1.3f;
-        rngText.fontSize = 1.3f;
+        SetStartingStatText();
     }
 
     void Update()
@@ -295,10 +287,10 @@ public class Tower : MonoBehaviour
 
     public void AddBonus()
     {
-        if (damage != startingStats[0] + bonusStats[0] + bonusDamage2)
+        if (damage != startingStats[0] + bonusStats[0] )
         {
-            damage = startingStats[0] + bonusStats[0] + bonusDamage2;
-            dmgText.SetText(Mathf.Round(damage - bonusStats[0]).ToString() + " (+" + Mathf.Round(bonusStats[0]).ToString() + ")");
+            damage = startingStats[0] + bonusStats[0];
+            dmgText.SetText(Mathf.Round(damage - bonusStats[0]).ToString() + " + " + Mathf.Round(bonusStats[0]).ToString());
         }
 
         if (attackSpeed != startingStats[1] - bonusStats[1])
@@ -307,18 +299,18 @@ public class Tower : MonoBehaviour
 
             if ((attackSpeed % 1) == 0)
             {
-                rofText.SetText(string.Format("{0:C0}", attackSpeed.ToString()) + "s");
+                rofText.SetText(string.Format("{0:C0}", (attackSpeed + bonusStats[1]).ToString() + "s - " + string.Format("{0:C0}", bonusStats[1].ToString() + "s")));
             }
             else
             {
-                rofText.SetText(attackSpeed.ToString("F1") + "s");
+                rofText.SetText((attackSpeed + bonusStats[1]).ToString("F1") + "s - " + bonusStats[1].ToString("F1") + "s");
             }
         }
 
         if (attackRange != startingStats[2] + bonusStats[2])
         {
             attackRange = startingStats[2] + bonusStats[2];
-            rngText.SetText(attackRange.ToString("F1"));
+            rngText.SetText((attackRange - bonusStats[2]).ToString("F1") + " + " + bonusStats[2]);
             DrawAttackRadius();
         }
 
@@ -331,6 +323,54 @@ public class Tower : MonoBehaviour
         {
             slowAmt = startingStats[4] + bonusStats[4];
         }
+    }
+
+    public void SetStartingStatText()
+    {
+        if (bonusStats[0] > 0)
+        {
+            dmgText.SetText(Mathf.Round(damage - bonusStats[0]).ToString() + " + " + Mathf.Round(bonusStats[0]).ToString());
+        }
+        else
+        {
+            dmgText.SetText(Mathf.Round(damage).ToString());
+        }
+
+        if ((attackSpeed % 1) == 0)
+        {
+            if (bonusStats[1] > 0)
+            {
+                rofText.SetText(string.Format("{0:C0}", (attackSpeed + bonusStats[1]).ToString() + "s - " + string.Format("{0:C0}", bonusStats[1].ToString() + "s")));
+            }
+            else
+            {
+                rofText.SetText(attackSpeed.ToString() + "s");
+            }
+        }
+        else
+        {
+            if (bonusStats[1] > 0)
+            {
+                rofText.SetText((attackSpeed + bonusStats[1]).ToString("F1") + "s - " + bonusStats[1].ToString("F1") + "s");
+            }
+            else
+            {
+                rofText.SetText(attackSpeed.ToString() + "s");
+            }
+        }
+
+        if (bonusStats[2] > 0)
+        {
+            rngText.SetText((attackRange - bonusStats[2]).ToString("F1") + " + " + bonusStats[2]);
+        }
+        else
+        {
+            rngText.SetText(attackRange.ToString("F1"));
+        }
+
+        dmgText.fontSize = 1.4f;
+        rofText.fontSize = 1.4f;
+        rngText.fontSize = 1.4f;
     }
 
     public void OnDrawGizmos()
