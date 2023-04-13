@@ -2314,7 +2314,7 @@ MonoBehaviour:
   m_renderer: {fileID: 185483779}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 7
+  _SortingOrder: 8
 --- !u!23 &185483779
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2354,7 +2354,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 8
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &189362085
 GameObject:
@@ -6537,7 +6537,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_TargetDisplay: 0
 --- !u!224 &447809098
 RectTransform:
@@ -7028,7 +7028,7 @@ MonoBehaviour:
   m_renderer: {fileID: 481448874}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 7
+  _SortingOrder: 8
 --- !u!23 &481448874
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7068,7 +7068,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 8
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &485473930
 GameObject:
@@ -9546,7 +9546,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 6
   m_TargetDisplay: 0
 --- !u!224 &775591538
 RectTransform:
@@ -12782,7 +12782,7 @@ MonoBehaviour:
   m_renderer: {fileID: 1134939986}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 7
+  _SortingOrder: 8
 --- !u!23 &1134939986
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12822,7 +12822,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 8
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1152368159
 GameObject:
@@ -12970,7 +12970,7 @@ MonoBehaviour:
   m_renderer: {fileID: 1152368162}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 7
+  _SortingOrder: 8
 --- !u!23 &1152368162
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13010,7 +13010,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 8
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1172605230
 GameObject:
@@ -15039,7 +15039,7 @@ MonoBehaviour:
   m_renderer: {fileID: 1445239711}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 7
+  _SortingOrder: 8
 --- !u!23 &1445239711
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15079,7 +15079,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 8
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1448334290
 GameObject:
@@ -16165,7 +16165,7 @@ MonoBehaviour:
   m_renderer: {fileID: 1488053152}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 7
+  _SortingOrder: 8
 --- !u!23 &1488053152
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16205,7 +16205,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 8
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1491472166
 GameObject:
@@ -18306,7 +18306,7 @@ MonoBehaviour:
   m_renderer: {fileID: 1666271750}
   m_maskType: 0
   _SortingLayerID: 0
-  _SortingOrder: 7
+  _SortingOrder: 8
 --- !u!23 &1666271750
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18346,7 +18346,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 7
+  m_SortingOrder: 8
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &1673048593
 GameObject:
@@ -19183,7 +19183,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 7
   m_TargetDisplay: 0
 --- !u!224 &1741423457
 RectTransform:
