@@ -1167,7 +1167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   attackCd: 0
-  damage: 12
+  damage: 15
   projectileSpeed: 4
   attackSpeed: 1.4
   attackRange: 0.6

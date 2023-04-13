@@ -285,7 +285,7 @@ MonoBehaviour:
   cardName: Cosmic
   upgradeCost: 0
   upgradeType: BonusDmg
-  bonusAmt: 6
+  bonusAmt: 5
   bonusFloatAmt: 0
   exponentTxt: {fileID: 0}
 --- !u!1 &8139315525478325520
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Cosmic type weapons and towers gain +6 damage
+  m_text: 'Cosmic type weapons and towers gain +5 damage
 
 
 

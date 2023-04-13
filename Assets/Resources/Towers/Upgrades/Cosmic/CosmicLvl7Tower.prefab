@@ -187,9 +187,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTarget: {fileID: 0}
   attackCd: 0
-  damage: 200
+  damage: 250
   projectileSpeed: 1
-  attackSpeed: 1.4
+  attackSpeed: 1.5
   attackRange: 2
   critChance: 0
   damageType: Cosmic2

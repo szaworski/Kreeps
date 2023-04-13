@@ -287,6 +287,7 @@ MonoBehaviour:
   upgradeType: Neutral
   bonusAmt: 0
   bonusFloatAmt: 0
+  exponentTxt: {fileID: 0}
 --- !u!1 &1237511377018803439
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,7 +357,7 @@ MonoBehaviour:
 
     Cost: 70g
 
-    Damage: 10
+    Damage: 15
 
     Speed: 1.8s
 
