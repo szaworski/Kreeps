@@ -278,7 +278,6 @@ MonoBehaviour:
   critChance: 0
   damageType: Swift
   slowAmt: 0
-  bonusDamage2: 0
   attackRadius: {fileID: 7062291139358182812}
   hasRectangleRadius: 1
   rectIsVertical: 1
@@ -495,7 +494,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 460846856760317470, guid: c3743848c5c893b409c35a1e5a1b9bda, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -107,7 +107,6 @@ MonoBehaviour:
   critChance: 0
   damageType: Ice
   slowAmt: 0.1
-  bonusDamage2: 0
   attackRadius: {fileID: 1235488988543047019}
   hasRectangleRadius: 1
   rectIsVertical: 1
@@ -493,7 +492,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 8645967633156209623, guid: c3743848c5c893b409c35a1e5a1b9bda, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
