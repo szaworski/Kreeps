@@ -139,12 +139,13 @@ public class PlayerHud : MonoBehaviour
         bonusEvasion += 0.01f * GlobalVars.tileCounters["Swamp"];
 
         //Apply any Tier 2 bonuses
-        bonusHpRegen += 3 * GlobalVars.tileCounters["Cavern"];
+        bonusHpRegen += 2 * GlobalVars.tileCounters["Cavern"];
+        bonusMaxHealth += 10 * GlobalVars.tileCounters["Cavern"];
 
         bonusMoveSpeed += 0.03f * GlobalVars.tileCounters["Desert"];
 
         bonusMoveSpeed += 0.02f * GlobalVars.tileCounters["Seashore"];
-        bonusMaxHealth += 10 * GlobalVars.tileCounters["Seashore"];
+        bonusArmor += 10 * GlobalVars.tileCounters["Seashore"];
 
         bonusMaxHealth += 30 * GlobalVars.tileCounters["Settlement"];
 
@@ -158,6 +159,7 @@ public class PlayerHud : MonoBehaviour
 
         bonusMoveSpeed += 0.05f * GlobalVars.tileCounters["CrimsonPlain"];
 
+        bonusMoveSpeed += 0.02f * GlobalVars.tileCounters["Crypt"];
         bonusHpRegen += 6 * GlobalVars.tileCounters["Crypt"];
 
         bonusArmor += 80 * GlobalVars.tileCounters["EmeraldCave"];
