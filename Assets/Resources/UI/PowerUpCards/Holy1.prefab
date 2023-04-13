@@ -149,7 +149,7 @@ MonoBehaviour:
   cardName: Holy
   upgradeCost: 0
   upgradeType: BonusDmg
-  bonusAmt: 4
+  bonusAmt: 3
   bonusFloatAmt: 0
   exponentTxt: {fileID: 0}
 --- !u!1 &7921046452440486869
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Holy type weapons and towers gain +4 damage
+  m_text: 'Holy type weapons and towers gain +3 damage
 
 '
   m_isRightToLeft: 0
