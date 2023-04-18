@@ -95,7 +95,7 @@ public class CardLists : MonoBehaviour
     [System.NonSerialized] public static string[] underworldMonsterCards = new string[] { "Chaos Demon", "Skeleton Lord", "Blood Mage", "Hell Hound" };
 
     //Weapon cards
-    [System.NonSerialized] public static string[] tier1WeaponCards = new string[] { "ShortSword", "Dagger", "LongSword", "Spear", "HandAxe", "Mace" };
+    [System.NonSerialized] public static string[] tier1WeaponCards = new string[] { "ShortSword", "Dagger", "LongSword", "Spear", "HandAxe", "Mace", "WalkingStick" };
     [System.NonSerialized] public static string[] tier2WeaponCards = new string[] { "SilverShortSword", "CharredDagger", "FrostWand", "JoltSabre", "TwinDaggers", "CosmicSpear" };
     [System.NonSerialized] public static string[] tier3WeaponCards = new string[] { "GoldenShortSword", "EmberBattleAxe", "FrostLongSword", "ShockLance", "SacredStaff", "Katana", "AstralGreatSword" };
     [System.NonSerialized] public static string[] tier4WeaponCards = new string[] { "TitaniumShortSword", "InfernalLongSword", "BlizzardBroadSword", "LightningGreatAxe", "HeavenlyGreatSword", "ReinforcedMorningStar", "GalacticScepter" };

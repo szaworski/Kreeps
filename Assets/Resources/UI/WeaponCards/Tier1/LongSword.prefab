@@ -353,9 +353,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'AOE in radius
 
-    Damage: 8
+    Damage: 10
 
-    Speed: 2s
+    Speed: 1.8s
 
     Range: 0.3
 
