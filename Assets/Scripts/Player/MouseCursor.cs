@@ -144,7 +144,7 @@ public class MouseCursor : MonoBehaviour
                     ChangeWeaponStats(100, 0, 2f, 0.4f, "Holy", 0, true, 25);
                     break;
                 case "ReinforcedMorningStar":
-                    ChangeWeaponStats(70, 1, 0.5f, 0.1f, "Swift", 0, true, 26);
+                    ChangeWeaponStats(60, 1, 0.6f, 0.1f, "Swift", 0, true, 26);
                     break;
                 case "GalacticScepter":
                     ChangeWeaponStats(120, 0, 2.5f, 0.4f, "Cosmic", 0, false, 27);
