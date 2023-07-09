@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: CornerWipe
+  m_Controller: {fileID: 9100000, guid: d3df5252c996eb149ae166ca9010038a, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 14651464df9778346994c66614795aa5, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 0d38010c823871c4ea00eb0bfed0d137, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: dcf4f6ae0a51f4b4bb8e80d3632ca8e5, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 433d31438f9e8c2408f785389cab572a, type: 2}
