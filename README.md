@@ -1,5 +1,5 @@
 # Kreeps
-Kreeps is a tower defense game where you choose how your towers, and the enemies scale as the game progresses. This project was built in my free time for the purpose of learning the Unity engine with C#, and to see If I could build a game and successfully publish on steam.
+Kreeps is a tower defense game where you choose how your towers, and how the enemies scale as the game progresses. This project was built in my free time for the purpose of learning the Unity engine with C#, and to see If I could build a game and successfully publish on steam.
 
 ## Game loop overview
 At the end of each wave the player makes 3 choices:
